@@ -180,17 +180,27 @@ class HomeScreenController extends GetxController {
             await AppAlert.showCustomDialogLocationPicker(Get.context!);
         Get.delete<LocationListScreenController>();
         if (selectLocation.isNotEmpty) {
+          await SharedPrefs().setAddCartData('');
           detDashboardDetailsApi();
+          getOrderDetails();
         }
-      }, rightText: 'Cancel');
+      }, rightText: 'Ok');
     } else {
       final selectLocation =
           await AppAlert.showCustomDialogLocationPicker(Get.context!);
       Get.delete<LocationListScreenController>();
       if (selectLocation.isNotEmpty) {
         detDashboardDetailsApi();
+        getOrderDetails();
       }
     }
+  }
+
+  Rx<AddCartModel> mAddCartModel = AddCartModel().obs;
+
+  void getOrderDetails() async {
+    mAddCartModel.value = await SharedPrefs().getAddCartData();
+    mAddCartModel.refresh();
   }
 
   ///onRefresh

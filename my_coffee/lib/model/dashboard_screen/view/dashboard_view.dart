@@ -39,11 +39,7 @@ class DashboardViewScreen extends StatelessWidget {
   ///full_View
   _fullView() {
     return FocusDetector(
-        onVisibilityGained: () {
-          if (Get.isRegistered<LoginScreenController>()) {
-            Get.delete<LoginScreenController>();
-          }
-        },
+        onVisibilityGained: () {},
         onVisibilityLost: () {},
         child: SizedBox(
             height: double.infinity,

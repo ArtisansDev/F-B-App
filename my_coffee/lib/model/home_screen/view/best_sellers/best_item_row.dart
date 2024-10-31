@@ -44,6 +44,7 @@ class BestItemRow extends StatelessWidget {
                   await AppAlert.showCustomDialogLocationPicker(Get.context!);
                   Get.delete<LocationListScreenController>();
                   if (value.isNotEmpty) {
+                    await SharedPrefs().setAddCartData('');
                     controller.selectItem(index);
                   }
                 }, rightText: 'Ok');

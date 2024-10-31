@@ -13,14 +13,14 @@ import '../../../constants/pattern_constants.dart';
 import '../../../lang/translation_service_key.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/app_utils.dart';
-import '../controller/history_controller.dart';
+import '../controller/rewards_controller.dart';
 
-class HistoryScreen extends GetView<HistoryScreenController> {
-  const HistoryScreen({super.key});
+class RewardsScreen extends GetView<RewardsScreenController> {
+  const RewardsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.lazyPut(() => HistoryScreenController());
+    Get.lazyPut(() => RewardsScreenController());
     return _fullView();
   }
 
@@ -29,7 +29,7 @@ class HistoryScreen extends GetView<HistoryScreenController> {
     return FocusDetector(
         onVisibilityGained: () {},
         onVisibilityLost: () {
-          //Get.delete<HistoryScreenController>();
+          Get.delete<RewardsScreenController>();
         },
         child: GestureDetector(
             onTap: () {

@@ -224,10 +224,13 @@ class AppBarsCommon {
             SizedBox(
               width: 13.sp,
             ),
-            Expanded(child: Text(
-              title,
-              style: getText500(colors: ColorConstants.buttonBar, size: 16.sp),
-            ),),
+            Expanded(
+              child: Text(
+                title,
+                style:
+                    getText500(colors: ColorConstants.buttonBar, size: 16.sp),
+              ),
+            ),
             Image.asset(
               ImageAssetsConstants.homeLocation,
               fit: BoxFit.fitWidth,
@@ -243,7 +246,7 @@ class AppBarsCommon {
     );
   }
 
-  static  appBarNotification({
+  static appBarNotification({
     double dTitleSpacing = 0.0,
     Color backgroundColor = ColorConstants.primaryBackgroundColor,
     Color iconColor = Colors.black,
@@ -251,56 +254,86 @@ class AppBarsCommon {
     Function? onClick,
   }) {
     return Container(
-          padding: EdgeInsets.only(top: 5.h),
-          height: 40.sp,
-          decoration: const BoxDecoration(
-              color: ColorConstants.primaryBackgroundColor,
-              boxShadow: [
-                BoxShadow(
-                    color: Color(0x33000000),
-                    offset: Offset(0, 2),
-                    blurRadius: 4),
-              ]),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: 18.sp,
-              ),
-              ColorFiltered(
-                  colorFilter:
-                      const ColorFilter.mode(Colors.white, BlendMode.modulate),
-                  child: Image.asset(
-                    ImageAssetsConstants.appLogoT,
-                    fit: BoxFit.fitWidth,
-                    height: 25.5.sp,
-                    width: 25.5.sp,
-                  )),
-              SizedBox(
-                width: 13.sp,
-              ),
-              Expanded(
-                child: Text(
-                  title,
-                  style: getText600(colors: Colors.black, size: 18.sp),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  onClick!("notification");
-                },
-                child: Image.asset(
-                  ImageAssetsConstants.notification,
-                  fit: BoxFit.fitWidth,
-                  height: 25.5.sp,
-                  width: 25.5.sp,
-                ),
-              ),
-              SizedBox(
-                width: 13.sp,
-              ),
-            ],
+      padding: EdgeInsets.only(top: 5.h),
+      height: 40.sp,
+      decoration: const BoxDecoration(
+          color: ColorConstants.primaryBackgroundColor,
+          boxShadow: [
+            BoxShadow(
+                color: Color(0x33000000), offset: Offset(0, 2), blurRadius: 4),
+          ]),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: 18.sp,
           ),
-        );
+          ColorFiltered(
+              colorFilter:
+                  const ColorFilter.mode(Colors.white, BlendMode.modulate),
+              child: Image.asset(
+                ImageAssetsConstants.appLogoT,
+                fit: BoxFit.fitWidth,
+                height: 25.5.sp,
+                width: 25.5.sp,
+              )),
+          SizedBox(
+            width: 13.sp,
+          ),
+          Expanded(
+            child: Text(
+              title,
+              style: getText600(colors: Colors.black, size: 18.sp),
+            ),
+          ),
+          // GestureDetector(
+          //     onTap: () {
+          //       onClick!("shoppingCart");
+          //     },
+          //     child: Container(
+          //       margin: EdgeInsets.only(bottom: 18.sp),
+          //       child: Stack(
+          //         children: [
+          //           Align(
+          //             alignment: Alignment.bottomRight,
+          //             child: Image.asset(
+          //               ImageAssetsConstants.shoppingCart,
+          //               fit: BoxFit.fitWidth,
+          //               height: 16.5.sp,
+          //               width: 16.5.sp,
+          //             ),
+          //           ),
+          //           Container(
+          //             margin: EdgeInsets.only(left: 10.sp, top: 15.sp),
+          //             padding: EdgeInsets.all(5.sp),
+          //             decoration: const BoxDecoration(
+          //               color: ColorConstants.cAppColorsBlue,
+          //               shape: BoxShape.circle,
+          //             ),
+          //             child: Text('  99  ',
+          //             style: getTextRegular(
+          //               size: 15.sp,colors: Colors.white
+          //             ),),
+          //           ),
+          //         ],
+          //       ),
+          //     )),
+          GestureDetector(
+            onTap: () {
+              onClick!("notification");
+            },
+            child: Image.asset(
+              ImageAssetsConstants.notification,
+              fit: BoxFit.fitWidth,
+              height: 25.5.sp,
+              width: 25.5.sp,
+            ),
+          ),
+          SizedBox(
+            width: 13.sp,
+          ),
+        ],
+      ),
+    );
   }
 }

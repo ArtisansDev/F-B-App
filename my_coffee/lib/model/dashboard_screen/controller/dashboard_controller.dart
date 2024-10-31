@@ -3,26 +3,22 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
-import 'package:my_coffee/model/history_screen/view/history_screen.dart';
-import 'package:my_coffee/model/more_screen/view/more_screen.dart';
 import 'package:my_coffee/model/profile_screen/view/profile_screen.dart';
 
 import '../../../alert/app_alert.dart';
-import '../../../constants/get_user_details.dart';
-import '../../../constants/logout_expired.dart';
 import '../../../data/local/shared_prefs/shared_prefs.dart';
 import '../../../data/mode/add_cart/add_cart.dart';
 import '../../../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import '../../../lang/translation_service_key.dart';
 import '../../../routes/route_constants.dart';
-import '../../history_screen/controller/history_controller.dart';
 import '../../home_screen/controller/home_controller.dart';
 import '../../home_screen/view/home_screen.dart';
 import '../../location_list_screen/controller/location_list_controller.dart';
 import '../../menu_screen/controller/menu_controller.dart';
 import '../../menu_screen/view/menu_screen.dart';
-import '../../more_screen/controller/more_controller.dart';
 import '../../profile_screen/controller/profile_controller.dart';
+import '../../rewards_screen/controller/rewards_controller.dart';
+import '../../rewards_screen/view/rewards_screen.dart';
 import '../../shopping_card_screen/controller/shoping_screen_controller.dart';
 
 class DashboardScreenController extends GetxController {
@@ -48,12 +44,7 @@ class DashboardScreenController extends GetxController {
           return;
         }
       }
-      if (value != 4) {
-        if (Get.isRegistered<MoreScreenController>()) {
-          Get.find<MoreScreenController>().dispose();
-          Get.delete<MoreScreenController>();
-        }
-      }
+
       if (value != 3) {
         if (Get.isRegistered<ProfileScreenController>()) {
           Get.find<ProfileScreenController>().dispose();
@@ -61,9 +52,9 @@ class DashboardScreenController extends GetxController {
         }
       }
       if (value != 2) {
-        if (Get.isRegistered<HistoryScreenController>()) {
-          Get.find<HistoryScreenController>().dispose();
-          Get.delete<HistoryScreenController>();
+        if (Get.isRegistered<RewardsScreenController>()) {
+          Get.find<RewardsScreenController>().dispose();
+          Get.delete<RewardsScreenController>();
         }
       }
       if (value != 1) {
@@ -99,8 +90,7 @@ class DashboardScreenController extends GetxController {
   List<Widget> widgetOptions = <Widget>[
     const HomeScreen(),
     const MenuScreen(),
-    const HistoryScreen(),
-    const MoreScreen(),
+    const RewardsScreen(),
     const ProfileScreen(),
   ];
   RxString sDialogPicDine = ''.obs;
@@ -146,6 +136,9 @@ class DashboardScreenController extends GetxController {
             selectLocation =
                 await AppAlert.showCustomDialogLocationPicker(Get.context!);
             Get.delete<LocationListScreenController>();
+            if(selectLocation.isNotEmpty){
+              await SharedPrefs().setAddCartData('');
+            }
           }, rightText: 'Ok');
         } else {
           selectLocation =
@@ -176,12 +169,12 @@ class DashboardScreenController extends GetxController {
         sTitle.value = sMenu.tr;
         return;
       case 2:
-        sTitle.value = sGiftCard.tr;
-        return;
-      case 3:
         sTitle.value = sRewards.tr;
         return;
-      case 4:
+      // case 3:
+      //   sTitle.value = sRewards.tr;
+      //   return;
+      case 3:
         sTitle.value = sAccount.tr;
         return;
     }

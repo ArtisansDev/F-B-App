@@ -17,6 +17,7 @@ const String sHome = "Home";
 const String sMenu = "Menu";
 const String sHistory = "History";
 const String sGiftCard = "Gift Card";
+const String sViewCar = "View Cart";
 const String sProfile = "Profile";
 const String sRewards = "Rewards";
 const String sProfileDetails = "Profile Details";

@@ -6,6 +6,7 @@ class ImageAssetsConstants {
   static String appLogoT = "assets/app_logo_t.png";
   static String appLogoSvg = "assets/app_logo_svg.png";
   static String notification = "assets/notification.png";
+  static String shoppingCart = "assets/shopping_cart.png";
   static String pickUp = "assets/pick_up.png";
   static String delivery = "assets/delivery.png";
   static String merch = "assets/merch.png";
@@ -99,6 +100,7 @@ class ImageAssetsConstants {
   static String iconMenu3 = "assets/svg/icon_menu3.svg";
   static String iconMenu4 = "assets/svg/icon_menu4.svg";
   static String iconMenu5 = "assets/svg/icon_menu5.svg";
+  static String addCart = "assets/svg/add_cart.svg";
 
 
 

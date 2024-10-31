@@ -10,6 +10,7 @@ import '../../../constants/image_assets_constants.dart';
 import '../../../utils/app_utils.dart';
 import '../../details_page/controller/details_page_controller.dart';
 import '../../order_confirmation/controller/order_confirmation_controller.dart';
+import '../../order_now/order_now.dart';
 import '../controller/menu_controller.dart';
 import '../item_menu/item_menu_list_screen.dart';
 import '../middle_filter_view/middle_filter_view.dart';
@@ -29,6 +30,7 @@ class MenuScreen extends GetView<MenuScreenController> {
   _fullView() {
     return FocusDetector(
         onVisibilityGained: () {
+          controller.getOrderDetails();
           if (Get.isRegistered<DetailsPageScreenController>()) {
             Get.delete<DetailsPageScreenController>();
           }
@@ -41,26 +43,43 @@ class MenuScreen extends GetView<MenuScreenController> {
           AppUtils.hideKeyboard(Get.context!);
         }, child: Obx(
           () {
-            return Column(
+            return Stack(
               children: [
-                ///Top address bar
-                TopAddressBar(),
+                Column(
+                  children: [
+                    ///Top address bar
+                    TopAddressBar(),
 
-                // ///MiddleFilter
-                // MiddleFilterView(),
+                    // ///MiddleFilter
+                    // MiddleFilterView(),
 
-                /// Menu view
-                Expanded(
-                    child: controller.mGetCategoryListData.value.isEmpty
-                        ? const Center(
-                            child: Text('No Category List Found'),
-                          )
-                        : Container(
-                            margin: EdgeInsets.only(bottom: 9.5.h),
-                            height: double.infinity,
-                            width: double.infinity,
-                            child: mMenuView(),
-                          ))
+                    /// Menu view
+                    Expanded(
+                        child: controller.mGetCategoryListData.value.isEmpty
+                            ? const Center(
+                                child: Text('No Category List Found'),
+                              )
+                            : Container(
+                                margin: EdgeInsets.only(bottom: 9.5.h),
+                                height: double.infinity,
+                                width: double.infinity,
+                                child: mMenuView(),
+                              )),
+                    SizedBox(
+                      height: (controller.mAddCartModel.value.mItems ?? [])
+                              .isNotEmpty
+                          ? 9.h
+                          : 0.h,
+                    )
+                  ],
+                ),
+                Container(
+                    height: double.infinity,
+                    alignment: Alignment.bottomCenter,
+                    child: Visibility(
+                        visible: (controller.mAddCartModel.value.mItems ?? [])
+                            .isNotEmpty,
+                        child: OrderNow((controller.mAddCartModel.value))))
               ],
             );
           },

@@ -96,7 +96,6 @@ class MenuScreenController extends GetxController {
       AppAlert.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
           'This action will clear the items in your current basket. Do you want to proceed?',
           () async {
-        await SharedPrefs().setAddCartData('');
         callLocation();
       }, rightText: 'Ok');
     } else {
@@ -109,6 +108,7 @@ class MenuScreenController extends GetxController {
         await AppAlert.showCustomDialogLocationPicker(Get.context!);
     Get.delete<LocationListScreenController>();
     if (selectLocation.isNotEmpty) {
+      await SharedPrefs().setAddCartData('');
       selectSideMenu.value = 0;
       mGetCategoryListData.value.clear();
       mGetCategoryItemMessage.value = 'Loading...';
@@ -116,6 +116,7 @@ class MenuScreenController extends GetxController {
       mGetCategoryListData.refresh();
       mGetCategoryItemListData.refresh();
       getCategoryApi();
+      getOrderDetails();
     }
   }
 
@@ -214,5 +215,12 @@ class MenuScreenController extends GetxController {
   void onLoadMore() async {
     pageNumber = pageNumber + 1;
     getCategoryItemApi();
+  }
+
+  Rx<AddCartModel> mAddCartModel = AddCartModel().obs;
+
+  void getOrderDetails() async {
+    mAddCartModel.value = await SharedPrefs().getAddCartData();
+    mAddCartModel.refresh();
   }
 }

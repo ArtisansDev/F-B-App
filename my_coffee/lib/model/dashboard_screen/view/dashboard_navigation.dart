@@ -64,12 +64,12 @@ class DashboardNavigationScreen extends StatelessWidget {
                     ImageAssetsConstants.iconMenu2, sMenu.tr)),
             Expanded(
                 child: bottomBarRowView(controller.selectedIndex.value, 2,
-                    ImageAssetsConstants.iconMenu3, sGiftCard.tr)),
+                    ImageAssetsConstants.iconMenu4, sRewards.tr)),
+            // Expanded(
+            //     child: bottomBarRowView(controller.selectedIndex.value, 3,
+            //         ImageAssetsConstants.iconMenu4, sRewards.tr)),
             Expanded(
                 child: bottomBarRowView(controller.selectedIndex.value, 3,
-                    ImageAssetsConstants.iconMenu4, sRewards.tr)),
-            Expanded(
-                child: bottomBarRowView(controller.selectedIndex.value, 4,
                     ImageAssetsConstants.iconMenu5, sProfile.tr))
           ],
         ));
