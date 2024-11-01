@@ -91,5 +91,13 @@ class OrderConfirmationScreenController extends GetxController {
     mAddCartModel.value.totalAmount = totalAmount.value;
 
     await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+    if (totalAmount.value == 0.0) {
+      Get.back();
+    }
+  }
+
+  void editOrder(int index) async {
+    await Get.toNamed(RouteConstants.rDetailsEditPageScreen, arguments: index);
+    getOrderDetails();
   }
 }

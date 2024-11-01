@@ -5,6 +5,7 @@ import 'package:my_coffee/common/view_document/view_doument.dart';
 import '../common/view_document/view_document_model.dart';
 import '../model/about_us/view/about_us_screen.dart';
 import '../model/dashboard_screen/view/dashboard_screen.dart';
+import '../model/details_edit_page/view/details_edit_page_screen.dart';
 import '../model/details_page/view/details_page_screen.dart';
 import '../model/introduction_screen/view/introduction_screen.dart';
 import '../model/login_screen/view/login_screen.dart';
@@ -54,13 +55,16 @@ class GeneratedRoutes {
 
       ///DetailsPageScreen-Screen
       case RouteConstants.rDetailsPageScreen:
-        return MaterialPageRoute(
-            builder: (context) => DetailsPageScreen());
+        return MaterialPageRoute(builder: (context) => DetailsPageScreen());
+
+      ///DetailsEditPageScreen-Screen
+      case RouteConstants.rDetailsEditPageScreen:
+        return MaterialPageRoute(builder: (context) => DetailsEditPageScreen());
 
       ///OrderConfirmation-Screen
       case RouteConstants.rOrderConfirmationScreen:
         return MaterialPageRoute(
-            builder: (context) => OrderConfirmationScreen());
+            builder: (context) => const OrderConfirmationScreen());
 
       ///TermsOfUse-Screen
       case RouteConstants.rTermsOfUseScreen:

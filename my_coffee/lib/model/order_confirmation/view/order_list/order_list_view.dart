@@ -172,7 +172,9 @@ class OrderListView extends StatelessWidget {
                                             fit: BoxFit.fitHeight,
                                             height: 20.sp,
                                           ),
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            controller.editOrder(index);
+                                          },
                                           color: ColorConstants.buttonBar,
                                           iconSize: 17.sp,
                                         ),

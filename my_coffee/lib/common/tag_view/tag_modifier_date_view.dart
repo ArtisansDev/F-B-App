@@ -47,8 +47,6 @@ class TagModifierDateView {
       () {
         return GestureDetector(
           onTap: () {
-            // onTab(name);
-            //selectTag.value = name;
             addOrRemove(name);
             onTab(selectTag);
           },
@@ -86,7 +84,7 @@ class TagModifierDateView {
       if (search(name)) {
         selectTag.value.add(name);
       } else {
-        selectTag.value.remove(name);
+        selectTag.removeWhere((item) => item.modifierIDP == name.modifierIDP);
       }
     }
     selectTag.refresh();

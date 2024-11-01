@@ -102,7 +102,6 @@ class SharedPrefs {
 
   Future<AddCartModel> getAddCartData() async {
     String value = sharedPreferences!.getString(PrefConstants.sAddCartData) ?? "";
-    print("####### $value");
     if (value.isNotEmpty) {
       return AddCartModel.fromJson(json.decode(value));
     }

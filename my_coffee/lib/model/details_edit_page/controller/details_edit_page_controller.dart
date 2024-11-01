@@ -24,11 +24,12 @@ import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 
-class DetailsPageScreenController extends GetxController {
+class DetailsEditPageController extends GetxController {
   DashboardScreenController mDashboardScreenController =
       Get.find<DashboardScreenController>();
 
-  final String itemId;
+  // late String itemId;
+  final int index;
 
   // TagView mTemperature = TagView(['Hot', 'Iced']);
   // TagView mMilk = TagView(
@@ -61,8 +62,14 @@ class DetailsPageScreenController extends GetxController {
   Rx<PageController> introductionPageController =
       PageController(initialPage: 0).obs;
   RxList<ModifierData> selectModifierData = <ModifierData>[].obs;
+  Rx<AddCartModel> mAddCartModel = AddCartModel().obs;
 
-  DetailsPageScreenController(this.itemId) {
+  DetailsEditPageController(this.index) {
+    setDetails();
+  }
+
+  void setDetails() async {
+    mAddCartModel.value = await SharedPrefs().getAddCartData();
     mTagVariantDateView = TagVariantDateView((VariantData mVariantData) {
       amount.value = mVariantData.price ?? 0.0;
       sVariant.value = mVariantData.quantitySpecification ?? '';
@@ -70,94 +77,74 @@ class DetailsPageScreenController extends GetxController {
     });
     mTagModifierDateView =
         TagModifierDateView((List<ModifierData> mModifierDataList) {
-      selectModifierData.value.clear();
-      selectModifierData.value.addAll(mModifierDataList.toList());
-      amountModifier.value = 0.0;
-      sModifier.value = '';
-      String value = '';
-      if (mModifierDataList.isNotEmpty) {
-        for (ModifierData mModifierData in mModifierDataList) {
-          amountModifier.value =
-              amountModifier.value + (mModifierData.price ?? 0);
-          value = "$value, ${mModifierData.modifierName}";
-        }
-        value = value.substring(1).trim();
-        sModifier.value = value;
-        priceIncDec();
-      }
+      setModifier(mModifierDataList.toList());
+      priceIncDec();
     });
     getItemDetailsApi();
   }
 
-  void getItemDetailsApi() {
-    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
-      if (isInternetAvailable) {
-        GetItemDetailsRequest mGetItemDetailsRequest = GetItemDetailsRequest(
-          id:
-              // '60782F37-FDB5-4434-A16A-7E9274792C97'
-              itemId,
-        );
-        WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postGetItemDetails(mGetItemDetailsRequest);
-        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
-          GetItemDetailsResponse mGetItemDetailsResponse =
-              mWebResponseSuccess.data;
-          if ((mGetItemDetailsResponse.data ?? []).isNotEmpty) {
-            mGetItemDetailsData.value = mGetItemDetailsResponse.data!.first;
-            mGetItemDetailsData.refresh();
-
-            itemImages.value.clear();
-            itemImages.value.addAll(mGetItemDetailsData.value.itemImages ?? []);
-            itemImages.refresh();
-
-            mModifierData.value.clear();
-            mModifierData.value
-                .addAll(mGetItemDetailsData.value.modifierData ?? []);
-            mModifierData.refresh();
-
-            mVariantData.value.clear();
-            mVariantData.value
-                .addAll(mGetItemDetailsData.value.variantData ?? []);
-            mVariantData.refresh();
-            if (mVariantData.isNotEmpty) {
-              amount.value = mVariantData.first.price ?? 0.0;
-              sVariant.value = mVariantData.first.quantitySpecification ?? '';
-              priceIncDec();
-            }
-          }
-        } else {
-          AppAlert.showSnackBar(
-              Get.context!, mWebResponseSuccess.statusMessage ?? '');
-        }
-      } else {
-        AppAlert.showSnackBar(
-            Get.context!, MessageConstants.noInternetConnection);
+  setModifier(List<ModifierData> mModifierDataList) {
+    selectModifierData.value.clear();
+    selectModifierData.value.addAll(mModifierDataList.toList());
+    amountModifier.value = 0.0;
+    sModifier.value = '';
+    String value = '';
+    if (mModifierDataList.isNotEmpty) {
+      for (ModifierData mModifierData in mModifierDataList) {
+        amountModifier.value =
+            amountModifier.value + (mModifierData.price ?? 0);
+        value = "$value, ${mModifierData.modifierName}";
       }
-    });
-  }
-
-  String getNutritionalInfo() {
-    String nutritionalInfo = mGetItemDetailsData.value.nutritionalInfo ?? '';
-    if (nutritionalInfo.isNotEmpty) {
-      nutritionalInfo = nutritionalInfo.replaceAll(',', ' | ');
-      nutritionalInfo = nutritionalInfo.replaceAll('-', ' ');
+      value = value.substring(1).trim();
+      sModifier.value = value;
     }
-    return nutritionalInfo;
   }
 
-  ///addCart
-  addCart() async {
+  void getItemDetailsApi() {
+    mGetItemDetailsData.value = mAddCartModel.value.mItems![index];
+    mGetItemDetailsData.refresh();
+
+    itemImages.value.clear();
+    itemImages.value.addAll(mGetItemDetailsData.value.itemImages ?? []);
+    itemImages.refresh();
+
+    mModifierData.value.clear();
+    mModifierData.value.addAll(mGetItemDetailsData.value.modifierData ?? []);
+    mModifierData.refresh();
+
+    mVariantData.value.clear();
+    mVariantData.value.addAll(mGetItemDetailsData.value.variantData ?? []);
+    mVariantData.refresh();
+    if ((mGetItemDetailsData.value.selectVariantData ?? []).isNotEmpty) {
+      amount.value =
+          mGetItemDetailsData.value.selectVariantData?.first.price ?? 0.0;
+      sVariant.value = mGetItemDetailsData
+              .value.selectVariantData?.first.quantitySpecification ??
+          '';
+      mTagVariantDateView.selectVariantData.value =
+          mGetItemDetailsData.value.selectVariantData!.first;
+    } else {
+      amount.value = mVariantData.first.price ?? 0.0;
+      sVariant.value = mVariantData.first.quantitySpecification ?? '';
+    }
+    if ((mGetItemDetailsData.value.selectModifierData ?? []).isNotEmpty) {
+      mTagModifierDateView.selectTag.value.clear();
+      mTagModifierDateView.selectTag.value.addAll(
+          (mGetItemDetailsData.value.selectModifierData ?? []).toList());
+      setModifier(
+          (mGetItemDetailsData.value.selectModifierData ?? []).toList());
+    }
+    count.value = mGetItemDetailsData.value.count ?? 1;
+    priceIncDec();
+  }
+
+  ///editOrder
+  editOrder() async {
     await saveCart();
-    Get.until((route) {
-      return route.settings.name ==
-          RouteConstants
-              .rDashboardScreen; // Goes back until reaching '/dashboard'
-    });
+    Get.back();
   }
 
   saveCart() async {
-    AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-
     ///add item
     GetItemDetailsData mItemsData = mGetItemDetailsData.value;
     mItemsData.count = count.value;
@@ -170,14 +157,15 @@ class DetailsPageScreenController extends GetxController {
     mItemsData.perItemTotal = (amount.value + amountModifier.value);
 
     ///add cart
-    mAddCartModel.totalAmount =
-        (mAddCartModel.totalAmount ?? 0) + totalAmount.value;
-    mAddCartModel.mGetAllBranchesListData ??=
-        mDashboardScreenController.selectGetAllBranchesListData.value;
-    if ((mAddCartModel.mItems ?? []).isEmpty) {
-      mAddCartModel.mItems = [];
+    mAddCartModel.value.mItems![index] = mItemsData;
+
+    mAddCartModel.value.totalAmount = 0.0;
+    for (GetItemDetailsData mGetItemDetailsData
+        in mAddCartModel.value.mItems ?? []) {
+      mAddCartModel.value.totalAmount =
+          (mAddCartModel.value.totalAmount ?? 0.0) +
+              (mGetItemDetailsData.total ?? 0);
     }
-    mAddCartModel.mItems?.add(mItemsData);
 
     ///saveCartData
     await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));

@@ -11,6 +11,7 @@ import '../../routes/generated_routes.dart';
 import '../../routes/route_constants.dart';
 import '../about_us/view/about_us_screen.dart';
 import '../dashboard_screen/view/dashboard_screen.dart';
+import '../details_edit_page/view/details_edit_page_screen.dart';
 import '../details_page/view/details_page_screen.dart';
 import '../introduction_screen/view/introduction_screen.dart';
 import '../login_screen/view/login_screen.dart';
@@ -63,8 +64,11 @@ class MyAppTheme extends StatelessWidget {
                 name: RouteConstants.rDetailsPageScreen,
                 page: () =>  DetailsPageScreen()),
             GetPage(
+                name: RouteConstants.rDetailsEditPageScreen,
+                page: () =>  DetailsEditPageScreen()),
+            GetPage(
                 name: RouteConstants.rOrderConfirmationScreen,
-                page: () =>  OrderConfirmationScreen()),
+                page: () =>  const OrderConfirmationScreen()),
             GetPage(
                 name: RouteConstants.rTermsOfUseScreen,
                 page: () => const TermsOfUseScreen()),

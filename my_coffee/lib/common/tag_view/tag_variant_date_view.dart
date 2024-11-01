@@ -18,7 +18,7 @@ import '../../constants/text_styles_constants.dart';
 
 class TagVariantDateView {
   List<VariantData> tagList = [];
-  Rx<VariantData> selectTag = VariantData().obs;
+  Rx<VariantData> selectVariantData = VariantData().obs;
   Function onTab;
 
   TagVariantDateView(this.onTab);
@@ -26,8 +26,8 @@ class TagVariantDateView {
   yourKeySkillsView(List<VariantData> tagList) {
     this.tagList.clear();
     this.tagList.addAll(tagList.toList());
-    if ((selectTag.value.price ?? 0)==0) {
-      selectTag.value = tagList.first;
+    if ((selectVariantData.value.price ?? 0)==0) {
+      selectVariantData.value = tagList.first;
     }
     return Container(
       margin: EdgeInsets.all(19.sp),
@@ -50,12 +50,12 @@ class TagVariantDateView {
     //   () {
         return GestureDetector(
           onTap: () {
-            onTab!(name);
-            selectTag.value = name;
+            onTab(name);
+            selectVariantData.value = name;
           },
           child: Container(
             decoration: BoxDecoration(
-                color: selectTag.value == name
+                color: selectVariantData.value.variantIDP == name.variantIDP
                     ? ColorConstants.cAppColorsBlue
                     : Colors.white,
                 borderRadius: BorderRadius.circular(11.sp),
@@ -70,7 +70,7 @@ class TagVariantDateView {
             child: Text(
               "${name.quantitySpecification} (${name.price} RM)",
               style: getText500(
-                  colors: selectTag.value == name
+                  colors: selectVariantData.value.variantIDP == name.variantIDP
                       ? Colors.white
                       : ColorConstants.buttonBar,
                   size: 15.5.sp),
