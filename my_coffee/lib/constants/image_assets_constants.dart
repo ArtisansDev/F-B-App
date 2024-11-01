@@ -62,6 +62,8 @@ class ImageAssetsConstants {
   static String bag = "assets/coffee_details/bag.png";
   static String needStraws = "assets/coffee_details/need_straws.png";
   static String remarks = "assets/coffee_details/remarks.png";
+  static String deleteOrder = "assets/coffee_details/delete_order.png";
+  static String editOrder = "assets/coffee_details/edit_order.png";
   static String frequently = "assets/coffee_details/frequently.png";
   static String shopName = "assets/coffee_details/shope_name.png";
   static String timeDuotoneLine = "assets/coffee_details/time_duotone_line.png";

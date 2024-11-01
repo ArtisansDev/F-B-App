@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
 
@@ -62,7 +64,7 @@ class OrderConfirmationScreenController extends GetxController {
 
   ///
   void priceIncDec(
-      GetItemDetailsData mGetItemDetailsData, int index, int count) {
+      GetItemDetailsData mGetItemDetailsData, int index, int count) async {
     mGetItemDetailsData.count = count;
     mGetItemDetailsData.total = (mGetItemDetailsData.perItemTotal ?? 0) *
         (mGetItemDetailsData.count ?? 0);
@@ -73,5 +75,21 @@ class OrderConfirmationScreenController extends GetxController {
     }
     mAddCartModel.value.mItems?.clear();
     mAddCartModel.value.mItems?.addAll(mItems);
+    mAddCartModel.value.totalAmount = totalAmount.value;
+
+    await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+  }
+
+  void deleteOrder(int index) async {
+    mItems.value.removeAt(index);
+    totalAmount.value = 0.0;
+    for (GetItemDetailsData mGetItemDetailsData in mItems) {
+      totalAmount.value = totalAmount.value + (mGetItemDetailsData.total ?? 0);
+    }
+    mAddCartModel.value.mItems?.clear();
+    mAddCartModel.value.mItems?.addAll(mItems);
+    mAddCartModel.value.totalAmount = totalAmount.value;
+
+    await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
   }
 }

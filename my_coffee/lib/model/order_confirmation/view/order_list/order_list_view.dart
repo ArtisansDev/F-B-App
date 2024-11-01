@@ -146,10 +146,77 @@ class OrderListView extends StatelessWidget {
                           ),
                         )),
                         Container(
-                          margin: EdgeInsets.only(top: 11.sp),
-                          alignment: Alignment.topLeft,
-                          child: incDecView(mGetItemDetailsData, index),
-                        )
+                            margin: EdgeInsets.only(top: 11.sp),
+                            alignment: Alignment.topLeft,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                incDecView(mGetItemDetailsData, index),
+                                SizedBox(
+                                  width: 22.w,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        height: 24.sp,
+                                        width: 24.sp,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(11.sp),
+                                            color: ColorConstants.buttonBar),
+                                        child: IconButton(
+                                          padding: EdgeInsets.zero,
+                                          icon: Image.asset(
+                                            ImageAssetsConstants.editOrder,
+                                            fit: BoxFit.fitHeight,
+                                            height: 20.sp,
+                                          ),
+                                          onPressed: () {},
+                                          color: ColorConstants.buttonBar,
+                                          iconSize: 17.sp,
+                                        ),
+                                      ),
+                                      Container(
+                                          height: 24.sp,
+                                          width: 24.sp,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(11.sp),
+                                              color: ColorConstants
+                                                  .cAppColorsBlue),
+                                          child: IconButton(
+                                            padding: EdgeInsets.zero,
+                                            icon: IconButton(
+                                              padding: EdgeInsets.zero,
+                                              icon: Image.asset(
+                                                ImageAssetsConstants
+                                                    .deleteOrder,
+                                                fit: BoxFit.fitHeight,
+                                                height: 20.sp,
+                                              ),
+                                              onPressed: () {
+                                                controller.deleteOrder(index);
+                                              },
+                                              color: ColorConstants.buttonBar,
+                                              iconSize: 17.sp,
+                                            ),
+                                            onPressed: () {
+                                              controller.priceIncDec(
+                                                  mGetItemDetailsData,
+                                                  index,
+                                                  (mGetItemDetailsData.count ??
+                                                          0) +
+                                                      1);
+                                            },
+                                            color: Colors.white,
+                                            iconSize: 17.sp,
+                                          )),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ))
                       ],
                     ));
               },
