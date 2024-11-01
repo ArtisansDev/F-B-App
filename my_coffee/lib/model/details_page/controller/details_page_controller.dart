@@ -22,6 +22,7 @@ import '../../../data/remote/api_call/api_impl.dart';
 import '../../../data/remote/web_response.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
+import '../../../utils/order_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 
 class DetailsPageScreenController extends GetxController {
@@ -29,12 +30,6 @@ class DetailsPageScreenController extends GetxController {
       Get.find<DashboardScreenController>();
 
   final String itemId;
-
-  // TagView mTemperature = TagView(['Hot', 'Iced']);
-  // TagView mMilk = TagView(
-  //     ['Dairy', 'Soy (+RM 2.00)', 'Almond (+RM 3.00)', 'OATSIDE (+RM 3.00)']);
-  // TagView mCoffee = TagView(['No Shot', '+LYDIA (+RM 2.00)']);
-  // TagView mSweetness = TagView(['Regular Sugar', 'Less Sugar']);
 
   RxDouble amountModifier = 0.0.obs;
   RxString sModifier = ''.obs;
@@ -44,16 +39,6 @@ class DetailsPageScreenController extends GetxController {
   RxInt count = 1.obs;
   late TagVariantDateView mTagVariantDateView;
   late TagModifierDateView mTagModifierDateView;
-
-  void priceIncDec() {
-    totalAmount.value = ((amount.value + amountModifier.value) * count.value);
-  }
-
-  void buyNow() async {
-    await saveCart();
-    Get.offNamed(RouteConstants.rOrderConfirmationScreen);
-  }
-
   Rx<GetItemDetailsData> mGetItemDetailsData = GetItemDetailsData().obs;
   RxList<ItemImages> itemImages = <ItemImages>[].obs;
   RxList<VariantData> mVariantData = <VariantData>[].obs;
@@ -61,6 +46,22 @@ class DetailsPageScreenController extends GetxController {
   Rx<PageController> introductionPageController =
       PageController(initialPage: 0).obs;
   RxList<ModifierData> selectModifierData = <ModifierData>[].obs;
+
+  void priceIncDec() {
+    totalAmount.value = ((amount.value + amountModifier.value) * count.value);
+  }
+
+  void buyNow() async {
+    await saveCart(
+        mGetItemDetailsData.value,
+        count.value,
+        mTagModifierDateView,
+        mTagVariantDateView,
+        totalAmount.value,
+        amount.value,
+        amountModifier.value);
+    Get.offNamed(RouteConstants.rOrderConfirmationScreen);
+  }
 
   DetailsPageScreenController(this.itemId) {
     mTagVariantDateView = TagVariantDateView((VariantData mVariantData) {
@@ -147,39 +148,18 @@ class DetailsPageScreenController extends GetxController {
 
   ///addCart
   addCart() async {
-    await saveCart();
+    await saveCart(
+        mGetItemDetailsData.value,
+        count.value,
+        mTagModifierDateView,
+        mTagVariantDateView,
+        totalAmount.value,
+        amount.value,
+        amountModifier.value);
     Get.until((route) {
       return route.settings.name ==
           RouteConstants
               .rDashboardScreen; // Goes back until reaching '/dashboard'
     });
-  }
-
-  saveCart() async {
-    AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-
-    ///add item
-    GetItemDetailsData mItemsData = mGetItemDetailsData.value;
-    mItemsData.count = count.value;
-    mItemsData.selectModifierData = [];
-    mItemsData.selectModifierData?.addAll(mTagModifierDateView.selectTag);
-    mItemsData.selectVariantData = [];
-    mItemsData.selectVariantData
-        ?.add(mTagVariantDateView.selectVariantData.value);
-    mItemsData.total = totalAmount.value;
-    mItemsData.perItemTotal = (amount.value + amountModifier.value);
-
-    ///add cart
-    mAddCartModel.totalAmount =
-        (mAddCartModel.totalAmount ?? 0) + totalAmount.value;
-    mAddCartModel.mGetAllBranchesListData ??=
-        mDashboardScreenController.selectGetAllBranchesListData.value;
-    if ((mAddCartModel.mItems ?? []).isEmpty) {
-      mAddCartModel.mItems = [];
-    }
-    mAddCartModel.mItems?.add(mItemsData);
-
-    ///saveCartData
-    await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
   }
 }

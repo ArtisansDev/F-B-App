@@ -22,6 +22,7 @@ import '../../../data/remote/api_call/api_impl.dart';
 import '../../../data/remote/web_response.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
+import '../../../utils/order_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 
 class DetailsEditPageController extends GetxController {
@@ -48,11 +49,6 @@ class DetailsEditPageController extends GetxController {
 
   void priceIncDec() {
     totalAmount.value = ((amount.value + amountModifier.value) * count.value);
-  }
-
-  void buyNow() async {
-    await saveCart();
-    Get.offNamed(RouteConstants.rOrderConfirmationScreen);
   }
 
   Rx<GetItemDetailsData> mGetItemDetailsData = GetItemDetailsData().obs;
@@ -140,34 +136,15 @@ class DetailsEditPageController extends GetxController {
 
   ///editOrder
   editOrder() async {
-    await saveCart();
+    await editCart(
+        mGetItemDetailsData.value,
+        count.value,
+        mTagModifierDateView,
+        mTagVariantDateView,
+        totalAmount.value,
+        amount.value,
+        amountModifier.value,
+        index);
     Get.back();
-  }
-
-  saveCart() async {
-    ///add item
-    GetItemDetailsData mItemsData = mGetItemDetailsData.value;
-    mItemsData.count = count.value;
-    mItemsData.selectModifierData = [];
-    mItemsData.selectModifierData?.addAll(mTagModifierDateView.selectTag);
-    mItemsData.selectVariantData = [];
-    mItemsData.selectVariantData
-        ?.add(mTagVariantDateView.selectVariantData.value);
-    mItemsData.total = totalAmount.value;
-    mItemsData.perItemTotal = (amount.value + amountModifier.value);
-
-    ///add cart
-    mAddCartModel.value.mItems![index] = mItemsData;
-
-    mAddCartModel.value.totalAmount = 0.0;
-    for (GetItemDetailsData mGetItemDetailsData
-        in mAddCartModel.value.mItems ?? []) {
-      mAddCartModel.value.totalAmount =
-          (mAddCartModel.value.totalAmount ?? 0.0) +
-              (mGetItemDetailsData.total ?? 0);
-    }
-
-    ///saveCartData
-    await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
   }
 }
