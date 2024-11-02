@@ -35,6 +35,7 @@ class ProfileScreen extends GetView<ProfileScreenController> {
             Get.delete<UpdateProfileScreenController>();
           }
           controller.getProfileDetails();
+          controller.getOrderDetails();
         },
         onVisibilityLost: () {
           //Get.delete<ProfileScreenController>();
@@ -71,8 +72,8 @@ class ProfileScreen extends GetView<ProfileScreenController> {
           ///placeAnOrder
           placeAnOrder(),
 
-          ///Especially For You
-          especiallyForYou(),
+          // ///Especially For You
+          // especiallyForYou(),
 
           ///needHelp
           needHelp(),
@@ -342,23 +343,28 @@ class ProfileScreen extends GetView<ProfileScreenController> {
             ),
             child: Column(
               children: [
-                imageAndText(ImageAssetsConstants.profile1, 'Orders'),
+                (controller.mAddCartModel.value.mItems ?? []).isNotEmpty
+                    ? imageAndText(ImageAssetsConstants.profile1, 'Orders',
+                        value: controller.mAddCartModel.value.mItems?.length
+                            .toString())
+                    : imageAndText(ImageAssetsConstants.profile1, 'Orders'),
                 Container(
                   margin: EdgeInsets.only(top: 13.sp, bottom: 13.sp),
                   width: double.infinity,
                   height: 4.sp,
                   color: Colors.grey.shade300,
                 ),
-                imageAndText(
-                    ImageAssetsConstants.profile2, 'Register your TWT Tumbler'),
-                Container(
-                  margin: EdgeInsets.only(top: 13.sp, bottom: 13.sp),
-                  width: double.infinity,
-                  height: 4.sp,
-                  color: Colors.grey.shade300,
-                ),
-                imageAndText(
-                    ImageAssetsConstants.profile3, 'Mission & Rewards'),
+                imageAndText(ImageAssetsConstants.profile5, 'Orders History'),
+                // imageAndText(
+                //     ImageAssetsConstants.profile2, 'Register your TWT Tumbler'),
+                // Container(
+                //   margin: EdgeInsets.only(top: 13.sp, bottom: 13.sp),
+                //   width: double.infinity,
+                //   height: 4.sp,
+                //   color: Colors.grey.shade300,
+                // ),
+                // imageAndText(
+                //     ImageAssetsConstants.profile3, 'Mission & Rewards'),
               ],
             )),
       ],

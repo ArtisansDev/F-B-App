@@ -7,10 +7,14 @@ import 'package:package_info_plus/package_info_plus.dart';
 import '../../../constants/get_user_details.dart';
 import '../../../constants/message_constants.dart';
 import '../../../data/local/shared_prefs/shared_prefs.dart';
+import '../../../data/mode/add_cart/add_cart.dart';
 import '../../../data/mode/user_details/user_details_response.dart';
 import '../../../routes/route_constants.dart';
+import '../../dashboard_screen/controller/dashboard_controller.dart';
 
 class ProfileScreenController extends GetxController {
+  DashboardScreenController mDashboardScreenController =
+      Get.find<DashboardScreenController>();
   RxString version = '--'.obs;
   Rx<UserDetailsResponseData> mUserDetailsResponseData =
       UserDetailsResponseData().obs;
@@ -41,6 +45,17 @@ class ProfileScreenController extends GetxController {
 
   void openNextPage(String title) {
     switch (title) {
+      case 'Orders History':
+        mDashboardScreenController.selectedIndex.value = 2;
+        mDashboardScreenController.selectTitle(2);
+        break;
+      case 'Orders':
+        if ((mAddCartModel.value.mItems ?? []).isNotEmpty) {
+          Get.toNamed(RouteConstants.rOrderConfirmationScreen);
+        } else {
+          AppAlert.showSnackBar(Get.context!, 'No item add in your cart');
+        }
+        break;
       case 'Terms of Use':
         Get.toNamed(
           RouteConstants.rTermsOfUseScreen,
@@ -64,5 +79,12 @@ class ProfileScreenController extends GetxController {
         }, rightText: 'Delete');
         break;
     }
+  }
+
+  Rx<AddCartModel> mAddCartModel = AddCartModel().obs;
+
+  void getOrderDetails() async {
+    mAddCartModel.value = await SharedPrefs().getAddCartData();
+    mAddCartModel.refresh();
   }
 }

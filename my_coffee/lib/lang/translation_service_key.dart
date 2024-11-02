@@ -8,6 +8,7 @@ const String sButtonText = "LET’S GET STARTED";
 const String sAddToCart = "Add to Cart";
 const String sEditOrder = "Edit Order";
 const String sOrderNow = "Order Now";
+const String sReorder = "Reorder";
 const String sAddOn = "+ Add";
 const String sBuyNow = "Buy Now";
 
