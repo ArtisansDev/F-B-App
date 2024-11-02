@@ -12,6 +12,7 @@ import '../model/login_screen/view/login_screen.dart';
 import '../model/order_confirmation/view/order_confirmation_screen.dart';
 import '../model/otp_screen/view/otp_screen.dart';
 import '../model/profile_screen/update_profile/view/update_profile_screen.dart';
+import '../model/qr_code_scanner/view/qr_code_scanner_view.dart';
 import '../model/register_screen/view/register_screen_screen.dart';
 import '../model/terms_of_use/view/terms_of_use_screen.dart';
 import 'route_constants.dart';
@@ -74,6 +75,10 @@ class GeneratedRoutes {
       ///AboutUs-Screen
       case RouteConstants.rAboutUsScreen:
         return MaterialPageRoute(builder: (context) => const AboutUsScreen());
+
+      ///QrCodeScannerView-Screen
+      case RouteConstants.rQrCodeScannerView:
+        return MaterialPageRoute(builder: (context) => const QrCodeScannerView());
 
       default:
         return _routeNotFound(sRouteName: " - $routeName");

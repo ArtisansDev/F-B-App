@@ -26,6 +26,10 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>io.flutter.embedded_views_preview</key>
+    <true/>
+    <key>NSCameraUsageDescription</key>
+    <string>This app needs camera access to scan QR codes</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
     <string>Your location is needed to use this app</string>
     <key>NSLocationAlwaysUsageDescription</key>

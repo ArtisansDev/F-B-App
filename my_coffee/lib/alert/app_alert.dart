@@ -13,6 +13,7 @@ import '../constants/color_constants.dart';
 import '../constants/image_assets_constants.dart';
 import '../lang/translation_service_key.dart';
 import '../model/location_list_screen/view/location_list_screen.dart';
+import '../model/qr_code_scanner/view/qr_code_scanner_view.dart';
 import 'alert_action.dart';
 
 class AppAlert {
@@ -241,6 +242,21 @@ class AppAlert {
       barrierDismissible: barrierDismissible ?? false,
       useSafeArea:
           false, // Optional: Ensures the dialog doesn't overlap the status bar
+    );
+  }
+
+  static Future<String> showQrcodeScan(
+      BuildContext context, {
+        bool? barrierDismissible,
+      }) async {
+    return await showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return const QrCodeScannerView();
+      },
+      barrierDismissible: barrierDismissible ?? false,
+      useSafeArea:
+      false, // Optional: Ensures the dialog doesn't overlap the status bar
     );
   }
 

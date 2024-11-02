@@ -59,7 +59,8 @@ class GetLocation {
 
     if (permission == LocationPermission.whileInUse ||
         permission == LocationPermission.always) {
-      Position position = await Geolocator.getCurrentPosition();
+      Position position = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.high);
       getLocation(position);
       return false;
     }

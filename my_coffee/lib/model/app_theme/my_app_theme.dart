@@ -18,6 +18,7 @@ import '../login_screen/view/login_screen.dart';
 import '../order_confirmation/view/order_confirmation_screen.dart';
 import '../otp_screen/view/otp_screen.dart';
 import '../profile_screen/update_profile/view/update_profile_screen.dart';
+import '../qr_code_scanner/view/qr_code_scanner_view.dart';
 import '../register_screen/view/register_screen_screen.dart';
 import '../splash_screen/view/splash_screen.dart';
 import '../terms_of_use/view/terms_of_use_screen.dart';
@@ -75,6 +76,9 @@ class MyAppTheme extends StatelessWidget {
             GetPage(
                 name: RouteConstants.rAboutUsScreen,
                 page: () => const AboutUsScreen()),
+            GetPage(
+                name: RouteConstants.rQrCodeScannerView,
+                page: () => const QrCodeScannerView()),
           ],
           builder: (context, child) {
             return protectFromSettingsFontSize(context, child!);

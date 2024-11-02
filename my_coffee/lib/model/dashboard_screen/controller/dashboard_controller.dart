@@ -19,6 +19,7 @@ import '../../location_list_screen/controller/location_list_controller.dart';
 import '../../menu_screen/controller/menu_controller.dart';
 import '../../menu_screen/view/menu_screen.dart';
 import '../../profile_screen/controller/profile_controller.dart';
+import '../../qr_code_scanner/controller/qr_code_scanner_controller.dart';
 import '../../rewards_screen/controller/rewards_controller.dart';
 import '../../rewards_screen/view/rewards_screen.dart';
 import '../../shopping_card_screen/controller/shoping_screen_controller.dart';
@@ -114,9 +115,13 @@ class DashboardScreenController extends GetxController {
 
   setSelectLocation() async {
     selectGetAllBranchesListData.value = await SharedPrefs().getBranchesData();
-    selectedCurrency.value = (selectGetAllBranchesListData.value.currency ?? []).isEmpty
-        ? ''
-        : (selectGetAllBranchesListData.value.currency ?? []).first.currencySymbol ?? '';
+    selectedCurrency.value =
+        (selectGetAllBranchesListData.value.currency ?? []).isEmpty
+            ? ''
+            : (selectGetAllBranchesListData.value.currency ?? [])
+                    .first
+                    .currencySymbol ??
+                '';
   }
 
   void setLocation(GetAllBranchesListData mGetAllBranchesListData) async {
@@ -128,11 +133,31 @@ class DashboardScreenController extends GetxController {
     Get.back(result: 'selected');
   }
 
+  Rxn<String> selectTableNo = Rxn<String>();
+
+  void setTable({String? sTableNo}) async {
+    // selectGetAllBranchesListData.value = mGetAllBranchesListData;
+    // selectedCurrency.value = (mGetAllBranchesListData.currency ?? []).isEmpty
+    //     ? ''
+    //     : (mGetAllBranchesListData.currency ?? []).first.currencySymbol ?? '';
+    // await SharedPrefs().setBranchesData(jsonEncode(mGetAllBranchesListData));
+    selectTableNo.value = sTableNo;
+    Get.back(result: 'selected');
+  }
+
   showDialogPicDineLocation(String title) async {
     sDialogPicDine.value = title;
     var selectLocation = '';
     if (sDialogPicDine.value == 'Dine') {
-      selectedIndex.value = 1;
+      // selectLocation = await AppAlert.showQrcodeScan(Get.context!);
+      // Get.delete<QrCodeScannerController>();
+      selectLocation = await Get.toNamed(
+        RouteConstants.rQrCodeScannerView,
+      );
+      Get.delete<QrCodeScannerController>();
+      if (selectLocation.isNotEmpty) {
+        selectedIndex.value = 1;
+      }
     } else if (sDialogPicDine.value == 'Take') {
       if ((selectGetAllBranchesListData.value.branchName ?? '').isEmpty) {
         AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
