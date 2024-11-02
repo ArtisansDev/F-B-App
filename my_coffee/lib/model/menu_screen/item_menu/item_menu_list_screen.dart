@@ -166,7 +166,8 @@ class ItemMenuListScreen extends StatelessWidget {
                                             left: 8.sp, right: 8.sp),
                                         alignment: Alignment.center,
                                         child: Text(
-                                          '${mGetCategoryItemListData.price ?? ''} RM',
+                                          '${controller.mDashboardScreenController
+                                              .selectedCurrency.value} ${mGetCategoryItemListData.price ?? ''}',
                                           textAlign: TextAlign.center,
                                           maxLines: 2,
                                           style: getText500(

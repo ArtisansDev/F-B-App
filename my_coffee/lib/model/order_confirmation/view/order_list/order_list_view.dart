@@ -118,7 +118,8 @@ class OrderListView extends StatelessWidget {
                                     height: 8.sp,
                                   ),
                                   Text(
-                                    'RM ${mGetItemDetailsData.perItemTotal}',
+                                    '${controller.mDashboardScreenController
+                                        .selectedCurrency.value} ${mGetItemDetailsData.perItemTotal}',
                                     style: getText600(
                                       size: 15.5.sp,
                                       colors: ColorConstants.cAppColorsBlue,

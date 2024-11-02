@@ -748,7 +748,8 @@ class DetailsEditPageScreen extends GetView<DetailsEditPageController> {
                       height: 10.sp,
                     ),
                     Text(
-                      'RM ${controller.totalAmount.value.toStringAsFixed(2)}',
+                      '${controller.mDashboardScreenController
+                          .selectedCurrency.value} ${controller.totalAmount.value.toStringAsFixed(2)}',
                       style: getText600(
                           colors: ColorConstants.cAppColorsBlue, size: 17.sp),
                     ),

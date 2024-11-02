@@ -38,25 +38,24 @@ class BestItemRow extends StatelessWidget {
                 Get.context!,
                 'Proceed to Change?',
                 'This action will clear the items in your current basket. Do you want to proceed?',
-                    () async {
-                  await SharedPrefs().setAddCartData('');
-                  var value =
+                () async {
+              await SharedPrefs().setAddCartData('');
+              var value =
                   await AppAlert.showCustomDialogLocationPicker(Get.context!);
-                  Get.delete<LocationListScreenController>();
-                  if (value.isNotEmpty) {
-                    await SharedPrefs().setAddCartData('');
-                    controller.selectItem(index);
-                  }
-                }, rightText: 'Ok');
+              Get.delete<LocationListScreenController>();
+              if (value.isNotEmpty) {
+                await SharedPrefs().setAddCartData('');
+                controller.selectItem(index);
+              }
+            }, rightText: 'Ok');
           } else {
             var value =
-            await AppAlert.showCustomDialogLocationPicker(Get.context!);
+                await AppAlert.showCustomDialogLocationPicker(Get.context!);
             Get.delete<LocationListScreenController>();
             if (value.isNotEmpty) {
               controller.selectItem(index);
             }
           }
-
         } else {
           controller.selectItem(index);
         }
@@ -133,18 +132,21 @@ class BestItemRow extends StatelessWidget {
                         heights: 1.3),
                   ),
                 ),
-                Container(
-                  height: 4.3.h,
-                  margin: EdgeInsets.only(left: 15.sp, right: 15.sp),
-                  alignment: Alignment.center,
-                  child: Text(
-                    '${mGetBestSellerItemData.price ?? ''} RM',
-                    textAlign: TextAlign.center,
-                    maxLines: 2,
-                    style:
-                        getText500(size: 15.sp, colors: ColorConstants.black),
-                  ),
-                ),
+                Visibility(
+                    visible: controller.mDashboardScreenController
+                        .selectedCurrency.value.isNotEmpty,
+                    child: Container(
+                      height: 4.3.h,
+                      margin: EdgeInsets.only(left: 15.sp, right: 15.sp),
+                      alignment: Alignment.center,
+                      child: Text(
+                        '${controller.mDashboardScreenController.selectedCurrency.value} ${mGetBestSellerItemData.price ?? ''}',
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                        style: getText500(
+                            size: 15.sp, colors: ColorConstants.black),
+                      ),
+                    )),
               ],
             )),
           )),

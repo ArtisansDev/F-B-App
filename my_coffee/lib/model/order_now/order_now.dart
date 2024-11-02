@@ -49,7 +49,7 @@ class OrderNow extends StatelessWidget {
                     style: getTextRegular(size: 15.sp, colors: Colors.grey),
                   ),
                   Text(
-                    'RM ${mAddCartModel.totalAmount}',
+                    '${mAddCartModel.mGetAllBranchesListData?.currency?.first.currencySymbol ?? ''} ${mAddCartModel.totalAmount}',
                     style: getText600(
                         size: 19.5.sp, colors: ColorConstants.cAppColorsBlue),
                   )
@@ -73,17 +73,17 @@ class OrderNow extends StatelessWidget {
                     alignment: Alignment.topRight,
                     child: Container(
                       padding: EdgeInsets.all(15.sp),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: ColorConstants.buttonBar,
                         shape: BoxShape.circle,
                       ),
                       child: Text(
                         (mAddCartModel.mItems ?? []).length.toString(),
-                        style: getTextRegular(size: 15.sp, colors: Colors.white),
+                        style:
+                            getTextRegular(size: 15.sp, colors: Colors.white),
                       ),
                     ),
                   )
-
                 ],
               )
             ],

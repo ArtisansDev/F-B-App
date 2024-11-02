@@ -15,12 +15,14 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../constants/color_constants.dart';
 import '../../constants/text_styles_constants.dart';
+import '../../model/dashboard_screen/controller/dashboard_controller.dart';
 
 class TagVariantDateView {
   List<VariantData> tagList = [];
   Rx<VariantData> selectVariantData = VariantData().obs;
   Function onTab;
-
+  DashboardScreenController mDashboardScreenController =
+  Get.find<DashboardScreenController>();
   TagVariantDateView(this.onTab);
 
   yourKeySkillsView(List<VariantData> tagList) {
@@ -68,7 +70,7 @@ class TagVariantDateView {
             padding: EdgeInsets.only(
                 top: 11.5.sp, bottom: 11.5.sp, right: 17.5.sp, left: 17.5.sp),
             child: Text(
-              "${name.quantitySpecification} (${name.price} RM)",
+              "${name.quantitySpecification} (${mDashboardScreenController.selectedCurrency} ${name.price})",
               style: getText500(
                   colors: selectVariantData.value.variantIDP == name.variantIDP
                       ? Colors.white

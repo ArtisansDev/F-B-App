@@ -15,12 +15,14 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../constants/color_constants.dart';
 import '../../constants/text_styles_constants.dart';
+import '../../model/dashboard_screen/controller/dashboard_controller.dart';
 
 class TagModifierDateView {
   List<ModifierData> tagList = [];
   RxList<ModifierData> selectTag = <ModifierData>[].obs;
   Function onTab;
-
+  DashboardScreenController mDashboardScreenController =
+  Get.find<DashboardScreenController>();
   TagModifierDateView(this.onTab);
 
   yourKeySkillsView(List<ModifierData> tagList) {
@@ -65,7 +67,7 @@ class TagModifierDateView {
             padding: EdgeInsets.only(
                 top: 11.5.sp, bottom: 11.5.sp, right: 17.5.sp, left: 17.5.sp),
             child: Text(
-              "${name.modifierName} (${name.price} RM)",
+              "${name.modifierName} (${mDashboardScreenController.selectedCurrency} ${name.price})",
               style: getText500(
                   colors:
                       !search(name) ? Colors.white : ColorConstants.buttonBar,

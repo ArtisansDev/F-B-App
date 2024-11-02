@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
+import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:my_coffee/model/profile_screen/view/profile_screen.dart';
 
 import '../../../alert/app_alert.dart';
@@ -23,6 +24,7 @@ import '../../shopping_card_screen/controller/shoping_screen_controller.dart';
 
 class DashboardScreenController extends GetxController {
   RxInt selectedIndex = 0.obs;
+  RxString selectedCurrency = ''.obs;
 
   DashboardScreenController() {
     setSelectLocation();
@@ -111,10 +113,16 @@ class DashboardScreenController extends GetxController {
 
   setSelectLocation() async {
     selectGetAllBranchesListData.value = await SharedPrefs().getBranchesData();
+    selectedCurrency.value = (selectGetAllBranchesListData.value.currency ?? []).isEmpty
+        ? ''
+        : (selectGetAllBranchesListData.value.currency ?? []).first.currencySymbol ?? '';
   }
 
   void setLocation(GetAllBranchesListData mGetAllBranchesListData) async {
     selectGetAllBranchesListData.value = mGetAllBranchesListData;
+    selectedCurrency.value = (mGetAllBranchesListData.currency ?? []).isEmpty
+        ? ''
+        : (mGetAllBranchesListData.currency ?? []).first.currencySymbol ?? '';
     await SharedPrefs().setBranchesData(jsonEncode(mGetAllBranchesListData));
     Get.back(result: 'selected');
   }
@@ -136,7 +144,7 @@ class DashboardScreenController extends GetxController {
             selectLocation =
                 await AppAlert.showCustomDialogLocationPicker(Get.context!);
             Get.delete<LocationListScreenController>();
-            if(selectLocation.isNotEmpty){
+            if (selectLocation.isNotEmpty) {
               await SharedPrefs().setAddCartData('');
             }
           }, rightText: 'Ok');
