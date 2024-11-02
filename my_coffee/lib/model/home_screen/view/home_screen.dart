@@ -23,6 +23,7 @@ class HomeScreen extends GetView<HomeScreenController> {
   @override
   Widget build(BuildContext context) {
     Get.lazyPut(() => HomeScreenController());
+    controller.mGetDashboardResponse.value = null;
     return _fullView();
   }
 
@@ -44,14 +45,20 @@ class HomeScreen extends GetView<HomeScreenController> {
           onTap: () {
             AppUtils.hideKeyboard(Get.context!);
           },
-          child: RefreshIndicator(
-              onRefresh: () async {
-                controller.onRefresh();
-              },
-              child: SizedBox(
+          child: RefreshIndicator(onRefresh: () async {
+            controller.onRefresh();
+          }, child: Obx(
+            () {
+              return SizedBox(
                   height: double.infinity,
                   width: double.infinity,
-                  child: mHomeView())),
+                  child: controller.mGetDashboardResponse.value == null
+                      ? const Center(
+                          child: Text('Loading...'),
+                        )
+                      : mHomeView());
+            },
+          )),
         ));
   }
 

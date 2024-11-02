@@ -82,45 +82,50 @@ class TopAddressBar extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  controller.val.value = !controller.val.value;
+                  // controller.val.value = !controller.val.value;
                 },
                 child: Container(
-                    width: 35.w,
+                    width: 19.w,
                     padding: EdgeInsets.all(5.sp),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         color: ColorConstants.buttonBar.withOpacity(0.80)),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          width: 17.w,
-                          height: 25.sp,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              color: controller.val.value
-                                  ? ColorConstants.cAppColorsBlue
-                                  : Colors.transparent),
-                          child: Center(
-                              child: Text('DINE - IN',
-                                  style: getText500(
-                                      size: 14.5.sp, colors: Colors.white))),
-                        ),
-                        Container(
-                          width: 17.w,
-                          height: 25.sp,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              color: !controller.val.value
-                                  ? ColorConstants.cAppColorsBlue
-                                  : Colors.transparent),
-                          child: Center(
-                              child: Text(
-                            'PICKUP',
-                            style:
-                                getText500(size: 14.5.sp, colors: Colors.white),
-                          )),
-                        ),
+                        Visibility(
+                            visible: controller.mDashboardScreenController
+                                    .sDialogPicDine.value ==
+                                'Dine',
+                            child: Container(
+                              width: 18.w,
+                              height: 25.sp,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
+                                  color: ColorConstants.cAppColorsBlue),
+                              child: Center(
+                                  child: Text('DINE - IN',
+                                      style: getText500(
+                                          size: 14.5.sp,
+                                          colors: Colors.white))),
+                            )),
+                        Visibility(
+                            visible: controller.mDashboardScreenController
+                                    .sDialogPicDine.value ==
+                                'Take',
+                            child: Container(
+                              width: 18.w,
+                              height: 25.sp,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(30),
+                                  color: ColorConstants.cAppColorsBlue),
+                              child: Center(
+                                  child: Text(
+                                'PICKUP',
+                                style: getText500(
+                                    size: 14.5.sp, colors: Colors.white),
+                              )),
+                            )),
                       ],
                     )),
               ),

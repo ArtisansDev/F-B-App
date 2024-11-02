@@ -132,6 +132,7 @@ class HomeScreenController extends GetxController {
   }
 
   RxList<BannerMaster> mBannerMaster = <BannerMaster>[].obs;
+  Rxn<GetDashboardResponse> mGetDashboardResponse = Rxn<GetDashboardResponse>();
 
   void detDashboardDetailsApi() {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
@@ -143,15 +144,15 @@ class HomeScreenController extends GetxController {
         WebResponseSuccess mWebResponseSuccess =
             await AllApiImpl().postGetDashboard(mGetDashboardRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
-          GetDashboardResponse mGetDashboardResponse = mWebResponseSuccess.data;
+          mGetDashboardResponse.value = mWebResponseSuccess.data;
           dataGetBestSellerItemData.value.clear();
           dataGetBestSellerItemData.value.addAll(
-              mGetDashboardResponse.mGetDashboardData?.bestSellingItems ?? []);
+              mGetDashboardResponse.value?.mGetDashboardData?.bestSellingItems ?? []);
           dataGetBestSellerItemData.refresh();
 
           mBannerMaster.value.clear();
           mBannerMaster.value.addAll(
-              mGetDashboardResponse.mGetDashboardData?.bannerMaster ?? []);
+              mGetDashboardResponse.value?.mGetDashboardData?.bannerMaster ?? []);
           mBannerMaster.refresh();
           stopTimer();
           if (mBannerMaster.value.length > 1) {

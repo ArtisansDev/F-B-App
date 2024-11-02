@@ -12,6 +12,7 @@ import '../../../data/mode/add_cart/add_cart.dart';
 import '../../../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import '../../../lang/translation_service_key.dart';
 import '../../../routes/route_constants.dart';
+import '../../history_screen/view/history_screen.dart';
 import '../../home_screen/controller/home_controller.dart';
 import '../../home_screen/view/home_screen.dart';
 import '../../location_list_screen/controller/location_list_controller.dart';
@@ -92,7 +93,7 @@ class DashboardScreenController extends GetxController {
   List<Widget> widgetOptions = <Widget>[
     const HomeScreen(),
     const MenuScreen(),
-    const RewardsScreen(),
+    const HistoryScreen(),
     const ProfileScreen(),
   ];
   RxString sDialogPicDine = ''.obs;
@@ -131,6 +132,7 @@ class DashboardScreenController extends GetxController {
     sDialogPicDine.value = title;
     var selectLocation = '';
     if (sDialogPicDine.value == 'Dine') {
+      selectedIndex.value = 1;
     } else if (sDialogPicDine.value == 'Take') {
       if ((selectGetAllBranchesListData.value.branchName ?? '').isEmpty) {
         AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
@@ -177,7 +179,7 @@ class DashboardScreenController extends GetxController {
         sTitle.value = sMenu.tr;
         return;
       case 2:
-        sTitle.value = sRewards.tr;
+        sTitle.value = sHistory.tr;
         return;
       // case 3:
       //   sTitle.value = sRewards.tr;
