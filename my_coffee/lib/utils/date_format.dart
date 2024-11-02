@@ -67,6 +67,15 @@ getDateMMYYYY(DateTime selected) {
   return sDate;
 }
 
+
+getDateMMYYYYTime(DateTime selected) {
+  String formattedTime = DateFormat('hh:mm a').format(selected);
+  String sDate =
+      '${selected.day.toString().padLeft(2, '0')}-${selected.month.toString().padLeft(2, '0')}-${selected.year.toString()}  $formattedTime';
+  return sDate;
+}
+
+
 toDateCompare(String sStartDate, String sEndDate) {
   var dateFormat = DateFormat('dd-MM-yyyy');
   DateTime startDate = dateFormat.parse(sStartDate);

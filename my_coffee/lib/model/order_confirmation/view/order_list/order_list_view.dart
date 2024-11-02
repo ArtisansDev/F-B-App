@@ -33,198 +33,213 @@ class OrderListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () {
-        return Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(
-                  left: 19.sp, right: 19.sp, top: 18.sp, bottom: 10.sp),
-              alignment: Alignment.topCenter,
-              child: Row(
-                children: [
-                  Text(
-                    'Your Order',
-                    style: getText600(
-                        colors: ColorConstants.cAppColorsBlue, size: 17.sp),
+        return Visibility(
+            visible: (controller.mItems.value ?? []).isNotEmpty,
+            child: Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(
+                      left: 19.sp, right: 19.sp, top: 18.sp, bottom: 10.sp),
+                  alignment: Alignment.topCenter,
+                  child: Row(
+                    children: [
+                      Text(
+                        'Your Order ${(controller.mItems.value ?? []).length}',
+                        style: getText600(
+                            colors: ColorConstants.cAppColorsBlue, size: 17.sp),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            ),
-            ListView.builder(
-              padding: EdgeInsets.zero,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: (controller.mItems.value ?? []).length,
-              itemBuilder: (BuildContext context, int index) {
-                GetItemDetailsData mGetItemDetailsData =
-                    controller.mItems.value[index];
-                return Container(
-                    height: 14.5.h,
-                    margin:
-                        EdgeInsets.only(left: 18.sp, right: 18.sp, top: 15.sp),
-                    padding: EdgeInsets.all(14.sp),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(13.sp),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Stack(
-                          alignment: Alignment.center,
+                ),
+                ListView.builder(
+                  padding: EdgeInsets.zero,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: (controller.mItems.value ?? []).length,
+                  itemBuilder: (BuildContext context, int index) {
+                    GetItemDetailsData mGetItemDetailsData =
+                        controller.mItems.value[index];
+                    return Container(
+                        height: 14.5.h,
+                        margin: EdgeInsets.only(
+                            left: 18.sp, right: 18.sp, top: 15.sp),
+                        padding: EdgeInsets.all(14.sp),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(13.sp),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Container(
-                              height: 11.8.h,
-                              alignment: Alignment.topCenter,
-                              child: Image.asset(
-                                ImageAssetsConstants.backLogo,
-                                fit: BoxFit.fitHeight,
-                                height: 10.h,
-                              ),
+                            ///image
+                            (mGetItemDetailsData.itemImages ?? []).isEmpty
+                                ? Container(
+                                    height: 9.h,
+                                    alignment: Alignment.topCenter,
+                                    child: Image.asset(
+                                      ImageAssetsConstants.backLogo,
+                                      fit: BoxFit.fitHeight,
+                                      height: 8.5.h,
+                                    ),
+                                  )
+                                : Container(
+                                    height: 9.h,
+                                    alignment: Alignment.bottomCenter,
+                                    child: cacheBestItemImage(
+                                        (mGetItemDetailsData.itemImages ?? [])
+                                                .first
+                                                .itemImagePath ??
+                                            '',
+                                        ImageAssetsConstants.backLogo,
+                                        9.h)),
+                            SizedBox(
+                              width: 12.sp,
                             ),
-                            Container(
-                                height: 11.8.h,
-                                alignment: Alignment.bottomCenter,
-                                child: Image.asset(
-                                  ImageAssetsConstants.coffee,
-                                  fit: BoxFit.fitHeight,
-                                  height: 11.3.h,
-                                )),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 10.sp,
-                        ),
-                        Expanded(
-                            child: Container(
-                          height: 11.8.h,
-                          alignment: Alignment.center,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                mGetItemDetailsData.itemName ?? '',
-                                maxLines: 2,
-                                style: getText600(
-                                    size: 16.sp,
-                                    colors: ColorConstants.buttonBar,
-                                    heights: 1.2),
-                              ),
-                              SizedBox(
-                                height: 8.sp,
-                              ),
-                              Text(
-                                'RM ${mGetItemDetailsData.perItemTotal}',
-                                style: getText600(
-                                  size: 15.5.sp,
-                                  colors: ColorConstants.cAppColorsBlue,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 8.sp,
-                              ),
-                              (mGetItemDetailsData.description ?? '')
-                                      .contains('<')
-                                  ? HtmlWidget(
-                                      mGetItemDetailsData.description ?? '',
-                                      textStyle: TextStyle(
-                                        overflow: TextOverflow.ellipsis,
-                                        fontSize: 15.sp,
-                                        color: ColorConstants.appVersion,
-                                      ))
-                                  : Text(
-                                      mGetItemDetailsData.description ?? '',
-                                      maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: getTextRegular(
-                                        size: 15.sp,
-                                        colors: ColorConstants.appVersion,
-                                      ),
-                                    )
-                            ],
-                          ),
-                        )),
-                        Container(
-                            margin: EdgeInsets.only(top: 11.sp),
-                            alignment: Alignment.topLeft,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                incDecView(mGetItemDetailsData, index),
-                                SizedBox(
-                                  width: 22.w,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Container(
-                                        height: 24.sp,
-                                        width: 24.sp,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(11.sp),
-                                            color: ColorConstants.buttonBar),
-                                        child: IconButton(
-                                          padding: EdgeInsets.zero,
-                                          icon: Image.asset(
-                                            ImageAssetsConstants.editOrder,
-                                            fit: BoxFit.fitHeight,
-                                            height: 20.sp,
+
+                            ///details
+                            Expanded(
+                                child: Container(
+                              height: 11.8.h,
+                              alignment: Alignment.center,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    mGetItemDetailsData.itemName ?? '',
+                                    maxLines: 2,
+                                    style: getText600(
+                                        size: 16.sp,
+                                        colors: ColorConstants.buttonBar,
+                                        heights: 1.2),
+                                  ),
+                                  SizedBox(
+                                    height: 8.sp,
+                                  ),
+                                  Text(
+                                    'RM ${mGetItemDetailsData.perItemTotal}',
+                                    style: getText600(
+                                      size: 15.5.sp,
+                                      colors: ColorConstants.cAppColorsBlue,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 8.sp,
+                                  ),
+                                  (mGetItemDetailsData.description ?? '')
+                                          .contains('<')
+                                      ? HtmlWidget(
+                                          mGetItemDetailsData.description ?? '',
+                                          textStyle: TextStyle(
+                                            overflow: TextOverflow.ellipsis,
+                                            fontSize: 15.sp,
+                                            color: ColorConstants.appVersion,
+                                          ))
+                                      : Text(
+                                          mGetItemDetailsData.description ?? '',
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: getTextRegular(
+                                            size: 15.sp,
+                                            colors: ColorConstants.appVersion,
                                           ),
-                                          onPressed: () {
-                                            controller.editOrder(index);
-                                          },
-                                          color: ColorConstants.buttonBar,
-                                          iconSize: 17.sp,
-                                        ),
-                                      ),
-                                      Container(
-                                          height: 24.sp,
-                                          width: 24.sp,
-                                          decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(11.sp),
-                                              color: ColorConstants
-                                                  .cAppColorsBlue),
-                                          child: IconButton(
-                                            padding: EdgeInsets.zero,
-                                            icon: IconButton(
+                                        )
+                                ],
+                              ),
+                            )),
+                            SizedBox(
+                              width: 12.sp,
+                            ),
+
+                            ///delete and edit
+                            Container(
+                                margin: EdgeInsets.only(top: 11.sp),
+                                alignment: Alignment.topLeft,
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    incDecView(mGetItemDetailsData, index),
+                                    SizedBox(
+                                      width: 22.w,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Container(
+                                            height: 24.sp,
+                                            width: 24.sp,
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        11.sp),
+                                                color:
+                                                    ColorConstants.buttonBar),
+                                            child: IconButton(
                                               padding: EdgeInsets.zero,
                                               icon: Image.asset(
-                                                ImageAssetsConstants
-                                                    .deleteOrder,
+                                                ImageAssetsConstants.editOrder,
                                                 fit: BoxFit.fitHeight,
                                                 height: 20.sp,
                                               ),
                                               onPressed: () {
-                                                controller.deleteOrder(index);
+                                                controller.editOrder(index);
                                               },
                                               color: ColorConstants.buttonBar,
                                               iconSize: 17.sp,
                                             ),
-                                            onPressed: () {
-                                              controller.priceIncDec(
-                                                  mGetItemDetailsData,
-                                                  index,
-                                                  (mGetItemDetailsData.count ??
-                                                          0) +
-                                                      1);
-                                            },
-                                            color: Colors.white,
-                                            iconSize: 17.sp,
-                                          )),
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ))
-                      ],
-                    ));
-              },
-            )
-          ],
-        );
+                                          ),
+                                          Container(
+                                              height: 24.sp,
+                                              width: 24.sp,
+                                              decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          11.sp),
+                                                  color: ColorConstants
+                                                      .cAppColorsBlue),
+                                              child: IconButton(
+                                                padding: EdgeInsets.zero,
+                                                icon: IconButton(
+                                                  padding: EdgeInsets.zero,
+                                                  icon: Image.asset(
+                                                    ImageAssetsConstants
+                                                        .deleteOrder,
+                                                    fit: BoxFit.fitHeight,
+                                                    height: 20.sp,
+                                                  ),
+                                                  onPressed: () {
+                                                    controller
+                                                        .deleteOrder(index);
+                                                  },
+                                                  color:
+                                                      ColorConstants.buttonBar,
+                                                  iconSize: 17.sp,
+                                                ),
+                                                onPressed: () {
+                                                  controller.priceIncDec(
+                                                      mGetItemDetailsData,
+                                                      index,
+                                                      (mGetItemDetailsData
+                                                                  .count ??
+                                                              0) +
+                                                          1);
+                                                },
+                                                color: Colors.white,
+                                                iconSize: 17.sp,
+                                              )),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ))
+                          ],
+                        ));
+                  },
+                )
+              ],
+            ));
       },
     );
   }

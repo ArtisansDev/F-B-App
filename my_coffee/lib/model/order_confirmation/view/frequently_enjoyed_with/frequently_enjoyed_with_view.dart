@@ -16,7 +16,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../constants/color_constants.dart';
 import '../../../../constants/text_styles_constants.dart';
 import '../../controller/order_confirmation_controller.dart';
-import '../../view/frequently_item_row.dart';
+import 'frequently_item_row.dart';
 
 class FrequentlyEnjoyedWithView extends StatelessWidget {
   late OrderConfirmationScreenController controller;

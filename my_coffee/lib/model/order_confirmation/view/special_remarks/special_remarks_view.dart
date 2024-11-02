@@ -11,11 +11,14 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../common/custom_image.dart';
+import '../../../../common/text_input_widget.dart';
 import '../../../../constants/color_constants.dart';
 import '../../../../constants/image_assets_constants.dart';
+import '../../../../constants/pattern_constants.dart';
 import '../../../../constants/text_styles_constants.dart';
 import '../../../../utils/open_url.dart';
 import '../../controller/order_confirmation_controller.dart';
@@ -52,31 +55,36 @@ class SpecialRemarksView extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(13.sp),
             ),
-            child: Column(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    SizedBox(
-                      width: 12.sp,
-                    ),
-                    SizedBox(
-                      height: 4.h,
-                      width: 4.h,
-                      child: setImage(ImageAssetsConstants.remarks),
-                    ),
-                    SizedBox(
-                      width: 13.sp,
-                    ),
-                    Expanded(
-                        child: Text(
-                      'Let us know if you have any special requests. E.g. I need sugar sachet.',
-                      style: getTextRegular(
-                          size: 15.5.sp,
-                          colors: ColorConstants.appVersion,
-                          heights: 1.2),
-                    )),
-                  ],
+                SizedBox(
+                  width: 12.sp,
                 ),
+                SizedBox(
+                  height: 4.h,
+                  width: 4.h,
+                  child: setImage(ImageAssetsConstants.remarks,
+                      fit: BoxFit.fitHeight),
+                ),
+                SizedBox(
+                  width: 13.sp,
+                ),
+                Expanded(child: TextInputWidget(
+                  isReadOnly: false,
+                  controller: controller.remarksController.value,
+                  minLines: 5,
+                  maxLines: 30,
+                  showFloatingLabel: false,
+                  placeHolder: null,
+                  hintText: 'Let us know if you have any special requests. E.g. I need sugar sachet.',
+                  errorText: null,
+                  onFilteringTextInputFormatter: [
+                    FilteringTextInputFormatter.allow(
+                        RegExp(AppUtilConstants.patternSkills)),
+                  ],
+                ))
               ],
             )),
       ],

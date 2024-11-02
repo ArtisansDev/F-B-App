@@ -9,7 +9,7 @@ import '../constants/color_constants.dart';
 
 // ignore: must_be_immutable
 class TextInputWidget extends StatelessWidget {
-  String placeHolder = '';
+  String? placeHolder = '';
   String hintText = '';
   late TextEditingController controller;
   TextInputType? textInputType = TextInputType.text;
@@ -107,9 +107,14 @@ class TextInputWidget extends StatelessWidget {
               errorText: errorText,
               errorStyle: getTextRegular(colors: Colors.red, size: 13.5.sp),
               alignLabelWithHint: true,
-              labelText: placeHolder,
-              labelStyle: getTextRegular(
-                  colors: ColorConstants.appEditTextHint, size: 16.sp),
+              // labelText: placeHolder,
+              label: placeHolder!=null?Text(
+                placeHolder??'',
+                style: getTextRegular(
+                    colors: ColorConstants.buttonBar, size: 16.sp),
+              ):null,
+              // labelStyle: getTextRegular(
+              //     colors: ColorConstants.appEditTextHint, size: 16.sp),
               prefixIcon: sPrefixText == null
                   ? null
                   : GestureDetector(
@@ -235,9 +240,14 @@ class TextInputWidget extends StatelessWidget {
               errorText: errorText,
               errorStyle: getTextRegular(colors: Colors.red, size: 13.5.sp),
               alignLabelWithHint: true,
-              labelText: placeHolder,
-              labelStyle:
-                  getTextRegular(colors: ColorConstants.buttonBar, size: 16.sp),
+              // labelText: placeHolder,
+              // labelStyle:
+              //     getTextRegular(colors: ColorConstants.buttonBar, size: 16.sp),
+              label: placeHolder!=null?Text(
+                  placeHolder??'',
+                style: getTextRegular(
+                    colors: ColorConstants.buttonBar, size: 16.sp),
+              ):null,
               prefixIcon: prefixImage != null
                   ? setImageSize(prefixImage ?? '', fit: BoxFit.fitHeight)
                   : prefixIcon == null
