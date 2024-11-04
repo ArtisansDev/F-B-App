@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -109,23 +110,27 @@ class WebHttpProvider {
 
   Future<http.Response> postWithAuthAndRequestAndAttachmentProfileImage(
       String action,
+      Map<String, String> value,
       {String filePath = ""}) async {
     if (WebConstants.auth) {
       String tokenValue = await SharedPrefs().getUserToken();
-      debugPrint("tokenValue$tokenValue");
       headers.addAll({'Authorization': "Bearer $tokenValue"});
     }
 
-    var postUri = Uri.parse(WebConstants.baseUrlCommon + action);
+    debugPrint("url ==  ${WebConstants.baseUrlCommon + action}");
+    debugPrint("headers ==  ${jsonEncode(headers)}");
+    debugPrint("plainJsonRequest ==  ${jsonEncode(value)}");
 
+    var postUri = Uri.parse(WebConstants.baseUrlCommon + action);
     http.MultipartRequest request = http.MultipartRequest("POST", postUri);
 
     try {
       request.headers.addAll(headers);
-      debugPrint(" webservice $filePath");
+      debugPrint("webservice $filePath");
       if (filePath.isNotEmpty) {
         http.MultipartFile multipartFile =
-        await http.MultipartFile.fromPath('profile_picture', filePath);
+        await http.MultipartFile.fromPath('UserImage', filePath);
+        request.fields.addAll(value);
         request.files.add(multipartFile);
       }
 

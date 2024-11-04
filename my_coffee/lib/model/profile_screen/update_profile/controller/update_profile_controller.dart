@@ -3,9 +3,11 @@ import 'package:get/get.dart';
 
 import '../../../../alert/app_alert.dart';
 import '../../../../constants/get_user_details.dart';
+import '../../../../constants/logout_expired.dart';
 import '../../../../constants/message_constants.dart';
 import '../../../../constants/web_constants.dart';
 import '../../../../data/local/shared_prefs/shared_prefs.dart';
+import '../../../../data/mode/profile_image/profile_image_update_request.dart';
 import '../../../../data/mode/user_address_update/user_update_address_request.dart';
 import '../../../../data/mode/user_address_update/user_update_address_response.dart';
 import '../../../../data/mode/user_details/user_details_response.dart';
@@ -31,6 +33,7 @@ class UpdateProfileScreenController extends GetxController {
   Rx<Addresses> mAddresses1 = Addresses(addressType: 0).obs;
   Rx<Addresses> mAddresses2 = Addresses(addressType: 1).obs;
   RxString gender = ''.obs;
+  Rxn<String> imageUrl = Rxn<String>();
   RxString phoneCode = '91'.obs;
   RxBool mProfile = true.obs;
   RxBool mAddress1 = true.obs;
@@ -58,6 +61,7 @@ class UpdateProfileScreenController extends GetxController {
         addressController2.value.text = mAddresses2.value.address ?? '';
       }
     }
+    imageUrl.value = mUserDetailsResponseData.value.userImage;
     mUserDetailsResponseData.refresh();
   }
 
@@ -163,7 +167,29 @@ class UpdateProfileScreenController extends GetxController {
 
   void getImageSet() {
     mImagePickerUtils = ImagePickerUtils((value) {
-      attachmentPath.value = value;
+      apiProfileImageFile(value);
+    });
+  }
+
+  void apiProfileImageFile(String filePath) {
+    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+      if (isInternetAvailable) {
+        ProfileImageUpdateRequest mProfileUpdateRequest =
+            ProfileImageUpdateRequest(
+                userID: mUserDetailsResponseData.value.userID);
+        WebResponseSuccess mWebResponseSuccess = await AllApiImpl()
+            .postProfileImageFile(filePath, mProfileUpdateRequest);
+        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+          attachmentPath.value = filePath;
+          await getUserDetails();
+        } else {
+          AppAlert.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+          if (mWebResponseSuccess.statusCode == WebConstants.statusCode401) {
+            logout();
+          }
+        }
+      }
     });
   }
 }

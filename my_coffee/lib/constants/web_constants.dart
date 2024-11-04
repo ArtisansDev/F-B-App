@@ -65,5 +65,8 @@ class WebConstants {
   ///28-Oct-24
   static String actionGetDashboard =  "GetDashboard";  //post
 
+  ///4-Nov-24
+  static String actionSaveImage =  "Registration/User_SaveImage";  //post
+
 
 }

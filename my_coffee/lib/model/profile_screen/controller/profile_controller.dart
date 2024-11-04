@@ -21,6 +21,7 @@ class ProfileScreenController extends GetxController {
   RxString userName = '--'.obs;
   RxString email = '--'.obs;
   RxString phoneNumber = '--'.obs;
+  Rxn<String> imageUrl =  Rxn<String>();
 
   RxBool viewVisible = false.obs;
 
@@ -40,6 +41,7 @@ class ProfileScreenController extends GetxController {
     userName.value = mUserDetailsResponseData.value.firstName ?? '';
     email.value = mUserDetailsResponseData.value.email ?? '';
     phoneNumber.value = mUserDetailsResponseData.value.phoneNumber ?? '';
+    imageUrl.value = mUserDetailsResponseData.value.userImage;
     mUserDetailsResponseData.refresh();
   }
 

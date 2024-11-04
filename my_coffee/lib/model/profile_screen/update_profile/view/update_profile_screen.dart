@@ -93,8 +93,11 @@ class UpdateProfileScreen extends GetView<UpdateProfileScreenController> {
             Container(
               height: 19.w,
               width: 19.w,
-              padding: EdgeInsets.all(
-                  controller.attachmentPath.value != null ? 2.sp : 15.sp),
+              padding: EdgeInsets.all(controller.attachmentPath.value != null
+                  ? 2.sp
+                  : controller.imageUrl.value != null
+                      ? 2.sp
+                      : 15.sp),
               decoration: BoxDecoration(
                 color: ColorConstants.appProgress,
                 shape: BoxShape.circle,
@@ -116,8 +119,11 @@ class UpdateProfileScreen extends GetView<UpdateProfileScreenController> {
                         height: 18.w,
                         width: 18.w,
                       ))
-                    : setImageSize(ImageAssetsConstants.profile,
-                        fit: BoxFit.fill, size: 18.w),
+                    : controller.imageUrl.value != null
+                        ? cacheProfileImage(controller.imageUrl.value ?? '',
+                            ImageAssetsConstants.profile, 18.w)
+                        : setImageSize(ImageAssetsConstants.profile,
+                            fit: BoxFit.fill, size: 18.w),
               ),
             ),
             SizedBox(

@@ -97,7 +97,8 @@ class ProfileScreen extends GetView<ProfileScreenController> {
             Container(
               height: 19.w,
               width: 19.w,
-              padding: EdgeInsets.all(15.sp),
+              padding: EdgeInsets.all(
+                  controller.imageUrl.value != null ? 2.sp : 15.sp),
               decoration: BoxDecoration(
                 color: ColorConstants.appProgress,
                 shape: BoxShape.circle,
@@ -111,8 +112,11 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                 ],
               ),
               child: Container(
-                child: setImageSize(ImageAssetsConstants.profile,
-                    fit: BoxFit.fill, size: 18.w),
+                child: controller.imageUrl.value != null
+                    ? cacheProfileImage(controller.imageUrl.value ?? '',
+                        ImageAssetsConstants.profile, 18.w)
+                    : setImageSize(ImageAssetsConstants.profile,
+                        fit: BoxFit.fill, size: 18.w),
               ),
             ),
             SizedBox(

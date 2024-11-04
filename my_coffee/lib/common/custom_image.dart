@@ -98,6 +98,42 @@ cacheMenuImage(String imageUrl, String placeHolderImagePath, double size) {
           ));
 }
 
+cacheProfileImage(String imageUrl, String placeHolderImagePath, double size) {
+  debugPrint("ProfileImage Url $imageUrl");
+  return CachedNetworkImage(
+      useOldImageOnUrlChange: false,
+      cacheKey: DateTime.now().toString(),
+      imageUrl: imageUrl,
+      key: UniqueKey(),
+      width: size,
+      height: size,
+      fit: BoxFit.cover,
+      placeholder: (context, url) {
+        return Container(
+            padding: EdgeInsets.all(15.sp),
+            child: Image.asset(
+              placeHolderImagePath,
+              width: size,
+              fit: BoxFit.fitWidth,
+            ));
+      },
+      errorWidget: (context, url, error) {
+        return Container(
+            padding: EdgeInsets.all(15.sp),
+            child: Image.asset(
+              placeHolderImagePath,
+              width: size,
+              fit: BoxFit.fitWidth,
+            ));
+      },
+      imageBuilder: (context, imageProvider) => ClipOval(
+            child: Container(
+                decoration: BoxDecoration(
+              image: DecorationImage(image: imageProvider, fit: BoxFit.cover),
+            )),
+          ));
+}
+
 svgImageSet(String assetName, double width, double height,
     {Color colour = Colors.black}) {
   return SvgPicture.asset(
@@ -166,7 +202,8 @@ setImageBanner(String image) {
 //   );
 // }
 
-cacheImageHomeBanner(String imageUrl, String placeHolderImagePath, double size) {
+cacheImageHomeBanner(
+    String imageUrl, String placeHolderImagePath, double size) {
   debugPrint("image Url $imageUrl");
   return CachedNetworkImage(
     imageUrl: imageUrl,
@@ -188,9 +225,12 @@ cacheImageHomeBanner(String imageUrl, String placeHolderImagePath, double size) 
         fit: BoxFit.fitHeight,
       );
     },
-    imageBuilder: (context, imageProvider) =>  Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(image: imageProvider,  fit: BoxFit.contain,),
-            )),
+    imageBuilder: (context, imageProvider) => Container(
+        decoration: BoxDecoration(
+      image: DecorationImage(
+        image: imageProvider,
+        fit: BoxFit.contain,
+      ),
+    )),
   );
 }

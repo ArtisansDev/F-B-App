@@ -15,6 +15,7 @@ import '../../mode/get_dashboard/get_dashboard_response.dart';
 import '../../mode/get_general_setting/get_general_setting_response.dart';
 import '../../mode/get_item_details/get_item_details_response.dart';
 import '../../mode/logout/logout_response.dart';
+import '../../mode/profile_image/profile_image_update_request.dart';
 import '../../mode/register/register_response.dart';
 import '../../mode/user_address_update/user_update_address_response.dart';
 import '../../mode/user_delete/user_delete_response.dart';
@@ -579,6 +580,43 @@ class AllApiImpl implements IApiRepository {
       mWebResponseSuccess = WebResponseSuccess(
         statusCode: cases.statusCode,
         data: mGetItemDetailsResponse,
+        statusMessage: "",
+        error: false,
+      );
+    }
+    return mWebResponseSuccess;
+  }
+
+  ///ProfileImage
+  @override
+  Future<WebResponseSuccess> postProfileImageFile(String filePart,
+      ProfileImageUpdateRequest mProfileImageUpdateRequest) async {
+    AppAlert.showProgressDialog(Get.context!);
+
+    WebConstants.auth = true;
+    final cases = await WebHttpProvider()
+        .postWithAuthAndRequestAndAttachmentProfileImage(
+            WebConstants.actionSaveImage, mProfileImageUpdateRequest.toJson(),
+            filePath: filePart);
+    debugPrint(
+        "plainJsonRequest statusCode ==  ${jsonEncode(cases.statusCode)}");
+    debugPrint("plainJsonRequest ==  ${jsonEncode(cases.body)}");
+
+    AppAlert.hideLoadingDialog(Get.context!);
+    if (cases.statusCode != WebConstants.statusCode200) {
+      // ProfileUpdateResponse mProfileUpdateResponse =
+      // ProfileUpdateResponse.fromJson(jsonDecode(cases.body.toString()));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        statusMessage: "mProfileUpdateResponse.message",
+        error: true,
+      );
+    } else {
+      // ProfileUpdateResponse mProfileUpdateResponse =
+      // ProfileUpdateResponse.fromJson(jsonDecode(cases.body.toString()));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        // data: mProfileUpdateResponse,
         statusMessage: "",
         error: false,
       );
