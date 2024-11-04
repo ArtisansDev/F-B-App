@@ -30,6 +30,8 @@
     <true/>
     <key>NSCameraUsageDescription</key>
     <string>This app needs camera access to scan QR codes</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to your photo library to select photos</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
     <string>Your location is needed to use this app</string>
     <key>NSLocationAlwaysUsageDescription</key>

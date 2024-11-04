@@ -15,6 +15,7 @@ import '../../../../data/remote/api_call/api_impl.dart';
 import '../../../../data/remote/web_response.dart';
 import '../../../../lang/translation_service_key.dart';
 import '../../../../utils/app_utils.dart';
+import '../../../../utils/image_picker_utils.dart';
 import '../../../../utils/network_utils.dart';
 
 class UpdateProfileScreenController extends GetxController {
@@ -37,6 +38,7 @@ class UpdateProfileScreenController extends GetxController {
 
   UpdateProfileScreenController() {
     getProfileDetails();
+    getImageSet();
   }
 
   getProfileDetails() async {
@@ -152,6 +154,16 @@ class UpdateProfileScreenController extends GetxController {
         AppAlert.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
+    });
+  }
+
+  /// Image picker
+  Rxn<String> attachmentPath = Rxn<String>();
+  late ImagePickerUtils mImagePickerUtils;
+
+  void getImageSet() {
+    mImagePickerUtils = ImagePickerUtils((value) {
+      attachmentPath.value = value;
     });
   }
 }

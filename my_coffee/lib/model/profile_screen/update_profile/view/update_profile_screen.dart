@@ -1,4 +1,5 @@
-import 'package:country_picker/country_picker.dart';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:focus_detector/focus_detector.dart';
@@ -14,7 +15,6 @@ import '../../../../constants/color_constants.dart';
 import '../../../../constants/image_assets_constants.dart';
 import '../../../../constants/pattern_constants.dart';
 import '../../../../lang/translation_service_key.dart';
-import '../../../../routes/route_constants.dart';
 import '../../../../utils/app_utils.dart';
 import '../controller/update_profile_controller.dart';
 
@@ -77,7 +77,9 @@ class UpdateProfileScreen extends GetView<UpdateProfileScreenController> {
           ///Delivery Address (Office)
           deliveryAddressOffice(),
 
-          SizedBox(height: 8.h,)
+          SizedBox(
+            height: 8.h,
+          )
         ],
       ),
     );
@@ -91,7 +93,8 @@ class UpdateProfileScreen extends GetView<UpdateProfileScreenController> {
             Container(
               height: 19.w,
               width: 19.w,
-              padding: EdgeInsets.all(15.sp),
+              padding: EdgeInsets.all(
+                  controller.attachmentPath.value != null ? 2.sp : 15.sp),
               decoration: BoxDecoration(
                 color: ColorConstants.appProgress,
                 shape: BoxShape.circle,
@@ -105,21 +108,34 @@ class UpdateProfileScreen extends GetView<UpdateProfileScreenController> {
                 ],
               ),
               child: Container(
-                child: setImageSize(ImageAssetsConstants.profile,
-                    fit: BoxFit.fill, size: 18.w),
+                child: controller.attachmentPath.value != null
+                    ? ClipOval(
+                        child: Image.file(
+                        File(controller.attachmentPath.value ?? ''),
+                        fit: BoxFit.fill,
+                        height: 18.w,
+                        width: 18.w,
+                      ))
+                    : setImageSize(ImageAssetsConstants.profile,
+                        fit: BoxFit.fill, size: 18.w),
               ),
             ),
             SizedBox(
               width: 30.sp,
             ),
             Expanded(
-                child: Container(
-              height: 19.w,
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Change Profile Pic',
-                style: getTextBold(
-                    size: 18.sp, colors: ColorConstants.cAppColorsBlue),
+                child: GestureDetector(
+              onTap: () {
+                controller.mImagePickerUtils.settingImagePicker();
+              },
+              child: Container(
+                height: 19.w,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Change Profile Pic',
+                  style: getTextBold(
+                      size: 18.sp, colors: ColorConstants.cAppColorsBlue),
+                ),
               ),
             )),
           ],
@@ -289,7 +305,8 @@ class UpdateProfileScreen extends GetView<UpdateProfileScreenController> {
                   child: setImage(ImageAssetsConstants.edit4,
                       fit: BoxFit.fitHeight),
                 ),
-                Expanded(child: TextInputWidget(
+                Expanded(
+                    child: TextInputWidget(
                   isReadOnly: controller.mAddress1.value,
                   controller: controller.addressController1.value,
                   minLines: 5,
@@ -353,7 +370,7 @@ class UpdateProfileScreen extends GetView<UpdateProfileScreenController> {
               Text(
                 ' (Office)',
                 style:
-                getText600(colors: ColorConstants.buttonBar, size: 17.sp),
+                    getText600(colors: ColorConstants.buttonBar, size: 17.sp),
               ),
             ],
           ),
@@ -374,7 +391,8 @@ class UpdateProfileScreen extends GetView<UpdateProfileScreenController> {
                   child: setImage(ImageAssetsConstants.edit5,
                       fit: BoxFit.fitHeight),
                 ),
-                Expanded(child: TextInputWidget(
+                Expanded(
+                    child: TextInputWidget(
                   isReadOnly: controller.mAddress2.value,
                   controller: controller.addressController2.value,
                   minLines: 5,
