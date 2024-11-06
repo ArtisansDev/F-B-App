@@ -118,8 +118,7 @@ class OrderListView extends StatelessWidget {
                                     height: 8.sp,
                                   ),
                                   Text(
-                                    '${controller.mDashboardScreenController
-                                        .selectedCurrency.value} ${mGetItemDetailsData.perItemTotal}',
+                                    '${controller.mDashboardScreenController.selectedCurrency.value} ${mGetItemDetailsData.perItemTotal}',
                                     style: getText600(
                                       size: 15.5.sp,
                                       colors: ColorConstants.cAppColorsBlue,
@@ -130,13 +129,18 @@ class OrderListView extends StatelessWidget {
                                   ),
                                   (mGetItemDetailsData.description ?? '')
                                           .contains('<')
-                                      ? HtmlWidget(
-                                          mGetItemDetailsData.description ?? '',
-                                          textStyle: TextStyle(
-                                            overflow: TextOverflow.ellipsis,
-                                            fontSize: 15.sp,
-                                            color: ColorConstants.appVersion,
-                                          ))
+                                      ? SizedBox(
+                                          height: 5.h,
+                                          child: HtmlWidget(
+                                              mGetItemDetailsData.description ??
+                                                  '',
+                                              textStyle: TextStyle(
+                                                overflow: TextOverflow.ellipsis,
+                                                fontSize: 15.sp,
+                                                height: 1.5,
+                                                color:
+                                                    ColorConstants.appVersion,
+                                              )))
                                       : Text(
                                           mGetItemDetailsData.description ?? '',
                                           maxLines: 2,

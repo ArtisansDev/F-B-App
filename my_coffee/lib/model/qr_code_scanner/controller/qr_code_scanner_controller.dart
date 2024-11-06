@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -42,10 +43,31 @@ class QrCodeScannerController extends GetxController {
     }
   }
 
-  void selectTable() {
+  void selectTable() async {
     if (tableNumberController.value.text.isEmpty) {
       AppAlert.showSnackBar(Get.context!, 'Please select the table number');
     } else {
+      isCheckTable();
+    }
+  }
+
+  isCheckTable() async {
+    AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+    if ((mAddCartModel.sTableNo ?? '').isNotEmpty &&
+        !(mAddCartModel.sTableNo ?? '')
+            .toString()
+            .trim()
+            .contains(tableNumberController.value.text)) {
+      AppAlert.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
+          'This action will clear the items in your current basket. Do you want to proceed?',
+          () async {
+        await SharedPrefs().setAddCartData('');
+      }, rightText: 'Ok');
+      return false;
+    } else {
+      mAddCartModel.sTableNo = tableNumberController.value.text;
+      mAddCartModel.sType = 'Dine';
+      await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
       mDashboardScreenController.setTable(
           sTableNo: tableNumberController.value.text);
     }

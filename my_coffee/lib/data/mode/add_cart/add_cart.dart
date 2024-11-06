@@ -14,15 +14,22 @@ import '../get_item_details/get_item_details_response.dart';
 class AddCartModel {
   GetAllBranchesListData? mGetAllBranchesListData;
   double? totalAmount;
+  String? sTableNo='';
+  String? sType='Take';
   List<GetItemDetailsData>? mItems;
 
   AddCartModel({
     this.mGetAllBranchesListData,
     this.totalAmount,
+    this.sTableNo,
+    this.sType,
     this.mItems,
   });
 
   AddCartModel.fromJson(dynamic json) {
+    totalAmount = json['totalAmount'];
+    sTableNo = json['table_no']??'';
+    sType = json['type']??'Take';
     totalAmount = json['totalAmount'];
     mGetAllBranchesListData = json['branches'] != null
         ? GetAllBranchesListData.fromJson(json['branches'])
@@ -40,6 +47,8 @@ class AddCartModel {
     map['totalAmount'] = totalAmount;
     map['branches'] = mGetAllBranchesListData;
     map['item'] = mItems;
+    map['type'] = sType;
+    map['table_no'] = sTableNo;
     return map;
   }
 }

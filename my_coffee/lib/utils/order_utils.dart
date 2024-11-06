@@ -28,8 +28,12 @@ saveCart(
     double totalAmount,
     double amount,
     double amountModifier) async {
+
+  ///DashboardScreenController
   DashboardScreenController mDashboardScreenController =
       Get.find<DashboardScreenController>();
+
+  ///get mAddCartModel
   AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
 
   ///add item
@@ -78,14 +82,13 @@ editCart(
   mItemsData.perItemTotal = (amount + amountModifier);
 
   ///add cart
-  Rx<AddCartModel> mAddCartModel = AddCartModel().obs;
-  mAddCartModel.value = await SharedPrefs().getAddCartData();
-  mAddCartModel.value.mItems![index] = mItemsData;
+  AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+  mAddCartModel.mItems![index] = mItemsData;
 
-  mAddCartModel.value.totalAmount = 0.0;
+  mAddCartModel.totalAmount = 0.0;
   for (GetItemDetailsData mGetItemDetailsData
-      in mAddCartModel.value.mItems ?? []) {
-    mAddCartModel.value.totalAmount = (mAddCartModel.value.totalAmount ?? 0.0) +
+      in mAddCartModel.mItems ?? []) {
+    mAddCartModel.totalAmount = (mAddCartModel.totalAmount ?? 0.0) +
         (mGetItemDetailsData.total ?? 0);
   }
 

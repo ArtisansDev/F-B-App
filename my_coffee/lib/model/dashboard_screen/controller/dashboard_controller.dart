@@ -136,55 +136,92 @@ class DashboardScreenController extends GetxController {
   Rxn<String> selectTableNo = Rxn<String>();
 
   void setTable({String? sTableNo}) async {
-    // selectGetAllBranchesListData.value = mGetAllBranchesListData;
-    // selectedCurrency.value = (mGetAllBranchesListData.currency ?? []).isEmpty
-    //     ? ''
-    //     : (mGetAllBranchesListData.currency ?? []).first.currencySymbol ?? '';
-    // await SharedPrefs().setBranchesData(jsonEncode(mGetAllBranchesListData));
     selectTableNo.value = sTableNo;
     Get.back(result: 'selected');
   }
 
   showDialogPicDineLocation(String title) async {
-    sDialogPicDine.value = title;
     var selectLocation = '';
-    if (sDialogPicDine.value == 'Dine') {
-      // selectLocation = await AppAlert.showQrcodeScan(Get.context!);
-      // Get.delete<QrCodeScannerController>();
-      selectLocation = await Get.toNamed(
-        RouteConstants.rQrCodeScannerView,
-      );
-      Get.delete<QrCodeScannerController>();
-      if (selectLocation.isNotEmpty) {
-        selectedIndex.value = 1;
+    if ((selectGetAllBranchesListData.value.branchName ?? '').isEmpty) {
+      await AppAlert.showCustomDialogLocationPicker(Get.context!);
+      if (Get.isRegistered<HomeScreenController>()) {
+        HomeScreenController mHomeScreenController =
+            Get.find<HomeScreenController>();
+        mHomeScreenController.detDashboardDetailsApi();
       }
-    } else if (sDialogPicDine.value == 'Take') {
-      if ((selectGetAllBranchesListData.value.branchName ?? '').isEmpty) {
-        AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-        if ((mAddCartModel.mItems ?? []).isNotEmpty) {
-          AppAlert.showCustomDialogYesNoLogout(
-              Get.context!,
-              'Proceed to Change?',
-              'This action will clear the items in your current basket. Do you want to proceed?',
-              () async {
-            await SharedPrefs().setAddCartData('');
+    } else if (await isCheckType(title)) {
+      sDialogPicDine.value = title;
+      AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+      if (sDialogPicDine.value == 'Dine') {
+        if ((mAddCartModel.sTableNo ?? '').isEmpty) {
+          selectLocation = await Get.toNamed(
+            RouteConstants.rQrCodeScannerView,
+          );
+          Get.delete<QrCodeScannerController>();
+          if (selectLocation.isNotEmpty) {
+            selectedIndex.value = 1;
+          }
+        }else {
+          selectedIndex.value = 1;
+        }
+      } else if (sDialogPicDine.value == 'Take') {
+        mAddCartModel.sTableNo = '';
+        await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+        if ((selectGetAllBranchesListData.value.branchName ?? '').isEmpty) {
+          AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+          if ((mAddCartModel.mItems ?? []).isNotEmpty) {
+            AppAlert.showCustomDialogYesNoLogout(
+                Get.context!,
+                'Proceed to Change?',
+                'This action will clear the items in your current basket. Do you want to proceed?',
+                () async {
+              await SharedPrefs().setAddCartData('');
+              selectLocation =
+                  await AppAlert.showCustomDialogLocationPicker(Get.context!);
+              Get.delete<LocationListScreenController>();
+              if (selectLocation.isNotEmpty) {
+                await SharedPrefs().setAddCartData('');
+              }
+            }, rightText: 'Ok');
+          } else {
             selectLocation =
                 await AppAlert.showCustomDialogLocationPicker(Get.context!);
             Get.delete<LocationListScreenController>();
-            if (selectLocation.isNotEmpty) {
-              await SharedPrefs().setAddCartData('');
-            }
-          }, rightText: 'Ok');
+          }
         } else {
-          selectLocation =
-              await AppAlert.showCustomDialogLocationPicker(Get.context!);
-          Get.delete<LocationListScreenController>();
+          selectedIndex.value = 1;
         }
-      } else {
-        selectedIndex.value = 1;
       }
     }
     return selectLocation;
+  }
+
+  isCheckType(String title) async {
+    AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+    if ((mAddCartModel.sType ?? '').toString().trim().contains(title)) {
+      return true;
+    } else {
+      if ((mAddCartModel.mItems ?? []).isEmpty) {
+        await SharedPrefs()
+            .setAddCartData(jsonEncode(AddCartModel(sType: title)));
+        return true;
+      } else {
+        AppAlert.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
+            'This action will clear the items in your current basket. Do you want to proceed?',
+            () async {
+          await SharedPrefs()
+              .setAddCartData(jsonEncode(AddCartModel(sType: title)));
+          if (Get.isRegistered<HomeScreenController>()) {
+            HomeScreenController mHomeScreenController =
+                Get.find<HomeScreenController>();
+            mHomeScreenController.getOrderDetails();
+          }
+
+          return true;
+        }, rightText: 'Ok');
+      }
+    }
+    return false;
   }
 
   showDialogPicDine() async {
