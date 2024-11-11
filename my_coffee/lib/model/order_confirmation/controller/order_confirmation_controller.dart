@@ -169,7 +169,7 @@ class OrderConfirmationScreenController extends GetxController {
     }
   }
 
-  ///
+  ///getOrderPlaceApi
   void getOrderPlaceApi(OrderPlaceRequest mOrderPlaceRequest) {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
