@@ -22,6 +22,7 @@ import '../../../data/remote/api_call/api_impl.dart';
 import '../../../data/remote/web_response.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
+import '../../../utils/num_utils.dart';
 import '../../../utils/order_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 
@@ -42,13 +43,15 @@ class DetailsEditPageController extends GetxController {
   RxString sModifier = ''.obs;
   RxString sVariant = ''.obs;
   RxDouble amount = 0.0.obs;
+  RxDouble taxP = 0.0.obs;
   RxDouble totalAmount = 0.00.obs;
   RxInt count = 1.obs;
   late TagVariantDateView mTagVariantDateView;
   late TagModifierDateView mTagModifierDateView;
 
   void priceIncDec() {
-    totalAmount.value = ((amount.value + amountModifier.value) * count.value);
+    double taxAmount = calculatePercentageOf(amount.value, taxP.value);
+    totalAmount.value = ((amount.value + amountModifier.value +taxAmount) * count.value);
   }
 
   Rx<GetItemDetailsData> mGetItemDetailsData = GetItemDetailsData().obs;
@@ -67,7 +70,11 @@ class DetailsEditPageController extends GetxController {
   void setDetails() async {
     mAddCartModel.value = await SharedPrefs().getAddCartData();
     mTagVariantDateView = TagVariantDateView((VariantData mVariantData) {
-      amount.value = mVariantData.price ?? 0.0;
+      if ((mVariantData.discountPercentage ?? 0) == 0) {
+        amount.value = mVariantData.price ?? 0.0;
+      } else {
+        amount.value = mVariantData.discountedPrice ?? 0.0;
+      }
       sVariant.value = mVariantData.quantitySpecification ?? '';
       priceIncDec();
     });
@@ -112,15 +119,22 @@ class DetailsEditPageController extends GetxController {
     mVariantData.value.addAll(mGetItemDetailsData.value.variantData ?? []);
     mVariantData.refresh();
     if ((mGetItemDetailsData.value.selectVariantData ?? []).isNotEmpty) {
-      amount.value =
-          mGetItemDetailsData.value.selectVariantData?.first.price ?? 0.0;
+      if((mGetItemDetailsData.value.selectVariantData?.first.discountPercentage??0)==0) {
+        amount.value =mGetItemDetailsData.value.selectVariantData?.first.price ?? 0.0;
+      }else {
+        amount.value = mGetItemDetailsData.value.selectVariantData?.first.discountedPrice ?? 0.0;
+      }
       sVariant.value = mGetItemDetailsData
               .value.selectVariantData?.first.quantitySpecification ??
           '';
       mTagVariantDateView.selectVariantData.value =
           mGetItemDetailsData.value.selectVariantData!.first;
     } else {
-      amount.value = mVariantData.first.price ?? 0.0;
+      if((mVariantData.first.discountPercentage??0)==0) {
+        amount.value = mVariantData.first.price ?? 0.0;
+      }else {
+        amount.value = mVariantData.first.discountedPrice ?? 0.0;
+      }
       sVariant.value = mVariantData.first.quantitySpecification ?? '';
     }
     if ((mGetItemDetailsData.value.selectModifierData ?? []).isNotEmpty) {
@@ -131,6 +145,8 @@ class DetailsEditPageController extends GetxController {
           (mGetItemDetailsData.value.selectModifierData ?? []).toList());
     }
     count.value = mGetItemDetailsData.value.count ?? 1;
+    ///tax
+    taxP.value = mGetItemDetailsData.value.itemTax ?? 0;
     priceIncDec();
   }
 

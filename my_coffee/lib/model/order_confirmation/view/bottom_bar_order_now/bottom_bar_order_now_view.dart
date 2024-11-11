@@ -35,64 +35,65 @@ class BottomBarOrderNowView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() {
-      return  Container(
-        height: 11.h,
-        alignment: Alignment.center,
-        margin: EdgeInsets.only(left: 10.sp, right: 10.sp),
-        decoration: BoxDecoration(
-          color: ColorConstants.buttonBar.withOpacity(0.80),
-          boxShadow: [
-            BoxShadow(
-              color: ColorConstants.buttonBar.withOpacity(0.05),
-              spreadRadius: 1,
-              blurRadius: 3,
-              offset: const Offset(0, -2), // changes position of shadow
-            ),
-          ],
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(11.sp),
-            topLeft: Radius.circular(11.sp),
-          ),
-        ),
-        child: Container(
-          margin: EdgeInsets.all(18.sp),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Total Items  ${controller.totalCountItem.value}',
-                    style: getText500(colors: Colors.white, size: 15.sp),
-                  ),
-                  SizedBox(
-                    height: 10.sp,
-                  ),
-                  Text(
-                    '${controller.mDashboardScreenController
-                        .selectedCurrency.value} ${getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
-                    style: getText600(
-                        colors: ColorConstants.cAppColorsBlue, size: 17.sp),
-                  ),
-                ],
+    return Obx(
+      () {
+        return Container(
+          height: 11.h,
+          alignment: Alignment.center,
+          margin: EdgeInsets.only(left: 10.sp, right: 10.sp),
+          decoration: BoxDecoration(
+            color: ColorConstants.buttonBar.withOpacity(0.80),
+            boxShadow: [
+              BoxShadow(
+                color: ColorConstants.buttonBar.withOpacity(0.05),
+                spreadRadius: 1,
+                blurRadius: 3,
+                offset: const Offset(0, -2), // changes position of shadow
               ),
-              Container(
-                width: 45.w,
-                margin: EdgeInsets.only(left: 20.sp),
-                child: rectangleRoundedCornerButtonMedium(sOrderNow.tr, () {
-                  controller.orderNow();
-                },
-                    bgColor: ColorConstants.cAppColorsBlue,
-                    textColor: Colors.white,
-                    height: 28.sp,
-                    size: 17.sp),
-              )
             ],
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(11.sp),
+              topLeft: Radius.circular(11.sp),
+            ),
           ),
-        ),
-      );
-    },);
+          child: Container(
+            margin: EdgeInsets.all(18.sp),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Total Items  ${controller.totalCountItem.value}',
+                      style: getText500(colors: Colors.white, size: 15.sp),
+                    ),
+                    SizedBox(
+                      height: 10.sp,
+                    ),
+                    Text(
+                      '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
+                      style: getText600(
+                          colors: ColorConstants.cAppColorsBlue, size: 17.sp),
+                    ),
+                  ],
+                ),
+                Container(
+                  width: 45.w,
+                  margin: EdgeInsets.only(left: 20.sp),
+                  child: rectangleRoundedCornerButtonMedium(sOrderNow.tr, () {
+                    controller.orderNow();
+                  },
+                      bgColor: ColorConstants.cAppColorsBlue,
+                      textColor: Colors.white,
+                      height: 28.sp,
+                      size: 17.sp),
+                )
+              ],
+            ),
+          ),
+        );
+      },
+    );
   }
 }

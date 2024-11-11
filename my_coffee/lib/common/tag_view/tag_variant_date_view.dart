@@ -22,13 +22,14 @@ class TagVariantDateView {
   Rx<VariantData> selectVariantData = VariantData().obs;
   Function onTab;
   DashboardScreenController mDashboardScreenController =
-  Get.find<DashboardScreenController>();
+      Get.find<DashboardScreenController>();
+
   TagVariantDateView(this.onTab);
 
   yourKeySkillsView(List<VariantData> tagList) {
     this.tagList.clear();
     this.tagList.addAll(tagList.toList());
-    if ((selectVariantData.value.price ?? 0)==0) {
+    if ((selectVariantData.value.price ?? 0) == 0) {
       selectVariantData.value = tagList.first;
     }
     return Container(
@@ -50,35 +51,69 @@ class TagVariantDateView {
   getChip(VariantData name) {
     // return Obx(
     //   () {
-        return GestureDetector(
-          onTap: () {
-            onTab(name);
-            selectVariantData.value = name;
-          },
-          child: Container(
-            decoration: BoxDecoration(
-                color: selectVariantData.value.variantIDP == name.variantIDP
-                    ? ColorConstants.cAppColorsBlue
-                    : Colors.white,
-                borderRadius: BorderRadius.circular(11.sp),
-                boxShadow: const [
-                  BoxShadow(
-                      color: Color(0x33000000),
-                      offset: Offset(0, 0),
-                      blurRadius: 3),
-                ]),
-            padding: EdgeInsets.only(
-                top: 11.5.sp, bottom: 11.5.sp, right: 17.5.sp, left: 17.5.sp),
-            child: Text(
-              "${name.quantitySpecification} (${mDashboardScreenController.selectedCurrency} ${name.price})",
-              style: getText500(
-                  colors: selectVariantData.value.variantIDP == name.variantIDP
-                      ? Colors.white
-                      : ColorConstants.buttonBar,
-                  size: 15.5.sp),
-            ),
+    return GestureDetector(
+      onTap: () {
+        onTab(name);
+        selectVariantData.value = name;
+      },
+      child: Container(
+        decoration: BoxDecoration(
+            color: selectVariantData.value.variantIDP == name.variantIDP
+                ? ColorConstants.cAppColorsBlue
+                : Colors.white,
+            borderRadius: BorderRadius.circular(11.sp),
+            boxShadow: const [
+              BoxShadow(
+                  color: Color(0x33000000),
+                  offset: Offset(0, 0),
+                  blurRadius: 3),
+            ]),
+        padding: EdgeInsets.only(
+            top: 11.5.sp, bottom: 11.5.sp, right: 17.5.sp, left: 17.5.sp),
+        child: RichText(
+          text: TextSpan(
+            style: getText500(
+                colors: selectVariantData.value.variantIDP == name.variantIDP
+                    ? Colors.white
+                    : ColorConstants.buttonBar,
+                size: 15.5.sp),
+            children: [
+              TextSpan(
+                text: "${name.quantitySpecification} (",
+              ),
+              if (name.discountPercentage != 0)
+                TextSpan(
+                  text:
+                      "${mDashboardScreenController.selectedCurrency} ${name.price}",
+                  style: getText500lineThrough(
+                      colors:
+                          selectVariantData.value.variantIDP == name.variantIDP
+                              ? Colors.white
+                              : ColorConstants.buttonBar,
+                      size: 15.5.sp),
+                ),
+              if (name.discountPercentage == 0)
+                TextSpan(
+                  text:
+                      "${mDashboardScreenController.selectedCurrency} ${name.price})",
+                ),
+              if (name.discountPercentage != 0)
+                TextSpan(
+                  text:
+                      " - ${mDashboardScreenController.selectedCurrency} ${name.discountedPrice})",
+                ),
+            ],
           ),
-        );
+          // Text(
+          //   "${name.quantitySpecification} (${mDashboardScreenController.selectedCurrency} ${name.price})",
+          //   style: getText500(
+          //       colors: selectVariantData.value.variantIDP == name.variantIDP
+          //           ? Colors.white
+          //           : ColorConstants.buttonBar,
+          //       size: 15.5.sp),
+        ),
+      ),
+    );
     //   },
     // );
   }

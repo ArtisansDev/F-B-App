@@ -22,6 +22,7 @@ import '../../../data/remote/api_call/api_impl.dart';
 import '../../../data/remote/web_response.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
+import '../../../utils/num_utils.dart';
 import '../../../utils/order_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 
@@ -35,6 +36,7 @@ class DetailsPageScreenController extends GetxController {
   RxString sModifier = ''.obs;
   RxString sVariant = ''.obs;
   RxDouble amount = 0.0.obs;
+  RxDouble taxP = 0.0.obs;
   RxDouble totalAmount = 0.00.obs;
   RxInt count = 1.obs;
   late TagVariantDateView mTagVariantDateView;
@@ -48,7 +50,9 @@ class DetailsPageScreenController extends GetxController {
   RxList<ModifierData> selectModifierData = <ModifierData>[].obs;
 
   void priceIncDec() {
-    totalAmount.value = ((amount.value + amountModifier.value) * count.value);
+    double taxAmount = calculatePercentageOf(amount.value, taxP.value);
+    totalAmount.value =
+        ((amount.value + amountModifier.value + taxAmount) * count.value);
   }
 
   void buyNow() async {
@@ -65,7 +69,11 @@ class DetailsPageScreenController extends GetxController {
 
   DetailsPageScreenController(this.itemId) {
     mTagVariantDateView = TagVariantDateView((VariantData mVariantData) {
-      amount.value = mVariantData.price ?? 0.0;
+      if ((mVariantData.discountPercentage ?? 0) == 0) {
+        amount.value = mVariantData.price ?? 0.0;
+      } else {
+        amount.value = mVariantData.discountedPrice ?? 0.0;
+      }
       sVariant.value = mVariantData.quantitySpecification ?? '';
       priceIncDec();
     });
@@ -94,9 +102,7 @@ class DetailsPageScreenController extends GetxController {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
         GetItemDetailsRequest mGetItemDetailsRequest = GetItemDetailsRequest(
-          id:
-              // '60782F37-FDB5-4434-A16A-7E9274792C97'
-              itemId,
+          id: itemId,
         );
         WebResponseSuccess mWebResponseSuccess =
             await AllApiImpl().postGetItemDetails(mGetItemDetailsRequest);
@@ -111,18 +117,28 @@ class DetailsPageScreenController extends GetxController {
             itemImages.value.addAll(mGetItemDetailsData.value.itemImages ?? []);
             itemImages.refresh();
 
+            ///ModifierData
             mModifierData.value.clear();
             mModifierData.value
                 .addAll(mGetItemDetailsData.value.modifierData ?? []);
             mModifierData.refresh();
 
+            ///VariantData
             mVariantData.value.clear();
             mVariantData.value
                 .addAll(mGetItemDetailsData.value.variantData ?? []);
             mVariantData.refresh();
             if (mVariantData.isNotEmpty) {
-              amount.value = mVariantData.first.price ?? 0.0;
+              if ((mVariantData.first.discountPercentage ?? 0) == 0) {
+                amount.value = mVariantData.first.price ?? 0.0;
+              } else {
+                amount.value = mVariantData.first.discountedPrice ?? 0.0;
+              }
               sVariant.value = mVariantData.first.quantitySpecification ?? '';
+
+              ///tax
+              taxP.value =  mGetItemDetailsData.value.itemTax ?? 0;
+              ///calculate total
               priceIncDec();
             }
           }

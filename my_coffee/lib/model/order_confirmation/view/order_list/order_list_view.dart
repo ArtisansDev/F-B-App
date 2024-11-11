@@ -118,7 +118,7 @@ class OrderListView extends StatelessWidget {
                                     height: 8.sp,
                                   ),
                                   Text(
-                                    '${controller.mDashboardScreenController.selectedCurrency.value} ${mGetItemDetailsData.perItemTotal}',
+                                    '${controller.mDashboardScreenController.selectedCurrency.value} ${(mGetItemDetailsData.perItemTotal ?? 0) + (mGetItemDetailsData.perItemTax ?? 0)}',
                                     style: getText600(
                                       size: 15.5.sp,
                                       colors: ColorConstants.cAppColorsBlue,
@@ -132,8 +132,17 @@ class OrderListView extends StatelessWidget {
                                       ? SizedBox(
                                           height: 5.h,
                                           child: HtmlWidget(
-                                              mGetItemDetailsData.description ??
-                                                  '',
+                                              (mGetItemDetailsData.description ??
+                                                              '')
+                                                          .length >
+                                                      30
+                                                  ? (mGetItemDetailsData
+                                                              .description ??
+                                                          '')
+                                                      .substring(0, 30)
+                                                  : (mGetItemDetailsData
+                                                          .description ??
+                                                      ''),
                                               textStyle: TextStyle(
                                                 overflow: TextOverflow.ellipsis,
                                                 fontSize: 15.sp,

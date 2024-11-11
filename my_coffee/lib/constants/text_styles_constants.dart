@@ -94,6 +94,18 @@ TextStyle getText500UnderLine(
   );
 }
 
+TextStyle getText500lineThrough(
+    {Color colors = Colors.white, size = 14.0, heights = 1.2}) {
+  return GoogleFonts.poppins(
+    decoration: TextDecoration.lineThrough,
+    color: colors,
+    fontSize: size,
+    fontWeight: FontWeight.w500,
+    letterSpacing: -0.2,
+    height: heights,
+  );
+}
+
 
 
 TextStyle getText600(

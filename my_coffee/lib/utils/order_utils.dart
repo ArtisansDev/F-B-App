@@ -18,6 +18,7 @@ import '../data/local/shared_prefs/shared_prefs.dart';
 import '../data/mode/add_cart/add_cart.dart';
 import '../data/mode/get_item_details/get_item_details_response.dart';
 import '../model/dashboard_screen/controller/dashboard_controller.dart';
+import 'num_utils.dart';
 
 ///save cart view
 saveCart(
@@ -28,7 +29,6 @@ saveCart(
     double totalAmount,
     double amount,
     double amountModifier) async {
-
   ///DashboardScreenController
   DashboardScreenController mDashboardScreenController =
       Get.find<DashboardScreenController>();
@@ -45,6 +45,10 @@ saveCart(
   mItemsData.selectVariantData
       ?.add(mTagVariantDateView.selectVariantData.value);
   mItemsData.total = totalAmount;
+  mItemsData.amountModifier = amountModifier;
+  mItemsData.amount = amount;
+  mItemsData.perItemTax =
+      calculatePercentageOf(amount, mItemsData.itemTax ?? 0);
   mItemsData.perItemTotal = (amount + amountModifier);
 
   ///add cart
@@ -79,6 +83,10 @@ editCart(
   mItemsData.selectVariantData
       ?.add(mTagVariantDateView.selectVariantData.value);
   mItemsData.total = totalAmount;
+  mItemsData.amountModifier = amountModifier;
+  mItemsData.amount = amount;
+  mItemsData.perItemTax =
+      calculatePercentageOf(amount, mItemsData.itemTax ?? 0);
   mItemsData.perItemTotal = (amount + amountModifier);
 
   ///add cart
@@ -86,10 +94,9 @@ editCart(
   mAddCartModel.mItems![index] = mItemsData;
 
   mAddCartModel.totalAmount = 0.0;
-  for (GetItemDetailsData mGetItemDetailsData
-      in mAddCartModel.mItems ?? []) {
-    mAddCartModel.totalAmount = (mAddCartModel.totalAmount ?? 0.0) +
-        (mGetItemDetailsData.total ?? 0);
+  for (GetItemDetailsData mGetItemDetailsData in mAddCartModel.mItems ?? []) {
+    mAddCartModel.totalAmount =
+        (mAddCartModel.totalAmount ?? 0.0) + (mGetItemDetailsData.total ?? 0);
   }
 
   ///saveCartData

@@ -216,3 +216,7 @@ bool hasOnlyNumbers(String input) {
   final RegExp regex = RegExp(r'^[0-9]+(\.[0-9]+)?$');
   return regex.hasMatch(input);
 }
+
+double calculatePercentageOf(double total, double percent) {
+  return getDoubleValue(((total * percent )/ 100).toStringAsFixed(2));
+}

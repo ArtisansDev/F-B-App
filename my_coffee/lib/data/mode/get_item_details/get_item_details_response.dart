@@ -1,3 +1,5 @@
+import 'package:my_coffee/utils/num_utils.dart';
+
 /// error : false
 /// statusCode : 200
 /// statusMessage : "Data Retrieved Successfully"
@@ -78,7 +80,7 @@ class GetItemDetailsData {
     isActive = json['IsActive'];
     restaurantIDF = json['RestaurantIDF'];
     nutritionalInfo = json['NutritionalInfo'];
-    itemTax = json['ItemTax'];
+    itemTax = getDoubleValue(json['ItemTax']??0);
     if (json['ModifierData'] != null) {
       modifierData = [];
       json['ModifierData'].forEach((v) {
@@ -98,8 +100,13 @@ class GetItemDetailsData {
       });
     }
     createdBy = json['CreatedBy'];
+
+    ///create
     total = json['total']??0.0;
+    amount = json['amount']??0.0;
+    amountModifier = json['amountModifier']??0.0;
     perItemTotal = json['perItemTotal']??0.0;
+    perItemTax = json['perItemTax']??0.0;
     count = json['count']??0;
     if (json['selectModifierData'] != null) {
       selectModifierData = [];
@@ -131,6 +138,9 @@ class GetItemDetailsData {
   ///create
   double? total;
   double? perItemTotal;
+  double? perItemTax;
+  double? amountModifier;
+  double? amount;
   int? count;
   List<ModifierData>? selectModifierData;
   List<VariantData>? selectVariantData;
@@ -160,6 +170,9 @@ class GetItemDetailsData {
     ///select
     map['total'] = total;
     map['perItemTotal'] = perItemTotal;
+    map['perItemTax'] = perItemTax;
+    map['amountModifier'] = amountModifier;
+    map['amount'] = amount;
     map['count'] = count;
     if (selectModifierData != null) {
       map['selectModifierData'] = selectModifierData?.map((v) => v.toJson()).toList();
@@ -212,9 +225,9 @@ class VariantData {
 
   VariantData.fromJson(dynamic json) {
     quantitySpecification = json['QuantitySpecification'];
-    price = json['Price'];
-    discountPercentage = json['DiscountPercentage'];
-    discountedPrice = json['DiscountedPrice'];
+    price = getDoubleValue(json['Price']??0);
+    discountPercentage = getDoubleValue(json['DiscountPercentage']??0);
+    discountedPrice = getDoubleValue(json['DiscountedPrice']??0);
     variantIDP = json['VariantIDP'];
   }
   String? quantitySpecification;
