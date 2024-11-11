@@ -87,7 +87,7 @@ class OrderConfirmationScreen
           // PackagingView(),
 
           ///Payment Method
-          // PaymentMethodView(),
+          PaymentMethodView(),
 
           ///Vouchers
           // AddVouchersView(),

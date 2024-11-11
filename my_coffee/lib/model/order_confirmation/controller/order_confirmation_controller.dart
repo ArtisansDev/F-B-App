@@ -13,6 +13,7 @@ import '../../../data/mode/add_cart/add_cart.dart';
 import '../../../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import '../../../data/mode/get_item_details/get_item_details_response.dart';
 import '../../../data/mode/order_place/order_place_request.dart';
+import '../../../data/mode/order_place/process_order_response.dart';
 import '../../../data/mode/user_details/user_details_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
 import '../../../data/remote/web_response.dart';
@@ -175,6 +176,9 @@ class OrderConfirmationScreenController extends GetxController {
         WebResponseSuccess mWebResponseSuccess =
             await AllApiImpl().postOrderPlace(mOrderPlaceRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+          ProcessOrderResponse mProcessOrderResponse = mWebResponseSuccess.data;
+          AppAlert.showSnackBar(
+              Get.context!, 'Order place successfully');
         } else {
           AppAlert.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
