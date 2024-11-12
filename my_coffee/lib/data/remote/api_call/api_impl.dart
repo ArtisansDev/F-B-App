@@ -14,6 +14,7 @@ import '../../mode/get_category_item/get_category_item_response.dart';
 import '../../mode/get_dashboard/get_dashboard_response.dart';
 import '../../mode/get_general_setting/get_general_setting_response.dart';
 import '../../mode/get_item_details/get_item_details_response.dart';
+import '../../mode/get_order_history/order_history_response.dart';
 import '../../mode/logout/logout_response.dart';
 import '../../mode/order_place/process_order_response.dart';
 import '../../mode/profile_image/profile_image_update_request.dart';
@@ -638,11 +639,11 @@ class AllApiImpl implements IApiRepository {
         error: true,
       );
     } else {
-      // ProcessOrderResponse mProcessOrderResponse =
-      // ProcessOrderResponse.fromJson(processResponseToJson(cases));
+      OrderHistoryResponse mOrderHistoryResponse =
+      OrderHistoryResponse.fromJson(processResponseToJson(cases));
       mWebResponseSuccess = WebResponseSuccess(
         statusCode: cases.statusCode,
-        // data: mProcessOrderResponse,
+        data: mOrderHistoryResponse,
         statusMessage: "",
         error: false,
       );

@@ -209,6 +209,16 @@ class OrderConfirmationScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           ProcessOrderResponse mProcessOrderResponse = mWebResponseSuccess.data;
           AppAlert.showSnackBar(Get.context!, 'Order place successfully');
+          await SharedPrefs().setAddCartData('');
+          mDashboardScreenController.selectedIndex.value=2;
+          mDashboardScreenController.selectTitle(2);
+          Get.until((route) {
+            return
+              route.settings.name ==
+                  RouteConstants
+                      .rDashboardScreen; // Goes back until reaching '/dashboard'
+          });
+
         } else {
           AppAlert.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');

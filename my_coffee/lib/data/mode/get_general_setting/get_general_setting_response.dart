@@ -5,10 +5,11 @@
 
 class GetGeneralSettingResponse {
   GetGeneralSettingResponse({
-      this.error, 
-      this.statusCode, 
-      this.statusMessage, 
-      this.data,});
+    this.error,
+    this.statusCode,
+    this.statusMessage,
+    this.data,
+  });
 
   GetGeneralSettingResponse.fromJson(dynamic json) {
     error = json['error'];
@@ -21,6 +22,7 @@ class GetGeneralSettingResponse {
       });
     }
   }
+
   bool? error;
   int? statusCode;
   String? statusMessage;
@@ -36,7 +38,6 @@ class GetGeneralSettingResponse {
     }
     return map;
   }
-
 }
 
 /// IsWebsiteEnable : true
@@ -52,16 +53,19 @@ class GetGeneralSettingResponse {
 
 class GetGeneralSettingData {
   GetGeneralSettingData({
-      this.isWebsiteEnable, 
-      this.isAndroidEnable, 
-      this.isIOSEnable, 
-      this.androidAppVersion, 
-      this.iOSAppVersion, 
-      this.compulsoryUpdate, 
-      this.compulsoryUpdateIn, 
-      this.termsAndConditionURL, 
-      this.aboutUsURL, 
-      this.restaurantIDF,});
+    this.isWebsiteEnable,
+    this.isAndroidEnable,
+    this.isIOSEnable,
+    this.androidAppVersion,
+    this.iOSAppVersion,
+    this.compulsoryUpdate,
+    this.compulsoryUpdateIn,
+    this.termsAndConditionURL,
+    this.termsAndCondition,
+    this.aboutUsURL,
+    this.aboutUs,
+    this.restaurantIDF,
+  });
 
   GetGeneralSettingData.fromJson(dynamic json) {
     isWebsiteEnable = json['IsWebsiteEnable'];
@@ -72,9 +76,12 @@ class GetGeneralSettingData {
     compulsoryUpdate = json['CompulsoryUpdate'];
     compulsoryUpdateIn = json['CompulsoryUpdateIn'];
     termsAndConditionURL = json['TermsAndConditionURL'];
-    aboutUsURL = json['AboutUsURL']??'';
+    termsAndCondition = json['TermsAndCondition'];
+    aboutUs = json['AboutUs'];
+    aboutUsURL = json['AboutUsURL'] ?? '';
     restaurantIDF = json['RestaurantIDF'];
   }
+
   bool? isWebsiteEnable;
   bool? isAndroidEnable;
   bool? isIOSEnable;
@@ -83,6 +90,8 @@ class GetGeneralSettingData {
   int? compulsoryUpdate;
   int? compulsoryUpdateIn;
   String? termsAndConditionURL;
+  String? termsAndCondition;
+  String? aboutUs;
   String? aboutUsURL;
   String? restaurantIDF;
 
@@ -96,9 +105,10 @@ class GetGeneralSettingData {
     map['CompulsoryUpdate'] = compulsoryUpdate;
     map['CompulsoryUpdateIn'] = compulsoryUpdateIn;
     map['TermsAndConditionURL'] = termsAndConditionURL;
+    map['TermsAndCondition'] = termsAndCondition;
     map['AboutUsURL'] = aboutUsURL;
+    map['AboutUs'] = aboutUs;
     map['RestaurantIDF'] = restaurantIDF;
     return map;
   }
-
 }

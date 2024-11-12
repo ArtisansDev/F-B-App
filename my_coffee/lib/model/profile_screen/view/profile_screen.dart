@@ -76,9 +76,9 @@ class ProfileScreen extends GetView<ProfileScreenController> {
           // especiallyForYou(),
 
           ///needHelp
-          needHelp(),
+          //needHelp(),
 
-          ///needHelp
+          ///informationForYou
           informationForYou(),
 
           SizedBox(
