@@ -104,7 +104,9 @@ class ImageAssetsConstants {
   static String iconMenu5 = "assets/svg/icon_menu5.svg";
   static String addCart = "assets/svg/add_cart.svg";
 
-
+///payment images
+  static String paypal = "assets/payment/paypal.png";
+  static String internet = "assets/payment/internet.png";
 
 
 

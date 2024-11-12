@@ -7,7 +7,6 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../common/appbars_common.dart';
 import '../../common/view_document/view_doument.dart';
 import '../../lang/translation_service.dart';
-import '../../routes/generated_routes.dart';
 import '../../routes/route_constants.dart';
 import '../about_us/view/about_us_screen.dart';
 import '../dashboard_screen/view/dashboard_screen.dart';
@@ -39,7 +38,6 @@ class MyAppTheme extends StatelessWidget {
           title: 'TWT',
           theme: myLightTheme(context),
           darkTheme: myDarkTheme(context),
-          onGenerateRoute: GeneratedRoutes.generateRoute,
           defaultTransition: Transition.leftToRightWithFade,
           getPages: [
             GetPage(

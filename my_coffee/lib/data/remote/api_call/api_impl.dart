@@ -619,6 +619,37 @@ class AllApiImpl implements IApiRepository {
     return mWebResponseSuccess;
   }
 
+  ///GetOrderHistory
+  @override
+  Future<WebResponseSuccess> postGetOrderHistory(
+      dynamic exhibitorsListRequest) async {
+    AppAlert.showProgressDialog(Get.context!);
+    WebConstants.auth = (await SharedPrefs().getUserToken()).isNotEmpty;
+    final cases = await mWebProvider.postWithRequest(
+        WebConstants.actionGetOrderHistory, exhibitorsListRequest);
+    AppAlert.hideLoadingDialog(Get.context!);
+    if (cases.statusCode != WebConstants.statusCode200) {
+      mWebResponseFailed =
+          WebResponseFailed.fromJson(processResponseToJson(cases));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        // data: mWebResponseFailed,
+        statusMessage: mWebResponseFailed.statusMessage,
+        error: true,
+      );
+    } else {
+      // ProcessOrderResponse mProcessOrderResponse =
+      // ProcessOrderResponse.fromJson(processResponseToJson(cases));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        // data: mProcessOrderResponse,
+        statusMessage: "",
+        error: false,
+      );
+    }
+    return mWebResponseSuccess;
+  }
+
   ///ProfileImage
   @override
   Future<WebResponseSuccess> postProfileImageFile(String filePart,

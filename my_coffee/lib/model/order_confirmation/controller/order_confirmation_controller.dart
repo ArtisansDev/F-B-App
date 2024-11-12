@@ -18,6 +18,7 @@ import '../../../data/mode/user_details/user_details_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
 import '../../../data/remote/web_response.dart';
 import '../../../routes/route_constants.dart';
+import '../../../utils/date_format.dart';
 import '../../../utils/network_utils.dart';
 import '../../../utils/num_utils.dart';
 import '../../../utils/tracking_order_id.dart';
@@ -39,8 +40,17 @@ class OrderConfirmationScreenController extends GetxController {
       GetAllBranchesListData().obs;
 
   OrderConfirmationScreenController() {
-    selectedDateTime.value = DateTime.now();
+    selectedDateTime.value = DateTime.now().toUtc();
     getOrderDetails();
+  }
+
+  RxInt paymentType = 0.obs;
+  RxList<String> paymentTypeList = ['PayPal', 'Net Banking'].obs;
+
+  paymentTypeSelect(int index) {
+    paymentType.value = index;
+    paymentType.refresh();
+    paymentTypeList.refresh();
   }
 
   Rxn<DateTime> selectedDateTime = Rxn<DateTime>();
@@ -51,11 +61,11 @@ class OrderConfirmationScreenController extends GetxController {
     final DateTime? selectedDate = await showDatePicker(
       context: Get.context!,
       initialEntryMode: DatePickerEntryMode.calendarOnly,
-      initialDate: DateTime.now(),
-      firstDate: DateTime.now(),
-      lastDate: DateTime.now().add(
-        const Duration(days: 2),
-      ),
+      initialDate: DateTime.now().toUtc(),
+      firstDate: DateTime.now().toUtc(),
+      lastDate: DateTime.now().toUtc().add(
+            const Duration(days: 2),
+          ),
     );
 
     if (selectedDate != null) {
@@ -159,7 +169,7 @@ class OrderConfirmationScreenController extends GetxController {
     } else {
       OrderPlaceRequest mOrderPlaceRequest = await createOrderPlaceRequest(
           remarksController: remarksController.value.text,
-          orderDate: selectedDateTime.value.toString(),
+          orderDate: getUTCValue(selectedDateTime.value!),
           mAddCartModel: mAddCartModel.value);
 
       ///OrderPlaceRequest
@@ -167,6 +177,27 @@ class OrderConfirmationScreenController extends GetxController {
 
       getOrderPlaceApi(mOrderPlaceRequest);
     }
+  }
+
+  ///taxCalculation
+  void taxCalculation() {
+    totalAmount.value;
+    subTotalAmount.value = totalAmount.value;
+    totalTaxAmount.value = 0.0;
+    for (TaxData mTaxData in selectGetAllBranchesListData.value.taxData ?? []) {
+      if ((mTaxData.taxPercentage ?? 0) > 0) {
+        totalTaxAmount.value = totalTaxAmount.value +
+            calculatePercentageOf(
+                totalAmount.value, mTaxData.taxPercentage ?? 0);
+      }
+    }
+    totalAmount.value = totalAmount.value + totalTaxAmount.value;
+  }
+
+  ///checkLogin
+  checkLoginStatus() async {
+    String sLoginStatus = await SharedPrefs().getUserToken();
+    return sLoginStatus.isEmpty;
   }
 
   ///getOrderPlaceApi
@@ -177,8 +208,7 @@ class OrderConfirmationScreenController extends GetxController {
             await AllApiImpl().postOrderPlace(mOrderPlaceRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           ProcessOrderResponse mProcessOrderResponse = mWebResponseSuccess.data;
-          AppAlert.showSnackBar(
-              Get.context!, 'Order place successfully');
+          AppAlert.showSnackBar(Get.context!, 'Order place successfully');
         } else {
           AppAlert.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
@@ -188,26 +218,5 @@ class OrderConfirmationScreenController extends GetxController {
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
-  }
-
-  ///checkLogin
-  checkLoginStatus() async {
-    String sLoginStatus = await SharedPrefs().getUserToken();
-    return sLoginStatus.isEmpty;
-  }
-
-  ///taxCalculation
-  void taxCalculation() {
-    totalAmount.value;
-    subTotalAmount.value = totalAmount.value;
-     totalTaxAmount.value = 0.0;
-    for (TaxData mTaxData in selectGetAllBranchesListData.value.taxData ?? []) {
-      if ((mTaxData.taxPercentage ?? 0) > 0) {
-        totalTaxAmount.value = totalTaxAmount.value +
-            calculatePercentageOf(
-                totalAmount.value, mTaxData.taxPercentage ?? 0);
-      }
-    }
-    totalAmount.value = totalAmount.value + totalTaxAmount.value;
   }
 }

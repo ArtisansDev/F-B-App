@@ -113,7 +113,7 @@ class PaymentDetailsView extends StatelessWidget {
                             heights: 1.3),
                       ),
                       Text(
-                        'RM 0.0',
+                        'RM 0.00',
                         style: getTextRegular(
                             size: 14.5.sp,
                             colors: ColorConstants.buttonBar,
@@ -142,7 +142,7 @@ class PaymentDetailsView extends StatelessWidget {
                                     heights: 1.3),
                               ),
                               Text(
-                                '${controller.mDashboardScreenController.selectedCurrency.value} ${controller.totalTaxAmount.value}',
+                                '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.totalTaxAmount.value).toStringAsFixed(2)}',
                                 style: getText600(
                                     size: 14.5.sp,
                                     colors: ColorConstants.buttonBar,
@@ -166,7 +166,7 @@ class PaymentDetailsView extends StatelessWidget {
                             heights: 1.3),
                       ),
                       Text(
-                        '${controller.mDashboardScreenController.selectedCurrency.value} ${controller.subTotalAmount.value}',
+                        '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.subTotalAmount.value).toStringAsFixed(2)}',
                         style: getText600(
                             size: 14.5.sp,
                             colors: ColorConstants.buttonBar,

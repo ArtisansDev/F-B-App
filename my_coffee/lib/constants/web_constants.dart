@@ -62,6 +62,7 @@ class WebConstants {
   static String actionGetCategoryItem =  "Menu/GetCategoryItem";  //post
   static String actionGetItemDetails =  "Menu/GetItemDetails";  //post
   static String actionOrderPlace =  "Order/ProcessOrder";  //post
+  static String actionGetOrderHistory =  "Order/GetOrderHistory";  //post
 
   ///28-Oct-24
   static String actionGetDashboard =  "GetDashboard";  //post

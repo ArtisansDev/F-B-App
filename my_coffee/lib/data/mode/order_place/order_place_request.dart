@@ -37,7 +37,8 @@ class OrderPlaceRequest {
       this.itemTaxTotal, 
       this.subTotal, 
       this.taxAmountTotal, 
-      this.grandTotal, 
+      this.totalAmount,
+      this.grandTotal,
       this.additionalNotes,});
 
   OrderPlaceRequest.fromJson(dynamic json) {
@@ -46,7 +47,7 @@ class OrderPlaceRequest {
     userIDF = json['UserIDF'];
     orderType = json['OrderType'];
     orderSource = json['OrderSource'];
-    restaurentIDP = json['RestaurentIDP'];
+    restaurentIDP = json['RestaurantIDF'];
     branchIDF = json['BranchIDF'];
     orderDate = json['OrderDate'];
     if (json['OrderMenu'] != null) {
@@ -68,6 +69,7 @@ class OrderPlaceRequest {
     itemTaxTotal = json['ItemTaxTotal'];
     subTotal = json['SubTotal'];
     taxAmountTotal = json['TaxAmountTotal'];
+    totalAmount = json['TotalAmount'];
     grandTotal = json['GrandTotal'];
     additionalNotes = json['AdditionalNotes'];
   }
@@ -88,6 +90,7 @@ class OrderPlaceRequest {
   double? itemTaxTotal;
   double? subTotal;
   double? taxAmountTotal;
+  double? totalAmount;
   double? grandTotal;
   String? additionalNotes;
 
@@ -98,7 +101,7 @@ class OrderPlaceRequest {
     map['UserIDF'] = userIDF;
     map['OrderType'] = orderType;
     map['OrderSource'] = orderSource;
-    map['RestaurentIDP'] = restaurentIDP;
+    map['RestaurantIDF'] = restaurentIDP;
     map['BranchIDF'] = branchIDF;
     map['OrderDate'] = orderDate;
     map['QuantityTotal'] = quantityTotal;
@@ -108,6 +111,7 @@ class OrderPlaceRequest {
     map['ItemTaxTotal'] = itemTaxTotal;
     map['SubTotal'] = subTotal;
     map['TaxAmountTotal'] = taxAmountTotal;
+    map['TotalAmount'] = totalAmount;
     map['GrandTotal'] = grandTotal;
     map['AdditionalNotes'] = additionalNotes;
     if (orderTax != null) {
@@ -134,7 +138,7 @@ class OrderTax {
       this.taxAmount,});
 
   OrderTax.fromJson(dynamic json) {
-    taxIDP = json['TaxIDP'];
+    taxIDP = json['TaxIDF'];
     taxName = json['TaxName'];
     taxPercentage = json['TaxPercentage'];
     taxAmount = json['TaxAmount'];
@@ -146,7 +150,7 @@ class OrderTax {
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['TaxIDP'] = taxIDP;
+    map['TaxIDF'] = taxIDP;
     map['TaxName'] = taxName;
     map['TaxPercentage'] = taxPercentage;
     map['TaxAmount'] = taxAmount;
@@ -181,7 +185,9 @@ class OrderMenu {
       this.allModifierPrices, 
       this.allModifierIDFs, 
       this.variantPrice, 
-      this.itemDiscountPrice, 
+      this.itemVariantName,
+      this.itemDiscountPrice,
+      this.discountedItemAmount,
       this.itemDiscountPriceTotal,
       this.itemTaxPrice,
       this.itemModifierTotal, 
@@ -201,7 +207,9 @@ class OrderMenu {
     allModifierPrices = json['AllModifierPrices'];
     allModifierIDFs = json['AllModifierIDFs'];
     variantPrice = json['VariantPrice'];
+    itemVariantName = json['ItemVariantName'];
     itemDiscountPrice = json['ItemDiscountPrice'];
+    discountedItemAmount = json['DiscountedItemAmount'];
     itemDiscountPriceTotal = json['ItemDiscountPriceTotal'];
     itemTaxPrice = json['ItemTaxPrice'];
     itemTotalTaxPrice = json['ItemTotalTaxPrice'];
@@ -219,7 +227,9 @@ class OrderMenu {
   String? allModifierPrices;
   String? allModifierIDFs;
   double? variantPrice;
+  String? itemVariantName;
   double? itemDiscountPrice;
+  double? discountedItemAmount;
   double? itemDiscountPriceTotal;
   double? itemTaxPrice;
   double? itemTotalTaxPrice;
@@ -239,7 +249,9 @@ class OrderMenu {
     map['AllModifierPrices'] = allModifierPrices;
     map['AllModifierIDFs'] = allModifierIDFs;
     map['VariantPrice'] = variantPrice;
+    map['ItemVariantName'] = itemVariantName;
     map['ItemDiscountPrice'] = itemDiscountPrice;
+    map['DiscountedItemAmount'] = discountedItemAmount;
     map['ItemDiscountPriceTotal'] = itemDiscountPriceTotal;
     map['ItemTaxPrice'] = itemTaxPrice;
     map['ItemTotalTaxPrice'] = itemTotalTaxPrice;

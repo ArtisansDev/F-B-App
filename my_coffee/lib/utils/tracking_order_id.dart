@@ -120,10 +120,17 @@ createOrderPlaceRequest(
 
         ///variant
         variantPrice: mGetItemDetailsData.selectVariantData?.first.price,
+        itemVariantName: mGetItemDetailsData
+                .selectVariantData?.first.quantitySpecification ??
+            '',
         itemTotal: (mGetItemDetailsData.selectVariantData?.first.price ?? 0) *
             (mGetItemDetailsData.count ?? 0),
         itemDiscountPrice:
             mGetItemDetailsData.selectVariantData?.first.discountedPrice,
+        discountedItemAmount:
+            (mGetItemDetailsData.selectVariantData?.first.price ?? 0) -
+                (mGetItemDetailsData.selectVariantData?.first.discountedPrice ??
+                    0),
         itemDiscountPriceTotal:
             (mGetItemDetailsData.selectVariantData?.first.discountedPrice ??
                     0) *
@@ -147,6 +154,8 @@ createOrderPlaceRequest(
         totalItemAmount: ((subTotalAmount + subTotalTax) *
                 (mGetItemDetailsData.count ?? 0)) +
             subModifierTotal);
+    debugPrint("\nmOrderMenu:   ${jsonEncode(mOrderMenu)}\n");
+
     orderMenu.add(mOrderMenu);
   }
 
@@ -165,6 +174,8 @@ createOrderPlaceRequest(
         taxName: mTaxData.taxName ?? '',
         taxPercentage: mTaxData.taxPercentage ?? 0.0,
         taxAmount: subTaxTotal);
+    ///OrderPlaceRequest
+    debugPrint("\ntax calculation:   ${jsonEncode(mOrderTax)}\n");
     orderTaxList.add(mOrderTax);
   }
 
@@ -191,8 +202,9 @@ createOrderPlaceRequest(
     subTotal: subTotal,
 
     ///grandTotal
-    taxAmountTotal: taxTotal,
-    grandTotal: subTotal + taxTotal,
+    taxAmountTotal: getDoubleValue(taxTotal),
+    totalAmount: getDoubleValue(subTotal + taxTotal),
+    grandTotal: getDoubleValue(subTotal + taxTotal),
 
     ///orderTax
     orderTax: orderTaxList,

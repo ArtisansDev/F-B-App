@@ -19,6 +19,7 @@ import '../../common/button_constants.dart';
 import '../../data/mode/add_cart/add_cart.dart';
 import '../../lang/translation_service_key.dart';
 import '../../routes/route_constants.dart';
+import '../../utils/num_utils.dart';
 
 class OrderNow extends StatelessWidget {
   final AddCartModel mAddCartModel;
@@ -49,7 +50,7 @@ class OrderNow extends StatelessWidget {
                     style: getTextRegular(size: 15.sp, colors: Colors.grey),
                   ),
                   Text(
-                    '${mAddCartModel.mGetAllBranchesListData?.currency?.first.currencySymbol ?? ''} ${mAddCartModel.totalAmount}',
+                    '${mAddCartModel.mGetAllBranchesListData?.currency?.first.currencySymbol ?? ''} ${getDoubleValue(mAddCartModel.totalAmount).toStringAsFixed(2)}',
                     style: getText600(
                         size: 19.5.sp, colors: ColorConstants.cAppColorsBlue),
                   )

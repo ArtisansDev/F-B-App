@@ -101,7 +101,7 @@ class OrderListView extends StatelessWidget {
                             Expanded(
                                 child: Container(
                               height: 11.8.h,
-                              alignment: Alignment.center,
+                              alignment: Alignment.centerLeft,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -127,38 +127,38 @@ class OrderListView extends StatelessWidget {
                                   SizedBox(
                                     height: 8.sp,
                                   ),
-                                  (mGetItemDetailsData.description ?? '')
-                                          .contains('<')
-                                      ? SizedBox(
-                                          height: 5.h,
-                                          child: HtmlWidget(
-                                              (mGetItemDetailsData.description ??
-                                                              '')
-                                                          .length >
-                                                      30
-                                                  ? (mGetItemDetailsData
-                                                              .description ??
-                                                          '')
-                                                      .substring(0, 30)
-                                                  : (mGetItemDetailsData
-                                                          .description ??
-                                                      ''),
-                                              textStyle: TextStyle(
-                                                overflow: TextOverflow.ellipsis,
-                                                fontSize: 15.sp,
-                                                height: 1.5,
-                                                color:
-                                                    ColorConstants.appVersion,
-                                              )))
-                                      : Text(
-                                          mGetItemDetailsData.description ?? '',
-                                          maxLines: 2,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: getTextRegular(
-                                            size: 15.sp,
-                                            colors: ColorConstants.appVersion,
-                                          ),
-                                        )
+                                  // (mGetItemDetailsData.description ?? '')
+                                  //         .contains('<')
+                                  //     ? SizedBox(
+                                  //         height: 4.5.h,
+                                  //         child: HtmlWidget(
+                                  //             (mGetItemDetailsData.description ??
+                                  //                             '')
+                                  //                         .length >
+                                  //                     20
+                                  //                 ? (mGetItemDetailsData
+                                  //                             .description ??
+                                  //                         '')
+                                  //                     .substring(0, 20)
+                                  //                 : (mGetItemDetailsData
+                                  //                         .description ??
+                                  //                     ''),
+                                  //             textStyle: TextStyle(
+                                  //               overflow: TextOverflow.ellipsis,
+                                  //               fontSize: 15.sp,
+                                  //               height: 1.5,
+                                  //               color:
+                                  //                   ColorConstants.appVersion,
+                                  //             )))
+                                  //     : Text(
+                                  //         mGetItemDetailsData.description ?? '',
+                                  //         maxLines: 2,
+                                  //         overflow: TextOverflow.ellipsis,
+                                  //         style: getTextRegular(
+                                  //           size: 15.sp,
+                                  //           colors: ColorConstants.appVersion,
+                                  //         ),
+                                  //       )
                                 ],
                               ),
                             )),

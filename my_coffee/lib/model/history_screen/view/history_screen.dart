@@ -16,7 +16,9 @@ class HistoryScreen extends GetView<HistoryScreenController> {
   Widget build(BuildContext context) {
     Get.lazyPut(() => HistoryScreenController());
     return  FocusDetector(
-        onVisibilityGained: () {},
+        onVisibilityGained: () {
+          controller.getOrderHistoryApi();
+        },
         onVisibilityLost: () {
           Get.delete<HistoryScreenController>();
         },
