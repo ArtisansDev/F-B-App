@@ -22,12 +22,6 @@ class ImageAssetsConstants {
   static String introductionImage3 = "assets/introduction/introduction_3.jpg";
   static String introductionImage4 = "assets/introduction/introduction_4.jpg";
 
-  ///beak_fast
-  static String beakFast1 = "assets/beak_fast/beak_fast_1.jpg";
-  static String beakFast2 = "assets/beak_fast/beak_fast_2.jpg";
-  static String beakFast3 = "assets/beak_fast/beak_fast_3.jpg";
-  static String beakFast4 = "assets/beak_fast/beak_fast_4.jpg";
-
   ///profile
   static String profile1 = "assets/profile/profile_1.png";
   static String profile2 = "assets/profile/profile_2.png";
@@ -94,7 +88,7 @@ class ImageAssetsConstants {
   static String location2 = "assets/location/location_2.png";
 
   ///gif
-  static String coffeeGif = "assets/coffee_gif.gif";
+  // static String coffeeGif = "assets/coffee_gif.gif";
 
   ///svg
   static String iconMenu1 = "assets/svg/icon_menu1.svg";
