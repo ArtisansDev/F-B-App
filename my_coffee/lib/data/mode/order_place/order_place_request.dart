@@ -243,8 +243,8 @@ class OrderMenu {
     map['VariantIDF'] = variantIDF;
     map['Quantity'] = quantity;
     map['DiscountPercentage'] = discountPercentage;
-    map['DiscountedItemTotalAmount'] = discountedItemTotalAmount;
     map['ItemName'] = itemName;
+    map['DiscountedItemTotalAmount'] = discountedItemTotalAmount;
     map['ItemTaxPercent'] = itemTaxPercent;
     map['AllModifierPrices'] = allModifierPrices;
     map['AllModifierIDFs'] = allModifierIDFs;

@@ -1,3 +1,5 @@
+import '../order_place/order_place_request.dart';
+
 /// error : false
 /// statusCode : 200
 /// statusMessage : "Data Retrieved Successfully"
@@ -287,115 +289,6 @@ class OrderTax {
     map['TaxName'] = taxName;
     map['TaxPercentage'] = taxPercentage;
     map['TaxAmount'] = taxAmount;
-    return map;
-  }
-
-}
-
-/// MenuItemIDF : "ffecfb39-c793-423f-9de6-44dd5857a62a"
-/// VariantIDF : "18f5ddf4-f6a2-43f5-8176-71c033baa577"
-/// Quantity : 1
-/// DiscountPercentage : 0.00
-/// ItemName : "Garlic Bread"
-/// ItemVariantName : "Regular"
-/// ItemTaxPercent : 0.00
-/// AllModifierPrices : ""
-/// AllModifierIDFs : ""
-/// VariantPrice : 120.00
-/// ItemDiscountPrice : 120.00
-/// DiscountedItemAmount : 0.00
-/// DiscountedItemTotalAmount : 0.00
-/// ItemTaxPrice : 0.00
-/// ItemTotal : 120.00
-/// ItemTotalTaxPrice : 0.00
-/// ItemModifierTotal : 0.00
-/// ItemDiscountPriceTotal : 120.00
-/// TotalItemAmount : 120.00
-
-class OrderMenu {
-  OrderMenu({
-    this.menuItemIDF,
-    this.variantIDF,
-    this.quantity,
-    this.discountPercentage,
-    this.itemName,
-    this.itemVariantName,
-    this.itemTaxPercent,
-    this.allModifierPrices,
-    this.allModifierIDFs,
-    this.variantPrice,
-    this.itemDiscountPrice,
-    this.discountedItemAmount,
-    this.discountedItemTotalAmount,
-    this.itemTaxPrice,
-    this.itemTotal,
-    this.itemTotalTaxPrice,
-    this.itemModifierTotal,
-    this.itemDiscountPriceTotal,
-    this.totalItemAmount,});
-
-  OrderMenu.fromJson(dynamic json) {
-    menuItemIDF = json['MenuItemIDF'];
-    variantIDF = json['VariantIDF'];
-    quantity = json['Quantity'];
-    discountPercentage = json['DiscountPercentage'];
-    itemName = json['ItemName'];
-    itemVariantName = json['ItemVariantName'];
-    itemTaxPercent = json['ItemTaxPercent'];
-    allModifierPrices = json['AllModifierPrices'];
-    allModifierIDFs = json['AllModifierIDFs'];
-    variantPrice = json['VariantPrice'];
-    itemDiscountPrice = json['ItemDiscountPrice'];
-    discountedItemAmount = json['DiscountedItemAmount'];
-    discountedItemTotalAmount = json['DiscountedItemTotalAmount'];
-    itemTaxPrice = json['ItemTaxPrice'];
-    itemTotal = json['ItemTotal'];
-    itemTotalTaxPrice = json['ItemTotalTaxPrice'];
-    itemModifierTotal = json['ItemModifierTotal'];
-    itemDiscountPriceTotal = json['ItemDiscountPriceTotal'];
-    totalItemAmount = json['TotalItemAmount'];
-  }
-  String? menuItemIDF;
-  String? variantIDF;
-  int? quantity;
-  double? discountPercentage;
-  String? itemName;
-  String? itemVariantName;
-  double? itemTaxPercent;
-  String? allModifierPrices;
-  String? allModifierIDFs;
-  double? variantPrice;
-  double? itemDiscountPrice;
-  double? discountedItemAmount;
-  double? discountedItemTotalAmount;
-  double? itemTaxPrice;
-  double? itemTotal;
-  double? itemTotalTaxPrice;
-  double? itemModifierTotal;
-  double? itemDiscountPriceTotal;
-  double? totalItemAmount;
-
-  Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    map['MenuItemIDF'] = menuItemIDF;
-    map['VariantIDF'] = variantIDF;
-    map['Quantity'] = quantity;
-    map['DiscountPercentage'] = discountPercentage;
-    map['ItemName'] = itemName;
-    map['ItemVariantName'] = itemVariantName;
-    map['ItemTaxPercent'] = itemTaxPercent;
-    map['AllModifierPrices'] = allModifierPrices;
-    map['AllModifierIDFs'] = allModifierIDFs;
-    map['VariantPrice'] = variantPrice;
-    map['ItemDiscountPrice'] = itemDiscountPrice;
-    map['DiscountedItemAmount'] = discountedItemAmount;
-    map['DiscountedItemTotalAmount'] = discountedItemTotalAmount;
-    map['ItemTaxPrice'] = itemTaxPrice;
-    map['ItemTotal'] = itemTotal;
-    map['ItemTotalTaxPrice'] = itemTotalTaxPrice;
-    map['ItemModifierTotal'] = itemModifierTotal;
-    map['ItemDiscountPriceTotal'] = itemDiscountPriceTotal;
-    map['TotalItemAmount'] = totalItemAmount;
     return map;
   }
 

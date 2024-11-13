@@ -30,20 +30,20 @@ class IntroductionScreenController extends GetxController {
   Rx<LatLng> centerLatLng = const LatLng(0, 0).obs;
 
   void goToNextPage() {
-    mGetLocation.checkLocationPermission((Position position) async {
-      centerLatLng.value = LatLng(position.latitude, position.longitude);
+    // mGetLocation.checkLocationPermission((Position position) async {
+    //   centerLatLng.value = LatLng(position.latitude, position.longitude);
+    //
+    //   ///Get Location
+    //   AppAlert.showSnackBar(Get.context!,
+    //       ' Longitude:${position.longitude} Latitude:${position.latitude}');
+    //   var sCountry =
+    //       await getCountryFromLatLng(position.latitude, position.longitude);
+    //   AppAlert.showSnackBar(Get.context!, 'sCountry: $sCountry ');
+    //
+    //   generalSettingApiCall();
+    // });
 
-      ///Get Location
-      AppAlert.showSnackBar(Get.context!,
-          ' Longitude:${position.longitude} Latitude:${position.latitude}');
-      var sCountry =
-          await getCountryFromLatLng(position.latitude, position.longitude);
-      AppAlert.showSnackBar(Get.context!, 'sCountry: $sCountry ');
-
-      generalSettingApiCall();
-    });
-
-    // generalSettingApiCall();
+    generalSettingApiCall();
   }
 
   void generalSettingApiCall() {

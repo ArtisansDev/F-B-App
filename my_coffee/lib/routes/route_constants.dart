@@ -13,5 +13,6 @@ class RouteConstants {
   static const String rTermsOfUseScreen = '/terms_of_use';
   static const String rAboutUsScreen = '/about_us';
   static const String rQrCodeScannerView = '/QrCodeScannerView';
+  static const String rOrderHistoryScreen = '/order_history_screen';
 
 }

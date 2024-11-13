@@ -13,6 +13,7 @@ import '../../../common/smart_footer.dart';
 import '../../../data/mode/get_order_history/order_history_response.dart';
 import '../../../lang/translation_service_key.dart';
 import '../controller/history_controller.dart';
+import 'history_row.dart';
 
 class HistoryScreen extends GetView<HistoryScreenController> {
   const HistoryScreen({super.key});
@@ -60,177 +61,21 @@ class HistoryScreen extends GetView<HistoryScreenController> {
 
   /// History list
   historyListView() {
-    return ListView.builder(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        padding: EdgeInsets.zero,
-        itemCount: controller.mOrderHistoryResponseItemData.length,
-        itemBuilder: (BuildContext context, int index) {
-          OrderHistoryResponseItemData mOrderHistoryResponse =
-              controller.mOrderHistoryResponseItemData.value[index];
-          return Container(
-            margin: EdgeInsets.only(left: 18.sp, right: 18.sp, top: 15.sp),
-            padding: EdgeInsets.all(14.sp),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(13.sp),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-
-                ///branch
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                        flex: 7,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(mOrderHistoryResponse.branchName ?? '',
-                                maxLines: 2,
-                                style: getText600(
-                                    size: 15.5.sp,
-                                    colors: ColorConstants.cAppColorsBlue)),
-                            // Text('city, State -70075',
-                            //     maxLines: 2,
-                            //     style: getTextRegular(
-                            //         size: 14.sp,
-                            //         colors: ColorConstants.appVersion))
-                          ],
-                        )),
-                    SizedBox(width: 15.sp,),
-                    Expanded(
-                        flex: 5,
-                        child: Align(
-                          alignment: Alignment.topRight,
-                          child: Text(
-                              getUTCToLocalDateTime(
-                                  mOrderHistoryResponse.orderDate ?? ''),
-                              style: getText500(
-                                  size: 14.5.sp,
-                                  colors: ColorConstants.appVersion)),
-                        ))
-                  ],
-                ),
-
-                ///top line
-                Container(
-                  height: 2.5.sp,
-                  width: double.infinity,
-                  margin: EdgeInsets.only(top: 12.sp, bottom: 12.sp),
-                  color: ColorConstants.appVersion,
-                ),
-
-                ///Item
-                Column(
-                  children: (mOrderHistoryResponse.orderMenu ?? []).map((item) {
-                    return Container(
-                      margin: EdgeInsets.only(bottom: 10.sp),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Expanded(
-                              flex: 7,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(item.itemName ?? '',
-                                      maxLines: 1,
-                                      style: getText600(
-                                          size: 16.sp,
-                                          colors: ColorConstants.buttonBar)),
-                                  Text(item.itemVariantName ?? '',
-                                      maxLines: 1,
-                                      style: getTextRegular(
-                                          size: 14.sp,
-                                          colors: ColorConstants.buttonBar))
-                                ],
-                              )),
-                          Expanded(
-                              flex: 2,
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: Text('X${item.quantity}',
-                                    style: getText600(
-                                        size: 15.sp,
-                                        colors: ColorConstants.buttonBar)),
-                              )),
-                          Expanded(
-                              flex: 4,
-                              child: Align(
-                                alignment: Alignment.centerRight,
-                                child: Text(
-                                    '${mOrderHistoryResponse.currencySymbol} ${getDoubleValue((item.totalItemAmount ?? 1) / (item.quantity ?? 1)).toStringAsFixed(2)}',
-                                    style: getText600(
-                                        size: 15.sp,
-                                        colors: ColorConstants.cAppColorsBlue)),
-                              ))
-                        ],
-                      ),
-                    );
-                  }).toList(),
-                ),
-
-                ///end line
-                Container(
-                  height: 2.5.sp,
-                  width: double.infinity,
-                  margin: EdgeInsets.only(top: 12.sp, bottom: 12.sp),
-                  color: ColorConstants.appVersion,
-                ),
-
-                ///reorder
-                Row(
-                  children: [
-                    // Container(
-                    //   width: 45.w,
-                    //   margin: EdgeInsets.only(top: 10.sp),
-                    //   child: rectangleRoundedCornerButtonMedium(sReorder.tr, () {
-                    //     // controller.orderNow();
-                    //   },
-                    //       bgColor: ColorConstants.cAppColorsBlue,
-                    //       textColor: Colors.white,
-                    //       height: 26.sp,
-                    //       size: 15.5.sp),
-                    // )
-                    Container(
-                      width: 45.w,
-                      margin: EdgeInsets.only(top: 10.sp),
-                      child: rectangleRoundedCornerButtonMedium('Pay Now', () {
-                        // controller.orderNow();
-                      },
-                          bgColor: ColorConstants.cAppColorsBlue,
-                          textColor: Colors.white,
-                          height: 26.sp,
-                          size: 15.5.sp),
-                    ),
-                    Expanded(child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: Text(
-                              '${mOrderHistoryResponse.currencySymbol} ${mOrderHistoryResponse.totalAmount}',
-                              style: getText600(
-                                  size: 17.sp,
-                                  colors: ColorConstants.cAppColorsBlue))
-                        )
-
-                      ],
-                    ))
-                  ],
-                )
-
-              ],
-            ),
-          );
-        });
+    return controller.mOrderHistoryResponseItemData.isEmpty
+        ? Container(
+            height: 80.h,
+            alignment: Alignment.center,
+            child: Text('You don\'t have any history'),
+          )
+        : ListView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            padding: EdgeInsets.zero,
+            itemCount: controller.mOrderHistoryResponseItemData.length,
+            itemBuilder: (BuildContext context, int index) {
+              return HistoryRow(
+                index: index,
+              );
+            });
   }
 }

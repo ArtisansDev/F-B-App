@@ -30,6 +30,7 @@ const String sAccount = "Account";
 const String sLogin = "LOGIN";
 const String sLoginOrSignUp = "Login or Sign Up";
 const String sOrderConfirmation = "Order Confirmation";
+const String sOrderHistory = "Order History";
 const String sUpdate = "UPDATE";
 const String sDeliveryAddress1 = "Enter Delivery Address (Home)";
 const String sDeliveryAddress2 = "Enter Delivery Address (Office)";

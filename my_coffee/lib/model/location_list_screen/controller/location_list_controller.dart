@@ -35,15 +35,15 @@ class LocationListScreenController extends GetxController {
   void onRefresh() async {
     mGetAllBranchesListData.value.clear();
     pageNumber = 1;
-    getBestSellerItemApi();
+    getGetAllBranchesApi();
   }
 
   void onLoadMore() async {
     pageNumber = pageNumber + 1;
-    getBestSellerItemApi();
+    getGetAllBranchesApi();
   }
 
-  void getBestSellerItemApi() {
+  void getGetAllBranchesApi() {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
         GetAllBranchesByRestaurantIdRequest
