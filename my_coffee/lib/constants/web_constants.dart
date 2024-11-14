@@ -55,7 +55,7 @@ class WebConstants {
   static String actionDeleteAccount =  "Account/DeleteAccount";  //post
 
   ///23-Oct-24
-  static String actionGetGeneralSetting =  "GetGeneralSetting";  //get
+  static String actionGetGeneralSetting =  "GetGeneralSetting/";  //get
   static String actionGetBestSellerItem =  "Menu/GetBestSellerItem";  //post
   static String actionGetAllBranchesByRestaurantID =  "Branch/getAllBranchesByResturantIDF";  //post
   static String actionGetCategory =  "Menu/GetCategory";  //post

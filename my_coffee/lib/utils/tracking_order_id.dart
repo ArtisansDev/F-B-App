@@ -182,8 +182,8 @@ createOrderPlaceRequest(
   ///OrderPlaceRequest
   OrderPlaceRequest mOrderPlaceRequest = OrderPlaceRequest(
     trackingOrderID: trackingOrderID,
-    orderSource: "Application",
-    orderType: mAddCartModel.sType != 'Dine' ? 'Dine In' : 'Take Away',
+    orderSource: "1",
+    orderType: mAddCartModel.sType != 'Dine' ? '1' : '2',
     orderNo: '',
     branchIDF: selectGetAllBranchesListData.branchIDP,
     userIDF: mUserDetailsResponseData.userID,

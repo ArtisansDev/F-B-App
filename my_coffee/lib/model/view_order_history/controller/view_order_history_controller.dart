@@ -97,13 +97,10 @@ class ViewOrderHistoryController extends GetxController {
     mAddCartModel.value = mAddCartModelValue;
     selectGetAllBranchesListData.value =
         mAddCartModel.value.mGetAllBranchesListData ?? GetAllBranchesListData();
-
     totalAmount.value = mAddCartModel.value.totalAmount ?? 0.0;
     mItems.clear();
     mItems.addAll((mAddCartModel.value.mItems ?? []).toList());
     itemModify();
-    selectGetAllBranchesListData.value =
-        mAddCartModel.value.mGetAllBranchesListData ?? GetAllBranchesListData();
     taxCalculation();
     selectedDateTime.value =
         getUTCToLocalValue(mAddCartModelValue.sOrderDateTime ?? '');

@@ -74,46 +74,48 @@ class HomeScreen extends GetView<HomeScreenController> {
               TopHomeAddressBar(),
 
               ///Banner list
-              Stack(
-                children: [
-                  SizedBox(
-                      height: 100.w * 0.5,
-                      child: PageView.builder(
-                        controller: controller.introductionPageController.value,
-                        itemCount: controller.mBannerMaster.value.length,
-                        itemBuilder: (context, index) {
-                          return cacheImageHomeBanner(
-                            controller.mBannerMaster.value[index]
+              Visibility(
+                visible: controller.mBannerMaster.value.isNotEmpty,
+                  child: Stack(
+                    children: [
+                      SizedBox(
+                          height: 100.w * 0.5,
+                          child: PageView.builder(
+                            controller: controller.introductionPageController.value,
+                            itemCount: controller.mBannerMaster.value.length,
+                            itemBuilder: (context, index) {
+                              return cacheImageHomeBanner(
+                                controller.mBannerMaster.value[index]
                                     .bannerImagePath ??
-                                '',
-                            ImageAssetsConstants.backLogo,
-                            100.w * 0.5,
-                          );
-                        },
-                        onPageChanged: (value) {
-                          controller.onChangePage(value);
-                        },
-                      )),
-                  Visibility(
-                      visible: controller.mBannerMaster.value.isNotEmpty,
-                      child: Container(
-                        height: 100.w * 0.5,
-                        padding: EdgeInsets.only(bottom: 15.sp),
-                        alignment: Alignment.bottomCenter,
-                        child: SmoothPageIndicator(
-                          controller:
+                                    '',
+                                ImageAssetsConstants.backLogo,
+                                100.w * 0.5,
+                              );
+                            },
+                            onPageChanged: (value) {
+                              controller.onChangePage(value);
+                            },
+                          )),
+                      Visibility(
+                          visible: controller.mBannerMaster.value.isNotEmpty,
+                          child: Container(
+                            height: 100.w * 0.5,
+                            padding: EdgeInsets.only(bottom: 15.sp),
+                            alignment: Alignment.bottomCenter,
+                            child: SmoothPageIndicator(
+                              controller:
                               controller.introductionPageController.value,
-                          count: controller.mBannerMaster.value.length,
-                          effect: WormEffect(
-                            dotHeight: 13.sp,
-                            dotWidth: 13.sp,
-                            activeDotColor: ColorConstants.cAppColorsBlue,
-                            dotColor: ColorConstants.appProgress,
-                          ),
-                        ),
-                      )),
-                ],
-              ),
+                              count: controller.mBannerMaster.value.length,
+                              effect: WormEffect(
+                                dotHeight: 13.sp,
+                                dotWidth: 13.sp,
+                                activeDotColor: ColorConstants.cAppColorsBlue,
+                                dotColor: ColorConstants.appProgress,
+                              ),
+                            ),
+                          )),
+                    ],
+                  )),
 
               ///DinePickup
               DinePickupScreen(),

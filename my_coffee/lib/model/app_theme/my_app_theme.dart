@@ -20,6 +20,7 @@ import '../otp_screen/view/otp_screen.dart';
 import '../profile_screen/update_profile/view/update_profile_screen.dart';
 import '../qr_code_scanner/view/qr_code_scanner_view.dart';
 import '../register_screen/view/register_screen_screen.dart';
+import '../senang_pay_payment/senang_pay_payment.dart';
 import '../splash_screen/view/splash_screen.dart';
 import '../terms_of_use/view/terms_of_use_screen.dart';
 import '../view_order_history/view/order_history_screen.dart';
@@ -82,6 +83,9 @@ class MyAppTheme extends StatelessWidget {
             GetPage(
                 name: RouteConstants.rOrderHistoryScreen,
                 page: () =>  OrderHistoryScreen()),
+            GetPage(
+                name: RouteConstants.rSenangPayPaymentScreen,
+                page: () =>  const SenangPayPayment()),
           ],
           builder: (context, child) {
             return protectFromSettingsFontSize(context, child!);

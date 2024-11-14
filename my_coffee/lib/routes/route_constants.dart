@@ -14,5 +14,6 @@ class RouteConstants {
   static const String rAboutUsScreen = '/about_us';
   static const String rQrCodeScannerView = '/QrCodeScannerView';
   static const String rOrderHistoryScreen = '/order_history_screen';
+  static const String rSenangPayPaymentScreen = '/SenangPayPayment_screen';
 
 }

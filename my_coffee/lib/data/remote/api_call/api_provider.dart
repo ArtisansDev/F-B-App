@@ -12,14 +12,14 @@ class WebProvider extends GetConnect {
     "Accept": "application/json"
   };
 
-  Future<Response> getWithRequest(String action, params) async {
+  Future<Response> getWithRequest(String action, dynamic params) async {
     debugPrint("queryRequest ==  $params");
     if (WebConstants.auth) {
       String tokenValue = await SharedPrefs().getUserToken();
       headers.addAll({'Authorization': "Bearer ${tokenValue}"});
     }
 
-    var mResponse = await get(action, query: params);
+    var mResponse = await get(action, decoder: jsonDecode(params));
     return mResponse;
   }
 

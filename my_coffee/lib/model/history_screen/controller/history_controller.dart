@@ -14,6 +14,7 @@ import '../../../data/mode/get_item_details/get_item_details_response.dart';
 import '../../../data/mode/get_order_history/get_order_history_request.dart';
 import '../../../data/mode/get_order_history/order_history_response.dart';
 import '../../../data/mode/order_place/order_place_request.dart';
+import '../../../data/mode/senang_pay_payment/senang_pay_payment_model.dart';
 import '../../../data/mode/user_details/user_details_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
 import '../../../data/remote/web_response.dart';
@@ -95,6 +96,7 @@ class HistoryScreenController extends GetxController {
     ///get data
     OrderHistoryResponseItemData mOrderHistoryResponse =
         mOrderHistoryResponseItemData.value[index];
+    AppAlert.showProgressDialog(Get.context!);
     mAddCartModel.value = AddCartModel();
     await getGetAllBranchesApi(mOrderHistoryResponse.branchName ?? '',
         mOrderHistoryResponse.branchIDF ?? '');
@@ -103,10 +105,16 @@ class HistoryScreenController extends GetxController {
         await getItemDetailsApi(mOrderMenu);
       }
     }
-    mAddCartModel.value.sType = 'Take';
+    mAddCartModel.value.sType =
+        ((mOrderHistoryResponse.orderType ?? 1) == 1) ? 'Dine' : 'Take';
     mAddCartModel.value.sOrderDateTime = mOrderHistoryResponse.orderDate ?? '';
     mAddCartModel.value.mOrderHistoryResponseItemData = mOrderHistoryResponse;
-    Get.toNamed(RouteConstants.rOrderHistoryScreen, arguments: mAddCartModel.value);
+    AppAlert.hideLoadingDialog(Get.context!);
+    if ((mAddCartModel.value.mItems ?? []).length ==
+        (mOrderHistoryResponse.orderMenu ?? []).length) {
+      Get.toNamed(RouteConstants.rOrderHistoryScreen,
+          arguments: mAddCartModel.value);
+    }
   }
 
   getGetAllBranchesApi(String search, String branchIDP) async {
@@ -126,7 +134,8 @@ class HistoryScreenController extends GetxController {
                         '');
         WebResponseSuccess mWebResponseSuccess = await AllApiImpl()
             .postGetAllBranchesByRestaurantID(
-                mGetAllBranchesByRestaurantIdRequest);
+                mGetAllBranchesByRestaurantIdRequest,
+                isLoading: false);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetAllBranchesByRestaurantIdResponse
               mGetAllBranchesByRestaurantIdResponse = mWebResponseSuccess.data;
@@ -154,8 +163,8 @@ class HistoryScreenController extends GetxController {
         GetItemDetailsRequest mGetItemDetailsRequest = GetItemDetailsRequest(
           id: mOrderMenu.menuItemIDF,
         );
-        WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postGetItemDetails(mGetItemDetailsRequest);
+        WebResponseSuccess mWebResponseSuccess = await AllApiImpl()
+            .postGetItemDetails(mGetItemDetailsRequest, isLoading: false);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetItemDetailsResponse mGetItemDetailsResponse =
               mWebResponseSuccess.data;
@@ -168,6 +177,7 @@ class HistoryScreenController extends GetxController {
 
             ///add item
             GetItemDetailsData mItemsData = mGetItemDetailsResponse.data!.first;
+
             /// Find objects with IDs that match any ID in idArray
             List<ModifierData> commonObjects = [];
             if (amountModifier > 0) {
@@ -185,12 +195,11 @@ class HistoryScreenController extends GetxController {
             );
             if (mVariantData.variantIDP == null) {
               mVariantData = VariantData(
-                variantIDP: (mOrderMenu.variantIDF ?? ''),
-                price: (mOrderMenu.variantPrice ?? 0.0),
-                discountedPrice: (mOrderMenu.itemDiscountPrice ?? 0.0),
-                discountPercentage: (mOrderMenu.discountPercentage ?? 0.0),
-                quantitySpecification: mOrderMenu.itemVariantName??''
-              );
+                  variantIDP: (mOrderMenu.variantIDF ?? ''),
+                  price: (mOrderMenu.variantPrice ?? 0.0),
+                  discountedPrice: (mOrderMenu.itemDiscountPrice ?? 0.0),
+                  discountPercentage: (mOrderMenu.discountPercentage ?? 0.0),
+                  quantitySpecification: mOrderMenu.itemVariantName ?? '');
             }
 
             ///
@@ -217,13 +226,27 @@ class HistoryScreenController extends GetxController {
             mAddCartModel.value.mItems?.add(mItemsData);
           }
         } else {
-          AppAlert.showSnackBar(
-              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+          // AppAlert.showSnackBar(
+          //     Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
         AppAlert.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
+  }
+
+  void payNow() {
+    SenangPayPaymentModel mSenangPayPaymentModel = SenangPayPaymentModel(
+      merchantId: "543160464805574",
+      secretKey: "21245-957",
+      amount: "100.00",
+      orderId: "123456",
+      name: "John Doe",
+      email: "johndoe@example.com",
+      phone: "123456789",
+    );
+    Get.toNamed(RouteConstants.rSenangPayPaymentScreen,
+        arguments: mSenangPayPaymentModel);
   }
 }

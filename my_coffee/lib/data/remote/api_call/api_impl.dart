@@ -12,6 +12,7 @@ import '../../mode/get_best_seller_item/get_best_seller_item_response.dart';
 import '../../mode/get_category/get_category_response.dart';
 import '../../mode/get_category_item/get_category_item_response.dart';
 import '../../mode/get_dashboard/get_dashboard_response.dart';
+import '../../mode/get_general_setting/get_general_setting_request.dart';
 import '../../mode/get_general_setting/get_general_setting_response.dart';
 import '../../mode/get_item_details/get_item_details_response.dart';
 import '../../mode/get_order_history/order_history_response.dart';
@@ -351,16 +352,19 @@ class AllApiImpl implements IApiRepository {
   @override
   Future<WebResponseSuccess> getGeneralSetting() async {
     AppAlert.showProgressDialog(Get.context!);
-    WebConstants.auth = false;
-    final cases = await mWebProvider
-        .getWithWithoutRequest(WebConstants.actionGetGeneralSetting);
+    // WebConstants.auth = false;
+    // final cases = await mWebProvider
+    //     .getWithRequest(WebConstants.actionGetGeneralSetting, GetGeneralSettingRequest());
+
+    final cases =  await WebHttpProvider()
+        .getWithRequest(WebConstants.actionGetGeneralSetting, GetGeneralSettingRequest());
     debugPrint(
         "plainJsonRequest statusCode ==  ${jsonEncode(cases.statusCode)}");
     debugPrint("plainJsonRequest ==  ${jsonEncode(cases.body)}");
     AppAlert.hideLoadingDialog(Get.context!);
     if (cases.statusCode != WebConstants.statusCode200) {
-      mWebResponseFailed =
-          WebResponseFailed.fromJson(processResponseToJson(cases));
+      // mWebResponseFailed =
+      //     WebResponseFailed.fromJson(processResponseToJson(cases));
       mWebResponseSuccess = WebResponseSuccess(
         statusCode: cases.statusCode,
         // data: mWebResponseFailed,
@@ -369,7 +373,7 @@ class AllApiImpl implements IApiRepository {
       );
     } else {
       GetGeneralSettingResponse mGetGeneralSettingResponse =
-          GetGeneralSettingResponse.fromJson(processResponseToJson(cases));
+          GetGeneralSettingResponse.fromJson(jsonDecode(cases.body.toString()));
       mWebResponseSuccess = WebResponseSuccess(
         statusCode: cases.statusCode,
         data: mGetGeneralSettingResponse,
@@ -451,15 +455,19 @@ class AllApiImpl implements IApiRepository {
   ///post GetAllBranchesByRestaurantID
   @override
   Future<WebResponseSuccess> postGetAllBranchesByRestaurantID(
-      dynamic exhibitorsListRequest) async {
-    AppAlert.showProgressDialog(Get.context!);
+      dynamic exhibitorsListRequest,{bool isLoading = true}) async {
+    if(isLoading) {
+      AppAlert.showProgressDialog(Get.context!);
+    }
     WebConstants.auth = (await SharedPrefs().getUserToken()).isNotEmpty;
     final cases = await mWebProvider.postWithRequest(
         WebConstants.actionGetAllBranchesByRestaurantID, exhibitorsListRequest);
     debugPrint(
         "plainJsonRequest statusCode ==  ${jsonEncode(cases.statusCode)}");
     debugPrint("plainJsonRequest ==  ${jsonEncode(cases.body)}");
-    AppAlert.hideLoadingDialog(Get.context!);
+    if(isLoading) {
+      AppAlert.hideLoadingDialog(Get.context!);
+    }
     if (cases.statusCode != WebConstants.statusCode200) {
       mWebResponseFailed =
           WebResponseFailed.fromJson(processResponseToJson(cases));
@@ -561,12 +569,16 @@ class AllApiImpl implements IApiRepository {
   ///post GetItemDetails
   @override
   Future<WebResponseSuccess> postGetItemDetails(
-      dynamic exhibitorsListRequest) async {
-    AppAlert.showProgressDialog(Get.context!);
+      dynamic exhibitorsListRequest,{bool isLoading = true}) async {
+    if(isLoading){
+      AppAlert.showProgressDialog(Get.context!);
+    }
     WebConstants.auth = (await SharedPrefs().getUserToken()).isNotEmpty;
     final cases = await mWebProvider.postWithRequest(
         WebConstants.actionGetItemDetails, exhibitorsListRequest);
-    AppAlert.hideLoadingDialog(Get.context!);
+    if(isLoading) {
+      AppAlert.hideLoadingDialog(Get.context!);
+    }
     if (cases.statusCode != WebConstants.statusCode200) {
       mWebResponseFailed =
           WebResponseFailed.fromJson(processResponseToJson(cases));

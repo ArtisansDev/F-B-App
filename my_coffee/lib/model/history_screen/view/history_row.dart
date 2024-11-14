@@ -13,16 +13,17 @@ class HistoryRow extends StatelessWidget {
   final int index;
   late HistoryScreenController controller;
   late OrderHistoryResponseItemData mOrderHistoryResponse;
+
   HistoryRow({super.key, required this.index}) {
     controller = Get.find<HistoryScreenController>();
     mOrderHistoryResponse =
-    controller.mOrderHistoryResponseItemData.value[index];
+        controller.mOrderHistoryResponseItemData.value[index];
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         controller.gotoOrderHistoryDetails(index);
       },
       child: Container(
@@ -35,7 +36,6 @@ class HistoryRow extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             ///branch
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -59,18 +59,32 @@ class HistoryRow extends StatelessWidget {
                         //         colors: ColorConstants.appVersion))
                       ],
                     )),
-                SizedBox(width: 15.sp,),
+                SizedBox(
+                  width: 15.sp,
+                ),
                 Expanded(
                     flex: 5,
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: Text(
-                          getUTCToLocalDateTime(
-                              mOrderHistoryResponse.orderDate ?? ''),
-                          style: getText500(
-                              size: 14.5.sp,
-                              colors: ColorConstants.appVersion)),
-                    ))
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                              getUTCToLocalDateTime(
+                                  mOrderHistoryResponse.orderDate ?? ''),
+                              maxLines: 1,
+                              style: getText500(
+                                  size: 14.2.sp,
+                                  colors: ColorConstants.appVersion)),
+                          SizedBox(height: 8.sp,),
+                          Text(
+                              (mOrderHistoryResponse.orderType ?? 1) == 1
+                                  ? 'Dine In'
+                                  : 'Take Away',
+                              maxLines: 1,
+                              style: getText600(
+                                  size: 15.5.sp,
+                                  colors: ColorConstants.textColour)),
+                        ]))
               ],
             ),
 
@@ -160,14 +174,15 @@ class HistoryRow extends StatelessWidget {
                   width: 45.w,
                   margin: EdgeInsets.only(top: 10.sp),
                   child: rectangleRoundedCornerButtonMedium('Pay Now', () {
-                    // controller.orderNow();
+                    controller.payNow();
                   },
                       bgColor: ColorConstants.cAppColorsBlue,
                       textColor: Colors.white,
                       height: 26.sp,
                       size: 15.5.sp),
                 ),
-                Expanded(child: Row(
+                Expanded(
+                    child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -177,14 +192,11 @@ class HistoryRow extends StatelessWidget {
                             '${mOrderHistoryResponse.currencySymbol} ${mOrderHistoryResponse.totalAmount}',
                             style: getText600(
                                 size: 17.sp,
-                                colors: ColorConstants.cAppColorsBlue))
-                    )
-
+                                colors: ColorConstants.cAppColorsBlue)))
                   ],
                 ))
               ],
             )
-
           ],
         ),
       ),

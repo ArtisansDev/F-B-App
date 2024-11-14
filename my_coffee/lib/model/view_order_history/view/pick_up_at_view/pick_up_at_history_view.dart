@@ -40,7 +40,7 @@ class PickUpAtHistoryView extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    'Pick Up at',
+                    'Store Details',
                     style: getText600(
                         colors: ColorConstants.cAppColorsBlue, size: 17.sp),
                   ),
@@ -163,63 +163,28 @@ class PickUpAtHistoryView extends StatelessWidget {
                 margin: EdgeInsets.only(left: 20.sp, right: 20.sp, top: 17.sp),
                 child: Column(
                   children: [
-                    Visibility(
-                        visible: controller.mAddCartModel.value.sType == 'Dine',
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.table_bar,
-                              size: 23.sp,
-                              color: ColorConstants.cAppColorsBlue,
-                            ),
-                            SizedBox(
-                              width: 11.sp,
-                            ),
-                            Text(
-                              'Table No : ',
-                              style: getTextRegular(
-                                  size: 17.sp,
-                                  colors: ColorConstants.buttonBar,
-                                  heights: 1.2),
-                            ),
-                            Text(
-                              '${controller.mAddCartModel.value.sTableNo}',
-                              style: getText600(
-                                  size: 17.sp,
-                                  colors: ColorConstants.buttonBar,
-                                  heights: 1.2),
-                            ),
-                          ],
-                        )),
-                    Visibility(
-                        visible: controller.mAddCartModel.value.sType == 'Dine',
-                        child: SizedBox(
-                          height: 13.sp,
-                        )),
                     Row(
                       children: [
-                        Image.asset(
-                          ImageAssetsConstants.timeDuotoneLine,
-                          height: 23.sp,
-                          width: 23.sp,
-                        ),
                         SizedBox(
-                          width: 11.sp,
+                          width: 15.sp,
                         ),
                         Text(
-                          'Schedule at : ',
+                          'Order Type : ',
                           style: getTextRegular(
                               size: 17.sp,
                               colors: ColorConstants.buttonBar,
                               heights: 1.2),
                         ),
                         Text(
-                          controller.mAddCartModel.value.sType == 'Dine'
-                              ? 'Now'
-                              : 'ASAP',
+                          (controller
+                              .mAddCartModel
+                              .value
+                              .mOrderHistoryResponseItemData
+                              ?.orderType ?? 1) == 1 ? 'Dine In'
+                              : 'Take Away',
                           style: getText600(
                               size: 17.sp,
-                              colors: ColorConstants.buttonBar,
+                              colors: ColorConstants.textColour,
                               heights: 1.2),
                         ),
                         // Text(
@@ -231,56 +196,54 @@ class PickUpAtHistoryView extends StatelessWidget {
                         // )
                       ],
                     ),
-                    Visibility(
-                        visible: controller.mAddCartModel.value.sType != 'Dine',
-                        child: GestureDetector(
-                          onTap: () {
-                            //controller.selectDateAndTime();
-                          },
-                          child: Container(
-                            margin: EdgeInsets.only(
-                                right: 18.sp, bottom: 18.sp, top: 15.sp),
-                            padding: EdgeInsets.only(left: 18.sp, right: 9.sp),
-                            width: double.infinity,
-                            height: 28.sp,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(35.sp),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.22),
-                                  spreadRadius: 3,
-                                  blurRadius: 5,
-                                  offset: const Offset(
-                                      0, 0), // changes position of shadow
-                                ),
-                              ],
+                    GestureDetector(
+                      onTap: () {
+                        //controller.selectDateAndTime();
+                      },
+                      child: Container(
+                        margin: EdgeInsets.only(
+                            right: 18.sp, bottom: 18.sp, top: 15.sp),
+                        padding: EdgeInsets.only(left: 18.sp, right: 9.sp),
+                        width: double.infinity,
+                        height: 28.sp,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(35.sp),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.22),
+                              spreadRadius: 3,
+                              blurRadius: 5,
+                              offset: const Offset(
+                                  0, 0), // changes position of shadow
                             ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.calendar_month,
-                                  color: ColorConstants.cAppColors,
-                                  size: 20.sp,
-                                ),
-                                SizedBox(
-                                  width: 15.sp,
-                                ),
-                                Expanded(
-                                    child: Text(
-                                  controller.selectedDateTime.value == null
-                                      ? 'Select Schedule'
-                                      : getDateMMYYYYTime(
-                                          controller.selectedDateTime.value ??
-                                              DateTime.now()),
-                                  style: getText500(
-                                      colors: ColorConstants.buttonBar,
-                                      size: 16.sp),
-                                )),
-                              ],
+                          ],
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.calendar_month,
+                              color: ColorConstants.cAppColors,
+                              size: 20.sp,
                             ),
-                          ),
-                        ))
+                            SizedBox(
+                              width: 15.sp,
+                            ),
+                            Expanded(
+                                child: Text(
+                              controller.selectedDateTime.value == null
+                                  ? 'Select Schedule'
+                                  : getDateMMYYYYTime(
+                                      controller.selectedDateTime.value ??
+                                          DateTime.now()),
+                              style: getText500(
+                                  colors: ColorConstants.buttonBar,
+                                  size: 16.sp),
+                            )),
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ))
           ],

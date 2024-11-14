@@ -75,15 +75,15 @@ class IntroductionScreenController extends GetxController {
                 }
               }
               // if (bNextPage) {
-              await SharedPrefs()
-                  .setGeneralSetting(jsonEncode(mGetGeneralSettingData));
-              Get.offNamed(
-                RouteConstants.rDashboardScreen,
-              );
-              // }else {
-              //   AppAlert.showSnackBar(
-              //       Get.context!,  value);
-              // }
+              if ((mGetGeneralSettingData.restaurantIDF ?? '').isNotEmpty) {
+                await SharedPrefs()
+                    .setGeneralSetting(jsonEncode(mGetGeneralSettingData));
+                Get.offNamed(
+                  RouteConstants.rDashboardScreen,
+                );
+              } else {
+                AppAlert.showSnackBar(Get.context!, 'restaurant id not found');
+              }
             } else {
               AppAlert.showSnackBar(
                   Get.context!, mGetGeneralSettingResponse.statusMessage ?? "");
