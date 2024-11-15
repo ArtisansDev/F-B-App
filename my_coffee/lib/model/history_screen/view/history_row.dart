@@ -189,7 +189,7 @@ class HistoryRow extends StatelessWidget {
                     Align(
                         alignment: Alignment.centerRight,
                         child: Text(
-                            '${mOrderHistoryResponse.currencySymbol} ${mOrderHistoryResponse.totalAmount}',
+                            '${mOrderHistoryResponse.currencySymbol} ${(mOrderHistoryResponse.totalAmount??0.0).toStringAsFixed(2)}',
                             style: getText600(
                                 size: 17.sp,
                                 colors: ColorConstants.cAppColorsBlue)))

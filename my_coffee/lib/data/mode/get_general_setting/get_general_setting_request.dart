@@ -10,6 +10,8 @@
 
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
+import '../../../constants/app_constants.dart';
+
 class GetGeneralSettingRequest {
   GetGeneralSettingRequest();
 
@@ -17,9 +19,9 @@ class GetGeneralSettingRequest {
     accessKey = json['AccessKey'];
   }
 
-  String accessKey = (dotenv.env['AccessKey'] == '1'
+  String accessKey = (AppConstants.iAccessKey == 1
       ? dotenv.env['Thomson_Corner']
-      : dotenv.env['AccessKey'] == '2'
+      : AppConstants.iAccessKey == 2
           ? dotenv.env['Apple_Cinemas']
           : dotenv.env['TWT'])??'';
 

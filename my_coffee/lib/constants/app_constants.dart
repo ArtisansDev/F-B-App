@@ -1,5 +1,6 @@
 
 class AppConstants {
+  static int iAccessKey=0;
   // Mobile OS Platform
   static const String platformAndroid = "ANDROID";
   static const String platformIOS = "IOS";

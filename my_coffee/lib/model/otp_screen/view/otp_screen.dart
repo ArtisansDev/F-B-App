@@ -159,7 +159,7 @@ class OtpScreen extends GetView<OtpScreenController> {
                             size: 15.sp, colors: ColorConstants.buttonBar),
                         children: <TextSpan>[
                           TextSpan(
-                              text: '${controller.start}',
+                              text: controller.start.toStringAsFixed(2),
                               style: getText600(
                                   size: 15.sp,
                                   colors: ColorConstants.cAppColorsBlue)),
