@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="072ba63a-49ad-41d9-837e-851847e6dd45" name="Changes" comment="">
+    <list default="true" id="072ba63a-49ad-41d9-837e-851847e6dd45" name="Changes" comment="yum_yum">
       <change afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0c5b10ef642e668caf41b1d1af251253/.filecache" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0c5b10ef642e668caf41b1d1af251253/android_aot_release_android-arm.stamp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0c5b10ef642e668caf41b1d1af251253/android_aot_release_android-arm64.stamp" afterDir="false" />
@@ -18298,12 +18298,17 @@
       <change afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/history_screen/view/history_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/history_screen/view/history_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -18358,6 +18363,14 @@
       <option name="presentableId" value="Default" />
       <updated>1731735553153</updated>
     </task>
+    <task id="LOCAL-00001" summary="history_issue">
+      <created>1731739236122</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731739236122</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -18370,5 +18383,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="history_issue fix" />
+    <MESSAGE value="yum_yum" />
+    <option name="LAST_COMMIT_MESSAGE" value="yum_yum" />
   </component>
 </project>
