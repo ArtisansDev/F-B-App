@@ -24,7 +24,7 @@ class HistoryScreen extends GetView<HistoryScreenController> {
     return FocusDetector(onVisibilityGained: () {
       controller.onRefresh();
     }, onVisibilityLost: () {
-      Get.delete<HistoryScreenController>();
+
     }, child: Obx(
       () {
         return Container(
