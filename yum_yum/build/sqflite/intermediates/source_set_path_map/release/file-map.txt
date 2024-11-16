@@ -1,0 +1,12 @@
+com.tekartik.sqflite-jetified-annotation-experimental-1.1.0-0 /Users/parthapaul/.gradle/caches/transforms-3/7bbd853e87237682b455cd461a20d3ae/transformed/jetified-annotation-experimental-1.1.0/res
+com.tekartik.sqflite-core-1.6.0-1 /Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res
+com.tekartik.sqflite-jetified-window-java-1.0.0-beta04-2 /Users/parthapaul/.gradle/caches/transforms-3/b482d07ebda3203e421070b648696f7f/transformed/jetified-window-java-1.0.0-beta04/res
+com.tekartik.sqflite-jetified-window-1.0.0-beta04-3 /Users/parthapaul/.gradle/caches/transforms-3/f71d23d8e1e1853b7e1dc33dc1161a83/transformed/jetified-window-1.0.0-beta04/res
+com.tekartik.sqflite-main-4 /Users/parthapaul/.pub-cache/hosted/pub.dev/sqflite-2.3.3+1/android/src/main/res
+com.tekartik.sqflite-release-5 /Users/parthapaul/.pub-cache/hosted/pub.dev/sqflite-2.3.3+1/android/src/release/res
+com.tekartik.sqflite-pngs-6 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/sqflite/generated/res/pngs/release
+com.tekartik.sqflite-resValues-7 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/sqflite/generated/res/resValues/release
+com.tekartik.sqflite-rs-8 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/sqflite/generated/res/rs/release
+com.tekartik.sqflite-mergeReleaseResources-9 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/sqflite/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.tekartik.sqflite-mergeReleaseResources-10 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/sqflite/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.tekartik.sqflite-merged_res-11 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/sqflite/intermediates/merged_res/release

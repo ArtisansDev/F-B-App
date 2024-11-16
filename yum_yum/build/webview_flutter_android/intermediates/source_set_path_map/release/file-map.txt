@@ -1,0 +1,13 @@
+io.flutter.plugins.webviewflutter.webview_flutter_android-webkit-1.12.0-0 /Users/parthapaul/.gradle/caches/transforms-3/74949e0d9a47851acae205c4d9b1064c/transformed/webkit-1.12.0/res
+io.flutter.plugins.webviewflutter.webview_flutter_android-jetified-annotation-experimental-1.1.0-1 /Users/parthapaul/.gradle/caches/transforms-3/7bbd853e87237682b455cd461a20d3ae/transformed/jetified-annotation-experimental-1.1.0/res
+io.flutter.plugins.webviewflutter.webview_flutter_android-core-1.6.0-2 /Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res
+io.flutter.plugins.webviewflutter.webview_flutter_android-jetified-window-java-1.0.0-beta04-3 /Users/parthapaul/.gradle/caches/transforms-3/b482d07ebda3203e421070b648696f7f/transformed/jetified-window-java-1.0.0-beta04/res
+io.flutter.plugins.webviewflutter.webview_flutter_android-jetified-window-1.0.0-beta04-4 /Users/parthapaul/.gradle/caches/transforms-3/f71d23d8e1e1853b7e1dc33dc1161a83/transformed/jetified-window-1.0.0-beta04/res
+io.flutter.plugins.webviewflutter.webview_flutter_android-main-5 /Users/parthapaul/.pub-cache/hosted/pub.dev/webview_flutter_android-3.16.8/android/src/main/res
+io.flutter.plugins.webviewflutter.webview_flutter_android-release-6 /Users/parthapaul/.pub-cache/hosted/pub.dev/webview_flutter_android-3.16.8/android/src/release/res
+io.flutter.plugins.webviewflutter.webview_flutter_android-pngs-7 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/webview_flutter_android/generated/res/pngs/release
+io.flutter.plugins.webviewflutter.webview_flutter_android-resValues-8 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/webview_flutter_android/generated/res/resValues/release
+io.flutter.plugins.webviewflutter.webview_flutter_android-rs-9 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/webview_flutter_android/generated/res/rs/release
+io.flutter.plugins.webviewflutter.webview_flutter_android-mergeReleaseResources-10 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/webview_flutter_android/intermediates/incremental/release/mergeReleaseResources/merged.dir
+io.flutter.plugins.webviewflutter.webview_flutter_android-mergeReleaseResources-11 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/webview_flutter_android/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+io.flutter.plugins.webviewflutter.webview_flutter_android-merged_res-12 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/webview_flutter_android/intermediates/merged_res/release

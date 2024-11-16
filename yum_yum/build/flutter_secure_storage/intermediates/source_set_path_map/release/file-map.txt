@@ -1,0 +1,13 @@
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-jetified-annotation-experimental-1.1.0-0 /Users/parthapaul/.gradle/caches/transforms-3/7bbd853e87237682b455cd461a20d3ae/transformed/jetified-annotation-experimental-1.1.0/res
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-core-1.6.0-1 /Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-jetified-security-crypto-1.1.0-alpha06-2 /Users/parthapaul/.gradle/caches/transforms-3/a8e5214c91de8f5fc17ee2e00447b0ea/transformed/jetified-security-crypto-1.1.0-alpha06/res
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-jetified-window-java-1.0.0-beta04-3 /Users/parthapaul/.gradle/caches/transforms-3/b482d07ebda3203e421070b648696f7f/transformed/jetified-window-java-1.0.0-beta04/res
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-jetified-window-1.0.0-beta04-4 /Users/parthapaul/.gradle/caches/transforms-3/f71d23d8e1e1853b7e1dc33dc1161a83/transformed/jetified-window-1.0.0-beta04/res
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-main-5 /Users/parthapaul/.pub-cache/hosted/pub.dev/flutter_secure_storage-9.2.2/android/src/main/res
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-release-6 /Users/parthapaul/.pub-cache/hosted/pub.dev/flutter_secure_storage-9.2.2/android/src/release/res
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-pngs-7 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_secure_storage/generated/res/pngs/release
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-resValues-8 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_secure_storage/generated/res/resValues/release
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-rs-9 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_secure_storage/generated/res/rs/release
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-mergeReleaseResources-10 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_secure_storage/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-mergeReleaseResources-11 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_secure_storage/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-merged_res-12 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_secure_storage/intermediates/merged_res/release

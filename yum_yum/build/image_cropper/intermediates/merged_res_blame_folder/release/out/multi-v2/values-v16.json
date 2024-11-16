@@ -1,0 +1,72 @@
+{
+    "logs": [
+        {
+            "outputFile": "vn.hunghd.flutter.plugins.imagecropper.image_cropper-merged_res-34:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/1e61a719c931ce16fe6f8ec10d2e5580/transformed/core-1.9.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2d8f014937d67b7944a9b8984302fb9e/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "vn.hunghd.flutter.plugins.imagecropper.image_cropper-mergeReleaseResources-32:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/1e61a719c931ce16fe6f8ec10d2e5580/transformed/core-1.9.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2d8f014937d67b7944a9b8984302fb9e/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                }
+            ]
+        }
+    ]
+}

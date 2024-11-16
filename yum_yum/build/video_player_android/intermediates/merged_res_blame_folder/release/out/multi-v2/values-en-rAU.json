@@ -1,0 +1,68 @@
+{
+    "logs": [
+        {
+            "outputFile": "io.flutter.plugins.videoplayer.video_player_android-merged_res-12:/values-en-rAU/values-en-rAU.xml",
+            "map": [
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/906a7dafad5ce0d56483d1d7bf6e4e6e/transformed/jetified-media3-exoplayer-1.4.0/res/values-en-rAU/values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,187,252,316,393,458,548,633",
+                        "endColumns": "69,61,64,63,76,64,89,84,68",
+                        "endOffsets": "120,182,247,311,388,453,543,628,697"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/dac0d4e6d4ad19ab6b790181816d00ed/transformed/core-1.8.0/res/values-en-rAU/values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "702",
+                        "endColumns": "100",
+                        "endOffsets": "798"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "io.flutter.plugins.videoplayer.video_player_android-mergeReleaseResources-10:/values-en-rAU/values-en-rAU.xml",
+            "map": [
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/906a7dafad5ce0d56483d1d7bf6e4e6e/transformed/jetified-media3-exoplayer-1.4.0/res/values-en-rAU/values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,187,252,316,393,458,548,633",
+                        "endColumns": "69,61,64,63,76,64,89,84,68",
+                        "endOffsets": "120,182,247,311,388,453,543,628,697"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/dac0d4e6d4ad19ab6b790181816d00ed/transformed/core-1.8.0/res/values-en-rAU/values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "702",
+                        "endColumns": "100",
+                        "endOffsets": "798"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+dev.fluttercommunity.plus.wakelock.wakelock_plus-jetified-annotation-experimental-1.1.0-0 /Users/parthapaul/.gradle/caches/transforms-3/7bbd853e87237682b455cd461a20d3ae/transformed/jetified-annotation-experimental-1.1.0/res
+dev.fluttercommunity.plus.wakelock.wakelock_plus-core-1.6.0-1 /Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res
+dev.fluttercommunity.plus.wakelock.wakelock_plus-jetified-window-java-1.0.0-beta04-2 /Users/parthapaul/.gradle/caches/transforms-3/b482d07ebda3203e421070b648696f7f/transformed/jetified-window-java-1.0.0-beta04/res
+dev.fluttercommunity.plus.wakelock.wakelock_plus-jetified-window-1.0.0-beta04-3 /Users/parthapaul/.gradle/caches/transforms-3/f71d23d8e1e1853b7e1dc33dc1161a83/transformed/jetified-window-1.0.0-beta04/res
+dev.fluttercommunity.plus.wakelock.wakelock_plus-main-4 /Users/parthapaul/.pub-cache/hosted/pub.dev/wakelock_plus-1.2.8/android/src/main/res
+dev.fluttercommunity.plus.wakelock.wakelock_plus-release-5 /Users/parthapaul/.pub-cache/hosted/pub.dev/wakelock_plus-1.2.8/android/src/release/res
+dev.fluttercommunity.plus.wakelock.wakelock_plus-packaged_res-6 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/package_info_plus/intermediates/packaged_res/release
+dev.fluttercommunity.plus.wakelock.wakelock_plus-pngs-7 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/wakelock_plus/generated/res/pngs/release
+dev.fluttercommunity.plus.wakelock.wakelock_plus-resValues-8 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/wakelock_plus/generated/res/resValues/release
+dev.fluttercommunity.plus.wakelock.wakelock_plus-rs-9 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/wakelock_plus/generated/res/rs/release
+dev.fluttercommunity.plus.wakelock.wakelock_plus-mergeReleaseResources-10 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/wakelock_plus/intermediates/incremental/release/mergeReleaseResources/merged.dir
+dev.fluttercommunity.plus.wakelock.wakelock_plus-mergeReleaseResources-11 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/wakelock_plus/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+dev.fluttercommunity.plus.wakelock.wakelock_plus-merged_res-12 /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/wakelock_plus/intermediates/merged_res/release

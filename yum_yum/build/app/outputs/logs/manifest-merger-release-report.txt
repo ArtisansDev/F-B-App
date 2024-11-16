@@ -1,0 +1,800 @@
+-- Merging decision tree log ---
+application
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:15:5-60:19
+MERGED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-34:19
+MERGED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-34:19
+MERGED from [:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-15:19
+MERGED from [:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-15:19
+MERGED from [:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-14:19
+MERGED from [:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-14:19
+MERGED from [com.google.android.gms:play-services-location:21.2.0] /Users/parthapaul/.gradle/caches/transforms-3/a46bcbdbbfa778a83a7d693bd1bfb4fe/transformed/jetified-play-services-location-21.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.2.0] /Users/parthapaul/.gradle/caches/transforms-3/a46bcbdbbfa778a83a7d693bd1bfb4fe/transformed/jetified-play-services-location-21.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] /Users/parthapaul/.gradle/caches/transforms-3/e92a1de81da1176f90981ec4f5b57458/transformed/jetified-play-services-tasks-18.1.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] /Users/parthapaul/.gradle/caches/transforms-3/e92a1de81da1176f90981ec4f5b57458/transformed/jetified-play-services-tasks-18.1.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/bbe166d4ae4ccce8a970580d879f7a10/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/bbe166d4ae4ccce8a970580d879f7a10/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/4f996a7c88cae3e9f31f13e725e1bd54/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/4f996a7c88cae3e9f31f13e725e1bd54/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/9b646f9b8d57ac5119400896d4d5b16c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/9b646f9b8d57ac5119400896d4d5b16c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.maps.android:android-maps-utils:3.6.0] /Users/parthapaul/.gradle/caches/transforms-3/6a2aaeba5c04cabbbb5f3ce2d8712cf8/transformed/jetified-android-maps-utils-3.6.0/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:3.6.0] /Users/parthapaul/.gradle/caches/transforms-3/6a2aaeba5c04cabbbb5f3ce2d8712cf8/transformed/jetified-android-maps-utils-3.6.0/AndroidManifest.xml:7:5-11:19
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:46:5-54:19
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:46:5-54:19
+	android:requestLegacyExternalStorage
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:19:9-52
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:16:9-32
+	android:icon
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:18:9-43
+	android:networkSecurityConfig
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:21:9-69
+	android:usesCleartextTraffic
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:20:9-44
+	android:name
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:17:9-42
+manifest
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:1-72:12
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:1-72:12
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:1-72:12
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:1-72:12
+MERGED from [:just_audio] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/just_audio/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:audio_session] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/audio_session/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:connectivity_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/connectivity_plus/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-11:12
+MERGED from [:flutter_image_compress_common] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_image_compress_common/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-11:12
+MERGED from [:flutter_pdfview] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_pdfview/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:google_maps_flutter_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/google_maps_flutter_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-36:12
+MERGED from [:flutter_plugin_android_lifecycle] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_secure_storage] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_secure_storage/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-11:12
+MERGED from [:flutter_statusbarcolor_ns] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_statusbarcolor_ns/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:geocoding_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geocoding_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-17:12
+MERGED from [:image_cropper] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_cropper/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:wakelock_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/wakelock_plus/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:package_info_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/package_info_plus/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/path_provider_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:permission_handler_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/permission_handler_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:qr_code_scanner] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/qr_code_scanner/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-11:12
+MERGED from [:shared_preferences_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/shared_preferences_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/sqflite/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-16:12
+MERGED from [:video_player_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/video_player_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:webview_flutter_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/webview_flutter_android/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-location:21.2.0] /Users/parthapaul/.gradle/caches/transforms-3/a46bcbdbbfa778a83a7d693bd1bfb4fe/transformed/jetified-play-services-location-21.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.mhiew:android-pdf-viewer:3.2.0-beta.3] /Users/parthapaul/.gradle/caches/transforms-3/de6fee327216db9e2315c873519c60c0/transformed/jetified-android-pdf-viewer-3.2.0-beta.3/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.preference:preference:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/ba4c56ebea3cb53a249a9137b155e94a/transformed/preference-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.yalantis:ucrop:2.2.9] /Users/parthapaul/.gradle/caches/transforms-3/2fbb4a6d20ae8e1dc7c3abdc7e87854c/transformed/jetified-ucrop-2.2.9/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/parthapaul/.gradle/caches/transforms-3/cff231520afae8a2181ffe91ad7c0325/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/parthapaul/.gradle/caches/transforms-3/2d8f014937d67b7944a9b8984302fb9e/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment-ktx:1.3.6] /Users/parthapaul/.gradle/caches/transforms-3/37bf9a29b6c403030af92e232023268a/transformed/jetified-fragment-ktx-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.9.1] /Users/parthapaul/.gradle/caches/transforms-3/bcf88283837deed1d0d8225041394157/transformed/jetified-activity-ktx-1.9.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] /Users/parthapaul/.gradle/caches/transforms-3/e92a1de81da1176f90981ec4f5b57458/transformed/jetified-play-services-tasks-18.1.0/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/parthapaul/.gradle/caches/transforms-3/266f97625e8e935aeb7e951b87e586ca/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.9.1] /Users/parthapaul/.gradle/caches/transforms-3/3cf9f19ddbbada84ab95c04ca68ac0a9/transformed/jetified-activity-1.9.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d1286667b69907d3e071d126ded2916d/transformed/jetified-exoplayer-dash-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/82b74dd0562bb72de424278abb6e7a2b/transformed/jetified-exoplayer-hls-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/6f6aafd2ffb910d2c2f78cd0426beb34/transformed/jetified-exoplayer-smoothstreaming-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d721362e98dc58628819627526936f33/transformed/jetified-exoplayer-core-2.18.7/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.browser:browser:1.8.0] /Users/parthapaul/.gradle/caches/transforms-3/3065d694c23ee614698e9457de896354/transformed/browser-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.media3:media3-extractor:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/a1498f990c639ec2b152cd2567dbff47/transformed/jetified-media3-extractor-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-container:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/0c1dd4024d40fb03178dc87cb27b59f3/transformed/jetified-media3-container-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-datasource:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/77b5e3ff2a9f0007c17b3e85f5b14e8f/transformed/jetified-media3-datasource-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-decoder:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/f05823b207e18f1ce6f938c75f05f2a2/transformed/jetified-media3-decoder-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-database:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/392231ff1cfcc2a76b546ef1ef841f00/transformed/jetified-media3-database-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-common:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/9b22e984f048acb525c774dd8bce4490/transformed/jetified-media3-common-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media3:media3-exoplayer-hls:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/6f71cd9822398bb62d193c1aee54587b/transformed/jetified-media3-exoplayer-hls-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-exoplayer-dash:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/05716f6decb0c278389b5703c697a0b8/transformed/jetified-media3-exoplayer-dash-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-exoplayer-rtsp:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/5ead78d2fe899ec07eeaf9c2e4e37b65/transformed/jetified-media3-exoplayer-rtsp-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-exoplayer-smoothstreaming:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/798872af079e1565fd60070901e509f6/transformed/jetified-media3-exoplayer-smoothstreaming-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media3:media3-exoplayer:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/906a7dafad5ce0d56483d1d7bf6e4e6e/transformed/jetified-media3-exoplayer-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.webkit:webkit:1.12.0] /Users/parthapaul/.gradle/caches/transforms-3/74949e0d9a47851acae205c4d9b1064c/transformed/webkit-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.media2:media2-common:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/e352389840cc98c83ee2a3b6ff2db737/transformed/jetified-media2-common-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/parthapaul/.gradle/caches/transforms-3/b482d07ebda3203e421070b648696f7f/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/fe4b0e74c06b9006b360e476b3bda3fb/transformed/recyclerview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/2499ad20af0ad121e4cf70138f839cd8/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/eda5f807cd639a15928934d48e5d5427/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] /Users/parthapaul/.gradle/caches/transforms-3/2b6d36ba5ea30bc17093bb0c39db0894/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.4.1] /Users/parthapaul/.gradle/caches/transforms-3/c589dae408f4c843e8f48512984ae9c9/transformed/media-1.4.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/570fa7f971c9b14e3dd703a1ae4747a3/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/40f414b02e0e798658e30765cbe35bcc/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/e9e7891593207a581650d43eb2db95c0/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/fa0d711a151c32d1c98e5e57f7e75a78/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/parthapaul/.gradle/caches/transforms-3/9977695d4e387d4c01f291b15c334a61/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/1fa6c7745fda78c202d97a8b308252b4/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/d286f9fb73efc9e44a640049af3c869c/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/74864f4d46b552f233cfa70a55b6231e/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/6946c124e24e6d7eae5938b80d211ec2/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/ec1525e33c634bca6cb596881e186db8/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/bbe166d4ae4ccce8a970580d879f7a10/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/7db3a1ced0cbed66c23337edddbc7e05/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/239e99cab4675eca748b1d23853270c9/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/7301d2d60e2ce1ba3ead177324976607/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/3c58d63186a078b79903f9806a5071d1/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/3c64dd26e013ae249f569ab2b9dece48/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/a6598c0e85492510830e476402680104/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/c372175db6699b53336cbab9ae0384cd/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/d2b4bd280ca93ea350a13a7923af5590/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/parthapaul/.gradle/caches/transforms-3/723c32490e08cbf92d04e2dac1319379/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/parthapaul/.gradle/caches/transforms-3/f0efdcf201013e0f479acbf8d7a88b9c/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/63e125577e42cd6afa8e9f6086a18777/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/36ddc311d4aa48d5ec1c9d0771a14c1a/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/13fedfb1a063d7c3a8a1daacbe95f234/transformed/jetified-datastore-preferences-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.datastore:datastore:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/c1a3baeea8f056c8d82c8f381068e718/transformed/jetified-datastore-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/803d82cfc04ec55b066684fdc31eac99/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.heifwriter:heifwriter:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/51e943077512bfe4b3e31f14baece317/transformed/heifwriter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/parthapaul/.gradle/caches/transforms-3/a8e5214c91de8f5fc17ee2e00447b0ea/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/parthapaul/.gradle/caches/transforms-3/cb6eaccf1013317eb56905ff89e8faf8/transformed/exifinterface-1.3.7/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/4f996a7c88cae3e9f31f13e725e1bd54/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/9a715f71f16b8c7e819e50037b08314c/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/d698a249e765362b7ff2fde408abe7c0/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/9b646f9b8d57ac5119400896d4d5b16c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d709f12a488bae3c6f44f6e8f52eadb5/transformed/jetified-exoplayer-datasource-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/e79d368b6313fe43ac1be4f81e126743/transformed/jetified-exoplayer-extractor-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/0b80987d6acdf608649ac1d50c367e60/transformed/jetified-exoplayer-decoder-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/8f33f9fbef629e60c487c539a24e5ce2/transformed/jetified-exoplayer-database-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/0f1222b4c1886abcf2d65cc775f4ae12/transformed/jetified-exoplayer-common-2.18.7/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/6aa442b92030e7b7183f0197d070d684/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4a88218a263ef6f4b60259a52f98f029/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/4d11915a5fa38601250e257033dfcab5/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/a6c8c0563f786e4ca73769277b9a54a2/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/1be3350b308ab3a23c31f76dd782b673/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.maps.android:android-maps-utils:3.6.0] /Users/parthapaul/.gradle/caches/transforms-3/6a2aaeba5c04cabbbb5f3ce2d8712cf8/transformed/jetified-android-maps-utils-3.6.0/AndroidManifest.xml:2:1-13:12
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:17:1-56:12
+MERGED from [com.github.mhiew:pdfium-android:1.9.2] /Users/parthapaul/.gradle/caches/transforms-3/814913a6f5ddac2bc8dcf428377880e7/transformed/jetified-pdfium-android-1.9.2/AndroidManifest.xml:2:1-9:12
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:1-72:12
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:1-72:12
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:1-72:12
+	package
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:1-72:12
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:1-72:12
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:1-72:12
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-feature#android.hardware.camera
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:4:5-6:36
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:25:5-27:36
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:25:5-27:36
+	android:required
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:6:9-33
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:5:9-47
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:8:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:9:5-78
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.INTERNET
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:10:5-66
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:10:22-64
+uses-permission#android.permission.CAMERA
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:11:5-64
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:22:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:22:5-65
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:11:22-62
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:12:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:13:5-80
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:13:22-78
+queries
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:66:5-71:15
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:30:5-34:15
+MERGED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:24:5-34:15
+MERGED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:24:5-34:15
+MERGED from [androidx.media:media:1.4.1] /Users/parthapaul/.gradle/caches/transforms-3/c589dae408f4c843e8f48512984ae9c9/transformed/media-1.4.1/AndroidManifest.xml:24:5-28:15
+MERGED from [androidx.media:media:1.4.1] /Users/parthapaul/.gradle/caches/transforms-3/c589dae408f4c843e8f48512984ae9c9/transformed/media-1.4.1/AndroidManifest.xml:24:5-28:15
+intent#action:name:android.intent.action.PROCESS_TEXT+data:mimeType:text/plain
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:67:9-70:18
+action#android.intent.action.PROCESS_TEXT
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:68:13-72
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:68:21-70
+data
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:69:13-50
+	android:mimeType
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:69:19-48
+uses-sdk
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+MERGED from [:just_audio] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/just_audio/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:just_audio] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/just_audio/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:audio_session] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/audio_session/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:audio_session] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/audio_session/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:connectivity_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/connectivity_plus/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:connectivity_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/connectivity_plus/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_image_compress_common] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_image_compress_common/intermediates/merged_manifest/release/AndroidManifest.xml:6:5-9:55
+MERGED from [:flutter_image_compress_common] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_image_compress_common/intermediates/merged_manifest/release/AndroidManifest.xml:6:5-9:55
+MERGED from [:flutter_pdfview] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_pdfview/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_pdfview] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_pdfview/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:google_maps_flutter_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/google_maps_flutter_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:google_maps_flutter_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/google_maps_flutter_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:6:5-8:41
+MERGED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:6:5-8:41
+MERGED from [:flutter_plugin_android_lifecycle] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_secure_storage] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_secure_storage/intermediates/merged_manifest/release/AndroidManifest.xml:6:5-9:53
+MERGED from [:flutter_secure_storage] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_secure_storage/intermediates/merged_manifest/release/AndroidManifest.xml:6:5-9:53
+MERGED from [:flutter_statusbarcolor_ns] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_statusbarcolor_ns/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_statusbarcolor_ns] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_statusbarcolor_ns/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:geocoding_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geocoding_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:geocoding_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geocoding_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:image_cropper] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_cropper/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:image_cropper] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_cropper/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:wakelock_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/wakelock_plus/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:wakelock_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/wakelock_plus/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:package_info_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/package_info_plus/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:package_info_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/package_info_plus/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/path_provider_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/path_provider_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/permission_handler_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/permission_handler_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:qr_code_scanner] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/qr_code_scanner/intermediates/merged_manifest/release/AndroidManifest.xml:6:5-9:67
+MERGED from [:qr_code_scanner] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/qr_code_scanner/intermediates/merged_manifest/release/AndroidManifest.xml:6:5-9:67
+MERGED from [:shared_preferences_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/shared_preferences_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/shared_preferences_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/sqflite/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/sqflite/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:video_player_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/video_player_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:video_player_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/video_player_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/webview_flutter_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/webview_flutter_android/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-location:21.2.0] /Users/parthapaul/.gradle/caches/transforms-3/a46bcbdbbfa778a83a7d693bd1bfb4fe/transformed/jetified-play-services-location-21.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.2.0] /Users/parthapaul/.gradle/caches/transforms-3/a46bcbdbbfa778a83a7d693bd1bfb4fe/transformed/jetified-play-services-location-21.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.github.mhiew:android-pdf-viewer:3.2.0-beta.3] /Users/parthapaul/.gradle/caches/transforms-3/de6fee327216db9e2315c873519c60c0/transformed/jetified-android-pdf-viewer-3.2.0-beta.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.mhiew:android-pdf-viewer:3.2.0-beta.3] /Users/parthapaul/.gradle/caches/transforms-3/de6fee327216db9e2315c873519c60c0/transformed/jetified-android-pdf-viewer-3.2.0-beta.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.preference:preference:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/ba4c56ebea3cb53a249a9137b155e94a/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/ba4c56ebea3cb53a249a9137b155e94a/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.yalantis:ucrop:2.2.9] /Users/parthapaul/.gradle/caches/transforms-3/2fbb4a6d20ae8e1dc7c3abdc7e87854c/transformed/jetified-ucrop-2.2.9/AndroidManifest.xml:5:5-44
+MERGED from [com.github.yalantis:ucrop:2.2.9] /Users/parthapaul/.gradle/caches/transforms-3/2fbb4a6d20ae8e1dc7c3abdc7e87854c/transformed/jetified-ucrop-2.2.9/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/parthapaul/.gradle/caches/transforms-3/cff231520afae8a2181ffe91ad7c0325/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/parthapaul/.gradle/caches/transforms-3/cff231520afae8a2181ffe91ad7c0325/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/parthapaul/.gradle/caches/transforms-3/2d8f014937d67b7944a9b8984302fb9e/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/parthapaul/.gradle/caches/transforms-3/2d8f014937d67b7944a9b8984302fb9e/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.3.6] /Users/parthapaul/.gradle/caches/transforms-3/37bf9a29b6c403030af92e232023268a/transformed/jetified-fragment-ktx-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.3.6] /Users/parthapaul/.gradle/caches/transforms-3/37bf9a29b6c403030af92e232023268a/transformed/jetified-fragment-ktx-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.9.1] /Users/parthapaul/.gradle/caches/transforms-3/bcf88283837deed1d0d8225041394157/transformed/jetified-activity-ktx-1.9.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.1] /Users/parthapaul/.gradle/caches/transforms-3/bcf88283837deed1d0d8225041394157/transformed/jetified-activity-ktx-1.9.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] /Users/parthapaul/.gradle/caches/transforms-3/e92a1de81da1176f90981ec4f5b57458/transformed/jetified-play-services-tasks-18.1.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] /Users/parthapaul/.gradle/caches/transforms-3/e92a1de81da1176f90981ec4f5b57458/transformed/jetified-play-services-tasks-18.1.0/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/parthapaul/.gradle/caches/transforms-3/266f97625e8e935aeb7e951b87e586ca/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/parthapaul/.gradle/caches/transforms-3/266f97625e8e935aeb7e951b87e586ca/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.9.1] /Users/parthapaul/.gradle/caches/transforms-3/3cf9f19ddbbada84ab95c04ca68ac0a9/transformed/jetified-activity-1.9.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.1] /Users/parthapaul/.gradle/caches/transforms-3/3cf9f19ddbbada84ab95c04ca68ac0a9/transformed/jetified-activity-1.9.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d1286667b69907d3e071d126ded2916d/transformed/jetified-exoplayer-dash-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d1286667b69907d3e071d126ded2916d/transformed/jetified-exoplayer-dash-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/82b74dd0562bb72de424278abb6e7a2b/transformed/jetified-exoplayer-hls-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/82b74dd0562bb72de424278abb6e7a2b/transformed/jetified-exoplayer-hls-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/6f6aafd2ffb910d2c2f78cd0426beb34/transformed/jetified-exoplayer-smoothstreaming-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/6f6aafd2ffb910d2c2f78cd0426beb34/transformed/jetified-exoplayer-smoothstreaming-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d721362e98dc58628819627526936f33/transformed/jetified-exoplayer-core-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d721362e98dc58628819627526936f33/transformed/jetified-exoplayer-core-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.8.0] /Users/parthapaul/.gradle/caches/transforms-3/3065d694c23ee614698e9457de896354/transformed/browser-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.browser:browser:1.8.0] /Users/parthapaul/.gradle/caches/transforms-3/3065d694c23ee614698e9457de896354/transformed/browser-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.media3:media3-extractor:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/a1498f990c639ec2b152cd2567dbff47/transformed/jetified-media3-extractor-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-extractor:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/a1498f990c639ec2b152cd2567dbff47/transformed/jetified-media3-extractor-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/0c1dd4024d40fb03178dc87cb27b59f3/transformed/jetified-media3-container-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-container:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/0c1dd4024d40fb03178dc87cb27b59f3/transformed/jetified-media3-container-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/77b5e3ff2a9f0007c17b3e85f5b14e8f/transformed/jetified-media3-datasource-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-datasource:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/77b5e3ff2a9f0007c17b3e85f5b14e8f/transformed/jetified-media3-datasource-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/f05823b207e18f1ce6f938c75f05f2a2/transformed/jetified-media3-decoder-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-decoder:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/f05823b207e18f1ce6f938c75f05f2a2/transformed/jetified-media3-decoder-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/392231ff1cfcc2a76b546ef1ef841f00/transformed/jetified-media3-database-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-database:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/392231ff1cfcc2a76b546ef1ef841f00/transformed/jetified-media3-database-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/9b22e984f048acb525c774dd8bce4490/transformed/jetified-media3-common-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-common:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/9b22e984f048acb525c774dd8bce4490/transformed/jetified-media3-common-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-hls:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/6f71cd9822398bb62d193c1aee54587b/transformed/jetified-media3-exoplayer-hls-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-hls:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/6f71cd9822398bb62d193c1aee54587b/transformed/jetified-media3-exoplayer-hls-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-dash:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/05716f6decb0c278389b5703c697a0b8/transformed/jetified-media3-exoplayer-dash-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-dash:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/05716f6decb0c278389b5703c697a0b8/transformed/jetified-media3-exoplayer-dash-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-rtsp:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/5ead78d2fe899ec07eeaf9c2e4e37b65/transformed/jetified-media3-exoplayer-rtsp-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-rtsp:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/5ead78d2fe899ec07eeaf9c2e4e37b65/transformed/jetified-media3-exoplayer-rtsp-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-smoothstreaming:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/798872af079e1565fd60070901e509f6/transformed/jetified-media3-exoplayer-smoothstreaming-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer-smoothstreaming:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/798872af079e1565fd60070901e509f6/transformed/jetified-media3-exoplayer-smoothstreaming-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/906a7dafad5ce0d56483d1d7bf6e4e6e/transformed/jetified-media3-exoplayer-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media3:media3-exoplayer:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/906a7dafad5ce0d56483d1d7bf6e4e6e/transformed/jetified-media3-exoplayer-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.12.0] /Users/parthapaul/.gradle/caches/transforms-3/74949e0d9a47851acae205c4d9b1064c/transformed/webkit-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.webkit:webkit:1.12.0] /Users/parthapaul/.gradle/caches/transforms-3/74949e0d9a47851acae205c4d9b1064c/transformed/webkit-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media2:media2-common:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/e352389840cc98c83ee2a3b6ff2db737/transformed/jetified-media2-common-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media2:media2-common:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/e352389840cc98c83ee2a3b6ff2db737/transformed/jetified-media2-common-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/parthapaul/.gradle/caches/transforms-3/b482d07ebda3203e421070b648696f7f/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/parthapaul/.gradle/caches/transforms-3/b482d07ebda3203e421070b648696f7f/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/fe4b0e74c06b9006b360e476b3bda3fb/transformed/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/fe4b0e74c06b9006b360e476b3bda3fb/transformed/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/2499ad20af0ad121e4cf70138f839cd8/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/2499ad20af0ad121e4cf70138f839cd8/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/eda5f807cd639a15928934d48e5d5427/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/eda5f807cd639a15928934d48e5d5427/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/parthapaul/.gradle/caches/transforms-3/2b6d36ba5ea30bc17093bb0c39db0894/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/parthapaul/.gradle/caches/transforms-3/2b6d36ba5ea30bc17093bb0c39db0894/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.4.1] /Users/parthapaul/.gradle/caches/transforms-3/c589dae408f4c843e8f48512984ae9c9/transformed/media-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.4.1] /Users/parthapaul/.gradle/caches/transforms-3/c589dae408f4c843e8f48512984ae9c9/transformed/media-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/570fa7f971c9b14e3dd703a1ae4747a3/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/570fa7f971c9b14e3dd703a1ae4747a3/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/40f414b02e0e798658e30765cbe35bcc/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/40f414b02e0e798658e30765cbe35bcc/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/e9e7891593207a581650d43eb2db95c0/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/e9e7891593207a581650d43eb2db95c0/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/fa0d711a151c32d1c98e5e57f7e75a78/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/fa0d711a151c32d1c98e5e57f7e75a78/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/parthapaul/.gradle/caches/transforms-3/9977695d4e387d4c01f291b15c334a61/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/parthapaul/.gradle/caches/transforms-3/9977695d4e387d4c01f291b15c334a61/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/1fa6c7745fda78c202d97a8b308252b4/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/1fa6c7745fda78c202d97a8b308252b4/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/d286f9fb73efc9e44a640049af3c869c/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/d286f9fb73efc9e44a640049af3c869c/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/74864f4d46b552f233cfa70a55b6231e/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/74864f4d46b552f233cfa70a55b6231e/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/6946c124e24e6d7eae5938b80d211ec2/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/6946c124e24e6d7eae5938b80d211ec2/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/ec1525e33c634bca6cb596881e186db8/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/ec1525e33c634bca6cb596881e186db8/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/bbe166d4ae4ccce8a970580d879f7a10/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/bbe166d4ae4ccce8a970580d879f7a10/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/7db3a1ced0cbed66c23337edddbc7e05/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/7db3a1ced0cbed66c23337edddbc7e05/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/239e99cab4675eca748b1d23853270c9/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/239e99cab4675eca748b1d23853270c9/transformed/jetified-lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/7301d2d60e2ce1ba3ead177324976607/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/7301d2d60e2ce1ba3ead177324976607/transformed/jetified-lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/3c58d63186a078b79903f9806a5071d1/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/3c58d63186a078b79903f9806a5071d1/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/3c64dd26e013ae249f569ab2b9dece48/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/3c64dd26e013ae249f569ab2b9dece48/transformed/jetified-lifecycle-livedata-core-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/a6598c0e85492510830e476402680104/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/a6598c0e85492510830e476402680104/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/c372175db6699b53336cbab9ae0384cd/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/c372175db6699b53336cbab9ae0384cd/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/d2b4bd280ca93ea350a13a7923af5590/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/d2b4bd280ca93ea350a13a7923af5590/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/parthapaul/.gradle/caches/transforms-3/723c32490e08cbf92d04e2dac1319379/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/parthapaul/.gradle/caches/transforms-3/723c32490e08cbf92d04e2dac1319379/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/parthapaul/.gradle/caches/transforms-3/f0efdcf201013e0f479acbf8d7a88b9c/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/parthapaul/.gradle/caches/transforms-3/f0efdcf201013e0f479acbf8d7a88b9c/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/63e125577e42cd6afa8e9f6086a18777/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/63e125577e42cd6afa8e9f6086a18777/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/36ddc311d4aa48d5ec1c9d0771a14c1a/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/36ddc311d4aa48d5ec1c9d0771a14c1a/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/13fedfb1a063d7c3a8a1daacbe95f234/transformed/jetified-datastore-preferences-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/13fedfb1a063d7c3a8a1daacbe95f234/transformed/jetified-datastore-preferences-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/c1a3baeea8f056c8d82c8f381068e718/transformed/jetified-datastore-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/c1a3baeea8f056c8d82c8f381068e718/transformed/jetified-datastore-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/803d82cfc04ec55b066684fdc31eac99/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/803d82cfc04ec55b066684fdc31eac99/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.heifwriter:heifwriter:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/51e943077512bfe4b3e31f14baece317/transformed/heifwriter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.heifwriter:heifwriter:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/51e943077512bfe4b3e31f14baece317/transformed/heifwriter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/parthapaul/.gradle/caches/transforms-3/a8e5214c91de8f5fc17ee2e00447b0ea/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/parthapaul/.gradle/caches/transforms-3/a8e5214c91de8f5fc17ee2e00447b0ea/transformed/jetified-security-crypto-1.1.0-alpha06/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/parthapaul/.gradle/caches/transforms-3/cb6eaccf1013317eb56905ff89e8faf8/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/parthapaul/.gradle/caches/transforms-3/cb6eaccf1013317eb56905ff89e8faf8/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/4f996a7c88cae3e9f31f13e725e1bd54/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/4f996a7c88cae3e9f31f13e725e1bd54/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/9a715f71f16b8c7e819e50037b08314c/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/9a715f71f16b8c7e819e50037b08314c/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/d698a249e765362b7ff2fde408abe7c0/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/d698a249e765362b7ff2fde408abe7c0/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/9b646f9b8d57ac5119400896d4d5b16c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/9b646f9b8d57ac5119400896d4d5b16c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d709f12a488bae3c6f44f6e8f52eadb5/transformed/jetified-exoplayer-datasource-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d709f12a488bae3c6f44f6e8f52eadb5/transformed/jetified-exoplayer-datasource-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/e79d368b6313fe43ac1be4f81e126743/transformed/jetified-exoplayer-extractor-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/e79d368b6313fe43ac1be4f81e126743/transformed/jetified-exoplayer-extractor-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/0b80987d6acdf608649ac1d50c367e60/transformed/jetified-exoplayer-decoder-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/0b80987d6acdf608649ac1d50c367e60/transformed/jetified-exoplayer-decoder-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/8f33f9fbef629e60c487c539a24e5ce2/transformed/jetified-exoplayer-database-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/8f33f9fbef629e60c487c539a24e5ce2/transformed/jetified-exoplayer-database-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/0f1222b4c1886abcf2d65cc775f4ae12/transformed/jetified-exoplayer-common-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/0f1222b4c1886abcf2d65cc775f4ae12/transformed/jetified-exoplayer-common-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/6aa442b92030e7b7183f0197d070d684/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/6aa442b92030e7b7183f0197d070d684/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4a88218a263ef6f4b60259a52f98f029/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4a88218a263ef6f4b60259a52f98f029/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/4d11915a5fa38601250e257033dfcab5/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/4d11915a5fa38601250e257033dfcab5/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/a6c8c0563f786e4ca73769277b9a54a2/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/a6c8c0563f786e4ca73769277b9a54a2/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/1be3350b308ab3a23c31f76dd782b673/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/1be3350b308ab3a23c31f76dd782b673/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:android-maps-utils:3.6.0] /Users/parthapaul/.gradle/caches/transforms-3/6a2aaeba5c04cabbbb5f3ce2d8712cf8/transformed/jetified-android-maps-utils-3.6.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.maps.android:android-maps-utils:3.6.0] /Users/parthapaul/.gradle/caches/transforms-3/6a2aaeba5c04cabbbb5f3ce2d8712cf8/transformed/jetified-android-maps-utils-3.6.0/AndroidManifest.xml:5:5-44
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.mhiew:pdfium-android:1.9.2] /Users/parthapaul/.gradle/caches/transforms-3/814913a6f5ddac2bc8dcf428377880e7/transformed/jetified-pdfium-android-1.9.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.mhiew:pdfium-android:1.9.2] /Users/parthapaul/.gradle/caches/transforms-3/814913a6f5ddac2bc8dcf428377880e7/transformed/jetified-pdfium-android-1.9.2/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [:flutter_image_compress_common] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/flutter_image_compress_common/intermediates/merged_manifest/release/AndroidManifest.xml:9:9-52
+	android:targetSdkVersion
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml
+activity#com.app.my_coffee.MainActivity
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:22:9-49:20
+	android:launchMode
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:25:13-43
+	android:hardwareAccelerated
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:29:13-47
+	android:windowSoftInputMode
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:30:13-55
+	android:exported
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:24:13-36
+	android:configChanges
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:28:13-163
+	android:theme
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:27:13-47
+	android:taskAffinity
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:26:13-36
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:23:13-41
+meta-data#io.flutter.embedding.android.NormalTheme
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:35:13-38:17
+	android:resource
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:37:15-52
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:36:15-70
+meta-data#io.flutter.embedding.android.SplashScreenDrawable
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:40:13-43:19
+	android:resource
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:42:17-63
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:41:17-81
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:45:13-48:29
+action#android.intent.action.MAIN
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:46:17-68
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:46:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:47:17-76
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:47:27-74
+activity#com.yalantis.ucrop.UCropActivity
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:50:9-53:71
+	android:screenOrientation
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:52:13-49
+	android:theme
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:53:13-69
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:51:13-60
+meta-data#flutterEmbedding
+ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:56:9-58:33
+	android:value
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:58:13-30
+	android:name
+		ADDED from /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/android/app/src/main/AndroidManifest.xml:57:13-44
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:connectivity_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/connectivity_plus/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d721362e98dc58628819627526936f33/transformed/jetified-exoplayer-core-2.18.7/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/d721362e98dc58628819627526936f33/transformed/jetified-exoplayer-core-2.18.7/AndroidManifest.xml:24:5-79
+MERGED from [androidx.media3:media3-common:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/9b22e984f048acb525c774dd8bce4490/transformed/jetified-media3-common-1.4.0/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-common:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/9b22e984f048acb525c774dd8bce4490/transformed/jetified-media3-common-1.4.0/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/906a7dafad5ce0d56483d1d7bf6e4e6e/transformed/jetified-media3-exoplayer-1.4.0/AndroidManifest.xml:22:5-79
+MERGED from [androidx.media3:media3-exoplayer:1.4.0] /Users/parthapaul/.gradle/caches/transforms-3/906a7dafad5ce0d56483d1d7bf6e4e6e/transformed/jetified-media3-exoplayer-1.4.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/0f1222b4c1886abcf2d65cc775f4ae12/transformed/jetified-exoplayer-common-2.18.7/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.7] /Users/parthapaul/.gradle/caches/transforms-3/0f1222b4c1886abcf2d65cc775f4ae12/transformed/jetified-exoplayer-common-2.18.7/AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [:connectivity_plus] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/connectivity_plus/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-76
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:9-19:20
+	android:grantUriPermissions
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:15:13-47
+	android:authorities
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-74
+	android:exported
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-82
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:16:13-18:75
+	android:resource
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:18:17-72
+	android:name
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:17:17-67
+service#com.google.android.gms.metadata.ModuleDependencies
+ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:21:9-33:19
+	android:enabled
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:23:13-36
+	android:exported
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:24:13-37
+	tools:ignore
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:25:13-40
+	android:name
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:22:13-78
+intent-filter#action:name:com.google.android.gms.metadata.MODULE_DEPENDENCIES
+ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:26:13-28:29
+action#com.google.android.gms.metadata.MODULE_DEPENDENCIES
+ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:27:17-94
+	android:name
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:27:25-91
+meta-data#photopicker_activity:0:required
+ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:30:13-32:36
+	android:value
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:32:17-33
+	android:name
+		ADDED from [:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:31:17-63
+service#com.baseflow.geolocator.GeolocatorLocationService
+ADDED from [:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-14:56
+	android:enabled
+		ADDED from [:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-35
+	android:exported
+		ADDED from [:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-37
+	android:foregroundServiceType
+		ADDED from [:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-53
+	android:name
+		ADDED from [:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-77
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-13:74
+	android:exported
+		ADDED from [:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-71
+	android:name
+		ADDED from [:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-74
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/8b358f626d9ac572b541fc3fef08c263/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.maps.android:android-maps-utils:3.6.0] /Users/parthapaul/.gradle/caches/transforms-3/6a2aaeba5c04cabbbb5f3ce2d8712cf8/transformed/jetified-android-maps-utils-3.6.0/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:3.6.0] /Users/parthapaul/.gradle/caches/transforms-3/6a2aaeba5c04cabbbb5f3ce2d8712cf8/transformed/jetified-android-maps-utils-3.6.0/AndroidManifest.xml:8:9-10:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:22:13-58
+intent#action:name:android.media.browse.MediaBrowserService
+ADDED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:25:9-27:18
+action#android.media.browse.MediaBrowserService
+ADDED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:26:13-79
+	android:name
+		ADDED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:26:21-76
+intent#action:name:androidx.media2.session.MediaSessionService
+ADDED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:28:9-30:18
+action#androidx.media2.session.MediaSessionService
+ADDED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:29:13-82
+	android:name
+		ADDED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:29:21-79
+intent#action:name:androidx.media2.session.MediaLibraryService
+ADDED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:31:9-33:18
+action#androidx.media2.session.MediaLibraryService
+ADDED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:32:13-82
+	android:name
+		ADDED from [androidx.media2:media2-session:1.2.1] /Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/AndroidManifest.xml:32:21-79
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/bbe166d4ae4ccce8a970580d879f7a10/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/bbe166d4ae4ccce8a970580d879f7a10/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/4f996a7c88cae3e9f31f13e725e1bd54/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/parthapaul/.gradle/caches/transforms-3/4f996a7c88cae3e9f31f13e725e1bd54/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/843bc4e9e598efcadf9ed114a7f8cf09/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/parthapaul/.gradle/caches/transforms-3/23ac2a68d3f37bba9d08a257f507fb11/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/bbe166d4ae4ccce8a970580d879f7a10/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/bbe166d4ae4ccce8a970580d879f7a10/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/parthapaul/.gradle/caches/transforms-3/bbe166d4ae4ccce8a970580d879f7a10/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+permission#com.app.my_coffee.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+uses-permission#com.app.my_coffee.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/5feda47e128b5d91d4b6caa3787fdde9/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+uses-feature#android.hardware.camera.front
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
+uses-feature#android.hardware.camera.autofocus
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:35:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:34:9-57
+uses-feature#android.hardware.camera.flash
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
+uses-feature#android.hardware.screen.landscape
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
+uses-feature#android.hardware.wifi
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
+activity#com.journeyapps.barcodescanner.CaptureActivity
+ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
+	android:screenOrientation
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
+	android:clearTaskOnLaunch
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
+	android:stateNotNeeded
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
+	android:windowSoftInputMode
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
+	android:theme
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
