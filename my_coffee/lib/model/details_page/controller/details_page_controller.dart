@@ -19,7 +19,9 @@ import '../../../data/mode/add_cart_details/add_cart_details.dart';
 import '../../../data/mode/get_item_details/get_item_details_request.dart';
 import '../../../data/mode/get_item_details/get_item_details_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/product_api/product_api.dart';
 import '../../../data/remote/web_response.dart';
+import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
 import '../../../utils/num_utils.dart';
@@ -48,6 +50,7 @@ class DetailsPageScreenController extends GetxController {
   Rx<PageController> introductionPageController =
       PageController(initialPage: 0).obs;
   RxList<ModifierData> selectModifierData = <ModifierData>[].obs;
+  final productApi = locator.get<ProductApi>();
 
   void priceIncDec() {
     double taxAmount = calculatePercentageOf(amount.value, taxP.value);
@@ -105,7 +108,7 @@ class DetailsPageScreenController extends GetxController {
           id: itemId,
         );
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postGetItemDetails(mGetItemDetailsRequest);
+            await productApi.postGetItemDetails(mGetItemDetailsRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetItemDetailsResponse mGetItemDetailsResponse =
               mWebResponseSuccess.data;

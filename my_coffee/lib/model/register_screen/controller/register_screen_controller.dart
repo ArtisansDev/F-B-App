@@ -11,8 +11,10 @@ import '../../../data/mode/login/login_response.dart';
 import '../../../data/mode/register/register_request.dart';
 import '../../../data/mode/register/register_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/user_authentication/user_authentication_api.dart';
 import '../../../data/remote/web_response.dart';
 import '../../../lang/translation_service_key.dart';
+import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/app_utils.dart';
 import '../../../utils/network_utils.dart';
@@ -24,6 +26,7 @@ class RegisterScreenController extends GetxController {
   Rx<TextEditingController> emailController = TextEditingController().obs;
   LoginScreenController mLoginScreenController =
       Get.find<LoginScreenController>();
+  final localApi = locator.get<UserAuthenticationApi>();
 
   isRegister() {
     if (nameController.value.text.trim().isEmpty) {
@@ -48,7 +51,7 @@ class RegisterScreenController extends GetxController {
             firstName: nameController.value.text,
             lastName: '');
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postRegister(mRegisterRequest);
+            await localApi.postRegister(mRegisterRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           RegisterResponse mRegisterResponse = mWebResponseSuccess.data;
           if (mRegisterResponse.statusCode == WebConstants.statusCode200) {

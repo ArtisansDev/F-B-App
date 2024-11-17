@@ -14,7 +14,9 @@ import '../../../data/mode/get_category/get_category_response.dart';
 import '../../../data/mode/get_category_item/get_category_item_request.dart';
 import '../../../data/mode/get_category_item/get_category_item_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/product_api/product_api.dart';
 import '../../../data/remote/web_response.dart';
+import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
@@ -42,6 +44,7 @@ class MenuScreenController extends GetxController {
       ItemPositionsListener.create().obs;
   final Rx<ScrollOffsetListener> scrollOffsetListener =
       ScrollOffsetListener.create().obs;
+  final localApi = locator.get<ProductApi>();
 
   MenuScreenController() {
     // itemPositionsListener.value.itemPositions.addListener(() {
@@ -134,7 +137,7 @@ class MenuScreenController extends GetxController {
               .selectGetAllBranchesListData.value.branchIDP,
         );
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postGetCategory(mGetCategoryRequest);
+            await localApi.postGetCategory(mGetCategoryRequest);
 
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetCategoryResponse mGetCategoryResponse = mWebResponseSuccess.data;
@@ -172,7 +175,7 @@ class MenuScreenController extends GetxController {
             categoryIDF:
                 mGetCategoryListData.value[selectSideMenu.value].categoryIDP);
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postGetCategoryItem(mGetCategoryItemRequest);
+            await localApi.postGetCategoryItem(mGetCategoryItemRequest);
         if (refreshController.isRefresh) {
           refreshController.refreshCompleted();
         } else if (refreshController.isLoading) {

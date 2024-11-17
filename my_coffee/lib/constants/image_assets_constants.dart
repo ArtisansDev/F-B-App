@@ -17,8 +17,6 @@ class ImageAssetsConstants {
   static String profile = "assets/profile.png";
   static String off = "assets/off.png";
   ///introduction
-  static String introductionImage1 = "assets/introduction/introduction_1.png";
-  static String introductionImage2 = "assets/introduction/introduction_2.png";
   static String introductionImage3 = "assets/introduction/introduction_3.jpg";
   static String introductionImage4 = "assets/introduction/introduction_4.jpg";
 
@@ -64,15 +62,7 @@ class ImageAssetsConstants {
 
 
   ///introduction
-  static String banner1 = "assets/banner/banner_1.png";
-  static String banner2 = "assets/banner/banner_2.png";
-  static String banner3 = "assets/banner/banner_3.png";
-  static String banner4 = "assets/banner/banner_4.png";
-  static String banner5 = "assets/banner/banner_5.png";
-  static String bannerImage1 = "assets/banner/banner_Iamge_1.png";
-  static String bannerMenu1 = "assets/banner/banner_menu_1.png";
-  static String bannerDashboard = "assets/banner/banner_dashboard.png";
-  static String bannerDashboard1 = "assets/banner/banner_dashboard_1.png";
+
   static String homeBastSale = "assets/home/bast_sale.png";
   static String homeHomeGift = "assets/home/home_gift.png";
   static String homeLocation = "assets/home/location.png";
@@ -86,9 +76,6 @@ class ImageAssetsConstants {
   ///location_1
   static String location1 = "assets/location/location_1.png";
   static String location2 = "assets/location/location_2.png";
-
-  ///gif
-  // static String coffeeGif = "assets/coffee_gif.gif";
 
   ///svg
   static String iconMenu1 = "assets/svg/icon_menu1.svg";

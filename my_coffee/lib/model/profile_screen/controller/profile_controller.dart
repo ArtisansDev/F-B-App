@@ -1,8 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:my_coffee/alert/app_alert.dart';
 import 'package:my_coffee/constants/logout_expired.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 
 import '../../../constants/get_user_details.dart';
 import '../../../constants/message_constants.dart';
@@ -21,7 +20,7 @@ class ProfileScreenController extends GetxController {
   RxString userName = '--'.obs;
   RxString email = '--'.obs;
   RxString phoneNumber = '--'.obs;
-  Rxn<String> imageUrl =  Rxn<String>();
+  Rxn<String> imageUrl = Rxn<String>();
 
   RxBool viewVisible = false.obs;
 
@@ -30,8 +29,7 @@ class ProfileScreenController extends GetxController {
   }
 
   getPackageInfo() async {
-    PackageInfo packageInfo = await PackageInfo.fromPlatform();
-    version.value = packageInfo.version;
+    version.value = dotenv.env['APP_VERSION'] ?? '';
     await getUserDetails();
     viewVisible.value = true;
   }

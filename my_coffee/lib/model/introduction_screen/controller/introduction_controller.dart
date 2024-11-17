@@ -15,7 +15,9 @@ import '../../../constants/web_constants.dart';
 import '../../../data/local/shared_prefs/shared_prefs.dart';
 import '../../../data/mode/get_general_setting/get_general_setting_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/general_api/general_api.dart';
 import '../../../data/remote/web_response.dart';
+import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/get_address.dart';
 import '../../../utils/get_location.dart';
@@ -28,6 +30,7 @@ class IntroductionScreenController extends GetxController {
 
   void onChangePage(int value) {}
   Rx<LatLng> centerLatLng = const LatLng(0, 0).obs;
+  final localApi = locator.get<GeneralApi>();
 
   void goToNextPage() {
     // mGetLocation.checkLocationPermission((Position position) async {
@@ -50,7 +53,7 @@ class IntroductionScreenController extends GetxController {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().getGeneralSetting();
+            await localApi.getGeneralSetting();
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetGeneralSettingResponse mGetGeneralSettingResponse =
               mWebResponseSuccess.data;

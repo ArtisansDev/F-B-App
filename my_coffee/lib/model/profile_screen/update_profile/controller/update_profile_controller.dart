@@ -14,8 +14,10 @@ import '../../../../data/mode/user_details/user_details_response.dart';
 import '../../../../data/mode/user_update/user_update_request.dart';
 import '../../../../data/mode/user_update/user_update_response.dart';
 import '../../../../data/remote/api_call/api_impl.dart';
+import '../../../../data/remote/api_call/user_authentication/user_authentication_api.dart';
 import '../../../../data/remote/web_response.dart';
 import '../../../../lang/translation_service_key.dart';
+import '../../../../locator.dart';
 import '../../../../utils/app_utils.dart';
 import '../../../../utils/image_picker_utils.dart';
 import '../../../../utils/network_utils.dart';
@@ -38,6 +40,7 @@ class UpdateProfileScreenController extends GetxController {
   RxBool mProfile = true.obs;
   RxBool mAddress1 = true.obs;
   RxBool mAddress2 = true.obs;
+  final localApi = locator.get<UserAuthenticationApi>();
 
   UpdateProfileScreenController() {
     getProfileDetails();
@@ -87,7 +90,7 @@ class UpdateProfileScreenController extends GetxController {
             firstName: nameController.value.text,
             lastName: '');
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postUserDetailsUpdate(mUserUpdateRequest);
+            await localApi.postUserDetailsUpdate(mUserUpdateRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           UserUpdateResponse mUserUpdateResponse = mWebResponseSuccess.data;
           if (mUserUpdateResponse.statusCode == WebConstants.statusCode200) {
@@ -135,7 +138,7 @@ class UpdateProfileScreenController extends GetxController {
                 addressType: (value.addressType ?? 0).toString(),
                 userIDF: await SharedPrefs().getUserId());
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postUserAddressUpdate(mUserUpdateAddressRequest);
+            await localApi.postUserAddressUpdate(mUserUpdateAddressRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           UserUpdateAddressResponse mUserUpdateAddressResponse =
               mWebResponseSuccess.data;
@@ -177,8 +180,7 @@ class UpdateProfileScreenController extends GetxController {
         ProfileImageUpdateRequest mProfileUpdateRequest =
             ProfileImageUpdateRequest(
                 userID: mUserDetailsResponseData.value.userID);
-        WebResponseSuccess mWebResponseSuccess = await AllApiImpl()
-            .postProfileImageFile(filePath, mProfileUpdateRequest);
+        WebResponseSuccess mWebResponseSuccess = await localApi.postProfileImageFile(filePath, mProfileUpdateRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           attachmentPath.value = filePath;
           await getUserDetails();

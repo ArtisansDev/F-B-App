@@ -7,8 +7,10 @@ import '../../../constants/web_constants.dart';
 import '../../../data/mode/login/login_request.dart';
 import '../../../data/mode/login/login_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/user_authentication/user_authentication_api.dart';
 import '../../../data/remote/web_response.dart';
 import '../../../lang/translation_service_key.dart';
+import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
 
@@ -17,7 +19,7 @@ class LoginScreenController extends GetxController {
       TextEditingController().obs;
   RxString gender = ''.obs;
   RxString phoneCode = '60'.obs;
-
+  final localApi = locator.get<UserAuthenticationApi>();
   isLogin(String sValue) {
     if (mobileNumberController.value.text.trim().isEmpty) {
       AppAlert.showSnackBar(Get.context!, sPleaseEnterMobileNumber.tr);
@@ -35,7 +37,7 @@ class LoginScreenController extends GetxController {
             phoneNumber: mobileNumberController.value.text,
             countryCode: '+$phoneCode');
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postLogin(mLoginRequest);
+            await localApi.postLogin(mLoginRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           LoginResponse mLoginResponse = mWebResponseSuccess.data;
           if (mLoginResponse.statusCode == WebConstants.statusCode200) {

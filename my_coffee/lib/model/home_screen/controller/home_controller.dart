@@ -14,7 +14,9 @@ import '../../../data/mode/get_best_seller_item/get_best_seller_item_response.da
 import '../../../data/mode/get_dashboard/get_dashboard_request.dart';
 import '../../../data/mode/get_dashboard/get_dashboard_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/general_api/general_api.dart';
 import '../../../data/remote/web_response.dart';
+import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
@@ -53,6 +55,7 @@ class HomeScreenController extends GetxController {
       PageController(initialPage: 0).obs;
 
   Rx<bool> bFocusGained = true.obs;
+  final localApi = locator.get<GeneralApi>();
 
   isTimerSt() {
     _timer = Timer.periodic(const Duration(seconds: 5), (Timer timer) {
@@ -112,7 +115,7 @@ class HomeScreenController extends GetxController {
                     (await SharedPrefs().getGeneralSetting()).restaurantIDF ??
                         '');
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postGetBestSellerItem(mGetBestSellerItemRequest);
+            await localApi.postGetBestSellerItem(mGetBestSellerItemRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetBestSellerItemResponse mGetBestSellerItemResponse =
               mWebResponseSuccess.data;
@@ -142,7 +145,7 @@ class HomeScreenController extends GetxController {
             restaurantIDF:
                 (await SharedPrefs().getGeneralSetting()).restaurantIDF ?? '');
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postGetDashboard(mGetDashboardRequest);
+            await localApi.postGetDashboard(mGetDashboardRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           mGetDashboardResponse.value = mWebResponseSuccess.data;
           dataGetBestSellerItemData.value.clear();

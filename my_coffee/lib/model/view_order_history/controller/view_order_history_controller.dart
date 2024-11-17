@@ -16,7 +16,9 @@ import '../../../data/mode/order_place/order_place_request.dart';
 import '../../../data/mode/order_place/process_order_response.dart';
 import '../../../data/mode/user_details/user_details_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/order/order_api.dart';
 import '../../../data/remote/web_response.dart';
+import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/date_format.dart';
 import '../../../utils/network_utils.dart';
@@ -34,6 +36,7 @@ class ViewOrderHistoryController extends GetxController {
   Rx<AddCartModel> mAddCartModel = AddCartModel().obs;
   RxList<GetItemDetailsData> mItems = <GetItemDetailsData>[].obs;
   Rx<TextEditingController> remarksController = TextEditingController().obs;
+  final localApi = locator.get<OrderHistoryApi>();
 
   ///setLocation
   Rx<GetAllBranchesListData> selectGetAllBranchesListData =
@@ -226,7 +229,7 @@ class ViewOrderHistoryController extends GetxController {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postOrderPlace(mOrderPlaceRequest);
+            await localApi.postOrderPlace(mOrderPlaceRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           ProcessOrderResponse mProcessOrderResponse = mWebResponseSuccess.data;
           AppAlert.showSnackBar(Get.context!, 'Order place successfully');

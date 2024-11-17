@@ -20,7 +20,9 @@ import '../../../data/mode/login/login_response.dart';
 import '../../../data/mode/verify_otp/verify_otp_request.dart';
 import '../../../data/mode/verify_otp/verify_otp_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/user_authentication/user_authentication_api.dart';
 import '../../../data/remote/web_response.dart';
+import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
@@ -40,6 +42,7 @@ class OtpScreenController extends GetxController {
       border: Border.all(color: ColorConstants.buttonBar.withOpacity(0.5)),
     ),
   );
+  final localApi = locator.get<UserAuthenticationApi>();
 
   void verificationCode(String verificationCode) {
     otpValue.value = verificationCode;
@@ -82,7 +85,7 @@ class OtpScreenController extends GetxController {
             countryCode: '+${mLoginScreenController.phoneCode}',
             otp: otpValue.value);
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postVerifyOTP(mVerifyOtpRequest);
+            await localApi.postVerifyOTP(mVerifyOtpRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           VerifyOtpResponse mVerifyOtpResponse = mWebResponseSuccess.data;
           if (mVerifyOtpResponse.statusCode == WebConstants.statusCode200) {
@@ -128,7 +131,7 @@ class OtpScreenController extends GetxController {
                 mLoginScreenController.mobileNumberController.value.text,
             countryCode: '+${mLoginScreenController.phoneCode}');
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postLogin(mLoginRequest);
+            await localApi.postLogin(mLoginRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           LoginResponse mLoginResponse = mWebResponseSuccess.data;
           if (mLoginResponse.statusCode == WebConstants.statusCode200) {

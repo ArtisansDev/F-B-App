@@ -1,25 +1,26 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 
 import '../../../alert/app_alert.dart';
 import '../../../constants/message_constants.dart';
 import '../../../constants/web_constants.dart';
 import '../../../data/local/shared_prefs/shared_prefs.dart';
 import '../../../data/mode/get_general_setting/get_general_setting_response.dart';
-import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/general_api/general_api.dart';
 import '../../../data/remote/web_response.dart';
+import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/network_utils.dart';
 
 class SplashScreenController extends GetxController {
   RxString version = ''.obs;
+  final localApi = locator.get<GeneralApi>();
 
   getPackageInfo() async {
-    PackageInfo packageInfo = await PackageInfo.fromPlatform();
-    version.value = packageInfo.version;
+    version.value = dotenv.env['APP_VERSION'] ?? '';
   }
 
   initSharedPreferencesInstance() async {
@@ -43,7 +44,7 @@ class SplashScreenController extends GetxController {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
         WebResponseSuccess mWebResponseSuccess =
-        await AllApiImpl().getGeneralSetting();
+        await localApi.getGeneralSetting();
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetGeneralSettingResponse mGetGeneralSettingResponse =
               mWebResponseSuccess.data;

@@ -20,11 +20,14 @@ import '../data/mode/user_delete/user_delete_response.dart';
 import '../data/mode/user_details/user_details_request.dart';
 import '../data/mode/user_details/user_details_response.dart';
 import '../data/remote/api_call/api_impl.dart';
+import '../data/remote/api_call/user_authentication/user_authentication_api.dart';
 import '../data/remote/web_response.dart';
+import '../locator.dart';
 import '../utils/network_utils.dart';
 import 'message_constants.dart';
 
 Future<bool> getUserDetails() async {
+  final localApi = locator.get<UserAuthenticationApi>();
   return await NetworkUtils()
       .checkInternetConnection()
       .then((isInternetAvailable) async {
@@ -32,7 +35,7 @@ Future<bool> getUserDetails() async {
       UserDetailsRequest mUserDetailsRequest =
           UserDetailsRequest(id: await SharedPrefs().getUserId());
       WebResponseSuccess mWebResponseSuccess =
-          await AllApiImpl().postGetUserData(mUserDetailsRequest);
+          await localApi.postGetUserData(mUserDetailsRequest);
       if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
         UserDetailsResponse mUserDetailsResponse = mWebResponseSuccess.data;
         if (mUserDetailsResponse.statusCode == WebConstants.statusCode200) {
@@ -57,6 +60,7 @@ Future<bool> getUserDetails() async {
 }
 
 Future<bool> getUserDelete() async {
+  final localApi = locator.get<UserAuthenticationApi>();
   return await NetworkUtils()
       .checkInternetConnection()
       .then((isInternetAvailable) async {
@@ -64,7 +68,7 @@ Future<bool> getUserDelete() async {
       UserDeleteRequest mUserDeleteRequest =
           UserDeleteRequest(id: await SharedPrefs().getUserId());
       WebResponseSuccess mWebResponseSuccess =
-          await AllApiImpl().postUserDelete(mUserDeleteRequest);
+          await localApi.postUserDelete(mUserDeleteRequest);
       if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
         UserDeleteResponse mUserDeleteResponse = mWebResponseSuccess.data;
         if (mUserDeleteResponse.statusCode == WebConstants.statusCode200) {

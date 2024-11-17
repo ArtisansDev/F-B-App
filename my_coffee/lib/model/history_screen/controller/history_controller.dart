@@ -17,7 +17,10 @@ import '../../../data/mode/order_place/order_place_request.dart';
 import '../../../data/mode/senang_pay_payment/senang_pay_payment_model.dart';
 import '../../../data/mode/user_details/user_details_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/order/order_api.dart';
+import '../../../data/remote/api_call/product_api/product_api.dart';
 import '../../../data/remote/web_response.dart';
+import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/date_format.dart';
 import '../../../utils/network_utils.dart';
@@ -30,6 +33,8 @@ class HistoryScreenController extends GetxController {
   RxString showValue = 'Loading...'.obs;
   RxList<OrderHistoryResponseItemData> mOrderHistoryResponseItemData =
       <OrderHistoryResponseItemData>[].obs;
+  final localApi = locator.get<OrderHistoryApi>();
+  final productApi = locator.get<ProductApi>();
 
   ///Refresh
   RefreshController refreshController =
@@ -60,7 +65,7 @@ class HistoryScreenController extends GetxController {
             pageNumber: pageNumber,
             rowsPerPage: 10);
         WebResponseSuccess mWebResponseSuccess =
-            await AllApiImpl().postGetOrderHistory(mGetOrderHistoryRequest);
+            await localApi.postGetOrderHistory(mGetOrderHistoryRequest);
         if (refreshController.isRefresh) {
           refreshController.refreshCompleted();
         } else if (refreshController.isLoading) {
@@ -132,8 +137,7 @@ class HistoryScreenController extends GetxController {
                 restaurantIDF:
                     (await SharedPrefs().getGeneralSetting()).restaurantIDF ??
                         '');
-        WebResponseSuccess mWebResponseSuccess = await AllApiImpl()
-            .postGetAllBranchesByRestaurantID(
+        WebResponseSuccess mWebResponseSuccess = await productApi.postGetAllBranchesByRestaurantID(
                 mGetAllBranchesByRestaurantIdRequest,
                 isLoading: false);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
@@ -163,8 +167,7 @@ class HistoryScreenController extends GetxController {
         GetItemDetailsRequest mGetItemDetailsRequest = GetItemDetailsRequest(
           id: mOrderMenu.menuItemIDF,
         );
-        WebResponseSuccess mWebResponseSuccess = await AllApiImpl()
-            .postGetItemDetails(mGetItemDetailsRequest, isLoading: false);
+        WebResponseSuccess mWebResponseSuccess = await productApi.postGetItemDetails(mGetItemDetailsRequest, isLoading: false);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetItemDetailsResponse mGetItemDetailsResponse =
               mWebResponseSuccess.data;

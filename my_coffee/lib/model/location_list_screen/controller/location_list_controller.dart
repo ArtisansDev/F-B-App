@@ -9,12 +9,15 @@ import '../../../data/local/shared_prefs/shared_prefs.dart';
 import '../../../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
 import '../../../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/remote/api_call/product_api/product_api.dart';
 import '../../../data/remote/web_response.dart';
+import '../../../locator.dart';
 import '../../../utils/date_format.dart';
 import '../../../utils/network_utils.dart';
 
 class LocationListScreenController extends GetxController {
   Rx<TextEditingController> searchController = TextEditingController().obs;
+  final localApi = locator.get<ProductApi>();
 
   LocationListScreenController() {
     onRefresh();
@@ -56,8 +59,7 @@ class LocationListScreenController extends GetxController {
                 restaurantIDF:
                     (await SharedPrefs().getGeneralSetting()).restaurantIDF ??
                         '');
-        WebResponseSuccess mWebResponseSuccess = await AllApiImpl()
-            .postGetAllBranchesByRestaurantID(
+        WebResponseSuccess mWebResponseSuccess = await localApi.postGetAllBranchesByRestaurantID(
                 mGetAllBranchesByRestaurantIdRequest);
         if (refreshController.isRefresh) {
           refreshController.refreshCompleted();
