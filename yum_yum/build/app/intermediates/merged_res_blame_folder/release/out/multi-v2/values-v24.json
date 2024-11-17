@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.my_coffee.app-mergeReleaseResources-53:/values-v24/values-v24.xml",
+            "outputFile": "com.app.my_coffee.app-mergeReleaseResources-56:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2d8f014937d67b7944a9b8984302fb9e/transformed/appcompat-1.6.1/res/values-v24/values-v24.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a8911b54c7cf1339acae1fc112b8c5e5/transformed/appcompat-1.6.1/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/c589dae408f4c843e8f48512984ae9c9/transformed/media-1.4.1/res/values-v24/values-v24.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/56e83aab587ab4ee9423f767cf9ab525/transformed/media-1.4.1/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

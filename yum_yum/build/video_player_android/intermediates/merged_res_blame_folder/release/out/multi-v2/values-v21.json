@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "io.flutter.plugins.videoplayer.video_player_android-mergeReleaseResources-10:/values-v21/values-v21.xml",
+            "outputFile": "io.flutter.plugins.videoplayer.video_player_android-merged_res-27:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/dac0d4e6d4ad19ab6b790181816d00ed/transformed/core-1.8.0/res/values-v21/values-v21.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -17,10 +17,10 @@
             ]
         },
         {
-            "outputFile": "io.flutter.plugins.videoplayer.video_player_android-merged_res-12:/values-v21/values-v21.xml",
+            "outputFile": "io.flutter.plugins.videoplayer.video_player_android-mergeReleaseResources-25:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/dac0d4e6d4ad19ab6b790181816d00ed/transformed/core-1.8.0/res/values-v21/values-v21.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

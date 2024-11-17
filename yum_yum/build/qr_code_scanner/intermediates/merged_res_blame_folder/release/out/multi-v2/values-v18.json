@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-merged_res-21:/values-v18/values-v18.xml",
+            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-merged_res-31:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/421e457eb5563d3aed973b5b88f25b59/transformed/appcompat-1.4.2/res/values-v18/values-v18.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/ae66695ddc2f83b93da03454cdf74073/transformed/appcompat-1.4.2/res/values-v18/values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-19:/values-v18/values-v18.xml",
+            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-29:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/421e457eb5563d3aed973b5b88f25b59/transformed/appcompat-1.4.2/res/values-v18/values-v18.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/ae66695ddc2f83b93da03454cdf74073/transformed/appcompat-1.4.2/res/values-v18/values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

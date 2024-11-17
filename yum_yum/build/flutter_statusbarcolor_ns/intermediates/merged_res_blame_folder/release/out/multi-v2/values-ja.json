@@ -1,31 +1,31 @@
 {
     "logs": [
         {
-            "outputFile": "com.sameer.flutterstatusbarcolor.flutterstatusbarcolor.flutter_statusbarcolor_ns-merged_res-10:/values-ja/values-ja.xml",
+            "outputFile": "com.sameer.flutterstatusbarcolor.flutterstatusbarcolor.flutter_statusbarcolor_ns-merged_res-26:/values-ja/values-ja.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res/values-ja/values-ja.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-ja/values-ja.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,147,247,341,437,530,623,724",
+                        "endColumns": "91,99,93,95,92,92,100,100",
+                        "endOffsets": "142,242,336,432,525,618,719,820"
                     }
                 }
             ]
         },
         {
-            "outputFile": "com.sameer.flutterstatusbarcolor.flutterstatusbarcolor.flutter_statusbarcolor_ns-mergeReleaseResources-8:/values-ja/values-ja.xml",
+            "outputFile": "com.sameer.flutterstatusbarcolor.flutterstatusbarcolor.flutter_statusbarcolor_ns-mergeReleaseResources-24:/values-ja/values-ja.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res/values-ja/values-ja.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-ja/values-ja.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,147,247,341,437,530,623,724",
+                        "endColumns": "91,99,93,95,92,92,100,100",
+                        "endOffsets": "142,242,336,432,525,618,719,820"
                     }
                 }
             ]

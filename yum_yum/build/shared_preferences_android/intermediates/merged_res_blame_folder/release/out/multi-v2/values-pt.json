@@ -1,31 +1,31 @@
 {
     "logs": [
         {
-            "outputFile": "io.flutter.plugins.sharedpreferences.shared_preferences_android-mergeReleaseResources-10:/values-pt/values-pt.xml",
+            "outputFile": "io.flutter.plugins.sharedpreferences.shared_preferences_android-merged_res-28:/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res/values-pt/values-pt.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-pt/values-pt.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,152,254,353,453,560,670,790",
+                        "endColumns": "96,101,98,99,106,109,119,100",
+                        "endOffsets": "147,249,348,448,555,665,785,886"
                     }
                 }
             ]
         },
         {
-            "outputFile": "io.flutter.plugins.sharedpreferences.shared_preferences_android-merged_res-12:/values-pt/values-pt.xml",
+            "outputFile": "io.flutter.plugins.sharedpreferences.shared_preferences_android-mergeReleaseResources-26:/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res/values-pt/values-pt.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-pt/values-pt.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,152,254,353,453,560,670,790",
+                        "endColumns": "96,101,98,99,106,109,119,100",
+                        "endOffsets": "147,249,348,448,555,665,785,886"
                     }
                 }
             ]

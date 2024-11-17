@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "vn.hunghd.flutter.plugins.imagecropper.image_cropper-mergeReleaseResources-32:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "vn.hunghd.flutter.plugins.imagecropper.image_cropper-mergeReleaseResources-39:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/ba4c56ebea3cb53a249a9137b155e94a/transformed/preference-1.2.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a77d493de04766ea555799850336c4e9/transformed/preference-1.2.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "vn.hunghd.flutter.plugins.imagecropper.image_cropper-merged_res-34:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "vn.hunghd.flutter.plugins.imagecropper.image_cropper-merged_res-41:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/ba4c56ebea3cb53a249a9137b155e94a/transformed/preference-1.2.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a77d493de04766ea555799850336c4e9/transformed/preference-1.2.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

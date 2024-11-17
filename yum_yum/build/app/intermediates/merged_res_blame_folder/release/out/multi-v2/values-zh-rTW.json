@@ -1,129 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.my_coffee.app-mergeReleaseResources-53:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.app.my_coffee.app-mergeReleaseResources-56:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/res/values-zh-rTW/values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "55,152,246,338,449",
-                        "endColumns": "96,93,91,110,114",
-                        "endOffsets": "147,241,333,444,559"
-                    },
-                    "to": {
-                        "startLines": "56,71,72,75,76",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "5301,6394,6488,6779,6890",
-                        "endColumns": "96,93,91,110,114",
-                        "endOffsets": "5393,6483,6575,6885,7000"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d721362e98dc58628819627526936f33/transformed/jetified-exoplayer-core-2.18.7/res/values-zh-rTW/values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,111,167,224,277,347,401,477,555",
-                        "endColumns": "55,55,56,52,69,53,75,77,58",
-                        "endOffsets": "106,162,219,272,342,396,472,550,609"
-                    },
-                    "to": {
-                        "startLines": "57,58,59,60,61,62,63,64,65",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "5398,5454,5510,5567,5620,5690,5744,5820,5898",
-                        "endColumns": "55,55,56,52,69,53,75,77,58",
-                        "endOffsets": "5449,5505,5562,5615,5685,5739,5815,5893,5952"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/res/values-zh-rTW/values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,147,246,340,434,527,620,716",
-                        "endColumns": "91,98,93,93,92,92,95,100",
-                        "endOffsets": "142,241,335,429,522,615,711,812"
-                    },
-                    "to": {
-                        "startLines": "29,30,31,32,33,34,35,77",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "2671,2763,2862,2956,3050,3143,3236,7005",
-                        "endColumns": "91,98,93,93,92,92,95,100",
-                        "endOffsets": "2758,2857,2951,3045,3138,3231,3327,7101"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/ba4c56ebea3cb53a249a9137b155e94a/transformed/preference-1.2.1/res/values-zh-rTW/values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "105,171,252,322,442,610,689",
-                        "endColumns": "65,80,69,119,167,78,75",
-                        "endOffsets": "166,247,317,437,605,684,760"
-                    },
-                    "to": {
-                        "startLines": "54,66,70,73,78,87,88",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "5151,5957,6324,6580,7106,7752,7831",
-                        "endColumns": "65,80,69,119,167,78,75",
-                        "endOffsets": "5212,6033,6389,6695,7269,7826,7902"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2fbb4a6d20ae8e1dc7c3abdc7e87854c/transformed/jetified-ucrop-2.2.9/res/values-zh-rTW/values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,97,174,228,282,329,446,490",
-                        "endColumns": "41,76,53,53,46,116,43,42",
-                        "endOffsets": "92,169,223,277,324,441,485,528"
-                    },
-                    "to": {
-                        "startLines": "79,80,81,82,83,84,85,86",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "7274,7316,7393,7447,7501,7548,7665,7709",
-                        "endColumns": "41,76,53,53,46,116,43,42",
-                        "endOffsets": "7311,7388,7442,7496,7543,7660,7704,7747"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/res/values-zh-rTW/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "197,294,418,529,627,730,842,938,1029,1135,1232,1357,1468,1566,1670,1722,1775",
-                        "endColumns": "96,123,110,97,102,111,95,90,105,96,124,110,97,103,51,52,69",
-                        "endOffsets": "293,417,528,626,729,841,937,1028,1134,1231,1356,1467,1565,1669,1721,1774,1844"
-                    },
-                    "to": {
-                        "startLines": "36,37,38,39,40,41,42,43,45,46,47,48,49,50,51,52,53",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3332,3433,3561,3676,3778,3885,4001,4101,4299,4409,4510,4639,4754,4856,4964,5020,5077",
-                        "endColumns": "100,127,114,101,106,115,99,94,109,100,128,114,101,107,55,56,73",
-                        "endOffsets": "3428,3556,3671,3773,3880,3996,4096,4191,4404,4505,4634,4749,4851,4959,5015,5072,5146"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/93faa7ecb2465eae627d78e6742a0b12/transformed/jetified-zxing-android-embedded-4.3.0/res/values-zh-rTW/values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,104,151,244",
-                        "endColumns": "48,46,92,69",
-                        "endOffsets": "99,146,239,309"
-                    },
-                    "to": {
-                        "startLines": "89,90,91,92",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "7907,7956,8003,8096",
-                        "endColumns": "48,46,92,69",
-                        "endOffsets": "7951,7998,8091,8161"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2d8f014937d67b7944a9b8984302fb9e/transformed/appcompat-1.6.1/res/values-zh-rTW/values-zh-rTW.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a8911b54c7cf1339acae1fc112b8c5e5/transformed/appcompat-1.6.1/res/values-zh-rTW/values-zh-rTW.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -140,7 +21,92 @@
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/res/values-zh-rTW/values.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2846f3af76c39e17f56db4cdca3c191b/transformed/browser-1.8.0/res/values-zh-rTW/values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,139,231,332",
+                        "endColumns": "83,91,100,92",
+                        "endOffsets": "134,226,327,420"
+                    },
+                    "to": {
+                        "startLines": "55,67,68,69",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "5217,6038,6130,6231",
+                        "endColumns": "83,91,100,92",
+                        "endOffsets": "5296,6125,6226,6319"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/7256f10fbb0773751604d06e87823479/transformed/jetified-media2-session-1.2.1/res/values-zh-rTW/values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,152,246,338,449",
+                        "endColumns": "96,93,91,110,114",
+                        "endOffsets": "147,241,333,444,559"
+                    },
+                    "to": {
+                        "startLines": "56,71,72,75,76",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "5301,6394,6488,6779,6890",
+                        "endColumns": "96,93,91,110,114",
+                        "endOffsets": "5393,6483,6575,6885,7000"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/c9d0289b1757411da8d23a8a795c3453/transformed/jetified-ucrop-2.2.9/res/values-zh-rTW/values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,97,174,228,282,329,446,490",
+                        "endColumns": "41,76,53,53,46,116,43,42",
+                        "endOffsets": "92,169,223,277,324,441,485,528"
+                    },
+                    "to": {
+                        "startLines": "79,80,81,82,83,84,85,86",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "7274,7316,7393,7447,7501,7548,7665,7709",
+                        "endColumns": "41,76,53,53,46,116,43,42",
+                        "endOffsets": "7311,7388,7442,7496,7543,7660,7704,7747"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a8386afc8f0df1c1fdad6f3c4a0f4ae1/transformed/jetified-zxing-android-embedded-4.3.0/res/values-zh-rTW/values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,104,151,244",
+                        "endColumns": "48,46,92,69",
+                        "endOffsets": "99,146,239,309"
+                    },
+                    "to": {
+                        "startLines": "89,90,91,92",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "7907,7956,8003,8096",
+                        "endColumns": "48,46,92,69",
+                        "endOffsets": "7951,7998,8091,8161"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/3fa83b7ef97474407cc475e29518a298/transformed/jetified-play-services-base-18.3.0/res/values-zh-rTW/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "197,294,418,529,627,730,842,938,1029,1135,1232,1357,1468,1566,1670,1722,1775",
+                        "endColumns": "96,123,110,97,102,111,95,90,105,96,124,110,97,103,51,52,69",
+                        "endOffsets": "293,417,528,626,729,841,937,1028,1134,1231,1356,1467,1565,1669,1721,1774,1844"
+                    },
+                    "to": {
+                        "startLines": "36,37,38,39,40,41,42,43,45,46,47,48,49,50,51,52,53",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3332,3433,3561,3676,3778,3885,4001,4101,4299,4409,4510,4639,4754,4856,4964,5020,5077",
+                        "endColumns": "100,127,114,101,106,115,99,94,109,100,128,114,101,107,55,56,73",
+                        "endOffsets": "3428,3556,3671,3773,3880,3996,4096,4191,4404,4505,4634,4749,4851,4959,5015,5072,5146"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a16b72370b3d545508883f343a211503/transformed/jetified-play-services-basement-18.3.0/res/values-zh-rTW/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -157,20 +123,54 @@
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/3065d694c23ee614698e9457de896354/transformed/browser-1.8.0/res/values-zh-rTW/values-zh-rTW.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a77d493de04766ea555799850336c4e9/transformed/preference-1.2.1/res/values-zh-rTW/values-zh-rTW.xml",
                     "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,139,231,332",
-                        "endColumns": "83,91,100,92",
-                        "endOffsets": "134,226,327,420"
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "105,171,252,322,442,610,689",
+                        "endColumns": "65,80,69,119,167,78,75",
+                        "endOffsets": "166,247,317,437,605,684,760"
                     },
                     "to": {
-                        "startLines": "55,67,68,69",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "5217,6038,6130,6231",
-                        "endColumns": "83,91,100,92",
-                        "endOffsets": "5296,6125,6226,6319"
+                        "startLines": "54,66,70,73,78,87,88",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "5151,5957,6324,6580,7106,7752,7831",
+                        "endColumns": "65,80,69,119,167,78,75",
+                        "endOffsets": "5212,6033,6389,6695,7269,7826,7902"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/600447b64348c0471d8734ebc64e0dbc/transformed/jetified-exoplayer-core-2.18.7/res/values-zh-rTW/values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,111,167,224,277,347,401,477,555",
+                        "endColumns": "55,55,56,52,69,53,75,77,58",
+                        "endOffsets": "106,162,219,272,342,396,472,550,609"
+                    },
+                    "to": {
+                        "startLines": "57,58,59,60,61,62,63,64,65",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5398,5454,5510,5567,5620,5690,5744,5820,5898",
+                        "endColumns": "55,55,56,52,69,53,75,77,58",
+                        "endOffsets": "5449,5505,5562,5615,5685,5739,5815,5893,5952"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-zh-rTW/values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,147,246,340,434,527,620,716",
+                        "endColumns": "91,98,93,93,92,92,95,100",
+                        "endOffsets": "142,241,335,429,522,615,711,812"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,77",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "2671,2763,2862,2956,3050,3143,3236,7005",
+                        "endColumns": "91,98,93,93,92,92,95,100",
+                        "endOffsets": "2758,2857,2951,3045,3138,3231,3327,7101"
                     }
                 }
             ]

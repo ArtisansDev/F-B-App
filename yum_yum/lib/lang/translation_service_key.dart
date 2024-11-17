@@ -13,7 +13,7 @@ const String sAddOn = "+ Add";
 const String sBuyNow = "Buy Now";
 
 
-const String sAppName = "TWT";
+const String sAppName = "Dashboard";
 const String sAppDetailsName = "Coffee Details";
 const String sHome = "Home";
 const String sMenu = "Menu";

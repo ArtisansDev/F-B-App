@@ -1,4 +1,4 @@
-#Sat Nov 16 14:27:44 MYT 2024
+#Sat Nov 16 20:47:51 MYT 2024
 base.0=/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/yum_yum/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

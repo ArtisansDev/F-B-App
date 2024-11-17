@@ -1,65 +1,79 @@
 {
     "logs": [
         {
-            "outputFile": "com.ryanheise.audio_session-mergeReleaseResources-11:/values-am/values-am.xml",
+            "outputFile": "com.ryanheise.audio_session-merged_res-29:/values-am/values-am.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/res/values-am/values-am.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/7256f10fbb0773751604d06e87823479/transformed/jetified-media2-session-1.2.1/res/values-am/values-am.xml",
                     "from": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",
                         "startOffsets": "55,161,260,354,472",
                         "endColumns": "105,98,93,117,122",
                         "endOffsets": "156,255,349,467,590"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "742,848,947,1041,1159",
+                        "endColumns": "105,98,93,117,122",
+                        "endOffsets": "843,942,1036,1154,1277"
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res/values-am/values-am.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-am/values-am.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,148,248,345,444,540,642,742",
+                        "endColumns": "92,99,96,98,95,101,99,100",
+                        "endOffsets": "143,243,340,439,535,637,737,838"
                     },
                     "to": {
-                        "startLines": "7",
-                        "startColumns": "4",
-                        "startOffsets": "595",
-                        "endColumns": "100",
-                        "endOffsets": "691"
+                        "startLines": "2,3,4,5,6,7,8,14",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,148,248,345,444,540,642,1282",
+                        "endColumns": "92,99,96,98,95,101,99,100",
+                        "endOffsets": "143,243,340,439,535,637,737,1378"
                     }
                 }
             ]
         },
         {
-            "outputFile": "com.ryanheise.audio_session-merged_res-13:/values-am/values-am.xml",
+            "outputFile": "com.ryanheise.audio_session-mergeReleaseResources-27:/values-am/values-am.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/res/values-am/values-am.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/7256f10fbb0773751604d06e87823479/transformed/jetified-media2-session-1.2.1/res/values-am/values-am.xml",
                     "from": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",
                         "startOffsets": "55,161,260,354,472",
                         "endColumns": "105,98,93,117,122",
                         "endOffsets": "156,255,349,467,590"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "742,848,947,1041,1159",
+                        "endColumns": "105,98,93,117,122",
+                        "endOffsets": "843,942,1036,1154,1277"
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res/values-am/values-am.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-am/values-am.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,148,248,345,444,540,642,742",
+                        "endColumns": "92,99,96,98,95,101,99,100",
+                        "endOffsets": "143,243,340,439,535,637,737,838"
                     },
                     "to": {
-                        "startLines": "7",
-                        "startColumns": "4",
-                        "startOffsets": "595",
-                        "endColumns": "100",
-                        "endOffsets": "691"
+                        "startLines": "2,3,4,5,6,7,8,14",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,148,248,345,444,540,642,1282",
+                        "endColumns": "92,99,96,98,95,101,99,100",
+                        "endOffsets": "143,243,340,439,535,637,737,1378"
                     }
                 }
             ]

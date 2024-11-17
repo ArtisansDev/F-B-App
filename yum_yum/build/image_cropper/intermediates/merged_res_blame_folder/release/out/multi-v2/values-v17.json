@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "vn.hunghd.flutter.plugins.imagecropper.image_cropper-mergeReleaseResources-32:/values-v17/values-v17.xml",
+            "outputFile": "vn.hunghd.flutter.plugins.imagecropper.image_cropper-merged_res-41:/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2d8f014937d67b7944a9b8984302fb9e/transformed/appcompat-1.6.1/res/values-v17/values-v17.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a8911b54c7cf1339acae1fc112b8c5e5/transformed/appcompat-1.6.1/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,25,29,33,37,40,43,46,50,53,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -17,10 +17,10 @@
             ]
         },
         {
-            "outputFile": "vn.hunghd.flutter.plugins.imagecropper.image_cropper-merged_res-34:/values-v17/values-v17.xml",
+            "outputFile": "vn.hunghd.flutter.plugins.imagecropper.image_cropper-mergeReleaseResources-39:/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2d8f014937d67b7944a9b8984302fb9e/transformed/appcompat-1.6.1/res/values-v17/values-v17.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a8911b54c7cf1339acae1fc112b8c5e5/transformed/appcompat-1.6.1/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,25,29,33,37,40,43,46,50,53,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

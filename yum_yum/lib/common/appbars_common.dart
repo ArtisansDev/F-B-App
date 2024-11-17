@@ -39,12 +39,6 @@ class AppBarsCommon {
             SizedBox(
               width: 20.sp,
             ),
-            Expanded(
-              child: Text(
-                title,
-                style: getText600(colors: Colors.black, size: 18.5.sp),
-              ),
-            ),
             Image.asset(
               ImageAssetsConstants.appLogo,
               fit: BoxFit.fitWidth,
@@ -52,8 +46,15 @@ class AppBarsCommon {
               width: 25.5.sp,
             ),
             SizedBox(
-              width: 20.sp,
+              width: 13.sp,
             ),
+            Text(
+              title,
+              style: getText600(colors: Colors.black, size: 18.5.sp),
+            ),
+            Container(
+              width: 50.sp,
+            )
           ],
         ),
         centerTitle: false,
@@ -100,11 +101,6 @@ class AppBarsCommon {
             SizedBox(
               width: 10.sp,
             ),
-            Expanded(
-                child: Text(
-              title,
-              style: getText600(colors: Colors.black, size: 18.sp),
-            )),
             Image.asset(
               ImageAssetsConstants.appLogo,
               fit: BoxFit.fitWidth,
@@ -112,8 +108,15 @@ class AppBarsCommon {
               width: 25.5.sp,
             ),
             SizedBox(
-              width: 18.sp,
+              width: 13.sp,
             ),
+            Text(
+              title,
+              style: getText600(colors: Colors.black, size: 18.sp),
+            ),
+            Container(
+              width: 50.sp,
+            )
           ],
         ),
       ),
@@ -155,10 +158,6 @@ class AppBarsCommon {
             SizedBox(
               width: 10.sp,
             ),
-            Expanded(child: Text(
-              title,
-              style: getText500(colors: ColorConstants.buttonBar, size: 16.sp),
-            ),),
             Image.asset(
               ImageAssetsConstants.appLogo,
               fit: BoxFit.fitWidth,
@@ -166,8 +165,15 @@ class AppBarsCommon {
               width: 25.5.sp,
             ),
             SizedBox(
-              width: 18.sp,
+              width: 13.sp,
             ),
+            Text(
+              title,
+              style: getText500(colors: ColorConstants.buttonBar, size: 16.sp),
+            ),
+            Container(
+              width: 50.sp,
+            )
           ],
         ),
       ),
@@ -209,11 +215,20 @@ class AppBarsCommon {
             SizedBox(
               width: 10.sp,
             ),
+            Image.asset(
+              ImageAssetsConstants.appLogo,
+              fit: BoxFit.fitWidth,
+              height: 25.5.sp,
+              width: 25.5.sp,
+            ),
+            SizedBox(
+              width: 13.sp,
+            ),
             Expanded(
               child: Text(
                 title,
                 style:
-                    getText500(colors: ColorConstants.buttonBar, size: 16.sp),
+                getText500(colors: ColorConstants.buttonBar, size: 16.sp),
               ),
             ),
             Image.asset(
@@ -222,16 +237,6 @@ class AppBarsCommon {
               height: 22.sp,
               width: 22.sp,
             ),
-            SizedBox(
-              width: 10.sp,
-            ),
-            Image.asset(
-              ImageAssetsConstants.appLogo,
-              fit: BoxFit.fitWidth,
-              height: 25.5.sp,
-              width: 25.5.sp,
-            ),
-
             Container(
               width: 15.sp,
             )
@@ -263,12 +268,56 @@ class AppBarsCommon {
           SizedBox(
             width: 18.sp,
           ),
+          ColorFiltered(
+              colorFilter:
+              const ColorFilter.mode(Colors.white, BlendMode.modulate),
+              child: Image.asset(
+                ImageAssetsConstants.appLogo,
+                fit: BoxFit.fitWidth,
+                height: 25.5.sp,
+                width: 25.5.sp,
+              )),
+          SizedBox(
+            width: 13.sp,
+          ),
           Expanded(
             child: Text(
               title,
               style: getText600(colors: Colors.black, size: 18.sp),
             ),
           ),
+          // GestureDetector(
+          //     onTap: () {
+          //       onClick!("shoppingCart");
+          //     },
+          //     child: Container(
+          //       margin: EdgeInsets.only(bottom: 18.sp),
+          //       child: Stack(
+          //         children: [
+          //           Align(
+          //             alignment: Alignment.bottomRight,
+          //             child: Image.asset(
+          //               ImageAssetsConstants.shoppingCart,
+          //               fit: BoxFit.fitWidth,
+          //               height: 16.5.sp,
+          //               width: 16.5.sp,
+          //             ),
+          //           ),
+          //           Container(
+          //             margin: EdgeInsets.only(left: 10.sp, top: 15.sp),
+          //             padding: EdgeInsets.all(5.sp),
+          //             decoration: const BoxDecoration(
+          //               color: ColorConstants.cAppColorsBlue,
+          //               shape: BoxShape.circle,
+          //             ),
+          //             child: Text('  99  ',
+          //             style: getTextRegular(
+          //               size: 15.sp,colors: Colors.white
+          //             ),),
+          //           ),
+          //         ],
+          //       ),
+          //     )),
           GestureDetector(
             onTap: () {
               onClick!("notification");
@@ -283,16 +332,6 @@ class AppBarsCommon {
           SizedBox(
             width: 13.sp,
           ),
-          Image.asset(
-            ImageAssetsConstants.appLogo,
-            fit: BoxFit.fitWidth,
-            height: 25.5.sp,
-            width: 25.5.sp,
-          ),
-
-          Container(
-            width: 15.sp,
-          )
         ],
       ),
     );

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.baseflow.geolocator.geolocator_android-merged_res-19:/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "com.baseflow.geolocator.geolocator_android-merged_res-28:/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/81c605f4164c088851951ae87bd1d579/transformed/core-1.13.0/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "com.baseflow.geolocator.geolocator_android-mergeReleaseResources-17:/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "com.baseflow.geolocator.geolocator_android-mergeReleaseResources-26:/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/81c605f4164c088851951ae87bd1d579/transformed/core-1.13.0/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

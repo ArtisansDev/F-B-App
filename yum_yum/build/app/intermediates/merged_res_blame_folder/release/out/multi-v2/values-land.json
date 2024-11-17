@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.my_coffee.app-mergeReleaseResources-53:/values-land/values-land.xml",
+            "outputFile": "com.app.my_coffee.app-mergeReleaseResources-56:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2d8f014937d67b7944a9b8984302fb9e/transformed/appcompat-1.6.1/res/values-land/values-land.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a8911b54c7cf1339acae1fc112b8c5e5/transformed/appcompat-1.6.1/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

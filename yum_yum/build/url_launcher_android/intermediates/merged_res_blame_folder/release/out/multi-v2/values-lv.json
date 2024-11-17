@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "io.flutter.plugins.urllauncher.url_launcher_android-mergeReleaseResources-16:/values-lv/values-lv.xml",
+            "outputFile": "io.flutter.plugins.urllauncher.url_launcher_android-mergeReleaseResources-25:/values-lv/values-lv.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/res/values-lv/values-lv.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,355,456,563,671,786",
-                        "endColumns": "97,101,99,100,106,107,114,100",
-                        "endOffsets": "148,250,350,451,558,666,781,882"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,13",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,355,456,563,671,1206",
-                        "endColumns": "97,101,99,100,106,107,114,100",
-                        "endOffsets": "148,250,350,451,558,666,781,1302"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/3065d694c23ee614698e9457de896354/transformed/browser-1.8.0/res/values-lv/values-lv.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2846f3af76c39e17f56db4cdca3c191b/transformed/browser-1.8.0/res/values-lv/values-lv.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -35,32 +18,32 @@
                         "startOffsets": "786,889,988,1104",
                         "endColumns": "102,98,115,101",
                         "endOffsets": "884,983,1099,1201"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-lv/values-lv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,563,671,786",
+                        "endColumns": "97,101,99,100,106,107,114,100",
+                        "endOffsets": "148,250,350,451,558,666,781,882"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,13",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,563,671,1206",
+                        "endColumns": "97,101,99,100,106,107,114,100",
+                        "endOffsets": "148,250,350,451,558,666,781,1302"
                     }
                 }
             ]
         },
         {
-            "outputFile": "io.flutter.plugins.urllauncher.url_launcher_android-merged_res-18:/values-lv/values-lv.xml",
+            "outputFile": "io.flutter.plugins.urllauncher.url_launcher_android-merged_res-27:/values-lv/values-lv.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/6cb7db0d995900c633344ed5a8feca2c/transformed/core-1.13.1/res/values-lv/values-lv.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,355,456,563,671,786",
-                        "endColumns": "97,101,99,100,106,107,114,100",
-                        "endOffsets": "148,250,350,451,558,666,781,882"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,13",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,355,456,563,671,1206",
-                        "endColumns": "97,101,99,100,106,107,114,100",
-                        "endOffsets": "148,250,350,451,558,666,781,1302"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/3065d694c23ee614698e9457de896354/transformed/browser-1.8.0/res/values-lv/values-lv.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2846f3af76c39e17f56db4cdca3c191b/transformed/browser-1.8.0/res/values-lv/values-lv.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -74,6 +57,23 @@
                         "startOffsets": "786,889,988,1104",
                         "endColumns": "102,98,115,101",
                         "endOffsets": "884,983,1099,1201"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-lv/values-lv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,563,671,786",
+                        "endColumns": "97,101,99,100,106,107,114,100",
+                        "endOffsets": "148,250,350,451,558,666,781,882"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,13",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,563,671,1206",
+                        "endColumns": "97,101,99,100,106,107,114,100",
+                        "endOffsets": "148,250,350,451,558,666,781,1302"
                     }
                 }
             ]

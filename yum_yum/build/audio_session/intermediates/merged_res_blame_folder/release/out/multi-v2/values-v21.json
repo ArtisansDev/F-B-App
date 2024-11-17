@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ryanheise.audio_session-mergeReleaseResources-11:/values-v21/values-v21.xml",
+            "outputFile": "com.ryanheise.audio_session-mergeReleaseResources-27:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/c589dae408f4c843e8f48512984ae9c9/transformed/media-1.4.1/res/values-v21/values-v21.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/56e83aab587ab4ee9423f767cf9ab525/transformed/media-1.4.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res/values-v21/values-v21.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -44,10 +44,10 @@
             ]
         },
         {
-            "outputFile": "com.ryanheise.audio_session-merged_res-13:/values-v21/values-v21.xml",
+            "outputFile": "com.ryanheise.audio_session-merged_res-29:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/c589dae408f4c843e8f48512984ae9c9/transformed/media-1.4.1/res/values-v21/values-v21.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/56e83aab587ab4ee9423f767cf9ab525/transformed/media-1.4.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -66,7 +66,7 @@
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res/values-v21/values-v21.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

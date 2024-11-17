@@ -1,65 +1,79 @@
 {
     "logs": [
         {
-            "outputFile": "io.flutter.plugins.videoplayer.video_player_android-merged_res-12:/values-sl/values-sl.xml",
+            "outputFile": "io.flutter.plugins.videoplayer.video_player_android-mergeReleaseResources-25:/values-sl/values-sl.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/dac0d4e6d4ad19ab6b790181816d00ed/transformed/core-1.8.0/res/values-sl/values-sl.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-sl/values-sl.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,152,254,352,456,559,661,778",
+                        "endColumns": "96,101,97,103,102,101,116,100",
+                        "endOffsets": "147,249,347,451,554,656,773,874"
                     },
                     "to": {
-                        "startLines": "11",
-                        "startColumns": "4",
-                        "startOffsets": "731",
-                        "endColumns": "100",
-                        "endOffsets": "827"
+                        "startLines": "2,3,4,5,6,7,8,18",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,152,254,352,456,559,661,1454",
+                        "endColumns": "96,101,97,103,102,101,116,100",
+                        "endOffsets": "147,249,347,451,554,656,773,1550"
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/906a7dafad5ce0d56483d1d7bf6e4e6e/transformed/jetified-media3-exoplayer-1.4.0/res/values-sl/values-sl.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/4e0bcf25a9ac29859a2714a4a5aa667a/transformed/jetified-media3-exoplayer-1.4.0/res/values-sl/values-sl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
                         "startOffsets": "55,123,183,247,311,386,467,566,657",
                         "endColumns": "67,59,63,63,74,80,98,90,73",
                         "endOffsets": "118,178,242,306,381,462,561,652,726"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "778,846,906,970,1034,1109,1190,1289,1380",
+                        "endColumns": "67,59,63,63,74,80,98,90,73",
+                        "endOffsets": "841,901,965,1029,1104,1185,1284,1375,1449"
                     }
                 }
             ]
         },
         {
-            "outputFile": "io.flutter.plugins.videoplayer.video_player_android-mergeReleaseResources-10:/values-sl/values-sl.xml",
+            "outputFile": "io.flutter.plugins.videoplayer.video_player_android-merged_res-27:/values-sl/values-sl.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/dac0d4e6d4ad19ab6b790181816d00ed/transformed/core-1.8.0/res/values-sl/values-sl.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-sl/values-sl.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,152,254,352,456,559,661,778",
+                        "endColumns": "96,101,97,103,102,101,116,100",
+                        "endOffsets": "147,249,347,451,554,656,773,874"
                     },
                     "to": {
-                        "startLines": "11",
-                        "startColumns": "4",
-                        "startOffsets": "731",
-                        "endColumns": "100",
-                        "endOffsets": "827"
+                        "startLines": "2,3,4,5,6,7,8,18",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,152,254,352,456,559,661,1454",
+                        "endColumns": "96,101,97,103,102,101,116,100",
+                        "endOffsets": "147,249,347,451,554,656,773,1550"
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/906a7dafad5ce0d56483d1d7bf6e4e6e/transformed/jetified-media3-exoplayer-1.4.0/res/values-sl/values-sl.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/4e0bcf25a9ac29859a2714a4a5aa667a/transformed/jetified-media3-exoplayer-1.4.0/res/values-sl/values-sl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
                         "startOffsets": "55,123,183,247,311,386,467,566,657",
                         "endColumns": "67,59,63,63,74,80,98,90,73",
                         "endOffsets": "118,178,242,306,381,462,561,652,726"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "778,846,906,970,1034,1109,1190,1289,1380",
+                        "endColumns": "67,59,63,63,74,80,98,90,73",
+                        "endOffsets": "841,901,965,1029,1104,1185,1284,1375,1449"
                     }
                 }
             ]

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.my_coffee.app-mergeReleaseResources-53:/values-zh/values-zh.xml",
+            "outputFile": "com.app.my_coffee.app-mergeReleaseResources-56:/values-zh/values-zh.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/2fbb4a6d20ae8e1dc7c3abdc7e87854c/transformed/jetified-ucrop-2.2.9/res/values-zh/values-zh.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/c9d0289b1757411da8d23a8a795c3453/transformed/jetified-ucrop-2.2.9/res/values-zh/values-zh.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

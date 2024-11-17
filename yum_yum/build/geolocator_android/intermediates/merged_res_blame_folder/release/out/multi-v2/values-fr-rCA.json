@@ -1,27 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.baseflow.geolocator.geolocator_android-mergeReleaseResources-17:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "com.baseflow.geolocator.geolocator_android-merged_res-28:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/res/values-fr-rCA/values.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "199",
-                        "endColumns": "156",
-                        "endOffsets": "355"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,354,456,560,664,778",
+                        "endColumns": "97,101,98,101,103,103,113,100",
+                        "endOffsets": "148,250,349,451,555,659,773,874"
                     },
                     "to": {
-                        "startLines": "17",
-                        "startColumns": "4",
-                        "startOffsets": "1841",
-                        "endColumns": "160",
-                        "endOffsets": "1997"
+                        "startLines": "2,3,4,5,6,7,8,27",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,354,456,560,664,3193",
+                        "endColumns": "97,101,98,101,103,103,113,100",
+                        "endOffsets": "148,250,349,451,555,659,773,3289"
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/res/values-fr-rCA/values.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/3fa83b7ef97474407cc475e29518a298/transformed/jetified-play-services-base-18.3.0/res/values-fr-rCA/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,46 +38,46 @@
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/81c605f4164c088851951ae87bd1d579/transformed/core-1.13.0/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a16b72370b3d545508883f343a211503/transformed/jetified-play-services-basement-18.3.0/res/values-fr-rCA/values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,354,456,560,664,778",
-                        "endColumns": "97,101,98,101,103,103,113,100",
-                        "endOffsets": "148,250,349,451,555,659,773,874"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "199",
+                        "endColumns": "156",
+                        "endOffsets": "355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,27",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,354,456,560,664,3193",
-                        "endColumns": "97,101,98,101,103,103,113,100",
-                        "endOffsets": "148,250,349,451,555,659,773,3289"
+                        "startLines": "17",
+                        "startColumns": "4",
+                        "startOffsets": "1841",
+                        "endColumns": "160",
+                        "endOffsets": "1997"
                     }
                 }
             ]
         },
         {
-            "outputFile": "com.baseflow.geolocator.geolocator_android-merged_res-19:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "com.baseflow.geolocator.geolocator_android-mergeReleaseResources-26:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/66926cb04fec2ce73fc20ab82f7bc055/transformed/jetified-play-services-basement-18.3.0/res/values-fr-rCA/values.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "199",
-                        "endColumns": "156",
-                        "endOffsets": "355"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,354,456,560,664,778",
+                        "endColumns": "97,101,98,101,103,103,113,100",
+                        "endOffsets": "148,250,349,451,555,659,773,874"
                     },
                     "to": {
-                        "startLines": "17",
-                        "startColumns": "4",
-                        "startOffsets": "1841",
-                        "endColumns": "160",
-                        "endOffsets": "1997"
+                        "startLines": "2,3,4,5,6,7,8,27",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,354,456,560,664,3193",
+                        "endColumns": "97,101,98,101,103,103,113,100",
+                        "endOffsets": "148,250,349,451,555,659,773,3289"
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/1de84ab4448f640b6bdd7eef5c13cff5/transformed/jetified-play-services-base-18.3.0/res/values-fr-rCA/values.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/3fa83b7ef97474407cc475e29518a298/transformed/jetified-play-services-base-18.3.0/res/values-fr-rCA/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -94,20 +94,20 @@
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/81c605f4164c088851951ae87bd1d579/transformed/core-1.13.0/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a16b72370b3d545508883f343a211503/transformed/jetified-play-services-basement-18.3.0/res/values-fr-rCA/values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,354,456,560,664,778",
-                        "endColumns": "97,101,98,101,103,103,113,100",
-                        "endOffsets": "148,250,349,451,555,659,773,874"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "199",
+                        "endColumns": "156",
+                        "endOffsets": "355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,27",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,354,456,560,664,3193",
-                        "endColumns": "97,101,98,101,103,103,113,100",
-                        "endOffsets": "148,250,349,451,555,659,773,3289"
+                        "startLines": "17",
+                        "startColumns": "4",
+                        "startOffsets": "1841",
+                        "endColumns": "160",
+                        "endOffsets": "1997"
                     }
                 }
             ]

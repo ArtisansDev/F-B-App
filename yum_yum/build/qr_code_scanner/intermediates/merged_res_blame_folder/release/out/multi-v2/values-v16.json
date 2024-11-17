@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-merged_res-21:/values-v16/values-v16.xml",
+            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-merged_res-31:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/1a832e7e953a352674d12d9cd7281075/transformed/core-1.7.0/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/421e457eb5563d3aed973b5b88f25b59/transformed/appcompat-1.4.2/res/values-v16/values-v16.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/ae66695ddc2f83b93da03454cdf74073/transformed/appcompat-1.4.2/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -22,33 +12,15 @@
                         "endLines": "5",
                         "endColumns": "12",
                         "endOffsets": "223"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "121",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "289"
                     }
                 }
             ]
         },
         {
-            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-19:/values-v16/values-v16.xml",
+            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-29:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/1a832e7e953a352674d12d9cd7281075/transformed/core-1.7.0/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/421e457eb5563d3aed973b5b88f25b59/transformed/appcompat-1.4.2/res/values-v16/values-v16.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/ae66695ddc2f83b93da03454cdf74073/transformed/appcompat-1.4.2/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -56,14 +28,6 @@
                         "endLines": "5",
                         "endColumns": "12",
                         "endOffsets": "223"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "121",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "289"
                     }
                 }
             ]

@@ -1,65 +1,79 @@
 {
     "logs": [
         {
-            "outputFile": "com.ryanheise.audio_session-mergeReleaseResources-11:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.ryanheise.audio_session-merged_res-29:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/7256f10fbb0773751604d06e87823479/transformed/jetified-media2-session-1.2.1/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",
                         "startOffsets": "55,159,256,350,471",
                         "endColumns": "103,96,93,120,128",
                         "endOffsets": "154,251,345,466,595"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "773,877,974,1068,1189",
+                        "endColumns": "103,96,93,120,128",
+                        "endOffsets": "872,969,1063,1184,1313"
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,151,253,352,451,555,657,773",
+                        "endColumns": "95,101,98,98,103,101,115,100",
+                        "endOffsets": "146,248,347,446,550,652,768,869"
                     },
                     "to": {
-                        "startLines": "7",
-                        "startColumns": "4",
-                        "startOffsets": "600",
-                        "endColumns": "100",
-                        "endOffsets": "696"
+                        "startLines": "2,3,4,5,6,7,8,14",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,151,253,352,451,555,657,1318",
+                        "endColumns": "95,101,98,98,103,101,115,100",
+                        "endOffsets": "146,248,347,446,550,652,768,1414"
                     }
                 }
             ]
         },
         {
-            "outputFile": "com.ryanheise.audio_session-merged_res-13:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.ryanheise.audio_session-mergeReleaseResources-27:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/97e13c6ab7c0b55fb4b8db1c65434564/transformed/jetified-media2-session-1.2.1/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/7256f10fbb0773751604d06e87823479/transformed/jetified-media2-session-1.2.1/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",
                         "startOffsets": "55,159,256,350,471",
                         "endColumns": "103,96,93,120,128",
                         "endOffsets": "154,251,345,466,595"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "773,877,974,1068,1189",
+                        "endColumns": "103,96,93,120,128",
+                        "endOffsets": "872,969,1063,1184,1313"
                     }
                 },
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/973fd8ff335b25c4813eff9c486043fc/transformed/core-1.6.0/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/d08f1c4b62811d22058a25422697d335/transformed/core-1.13.1/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,151,253,352,451,555,657,773",
+                        "endColumns": "95,101,98,98,103,101,115,100",
+                        "endOffsets": "146,248,347,446,550,652,768,869"
                     },
                     "to": {
-                        "startLines": "7",
-                        "startColumns": "4",
-                        "startOffsets": "600",
-                        "endColumns": "100",
-                        "endOffsets": "696"
+                        "startLines": "2,3,4,5,6,7,8,14",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,151,253,352,451,555,657,1318",
+                        "endColumns": "95,101,98,98,103,101,115,100",
+                        "endOffsets": "146,248,347,446,550,652,768,1414"
                     }
                 }
             ]

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ryanheise.just_audio-merged_res-16:/values-v24/values-v24.xml",
+            "outputFile": "com.ryanheise.just_audio-merged_res-31:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/c589dae408f4c843e8f48512984ae9c9/transformed/media-1.4.1/res/values-v24/values-v24.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/56e83aab587ab4ee9423f767cf9ab525/transformed/media-1.4.1/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "com.ryanheise.just_audio-mergeReleaseResources-14:/values-v24/values-v24.xml",
+            "outputFile": "com.ryanheise.just_audio-mergeReleaseResources-29:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/c589dae408f4c843e8f48512984ae9c9/transformed/media-1.4.1/res/values-v24/values-v24.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/56e83aab587ab4ee9423f767cf9ab525/transformed/media-1.4.1/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
