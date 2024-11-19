@@ -12,8 +12,6 @@ PODS:
     - SDWebImageWebPCoder
   - flutter_pdfview (1.0.2):
     - Flutter
-  - flutter_secure_storage (6.0.0):
-    - Flutter
   - flutter_statusbarcolor_ns (0.0.1):
     - Flutter
   - geocoding_ios (1.0.5):
@@ -94,7 +92,6 @@ DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_image_compress_common (from `.symlinks/plugins/flutter_image_compress_common/ios`)
   - flutter_pdfview (from `.symlinks/plugins/flutter_pdfview/ios`)
-  - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
   - flutter_statusbarcolor_ns (from `.symlinks/plugins/flutter_statusbarcolor_ns/ios`)
   - geocoding_ios (from `.symlinks/plugins/geocoding_ios/ios`)
   - geolocator_apple (from `.symlinks/plugins/geolocator_apple/ios`)
@@ -136,8 +133,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_image_compress_common/ios"
   flutter_pdfview:
     :path: ".symlinks/plugins/flutter_pdfview/ios"
-  flutter_secure_storage:
-    :path: ".symlinks/plugins/flutter_secure_storage/ios"
   flutter_statusbarcolor_ns:
     :path: ".symlinks/plugins/flutter_statusbarcolor_ns/ios"
   geocoding_ios:
@@ -179,7 +174,6 @@ SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_image_compress_common: ec1d45c362c9d30a3f6a0426c297f47c52007e3e
   flutter_pdfview: 25f53dd6097661e6395b17de506e6060585946bd
-  flutter_secure_storage: d33dac7ae2ea08509be337e775f6b59f1ff45f12
   flutter_statusbarcolor_ns: 68a360889d88d7915ae524e422aeab62e4063804
   geocoding_ios: d7460f56e80e118d57678efe5c2cdc888739ff18
   geolocator_apple: 6cbaf322953988e009e5ecb481f07efece75c450

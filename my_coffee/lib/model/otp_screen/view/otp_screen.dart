@@ -1,4 +1,3 @@
-import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:focus_detector/focus_detector.dart';
@@ -8,15 +7,11 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:my_coffee/constants/text_styles_constants.dart';
 import '../../../common/appbars_common.dart';
 import '../../../common/button_constants.dart';
-import '../../../common/flutter_otp_text_field.dart';
-import '../../../common/text_input_widget.dart';
 import '../../../constants/color_constants.dart';
 import '../../../constants/image_assets_constants.dart';
 import '../../../constants/pattern_constants.dart';
 import '../../../lang/translation_service_key.dart';
-import '../../../routes/route_constants.dart';
 import '../../../utils/app_utils.dart';
-import '../../dashboard_screen/controller/dashboard_controller.dart';
 import '../controller/otp_controller.dart';
 
 class OtpScreen extends GetView<OtpScreenController> {

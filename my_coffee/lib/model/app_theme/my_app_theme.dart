@@ -64,13 +64,13 @@ class MyAppTheme extends StatelessWidget {
                 name: RouteConstants.rViewDocument, page: () => ViewDocument()),
             GetPage(
                 name: RouteConstants.rDetailsPageScreen,
-                page: () =>  DetailsPageScreen()),
+                page: () => DetailsPageScreen()),
             GetPage(
                 name: RouteConstants.rDetailsEditPageScreen,
-                page: () =>  DetailsEditPageScreen()),
+                page: () => DetailsEditPageScreen()),
             GetPage(
                 name: RouteConstants.rOrderConfirmationScreen,
-                page: () =>  const OrderConfirmationScreen()),
+                page: () => const OrderConfirmationScreen()),
             GetPage(
                 name: RouteConstants.rTermsOfUseScreen,
                 page: () => const TermsOfUseScreen()),
@@ -82,10 +82,10 @@ class MyAppTheme extends StatelessWidget {
                 page: () => const QrCodeScannerView()),
             GetPage(
                 name: RouteConstants.rOrderHistoryScreen,
-                page: () =>  OrderHistoryScreen()),
+                page: () => OrderHistoryScreen()),
             GetPage(
                 name: RouteConstants.rSenangPayPaymentScreen,
-                page: () =>  const SenangPayPayment()),
+                page: () => SenangPayPayment()),
           ],
           builder: (context, child) {
             return protectFromSettingsFontSize(context, child!);
