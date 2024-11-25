@@ -39,7 +39,11 @@ class OrderPlaceRequest {
       this.taxAmountTotal, 
       this.totalAmount,
       this.grandTotal,
-      this.additionalNotes,});
+      this.additionalNotes,
+      this.paymentGatewayID,
+      this.paymentGatewaySettingID,
+      this.tableNo,
+  });
 
   OrderPlaceRequest.fromJson(dynamic json) {
     trackingOrderID = json['TrackingOrderID'];
@@ -72,6 +76,9 @@ class OrderPlaceRequest {
     totalAmount = json['TotalAmount'];
     grandTotal = json['GrandTotal'];
     additionalNotes = json['AdditionalNotes'];
+    paymentGatewayID = json['PaymentGatewayID'];
+    paymentGatewaySettingID = json['PaymentGatewaySettingID'];
+    tableNo = json['TableNo'];
   }
   String? trackingOrderID;
   String? orderNo;
@@ -93,6 +100,9 @@ class OrderPlaceRequest {
   double? totalAmount;
   double? grandTotal;
   String? additionalNotes;
+  String? paymentGatewayID;
+  String? paymentGatewaySettingID;
+  String? tableNo;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -114,12 +124,16 @@ class OrderPlaceRequest {
     map['TotalAmount'] = totalAmount;
     map['GrandTotal'] = grandTotal;
     map['AdditionalNotes'] = additionalNotes;
+    map['PaymentGatewayID'] = paymentGatewayID;
+    map['PaymentGatewaySettingID'] = paymentGatewaySettingID;
+    map['TableNo'] = tableNo;
     if (orderTax != null) {
       map['OrderTax'] = orderTax?.map((v) => v.toJson()).toList();
     }
     if (orderMenu != null) {
       map['OrderMenu'] = orderMenu?.map((v) => v.toJson()).toList();
     }
+
     return map;
   }
 

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -14,17 +15,24 @@ import '../../../data/mode/get_item_details/get_item_details_response.dart';
 import '../../../data/mode/get_order_history/get_order_history_request.dart';
 import '../../../data/mode/get_order_history/order_history_response.dart';
 import '../../../data/mode/order_place/order_place_request.dart';
+import '../../../data/mode/order_place/order_place_share.dart';
+import '../../../data/mode/payment_type/payment_type_request.dart';
+import '../../../data/mode/payment_type/payment_type_response.dart';
 import '../../../data/mode/senang_pay_payment/senang_pay_service.dart';
+import '../../../data/mode/update_payment_status/update_payment_status_request.dart';
 import '../../../data/mode/user_details/user_details_response.dart';
 import '../../../data/remote/api_call/order/order_api.dart';
 import '../../../data/remote/api_call/product_api/product_api.dart';
 import '../../../data/remote/web_response.dart';
+import '../../../lang/translation_service_key.dart';
 import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/date_format.dart';
 import '../../../utils/network_utils.dart';
 import '../../../utils/num_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
+import '../../order_confirmation/view/payment_method/payment_method_view.dart';
+import '../view/payment_method/payment_history_method_view.dart';
 
 class HistoryScreenController extends GetxController {
   DashboardScreenController mDashboardScreenController =
@@ -53,7 +61,7 @@ class HistoryScreenController extends GetxController {
     getOrderHistoryApi();
   }
 
-  ///getOrderPlaceApi
+  ///getOrderHistoryApi
   void getOrderHistoryApi() {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
@@ -76,6 +84,16 @@ class HistoryScreenController extends GetxController {
               .addAll((mOrderHistoryResponse.data?.data ?? []).toList());
           if (mOrderHistoryResponseItemData.isEmpty) {
             showValue.value = 'No history found';
+          } else {
+            OrderPlaceShare getProcessOrderId =
+                await SharedPrefs().getProcessOrderId();
+            await SharedPrefs().setProcessOrderId('');
+            OrderHistoryResponseItemData mOrderHistoryItemData =
+                mOrderHistoryResponseItemData.value.first;
+            if (mOrderHistoryItemData.orderIDP.toString().toUpperCase() ==
+                getProcessOrderId.data.toString().toUpperCase()) {
+              selectPayment(mOrderHistoryItemData);
+            }
           }
           showValue.value = '';
           enablePullUp.value = mOrderHistoryResponseItemData.value.length <
@@ -96,7 +114,7 @@ class HistoryScreenController extends GetxController {
 
   Rx<AddCartModel> mAddCartModel = AddCartModel().obs;
 
-  void gotoOrderHistoryDetails(int index) async {
+  void gotOrderHistoryDetails(int index) async {
     ///get data
     OrderHistoryResponseItemData mOrderHistoryResponse =
         mOrderHistoryResponseItemData.value[index];
@@ -136,7 +154,8 @@ class HistoryScreenController extends GetxController {
                 restaurantIDF:
                     (await SharedPrefs().getGeneralSetting()).restaurantIDF ??
                         '');
-        WebResponseSuccess mWebResponseSuccess = await productApi.postGetAllBranchesByRestaurantID(
+        WebResponseSuccess mWebResponseSuccess =
+            await productApi.postGetAllBranchesByRestaurantID(
                 mGetAllBranchesByRestaurantIdRequest,
                 isLoading: false);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
@@ -166,7 +185,8 @@ class HistoryScreenController extends GetxController {
         GetItemDetailsRequest mGetItemDetailsRequest = GetItemDetailsRequest(
           id: mOrderMenu.menuItemIDF,
         );
-        WebResponseSuccess mWebResponseSuccess = await productApi.postGetItemDetails(mGetItemDetailsRequest, isLoading: false);
+        WebResponseSuccess mWebResponseSuccess = await productApi
+            .postGetItemDetails(mGetItemDetailsRequest, isLoading: false);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetItemDetailsResponse mGetItemDetailsResponse =
               mWebResponseSuccess.data;
@@ -238,19 +258,149 @@ class HistoryScreenController extends GetxController {
     });
   }
 
-  void payNow() async{
+  // void onPaymentSelect(int index) async {
+  //   paymentType.value = 0;
+  //   if(paymentTypeList.value.isEmpty){
+  //     await getPaymentTypeApi();
+  //   }
+  //   await AppAlert.showView(Get.context!,  PaymentHistoryMethodView(),
+  //       barrierDismissible: true);
+  //
+  // }
 
+  ///paymentType
+  RxInt paymentType = 0.obs;
+  RxList<PaymentTypeResponseData> paymentTypeList =
+      <PaymentTypeResponseData>[].obs;
+
+  paymentTypeSelect(int index) {
+    paymentType.value = index;
+    paymentType.refresh();
+    paymentTypeList.refresh();
+  }
+
+  ///getPaymentTypeApi
+  getPaymentTypeApi() async {
+    await NetworkUtils()
+        .checkInternetConnection()
+        .then((isInternetAvailable) async {
+      if (isInternetAvailable) {
+        PaymentTypeRequest mPaymentTypeRequest = PaymentTypeRequest(
+            restaurantIDF:
+                (await SharedPrefs().getGeneralSetting()).restaurantIDF ?? '');
+        WebResponseSuccess mWebResponseSuccess =
+            await localApi.postPaymentType(mPaymentTypeRequest);
+        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+          PaymentTypeResponse mPaymentTypeResponse = mWebResponseSuccess.data;
+          paymentTypeList.value.clear();
+          paymentTypeList.addAll(mPaymentTypeResponse.data ?? []);
+          paymentTypeList.refresh();
+        } else {
+          AppAlert.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+        }
+      } else {
+        AppAlert.showSnackBar(
+            Get.context!, MessageConstants.noInternetConnection);
+      }
+    });
+  }
+
+  ///payment
+  RxBool bFlagLoad = true.obs;
+
+  selectPayment(
+    OrderHistoryResponseItemData mOrderHistoryResponse,
+  ) {
+    if ((mOrderHistoryResponse.paymentMethod ?? 0).toString() == '1') {
+      payNow(mOrderHistoryResponse);
+    } else {
+      getUpdatePaymentStatusApi(mOrderHistoryResponse, '');
+    }
+  }
+
+  void payNow(OrderHistoryResponseItemData mOrderHistoryResponse) async {
+    UserDetailsResponseData mUserDetailsResponseData =
+        await SharedPrefs().getUserDetails();
     final SenangPayService senangPayService = SenangPayService(
       merchantId: '761173165749545', // Replace with live Merchant ID
-      secretKey: '43106-268',   // Replace with live Secret Key
+      secretKey: '43106-268',
     );
-    await senangPayService.startPayment(
-      name: 'John Doe',
-      email: 'johndoe@example.com',
-      phone: '0123456789',
-      amount: 500.00, // Payment amount
-      orderId: 'order_001', // Unique order ID
-      description: 'Product Description',
+    var value = await senangPayService.startPayment(
+      name:
+          '${mUserDetailsResponseData.firstName ?? ''} ${mUserDetailsResponseData.lastName ?? ''}'
+              .trim(),
+      email: mUserDetailsResponseData.email ?? '',
+      phone: mUserDetailsResponseData.phoneNumber ?? '',
+      amount: mOrderHistoryResponse.totalAmount ?? 0.0,
+      // Payment amount
+      orderId: mOrderHistoryResponse.orderIDP ?? '',
+      // Unique order ID
+      description: '-',
     );
+    if (value.isNotEmpty) {
+      bFlagLoad.value = false;
+      if (value.toString().toUpperCase().contains('declined'.toUpperCase()) ||
+          value.toString().toUpperCase() == 'null'.toUpperCase()) {
+        // if (value.toString().toUpperCase().contains('declined'.toUpperCase())) {
+        //   print("####### ${value}");
+        //   print("####### ${value.split('-')[1]}");
+        // }
+        AppAlert.showCustomDialogOk(Get.context!, sPaymentDeclined.tr,
+            sPaymentDeclinedMessage.tr, () {},
+            rightText: 'Ok');
+      } else if (value
+          .toString()
+          .toUpperCase()
+          .contains('successful'.toUpperCase())) {
+        await getUpdatePaymentStatusApi(mOrderHistoryResponse, value);
+      }
+    }
+  }
+
+  ///getSubmitPayment
+  getUpdatePaymentStatusApi(
+      OrderHistoryResponseItemData mOrderHistoryResponse, String value) async {
+    await NetworkUtils()
+        .checkInternetConnection()
+        .then((isInternetAvailable) async {
+      if (isInternetAvailable) {
+        UpdatePaymentStatusRequest mUpdatePaymentStatusRequest =
+            UpdatePaymentStatusRequest(
+                restaurantIDF: mOrderHistoryResponse.restaurantIDF,
+                userID: mOrderHistoryResponse.userIDF,
+                orderID: mOrderHistoryResponse.orderIDP,
+                paymentGatewayIDF: mOrderHistoryResponse.paymentGatewayID,
+                paymentGatewayNo:
+                    (mOrderHistoryResponse.paymentMethod ?? 0).toString(),
+                paymentGatewaySettingIDF:
+                    mOrderHistoryResponse.paymentGatewaySettingID,
+                paymentStatus: 'S',
+                responseCode: '200',
+                responseData: value,
+                paidAmount: mOrderHistoryResponse.totalAmount,
+                responseMessage: 'Transaction Successful',
+                transactionID: (value.isEmpty || value.split('-').isEmpty)
+                    ? ''
+                    : value.split('-')[1]);
+        debugPrint(
+            "mUpdatePaymentStatusRequest ${jsonEncode(mUpdatePaymentStatusRequest)}");
+        WebResponseSuccess mWebResponseSuccess =
+            await localApi.postUpdatePaymentStatus(mUpdatePaymentStatusRequest);
+        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+          AppAlert.showCustomDialogOk(
+              Get.context!, sPaymentSuccessful.tr, sPaymentSuccessfulMessage.tr,
+              () {
+            onRefresh();
+          }, rightText: 'Ok');
+        } else {
+          AppAlert.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+        }
+      } else {
+        AppAlert.showSnackBar(
+            Get.context!, MessageConstants.noInternetConnection);
+      }
+    });
   }
 }

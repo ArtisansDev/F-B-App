@@ -21,42 +21,47 @@ class HistoryScreen extends GetView<HistoryScreenController> {
   @override
   Widget build(BuildContext context) {
     Get.lazyPut(() => HistoryScreenController());
-    return FocusDetector(onVisibilityGained: () {
-      controller.onRefresh();
-    }, onVisibilityLost: () {
-
-    }, child: Obx(
-      () {
-        return Container(
-            height: double.infinity,
-            width: double.infinity,
-            alignment: Alignment.center,
-            child: SmartRefresher(
-                enablePullDown: true,
-                enablePullUp: controller.enablePullUp.value,
-                header: const WaterDropHeader(),
-                footer: getCustomFooter(),
-                controller: controller.refreshController,
-                onRefresh: controller.onRefresh,
-                onLoading: controller.onLoadMore,
-                child: SingleChildScrollView(
-                  child: controller.showValue.isNotEmpty
-                      ? Container(
-                          height: 75.h,
-                          alignment: Alignment.center,
-                          child: Text(controller.showValue.value),
-                        )
-                      : Column(
-                          children: [
-                            historyListView(),
-                            SizedBox(
-                              height: 10.h,
+    return FocusDetector(
+        onVisibilityGained: () {
+          if (controller.bFlagLoad.value) {
+            controller.onRefresh();
+          }else{
+            controller.bFlagLoad.value = true;
+          }
+        },
+        onVisibilityLost: () {},
+        child: Obx(
+          () {
+            return Container(
+                height: double.infinity,
+                width: double.infinity,
+                alignment: Alignment.center,
+                child: SmartRefresher(
+                    enablePullDown: true,
+                    enablePullUp: controller.enablePullUp.value,
+                    header: const WaterDropHeader(),
+                    footer: getCustomFooter(),
+                    controller: controller.refreshController,
+                    onRefresh: controller.onRefresh,
+                    onLoading: controller.onLoadMore,
+                    child: SingleChildScrollView(
+                      child: controller.showValue.isNotEmpty
+                          ? Container(
+                              height: 75.h,
+                              alignment: Alignment.center,
+                              child: Text(controller.showValue.value),
                             )
-                          ],
-                        ),
-                )));
-      },
-    ));
+                          : Column(
+                              children: [
+                                historyListView(),
+                                SizedBox(
+                                  height: 10.h,
+                                )
+                              ],
+                            ),
+                    )));
+          },
+        ));
   }
 
   /// History list

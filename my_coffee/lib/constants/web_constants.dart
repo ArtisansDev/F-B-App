@@ -63,6 +63,8 @@ class WebConstants {
   static String actionGetItemDetails =  "Menu/GetItemDetails";  //post
   static String actionOrderPlace =  "Order/ProcessOrder";  //post
   static String actionGetOrderHistory =  "Order/GetOrderHistory";  //post
+  static String actionPostPaymentType =  "Payment/getPaymentMethod";  //post
+  static String actionPostUpdatePaymentStatus =  "Payment/updatePaymentStatus";  //post
 
   ///28-Oct-24
   static String actionGetDashboard =  "GetDashboard";  //post

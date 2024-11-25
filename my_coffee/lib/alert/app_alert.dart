@@ -149,6 +149,81 @@ class AppAlert {
         });
   }
 
+  static Future<void> showCustomDialogOk(
+      BuildContext context,
+      String title,
+      String message,
+      Function onCall, {
+        bool? barrierDismissible,
+        String? leftText,
+        String? rightText,
+      }) async {
+    await showDialog(
+        context: context,
+        barrierDismissible: barrierDismissible ?? false,
+        builder: (BuildContext context) {
+          return Dialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(6.0),
+            ),
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+            child: Container(
+              padding: EdgeInsets.all(12.sp),
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12.sp),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(16.sp),
+                    child: Text(
+                      title,
+                      style: getText600(
+                        colors: ColorConstants.cAppColorsBlue,
+                        size: 18.sp,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        left: 16.sp, right: 16.sp, bottom: 16.sp),
+                    child: Text(message,
+                        style: getTextRegular(
+                          colors: ColorConstants.black,
+                          size: 17.sp,
+                        )),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                      margin: EdgeInsets.only(left: 30.sp,right: 30.sp),
+                      padding: EdgeInsets.all(16.sp),
+                      child: Container(
+                          height: 26.5.sp,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12.sp),
+                          ),
+                          child: rectangleRoundedCornerButtonMedium(
+                              rightText ?? 'OK', () {
+                            Get.back();
+                            onCall();
+                          },
+                              bgColor:  Colors.black54,
+                              size: 16.sp,
+                              textColor:Colors.white)))
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
   static Future<String> showCustomDialogPicDine(
     BuildContext context, {
     bool? barrierDismissible,
@@ -488,6 +563,38 @@ class AppAlert {
         ],
       ),
     );
+  }
+
+  static Future<void> showView(BuildContext context,
+      Widget showWidget, {
+        bool? barrierDismissible,
+      }) async {
+    await showDialog(
+        context: context,
+        barrierDismissible: barrierDismissible ?? false,
+        builder: (BuildContext context) {
+          return Stack(
+            children: [
+              // Blur effect
+              BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5),
+                child: Container(
+                    color: Colors.black
+                        .withOpacity(0.2)), // Optional: Add overlay color
+              ),
+              // Dialog
+              Dialog(
+                insetPadding: EdgeInsets.zero,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(6.sp),
+                ),
+                elevation: 0,
+                backgroundColor: Colors.transparent,
+                child: showWidget,
+              )
+            ],
+          );
+        });
   }
 }
 

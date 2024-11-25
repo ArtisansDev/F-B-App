@@ -5,6 +5,7 @@ import '../../../../../constants/color_constants.dart';
 import '../../../../../constants/text_styles_constants.dart';
 import '../../../../common/button_constants.dart';
 import '../../../data/mode/get_order_history/order_history_response.dart';
+import '../../../lang/translation_service_key.dart';
 import '../../../utils/date_format.dart';
 import '../../../utils/num_utils.dart';
 import '../controller/history_controller.dart';
@@ -24,7 +25,7 @@ class HistoryRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        controller.gotoOrderHistoryDetails(index);
+        controller.gotOrderHistoryDetails(index);
       },
       child: Container(
         margin: EdgeInsets.only(left: 18.sp, right: 18.sp, top: 15.sp),
@@ -159,22 +160,24 @@ class HistoryRow extends StatelessWidget {
             ///reorder
             Row(
               children: [
-                // Container(
-                //   width: 45.w,
-                //   margin: EdgeInsets.only(top: 10.sp),
-                //   child: rectangleRoundedCornerButtonMedium(sReorder.tr, () {
-                //     // controller.orderNow();
-                //   },
-                //       bgColor: ColorConstants.cAppColorsBlue,
-                //       textColor: Colors.white,
-                //       height: 26.sp,
-                //       size: 15.5.sp),
-                // )
+                mOrderHistoryResponse.paymentStatus == 'P'?
                 Container(
                   width: 45.w,
                   margin: EdgeInsets.only(top: 10.sp),
                   child: rectangleRoundedCornerButtonMedium('Pay Now', () {
-                    controller.payNow();
+                    controller.selectPayment(mOrderHistoryResponse);
+                    // controller.payNow(mOrderHistoryResponse);
+                  },
+                      bgColor: ColorConstants.cAppColorsBlue,
+                      textColor: Colors.white,
+                      height: 26.sp,
+                      size: 15.5.sp),
+                ):
+                Container(
+                  width: 45.w,
+                  margin: EdgeInsets.only(top: 10.sp),
+                  child: rectangleRoundedCornerButtonMedium(sReorder.tr, () {
+                    controller.gotOrderHistoryDetails(index);
                   },
                       bgColor: ColorConstants.cAppColorsBlue,
                       textColor: Colors.white,

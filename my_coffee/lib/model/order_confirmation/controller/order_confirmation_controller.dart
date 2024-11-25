@@ -13,9 +13,10 @@ import '../../../data/mode/add_cart/add_cart.dart';
 import '../../../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import '../../../data/mode/get_item_details/get_item_details_response.dart';
 import '../../../data/mode/order_place/order_place_request.dart';
+import '../../../data/mode/order_place/order_place_share.dart';
 import '../../../data/mode/order_place/process_order_response.dart';
-import '../../../data/mode/user_details/user_details_response.dart';
-import '../../../data/remote/api_call/api_impl.dart';
+import '../../../data/mode/payment_type/payment_type_request.dart';
+import '../../../data/mode/payment_type/payment_type_response.dart';
 import '../../../data/remote/api_call/order/order_api.dart';
 import '../../../data/remote/web_response.dart';
 import '../../../locator.dart';
@@ -45,15 +46,43 @@ class OrderConfirmationScreenController extends GetxController {
   OrderConfirmationScreenController() {
     selectedDateTime.value = DateTime.now().toUtc();
     getOrderDetails();
+    getPaymentTypeApi();
   }
 
+  ///paymentType
   RxInt paymentType = 0.obs;
-  RxList<String> paymentTypeList = ['PayPal', 'Net Banking'].obs;
+  RxList<PaymentTypeResponseData> paymentTypeList =
+      <PaymentTypeResponseData>[].obs;
 
   paymentTypeSelect(int index) {
     paymentType.value = index;
     paymentType.refresh();
     paymentTypeList.refresh();
+  }
+
+  ///getPaymentTypeApi
+  void getPaymentTypeApi() {
+    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+      if (isInternetAvailable) {
+        PaymentTypeRequest mPaymentTypeRequest = PaymentTypeRequest(
+            restaurantIDF:
+                (await SharedPrefs().getGeneralSetting()).restaurantIDF ?? '');
+        WebResponseSuccess mWebResponseSuccess =
+            await localApi.postPaymentType(mPaymentTypeRequest);
+        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+          PaymentTypeResponse mPaymentTypeResponse = mWebResponseSuccess.data;
+          paymentTypeList.value.clear();
+          paymentTypeList.addAll(mPaymentTypeResponse.data ?? []);
+          paymentTypeList.refresh();
+        } else {
+          AppAlert.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+        }
+      } else {
+        AppAlert.showSnackBar(
+            Get.context!, MessageConstants.noInternetConnection);
+      }
+    });
   }
 
   Rxn<DateTime> selectedDateTime = Rxn<DateTime>();
@@ -173,10 +202,14 @@ class OrderConfirmationScreenController extends GetxController {
       OrderPlaceRequest mOrderPlaceRequest = await createOrderPlaceRequest(
           remarksController: remarksController.value.text,
           orderDate: getUTCValue(selectedDateTime.value!),
-          mAddCartModel: mAddCartModel.value);
+          mAddCartModel: mAddCartModel.value,
+          mPaymentTypeResponseData:
+              paymentTypeList.value.length > paymentType.value
+                  ? paymentTypeList.value[paymentType.value]
+                  : null);
 
       ///OrderPlaceRequest
-      debugPrint("\nmOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
+      debugPrint("\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
 
       getOrderPlaceApi(mOrderPlaceRequest);
     }
@@ -213,15 +246,20 @@ class OrderConfirmationScreenController extends GetxController {
           ProcessOrderResponse mProcessOrderResponse = mWebResponseSuccess.data;
           AppAlert.showSnackBar(Get.context!, 'Order place successfully');
           await SharedPrefs().setAddCartData('');
-          mDashboardScreenController.selectedIndex.value=2;
+          OrderPlaceShare mOrderPlaceShare = OrderPlaceShare(
+            data: mProcessOrderResponse.data??'',
+              paymentGatewayNo: paymentTypeList.value.length > paymentType.value
+                ? paymentTypeList.value[paymentType.value].paymentGatewayNo
+                : '0'
+          );
+          await SharedPrefs().setProcessOrderId(jsonEncode(mOrderPlaceShare));
+          mDashboardScreenController.selectedIndex.value = 2;
           mDashboardScreenController.selectTitle(2);
           Get.until((route) {
-            return
-              route.settings.name ==
-                  RouteConstants
-                      .rDashboardScreen; // Goes back until reaching '/dashboard'
+            return route.settings.name ==
+                RouteConstants
+                    .rDashboardScreen; // Goes back until reaching '/dashboard'
           });
-
         } else {
           AppAlert.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');

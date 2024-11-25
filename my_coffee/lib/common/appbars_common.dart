@@ -151,7 +151,7 @@ class AppBarsCommon {
             ),
             GestureDetector(
               onTap: () {
-                Get.back(result: '');
+                Get.back(result: 'null');
               },
               child: const Icon(Icons.arrow_back_ios_new),
             ),

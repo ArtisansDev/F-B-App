@@ -144,8 +144,11 @@ class OrderHistoryResponseItemData {
     this.subTotal,
     this.taxAmountTotal,
     this.totalAmount,
-    this.additionalNotes,});
-
+    this.additionalNotes,
+    this.paymentGatewayID,
+    this.paymentGatewaySettingID,
+    this.tableNo,
+  });
   OrderHistoryResponseItemData.fromJson(dynamic json) {
     orderIDP = json['OrderIDP'];
     paymentMethod = json['PaymentMethod'];
@@ -187,6 +190,9 @@ class OrderHistoryResponseItemData {
     taxAmountTotal = json['TaxAmountTotal'];
     totalAmount = json['TotalAmount'];
     additionalNotes = json['AdditionalNotes'];
+    paymentGatewayID = json['PaymentGatewayID'];
+    paymentGatewaySettingID = json['PaymentGatewaySettingID'];
+    tableNo = json['TableNo']??'';
   }
   String? orderIDP;
   int? paymentMethod;
@@ -218,6 +224,9 @@ class OrderHistoryResponseItemData {
   double? taxAmountTotal;
   double? totalAmount;
   String? additionalNotes;
+  String? paymentGatewayID;
+  String? paymentGatewaySettingID;
+  String? tableNo;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -255,6 +264,9 @@ class OrderHistoryResponseItemData {
     map['TaxAmountTotal'] = taxAmountTotal;
     map['TotalAmount'] = totalAmount;
     map['AdditionalNotes'] = additionalNotes;
+    map['PaymentGatewayID'] = paymentGatewayID;
+    map['PaymentGatewaySettingID'] = paymentGatewaySettingID;
+    map['TableNo'] = tableNo;
     return map;
   }
 

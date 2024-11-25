@@ -3,11 +3,11 @@
 /*
  * Project      : my_coffee
  * File         : middle_filter_view.dart
- * Description  : 
+ * Description  :
  * Author       : parthapaul
  * Date         : 2024-10-25
  * Version      : 1.0
- * Ticket       : 
+ * Ticket       :
  */
 
 import 'package:flutter/material.dart';
@@ -163,6 +163,39 @@ class PickUpAtHistoryView extends StatelessWidget {
                 margin: EdgeInsets.only(left: 20.sp, right: 20.sp, top: 17.sp),
                 child: Column(
                   children: [
+                    Visibility(
+                        visible: (controller.mAddCartModel.value
+                                    .mOrderHistoryResponseItemData?.tableNo ??
+                                '')
+                            .isNotEmpty,
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.table_bar,
+                              size: 23.sp,
+                              color: ColorConstants.cAppColorsBlue,
+                            ),
+                            SizedBox(
+                              width: 11.sp,
+                            ),
+                            Text(
+                              'Table No : ',
+                              style: getTextRegular(
+                                  size: 17.sp,
+                                  colors: ColorConstants.buttonBar,
+                                  heights: 1.2),
+                            ),
+                            Text(
+                              controller.mAddCartModel.value
+                                      .mOrderHistoryResponseItemData?.tableNo ??
+                                  '',
+                              style: getText600(
+                                  size: 17.sp,
+                                  colors: ColorConstants.buttonBar,
+                                  heights: 1.2),
+                            ),
+                          ],
+                        )),
                     Row(
                       children: [
                         SizedBox(
@@ -177,10 +210,13 @@ class PickUpAtHistoryView extends StatelessWidget {
                         ),
                         Text(
                           (controller
-                              .mAddCartModel
-                              .value
-                              .mOrderHistoryResponseItemData
-                              ?.orderType ?? 1) == 1 ? 'Dine In'
+                                          .mAddCartModel
+                                          .value
+                                          .mOrderHistoryResponseItemData
+                                          ?.orderType ??
+                                      1) ==
+                                  1
+                              ? 'Dine In'
                               : 'Take Away',
                           style: getText600(
                               size: 17.sp,

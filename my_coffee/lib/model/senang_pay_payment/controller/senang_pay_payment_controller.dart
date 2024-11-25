@@ -10,16 +10,16 @@ import 'package:flutter/foundation.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
+import '../../../utils/get_transaction_id.dart';
+
 class SenangPayPaymentController extends GetxController {
   // Rx<SenangPayPaymentModel> mSenangPayPaymentModel =
   //     SenangPayPaymentModel().obs;
   RxString paymentUrl = ''.obs;
   Rxn<WebViewController> mWebViewController = Rxn<WebViewController>();
 
-  SenangPayPaymentController(String  sUrl) {
-
+  SenangPayPaymentController(String sUrl) {
     paymentUrl.value = sUrl;
-        // "https://app.senangpay.my/payment/${mSenangPayPaymentModel.value.merchantId}?amount=${mSenangPayPaymentModel.value.amount}&order_id=${mSenangPayPaymentModel.value.orderId}&name=${mSenangPayPaymentModel.value.name}&email=${mSenangPayPaymentModel.value.email}&phone=${mSenangPayPaymentModel.value.phone}&hash=$sCode256";
     webController();
   }
 
@@ -37,7 +37,7 @@ class SenangPayPaymentController extends GetxController {
 
     final WebViewController mController =
         WebViewController.fromPlatformCreationParams(params);
-
+    // Payment_was_successful&hash=c149318fd96704782738011d3f76c29dbc3e6b427b36cdccee7e278dac689704
     /// enddocregion platform_features
     mController
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
@@ -63,10 +63,10 @@ Page resource error:
           },
           onNavigationRequest: (NavigationRequest request) {
             // Check if the payment is completed
-            if (request.url.contains("your_redirect_url")) {
-              // Handle the payment success or failure based on the URL
-              // Navigator.pop(context, true); // Return success
-              Get.back();
+            if (request.url.contains("Payment_was_successful")) {
+              Get.back(result: 'successful - ${getTransactionId(request.url)} - ${request.url}');
+            } else if (request.url.contains("The_payment_was_declined.")) {
+              Get.back(result: 'declined - ${getTransactionId(request.url)} - ${request.url}');
             }
             return NavigationDecision.navigate;
           },
@@ -105,11 +105,11 @@ Page resource error:
     mWebViewController.refresh();
   }
 
-  // /// Generate SHA256 hash for SenangPay
-  // String generateHash(String secretKey, String amount, String orderId) {
-  //   final rawString = '$orderId|$amount|$secretKey';
-  //   final bytes = utf8.encode(rawString);
-  //   final hash = sha256.convert(bytes);
-  //   return hash.toString();
-  // }
+// /// Generate SHA256 hash for SenangPay
+// String generateHash(String secretKey, String amount, String orderId) {
+//   final rawString = '$orderId|$amount|$secretKey';
+//   final bytes = utf8.encode(rawString);
+//   final hash = sha256.convert(bytes);
+//   return hash.toString();
+// }
 }

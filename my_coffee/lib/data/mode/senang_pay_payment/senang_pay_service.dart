@@ -1,9 +1,6 @@
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:url_launcher/url_launcher.dart';
-
 import '../../../model/senang_pay_payment/controller/senang_pay_payment_controller.dart';
 import '../../../routes/route_constants.dart';
 
@@ -17,14 +14,17 @@ class SenangPayService {
   });
 
   /// Generate SHA256 hash
-  String _generateHash(String orderId, String amount) {
-    final rawHash = '$orderId|$amount|$secretKey';
-    final bytes = utf8.encode(rawHash);
-    return sha256.convert(bytes).toString();
+  String _generateHash(String orderId, String amount, String description) {
+    final rawHash = '$secretKey$description$amount$orderId';
+    Hmac hmacSha256 = Hmac(sha256, utf8.encode(secretKey));
+    // Compute the HMAC
+    Digest hmacResult = hmacSha256.convert(utf8.encode(rawHash));
+    String hmacHex = hmacResult.toString();
+    return hmacHex;
   }
 
   /// Start Payment
-  Future<void> startPayment({
+  Future<String> startPayment({
     required String name,
     required String email,
     required String phone,
@@ -36,8 +36,7 @@ class SenangPayService {
     final formattedAmount = amount.toStringAsFixed(2);
 
     // Generate hash
-    final hash = _generateHash(orderId, formattedAmount);
-
+    final hash = _generateHash(orderId, formattedAmount, description);
     // Construct payment URL
     final paymentUrl = Uri.https(
       'app.senangpay.my',
@@ -48,20 +47,19 @@ class SenangPayService {
         'phone': phone,
         'amount': formattedAmount,
         'order_id': orderId,
-        'desc': description,
+        'detail': description,
         'hash': hash,
       },
     ).toString();
 
-    debugPrint("url $paymentUrl");
-
     ///next screen
-    await Get.toNamed(RouteConstants.rSenangPayPaymentScreen,
+    var value = await Get.toNamed(RouteConstants.rSenangPayPaymentScreen,
         arguments: paymentUrl);
 
     if (Get.isRegistered<SenangPayPaymentController>()) {
       Get.delete<SenangPayPaymentController>();
     }
+    return value.toString();
 
     /// Launch the payment page
     // if (await canLaunch(paymentUrl.toString())) {

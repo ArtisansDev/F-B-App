@@ -20,6 +20,7 @@ import '../data/mode/add_cart/add_cart.dart';
 import '../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import '../data/mode/get_item_details/get_item_details_response.dart';
 import '../data/mode/order_place/order_place_request.dart';
+import '../data/mode/payment_type/payment_type_response.dart';
 import '../data/mode/user_details/user_details_response.dart';
 import 'num_utils.dart';
 
@@ -35,7 +36,8 @@ String getTrackingOrderID(
 createOrderPlaceRequest(
     {String? remarksController,
     String? orderDate,
-    AddCartModel? mAddCartModel}) async {
+    AddCartModel? mAddCartModel,
+    PaymentTypeResponseData? mPaymentTypeResponseData}) async {
   ///get store details
   GetAllBranchesListData selectGetAllBranchesListData =
       mAddCartModel!.mGetAllBranchesListData ?? GetAllBranchesListData();
@@ -174,6 +176,7 @@ createOrderPlaceRequest(
         taxName: mTaxData.taxName ?? '',
         taxPercentage: mTaxData.taxPercentage ?? 0.0,
         taxAmount: subTaxTotal);
+
     ///OrderPlaceRequest
     debugPrint("\ntax calculation:   ${jsonEncode(mOrderTax)}\n");
     orderTaxList.add(mOrderTax);
@@ -205,6 +208,15 @@ createOrderPlaceRequest(
     taxAmountTotal: getDoubleValue(taxTotal),
     totalAmount: getDoubleValue(subTotal + taxTotal),
     grandTotal: getDoubleValue(subTotal + taxTotal),
+
+    ///table no
+    tableNo: mAddCartModel.sType == 'Dine'
+        ? mAddCartModel.sTableNo
+        :  '',
+
+    ///payment
+    paymentGatewayID: mPaymentTypeResponseData?.paymentGatewayIDP??'',
+    paymentGatewaySettingID: mPaymentTypeResponseData?.paymentGatewaySettingIDP??'',
 
     ///orderTax
     orderTax: orderTaxList,
