@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import 'package:f_b_base/constants/app_constants.dart';
-import 'package:f_b_base/constants/color_constants.dart';
-import 'package:f_b_base/data/remote/web_http_overrides.dart';
-import 'package:f_b_base/locator.dart';
+import 'package:my_coffee/constants/app_constants.dart';
+import 'package:my_coffee/constants/color_constants.dart';
+import 'package:my_coffee/data/remote/web_http_overrides.dart';
+import 'package:my_coffee/locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';

@@ -1,13 +1,14 @@
-import 'package:f_b_base/alert/app_alert.dart';
-import 'package:f_b_base/constants/message_constants.dart';
-import 'package:f_b_base/constants/web_constants.dart';
-import 'package:f_b_base/data/mode/login/login_request.dart';
-import 'package:f_b_base/data/mode/login/login_response.dart';
-import 'package:f_b_base/data/remote/api_call/user_authentication/user_authentication_api.dart';
-import 'package:f_b_base/data/remote/web_response.dart';
-import 'package:f_b_base/lang/translation_service_key.dart';
-import 'package:f_b_base/locator.dart';
-import 'package:f_b_base/utils/network_utils.dart';
+import 'package:my_coffee/alert/app_alert.dart';
+import 'package:my_coffee/alert/app_alert_base.dart';
+import 'package:my_coffee/constants/message_constants.dart';
+import 'package:my_coffee/constants/web_constants.dart';
+import 'package:my_coffee/data/mode/login/login_request.dart';
+import 'package:my_coffee/data/mode/login/login_response.dart';
+import 'package:my_coffee/data/remote/api_call/user_authentication/user_authentication_api.dart';
+import 'package:my_coffee/data/remote/web_response.dart';
+import 'package:my_coffee/lang/translation_service_key.dart';
+import 'package:my_coffee/locator.dart';
+import 'package:my_coffee/utils/network_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

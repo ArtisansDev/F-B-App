@@ -1,7 +1,7 @@
-import 'package:f_b_base/common/custom_image.dart';
-import 'package:f_b_base/constants/color_constants.dart';
-import 'package:f_b_base/constants/image_assets_constants.dart';
-import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:my_coffee/common/custom_image.dart';
+import 'package:my_coffee/constants/color_constants.dart';
+import 'package:my_coffee/constants/image_assets_constants.dart';
+import 'package:my_coffee/constants/text_styles_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';

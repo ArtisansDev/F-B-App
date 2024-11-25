@@ -1,6 +1,6 @@
-import 'package:f_b_base/common/appbars_common.dart';
-import 'package:f_b_base/constants/image_assets_constants.dart';
-import 'package:f_b_base/utils/app_utils.dart';
+import 'package:my_coffee/common/appbars_common.dart';
+import 'package:my_coffee/constants/image_assets_constants.dart';
+import 'package:my_coffee/utils/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:focus_detector/focus_detector.dart';

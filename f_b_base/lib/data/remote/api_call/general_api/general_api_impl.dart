@@ -6,7 +6,7 @@ import 'package:f_b_base/data/remote/api_call/api_impl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../../../../alert/app_alert.dart';
+import '../../../../alert/app_alert_base.dart';
 import '../../../../constants/web_constants.dart';
 import '../../../local/shared_prefs/shared_prefs.dart';
 import '../../../mode/get_best_seller_item/get_best_seller_item_response.dart';

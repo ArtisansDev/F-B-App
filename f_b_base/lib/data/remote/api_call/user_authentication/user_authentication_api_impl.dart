@@ -6,7 +6,7 @@ import 'package:f_b_base/data/remote/api_call/api_impl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../../../../alert/app_alert.dart';
+import '../../../../alert/app_alert_base.dart';
 import '../../../../constants/web_constants.dart';
 import '../../../mode/login/login_response.dart';
 import '../../../mode/profile_image/profile_image_update_request.dart';

@@ -1,8 +1,9 @@
-import 'package:f_b_base/alert/app_alert.dart';
-import 'package:f_b_base/constants/message_constants.dart';
-import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
-import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
-import 'package:f_b_base/data/mode/user_details/user_details_response.dart';
+import 'package:my_coffee/alert/app_alert.dart';
+import 'package:my_coffee/alert/app_alert_base.dart';
+import 'package:my_coffee/constants/message_constants.dart';
+import 'package:my_coffee/data/local/shared_prefs/shared_prefs.dart';
+import 'package:my_coffee/data/mode/add_cart/add_cart.dart';
+import 'package:my_coffee/data/mode/user_details/user_details_response.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:my_coffee/constants/logout_expired.dart';

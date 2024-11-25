@@ -4,102 +4,166 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eba47f2-9eb3-4609-a77d-c72cd50cac91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/alert/app_alert.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/model/senang_pay_payment/controller/senang_pay_payment_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/alert/alert_action.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/alert/alert_action.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/alert/app_alert.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/alert/app_alert.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/appbars_common.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/appbars_common.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/button_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/button_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/create_card_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/create_card_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/custom_image.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/custom_image.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/custom_switch.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/custom_switch.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/dropdown_button_view/custom_dropdown_button2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/dropdown_button_view/custom_dropdown_button2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/dropdown_button_view/dropdown_button2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/dropdown_button_view/dropdown_button2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/dropdown_button_view/dropdown_button2_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/dropdown_button_view/dropdown_button2_utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/flutter_otp_text_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/flutter_otp_text_field.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/generate_tags.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/generate_tags.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/smart_footer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/smart_footer.dart" afterDir="false" />
+    <list default="true" id="3eba47f2-9eb3-4609-a77d-c72cd50cac91" name="Changes" comment="base">
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/alert/app_alert_base.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/appbars_common.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/button_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/create_card_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/custom_image.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/custom_switch.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/dropdown_button_view/custom_dropdown_button2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/dropdown_button_view/dropdown_button2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/dropdown_button_view/dropdown_button2_utils.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/flutter_otp_text_field.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/generate_tags.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/smart_footer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/common/text_input_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/constants/app_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/constants/color_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/constants/image_assets_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/constants/message_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/constants/pattern_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/constants/text_styles_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/constants/web_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/local/database/counter/CounterLocalApi.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/local/database/counter/CounterLocalApiImpl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/local/shared_prefs/pref_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/local/shared_prefs/shared_prefs.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/add_cart/add_cart.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/add_cart_details/add_cart_details.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_best_seller_item/get_best_seller_item_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_best_seller_item/get_best_seller_item_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_category/get_category_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_category/get_category_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_category_item/get_category_item_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_category_item/get_category_item_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_dashboard/get_dashboard_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_dashboard/get_dashboard_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_general_setting/get_general_setting_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_general_setting/get_general_setting_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_item_details/get_item_details_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_item_details/get_item_details_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_order_history/get_order_history_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_order_history/order_history_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/login/login_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/login/login_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/logout/logout_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/order_place/order_place_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/order_place/order_place_share.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/order_place/process_order_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/payment_type/payment_type_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/payment_type/payment_type_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/profile_image/profile_image_update_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/register/register_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/register/register_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/update_payment_status/update_payment_status_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_address_update/user_update_address_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_address_update/user_update_address_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_delete/user_delete_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_delete/user_delete_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_details/user_details_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_details/user_details_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_update/user_update_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_update/user_update_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/verify_otp/verify_otp_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/mode/verify_otp/verify_otp_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/api_dio_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/api_impl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/api_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/general_api/general_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/general_api/general_api_impl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/order/order_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/order/order_api_impl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/product_api/product_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/product_api/product_api_impl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/user_authentication/user_authentication_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/web_http_overrides.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/web_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/data/remote/web_response_failed.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/lang/en_US.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/lang/id_ID.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/lang/translation_notes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/lang/translation_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/lang/translation_service_key.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/locator.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/utils/app_utils.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/utils/date_format.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/utils/get_address.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/utils/get_location.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/utils/image_picker_utils.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/utils/network_utils.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/utils/num_utils.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/utils/open_url.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/utils/tracking_order_id.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/f_b_base/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/f_b_base_android.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/alert/app_alert.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/alert/app_alert_base.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/remote/api_call/general_api/general_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/general_api/general_api_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/remote/api_call/order/order_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/order/order_api_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/remote/api_call/product_api/product_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/product_api/product_api_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/senang_pay_payment/controller/senang_pay_payment_controller.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/get_location.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/get_location.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/connectivity_plus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/image_picker_linux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/package_info_plus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/shared_preferences_linux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/wakelock_plus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/main.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/my_application.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/my_application.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/kotlin/com/app/my_coffee/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/kotlin/com/app/twt/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/tag_view/tag_modifier_date_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/common/tag_view/tag_modifier_date_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/tag_view/tag_variant_date_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/common/tag_view/tag_variant_date_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/tag_view/tag_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/common/tag_view/tag_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/text_input_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/text_input_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/common/view_document/view_doument.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/common/view_document/view_doument.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/constants/app_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/app_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/constants/color_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/color_constants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/constants/get_user_details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/constants/get_user_details.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/constants/image_assets_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/image_assets_constants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/constants/logout_expired.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/constants/logout_expired.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/constants/message_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/message_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/constants/pattern_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/pattern_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/constants/text_styles_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/text_styles_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/constants/web_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/web_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/local/database/counter/CounterLocalApi.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/local/database/counter/CounterLocalApi.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/local/database/counter/CounterLocalApiImpl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/local/database/counter/CounterLocalApiImpl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/local/shared_prefs/pref_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/local/shared_prefs/pref_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/local/shared_prefs/shared_prefs.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/local/shared_prefs/shared_prefs.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/add_cart/add_cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/add_cart/add_cart.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/add_cart_details/add_cart_details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/add_cart_details/add_cart_details.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_best_seller_item/get_best_seller_item_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_best_seller_item/get_best_seller_item_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_best_seller_item/get_best_seller_item_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_best_seller_item/get_best_seller_item_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_category/get_category_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_category/get_category_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_category/get_category_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_category/get_category_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_category_item/get_category_item_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_category_item/get_category_item_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_category_item/get_category_item_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_category_item/get_category_item_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_dashboard/get_dashboard_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_dashboard/get_dashboard_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_dashboard/get_dashboard_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_dashboard/get_dashboard_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_general_setting/get_general_setting_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_general_setting/get_general_setting_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_general_setting/get_general_setting_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_general_setting/get_general_setting_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_item_details/get_item_details_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_item_details/get_item_details_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_item_details/get_item_details_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_item_details/get_item_details_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_order_history/get_order_history_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_order_history/get_order_history_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/get_order_history/order_history_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_order_history/order_history_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/login/login_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/login/login_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/login/login_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/login/login_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/logout/logout_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/logout/logout_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/order_place/order_place_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/order_place/order_place_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/order_place/order_place_share.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/order_place/order_place_share.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/order_place/process_order_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/order_place/process_order_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/payment_type/payment_type_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/payment_type/payment_type_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/payment_type/payment_type_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/payment_type/payment_type_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/profile_image/profile_image_update_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/profile_image/profile_image_update_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/register/register_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/register/register_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/register/register_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/register/register_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/senang_pay_payment/senang_pay_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/mode/senang_pay_payment/senang_pay_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/update_payment_status/update_payment_status_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/update_payment_status/update_payment_status_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_address_update/user_update_address_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/user_address_update/user_update_address_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_address_update/user_update_address_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/user_address_update/user_update_address_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_delete/user_delete_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/user_delete/user_delete_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_delete/user_delete_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/user_delete/user_delete_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_details/user_details_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/user_details/user_details_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_details/user_details_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/user_details/user_details_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_update/user_update_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/user_update/user_update_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/user_update/user_update_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/user_update/user_update_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/verify_otp/verify_otp_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/verify_otp/verify_otp_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/mode/verify_otp/verify_otp_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/verify_otp/verify_otp_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/api_dio_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/api_dio_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/api_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/api_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/api_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/general_api/general_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/general_api/general_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/general_api/general_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/general_api/general_api_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/order/order_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/order/order_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/order/order_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/order/order_api_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/product_api/product_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/product_api/product_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/product_api/product_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/product_api/product_api_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/user_authentication/user_authentication_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/user_authentication/user_authentication_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/web_http_overrides.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/web_http_overrides.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/web_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/web_response.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/data/remote/web_response_failed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/web_response_failed.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/lang/en_US.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lang/en_US.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/lang/id_ID.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lang/id_ID.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/lang/translation_notes" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lang/translation_notes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/lang/translation_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lang/translation_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/lang/translation_service_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lang/translation_service_key.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/locator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/locator.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/main_apple_cinemas.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/main_apple_cinemas.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/main_thomson_corner.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/main_thomson_corner.dart" afterDir="false" />
@@ -111,7 +175,6 @@
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/dashboard_screen/controller/dashboard_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/dashboard_screen/controller/dashboard_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/dashboard_screen/view/dashboard_navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/dashboard_screen/view/dashboard_navigation.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/dashboard_screen/view/dashboard_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/dashboard_screen/view/dashboard_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/dashboard_screen/view/dashboard_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/dashboard_screen/view/dashboard_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/details_edit_page/controller/details_edit_page_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/details_edit_page/controller/details_edit_page_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/details_edit_page/view/details_edit_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/details_edit_page/view/details_edit_page_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/details_page/controller/details_page_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/details_page/controller/details_page_controller.dart" afterDir="false" />
@@ -166,16 +229,7 @@
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/controller/register_screen_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/controller/register_screen_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/view/register_screen_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/view/register_screen_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/rewards_screen/view/rewards_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/rewards_screen/view/rewards_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/controller/senang_pay_payment_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/controller/senang_pay_payment_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/senang_pay_payment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/senang_pay_payment.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/shopping_card_screen/controller/shoping_screen_controller.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/shopping_card_screen/view/shopping_bundles/shopping_bundles_list_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/shopping_card_screen/view/shopping_bundles/shopping_bundles_row.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/shopping_card_screen/view/shopping_coffee/shopping_coffee_list_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/shopping_card_screen/view/shopping_coffee/shopping_coffee_row.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/shopping_card_screen/view/shopping_drinkware/shopping_drinkware_list_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/shopping_card_screen/view/shopping_drinkware/shopping_drinkware_row.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/shopping_card_screen/view/shopping_screen.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/splash_screen/controller/splash_screen_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/splash_screen/controller/splash_screen_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/splash_screen/view/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/splash_screen/view/splash_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/terms_of_use/controller/terms_of_use_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/terms_of_use/controller/terms_of_use_controller.dart" afterDir="false" />
@@ -192,24 +246,19 @@
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/view_order_history/view/payment_method/payment_method_history_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/view_order_history/view/payment_method/payment_method_history_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/view_order_history/view/pick_up_at_view/pick_up_at_history_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/view_order_history/view/pick_up_at_view/pick_up_at_history_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/view_order_history/view/special_remarks/special_remarks_history_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/view_order_history/view/special_remarks/special_remarks_history_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/app_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/app_utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/date_format.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/date_format.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/get_address.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/get_address.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/get_location.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/get_location.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/get_transaction_id.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/image_picker_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/image_picker_utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/network_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/network_utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/num_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/num_utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/open_url.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/open_url.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/order_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/utils/order_utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/utils/tracking_order_id.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/tracking_order_id.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/pubspec.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -224,18 +273,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/f_b_base/lib&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/f_b_base",
+    "settings.editor.selected.configurable": "dart.settings",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib" />
@@ -256,6 +305,14 @@
       <option name="presentableId" value="Default" />
       <updated>1732509036701</updated>
     </task>
+    <task id="LOCAL-00001" summary="base">
+      <created>1732519471525</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732519471525</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,5 +325,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="base" />
+    <option name="LAST_COMMIT_MESSAGE" value="base" />
   </component>
 </project>

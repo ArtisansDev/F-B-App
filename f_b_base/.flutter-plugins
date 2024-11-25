@@ -45,6 +45,7 @@ permission_handler=/Users/parthapaul/.pub-cache/hosted/pub.dev/permission_handle
 permission_handler_android=/Users/parthapaul/.pub-cache/hosted/pub.dev/permission_handler_android-10.3.6/
 permission_handler_apple=/Users/parthapaul/.pub-cache/hosted/pub.dev/permission_handler_apple-9.1.4/
 permission_handler_windows=/Users/parthapaul/.pub-cache/hosted/pub.dev/permission_handler_windows-0.1.3/
+qr_code_scanner=/Users/parthapaul/.pub-cache/hosted/pub.dev/qr_code_scanner-1.0.1/
 shared_preferences=/Users/parthapaul/.pub-cache/hosted/pub.dev/shared_preferences-2.3.3/
 shared_preferences_android=/Users/parthapaul/.pub-cache/hosted/pub.dev/shared_preferences_android-2.3.3/
 shared_preferences_foundation=/Users/parthapaul/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.3/

@@ -3,16 +3,17 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:f_b_base/alert/app_alert.dart';
-import 'package:f_b_base/constants/message_constants.dart';
-import 'package:f_b_base/constants/web_constants.dart';
-import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
-import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
-import 'package:f_b_base/data/remote/api_call/general_api/general_api.dart';
-import 'package:f_b_base/data/remote/web_response.dart';
-import 'package:f_b_base/locator.dart';
-import 'package:f_b_base/utils/get_location.dart';
-import 'package:f_b_base/utils/network_utils.dart';
+import 'package:my_coffee/alert/app_alert.dart';
+import 'package:my_coffee/alert/app_alert_base.dart';
+import 'package:my_coffee/constants/message_constants.dart';
+import 'package:my_coffee/constants/web_constants.dart';
+import 'package:my_coffee/data/local/shared_prefs/shared_prefs.dart';
+import 'package:my_coffee/data/mode/get_general_setting/get_general_setting_response.dart';
+import 'package:my_coffee/data/remote/api_call/general_api/general_api.dart';
+import 'package:my_coffee/data/remote/web_response.dart';
+import 'package:my_coffee/locator.dart';
+import 'package:my_coffee/utils/get_location.dart';
+import 'package:my_coffee/utils/network_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

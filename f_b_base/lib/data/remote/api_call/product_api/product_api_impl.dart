@@ -1,7 +1,7 @@
 
 import 'package:get/get.dart';
 import 'package:f_b_base/data/remote/api_call/api_impl.dart';
-import '../../../../alert/app_alert.dart';
+import '../../../../alert/app_alert_base.dart';
 import '../../../../constants/web_constants.dart';
 import '../../../local/shared_prefs/shared_prefs.dart';
 import '../../../mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
