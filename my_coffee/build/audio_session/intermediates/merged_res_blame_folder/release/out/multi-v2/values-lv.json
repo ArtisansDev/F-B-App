@@ -1,0 +1,82 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ryanheise.audio_session-merged_res-28:/values-lv/values-lv.xml",
+            "map": [
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/8858e1eaae1d0ff435619ac1c321b92c/transformed/core-1.13.1/res/values-lv/values-lv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,563,671,786",
+                        "endColumns": "97,101,99,100,106,107,114,100",
+                        "endOffsets": "148,250,350,451,558,666,781,882"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,14",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,563,671,1354",
+                        "endColumns": "97,101,99,100,106,107,114,100",
+                        "endOffsets": "148,250,350,451,558,666,781,1450"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/aec2d7aae131a1d0f20fc25f7e885d59/transformed/jetified-media2-session-1.2.1/res/values-lv/values-lv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,161,260,358,486",
+                        "endColumns": "105,98,97,127,136",
+                        "endOffsets": "156,255,353,481,618"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "786,892,991,1089,1217",
+                        "endColumns": "105,98,97,127,136",
+                        "endOffsets": "887,986,1084,1212,1349"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.ryanheise.audio_session-mergeReleaseResources-26:/values-lv/values-lv.xml",
+            "map": [
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/8858e1eaae1d0ff435619ac1c321b92c/transformed/core-1.13.1/res/values-lv/values-lv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,563,671,786",
+                        "endColumns": "97,101,99,100,106,107,114,100",
+                        "endOffsets": "148,250,350,451,558,666,781,882"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,14",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,355,456,563,671,1354",
+                        "endColumns": "97,101,99,100,106,107,114,100",
+                        "endOffsets": "148,250,350,451,558,666,781,1450"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/aec2d7aae131a1d0f20fc25f7e885d59/transformed/jetified-media2-session-1.2.1/res/values-lv/values-lv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,161,260,358,486",
+                        "endColumns": "105,98,97,127,136",
+                        "endOffsets": "156,255,353,481,618"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "786,892,991,1089,1217",
+                        "endColumns": "105,98,97,127,136",
+                        "endOffsets": "887,986,1084,1212,1349"
+                    }
+                }
+            ]
+        }
+    ]
+}

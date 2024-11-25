@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="main_apple_cinemas" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <option name="filePath" value="$PROJECT_DIR$/lib/main_apple_cinemas.dart" />
+    <method v="2" />
+  </configuration>
+</component>
