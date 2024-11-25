@@ -2,30 +2,28 @@
 
 import 'dart:async';
 
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/login/login_request.dart';
+import 'package:f_b_base/data/mode/login/login_response.dart';
+import 'package:f_b_base/data/mode/verify_otp/verify_otp_request.dart';
+import 'package:f_b_base/data/mode/verify_otp/verify_otp_response.dart';
+import 'package:f_b_base/data/remote/api_call/user_authentication/user_authentication_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/network_utils.dart';
+import 'package:f_b_base/utils/num_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_coffee/constants/text_styles_constants.dart';
-import 'package:my_coffee/utils/num_utils.dart';
 import 'package:pinput/pinput.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import '../../../alert/app_alert.dart';
-import '../../../constants/color_constants.dart';
 import '../../../constants/get_user_details.dart';
-import '../../../constants/message_constants.dart';
-import '../../../constants/web_constants.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/login/login_request.dart';
-import '../../../data/mode/login/login_response.dart';
-import '../../../data/mode/verify_otp/verify_otp_request.dart';
-import '../../../data/mode/verify_otp/verify_otp_response.dart';
-import '../../../data/remote/api_call/api_impl.dart';
-import '../../../data/remote/api_call/user_authentication/user_authentication_api.dart';
-import '../../../data/remote/web_response.dart';
-import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
-import '../../../utils/network_utils.dart';
-import '../../dashboard_screen/controller/dashboard_controller.dart';
 import '../../login_screen/controller/login_controller.dart';
 
 class OtpScreenController extends GetxController {
@@ -89,7 +87,7 @@ class OtpScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           VerifyOtpResponse mVerifyOtpResponse = mWebResponseSuccess.data;
           if (mVerifyOtpResponse.statusCode == WebConstants.statusCode200) {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mVerifyOtpResponse.statusMessage ?? "");
             if ((mVerifyOtpResponse.data?.isRegister ?? 0) == 1) {
               await SharedPrefs()
@@ -111,12 +109,12 @@ class OtpScreenController extends GetxController {
               );
             }
           } else {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mVerifyOtpResponse.statusMessage ?? "");
           }
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
@@ -135,15 +133,15 @@ class OtpScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           LoginResponse mLoginResponse = mWebResponseSuccess.data;
           if (mLoginResponse.statusCode == WebConstants.statusCode200) {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mLoginResponse.statusMessage ?? "");
           } else {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mLoginResponse.statusMessage ?? "");
           }
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });

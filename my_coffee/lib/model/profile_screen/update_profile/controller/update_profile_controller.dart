@@ -1,26 +1,25 @@
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/profile_image/profile_image_update_request.dart';
+import 'package:f_b_base/data/mode/user_address_update/user_update_address_request.dart';
+import 'package:f_b_base/data/mode/user_address_update/user_update_address_response.dart';
+import 'package:f_b_base/data/mode/user_details/user_details_response.dart';
+import 'package:f_b_base/data/mode/user_update/user_update_request.dart';
+import 'package:f_b_base/data/mode/user_update/user_update_response.dart';
+import 'package:f_b_base/data/remote/api_call/user_authentication/user_authentication_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/app_utils.dart';
+import 'package:f_b_base/utils/image_picker_utils.dart';
+import 'package:f_b_base/utils/network_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../alert/app_alert.dart';
 import '../../../../constants/get_user_details.dart';
 import '../../../../constants/logout_expired.dart';
-import '../../../../constants/message_constants.dart';
-import '../../../../constants/web_constants.dart';
-import '../../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../../data/mode/profile_image/profile_image_update_request.dart';
-import '../../../../data/mode/user_address_update/user_update_address_request.dart';
-import '../../../../data/mode/user_address_update/user_update_address_response.dart';
-import '../../../../data/mode/user_details/user_details_response.dart';
-import '../../../../data/mode/user_update/user_update_request.dart';
-import '../../../../data/mode/user_update/user_update_response.dart';
-import '../../../../data/remote/api_call/api_impl.dart';
-import '../../../../data/remote/api_call/user_authentication/user_authentication_api.dart';
-import '../../../../data/remote/web_response.dart';
-import '../../../../lang/translation_service_key.dart';
-import '../../../../locator.dart';
-import '../../../../utils/app_utils.dart';
-import '../../../../utils/image_picker_utils.dart';
-import '../../../../utils/network_utils.dart';
 
 class UpdateProfileScreenController extends GetxController {
   Rx<TextEditingController> nameController = TextEditingController().obs;
@@ -70,11 +69,11 @@ class UpdateProfileScreenController extends GetxController {
 
   isProfileUpdate() {
     if (nameController.value.text.trim().isEmpty) {
-      AppAlert.showSnackBar(Get.context!, 'Please enter your name');
+      AppAlertBase.showSnackBar(Get.context!, 'Please enter your name');
     } else if (emailController.value.text.trim().isEmpty) {
-      AppAlert.showSnackBar(Get.context!, sUsernameHint.tr);
+      AppAlertBase.showSnackBar(Get.context!, sUsernameHint.tr);
     } else if (AppUtils.isValidEmail(emailController.value.text.trim())) {
-      AppAlert.showSnackBar(Get.context!, sUsernameErrorValid.tr);
+      AppAlertBase.showSnackBar(Get.context!, sUsernameErrorValid.tr);
     } else {
       profileUpdateApiCall();
     }
@@ -94,17 +93,17 @@ class UpdateProfileScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           UserUpdateResponse mUserUpdateResponse = mWebResponseSuccess.data;
           if (mUserUpdateResponse.statusCode == WebConstants.statusCode200) {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mUserUpdateResponse.statusMessage ?? "");
             await getUserDetails();
             mProfile.value = !mProfile.value;
           } else {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mUserUpdateResponse.statusMessage ?? "");
           }
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
@@ -113,14 +112,14 @@ class UpdateProfileScreenController extends GetxController {
   isUpdateAddress(String type) {
     if (type == "0") {
       if (addressController1.value.text.trim().isEmpty) {
-        AppAlert.showSnackBar(Get.context!, 'Please enter your home address');
+        AppAlertBase.showSnackBar(Get.context!, 'Please enter your home address');
         return;
       }
       addressUpdateApiCall(
           mAddresses1.value, addressController1.value.text.trim());
     } else {
       if (addressController2.value.text.trim().isEmpty) {
-        AppAlert.showSnackBar(Get.context!, 'Please enter your office address');
+        AppAlertBase.showSnackBar(Get.context!, 'Please enter your office address');
         return;
       }
       addressUpdateApiCall(
@@ -144,7 +143,7 @@ class UpdateProfileScreenController extends GetxController {
               mWebResponseSuccess.data;
           if (mUserUpdateAddressResponse.statusCode ==
               WebConstants.statusCode200) {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mUserUpdateAddressResponse.statusMessage ?? "");
             await getUserDetails();
             if ((value.addressType ?? 0) == 0) {
@@ -153,12 +152,12 @@ class UpdateProfileScreenController extends GetxController {
               mAddress2.value = !mAddress2.value;
             }
           } else {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mUserUpdateAddressResponse.statusMessage ?? "");
           }
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
@@ -185,7 +184,7 @@ class UpdateProfileScreenController extends GetxController {
           attachmentPath.value = filePath;
           await getUserDetails();
         } else {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
           if (mWebResponseSuccess.statusCode == WebConstants.statusCode401) {
             logout();

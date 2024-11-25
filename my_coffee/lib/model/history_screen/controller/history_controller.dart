@@ -1,38 +1,36 @@
 import 'dart:convert';
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/data/mode/get_item_details/get_item_details_request.dart';
+import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
+import 'package:f_b_base/data/mode/get_order_history/get_order_history_request.dart';
+import 'package:f_b_base/data/mode/get_order_history/order_history_response.dart';
+import 'package:f_b_base/data/mode/order_place/order_place_request.dart';
+import 'package:f_b_base/data/mode/order_place/order_place_share.dart';
+import 'package:f_b_base/data/mode/payment_type/payment_type_request.dart';
+import 'package:f_b_base/data/mode/payment_type/payment_type_response.dart';
+import 'package:f_b_base/data/mode/update_payment_status/update_payment_status_request.dart';
+import 'package:f_b_base/data/mode/user_details/user_details_response.dart';
+import 'package:f_b_base/data/remote/api_call/order/order_api.dart';
+import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/date_format.dart';
+import 'package:f_b_base/utils/network_utils.dart';
+import 'package:f_b_base/utils/num_utils.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-import '../../../alert/app_alert.dart';
-import '../../../constants/message_constants.dart';
-import '../../../constants/web_constants.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/add_cart/add_cart.dart';
-import '../../../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
-import '../../../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
-import '../../../data/mode/get_item_details/get_item_details_request.dart';
-import '../../../data/mode/get_item_details/get_item_details_response.dart';
-import '../../../data/mode/get_order_history/get_order_history_request.dart';
-import '../../../data/mode/get_order_history/order_history_response.dart';
-import '../../../data/mode/order_place/order_place_request.dart';
-import '../../../data/mode/order_place/order_place_share.dart';
-import '../../../data/mode/payment_type/payment_type_request.dart';
-import '../../../data/mode/payment_type/payment_type_response.dart';
-import '../../../data/mode/senang_pay_payment/senang_pay_service.dart';
-import '../../../data/mode/update_payment_status/update_payment_status_request.dart';
-import '../../../data/mode/user_details/user_details_response.dart';
-import '../../../data/remote/api_call/order/order_api.dart';
-import '../../../data/remote/api_call/product_api/product_api.dart';
-import '../../../data/remote/web_response.dart';
-import '../../../lang/translation_service_key.dart';
-import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
-import '../../../utils/date_format.dart';
-import '../../../utils/network_utils.dart';
-import '../../../utils/num_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
-import '../../order_confirmation/view/payment_method/payment_method_view.dart';
-import '../view/payment_method/payment_history_method_view.dart';
+import '../../senang_pay_payment/mode/senang_pay_payment/senang_pay_service.dart';
 
 class HistoryScreenController extends GetxController {
   DashboardScreenController mDashboardScreenController =
@@ -101,12 +99,12 @@ class HistoryScreenController extends GetxController {
           mOrderHistoryResponseItemData.refresh();
         } else {
           showValue.value = 'Internal server error';
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
         showValue.value = MessageConstants.noInternetConnection;
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
@@ -118,7 +116,7 @@ class HistoryScreenController extends GetxController {
     ///get data
     OrderHistoryResponseItemData mOrderHistoryResponse =
         mOrderHistoryResponseItemData.value[index];
-    AppAlert.showProgressDialog(Get.context!);
+    AppAlertBase.showProgressDialog(Get.context!);
     mAddCartModel.value = AddCartModel();
     await getGetAllBranchesApi(mOrderHistoryResponse.branchName ?? '',
         mOrderHistoryResponse.branchIDF ?? '');
@@ -131,7 +129,7 @@ class HistoryScreenController extends GetxController {
         ((mOrderHistoryResponse.orderType ?? 1) == 1) ? 'Dine' : 'Take';
     mAddCartModel.value.sOrderDateTime = mOrderHistoryResponse.orderDate ?? '';
     mAddCartModel.value.mOrderHistoryResponseItemData = mOrderHistoryResponse;
-    AppAlert.hideLoadingDialog(Get.context!);
+    AppAlertBase.hideLoadingDialog(Get.context!);
     if ((mAddCartModel.value.mItems ?? []).length ==
         (mOrderHistoryResponse.orderMenu ?? []).length) {
       Get.toNamed(RouteConstants.rOrderHistoryScreen,
@@ -167,11 +165,11 @@ class HistoryScreenController extends GetxController {
             orElse: () => GetAllBranchesListData(),
           );
         } else {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, 'Sorry Restaurant Branches Not found');
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
@@ -248,11 +246,11 @@ class HistoryScreenController extends GetxController {
             mAddCartModel.value.mItems?.add(mItemsData);
           }
         } else {
-          // AppAlert.showSnackBar(
+          // AppAlertBase.showSnackBar(
           //     Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
@@ -263,7 +261,7 @@ class HistoryScreenController extends GetxController {
   //   if(paymentTypeList.value.isEmpty){
   //     await getPaymentTypeApi();
   //   }
-  //   await AppAlert.showView(Get.context!,  PaymentHistoryMethodView(),
+  //   await AppAlertBase.showView(Get.context!,  PaymentHistoryMethodView(),
   //       barrierDismissible: true);
   //
   // }
@@ -296,11 +294,11 @@ class HistoryScreenController extends GetxController {
           paymentTypeList.addAll(mPaymentTypeResponse.data ?? []);
           paymentTypeList.refresh();
         } else {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
@@ -342,13 +340,13 @@ class HistoryScreenController extends GetxController {
       bFlagLoad.value = false;
       if (value.toString().toUpperCase().contains('declined'.toUpperCase()) ||
           value.toString().toUpperCase() == 'null'.toUpperCase()) {
-        // if (value.toString().toUpperCase().contains('declined'.toUpperCase())) {
-        //   print("####### ${value}");
-        //   print("####### ${value.split('-')[1]}");
-        // }
-        AppAlert.showCustomDialogOk(Get.context!, sPaymentDeclined.tr,
-            sPaymentDeclinedMessage.tr, () {},
-            rightText: 'Ok');
+        if(value.toString().toUpperCase().contains('declined'.toUpperCase())){
+          await getUpdatePaymentDeclinedApi(mOrderHistoryResponse, value);
+        }else {
+          AppAlertBase.showCustomDialogOk(Get.context!, sPaymentDeclined.tr,
+              sPaymentDeclinedMessage.tr, () {},
+              rightText: 'Ok');
+        }
       } else if (value
           .toString()
           .toUpperCase()
@@ -388,17 +386,60 @@ class HistoryScreenController extends GetxController {
         WebResponseSuccess mWebResponseSuccess =
             await localApi.postUpdatePaymentStatus(mUpdatePaymentStatusRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
-          AppAlert.showCustomDialogOk(
+          AppAlertBase.showCustomDialogOk(
               Get.context!, sPaymentSuccessful.tr, sPaymentSuccessfulMessage.tr,
               () {
             onRefresh();
           }, rightText: 'Ok');
         } else {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
+            Get.context!, MessageConstants.noInternetConnection);
+      }
+    });
+  }
+
+  getUpdatePaymentDeclinedApi(
+      OrderHistoryResponseItemData mOrderHistoryResponse, String value) async {
+    await NetworkUtils()
+        .checkInternetConnection()
+        .then((isInternetAvailable) async {
+      if (isInternetAvailable) {
+        UpdatePaymentStatusRequest mUpdatePaymentStatusRequest =
+        UpdatePaymentStatusRequest(
+            restaurantIDF: mOrderHistoryResponse.restaurantIDF,
+            userID: mOrderHistoryResponse.userIDF,
+            orderID: mOrderHistoryResponse.orderIDP,
+            paymentGatewayIDF: mOrderHistoryResponse.paymentGatewayID,
+            paymentGatewayNo:
+            (mOrderHistoryResponse.paymentMethod ?? 0).toString(),
+            paymentGatewaySettingIDF:
+            mOrderHistoryResponse.paymentGatewaySettingID,
+            paymentStatus: 'P',
+            responseCode: '400',
+            responseData: value,
+            paidAmount: mOrderHistoryResponse.totalAmount,
+            responseMessage: 'Transaction Declined',
+            transactionID: (value.isEmpty || value.split('-').isEmpty)
+                ? ''
+                : value.split('-')[1]);
+        debugPrint(
+            "mUpdatePaymentStatusRequest ${jsonEncode(mUpdatePaymentStatusRequest)}");
+        WebResponseSuccess mWebResponseSuccess =
+        await localApi.postUpdatePaymentStatus(mUpdatePaymentStatusRequest);
+        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+          AppAlertBase.showCustomDialogOk(Get.context!, sPaymentDeclined.tr,
+              sPaymentDeclinedMessage.tr, () {},
+              rightText: 'Ok');
+        } else {
+          AppAlertBase.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+        }
+      } else {
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });

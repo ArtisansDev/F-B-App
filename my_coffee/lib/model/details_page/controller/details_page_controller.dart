@@ -1,30 +1,21 @@
 // ignore_for_file: prefer_interpolation_to_compose_strings
 
-import 'dart:convert';
 
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/mode/get_item_details/get_item_details_request.dart';
+import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
+import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/network_utils.dart';
+import 'package:f_b_base/utils/num_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
-
-import '../../../alert/app_alert.dart';
 import '../../../common/tag_view/tag_modifier_date_view.dart';
 import '../../../common/tag_view/tag_variant_date_view.dart';
-import '../../../common/tag_view/tag_view.dart';
-import '../../../constants/message_constants.dart';
-import '../../../constants/web_constants.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/add_cart/add_cart.dart';
-import '../../../data/mode/add_cart_details/add_cart_details.dart';
-import '../../../data/mode/get_item_details/get_item_details_request.dart';
-import '../../../data/mode/get_item_details/get_item_details_response.dart';
-import '../../../data/remote/api_call/api_impl.dart';
-import '../../../data/remote/api_call/product_api/product_api.dart';
-import '../../../data/remote/web_response.dart';
-import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
-import '../../../utils/network_utils.dart';
-import '../../../utils/num_utils.dart';
 import '../../../utils/order_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 
@@ -146,11 +137,11 @@ class DetailsPageScreenController extends GetxController {
             }
           }
         } else {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });

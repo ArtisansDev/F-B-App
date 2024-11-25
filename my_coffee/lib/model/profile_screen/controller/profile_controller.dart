@@ -1,13 +1,13 @@
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/data/mode/user_details/user_details_response.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-import 'package:my_coffee/alert/app_alert.dart';
 import 'package:my_coffee/constants/logout_expired.dart';
 
 import '../../../constants/get_user_details.dart';
-import '../../../constants/message_constants.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/add_cart/add_cart.dart';
-import '../../../data/mode/user_details/user_details_response.dart';
 import '../../../routes/route_constants.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 
@@ -53,7 +53,7 @@ class ProfileScreenController extends GetxController {
         if ((mAddCartModel.value.mItems ?? []).isNotEmpty) {
           Get.toNamed(RouteConstants.rOrderConfirmationScreen);
         } else {
-          AppAlert.showSnackBar(Get.context!, 'No item add in your cart');
+          AppAlertBase.showSnackBar(Get.context!, 'No item add in your cart');
         }
         break;
       case 'Terms of Use':
@@ -67,13 +67,13 @@ class ProfileScreenController extends GetxController {
         );
         break;
       case 'Logout':
-        AppAlert.showCustomDialogYesNoLogout(
+        AppAlertBase.showCustomDialogYesNoLogout(
             Get.context!, 'Logout!', MessageConstants.wLogoutMessage, () {
           logout();
         });
         break;
       case 'Delete Account':
-        AppAlert.showCustomDialogYesNoLogout(Get.context!, 'Delete Account!',
+        AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Delete Account!',
             MessageConstants.wDeleteAccountMessage, () async {
           await getUserDelete();
         }, rightText: 'Delete');

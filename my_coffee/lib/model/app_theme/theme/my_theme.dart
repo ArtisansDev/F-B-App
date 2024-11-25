@@ -1,9 +1,9 @@
+import 'package:f_b_base/constants/color_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import '../../../constants/color_constants.dart';
 
 ThemeData myLightTheme(BuildContext context) {
   return ThemeData(

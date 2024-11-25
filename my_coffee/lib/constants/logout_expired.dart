@@ -8,10 +8,9 @@
  * Ticket       : 
  */
 
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
 import 'package:get/get.dart';
-import '../data/local/shared_prefs/shared_prefs.dart';
 import '../model/dashboard_screen/controller/dashboard_controller.dart';
-import '../routes/route_constants.dart';
 
 logout() async {
   await clearToken();

@@ -8,13 +8,13 @@
  * Ticket       : 
  */
 
+import 'package:f_b_base/common/appbars_common.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import '../../common/appbars_common.dart';
-import '../../lang/translation_service_key.dart';
 import 'controller/senang_pay_payment_controller.dart';
 
 class SenangPayPayment extends GetView<SenangPayPaymentController> {
@@ -30,7 +30,7 @@ class SenangPayPayment extends GetView<SenangPayPaymentController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBarsCommon.appBarBack(title: sSenangPayPayment.tr),
+        appBar: AppBarsCommon.appBarBackPayment(title: sSenangPayPayment.tr),
         body: FocusDetector(
             onVisibilityGained: () {},
             onVisibilityLost: () {},

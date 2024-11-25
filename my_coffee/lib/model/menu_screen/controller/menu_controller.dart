@@ -1,24 +1,22 @@
-import 'package:flutter/material.dart';
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/data/mode/get_category/get_category_request.dart';
+import 'package:f_b_base/data/mode/get_category/get_category_response.dart';
+import 'package:f_b_base/data/mode/get_category_item/get_category_item_request.dart';
+import 'package:f_b_base/data/mode/get_category_item/get_category_item_response.dart';
+import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/network_utils.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import '../../../alert/app_alert.dart';
-import '../../../constants/message_constants.dart';
-import '../../../constants/web_constants.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/add_cart/add_cart.dart';
-import '../../../data/mode/get_category/get_category_request.dart';
-import '../../../data/mode/get_category/get_category_response.dart';
-import '../../../data/mode/get_category_item/get_category_item_request.dart';
-import '../../../data/mode/get_category_item/get_category_item_response.dart';
-import '../../../data/remote/api_call/api_impl.dart';
-import '../../../data/remote/api_call/product_api/product_api.dart';
-import '../../../data/remote/web_response.dart';
-import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
-import '../../../utils/network_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 import '../../location_list_screen/controller/location_list_controller.dart';
 
@@ -96,7 +94,7 @@ class MenuScreenController extends GetxController {
   changeLocation() async {
     AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
     if ((mAddCartModel.mItems ?? []).isNotEmpty) {
-      AppAlert.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
+      AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
           'This action will clear the items in your current basket. Do you want to proceed?',
           () async {
         callLocation();
@@ -149,11 +147,11 @@ class MenuScreenController extends GetxController {
             getCategoryItemApi();
           }
         } else {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
@@ -193,11 +191,11 @@ class MenuScreenController extends GetxController {
               : "";
           mGetCategoryListData.refresh();
         } else {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });

@@ -1,29 +1,23 @@
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
+import 'package:f_b_base/data/mode/order_place/order_place_request.dart';
+import 'package:f_b_base/data/mode/order_place/process_order_response.dart';
+import 'package:f_b_base/data/remote/api_call/order/order_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/date_format.dart';
+import 'package:f_b_base/utils/network_utils.dart';
+import 'package:f_b_base/utils/tracking_order_id.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
-
-import '../../../alert/app_alert.dart';
-import '../../../constants/message_constants.dart';
-import '../../../constants/web_constants.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/add_cart/add_cart.dart';
-import '../../../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
-import '../../../data/mode/get_item_details/get_item_details_response.dart';
-import '../../../data/mode/order_place/order_place_request.dart';
-import '../../../data/mode/order_place/process_order_response.dart';
-import '../../../data/mode/user_details/user_details_response.dart';
-import '../../../data/remote/api_call/api_impl.dart';
-import '../../../data/remote/api_call/order/order_api.dart';
-import '../../../data/remote/web_response.dart';
-import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
-import '../../../utils/date_format.dart';
-import '../../../utils/network_utils.dart';
-import '../../../utils/num_utils.dart';
-import '../../../utils/tracking_order_id.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 
 class ViewOrderHistoryController extends GetxController {
@@ -186,7 +180,7 @@ class ViewOrderHistoryController extends GetxController {
     AddCartModel mSharedPrefsAddCartModel =
         await SharedPrefs().getAddCartData();
     if ((mSharedPrefsAddCartModel.mItems ?? []).isNotEmpty) {
-      AppAlert.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
+      AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
           'This action will clear the items in your current basket. Do you want to proceed?',
           () async {
         mDashboardScreenController.selectGetAllBranchesListData.value =
@@ -232,7 +226,7 @@ class ViewOrderHistoryController extends GetxController {
             await localApi.postOrderPlace(mOrderPlaceRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           ProcessOrderResponse mProcessOrderResponse = mWebResponseSuccess.data;
-          AppAlert.showSnackBar(Get.context!, 'Order place successfully');
+          AppAlertBase.showSnackBar(Get.context!, 'Order place successfully');
           await SharedPrefs().setAddCartData('');
           mDashboardScreenController.selectedIndex.value = 2;
           mDashboardScreenController.selectTitle(2);
@@ -242,11 +236,11 @@ class ViewOrderHistoryController extends GetxController {
                     .rDashboardScreen; // Goes back until reaching '/dashboard'
           });
         } else {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });

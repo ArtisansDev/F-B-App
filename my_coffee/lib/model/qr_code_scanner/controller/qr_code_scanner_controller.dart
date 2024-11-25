@@ -1,12 +1,13 @@
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_coffee/alert/app_alert.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/add_cart/add_cart.dart';
+import '../../../alert/app_alert.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 import '../../location_list_screen/controller/location_list_controller.dart';
 
@@ -45,7 +46,7 @@ class QrCodeScannerController extends GetxController {
 
   void selectTable() async {
     if (tableNumberController.value.text.isEmpty) {
-      AppAlert.showSnackBar(Get.context!, 'Please select the table number');
+      AppAlertBase.showSnackBar(Get.context!, 'Please select the table number');
     } else {
       isCheckTable();
     }
@@ -58,7 +59,7 @@ class QrCodeScannerController extends GetxController {
             .toString()
             .trim()
             .contains(tableNumberController.value.text)) {
-      AppAlert.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
+      AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
           'This action will clear the items in your current basket. Do you want to proceed?',
           () async {
         await SharedPrefs().setAddCartData('');
@@ -76,7 +77,7 @@ class QrCodeScannerController extends GetxController {
   void changeLocation() async {
     AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
     if ((mAddCartModel.mItems ?? []).isNotEmpty) {
-      AppAlert.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
+      AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
           'This action will clear the items in your current basket. Do you want to proceed?',
           () async {
         await SharedPrefs().setAddCartData('');

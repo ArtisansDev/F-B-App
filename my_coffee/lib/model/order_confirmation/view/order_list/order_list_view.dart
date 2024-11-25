@@ -10,16 +10,14 @@
  * Ticket       : 
  */
 
+import 'package:f_b_base/common/custom_image.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/image_assets_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import '../../../../common/custom_image.dart';
-import '../../../../constants/color_constants.dart';
-import '../../../../constants/image_assets_constants.dart';
-import '../../../../constants/text_styles_constants.dart';
-import '../../../../data/mode/get_item_details/get_item_details_response.dart';
-import '../../../../utils/open_url.dart';
 import '../../controller/order_confirmation_controller.dart';
 
 class OrderListView extends StatelessWidget {

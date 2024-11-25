@@ -1,17 +1,10 @@
+import 'package:f_b_base/common/smart_footer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
-import 'package:my_coffee/constants/color_constants.dart';
-import 'package:my_coffee/constants/text_styles_constants.dart';
-import 'package:my_coffee/utils/date_format.dart';
-import 'package:my_coffee/utils/num_utils.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import '../../../common/button_constants.dart';
-import '../../../common/smart_footer.dart';
-import '../../../data/mode/get_order_history/order_history_response.dart';
-import '../../../lang/translation_service_key.dart';
 import '../controller/history_controller.dart';
 import 'history_row.dart';
 
@@ -70,7 +63,7 @@ class HistoryScreen extends GetView<HistoryScreenController> {
         ? Container(
             height: 80.h,
             alignment: Alignment.center,
-            child: Text('You don\'t have any history'),
+            child: const Text('You don\'t have any history'),
           )
         : ListView.builder(
             shrinkWrap: true,

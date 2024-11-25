@@ -1,12 +1,12 @@
+import 'package:f_b_base/common/button_constants.dart';
+import 'package:f_b_base/common/create_card_view.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/image_assets_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import '../../../../../common/create_card_view.dart';
-import '../../../../../constants/color_constants.dart';
-import '../../../../../constants/image_assets_constants.dart';
-import '../../../../../constants/text_styles_constants.dart';
-import '../../../../common/button_constants.dart';
-import '../../../../lang/translation_service_key.dart';
 import '../../controller/view_order_history_controller.dart';
 
 class FrequentlyItemHistoryRow extends StatelessWidget {

@@ -1,9 +1,9 @@
+import 'package:f_b_base/common/appbars_common.dart';
+import 'package:f_b_base/constants/image_assets_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_coffee/constants/image_assets_constants.dart';
 import 'package:my_coffee/model/dashboard_screen/view/dashboard_view.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import '../../../common/appbars_common.dart';
 import '../controller/dashboard_controller.dart';
 import 'dashboard_navigation.dart';
 

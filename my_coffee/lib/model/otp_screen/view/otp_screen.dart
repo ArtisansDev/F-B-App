@@ -1,17 +1,17 @@
+import 'package:f_b_base/common/appbars_common.dart';
+import 'package:f_b_base/common/button_constants.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/image_assets_constants.dart';
+import 'package:f_b_base/constants/pattern_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
+import 'package:f_b_base/utils/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:my_coffee/constants/text_styles_constants.dart';
-import '../../../common/appbars_common.dart';
-import '../../../common/button_constants.dart';
-import '../../../constants/color_constants.dart';
-import '../../../constants/image_assets_constants.dart';
-import '../../../constants/pattern_constants.dart';
-import '../../../lang/translation_service_key.dart';
-import '../../../utils/app_utils.dart';
 import '../controller/otp_controller.dart';
 
 class OtpScreen extends GetView<OtpScreenController> {

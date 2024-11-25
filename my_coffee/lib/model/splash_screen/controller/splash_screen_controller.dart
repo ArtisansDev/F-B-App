@@ -1,19 +1,18 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
+import 'package:f_b_base/data/remote/api_call/general_api/general_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/network_utils.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-
-import '../../../alert/app_alert.dart';
-import '../../../constants/message_constants.dart';
-import '../../../constants/web_constants.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/get_general_setting/get_general_setting_response.dart';
-import '../../../data/remote/api_call/general_api/general_api.dart';
-import '../../../data/remote/web_response.dart';
-import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
-import '../../../utils/network_utils.dart';
 
 class SplashScreenController extends GetxController {
   RxString version = ''.obs;
@@ -75,20 +74,20 @@ class SplashScreenController extends GetxController {
                 RouteConstants.rDashboardScreen,
               );
               // }else {
-              //   AppAlert.showSnackBar(
+              //   AppAlertBase.showSnackBar(
               //       Get.context!,  value);
               // }
             } else {
-              AppAlert.showSnackBar(
+              AppAlertBase.showSnackBar(
                   Get.context!, mGetGeneralSettingResponse.statusMessage ?? "");
             }
           } else {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mGetGeneralSettingResponse.statusMessage ?? "");
           }
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });

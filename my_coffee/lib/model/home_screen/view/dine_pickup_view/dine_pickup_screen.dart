@@ -1,9 +1,9 @@
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/image_assets_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import '../../../../constants/color_constants.dart';
-import '../../../../constants/image_assets_constants.dart';
-import '../../../../constants/text_styles_constants.dart';
 import '../../controller/home_controller.dart';
 
 class DinePickupScreen extends StatelessWidget {

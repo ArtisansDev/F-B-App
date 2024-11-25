@@ -1,18 +1,17 @@
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/mode/login/login_request.dart';
+import 'package:f_b_base/data/mode/login/login_response.dart';
+import 'package:f_b_base/data/remote/api_call/user_authentication/user_authentication_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/network_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../alert/app_alert.dart';
-import '../../../constants/message_constants.dart';
-import '../../../constants/web_constants.dart';
-import '../../../data/mode/login/login_request.dart';
-import '../../../data/mode/login/login_response.dart';
-import '../../../data/remote/api_call/api_impl.dart';
-import '../../../data/remote/api_call/user_authentication/user_authentication_api.dart';
-import '../../../data/remote/web_response.dart';
-import '../../../lang/translation_service_key.dart';
-import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
-import '../../../utils/network_utils.dart';
 
 class LoginScreenController extends GetxController {
   Rx<TextEditingController> mobileNumberController =
@@ -22,9 +21,9 @@ class LoginScreenController extends GetxController {
   final localApi = locator.get<UserAuthenticationApi>();
   isLogin(String sValue) {
     if (mobileNumberController.value.text.trim().isEmpty) {
-      AppAlert.showSnackBar(Get.context!, sPleaseEnterMobileNumber.tr);
+      AppAlertBase.showSnackBar(Get.context!, sPleaseEnterMobileNumber.tr);
     } else if (mobileNumberController.value.text.trim().length < 9) {
-      AppAlert.showSnackBar(Get.context!, sPleaseEnterValidMobileNumber.tr);
+      AppAlertBase.showSnackBar(Get.context!, sPleaseEnterValidMobileNumber.tr);
     } else {
       loginApiCall();
     }
@@ -41,17 +40,17 @@ class LoginScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           LoginResponse mLoginResponse = mWebResponseSuccess.data;
           if (mLoginResponse.statusCode == WebConstants.statusCode200) {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mLoginResponse.statusMessage ?? "");
 
             Get.toNamed(RouteConstants.rOtpScreen);
           } else {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mLoginResponse.statusMessage ?? "");
           }
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });

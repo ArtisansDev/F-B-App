@@ -1,18 +1,14 @@
 // ignore_for_file: library_private_types_in_public_api
 
+import 'package:f_b_base/common/appbars_common.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/image_assets_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
-import 'package:my_coffee/common/appbars_common.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:my_coffee/constants/text_styles_constants.dart';
-import 'package:my_coffee/routes/route_constants.dart';
-
-import '../../../constants/color_constants.dart';
-import '../../../constants/image_assets_constants.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../lang/translation_service_key.dart';
-import '../../../utils/network_utils.dart';
 import '../controller/splash_screen_controller.dart';
 
 class SplashScreen extends StatefulWidget {

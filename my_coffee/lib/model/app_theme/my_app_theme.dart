@@ -1,18 +1,16 @@
 // ignore_for_file: depend_on_referenced_packages, deprecated_member_use
 
+import 'package:f_b_base/lang/translation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import '../../common/appbars_common.dart';
 import '../../common/view_document/view_doument.dart';
-import '../../lang/translation_service.dart';
 import '../../routes/route_constants.dart';
 import '../about_us/view/about_us_screen.dart';
 import '../dashboard_screen/view/dashboard_screen.dart';
 import '../details_edit_page/view/details_edit_page_screen.dart';
 import '../details_page/view/details_page_screen.dart';
-import '../history_screen/view/history_screen.dart';
 import '../introduction_screen/view/introduction_screen.dart';
 import '../login_screen/view/login_screen.dart';
 import '../order_confirmation/view/order_confirmation_screen.dart';

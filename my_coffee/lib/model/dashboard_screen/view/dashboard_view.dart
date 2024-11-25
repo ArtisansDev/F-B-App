@@ -12,14 +12,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
-
-import '../../../common/custom_image.dart';
-import '../../../constants/color_constants.dart';
-import '../../../constants/image_assets_constants.dart';
-import '../../../constants/text_styles_constants.dart';
-import '../../../lang/translation_service_key.dart';
-import '../../login_screen/controller/login_controller.dart';
 import '../controller/dashboard_controller.dart';
 
 class DashboardViewScreen extends StatelessWidget {

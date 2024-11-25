@@ -9,23 +9,20 @@
  */
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
+import 'package:f_b_base/common/appbars_common.dart';
+import 'package:f_b_base/common/button_constants.dart';
+import 'package:f_b_base/common/text_input_widget.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/pattern_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
-import 'package:my_coffee/constants/color_constants.dart';
-import 'package:my_coffee/constants/text_styles_constants.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import '../../../common/appbars_common.dart';
-import '../../../common/button_constants.dart';
-import '../../../common/custom_image.dart';
-import '../../../common/text_input_widget.dart';
-import '../../../constants/image_assets_constants.dart';
-import '../../../constants/pattern_constants.dart';
-import '../../../lang/translation_service_key.dart';
 import '../controller/qr_code_scanner_controller.dart';
 
 class QrCodeScannerView extends GetView<QrCodeScannerController> {

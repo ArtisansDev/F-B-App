@@ -10,21 +10,20 @@
 
 import 'dart:convert';
 
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/user_delete/user_delete_request.dart';
+import 'package:f_b_base/data/mode/user_delete/user_delete_response.dart';
+import 'package:f_b_base/data/mode/user_details/user_details_request.dart';
+import 'package:f_b_base/data/mode/user_details/user_details_response.dart';
+import 'package:f_b_base/data/remote/api_call/user_authentication/user_authentication_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/network_utils.dart';
 import 'package:get/get.dart';
 import 'package:my_coffee/constants/logout_expired.dart';
-import 'package:my_coffee/constants/web_constants.dart';
-import '../alert/app_alert.dart';
-import '../data/local/shared_prefs/shared_prefs.dart';
-import '../data/mode/user_delete/user_delete_request.dart';
-import '../data/mode/user_delete/user_delete_response.dart';
-import '../data/mode/user_details/user_details_request.dart';
-import '../data/mode/user_details/user_details_response.dart';
-import '../data/remote/api_call/api_impl.dart';
-import '../data/remote/api_call/user_authentication/user_authentication_api.dart';
-import '../data/remote/web_response.dart';
-import '../locator.dart';
-import '../utils/network_utils.dart';
-import 'message_constants.dart';
 
 Future<bool> getUserDetails() async {
   final localApi = locator.get<UserAuthenticationApi>();
@@ -46,13 +45,13 @@ Future<bool> getUserDetails() async {
           logout();
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, mWebResponseSuccess.statusMessage ?? '');
         logout();
       }
       return false;
     } else {
-      AppAlert.showSnackBar(
+      AppAlertBase.showSnackBar(
           Get.context!, MessageConstants.noInternetConnection);
       return false;
     }
@@ -72,7 +71,7 @@ Future<bool> getUserDelete() async {
       if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
         UserDeleteResponse mUserDeleteResponse = mWebResponseSuccess.data;
         if (mUserDeleteResponse.statusCode == WebConstants.statusCode200) {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mUserDeleteResponse.statusMessage ?? '');
           logout();
           return true;
@@ -80,13 +79,13 @@ Future<bool> getUserDelete() async {
           logout();
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, mWebResponseSuccess.statusMessage ?? '');
         logout();
       }
       return false;
     } else {
-      AppAlert.showSnackBar(
+      AppAlertBase.showSnackBar(
           Get.context!, MessageConstants.noInternetConnection);
       return false;
     }

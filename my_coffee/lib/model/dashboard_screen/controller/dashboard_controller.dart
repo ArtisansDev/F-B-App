@@ -1,16 +1,15 @@
 import 'dart:convert';
 
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:my_coffee/model/profile_screen/view/profile_screen.dart';
 
 import '../../../alert/app_alert.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/add_cart/add_cart.dart';
-import '../../../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
-import '../../../lang/translation_service_key.dart';
 import '../../../routes/route_constants.dart';
 import '../../history_screen/view/history_screen.dart';
 import '../../home_screen/controller/home_controller.dart';
@@ -21,8 +20,6 @@ import '../../menu_screen/view/menu_screen.dart';
 import '../../profile_screen/controller/profile_controller.dart';
 import '../../qr_code_scanner/controller/qr_code_scanner_controller.dart';
 import '../../rewards_screen/controller/rewards_controller.dart';
-import '../../rewards_screen/view/rewards_screen.dart';
-import '../../shopping_card_screen/controller/shoping_screen_controller.dart';
 
 class DashboardScreenController extends GetxController {
   RxInt selectedIndex = 0.obs;
@@ -71,10 +68,6 @@ class DashboardScreenController extends GetxController {
         if (Get.isRegistered<HomeScreenController>()) {
           Get.find<HomeScreenController>().dispose();
           Get.delete<HomeScreenController>();
-        }
-        if (Get.isRegistered<ShoppingScreenController>()) {
-          Get.find<ShoppingScreenController>().dispose();
-          Get.delete<ShoppingScreenController>();
         }
       }
       selectedIndex.value = value;
@@ -170,7 +163,7 @@ class DashboardScreenController extends GetxController {
         if ((selectGetAllBranchesListData.value.branchName ?? '').isEmpty) {
           AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
           if ((mAddCartModel.mItems ?? []).isNotEmpty) {
-            AppAlert.showCustomDialogYesNoLogout(
+            AppAlertBase.showCustomDialogYesNoLogout(
                 Get.context!,
                 'Proceed to Change?',
                 'This action will clear the items in your current basket. Do you want to proceed?',
@@ -206,7 +199,7 @@ class DashboardScreenController extends GetxController {
             .setAddCartData(jsonEncode(AddCartModel(sType: title)));
         return true;
       } else {
-        AppAlert.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
+        AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
             'This action will clear the items in your current basket. Do you want to proceed?',
             () async {
           await SharedPrefs()
@@ -225,7 +218,7 @@ class DashboardScreenController extends GetxController {
   }
 
   showDialogPicDine() async {
-    var value = await AppAlert.showCustomDialogPicDine(Get.context!);
+    var value = await AppAlertBase.showCustomDialogPicDine(Get.context!);
     return value;
   }
 

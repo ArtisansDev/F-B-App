@@ -1,16 +1,16 @@
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/common/create_card_view.dart';
+import 'package:f_b_base/common/custom_image.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/image_assets_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/data/mode/get_best_seller_item/get_best_seller_item_response.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../alert/app_alert.dart';
-import '../../../../common/create_card_view.dart';
-import '../../../../common/custom_image.dart';
-import '../../../../constants/color_constants.dart';
-import '../../../../constants/image_assets_constants.dart';
-import '../../../../constants/text_styles_constants.dart';
-import '../../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../../data/mode/add_cart/add_cart.dart';
-import '../../../../data/mode/get_best_seller_item/get_best_seller_item_response.dart';
-import '../../../dashboard_screen/controller/dashboard_controller.dart';
 import '../../../location_list_screen/controller/location_list_controller.dart';
 import '../../controller/home_controller.dart';
 
@@ -34,7 +34,7 @@ class BestItemRow extends StatelessWidget {
             .isEmpty) {
           AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
           if ((mAddCartModel.mItems ?? []).isNotEmpty) {
-            AppAlert.showCustomDialogYesNoLogout(
+            AppAlertBase.showCustomDialogYesNoLogout(
                 Get.context!,
                 'Proceed to Change?',
                 'This action will clear the items in your current basket. Do you want to proceed?',
@@ -88,35 +88,9 @@ class BestItemRow extends StatelessWidget {
                             mGetBestSellerItemData.itemImagePath ?? '',
                             ImageAssetsConstants.backLogo,
                             15.8.h)
-
-                        // Image.asset(
-                        //   index % 5 == 0
-                        //       ? ImageAssetsConstants.coffee
-                        //       : index % 5 == 1
-                        //           ? ImageAssetsConstants.beakFast1
-                        //           : index % 5 == 2
-                        //               ? ImageAssetsConstants.beakFast2
-                        //               : index % 5 == 3
-                        //                   ? ImageAssetsConstants.beakFast3
-                        //                   : ImageAssetsConstants.beakFast4,
-                        //   fit: BoxFit.fitHeight,
-                        //   height: 15.3.h,
-                        // )
                         ),
                   ],
                 ),
-                // Container(
-                //   height: 4.h,
-                //   margin: EdgeInsets.only(left: 15.sp, right: 15.sp),
-                //   alignment: Alignment.center,
-                //   child: Text(
-                //     mGetBestSellerItemData.itemName??'',
-                //     textAlign: TextAlign.center,
-                //     maxLines: 2,
-                //     style: getText500(
-                //         size: 14.5.sp, colors: ColorConstants.cAppColorsBlue),
-                //   ),
-                // ),
                 Container(
                   height: 4.32.h,
                   margin:

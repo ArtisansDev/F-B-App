@@ -14,8 +14,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:my_coffee/common/view_document/view_document_model.dart';
-import '../../lang/translation_service_key.dart';
-import '../appbars_common.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 
 class ViewDocument extends StatelessWidget {

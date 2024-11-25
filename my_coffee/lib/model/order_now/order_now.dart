@@ -8,18 +8,17 @@
  * Ticket       : 
  */
 
+import 'package:f_b_base/common/button_constants.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
+import 'package:f_b_base/utils/num_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_utils/get_utils.dart';
-import 'package:my_coffee/constants/color_constants.dart';
-import 'package:my_coffee/constants/text_styles_constants.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import '../../common/button_constants.dart';
-import '../../data/mode/add_cart/add_cart.dart';
-import '../../lang/translation_service_key.dart';
 import '../../routes/route_constants.dart';
-import '../../utils/num_utils.dart';
 
 class OrderNow extends StatelessWidget {
   final AddCartModel mAddCartModel;

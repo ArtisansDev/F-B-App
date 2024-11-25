@@ -1,20 +1,18 @@
 // ignore_for_file: invalid_use_of_protected_member
 
+import 'package:f_b_base/common/custom_image.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/image_assets_constants.dart';
+import 'package:f_b_base/utils/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
 import 'package:my_coffee/model/home_screen/view/top_address_bar/top_address_bar.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../../../common/custom_image.dart';
-import '../../../constants/color_constants.dart';
-import '../../../constants/image_assets_constants.dart';
-import '../../../utils/app_utils.dart';
-import '../../menu_screen/top_address_bar/top_address_bar.dart';
 import '../../order_now/order_now.dart';
 import '../controller/home_controller.dart';
 import 'best_sellers/best_selles_screen.dart';
-import 'button_advertisement/button_advertisement_screen.dart';
 import 'dine_pickup_view/dine_pickup_screen.dart';
 
 class HomeScreen extends GetView<HomeScreenController> {

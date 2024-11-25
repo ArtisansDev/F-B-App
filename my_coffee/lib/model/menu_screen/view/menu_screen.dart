@@ -1,19 +1,13 @@
+import 'package:f_b_base/utils/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:my_coffee/constants/text_styles_constants.dart';
-import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-import '../../../common/custom_image.dart';
-import '../../../constants/color_constants.dart';
-import '../../../constants/image_assets_constants.dart';
-import '../../../utils/app_utils.dart';
 import '../../details_page/controller/details_page_controller.dart';
 import '../../order_confirmation/controller/order_confirmation_controller.dart';
 import '../../order_now/order_now.dart';
 import '../controller/menu_controller.dart';
 import '../item_menu/item_menu_list_screen.dart';
-import '../middle_filter_view/middle_filter_view.dart';
 import '../side_menu/side_menu_list_screen.dart';
 import '../top_address_bar/top_address_bar.dart';
 

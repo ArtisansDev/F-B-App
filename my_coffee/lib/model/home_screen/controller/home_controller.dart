@@ -1,48 +1,29 @@
 import 'dart:async';
 
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/data/mode/get_best_seller_item/get_best_seller_item_request.dart';
+import 'package:f_b_base/data/mode/get_best_seller_item/get_best_seller_item_response.dart';
+import 'package:f_b_base/data/mode/get_dashboard/get_dashboard_request.dart';
+import 'package:f_b_base/data/mode/get_dashboard/get_dashboard_response.dart';
+import 'package:f_b_base/data/remote/api_call/general_api/general_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/network_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../alert/app_alert.dart';
-import '../../../constants/image_assets_constants.dart';
-import '../../../constants/message_constants.dart';
-import '../../../constants/web_constants.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/add_cart/add_cart.dart';
-import '../../../data/mode/get_best_seller_item/get_best_seller_item_request.dart';
-import '../../../data/mode/get_best_seller_item/get_best_seller_item_response.dart';
-import '../../../data/mode/get_dashboard/get_dashboard_request.dart';
-import '../../../data/mode/get_dashboard/get_dashboard_response.dart';
-import '../../../data/remote/api_call/api_impl.dart';
-import '../../../data/remote/api_call/general_api/general_api.dart';
-import '../../../data/remote/web_response.dart';
-import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
-import '../../../utils/network_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 import '../../location_list_screen/controller/location_list_controller.dart';
 
 class HomeScreenController extends GetxController {
-  // RxList<String> banner = [
-  //   ImageAssetsConstants.banner1,
-  //   ImageAssetsConstants.banner2,
-  //   ImageAssetsConstants.banner3,
-  //   ImageAssetsConstants.banner4,
-  //   ImageAssetsConstants.banner5
-  // ].obs;
-
-  // HomeScreenController() {
-  //   isTimerSt();
-  // }
 
   void onChangePage(int value) {
-    // if(value==0){
-    //    sTitle.value = sTitle1.tr;
-    //    sSubTitle.value = sSubTitle1.tr;
-    // }else {
-    //   sTitle.value = sTitle2.tr;
-    //   sSubTitle.value = sSubTitle2.tr;
-    // }
   }
 
   DashboardScreenController mDashboardScreenController =
@@ -124,11 +105,11 @@ class HomeScreenController extends GetxController {
               .addAll(mGetBestSellerItemResponse.data ?? []);
           dataGetBestSellerItemData.refresh();
         } else {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
@@ -162,11 +143,11 @@ class HomeScreenController extends GetxController {
             isTimerSt();
           }
         } else {
-          AppAlert.showSnackBar(
+          AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
@@ -176,7 +157,7 @@ class HomeScreenController extends GetxController {
   changeLocation() async {
     AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
     if ((mAddCartModel.mItems ?? []).isNotEmpty) {
-      AppAlert.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
+      AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
           'This action will clear the items in your current basket. Do you want to proceed?',
           () async {
         await SharedPrefs().setAddCartData('');

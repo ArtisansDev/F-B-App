@@ -1,18 +1,16 @@
+import 'package:f_b_base/common/create_card_view.dart';
+import 'package:f_b_base/common/custom_image.dart';
+import 'package:f_b_base/common/smart_footer.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/image_assets_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/data/mode/get_category/get_category_response.dart';
+import 'package:f_b_base/data/mode/get_category_item/get_category_item_response.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_coffee/model/menu_screen/item_menu/item_menu_row.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-import '../../../common/create_card_view.dart';
-import '../../../common/custom_image.dart';
-import '../../../common/smart_footer.dart';
-import '../../../constants/color_constants.dart';
-import '../../../constants/image_assets_constants.dart';
-import '../../../constants/text_styles_constants.dart';
-import '../../../data/mode/get_category/get_category_response.dart';
-import '../../../data/mode/get_category_item/get_category_item_response.dart';
 import '../controller/menu_controller.dart';
 
 class ItemMenuListScreen extends StatelessWidget {

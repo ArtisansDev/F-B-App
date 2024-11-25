@@ -1,8 +1,6 @@
 // ignore_for_file: depend_on_referenced_packages
 
-import 'dart:convert';
 import 'package:get/get.dart';
-import 'package:crypto/crypto.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
@@ -10,7 +8,8 @@ import 'package:flutter/foundation.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
-import '../../../utils/get_transaction_id.dart';
+import '../mode/senang_pay_payment/senang_pay_service.dart';
+
 
 class SenangPayPaymentController extends GetxController {
   // Rx<SenangPayPaymentModel> mSenangPayPaymentModel =

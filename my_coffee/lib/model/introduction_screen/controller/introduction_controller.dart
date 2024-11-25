@@ -3,25 +3,22 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:f_b_base/alert/app_alert.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
+import 'package:f_b_base/data/remote/api_call/general_api/general_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/get_location.dart';
+import 'package:f_b_base/utils/network_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../../../alert/app_alert.dart';
-import '../../../constants/message_constants.dart';
-import '../../../constants/web_constants.dart';
-import '../../../data/local/shared_prefs/shared_prefs.dart';
-import '../../../data/mode/get_general_setting/get_general_setting_response.dart';
-import '../../../data/remote/api_call/api_impl.dart';
-import '../../../data/remote/api_call/general_api/general_api.dart';
-import '../../../data/remote/web_response.dart';
-import '../../../locator.dart';
 import '../../../routes/route_constants.dart';
-import '../../../utils/get_address.dart';
-import '../../../utils/get_location.dart';
-import '../../../utils/network_utils.dart';
 
 class IntroductionScreenController extends GetxController {
   final PageController introductionPageController =
@@ -33,18 +30,6 @@ class IntroductionScreenController extends GetxController {
   final localApi = locator.get<GeneralApi>();
 
   void goToNextPage() {
-    // mGetLocation.checkLocationPermission((Position position) async {
-    //   centerLatLng.value = LatLng(position.latitude, position.longitude);
-    //
-    //   ///Get Location
-    //   AppAlert.showSnackBar(Get.context!,
-    //       ' Longitude:${position.longitude} Latitude:${position.latitude}');
-    //   var sCountry =
-    //       await getCountryFromLatLng(position.latitude, position.longitude);
-    //   AppAlert.showSnackBar(Get.context!, 'sCountry: $sCountry ');
-    //
-    //   generalSettingApiCall();
-    // });
 
     generalSettingApiCall();
   }
@@ -85,19 +70,19 @@ class IntroductionScreenController extends GetxController {
                   RouteConstants.rDashboardScreen,
                 );
               } else {
-                AppAlert.showSnackBar(Get.context!, 'restaurant id not found');
+                AppAlertBase.showSnackBar(Get.context!, 'restaurant id not found');
               }
             } else {
-              AppAlert.showSnackBar(
+              AppAlertBase.showSnackBar(
                   Get.context!, mGetGeneralSettingResponse.statusMessage ?? "");
             }
           } else {
-            AppAlert.showSnackBar(
+            AppAlertBase.showSnackBar(
                 Get.context!, mGetGeneralSettingResponse.statusMessage ?? "");
           }
         }
       } else {
-        AppAlert.showSnackBar(
+        AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
       }
     });

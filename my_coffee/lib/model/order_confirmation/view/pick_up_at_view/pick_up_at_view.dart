@@ -10,15 +10,15 @@
  * Ticket       : 
  */
 
+import 'package:f_b_base/common/custom_image.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/image_assets_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/utils/date_format.dart';
+import 'package:f_b_base/utils/open_url.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import '../../../../common/custom_image.dart';
-import '../../../../constants/color_constants.dart';
-import '../../../../constants/image_assets_constants.dart';
-import '../../../../constants/text_styles_constants.dart';
-import '../../../../utils/date_format.dart';
-import '../../../../utils/open_url.dart';
 import '../../controller/order_confirmation_controller.dart';
 
 class PickUpAtView extends StatelessWidget {
