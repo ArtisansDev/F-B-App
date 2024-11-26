@@ -1,4 +1,3 @@
-
 import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/constants/message_constants.dart';
 import 'package:f_b_base/constants/web_constants.dart';
@@ -46,7 +45,9 @@ class RegisterScreenController extends GetxController {
             countryCode: '+${mLoginScreenController.phoneCode}',
             email: emailController.value.text,
             firstName: nameController.value.text,
-            lastName: '');
+            lastName: '',
+            restaurantIDF:
+                (await SharedPrefs().getGeneralSetting()).restaurantIDF ?? '');
         WebResponseSuccess mWebResponseSuccess =
             await localApi.postRegister(mRegisterRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
@@ -72,7 +73,8 @@ class RegisterScreenController extends GetxController {
             AppAlertBase.showSnackBar(
                 Get.context!, mRegisterResponse.statusMessage ?? "");
           }
-        } else if(mWebResponseSuccess.statusCode == WebConstants.statusCode409) {
+        } else if (mWebResponseSuccess.statusCode ==
+            WebConstants.statusCode409) {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? "");
         }

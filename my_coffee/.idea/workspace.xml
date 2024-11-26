@@ -9,28 +9,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758e53d0-793c-43b5-ac3f-251c1f7b09e8" name="Changes" comment=" qr code scanner&#10; 1. modfi code">
+    <list default="true" id="758e53d0-793c-43b5-ac3f-251c1f7b09e8" name="Changes" comment=" qr code scanner&#10; 1. edit text">
       <change beforePath="$PROJECT_DIR$/../f_b_base/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/common/text_input_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/common/text_input_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/constants/web_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/constants/web_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/api_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/mode/register/register_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/mode/register/register_request.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/history_screen/controller/history_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/history_screen/controller/history_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/profile_screen/update_profile/controller/update_profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/profile_screen/update_profile/controller/update_profile_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/model/register_screen/controller/register_screen_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/register_screen/controller/register_screen_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/register_screen/view/register_screen_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/register_screen/view/register_screen_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -372,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732589401928</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary=" qr code scanner&#10; 1. edit text">
+      <created>1732604405383</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1732604405383</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -417,7 +409,8 @@
     <MESSAGE value="SenangPayService" />
     <MESSAGE value="remove qr code scanner" />
     <MESSAGE value=" qr code scanner&#10; 1. modfi code" />
-    <option name="LAST_COMMIT_MESSAGE" value=" qr code scanner&#10; 1. modfi code" />
+    <MESSAGE value=" qr code scanner&#10; 1. edit text" />
+    <option name="LAST_COMMIT_MESSAGE" value=" qr code scanner&#10; 1. edit text" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

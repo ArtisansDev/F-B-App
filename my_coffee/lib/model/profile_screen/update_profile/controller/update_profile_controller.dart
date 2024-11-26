@@ -102,6 +102,9 @@ class UpdateProfileScreenController extends GetxController {
             AppAlertBase.showSnackBar(
                 Get.context!, mUserUpdateResponse.statusMessage ?? "");
           }
+        }else {
+          AppAlertBase.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? "");
         }
       } else {
         AppAlertBase.showSnackBar(

@@ -111,6 +111,9 @@ class OtpScreenController extends GetxController {
             AppAlertBase.showSnackBar(
                 Get.context!, mVerifyOtpResponse.statusMessage ?? "");
           }
+        }else {
+          AppAlertBase.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? "");
         }
       } else {
         AppAlertBase.showSnackBar(

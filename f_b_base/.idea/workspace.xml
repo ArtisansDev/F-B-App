@@ -6,26 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3eba47f2-9eb3-4609-a77d-c72cd50cac91" name="Changes" comment="base">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/text_input_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/text_input_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constants/web_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/web_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/remote/api_call/api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/api_impl.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Flutter/Generated.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/history_screen/controller/history_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/history_screen/controller/history_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/controller/register_screen_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/controller/register_screen_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/view/register_screen_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/view/register_screen_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/profile_screen/update_profile/controller/update_profile_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/profile_screen/update_profile/controller/update_profile_controller.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
