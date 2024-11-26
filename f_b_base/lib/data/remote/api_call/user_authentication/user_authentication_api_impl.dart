@@ -66,7 +66,7 @@ class UserAuthenticationApiImpl extends AllApiImpl with UserAuthenticationApi {
         WebConstants.actionVerifyOtp, exhibitorsListRequest);
 
     AppAlertBase.hideLoadingDialog(Get.context!);
-    if (cases.statusCode != WebConstants.statusCode409) {
+    if (cases.statusCode == WebConstants.statusCode409) {
       mWebResponseFailed =
           WebResponseFailed.fromJson(processResponseToJson(cases));
       mWebResponseSuccess = WebResponseSuccess(
@@ -195,7 +195,7 @@ class UserAuthenticationApiImpl extends AllApiImpl with UserAuthenticationApi {
         "plainJsonRequest statusCode ==  ${jsonEncode(cases.statusCode)}");
     debugPrint("plainJsonRequest ==  ${jsonEncode(cases.body)}");
     AppAlertBase.hideLoadingDialog(Get.context!);
-    if (cases.statusCode != WebConstants.statusCode409) {
+    if (cases.statusCode == WebConstants.statusCode409) {
       mWebResponseFailed =
           WebResponseFailed.fromJson(processResponseToJson(cases));
       mWebResponseSuccess = WebResponseSuccess(
