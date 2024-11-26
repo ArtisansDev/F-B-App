@@ -99,237 +99,284 @@
 58-->[androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/8858e1eaae1d0ff435619ac1c321b92c/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
 58-->[androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/8858e1eaae1d0ff435619ac1c321b92c/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
 59
-60    <application
-61        android:name="android.app.Application"
-61-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:14:9-42
-62        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-62-->[androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/8858e1eaae1d0ff435619ac1c321b92c/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
-63        android:extractNativeLibs="false"
-64        android:icon="@mipmap/ic_launcher"
-64-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:15:9-43
-65        android:label="TWT" >
-65-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:13:9-28
-66        <activity
-66-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:16:9-37:20
-67            android:name="com.app.twt.MainActivity"
-67-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:17:13-41
-68            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-68-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:22:13-163
-69            android:exported="true"
-69-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:18:13-36
-70            android:hardwareAccelerated="true"
-70-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:23:13-47
-71            android:launchMode="singleTop"
-71-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:19:13-43
-72            android:taskAffinity=""
-72-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:20:13-36
-73            android:theme="@style/LaunchTheme"
-73-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:21:13-47
-74            android:windowSoftInputMode="adjustResize" >
-74-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:24:13-55
-75
-76            <!--
-77                 Specifies an Android theme to apply to this Activity as soon as
-78                 the Android process has started. This theme is visible to the user
-79                 while the Flutter UI initializes. After that, this theme continues
-80                 to determine the Window background behind the Flutter UI.
-81            -->
-82            <meta-data
-82-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:29:13-32:17
-83                android:name="io.flutter.embedding.android.NormalTheme"
-83-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:30:15-70
-84                android:resource="@style/NormalTheme" />
-84-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:31:15-52
-85
-86            <intent-filter>
-86-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:33:13-36:29
-87                <action android:name="android.intent.action.MAIN" />
-87-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:34:17-68
-87-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:34:25-66
-88
-89                <category android:name="android.intent.category.LAUNCHER" />
-89-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:35:17-76
-89-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:35:27-74
-90            </intent-filter>
-91        </activity>
-92        <activity
-92-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:38:9-41:71
-93            android:name="com.yalantis.ucrop.UCropActivity"
-93-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:39:13-60
-94            android:screenOrientation="portrait"
-94-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:40:13-49
-95            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-95-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:41:13-69
-96        <!--
-97             Don't delete the meta-data below.
-98             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-99        -->
-100        <meta-data
-100-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:44:9-46:33
-101            android:name="flutterEmbedding"
-101-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:45:13-44
-102            android:value="2" />
-102-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:46:13-30
-103
-104        <provider
-104-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:9-17:20
-105            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-105-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:13-82
-106            android:authorities="com.app.twt.flutter.image_provider"
-106-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-74
-107            android:exported="false"
-107-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-37
-108            android:grantUriPermissions="true" >
-108-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-47
-109            <meta-data
-109-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-16:75
-110                android:name="android.support.FILE_PROVIDER_PATHS"
-110-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:15:17-67
-111                android:resource="@xml/flutter_image_picker_file_paths" />
-111-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:16:17-72
-112        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
-113        <service
-113-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:19:9-31:19
-114            android:name="com.google.android.gms.metadata.ModuleDependencies"
-114-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-78
-115            android:enabled="false"
-115-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-36
-116            android:exported="false" >
-116-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:22:13-37
-117            <intent-filter>
-117-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:24:13-26:29
-118                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
-118-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:25:17-94
-118-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:25:25-91
-119            </intent-filter>
+60    <uses-feature
+60-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
+61        android:name="android.hardware.camera.front"
+61-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
+62        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+62-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
+63    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+64    <uses-feature
+64-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
+65        android:name="android.hardware.camera.autofocus"
+65-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:34:9-57
+66        android:required="false" />
+66-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:35:9-33
+67    <uses-feature
+67-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
+68        android:name="android.hardware.camera.flash"
+68-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
+69        android:required="false" />
+69-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
+70    <uses-feature
+70-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
+71        android:name="android.hardware.screen.landscape"
+71-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
+72        android:required="false" />
+72-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
+73    <uses-feature
+73-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
+74        android:name="android.hardware.wifi"
+74-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
+75        android:required="false" />
+75-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
+76
+77    <application
+78        android:name="android.app.Application"
+78-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:14:9-42
+79        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+79-->[androidx.core:core:1.13.1] /Users/parthapaul/.gradle/caches/transforms-3/8858e1eaae1d0ff435619ac1c321b92c/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+80        android:extractNativeLibs="false"
+81        android:icon="@mipmap/ic_launcher"
+81-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:15:9-43
+82        android:label="TWT" >
+82-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:13:9-28
+83        <activity
+83-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:16:9-37:20
+84            android:name="com.app.twt.MainActivity"
+84-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:17:13-41
+85            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+85-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:22:13-163
+86            android:exported="true"
+86-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:18:13-36
+87            android:hardwareAccelerated="true"
+87-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:23:13-47
+88            android:launchMode="singleTop"
+88-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:19:13-43
+89            android:taskAffinity=""
+89-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:20:13-36
+90            android:theme="@style/LaunchTheme"
+90-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:21:13-47
+91            android:windowSoftInputMode="adjustResize" >
+91-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:24:13-55
+92
+93            <!--
+94                 Specifies an Android theme to apply to this Activity as soon as
+95                 the Android process has started. This theme is visible to the user
+96                 while the Flutter UI initializes. After that, this theme continues
+97                 to determine the Window background behind the Flutter UI.
+98            -->
+99            <meta-data
+99-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:29:13-32:17
+100                android:name="io.flutter.embedding.android.NormalTheme"
+100-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:30:15-70
+101                android:resource="@style/NormalTheme" />
+101-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:31:15-52
+102
+103            <intent-filter>
+103-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:33:13-36:29
+104                <action android:name="android.intent.action.MAIN" />
+104-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:34:17-68
+104-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:34:25-66
+105
+106                <category android:name="android.intent.category.LAUNCHER" />
+106-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:35:17-76
+106-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:35:27-74
+107            </intent-filter>
+108        </activity>
+109        <activity
+109-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:38:9-41:71
+110            android:name="com.yalantis.ucrop.UCropActivity"
+110-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:39:13-60
+111            android:screenOrientation="portrait"
+111-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:40:13-49
+112            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+112-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:41:13-69
+113        <!--
+114             Don't delete the meta-data below.
+115             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+116        -->
+117        <meta-data
+117-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:44:9-46:33
+118            android:name="flutterEmbedding"
+118-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:45:13-44
+119            android:value="2" />
+119-->/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main/AndroidManifest.xml:46:13-30
 120
-121            <meta-data
-121-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:28:13-30:36
-122                android:name="photopicker_activity:0:required"
-122-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:29:17-63
-123                android:value="" />
-123-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:30:17-33
-124        </service>
-125        <service
-125-->[:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:8:9-12:56
-126            android:name="com.baseflow.geolocator.GeolocatorLocationService"
-126-->[:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:13-77
-127            android:enabled="true"
-127-->[:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:13-35
-128            android:exported="false"
-128-->[:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-37
-129            android:foregroundServiceType="location" />
-129-->[:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-53
-130
-131        <activity
-131-->[:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:8:9-11:74
-132            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-132-->[:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:13-74
-133            android:exported="false"
-133-->[:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:13-37
-134            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /> <!-- Needs to be explicitly declared on P+ -->
-134-->[:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-71
-135        <uses-library
-135-->[com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/6c37b2051da2c143ba13e0b3d56df5a0/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
-136            android:name="org.apache.http.legacy"
-136-->[com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/6c37b2051da2c143ba13e0b3d56df5a0/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
-137            android:required="false" />
-137-->[com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/6c37b2051da2c143ba13e0b3d56df5a0/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
-138
-139        <activity
-139-->[com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/56fdbb196158428988d19e8a96d61a2a/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:20:9-22:45
-140            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-140-->[com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/56fdbb196158428988d19e8a96d61a2a/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:20:19-85
-141            android:exported="false"
-141-->[com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/56fdbb196158428988d19e8a96d61a2a/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:22:19-43
-142            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-142-->[com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/56fdbb196158428988d19e8a96d61a2a/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:21:19-78
-143
-144        <meta-data
-144-->[com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/51ddba473c6108dda33b9858ff66bed6/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:21:9-23:69
-145            android:name="com.google.android.gms.version"
-145-->[com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/51ddba473c6108dda33b9858ff66bed6/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:22:13-58
-146            android:value="@integer/google_play_services_version" />
-146-->[com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/51ddba473c6108dda33b9858ff66bed6/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:23:13-66
+121        <provider
+121-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:9-17:20
+122            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+122-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:13-82
+123            android:authorities="com.app.twt.flutter.image_provider"
+123-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-74
+124            android:exported="false"
+124-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-37
+125            android:grantUriPermissions="true" >
+125-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-47
+126            <meta-data
+126-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-16:75
+127                android:name="android.support.FILE_PROVIDER_PATHS"
+127-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:15:17-67
+128                android:resource="@xml/flutter_image_picker_file_paths" />
+128-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:16:17-72
+129        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+130        <service
+130-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:19:9-31:19
+131            android:name="com.google.android.gms.metadata.ModuleDependencies"
+131-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-78
+132            android:enabled="false"
+132-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-36
+133            android:exported="false" >
+133-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:22:13-37
+134            <intent-filter>
+134-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:24:13-26:29
+135                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+135-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:25:17-94
+135-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:25:25-91
+136            </intent-filter>
+137
+138            <meta-data
+138-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:28:13-30:36
+139                android:name="photopicker_activity:0:required"
+139-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:29:17-63
+140                android:value="" />
+140-->[:image_picker_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:30:17-33
+141        </service>
+142        <service
+142-->[:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:8:9-12:56
+143            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+143-->[:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:13-77
+144            android:enabled="true"
+144-->[:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:13-35
+145            android:exported="false"
+145-->[:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-37
+146            android:foregroundServiceType="location" />
+146-->[:geolocator_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-53
 147
-148        <uses-library
-148-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
-149            android:name="androidx.window.extensions"
-149-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
-150            android:required="false" />
-150-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
-151        <uses-library
-151-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
-152            android:name="androidx.window.sidecar"
-152-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
-153            android:required="false" />
-153-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
-154
-155        <provider
-155-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-156            android:name="androidx.startup.InitializationProvider"
-156-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-157            android:authorities="com.app.twt.androidx-startup"
-157-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-158            android:exported="false" >
-158-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-159            <meta-data
-159-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-160                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-160-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-161                android:value="androidx.startup" />
-161-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-162            <meta-data
-162-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/parthapaul/.gradle/caches/transforms-3/195b1720bd3a8f824423cba9c89a88ea/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
-163                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-163-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/parthapaul/.gradle/caches/transforms-3/195b1720bd3a8f824423cba9c89a88ea/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
-164                android:value="androidx.startup" />
-164-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/parthapaul/.gradle/caches/transforms-3/195b1720bd3a8f824423cba9c89a88ea/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
-165            <meta-data
-165-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
-166                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-166-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
-167                android:value="androidx.startup" />
-167-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
-168        </provider>
-169
-170        <receiver
-170-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
-171            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-171-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
-172            android:directBootAware="false"
-172-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
-173            android:enabled="true"
-173-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
-174            android:exported="true"
-174-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
-175            android:permission="android.permission.DUMP" >
-175-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
-176            <intent-filter>
-176-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
-177                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-177-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-177-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
-178            </intent-filter>
-179            <intent-filter>
-179-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
-180                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-180-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-180-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
-181            </intent-filter>
-182            <intent-filter>
-182-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
-183                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-183-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-183-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
-184            </intent-filter>
-185            <intent-filter>
-185-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
-186                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-186-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-186-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
-187            </intent-filter>
-188        </receiver>
-189    </application>
-190
-191</manifest>
+148        <activity
+148-->[:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:8:9-11:74
+149            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+149-->[:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:13-74
+150            android:exported="false"
+150-->[:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:13-37
+151            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /> <!-- Needs to be explicitly declared on P+ -->
+151-->[:url_launcher_android] /Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-71
+152        <uses-library
+152-->[com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/6c37b2051da2c143ba13e0b3d56df5a0/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+153            android:name="org.apache.http.legacy"
+153-->[com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/6c37b2051da2c143ba13e0b3d56df5a0/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+154            android:required="false" />
+154-->[com.google.android.gms:play-services-maps:18.2.0] /Users/parthapaul/.gradle/caches/transforms-3/6c37b2051da2c143ba13e0b3d56df5a0/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+155
+156        <activity
+156-->[com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/56fdbb196158428988d19e8a96d61a2a/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:20:9-22:45
+157            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+157-->[com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/56fdbb196158428988d19e8a96d61a2a/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:20:19-85
+158            android:exported="false"
+158-->[com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/56fdbb196158428988d19e8a96d61a2a/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:22:19-43
+159            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+159-->[com.google.android.gms:play-services-base:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/56fdbb196158428988d19e8a96d61a2a/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:21:19-78
+160
+161        <meta-data
+161-->[com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/51ddba473c6108dda33b9858ff66bed6/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:21:9-23:69
+162            android:name="com.google.android.gms.version"
+162-->[com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/51ddba473c6108dda33b9858ff66bed6/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:22:13-58
+163            android:value="@integer/google_play_services_version" />
+163-->[com.google.android.gms:play-services-basement:18.3.0] /Users/parthapaul/.gradle/caches/transforms-3/51ddba473c6108dda33b9858ff66bed6/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:23:13-66
+164
+165        <uses-library
+165-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
+166            android:name="androidx.window.extensions"
+166-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
+167            android:required="false" />
+167-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
+168        <uses-library
+168-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
+169            android:name="androidx.window.sidecar"
+169-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
+170            android:required="false" />
+170-->[androidx.window:window:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/4716c14f677d03b624a80c6373bea952/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
+171
+172        <provider
+172-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+173            android:name="androidx.startup.InitializationProvider"
+173-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+174            android:authorities="com.app.twt.androidx-startup"
+174-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+175            android:exported="false" >
+175-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+176            <meta-data
+176-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+177                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+177-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+178                android:value="androidx.startup" />
+178-->[androidx.emoji2:emoji2:1.2.0] /Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+179            <meta-data
+179-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/parthapaul/.gradle/caches/transforms-3/195b1720bd3a8f824423cba9c89a88ea/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+180                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+180-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/parthapaul/.gradle/caches/transforms-3/195b1720bd3a8f824423cba9c89a88ea/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+181                android:value="androidx.startup" />
+181-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/parthapaul/.gradle/caches/transforms-3/195b1720bd3a8f824423cba9c89a88ea/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+182            <meta-data
+182-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+183                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+183-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+184                android:value="androidx.startup" />
+184-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+185        </provider>
+186
+187        <receiver
+187-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+188            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+188-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+189            android:directBootAware="false"
+189-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+190            android:enabled="true"
+190-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+191            android:exported="true"
+191-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+192            android:permission="android.permission.DUMP" >
+192-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+193            <intent-filter>
+193-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+194                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+194-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+194-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+195            </intent-filter>
+196            <intent-filter>
+196-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+197                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+197-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+197-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+198            </intent-filter>
+199            <intent-filter>
+199-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+200                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+201            </intent-filter>
+202            <intent-filter>
+202-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+203                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/parthapaul/.gradle/caches/transforms-3/0fbb99770fea8ee697211be1aad6a838/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+204            </intent-filter>
+205        </receiver>
+206
+207        <activity
+207-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
+208            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+208-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
+209            android:clearTaskOnLaunch="true"
+209-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
+210            android:screenOrientation="sensorLandscape"
+210-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
+211            android:stateNotNeeded="true"
+211-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
+212            android:theme="@style/zxing_CaptureTheme"
+212-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
+213            android:windowSoftInputMode="stateAlwaysHidden" />
+213-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
+214    </application>
+215
+216</manifest>

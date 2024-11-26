@@ -186,6 +186,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android@@:qr_code_scanner::release"
+      jars="/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/qr_code_scanner/.transforms/19bf29c06e893c1107c1370aecb4bc9c/transformed/out/jars/classes.jar:/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/qr_code_scanner/.transforms/19bf29c06e893c1107c1370aecb4bc9c/transformed/out/jars/libs/R.jar"
+      resolved="net.touchcapture.qr.flutterqr:qr_code_scanner:unspecified"
+      folder="/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/qr_code_scanner/.transforms/19bf29c06e893c1107c1370aecb4bc9c/transformed/out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android@@:shared_preferences_android::release"
       jars="/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/shared_preferences_android/.transforms/33801a80fb9c0033d28f13c4448a9e75/transformed/out/jars/classes.jar:/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/shared_preferences_android/.transforms/33801a80fb9c0033d28f13c4448a9e75/transformed/out/jars/libs/R.jar"
       resolved="io.flutter.plugins.sharedpreferences:shared_preferences_android:unspecified"
@@ -560,9 +573,9 @@
       jars="/Users/parthapaul/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.8.20/73576ddf378c5b4f1f6b449fe6b119b8183fc078/kotlin-stdlib-jdk8-1.8.20.jar"
       resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20"/>
   <library
-      name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20@jar"
-      jars="/Users/parthapaul/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.8.20/3aa51faf20aae8b31e1a4bc54f8370673d7b7df4/kotlin-stdlib-jdk7-1.8.20.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20"/>
+      name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0@jar"
+      jars="/Users/parthapaul/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.9.0/f320478990d05e0cfaadd74f9619fd6027adbf37/kotlin-stdlib-jdk7-1.9.0.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0"/>
   <library
       name="org.jetbrains.kotlin:kotlin-stdlib:2.0.21@jar"
       jars="/Users/parthapaul/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.21/618b539767b4899b4660a83006e052b63f1db551/kotlin-stdlib-2.0.21.jar"
@@ -649,6 +662,45 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="com.github.yalantis:ucrop:2.2.9@aar"
+      jars="/Users/parthapaul/.gradle/caches/transforms-3/7fd72835496fd6067f9dac52e81852c0/transformed/jetified-ucrop-2.2.9/jars/classes.jar"
+      resolved="com.github.yalantis:ucrop:2.2.9"
+      folder="/Users/parthapaul/.gradle/caches/transforms-3/7fd72835496fd6067f9dac52e81852c0/transformed/jetified-ucrop-2.2.9"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.appcompat:appcompat-resources:1.6.1@aar"
+      jars="/Users/parthapaul/.gradle/caches/transforms-3/f02bb3da59a79deea2b6938017c353a4/transformed/jetified-appcompat-resources-1.6.1/jars/classes.jar"
+      resolved="androidx.appcompat:appcompat-resources:1.6.1"
+      folder="/Users/parthapaul/.gradle/caches/transforms-3/f02bb3da59a79deea2b6938017c353a4/transformed/jetified-appcompat-resources-1.6.1"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.appcompat:appcompat:1.6.1@aar"
+      jars="/Users/parthapaul/.gradle/caches/transforms-3/bd027a677c7fbeb56df34ab1a97c87ee/transformed/appcompat-1.6.1/jars/classes.jar"
+      resolved="androidx.appcompat:appcompat:1.6.1"
+      folder="/Users/parthapaul/.gradle/caches/transforms-3/bd027a677c7fbeb56df34ab1a97c87ee/transformed/appcompat-1.6.1"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="com.google.android.gms:play-services-maps:18.2.0@aar"
       jars="/Users/parthapaul/.gradle/caches/transforms-3/6c37b2051da2c143ba13e0b3d56df5a0/transformed/jetified-play-services-maps-18.2.0/jars/classes.jar"
       resolved="com.google.android.gms:play-services-maps:18.2.0"
@@ -692,45 +744,6 @@
       jars="/Users/parthapaul/.gradle/caches/transforms-3/51ddba473c6108dda33b9858ff66bed6/transformed/jetified-play-services-basement-18.3.0/jars/classes.jar"
       resolved="com.google.android.gms:play-services-basement:18.3.0"
       folder="/Users/parthapaul/.gradle/caches/transforms-3/51ddba473c6108dda33b9858ff66bed6/transformed/jetified-play-services-basement-18.3.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="com.github.yalantis:ucrop:2.2.9@aar"
-      jars="/Users/parthapaul/.gradle/caches/transforms-3/7fd72835496fd6067f9dac52e81852c0/transformed/jetified-ucrop-2.2.9/jars/classes.jar"
-      resolved="com.github.yalantis:ucrop:2.2.9"
-      folder="/Users/parthapaul/.gradle/caches/transforms-3/7fd72835496fd6067f9dac52e81852c0/transformed/jetified-ucrop-2.2.9"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.appcompat:appcompat-resources:1.6.1@aar"
-      jars="/Users/parthapaul/.gradle/caches/transforms-3/f02bb3da59a79deea2b6938017c353a4/transformed/jetified-appcompat-resources-1.6.1/jars/classes.jar"
-      resolved="androidx.appcompat:appcompat-resources:1.6.1"
-      folder="/Users/parthapaul/.gradle/caches/transforms-3/f02bb3da59a79deea2b6938017c353a4/transformed/jetified-appcompat-resources-1.6.1"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.appcompat:appcompat:1.6.1@aar"
-      jars="/Users/parthapaul/.gradle/caches/transforms-3/bd027a677c7fbeb56df34ab1a97c87ee/transformed/appcompat-1.6.1/jars/classes.jar"
-      resolved="androidx.appcompat:appcompat:1.6.1"
-      folder="/Users/parthapaul/.gradle/caches/transforms-3/bd027a677c7fbeb56df34ab1a97c87ee/transformed/appcompat-1.6.1"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -1065,32 +1078,6 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.media:media:1.4.1@aar"
-      jars="/Users/parthapaul/.gradle/caches/transforms-3/f701add27e1582d24be1e3fa230d3ed2/transformed/media-1.4.1/jars/classes.jar"
-      resolved="androidx.media:media:1.4.1"
-      folder="/Users/parthapaul/.gradle/caches/transforms-3/f701add27e1582d24be1e3fa230d3ed2/transformed/media-1.4.1"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="androidx.legacy:legacy-support-core-utils:1.0.0@aar"
-      jars="/Users/parthapaul/.gradle/caches/transforms-3/1d44ada7598dfb23ddc94af0c5274829/transformed/legacy-support-core-utils-1.0.0/jars/classes.jar"
-      resolved="androidx.legacy:legacy-support-core-utils:1.0.0"
-      folder="/Users/parthapaul/.gradle/caches/transforms-3/1d44ada7598dfb23ddc94af0c5274829/transformed/legacy-support-core-utils-1.0.0"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
       name="androidx.drawerlayout:drawerlayout:1.0.0@aar"
       jars="/Users/parthapaul/.gradle/caches/transforms-3/33edfad3bd50ed7e6653bd4254f1c1c3/transformed/drawerlayout-1.0.0/jars/classes.jar"
       resolved="androidx.drawerlayout:drawerlayout:1.0.0"
@@ -1121,6 +1108,32 @@
       jars="/Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/jars/classes.jar:/Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0/jars/libs/repackaged.jar"
       resolved="androidx.emoji2:emoji2:1.2.0"
       folder="/Users/parthapaul/.gradle/caches/transforms-3/1747f6e9c58800f1a14facb5abc23354/transformed/jetified-emoji2-1.2.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.media:media:1.4.1@aar"
+      jars="/Users/parthapaul/.gradle/caches/transforms-3/f701add27e1582d24be1e3fa230d3ed2/transformed/media-1.4.1/jars/classes.jar"
+      resolved="androidx.media:media:1.4.1"
+      folder="/Users/parthapaul/.gradle/caches/transforms-3/f701add27e1582d24be1e3fa230d3ed2/transformed/media-1.4.1"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="androidx.legacy:legacy-support-core-utils:1.0.0@aar"
+      jars="/Users/parthapaul/.gradle/caches/transforms-3/1d44ada7598dfb23ddc94af0c5274829/transformed/legacy-support-core-utils-1.0.0/jars/classes.jar"
+      resolved="androidx.legacy:legacy-support-core-utils:1.0.0"
+      folder="/Users/parthapaul/.gradle/caches/transforms-3/1d44ada7598dfb23ddc94af0c5274829/transformed/legacy-support-core-utils-1.0.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -1385,10 +1398,6 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.collection:collection-ktx:1.1.0@jar"
-      jars="/Users/parthapaul/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-ktx/1.1.0/f807b2f366f7b75142a67d2f3c10031065b5168/collection-ktx-1.1.0.jar"
-      resolved="androidx.collection:collection-ktx:1.1.0"/>
-  <library
       name="androidx.cursoradapter:cursoradapter:1.0.0@aar"
       jars="/Users/parthapaul/.gradle/caches/transforms-3/a67dee30373999db7040ad201ab77634/transformed/cursoradapter-1.0.0/jars/classes.jar"
       resolved="androidx.cursoradapter:cursoradapter:1.0.0"
@@ -1405,6 +1414,10 @@
       name="androidx.resourceinspection:resourceinspection-annotation:1.0.1@jar"
       jars="/Users/parthapaul/.gradle/caches/modules-2/files-2.1/androidx.resourceinspection/resourceinspection-annotation/1.0.1/8c21f8ff5d96d5d52c948707f7e4d6ca6773feef/resourceinspection-annotation-1.0.1.jar"
       resolved="androidx.resourceinspection:resourceinspection-annotation:1.0.1"/>
+  <library
+      name="androidx.collection:collection-ktx:1.1.0@jar"
+      jars="/Users/parthapaul/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-ktx/1.1.0/f807b2f366f7b75142a67d2f3c10031065b5168/collection-ktx-1.1.0.jar"
+      resolved="androidx.collection:collection-ktx:1.1.0"/>
   <library
       name="androidx.concurrent:concurrent-futures:1.1.0@jar"
       jars="/Users/parthapaul/.gradle/caches/modules-2/files-2.1/androidx.concurrent/concurrent-futures/1.1.0/50b7fb98350d5f42a4e49704b03278542293ba48/concurrent-futures-1.1.0.jar"
@@ -1478,6 +1491,23 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
+  <library
+      name="com.journeyapps:zxing-android-embedded:4.3.0@aar"
+      jars="/Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/jars/classes.jar"
+      resolved="com.journeyapps:zxing-android-embedded:4.3.0"
+      folder="/Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="com.google.zxing:core:3.5.2@jar"
+      jars="/Users/parthapaul/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.5.2/baab0f4a47b2052c9393af6af7c47a9dd8d89297/core-3.5.2.jar"
+      resolved="com.google.zxing:core:3.5.2"/>
   <library
       name="com.google.guava:guava:33.0.0-android@jar"
       jars="/Users/parthapaul/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/33.0.0-android/cfbbdc54f232feedb85746aeeea0722f5244bb9a/guava-33.0.0-android.jar"

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.twt.app-mergeReleaseResources-53:/values-sr/values-sr.xml",
+            "outputFile": "com.app.twt.app-mergeReleaseResources-54:/values-sr/values-sr.xml",
             "map": [
                 {
                     "source": "/Users/parthapaul/.gradle/caches/transforms-3/8858e1eaae1d0ff435619ac1c321b92c/transformed/core-1.13.1/res/values-sr/values-sr.xml",

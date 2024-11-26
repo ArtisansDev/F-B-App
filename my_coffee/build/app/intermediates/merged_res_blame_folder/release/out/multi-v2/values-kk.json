@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.twt.app-mergeReleaseResources-53:/values-kk/values-kk.xml",
+            "outputFile": "com.app.twt.app-mergeReleaseResources-54:/values-kk/values-kk.xml",
             "map": [
                 {
                     "source": "/Users/parthapaul/.gradle/caches/transforms-3/918a5a9704db1678b1b3087b7158b744/transformed/jetified-exoplayer-core-2.18.7/res/values-kk/values-kk.xml",

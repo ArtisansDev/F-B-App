@@ -23,8 +23,8 @@ generatedAdapters
 SOURCE_AUTOFILL
 dev.flutter.pigeon.video_player_andro...
 GeneratedPluginsRegister
-$
 java.lang.CharSequence
+$
 DIAGNOSTIC_CURRENT_PROFILE_DOES_NOT_E...
 SlowMotion_Data
 PermissionHandler.AppSettingsManager
@@ -39,8 +39,12 @@ Game
 4
 size
 AspectFrame
+5
 left
 6
+7
+8
+9
 object
 C6606
 A
@@ -50,19 +54,40 @@ B
 android.intent.extra.durationLimit
 setNextSelectedPositionInt
 C
+CODE_93
 S_RESUMING_BY_RCV
+D
 EXTRA_DESCRIPTORS
+E
+F
 bottomRight
+G
+H
+I
+J
 LifecycleFragmentImpl
 blueviolet
+K
 C6602
+L
+M
+N
 C6603
+O
 result
 gold
+P
+Q
+R
 S
 SystemUiMode.immersiveSticky
+T
+U
 flutter/platform_views
+V
+W
 X
+Y
 jpeg
 Z
 after
@@ -79,16 +104,20 @@ d
 e
 subLocality
 f
+g
 h
-truncated
 i
+truncated
+j
 effectiveDirectAddress
 k
+l
 RESUMING_BY_EB
 m
 n
 o
 p
+q
 r
 DRIVE_EXTERNAL_STORAGE_REQUIRED
 s
@@ -100,35 +129,40 @@ v
 namedViews
 w
 x
+y
 z
 information
+infinity
 SystemUiMode.edgeToEdge
 OMX.Exynos.avc.dec
+
 PRIORITY
 mimeType
 tib
 image/webp
 USAGE_NOTIFICATION
 PASSIVE
-startIndex
 emailAddress
+startIndex
 A_AC3
 dev.flutter.pigeon.google_maps_flutte...
 dev.flutter.pigeon.shared_preferences...
 android:style
 TtmlDecoder
 STRICT
+£
 chi
-Experimental
 dev.flutter.pigeon.url_launcher_andro...
+Experimental
 heatmapId
 H2_PRIOR_KNOWLEDGE
-check
 TLS_PSK_WITH_AES_128_CBC_SHA
+check
 LONG_PRESS
 $operation
 HAS_CHECKED_STATE
 UNSET_PRIMARY_NAV
+EDIFACT_ENCODE
 FlutterEngine
 Meditative
 Video
@@ -137,8 +171,8 @@ androidEqualizerBandSetGain
 ROUND_CAP
 android.media.metadata.WRITER
 androidx.view.accessibility.Accessibi...
-requestAudioFocus
 OMX.qcom.audio.decoder.mp3
+requestAudioFocus
 Keywords
 COMPLETING_WAITING_CHILDREN
 THROTTLE_ALWAYS
@@ -154,15 +188,17 @@ mediumspringgreen
 android.permission.WRITE_CONTACTS
 webViewArg
 android.os.Build
+toggleFlash
 Age
 headers
 declaringFragment.parentFragmentManager
 DefaultHlsPlaylistTracker:MediaPlaylist
 MOVE_CURSOR_BACKWARD_BY_CHARACTER
-A_AAC
 kotlin.collections.List
+A_AAC
 avc1.
 appName
+ANSIX12_ENCODE
 com.yalantis.ucrop.ImageWidth
 org.chromium.support_lib_glue.Support...
 lastIn.fragment.sharedElementSourceNames
@@ -174,8 +210,8 @@ getNextValue
 streamtitle
 ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE
 palegoldenrod
-GPSDifferential
 rgba
+GPSDifferential
 setAutomaticallyWaitsToMinimizeStalling
 EGL_EXT_protected_content
 rawresource
@@ -199,14 +235,16 @@ byte
 STYLE
 CAMERA
 Cea708Decoder
+CHARACTER_SET
+SCAN_RESULT_UPC_EAN_EXTENSION
 defaultGoogleSignInAccount
 attrs
 conscrypt
 PesReader
 onBackInvoked
 XResolution
-resizeUp
 creditCardNumber
+resizeUp
 burlywood
 :Item
 cmd
@@ -247,8 +285,8 @@ android.media.metadata.DISPLAY_SUBTITLE
 .ac4
 .ac3
 MediaCodecVideoRenderer
-icyMetadata
 androidx.media3.decoder.flac.LibflacA...
+icyMetadata
 pacificrim
 .webvtt
 ExifVersion
@@ -285,6 +323,7 @@ BYTES_LIST
 sidecarDisplayFeatures
 dev.flutter.pigeon.google_maps_flutte...
 requestPermission
+onPermissionSet
 PHONE
 systemNavigationBarColor
 displayCutout
@@ -292,15 +331,15 @@ CIPVorbisDecoder
 PlatformPlugin
 TLS_ECDH_anon_WITH_AES_256_CBC_SHA
 fugu
-SFIXED64_LIST_PACKED
 SSLv3
+SFIXED64_LIST_PACKED
 times
 getConfiguration
 DEAD_CLIENT
 RepresentationID
 android.location.PROVIDERS_CHANGED
-direction
 TLS_PSK_WITH_AES_256_CBC_SHA
+direction
 dev.flutter.pigeon.shared_preferences...
 android.intent.action.SEARCH
 android.permission.WRITE_CALL_LOG
@@ -309,27 +348,27 @@ API_NOT_CONNECTED
 SUBTITLES
 newConfig
 rows
-RECONNECTION_TIMED_OUT
 Array
+RECONNECTION_TIMED_OUT
 setValue
 dev.flutter.pigeon.webview_flutter_an...
-UNKNOWN
 android.permission.CAMERA
-playSoundEffect
+UNKNOWN
 RestrictedApi
+playSoundEffect
 namath
 android:visibility:parent
 FRONT
 dev.flutter.pigeon.webview_flutter_an...
 com.google.android.gms.common.interna...
-quic
 com.google.android.gms.chimera.contai...
+quic
 UINT32
 OMX.MTK.AUDIO.DECODER.AAC
 android.provider.action.PICK_IMAGES
-CONNECT_ERROR
 ms01
 styling
+CONNECT_ERROR
 audio/wav
 NO_TARGET
 state
@@ -346,8 +385,11 @@ ACTION_SCROLL_DOWN
 android.view.ViewRootImpl
 placemarkFromAddress
 LOADED
+240
 dev.flutter.pigeon.webview_flutter_an...
+241
 cacheResponse
+242
 com.google.android.exoplayer2.decoder...
 InteroperabilityIndex
 F3311
@@ -358,6 +400,7 @@ bearingAccuracy
 SupportMenuInflater
 CPH1609
 anim
+ERROR_CORRECTION_LEVEL
 KEY
 0123456789ABCDEF
 mcv5a
@@ -370,8 +413,12 @@ android.hardware.type.automotive
 CIPAACDecoder
 getStateMethod
 hb2000
+250
 ROTATE_180
+251
+253
 SegmentURL
+254
 LEGACY
 CUSTOM_ACTION
 TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_...
@@ -394,6 +441,7 @@ com.yalantis.ucrop.CropFrameStrokeWidth
 getSourceNodeId
 androidx.lifecycle.ViewModelProvider....
 urn:dts:dash:audio_channel_configurat...
+OTHER
 runnable
 purple
 i9031
@@ -405,6 +453,7 @@ performStopActivity
 dev.flutter.pigeon.path_provider_andr...
 bitrate
 source
+android.intent.action.BATTERY_CHANGED
 removeListenerMethod
 lightblue
 dev.flutter.pigeon.google_maps_flutte...
@@ -415,6 +464,7 @@ getAllowedCapturePolicy
 addressCity
 search_suggest_query
 CrashUtils
+C40_ENCODE
 ProgramInformation
 ASUS_Z00AD
 dev.flutter.pigeon.webview_flutter_an...
@@ -440,10 +490,13 @@ GPSDateStamp
 _isTerminated
 libcore.io.Memory
 Supported
+99990
 .amr
+99991
 cze
 skipVideoBuffer
 setFastestInterval
+INFINITY
 CREATED
 MITERED
 Bandwidth
@@ -454,6 +507,7 @@ TLSv1.1
 android.media.extra.SCO_AUDIO_STATE
 kGamepad
 androidx.content.action.LOAD_EMOJI_FONT
+resultPoints
 audioEffectSetEnabled
 ghostwhite
 PCMA
@@ -462,18 +516,20 @@ SeekBar
 EXTRA_SKIP_FILE_OPERATION
 center
 start
+DIGIT
 pair
 getPosture
 V_MPEGH/ISO/HEVC
 PASTE
 watson
-metadataInterval
 short
+metadataInterval
 OMX.MTK.AUDIO.DECODER.RAW
+scanAreaWidth
 PCMU
 IS_FOCUSABLE
-android.widget.RadioButton
 TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+android.widget.RadioButton
 textCapitalization
 dev.flutter.pigeon.url_launcher_andro...
 mDisplayListeners
@@ -488,9 +544,10 @@ PLAY
 shouldShowRequestPermissionRationale
 mido
 pokeLong
-POISONED
 TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+POISONED
 RotateGesturesEnabled
+CODE_39
 bufferingStart
 com.apple.streaming.transportStreamTi...
 orangered
@@ -511,7 +568,9 @@ dev.flutter.pigeon.video_player_andro...
 com.yalantis.ucrop.UcropToolbarTitleText
 viewFocused
 X264
+ORIENTATION
 common_google_play_services_api_unava...
+EAN_13
 .apk
 WebChromeClientImpl
 subAdministrativeArea
@@ -611,6 +670,7 @@ Mp4WebvttDecoder
 bandIndex
 Unauthorized
 SINT64_LIST_PACKED
+SYMBOLOGY_IDENTIFIER
 ARGUMENT_ERROR
 ProgressiveMediaPeriod
 SSL_NULL_WITH_NULL_NULL
@@ -642,8 +702,8 @@ mime
 L63
 Util
 TLS_RSA_WITH_AES_256_CBC_SHA
-dev.flutter.pigeon.webview_flutter_an...
 path
+dev.flutter.pigeon.webview_flutter_an...
 farLeft
 ExposureMode
 Button
@@ -654,8 +714,8 @@ FOLD
 bufferForPlaybackAfterRebufferMs
 addObserver
 generatedAdapter
-ID1ID2
 PixelXDimension
+ID1ID2
 METADATA_BLOCK_PICTURE
 profile
 allowedViolations
@@ -663,8 +723,8 @@ NotifManCompat
 ON_ANY
 TwilightManager
 dev.flutter.pigeon.webview_flutter_an...
-TPE3
 channelIndexMasks
+TPE3
 TPE2
 TPE1
 ON_PAUSE
@@ -675,18 +735,19 @@ StripByteCounts
 viewType
 TraceCompat
 GET_WEB_VIEW_CLIENT
-com.ryanheise.just_audio.events.
 getResPackage
-disableStandaloneDynamiteLoader2
+com.ryanheise.just_audio.events.
 dev.flutter.pigeon.webview_flutter_an...
+disableStandaloneDynamiteLoader2
 com.google.android.gms.location.inter...
 transparent
 linethrough
 USAGE_VOICE_COMMUNICATION
 onBackInvokedDispatcher
+UPPER
 logLevel
-:scheme
 background_mode
+:scheme
 REMOVING
 defaultDisplay
 StripOffsets
@@ -701,6 +762,7 @@ ISOSpeedRatings
 clearFocus
 encodings
 L93
+0.00
 right
 androidx.media2.common.SessionPlayer....
 audio/gsm
@@ -710,13 +772,14 @@ android.provider.extra.PICK_IMAGES_MAX
 DATA_DIRECTORY_BASE_PATH
 LOCALE
 Ambient
-widevine
 personNamePrefix
+widevine
 toString
 TIP
 mhm1.%02X
 under
 $$
+90000
 USLT
 feature.rect
 bg_red
@@ -734,14 +797,15 @@ androidx.media2.metadata.PLAYABLE
 peachpuff
 List
 setSidecarCallback
-radius
 OMX.bcm.vdec.avc.tunnel
+radius
 Protection
+barcode
 info
 DORMANT
 HYBRID_ONLY
-setMicrophoneMute
 android.permission.READ_MEDIA_AUDIO
+setMicrophoneMute
 parcel
 TXXX
 android.support.v4.media.session.SESS...
@@ -753,8 +817,8 @@ brown
 application/id3
 Latency
 ethernet
-TextInputType.name
 installerStore
+TextInputType.name
 AUTOSELECT
 DynamiteModule
 dev.flutter.pigeon.google_maps_flutte...
@@ -774,8 +838,8 @@ dev.flutter.pigeon.webview_flutter_an...
 MediaCodecRenderer
 SPDY_3
 duration
-omx.google.
 kotlin.collections.Map
+omx.google.
 aliceblue
 cached_engine_group_id
 load
@@ -790,26 +854,27 @@ continuation
 DATA_DIRECTORY_SUFFIX
 strings_
 ExoPlayer:Loader:
-A_FLAC
-dev.flutter.pigeon.webview_flutter_an...
 classSimpleName
+dev.flutter.pigeon.webview_flutter_an...
+A_FLAC
 location_updates_with_callback
 DeviceOrientation.landscapeRight
 .jpg
 IconCompat
 Ska
+%n
 und
 dev.flutter.pigeon.google_maps_flutte...
 GET_MEMOIZED_IS_INITIALIZED
-loopMode
 grand
+loopMode
 video/mpeg2
 availabilityStartTime
 DynamiteLoaderV2CL
 %s
 V_MPEG4/ISO/AVC
-lenientToString
 Expect
+lenientToString
 TextEditingDelta
 DEFAULT
 SensingMethod
@@ -824,22 +889,25 @@ android.support.FILE_PROVIDER_PATHS
 androidx.activity.result.contract.ext...
 userdebug
 endIndex
+BE/LU
 text
 pitch
 expectedKeys
 Cabaret
-Primus
 SENTENCES
+Primus
 READY
 init
 TextInput.finishAutofillContext
 V_MPEG4/ISO/ASP
+Shift_JIS
 uMVPMatrix
-cookie
 SsaDecoder
+cookie
 primary.prof
 TLS_AES_256_GCM_SHA384
 io.flutter.embedding.android.EnableOp...
+ASCII_ENCODE
 filepositions
 http://ns.adobe.com/xap/1.0/
 signed
@@ -854,8 +922,8 @@ TP1
 ETag
 TP3
 TP2
-AccessibilityChannel
 TIMEOUT
+AccessibilityChannel
 fullStreetAddress
 localeIdentifier
 server
@@ -865,11 +933,11 @@ TPOS
 dot
 android.media.metadata.AUTHOR
 bands
-getStreamVolume
 mac
+getStreamVolume
 android.active_controls_widget_color
-goog.exo.datasource
 stream
+goog.exo.datasource
 WakeLockManager
 WEB_MESSAGE_ARRAY_BUFFER
 mao
@@ -883,8 +951,8 @@ max
 dev.flutter.pigeon.google_maps_flutte...
 _HLS_skip
 serviceResponseIntentKey
-uri
 android.hide_bottom_controls
+uri
 url
 VideoPlayerPlugin
 glUseProgram
@@ -914,6 +982,7 @@ com.google.android.gms.availability
 commitBackGesture
 dangal
 feff
+310
 mspr:pro
 Serif
 onBackStarted
@@ -923,12 +992,13 @@ midnightblue
 bearing
 OMX.amlogic.avc.decoder.awesome
 androidx.fragment.extra.ACTIVITY_OPTI...
-androidEqualizerGetParameters
 birthDateMonth
+androidEqualizerGetParameters
 interrupted
 ListenableEditingState
 separator
 dev.flutter.pigeon.webview_flutter_an...
+320
 GCamera:MicroVideoOffset
 entries
 audioSamplingRate
@@ -941,10 +1011,12 @@ CRC
 androidExtractorOptions
 background
 codename
+FNC1_SECOND_POSITION
 androidx.datastore.preferences.protob...
-dispose
 androidx.lifecycle.internal.SavedStat...
+dispose
 phoneNational
+US/CA
 UNDISPATCHED
 V_VP8
 V_VP9
@@ -954,18 +1026,18 @@ HEAD
 featureBounds
 SubjectDistance
 audio/vorbis
-transformer
 TLS_RSA_WITH_AES_256_GCM_SHA384
 nearLeft
+transformer
 turquoise
 AFTSO001
 glDrawArrays
 peekLong
 UINT32_LIST
 getWindowLayoutComponentMethod
-CustomRendered
 AviExtractor
 Format:
+CustomRendered
 TYER
 repeat
 lightcyan
@@ -975,6 +1047,7 @@ MenuItemCompat
 DONE_RCV
 android.support.v4.media.description....
 android.support.customtabs.action.Cus...
+ECI_ENCODE
 com.google.android.exoplayer2.ext.vp9...
 ListPreference
 ROTATE_270
@@ -987,11 +1060,11 @@ bytes
 ALBUM
 Satire
 https://aomedia.org/emsg/ID3
-RESUME_TOKEN
 villeplus
+RESUME_TOKEN
 CP8676_I02
-LightSource
 0.
+LightSource
 ProcessText.processTextAction
 00
 bg_white
@@ -1002,12 +1075,13 @@ omx.ffmpeg.
 dut
 03
 common_google_play_services_restricte...
+PUNCT_SHIFT
 04
 05
 06
 07
-dev.flutter.pigeon.webview_flutter_an...
 08
+dev.flutter.pigeon.webview_flutter_an...
 09
 OFF_SCREEN_PRERASTER
 telephoneNumberNational
@@ -1019,12 +1093,12 @@ TRACE_TAG_APP
 com.google.android.gms.dynamite.IDyna...
 :cc
 Avantgarde
-PROTOCOL_ERROR
 bufferForPlaybackAfterRebufferDuration
+PROTOCOL_ERROR
 SERVICE_WORKER_SHOULD_INTERCEPT_REQUEST
 released
-height
 10
+height
 Dialogue:
 11
 12
@@ -1032,7 +1106,9 @@ TLS_KRB5_WITH_3DES_EDE_CBC_SHA
 TLS_RSA_WITH_AES_256_CBC_SHA256
 13
 CUT
+15
 clearkey:Laurl
+17
 _decision
 $this$require
 com.yalantis.ucrop.ShowCropFrame
@@ -1045,13 +1121,16 @@ com.google.android.exoplayer2.Timeline
 defaultCreationExtras
 SSL_DH_anon_WITH_RC4_128_MD5
 dev.flutter.pigeon.shared_preferences...
-com.widevine
 TLS_ECDHE_ECDSA_WITH_NULL_SHA
+com.widevine
 setCurrentState
 Fusion
 TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
+20
 statusCode
+21
 com.google.android.gms.signin.interna...
+22
 SubjectDistanceRange
 components
 0s
@@ -1060,9 +1139,10 @@ latitude
 0x
 .smf
 ITUNESADVISORY
+MISSING_CAMERA_PERMISSION_DIALOG_MESSAGE
 URATIONAL
-audioLoadConfiguration
 long
+audioLoadConfiguration
 startBackGesture
 TXT
 dev.flutter.pigeon.webview_flutter_an...
@@ -1079,29 +1159,36 @@ TYE
 service_esmobile
 GooglePlayServicesErrorDialog
 middle
+37
 AndroidLoudnessEnhancer
 _HLS_msn
 WORDS
 MinorVersion
 com.google.android.gms.maps_dynamite
 androidx.core.view.inputmethod.Editor...
-:method
 paramsArg
+:method
 dev.flutter.pigeon.webview_flutter_an...
 Event
-STRING
 progress
+STRING
+ASSUME_CODE_39_CHECK_DIGIT
 TextCapitalization.none
 common_google_play_services_invalid_a...
+ALLOWED_LENGTHS
 open
 android.widget.EditText
-NO_DECISION
 .bmp
+NO_DECISION
 JPEGInterchangeFormat
 MapOptions
 forced
 com.google.android.gms.signin.interna...
 Operations:
+390
+391
+392
+393
 TextInput.setEditingState
 use_external_surround_sound_flag
 androidx.profileinstaller.action.INST...
@@ -1111,6 +1198,7 @@ KEY_COMPONENT_ACTIVITY_LAUNCHED_KEYS
 NUMBER
 androidx.media3.decoder.vp9.LibvpxVid...
 ResourcesCompat
+AZTEC
 ic_launcher.png
 android.resource
 dev.flutter.pigeon.google_maps_flutte...
@@ -1128,10 +1216,10 @@ allow
 StartActivityForResult
 Time
 hotpink
-whyred
 android.crop_grid_color
-dev.flutter.pigeon.video_player_andro...
+whyred
 Tx3gParser
+dev.flutter.pigeon.video_player_andro...
 speed
 BRAVIA_ATV3_4K
 INVALID_ACCOUNT
@@ -1165,8 +1253,8 @@ base
 c2.android.mp3.decoder
 dexopt/baseline.profm
 com.yalantis.ucrop.DimmedLayerColor
-kotlinx.coroutines.bufferedChannel.se...
 TextInput.setPlatformViewClient
+kotlinx.coroutines.bufferedChannel.se...
 androidx.core.view.inputmethod.InputC...
 state:
 kKeyboard
@@ -1179,8 +1267,8 @@ movies
 COMM
 video/hevcdv
 RAIJIN
-drainAndFeedDecoder
 scancode
+drainAndFeedDecoder
 NONE
 TLS_DH_anon_WITH_AES_128_CBC_SHA
 azure
@@ -1199,30 +1287,32 @@ SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA
 brieflyShowPassword
 minBufferTime
 MLLT
-RtpH265Reader
 kotlin.collections.MutableMap
+RtpH265Reader
 gender
 signature
 android.support.BIND_NOTIFICATION_SID...
 resizeRow
-.sw.
 CONNECT
+.sw.
 android.webkit.WebViewFactory
 savedStateRegistry
 drainAndFeed
 HAS_EXPANDED_STATE
+SCAN_RESULT_BYTE_SEGMENTS_
 identity
 :emsg
-INTERRUPTED_SEND
 reportFullyDrawn
+INTERRUPTED_SEND
 singleInstance
 :audio
 getDisplayInfo
 CACHE_DIRECTORY_BASE_PATH
 StreamVolumeManager
 SOURCE_INPUT_METHOD
-include
+android.hardware.camera.front
 gainType
+include
 _availablePermits
 DARK
 Electroclash
@@ -1236,6 +1326,7 @@ TransferFunction
 nullLayouts
 outState
 GContainerItem
+ALLOWED_EAN_EXTENSIONS
 ACTION_SET_TEXT
 404SC
 com.google.android.gms.maps_core_dyna...
@@ -1244,10 +1335,11 @@ A_DTS/LOSSLESS
 android.widget.Switch
 com.amazon.hardware.tv_screen
 resizeUpRightDownLeft
-OP_SET_MAX_LIFECYCLE
+CODABAR
 float
-DASH
+OP_SET_MAX_LIFECYCLE
 IS_BUTTON
+DASH
 MapType
 Gamma
 DETECT_SET_USER_VISIBLE_HINT
@@ -1260,8 +1352,8 @@ action_msg
 android.hardware.type.embedded
 TextInputAction.go
 FragmentedMp4Extractor
-offset
 Chanson
+offset
 failed
 pssh
 SHOULD_OVERRIDE_WITH_REDIRECTS
@@ -1269,21 +1361,22 @@ sequence
 android.permission.SCHEDULE_EXACT_ALARM
 com.yalantis.ucrop.AspectRatioY
 com.yalantis.ucrop.AspectRatioX
-unloadSoundEffects
 DATA
+unloadSoundEffects
 androidx.core.view.inputmethod.Editor...
 UTF8
+com.google.zxing.client.android.SCAN
 flutter/localization
 didGainFocus
 LatLngBoundsForCameraTarget
-dev.flutter.pigeon.google_maps_flutte...
 indigo
+dev.flutter.pigeon.google_maps_flutte...
 putObject
 DefaultHttpDataSource
 REDIRECT
 FlutterRenderer
-clearCommunicationDevice
 previousFragmentId
+clearCommunicationDevice
 .font
 H263Reader
 antiquewhite
@@ -1310,14 +1403,15 @@ clearkey
 android.hardware.telephony
 pathList
 Humour
-GPSDestLongitudeRef
 observeForever
+GPSDestLongitudeRef
 LensMake
 FitPolicy.HEIGHT
 lastIn.fragment.sharedElementTargetNames
 DAVC
 mediumslateblue
 androidx.activity.result.contract.act...
+MACRO
 BitmapWorkerTask
 initialPosition
 AccessibilityBridge
@@ -1337,13 +1431,14 @@ enableWifiLock
 GPSSpeed
 music
 urn:mpeg:dash:utc:direct:2012
+verticalText
 transitionInfos
 Symphony
-verticalText
 FlutterSharedPreferences
 android.util.LongArray
 stpp
 dev.flutter.pigeon.google_maps_flutte...
+EUC_CN
 silence
 androidx.activity.result.contract.act...
 AD
@@ -1369,8 +1464,8 @@ AS
 Celtic
 AT
 AU
-AW
 kotlinx.coroutines.scheduler.default....
+AW
 AX
 Jungle
 android.support.useSideChannel
@@ -1394,9 +1489,10 @@ DISABLED_ACTION_MODE_MENU_ITEMS
 DECREASE
 BL
 BM
-BN
 android.intent.extra.PROCESS_TEXT_REA...
+BN
 BO
+GB18030
 C1
 BQ
 BR
@@ -1404,8 +1500,8 @@ BS
 savedInstanceState
 MESSAGE
 com.google.common.base.Strings
-http/1.1
 BT
+http/1.1
 http/1.0
 BW
 AdaptiveTrackSelection
@@ -1419,8 +1515,8 @@ CC
 RtpAmrReader
 CD
 CF
-CG
 SystemUiOverlay.top
+CG
 CH
 WEB_RESOURCE_ERROR_GET_CODE
 CI
@@ -1454,6 +1550,7 @@ ULONG
 buildCodename
 DE
 GPSAltitude
+BARCODE_IMAGE_ENABLED
 DJ
 DK
 MUTE_AUDIO
@@ -1479,12 +1576,15 @@ androidAudioEffects
 EE
 addressCountry
 EG
+SCAN_RESULT_BYTES
 PgsDecoder
+surefire.test.class.path
 OMX.amlogic.avc.decoder.awesome.secure
 flutter_image_picker_image_path
 .m2p
 RadioButton
 encoding
+BYTE_SEGMENTS
 ER
 DID_LOSE_ACCESSIBILITY_FOCUS
 ES
@@ -1494,9 +1594,9 @@ volume
 NEW_MUTABLE_INSTANCE
 isStreamMute
 presentationTimeOffset
+phoneCountryCode
 RECONNECTION_TIMED_OUT_DURING_UPDATE
 warnIfOpen
-phoneCountryCode
 Camera:MicroVideo
 http
 borderstyle
@@ -1519,11 +1619,11 @@ android.media.metadata.DISPLAY_TITLE
 FIXED32
 securityLevel
 subFrameRate
-dev.flutter.pigeon.webview_flutter_an...
 %s:%d
+dev.flutter.pigeon.webview_flutter_an...
+android.statusbar_color
 linen
 timeInterval
-android.statusbar_color
 GA
 end
 :Mime
@@ -1532,15 +1632,16 @@ GD
 ACTION_SCROLL_UP
 GE
 GF
-eng
 streamurl
+eng
 io.flutter.embedding.android.OldGenHe...
 GG
 BITMAP_MASKABLE
 GH
 GI
-ENTERPRISE_AUTHENTICATION_APP_LINK_PO...
+SCAN_ORIENTATION_LOCKED
 onError
+ENTERPRISE_AUTHENTICATION_APP_LINK_PO...
 ExifDataCopier
 GL
 GM
@@ -1552,9 +1653,9 @@ http://ns.adobe.com/xap/1.0/
 GQ
 IS_OBSCURED
 GR
-dev.flutter.pigeon.webview_flutter_an...
 SamplingRate
 GT
+dev.flutter.pigeon.webview_flutter_an...
 Blues
 GU
 scanCode
@@ -1563,8 +1664,8 @@ GW
 java.util.function.Consumer
 android:support:fragments
 GY
-setDisplayFeatures
 vpn
+setDisplayFeatures
 progressive
 START
 neg_
@@ -1574,8 +1675,8 @@ HM
 RESTRICTED_PROFILE
 HN
 image_picker
-GPSTimeStamp
 requestPermissions
+GPSTimeStamp
 HR
 RtspClient
 HT
@@ -1583,17 +1684,19 @@ ACTION_CONTEXT_CLICK
 HU
 android.support.customtabs.extra.MENU...
 max_width
+SAVED_ORIENTATION_LOCK
 TLS_ECDH_RSA_WITH_NULL_SHA
 messageInfoFactory
 dexopt/baseline.prof
 darkgray
 android.settings.NOTIFICATION_POLICY_...
-kotlinx.coroutines.internal.StackTrac...
 com.google.android.gms.provider.extra...
+kotlinx.coroutines.internal.StackTrac...
 nan
 ID
 IE
 TextInputType.none
+EUC_KR
 geolocator_channel_01
 IL
 IM
@@ -1601,17 +1704,21 @@ IN
 GoogleSignatureVerifier
 IO
 android.content.res.ThemedResourceCache
+IQ
+_rootCause
+DOT
 getNextMatch
 REFUSED_STREAM
-IQ
-DOT
-_rootCause
+SCAN_MODE
 IR
 IS
 IT
 datastore/
 400
+401
+402
 subtitle
+403
 404
 RESULT_NOT_WRITABLE
 V_MPEG4/ISO/AP
@@ -1635,14 +1742,20 @@ IS_LINK
 android.permission.BIND_CALL_REDIRECT...
 cell
 GRANULARITY_FINE
-URI
 safeCast
+URI
 protocolSelected
 URL
-PAUSE
 fffe
+PAUSE
+activeCamera
+410
+411
+412
 kotlin.Long
+413
 media3.common
+414
 androidx.view.accessibility.Accessibi...
 com.tekartik.sqflite
 Completing
@@ -1655,15 +1768,16 @@ com.yalantis.ucrop.UcropRootViewBackg...
 KH
 KI
 Sony
-_resumed
 KM
 android.settings.APPLICATION_DETAILS_...
+_resumed
 KN
 android.media.metadata.RATING
+KP
 KR
 DynamiteLoaderClassLoader.class
-L3
 TextInputType.multiline
+L3
 GPSHPositioningError
 getChildId
 gzip
@@ -1675,17 +1789,24 @@ FIXED64
 updateSettings
 KY
 KZ
-lowerFrequency
+420
 locales
+lowerFrequency
+421
 com.google.android.gms.maps.model.int...
+422
 LA
+423
 LB
+424
 runningWorkers
 LC
+425
 shuffleMode
-setAllowedCapturePolicy
-androidLoadControl
+426
 noResult
+androidLoadControl
+setAllowedCapturePolicy
 service_googleme
 dev.flutter.pigeon.webview_flutter_an...
 LI
@@ -1705,8 +1826,8 @@ LT
 cens
 text/vtt
 LU
-getStreamMinVolume
 LV
+getStreamMinVolume
 LY
 neg
 operation.fragment.mView
@@ -1726,8 +1847,8 @@ MH
 MK
 ML
 MM
-HTTP_1_0
 MN
+HTTP_1_0
 noDrop
 MO
 SubripDecoder
@@ -1736,8 +1857,8 @@ flutter/keydata
 MQ
 memoryPressure
 MR
-HTTP_1_1
 MS
+HTTP_1_1
 MT
 dimgray
 MU
@@ -1759,12 +1880,12 @@ flutter.baseflow.com/geolocator_android
 NF
 cenc
 NG
-ImageDescription
 NI
+ImageDescription
 geolocator_use_mslAltitude
 VOID
-getCommunicationDevice
 NL
+getCommunicationDevice
 android.view.
 NO
 magenta
@@ -1784,17 +1905,20 @@ android.media.metadata.BT_FOLDER_TYPE
 OffsetTime
 GRANULARITY_PERMISSION_LEVEL
 isPublic
+hasFrontCamera
 OK
 OM
 IO_ERROR
-androidx.activity.result.contract.ext...
 channelMasks
+androidx.activity.result.contract.ext...
 android.permission.RECEIVE_WAP_PUSH
 arrayBaseOffset
 okhttp.platform
 :Directory
 Host
+DATA_MATRIX_MODE
 getDatabasesPath
+super
 PA
 dev.flutter.pigeon.google_maps_flutte...
 SilenceMediaSource
@@ -1810,6 +1934,7 @@ PL
 PM
 getParentNodeId
 Predicates.
+EUC_JP
 com.yalantis.ucrop.UcropColorControls...
 herolte
 displayAlign
@@ -1821,50 +1946,54 @@ PS
 PT
 Q5
 PW
-AudioPlayer
 OMX.MTK.VIDEO.DECODER.AVC
+AudioPlayer
+DATA_MASK_101
 PY
 suggest_intent_extra_data
 ScrollGesturesEnabled
 PermissionHandler.PermissionManager
 getAppBounds
-:cea608
 dev.flutter.pigeon.webview_flutter_an...
+:cea608
 ringtones
 suggest_flags
+DATA_MASK_100
 l5460
 QA
 SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA
-abandonAudioFocus
-receiveSegment
 android.widget.HorizontalScrollView
+receiveSegment
+abandonAudioFocus
 emojiCompat
 NO_CLOSE_CAUSE
 Swing
 android.intent.action.PROVIDER_CHANGED
 HYBRID
 newValue
-cache
 deepskyblue
 creditCardExpirationMonth
+cache
 enableWakeLock
 android.permission.BLUETOOTH_SCAN
 maxSpl
 R9
 androidx.media2.metadata.ADVERTISEMENT
 OMX.SEC.mp3.dec
+DATA_MASK_110
+DATA_MASK_111
 com.yalantis.ucrop.CropAspectRatio
 RE
 GmsDynamite
-Soul
 dev.flutter.pigeon.shared_preferences...
+Soul
 XE2X
 Expires
 REMOVE_FROZEN
 RO
 .tmp
-dev.flutter.pigeon.webview_flutter_an...
 L120
+dev.flutter.pigeon.webview_flutter_an...
 RS
 lightsteelblue
 USAGE_GAME
@@ -1892,11 +2021,12 @@ SG
 getKeyboardState
 SH
 V_THEORA
+POSSIBLE_COUNTRY
 SI
 SJ
-MediaCodecInfo
 TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
 delimiters
+MediaCodecInfo
 SK
 .cmf
 SL
@@ -1904,10 +2034,10 @@ SM
 disabled
 AFTEU011
 ClientTelemetry.API
-SN
-clazz.name
-SSL_RSA_WITH_RC4_128_SHA
 dev.flutter.pigeon.webview_flutter_an...
+SN
+SSL_RSA_WITH_RC4_128_SHA
+clazz.name
 objectFieldOffset
 SO
 outBundle
@@ -1915,10 +2045,10 @@ TLS_ECDH_RSA_WITH_RC4_128_SHA
 timestamp
 SR
 AFTEU014
-SS
 dev.flutter.pigeon.webview_flutter_an...
-dev.flutter.pigeon.google_maps_flutte...
+SS
 ST
+dev.flutter.pigeon.google_maps_flutte...
 cancelGetCurrentPosition
 SV
 newLayoutInfo
@@ -1938,8 +2068,8 @@ recovered
 TG
 TH
 registryState
-android.permission.READ_CALL_LOG
 streetAddress
+android.permission.READ_CALL_LOG
 TJ
 TK
 TL
@@ -1957,10 +2087,10 @@ TV
 dimen
 TW
 loadSoundEffects
+java.util.ListIterator
 GPSAltitudeRef
 setCanUseNetworkResourcesForLiveStrea...
 documents
-java.util.ListIterator
 TZ
 Label
 SUCCESS_CACHE
@@ -1985,10 +2115,11 @@ com.google.android.gms.version
 US
 PENALTY_DEATH
 V5
+0000000000
 includeSubdomains
 unreachable
-UY
 org.eclipse.jetty.alpn.ALPN
+UY
 LOCATION_SERVICES_DISABLED
 UZ
 dev.flutter.pigeon.webview_flutter_an...
@@ -2007,16 +2138,17 @@ VI
 dev.flutter.pigeon.image_picker_andro...
 VN
 TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256
+getSystemFeatures
 dalvik.
-SceneCaptureType
 SERVICE_VERSION_UPDATE_REQUIRED
+SceneCaptureType
 .heic
 fields
 content://downloads/public_downloads
 permissionDenied
 VU
-nob
 getDescriptor
+nob
 enteringNames
 keymap
 color
@@ -2049,10 +2181,10 @@ griffin
 L150
 green
 io.flutter.embedding.android.NormalTheme
-SUSPEND_NO_WAITER
 L156
-SOURCE_CLIPBOARD
+SUSPEND_NO_WAITER
 TERRAIN
+SOURCE_CLIPBOARD
 chunked
 XA
 XB
@@ -2079,8 +2211,8 @@ L186
 A_PCM/FLOAT/IEEE
 MPD
 play
-com.google.android.gms.common.interna...
 image_cropper_
+com.google.android.gms.common.interna...
 getLocationAccuracy
 L183
 logger
@@ -2088,19 +2220,20 @@ max_height
 YE
 oemFeature
 getBounds
-DialogRedirect
 productName
+DialogRedirect
 EmptyCoroutineContext
 android.media.metadata.COMPILATION
 com.yalantis.ucrop.Error
 android.media.metadata.DISPLAY_ICON
 YT
 TextInputAction.search
+YU
 android:showsDialog
 com.google
-android.permission.ACCESS_BACKGROUND_...
 kotlinx.coroutines.scheduler.core.poo...
 kotlinx.coroutines.scheduler.max.pool...
+android.permission.ACCESS_BACKGROUND_...
 double
 ZA
 TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5
@@ -2135,19 +2268,19 @@ MP3Decoder
 onPause
 CHAP
 TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256
-kotlinx.coroutines.bufferedChannel.ex...
 enabled
 androidx.browser.customtabs.extra.SHA...
+kotlinx.coroutines.bufferedChannel.ex...
 gain
 p212
 com.github.barteksc.pdfviewer.h
 EBM
 .MediaCodecRenderer_
 android.hardware.type.watch
-LAZY
 TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_...
-PlatformViewWrapper
+LAZY
 isSource
+PlatformViewWrapper
 image/vnd.android.heic
 stackTrace
 animationInfo
@@ -2159,6 +2292,7 @@ darkorchid
 VP8L
 NX573J
 audio/opus
+ECI
 com.yalantis.ucrop.UcropToolbarCancel...
 A7020a48
 VP8X
@@ -2171,9 +2305,9 @@ _parentHandle
 flutter_image_compress
 BYTES
 kotlinx.coroutines.fast.service.loader
-completedExpandBuffersAndPauseFlag
 palegreen
 EmojiCompatInitializer
+completedExpandBuffersAndPauseFlag
 Brightness.dark
 KEY_COMPONENT_ACTIVITY_REGISTERED_RCS
 ThemeUtils
@@ -2182,19 +2316,19 @@ configureCodec
 whileInUse
 SingleSampleMediaPeriod
 notification
-SettingsChannel
 2
 frameRate
+SettingsChannel
 dev.flutter.pigeon.google_maps_flutte...
 fontFamily
+dev.flutter.pigeon.webview_flutter_an...
 dodgerblue
 DETECT_FRAGMENT_TAG_USAGE
-dev.flutter.pigeon.webview_flutter_an...
 com.google.android.gms.signin.interna...
 mimetypeArg
 dev.flutter.pigeon.google_maps_flutte...
-Musical
 java.lang.Byte
+Musical
 AlternRock
 SubripParser
 dev.flutter.pigeon.video_player_andro...
@@ -2213,12 +2347,13 @@ outside
 effect
 rebase
 wm.defaultDisplay
-maxIntensity
 SET_TEXT
+maxIntensity
 nextFunction
 DETECT_WRONG_NESTED_HIERARCHY
 SystemChrome.restoreSystemUIOverlays
 unexpected
+NEED_RESULT_POINT_CALLBACK
 NO_RECEIVE_RESULT
 EGL_KHR_surfaceless_context
 END_STREAM
@@ -2249,6 +2384,7 @@ ensureImeVisible
 android.permission.ANSWER_PHONE_CALLS
 geolocator_mslAltitude
 android.intent.action.PROCESS_TEXT
+SCAN_RESULT_ORIENTATION
 messageArg
 TEXTURE_WITH_VIRTUAL_FALLBACK
 isPlayingStateUpdate
@@ -2264,14 +2400,14 @@ SPECULATIVE_LOADING
 user
 android.permission.READ_PHONE_STATE
 DeviceSettingDescription
-extent
 getModule
+extent
 $seekCancelLambda
 DefaultDrmSession
 Pop/Funk
-tooltip
 openAppSettings
 RTSP/1.0
+tooltip
 /scaled_
 notificationIcon
 CONFIGURE_PARTITIONED_COOKIES
@@ -2280,8 +2416,9 @@ lightgrey
 setAlpnProtocols
 b5
 messageType
-GPSSpeedRef
 flutter/keyboard
+GPSSpeedRef
+0000
 systemStatusBarContrastEnforced
 androidx.lifecycle.LifecycleDispatche...
 DOUBLE_LIST_PACKED
@@ -2296,8 +2433,8 @@ android.media.VOLUME_CHANGED_ACTION
 bufferingUpdate
 STRING_SET
 %01d
-downloadFile
 MOVE_CURSOR_BACKWARD_BY_WORD
+downloadFile
 _COROUTINE
 ar
 kotlinx.coroutines.scheduler.resoluti...
@@ -2307,8 +2444,8 @@ FocalLength
 getType
 dev.flutter.pigeon.webview_flutter_an...
 birthdayDay
-c:
 kotlin.jvm.internal.StringCompanionOb...
+c:
 ACTION_CLICK
 video/mp4
 common_google_play_services_resolutio...
@@ -2338,16 +2475,18 @@ flo
 alternate
 e0
 sampleRates
+%03d
 FRAMEWORK_CLIENT
 ThreadLocalEventLoop
 cs
 flounder_lte
+QR_CODE_MODE
 cy
 USAGE_ASSISTANCE_NAVIGATION_GUIDANCE
 VGhpcyBpcyB0aGUgcHJlZml4IGZvciBhIGxpc3Qu
 android.support.PARENT_ACTIVITY
-opacity
 currentPage
+opacity
 config
 font
 de
@@ -2356,6 +2495,7 @@ PlaybackDurationRemaining
 TALB
 dev.flutter.pigeon.webview_flutter_an...
 language
+CONTINUOUS
 TLS_DHE_DSS_WITH_AES_128_GCM_SHA256
 video/wvc1
 dev.flutter.pigeon.webview_flutter_an...
@@ -2363,8 +2503,8 @@ USHORT
 DESCENDING
 darkturquoise
 minUpdateDistanceMeters
-configurationId
 SSL_DH_anon_WITH_DES_CBC_SHA
+configurationId
 DOWNLOADS
 lightgray
 F04H
@@ -2372,16 +2512,16 @@ forced_subtitle
 F02H
 image
 android.speech.extra.MAX_RESULTS
-proportionalControlFactor
 el
+proportionalControlFactor
 em
-en
 imagecropper.FILENAME_CACHE_KEY
-NonDisposableHandle
+en
 VOD
+NonDisposableHandle
 Ballad
-plugins.endigo.io/pdfview
 PODCASTS
+plugins.endigo.io/pdfview
 PATCH
 CameraMotionRenderer
 eu
@@ -2391,34 +2531,35 @@ zerolte
 END
 ACTION_ACCESSIBILITY_FOCUS
 OMX.lge.flac.decoder
+countryName
 fa
 ELUGA_Prim
-countryName
 rdf:Description
 inputAction
 https:
 VP9
 _preferences
+frame
 VP8
 F03H
-frame
 UTCTiming
 ThumbnailImageLength
 translationAlpha
 Acid
+android.crop_grid_row_count
 media3.exoplayer.rtsp
 SignInCoordinator
-android.crop_grid_row_count
 OMX.Exynos.avc.dec.secure
 fm
 origin
 INDEPENDENT
 h2
+ERRORS_CORRECTED
 dev.flutter.pigeon.webview_flutter_an...
-fr
 extendedAddress
-content
+fr
 android.media.extra.AUDIO_PLUG_STATE
+content
 wm.currentWindowMetrics.bounds
 firebrick
 minDecibels
@@ -2426,9 +2567,11 @@ Number
 android.media.extra.SCO_AUDIO_PREVIOU...
 TLS_ECDH_ECDSA_WITH_RC4_128_SHA
 %06X
+FNC1_FIRST_POSITION
 class
-sharedElementNameMapping.values
+PAD_ENCODE
 ws:
+sharedElementNameMapping.values
 F04J
 V23GB
 DISABLE_ANIMATIONS
@@ -2439,8 +2582,8 @@ PROPFIND
 android.hardware.vr.high_performance
 BT601
 Gothic
-Sharpness
 gt
+Sharpness
 createCodec:
 android.support.customtabs.extra.TOOL...
 onPageError
@@ -2448,11 +2591,12 @@ SignIn.INTERNAL_API
 500
 obj
 fused
-com.google.android.gms.maps.model.int...
 resizeLeft
+com.google.android.gms.maps.model.int...
 SERVICE_WORKER_BLOCK_NETWORK_LOADS
 androidx.window.extensions.layout.Fol...
 he
+CameraConfiguration
 android.support.text.emoji.emojiCompa...
 WINDOW_UPDATE
 Duet
@@ -2472,8 +2616,8 @@ com.google.android.gms.signin.interna...
 https
 id
 DefaultRenderersFactory
-dispatcher
 android.crop_style
+dispatcher
 BRAVIA
 ENUM
 ExoPlayer:Playback
@@ -2483,13 +2627,13 @@ index
 is
 it
 AppCompatSpinner
-announce
 rosybrown
-UNDECIDED
 iw
+UNDECIDED
+announce
 SET_PRIMARY_NAV
-resolving_error
 TextInputType.address
+resolving_error
 androidx.media3.common.Timeline
 A_OPUS
 TextInputType.url
@@ -2506,8 +2650,9 @@ classLoader
 sienna
 OMX.Exynos.AAC.Decoder
 startBluetoothSco
-Url
 originArg
+Url
+rawBytes
 Authorization
 delegate
 ka
@@ -2516,6 +2661,7 @@ corruptionHandler
 lifecycleImpact
 camera
 dev.flutter.pigeon.webview_flutter_an...
+plugged
 onDestroy
 dev.flutter.pigeon.webview_flutter_an...
 IS_KEYBOARD_KEY
@@ -2535,6 +2681,7 @@ ResolutionUnit
 dev.flutter.pigeon.webview_flutter_an...
 /data/misc/profiles/ref/
 forestgreen
+STRUCTURED_APPEND_SEQUENCE
 flutter/processtext
 lr
 Super_SlowMotion_Data
@@ -2544,30 +2691,32 @@ audioSource
 ExoPlayer:WifiLockManager
 ExoPlayer
 OMX.RTK.video.decoder
-hvc1
 android.init_aspect_ratio
+hvc1
 writingMode
 sampleRate.caps
 GCamera:MicroVideo
+PUNCT
 limit
 .dib
 mh
 TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA
+PROMPT_MESSAGE
 mi
 DESCRIBE
 mk
 DID_GAIN_ACCESSIBILITY_FOCUS
 com.google.android.gms.location.ILoca...
+kotlin.Number
 plum
 android.support.customtabs.extra.SESSION
-kotlin.Number
-getMicrophones
 HeifWriter
+getMicrophones
 dev.flutter.pigeon.image_picker_andro...
 dev.flutter.pigeon.webview_flutter_an...
 ms
-PhotographicSensitivity
 BALANCED_POWER_ACCURACY
+PhotographicSensitivity
 firstOut.fragment.sharedElementTarget...
 mv
 kDown
@@ -2578,17 +2727,18 @@ com.yalantis.ucrop.StatusBarColor
 initialIndex
 entry
 android.settings.LOCATION_SOURCE_SETT...
-nb
 grabbing
-NavigationChannel
+nb
 dev.flutter.pigeon.webview_flutter_an...
+NavigationChannel
 androidx.datastore.preferences.protob...
 nl
 TextInputType.visiblePassword
 iball8735_9806
 nm
-nn
 p0
+nn
+p1
 no
 code
 /android_asset/
@@ -2609,8 +2759,8 @@ android.net.conn.CONNECTIVITY_CHANGE
 timescale
 show_password
 on
-FourCC
 _data
+FourCC
 deeppink
 baseKey
 maxBufferMs
@@ -2624,23 +2774,25 @@ getIBinder
 GPSDOP
 COROUTINE_SUSPENDED
 config_viewMinRotaryEncoderFlingVelocity
+PDF417_EXTRA_METADATA
 Share.invoke
 V_MPEG2
-android.widget.
 flutter/textinput
+android.widget.
 thumbPos
 contentDispositionArg
 DCIM
 PigeonInstanceManager
 AutoCompleteTextView
 urn:mpeg:mpegB:cicp:ChannelConfiguration
+ALPHANUMERIC
 HAS_TOGGLED_STATE
 TLS_DH_anon_WITH_AES_256_CBC_SHA256
 android.support.v13.view.inputmethod....
 px
 sizeAndRate.vCaps
-dev.flutter.pigeon.video_player_andro...
 createAsync
+dev.flutter.pigeon.video_player_andro...
 android.media.metadata.DURATION
 sp_permission_handler_permission_was_...
 audio/mp3
@@ -2649,9 +2801,11 @@ grouper
 freeze
 flutter_image_picker_image_quality
 EMAIL_ADDRESS
-CPH1715
+ASSUME_GS1
 java.util.Map
+CPH1715
 TextInputPlugin
+CODE_128
 urn:tva:metadata:cs:AudioPurposeCS:2007
 /data/misc/profiles/cur/0
 Comedy
@@ -2691,10 +2845,13 @@ rw
 seashell
 INT32
 Mp3Extractor
+invertScan
 seek
+DATA_MASK_000
 FHCRC
 ENUM_LIST_PACKED
 :cea708
+DATA_MASK_001
 android:visibility:screenLocation
 SystemUiMode.immersive
 ToolbarWidgetWrapper
@@ -2706,11 +2863,12 @@ ACTION_SCROLL_TO_POSITION
 $this$$receiver
 NO_ERROR
 email
+ERASURES_CORRECTED
 DMCodecAdapterFactory
 sq
+kotlin.Enum.Companion
 RESOURCE
 sr
-kotlin.Enum.Companion
 com.google.android.gms.maps.internal....
 ss
 profileinstaller_profileWrittenFor_la...
@@ -2720,18 +2878,20 @@ SELECTION_CLICK
 WRITE_SKIP_FILE
 GPSMeasureMode
 Bitrate
+DATA_MASK_010
+DATA_MASK_011
 tb
-http://dashif.org/guidelines/trickmode
 TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+http://dashif.org/guidelines/trickmode
 sharedElementLastInViews
 te
 AndroidXMedia3/1.4.1
 androidx.media3.decoder.flac.FlacLibrary
 vp09
 vp08
-dev.flutter.pigeon.google_maps_flutte...
 darkslategray
 royalblue
+dev.flutter.pigeon.google_maps_flutte...
 android.speech.action.WEB_SEARCH
 getStreamMaxVolume
 closed
@@ -2753,6 +2913,8 @@ aqua
 com.android.capture.fps
 SERVICE_MISSING_PERMISSION
 .wave
+isInvertScan
+edof
 FitPolicy.BOTH
 up
 TOP_OVERLAYS
@@ -2766,6 +2928,7 @@ powderblue
 modft2
 HIDDEN
 action_key
+TEXT_ENCODE
 failure
 viewModel
 indexInTheGroup
@@ -2791,17 +2954,26 @@ closeDatabase
 disposePlayer
 FontsProvider
 bg_yellow
+ONE_D_MODE
 CeaUtil
-ExoPlayer:PlaceholderSurface
 TLS_ECDH_ECDSA_WITH_NULL_SHA
+ExoPlayer:PlaceholderSurface
 android$support$v4$os$IResultReceiver
 wt
 android.support.customtabs.extra.EXTR...
+8002
+8003
+8001
 INT64
+8006
+8007
+8004
+8005
 flutter/system
 api_force_staging
-getLastKnownPosition
+000000000
 Dispatchers.Main.immediate
+getLastKnownPosition
 onWindowLayoutChangeListenerRemoved
 WebvttCssParser
 location
@@ -2811,6 +2983,7 @@ FLOW_CONTROL_ERROR
 xx
 getInitialValue
 GPSProcessingMethod
+8018
 android.toolbar_color
 none
 location_mode
@@ -2820,8 +2993,8 @@ yi
 Item
 TextCapitalization.sentences
 image/avif
-DEX_FILES
 IMMERSIVE_STICKY
+DEX_FILES
 placemarkFromCoordinates
 bestForNavigation
 onRender
@@ -2829,26 +3002,29 @@ AndroidXMedia3
 get_current_location
 blanchedalmond
 HapticFeedbackType.mediumImpact
+8008
 connection
-cont
 openDatabase
+cont
 android:changeBounds:clip
 Sqflite
 getTextDirectionHeuristic
 lightgoldenrodyellow
-android:savedDialogState
 com.android.providers.downloads.docum...
+android:savedDialogState
 wifi
 DeviceOrientation.portraitUp
 method
+getCameraInfo
 _display_name
 config_showMenuShortcutsWhenKeyboardP...
 mGlobal
 contract
 tekartik_sqflite.db
+8020
 ACTION_ARGUMENT_SELECTION_START_INT
-zh
 push
+zh
 SpatialFrequencyResponse
 transitioningViews
 intent_extra_data_key
@@ -2873,27 +3049,30 @@ CUSTOM_CAP
 com.sony.dtv.hardware.panel.qfhd
 ger
 get
-produceMigrations
 dark
+produceMigrations
 initialized
 power
 precise
 copy
 java.lang.Number
+DATA_MATRIX
 suggest_intent_data_id
 no_valid_media_uri
 com.google.android.gms.maps.model.int...
 Electronic
 android.support.v4.media.session.IMed...
-dev.flutter.pigeon.webview_flutter_an...
+QR_CODE
 cadetblue
 TLS_PSK_WITH_3DES_EDE_CBC_SHA
 tickRate
+dev.flutter.pigeon.webview_flutter_an...
 initializer
 help
 darkkhaki
 podcasts
 flutter/deferredcomponent
+cutOutBottomOffset
 Model
 P681
 asset
@@ -2912,8 +3091,8 @@ REMOVED
 PERMISSION_DENIED
 0000ffff
 lemonchiffon
-profiles
 kotlin.jvm.internal.EnumCompanionObject
+profiles
 Period
 io.flutter.InitialRoute
 goldenrod
@@ -2934,11 +3113,11 @@ image/jpeg
 kotlin.collections.Map.Entry
 androidx.browser.customtabs.extra.COL...
 line
-GPSSatellites
 ExoPlayer:SimpleDecoder
 android.permission.SYSTEM_ALERT_WINDOW
-link
+GPSSatellites
 failing_client_id
+link
 SERVICE_WORKER_FILE_ACCESS
 GPSDestLatitude
 SUBTITLE
@@ -2954,8 +3133,8 @@ setAndroidAudioAttributes
 getWindowLayoutInfo
 factory
 ISIZE
-concatenatingRemoveRange
 JPEGInterchangeFormatLength
+concatenatingRemoveRange
 java.util.Iterator
 lime
 org.robolectric.Robolectric
@@ -2976,19 +3155,19 @@ android.settings.MANAGE_APP_ALL_FILES...
 SOAPAction
 BaseMediaChunkOutput
 DvbParser
+DISMISS
 FileUtils
 SQUARE_CAP
-DISMISS
 dev.flutter.pigeon.google_maps_flutte...
 hev1
 valueCase_
 android.media.metadata.ALBUM_ART_URI
 USAGE_NOTIFICATION_COMMUNICATION_DELAYED
 GeolocatorLocationService:WifiLock
+java.lang.Integer
 darkslateblue
 deleteDatabase
 kRepeat
-java.lang.Integer
 android:fade:transitionAlpha
 .mp3
 PICTURES
@@ -2999,6 +3178,7 @@ saddlebrown
 android.speech.extra.RESULTS_PENDINGI...
 googleSignInAccount
 .mpg
+SUGGESTED_PRICE
 WEB_MESSAGE_LISTENER
 ParcelImplListSlice
 set2
@@ -3019,14 +3199,16 @@ registerWith
 onAudioFocusChanged
 Darkwave
 SystemSoundType.alert
-registrar
 REDUCE_MOTION
+registrar
 displayName
 emoji2.text.DefaultEmojiConfig
 yellow
-dev.flutter.pigeon.webview_flutter_an...
 ImageLength
+dev.flutter.pigeon.webview_flutter_an...
 sidecarAdapter
+TORCH_ENABLED
+UnicodeBigUnmarked
 SignInClientImpl
 setParameters
 darkcyan
@@ -3041,18 +3223,19 @@ SUCCESS
 user_query
 destroy_engine_with_activity
 vernee_M5
-getFactory
 kotlin.String
+getFactory
 sidecarDeviceState
 minBufferMs
 .ec3
 component
-SUSPEND
 blue
+SUSPEND
 getParameters
 setPitch
 com.google.android.gms.maps.internal....
 ExoPlayerLib
+CTRL_
 TSOT
 androidx.core.view.inputmethod.InputC...
 POST
@@ -3068,8 +3251,8 @@ getLoadedPackageInfo
 addMethodName
 ACTION_SCROLL_FORWARD
 SIGN_IN_REQUIRED
-isMusicActive
 bufferEndSegment
+isMusicActive
 OPEN_MULTIPLE
 get_last_location_with_request
 callbackArg
@@ -3092,8 +3275,8 @@ databaseExists
 com.google.android.location.internal....
 TSOA
 DefaultTrackSelector
-startPoints
 AppLifecycleState.
+startPoints
 child
 santos
 SystemChrome.setSystemUIOverlayStyle
@@ -3116,6 +3299,7 @@ oneday
 samsung
 iterator.baseContext
 audio/mha1
+tb.a
 kotlinx.coroutines.main.delay
 requestRelaunchActivity
 _delayed
@@ -3150,17 +3334,17 @@ TtmlRenderUtil
 ImageWidth
 TooltipCompatHandler
 SERVICE_MISSING
-androidx.media2.session.IMediaSession
 HTTP/1.0
-BT2020
+androidx.media2.session.IMediaSession
 HTTP/1.1
+BT2020
 flutter_image_picker_shared_preference
 fullPackage
 per
 spdy/3.1
 write
-GPSDestLatitudeRef
 SensorLeftBorder
+GPSDestLatitudeRef
 android.crop_grid_stroke_width
 dev.flutter.pigeon.shared_preferences...
 urn:mpeg:dash:mp4protection:2011
@@ -3172,8 +3356,8 @@ eia608
 SSL_DHE_RSA_WITH_DES_CBC_SHA
 com.yalantis.ucrop.CropFrameColor
 YCbCrCoefficients
-floorLabel
 %2B
+floorLabel
 TSSE
 onPostResume
 Baroque
@@ -3182,8 +3366,8 @@ birthDateYear
 ACTION_SCROLL_IN_DIRECTION
 OMX.broadcom.video_decoder.tunnel
 MaxApertureValue
-WIDTH
 dev.flutter.pigeon.webview_flutter_an...
+WIDTH
 GoogleApiAvailability
 com.yalantis.ucrop.MaxBitmapSize
 %s.%sParcelizer
@@ -3194,9 +3378,9 @@ io.flutter.embedding.android.EnableVu...
 %2e
 Phantom6
 Lounge
+java.lang.String
 ExifIFDPointer
 GET_WEB_VIEW_RENDERER
-java.lang.String
 omx.qcom.video.decoder.hevcswvdec
 %40
 dev.flutter.pigeon.google_maps_flutte...
@@ -3212,12 +3396,15 @@ ZoomControlsEnabled
 framework
 GRANULARITY_COARSE
 mipmap
+messenger
 ExoPlayerImplInternal
 ConnectionlessLifecycleHelper
 android.intent.action.TIME_TICK
 intervalMillis
 TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 com.yalantis.ucrop.UcropToolbarWidget...
+EAN_8
+activityPluginBinding
 New
 REAR
 mMainThread
@@ -3231,14 +3418,14 @@ TextView
 ImageView
 2.18.7
 com.android.
-Shoegaze
 void
+Shoegaze
 USAGE_NOTIFICATION_EVENT
 onUserLeaveHint
 Public
 channelCount.aCaps
-mStableInsets
 _cur
+mStableInsets
 dev.flutter.pigeon.webview_flutter_an...
 audio/mpeg
 snow
@@ -3246,23 +3433,23 @@ dropVideoBuffer
 SensitivityType
 sharedElementFirstOutViews
 _id
-onConfigurationChanged
 basic
-AACDecoder
+onConfigurationChanged
 kotlin.Throwable
+AACDecoder
 ::cue
 dev.flutter.pigeon.shared_preferences...
 parkedWorkersStack
 android.permission.GET_ACCOUNTS
-compressWithFile
 RINGTONES
-com.yalantis.ucrop.AspectRatioOptions
+compressWithFile
 cause
+com.yalantis.ucrop.AspectRatioOptions
 NO_VALUE
 LocationResult
 TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
-navajowhite
 kotlin.Annotation
+navajowhite
 com.google.android.gms.signin.interna...
 GPSTrackRef
 android.permission.NEARBY_WIFI_DEVICES
@@ -3294,8 +3481,8 @@ onBackCancelled
 password
 kotlinx.coroutines.scheduler.keep.ali...
 CONTENT_TYPE
-VGhpcyBpcyB0aGUgcHJlZml4IGZvciBEb3VibGUu
 ALGORITHMIC_DARKENING
+VGhpcyBpcyB0aGUgcHJlZml4IGZvciBEb3VibGUu
 TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
 CompanionObject
 goog.exo.decoder
@@ -3329,15 +3516,16 @@ cached_engine_id
 STANDARD
 Psychadelic
 setRemoveOnCancelPolicy
-receive
 MUSIC
+receive
+barcodeimage
 getDevices
-ms:laurl
 viewArg
+ms:laurl
 baffin
 NEW_BUILDER
-gradient
 IS_LIVE_REGION
+gradient
 Connection
 $impl
 refresh
@@ -3367,12 +3555,16 @@ Leftfield
 android.widget.Button
 _closeCause
 has
+CameraThread
 REPLACE
 AES/CBC/PKCS7Padding
 .vtt
 INTEGER
 UINT32_LIST_PACKED
+8101
+8102
 glTexParameter
+8100
 androidx.datastore.preferences.protob...
 batch
 flutter.baseflow.com/geolocator_updat...
@@ -3386,17 +3578,20 @@ yellowgreen
 SupportLifecycleFragmentImpl
 INTERRUPTED_RCV
 MESSAGE_LIST
+8110
 FORCE_DARK
 font_variation_settings
 matroska
+STRUCTURED_APPEND
 platformViewId
 common_google_play_services_network_e...
 common_google_play_services_invalid_a...
 LEAN_BACK
 video
 peru
-SEALED
 LifecycleChannel
+GBK
+SEALED
 android.text.DynamicLayout$ChangeWatcher
 NO_OWNER
 onPageChanged
@@ -3424,31 +3619,31 @@ DATETIME
 BOOL
 com.google.android.gms.signin.interna...
 cellResolution
-dev.fluttercommunity.plus/connectivit...
 a70
 TLS_DHE_DSS_WITH_AES_128_CBC_SHA
+dev.fluttercommunity.plus/connectivit...
 CAPT
 IS_HEADER
-COMPLETING_RETRY
-ApertureValue
+android.toolbar_title
 MetadataRenderer
 plugins.endigo.io/pdfview_
-android.toolbar_title
+ApertureValue
+COMPLETING_RETRY
 audio:
-lightslategrey
 dev.flutter.pigeon.webview_flutter_an...
+lightslategrey
 VISIBLE_PASSWORD
 USAGE_ASSISTANT
 OrBuilderList
 com.google.android.gms.common.interna...
 heb
 TextInput.clearClient
-A_DTS
 TLS_AES_128_CCM_SHA256
+A_DTS
 TVSHOWSORT
 SCROLL_RIGHT
-moduleName
 android.widget.ImageView
+moduleName
 ACCESSIBILITY_CLICKABLE_SPAN_ID
 cyan
 ACTION_PAGE_LEFT
@@ -3476,9 +3671,9 @@ removeWindowLayoutInfoListener
 robolectric
 dev.flutter.pigeon.shared_preferences...
 processingState
-BUFFERED
 com.google.android.gms.maps.internal....
 $callback
+BUFFERED
 paleturquoise
 light
 HlsPlaylistParser
@@ -3488,6 +3683,7 @@ dvb:priority
 java.lang.Throwable
 Breakbeat
 /data/misc/profiles/cur/0/
+PRODUCT_MODE
 OMX.MARVELL.VIDEO.HW.CODA7542DECODER
 FragmentManager:
 ImageReaderSurfaceProducer
@@ -3498,13 +3694,13 @@ rtmp
 crimson
 slategrey
 INITIALIZED
-isHapticPlaybackSupported
 EventStream
+isHapticPlaybackSupported
 ivory
 android.support.v13.view.inputmethod....
 WavHeaderReader
-CFAPattern
 SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA
+CFAPattern
 CompassEnabled
 ACTION_DRAG_START
 serverAuthCode
@@ -3514,19 +3710,20 @@ $violation
 android.support.v4.media.session.TOKEN
 USER_AGENT_METADATA
 audio/mhm1
-minPossibleLiveOffsetSmoothingFactor
 SBYTE
-callbackInterface
+minPossibleLiveOffsetSmoothingFactor
 DeviceOrientation.landscapeLeft
+callbackInterface
 androidx.media2.metadata.BROWSABLE
 UCropActivity
-1.4.1
 requestArg
+1.4.1
 application/vobsub
 FIXED32_LIST
 dev.flutter.pigeon.webview_flutter_an...
-char
 compress_format
+char
+RETURN_CODABAR_START_END
 IMMERSIVE
 com.google.android.gms.maps.internal....
 dev.flutter.pigeon.webview_flutter_an...
@@ -3543,6 +3740,7 @@ wm.maximumWindowMetrics.bounds
 Anime
 video/mjpeg
 uimode
+SCAN_FORMATS
 KEY_COMPONENT_ACTIVITY_REGISTERED_KEYS
 TextInputAction.commitContent
 SubSecTime
@@ -3560,15 +3758,15 @@ WEB_VIEW_RENDERER_TERMINATE
 io.flutter.embedding.android.EnableIm...
 com.microsoft.playready
 TLS_1_3
-USAGE_ASSISTANCE_SONIFICATION
 TLS_1_2
+USAGE_ASSISTANCE_SONIFICATION
 audio/3gpp
 PreferenceGroup
 android.support.action.showsUserInter...
 setLocale
 unexpectedEndOfInput
-altitude
 TextInputType.phone
+altitude
 Accessibility
 TLS_1_1
 values
@@ -3583,8 +3781,8 @@ androidx.activity.result.contract.ext...
 slategray
 CANCELED
 dev.flutter.pigeon.shared_preferences...
-A7010a48
 alias
+A7010a48
 GET_PARAMETER
 BaseURL
 common_google_play_services_resolutio...
@@ -3595,8 +3793,9 @@ kotlin.String.Companion
 debug
 :id3
 ACTION_SHOW_TOOLTIP
-.wav
+flipCamera
 TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+.wav
 jClass
 TextInput.show
 value_
@@ -3613,26 +3812,28 @@ mResourcesImpl
 $transitioningViews
 sidecarCompat
 resizeColumn
-dev.flutter.pigeon.google_maps_flutte...
 plugins
+dev.flutter.pigeon.google_maps_flutte...
 common_google_play_services_sign_in_f...
-.mpeg
 kotlin.Cloneable
+.mpeg
 IS_FOCUSED
 RtpH263Reader
 audio/midi
 PlatformViewsController
 GPSDestBearing
+CTRL_PL
 Dream
 checkPermission
 Freestyle
+CTRL_PS
 X3_HK
-com.android.org.conscrypt.SSLParamete...
 kotlin.reflect.jvm.internal.Reflectio...
+com.android.org.conscrypt.SSLParamete...
+cleanedAndPointers
 skyblue
 databases
 HAS_BEARING_ACCURACY_MASK
-cleanedAndPointers
 application/mp4
 modelClass
 removeMethodName
@@ -3654,10 +3855,10 @@ PGN528
 dev.flutter.pigeon.webview_flutter_an...
 dev.flutter.pigeon.google_maps_flutte...
 TTML
-:path
 editingValue
-Canceled
+:path
 getPlatformVersion
+Canceled
 dev.fluttercommunity.plus/package_info
 SidecarCompat
 video/
@@ -3675,6 +3876,7 @@ android.support.customtabs.extra.TOOL...
 RESULT_DESIRED_FORMAT_UNSUPPORTED
 tail
 PERMIT
+PDF_417
 android.os.SystemProperties
 hintText
 OMX.google
@@ -3682,13 +3884,15 @@ childFragmentManager
 TCMP
 CANCEL
 LICENSE_CHECK_FAILED
-NO_UNSUPPORTED_TYPE
+703
 dev.flutter.pigeon.webview_flutter_an...
+NO_UNSUPPORTED_TYPE
 android.permission.BLUETOOTH
 androidx.core.view.inputmethod.InputC...
 android.media.metadata.DATE
 dev.flutter.pigeon.shared_preferences...
 listener
+ASCII
 BanParcelableUsage
 createWorkChain
 SubIFDPointer
@@ -3711,10 +3915,12 @@ count
 TCON
 TCOM
 GContainer
+CTRL_UL
 android.permission.RECORD_AUDIO
 hrv
 Role
 %c%c%c
+CTRL_US
 recoveredInTransaction
 notificationText
 navigation_bar_height
@@ -3732,6 +3938,7 @@ SsaParser
 NVIDIA
 TERMINATED
 flutter/navigation
+BINARY
 getCurrentPosition
 androidx.view.accessibility.Accessibi...
 ProcessText.queryTextActions
@@ -3756,10 +3963,10 @@ activateSystemCursor
 $ClientProvider
 flutter/accessibility
 resize
-DROP_OLDEST
 android.support.allowGeneratedReplies
-BACK_FORWARD_CACHE
 android.media.ACTION_SCO_AUDIO_STATE_...
+BACK_FORWARD_CACHE
+DROP_OLDEST
 H60
 H63
 TLEN
@@ -3771,11 +3978,11 @@ birthdayMonth
 SFIXED64_LIST
 com.tekartik.sqflite.wal_enabled
 autocorrect
-com.google.android.exoplayer2.decoder...
 android.crop_frame_color
+com.google.android.exoplayer2.decoder...
 IMAGE
-GET_WEB_CHROME_CLIENT
 HapticFeedbackType.selectionClick
+GET_WEB_CHROME_CLIENT
 androidx.view.accessibility.Accessibi...
 khaki
 action
@@ -3788,8 +3995,8 @@ com.yalantis.ucrop.UcropToolbarCropDr...
 RESOLUTION_REQUIRED
 loading
 getLayoutAlignment
-Contrast
 ImageHeaderParser
+Contrast
 com.google.android.gms.maps.internal....
 PLAIN_TEXT
 applicationContext
@@ -3801,6 +4008,7 @@ arch_disk_io_
 SamplesPerPixel
 ACTION_CLEAR_SELECTION
 image/bmp
+net.touchcapture.qr.flutterqr/qrview
 GCamera:MicroVideoPresentationTimesta...
 file
 YCbCrSubSampling
@@ -3809,21 +4017,23 @@ mediaRange
 bg_blue
 H90
 TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+NUMERIC
 com.google.android.gms.maps.internal....
 H93
 HIDE
 ACTION_PAGE_RIGHT
 COMPRESSED
-FlashEnergy
 TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA
+FlashEnergy
 AFTEUFF014
 onComplete
 PDFView
 https://default.url
 dev.flutter.pigeon.path_provider_andr...
+torch
 Bluegrass
-menu
 android.show_crop_grid
+menu
 releaseOutputBuffer
 androidx.core.view.inputmethod.InputC...
 getLong
@@ -3839,9 +4049,10 @@ VIRTUAL_DISPLAY_PLATFORM_VIEW
 EmojiCompat.MetadataRepo.create
 IS_SLIDER
 resizeUpLeftDownRight
+TERMINATOR
 instance
-Chorus
 crop_error
+Chorus
 SpellCheckChannel
 KEY_COMPONENT_ACTIVITY_PENDING_RESULT
 TransformImageView
@@ -3857,12 +4068,13 @@ selected
 HTTP_2
 Bebob
 Accept
+changeScanArea
 .adts
 textAlign
 dev.flutter.pigeon.video_player_andro...
 personMiddleName
-android.media.MediaCodec
 AUTO
+android.media.MediaCodec
 true
 SAFE_BROWSING_ENABLE
 position
@@ -3892,6 +4104,7 @@ Jpop
 vm_snapshot_data
 AdtsReader
 Clipboard.getData
+POSSIBLE_FORMATS
 application/dvbsubs
 ResourceManagerInternal
 dev.flutter.pigeon.shared_preferences...
@@ -3913,19 +4126,23 @@ SINT32_LIST
 android.aspect_ratio_presets
 SystemID
 TextInput.hide
-constantBitrateSeekingEnabled
 CENTER
+constantBitrateSeekingEnabled
 descriptionArg
 protou
 java.lang.Long
+UPC_A
+UPC_E
 PACKED_VECTOR
 com.yalantis.ucrop.HideBottomControls
 fragmentManager
+ALSO_INVERTED
 android.security.NetworkSecurityPolicy
 0x%02x
+q8.a
+channelCounts
 Soundtrack
 oldText
-channelCounts
 wss:
 Clipboard.hasStrings
 androidx.media2.metadata.EXTRAS
@@ -3941,30 +4158,36 @@ TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
 StartIntentSenderForResult
 kotlin.Function
 backBufferDurationMs
+ISO8859_8
+ISO8859_9
 dev.flutter.pigeon.webview_flutter_an...
 kJoystick
+ISO8859_6
 DOCUMENT_START_SCRIPT
+ISO8859_7
 ACTION_PAGE_DOWN
 classes_to_restore
 AtomParsers
 DvbDecoder
 FIXED64_LIST
+8200
 AGGREGATION_COUNT
 RowsPerStrip
 clipBounds
 systemNavigationBarIconBrightness
 contextMenu
 selectProtocol
-GPSDestDistance
-TLS_DH_anon_WITH_AES_128_GCM_SHA256
 dev.flutter.pigeon.webview_flutter_an...
-colorMapSize
+TLS_DH_anon_WITH_AES_128_GCM_SHA256
+GPSDestDistance
 autofill
+colorMapSize
 Id3Decoder
 operation
 Super_SlowMotion_Edit_Data
 TDAT
 postalCode
+00000
 ice
 GCamera:MotionPhoto
 DESC
@@ -3974,8 +4197,8 @@ TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
 panell_dl
 enableDomStorage
 WEB_MESSAGE_PORT_SET_MESSAGE_CALLBACK
-WEB_VIEW_RENDERER_CLIENT_BASIC_USAGE
 birthDateFull
+WEB_VIEW_RENDERER_CLIENT_BASIC_USAGE
 c2.android.aac.decoder
 icy
 kotlinx.coroutines.io.parallelism
@@ -3985,9 +4208,11 @@ onLinkHandler
 TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
 PADDED
 constructor
+TRY_HARDER
 TypefaceCompatApi21Impl
 collection
 ELUGA_Ray_X
+android.hardware.camera.flash
 WARNING
 BOOLEAN
 MapToolbarEnabled
@@ -3995,18 +4220,21 @@ MapToolbarEnabled
 android.view.DisplayInfo
 dev.flutter.pigeon.webview_flutter_an...
 dev.flutter.pigeon.webview_flutter_an...
+SCAN_RESULT
 Disco
+LOWER
 Latin
-GainControl
 image/jpg
 AdaptationSet
+GainControl
 RECEIVE_HTTP_ERROR
 Subtype
 debugMode
 com.ryanheise.just_audio.data.
 androidx.lifecycle.internal.SavedStat...
-isAvailable
+scanAreaHeight
 TLS_RSA_WITH_AES_128_CBC_SHA256
+isAvailable
 expires
 TLS_
 dtsl
@@ -4041,11 +4269,12 @@ boundsOrigin
 schemeIdUri
 dev.flutter.pigeon.shared_preferences...
 setStreamVolume
+SCAN_RESULT_FORMAT
 Location
 no_activity
+extendedPostalCode
 tilapia
 CreationDate
-extendedPostalCode
 setUseSessionTickets
 prefix
 flutter.baseflow.com/geocoding
@@ -4057,20 +4286,20 @@ getViewRootImpl
 com.google.android.gms.maps.internal....
 TrackEncryptionBox
 permissions
-superclass
 delimiter
+superclass
 OMX.Exynos.AVC.Decoder.secure
 tel:123123
 GIONEE_WBL7519
 dev.flutter.pigeon.webview_flutter_an...
-BUTT_CAP
 application/json
+BUTT_CAP
 viewRegistryState
-HttpUtil
 hints
+HttpUtil
 reduced
-keyup
 java.util.Set
+keyup
 onWindowLayoutChangeListenerAdded
 BundleUtil
 textEmphasis
@@ -4081,17 +4310,18 @@ source_path
 deniedForever
 Opera
 setNumUpdates
-copyFile
 DELETE_SKIP_FILE
 newDeviceState
-DETECT_WRONG_FRAGMENT_CONTAINER
+copyFile
 SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
+DETECT_WRONG_FRAGMENT_CONTAINER
 TLS_ECDH_anon_WITH_RC4_128_SHA
 TileProviderController
 market://details
 createFromFamiliesWithDefault
 ActivityResultRegistry
 TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+Big5
 constantBitrateSeekingAlwaysEnabled
 usesVirtualDisplay
 pictures
@@ -4122,6 +4352,7 @@ span
 darksalmon
 LocationServiceHandler
 fragmentManager.specialEffectsControl...
+MIXED
 android.background_color
 gprimelte
 OpusHead
@@ -4154,9 +4385,15 @@ OMX.realtek.video.decoder.tunneled
 bottom
 SystemChrome.setApplicationSwitcherDe...
 IS_HIDDEN
+stopScan
 LOW_POWER
+ISO8859_4
 SERVICE_INVALID
 keyCode
+ISO8859_5
+ISO8859_2
+ISO8859_3
+ISO8859_1
 ThumbnailImage
 file_id
 olivedrab
@@ -4168,13 +4405,13 @@ HLG
 androidx.datastore.preferences.protob...
 ACTION_CUT
 error
-getBoundsMethod
 kotlin.Byte
+getBoundsMethod
 network
-bufferEnd
 fuchsia
-adjustSuggestedStreamVolume
+bufferEnd
 operations
+adjustSuggestedStreamVolume
 public
 RequestPermissions
 array
@@ -4192,16 +4429,18 @@ dart_entrypoint_args
 unrated
 dashif:Laurl
 SsaStyle
-REMOTE_EXCEPTION
 int
+REMOTE_EXCEPTION
 SET_PARAMETER
 bluetooth
+RSS_14
 serif
 ImageReaderPlatformViewRenderTarget
 com.google.android.inputmethod.latin
 TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA
 Xmp
 panell_d
+UPC_EAN_EXTENSION
 STRING_LIST
 OMX.google.raw.decoder
 buffering
@@ -4223,8 +4462,8 @@ onBackPressed
 Alternative
 adapter
 %s/%s/%s
-LEFT
 LANDSCAPE_RIGHT
+LEFT
 DefaultDataSource
 autoStoreLocales
 dev.flutter.pigeon.webview_flutter_an...
@@ -4233,6 +4472,7 @@ raw
 packages
 handlerArg
 onBackProgressed
+ISO_IEC_646
 c2.android.opus.decoder
 kotlin.jvm.functions.
 Q350
@@ -4249,6 +4489,7 @@ TVSHOW
 android.settings.action.MANAGE_OVERLA...
 PORTRAIT_DOWN
 touchOffset
+UnicodeBig
 PLAY_NOTIFY
 libapp.so
 LookaheadCount
@@ -4275,8 +4516,8 @@ ACTIVITY_MISSING
 requestStartTime
 displayFeatures
 no_valid_video_uri
-android.support.customtabs.extra.SECO...
 ALREADY_LOCKED_BY_OWNER
+android.support.customtabs.extra.SECO...
 GridLayoutManager
 package:
 DEVELOPER_ERROR
@@ -4292,11 +4533,11 @@ Samba
 flutter_assets
 ism
 StreamFormatChunk
-getStreamVolumeDb
 getName
+getStreamVolumeDb
 VIDEO
-ImageUniqueID
 TDRC
+ImageUniqueID
 TextInputClient.performPrivateCommand
 androidx.profileinstaller.action.SKIP...
 ack
@@ -4332,9 +4573,11 @@ deviceState
 pendingIntent
 fragmentStateManager.fragment
 GONE
+SCAN_CAMERA_ID
 ROOT
 ACTION_CLEAR_FOCUS
 H120
+KANJI
 PixelYDimension
 ACTION_SCROLL_BACKWARD
 H123
@@ -4363,9 +4606,9 @@ androidx.view.accessibility.Accessibi...
 northeast
 label
 message
+ISSUE_NUMBER
 FORCE_DARK_BEHAVIOR
 ACTION_DRAG_DROP
-sa.a
 location_enabled
 HapticFeedbackType.lightImpact
 Club
@@ -4375,12 +4618,14 @@ creditCardExpirationDay
 SAFE_BROWSING_RESPONSE_PROCEED
 age
 username
+onRecognizeQR
 grantResults
 CSeq
 Camera:MicroVideoOffset
 UNDEFINED
 fontsize
 caption
+getFlashInfo
 OMX.qcom.video.decoder.vp8
 BYTE
 IS_TEXT_FIELD
@@ -4394,8 +4639,8 @@ UINT64_LIST_PACKED
 TextInputAction.none
 Trance
 FileSource
-FocalLengthIn35mmFilm
 video/dv_hevc
+FocalLengthIn35mmFilm
 handle
 fontStyle
 DIAGNOSTIC_REF_PROFILE_EXISTS
@@ -4438,6 +4683,7 @@ backBufferDuration
 filled
 H156
 dev.flutter.pigeon.google_maps_flutte...
+RSS_EXPANDED
 fragmentStateManager
 NavUtils
 LIGHT_IMPACT
@@ -4447,16 +4693,16 @@ mListener
 androidx.core.app.extra.COMPAT_TEMPLATE
 NORMAL
 $lastInEpicenterRect
-GPSLatitude
 H180
+GPSLatitude
 selectionExtent
-referer
 SystemChrome.setEnabledSystemUIOverlays
-Compression
+referer
 MouseCursorChannel
+Compression
 ATOMIC
-H183
 kotlin.collections.Collection
+H183
 H186
 getAlpnSelectedProtocol
 application/pgs
@@ -4464,8 +4710,8 @@ primarycolour
 body
 subThoroughfare
 EVENT
-mode
 TextInputAction.send
+mode
 com.google.android.gms.dynamiteloader...
 ContentProtection
 alb
@@ -4480,44 +4726,45 @@ com.yalantis.ucrop.MaxSizeY
 com.yalantis.ucrop.MaxSizeX
 all
 always
-dev.flutter.pigeon.webview_flutter_an...
 android.lock_aspect_ratio
+dev.flutter.pigeon.webview_flutter_an...
 read
 Acoustic
 alt
-touch
 application/vnd.dvb.ait
+touch
 CLASSES
 dlxu
 MenuItemWrapper
 consumerAdapter
 dev.flutter.pigeon.google_maps_flutte...
 java.util.List
-hybrid
 sharedElementNameMapping.keys
+hybrid
 F3113
 F3111
-Cult
 kotlin.Int
+sensor
+Cult
 F3116
-GIONEE_WBL5708
 BackGestureChannel
+GIONEE_WBL5708
 android.permission.CALL_PHONE
 WEBVTT
 addNode
 aquamarine
 amp
 IS_IMAGE
-COMPLETING_ALREADY
 %2e.
+COMPLETING_ALREADY
 hexBackgroundColor
 TLS_KRB5_WITH_RC4_128_SHA
 flp_debug_updates
 java.lang.Iterable
-isMicrophoneMute
 androidx.appcompat.widget.LinearLayou...
-MakerNote
+isMicrophoneMute
 readException
+MakerNote
 rect
 MinZoomPreference
 kotlinx.coroutines.DefaultExecutor.ke...
@@ -4525,16 +4772,17 @@ INVERT_COLORS
 and
 $activity
 darkorange
-synchronizeToNativeViewHierarchy
 slateblue
+packageName
 info.displayFeatures
 YCbCrPositioning
-packageName
+synchronizeToNativeViewHierarchy
 enableJavaScript
 universal
 c2.
 Conscrypt
 androidx.core.view.inputmethod.InputC...
+SJIS
 windowConfiguration
 ETSDefinition
 setVolume
@@ -4549,31 +4797,36 @@ gcore_
 Garage
 application
 flutter/lifecycle
-android.media.action.VIDEO_CAPTURE
 SLONG
+android.media.action.VIDEO_CAPTURE
 WEB_RESOURCE_REQUEST_IS_REDIRECT
 ExoPlayer:AudioTrackReleaseThread
 android.permission.READ_PHONE_NUMBERS
 minSpl
+Cp437
 outlinecolour
 SystemChrome.setEnabledSystemUIMode
 permissions_handler
 ANIM
-SegmentBase
 TLS_KRB5_WITH_DES_CBC_MD5
+SegmentBase
 GoogleApiHandler
 .m4
 INCREASE
 androidx.datastore.preferences.protob...
 QUIC
+Cp1256
 CTOC
-setBluetoothScoOn
 ERROR
 jar
+setBluetoothScoOn
 api
+Cp1251
 SERVICE_UPDATING
+Cp1252
 checkedAdd
 dev.flutter.pigeon.webview_flutter_an...
+Cp1250
 android.media.metadata.DISC_NUMBER
 deltaText
 $dispatcher
@@ -4585,6 +4838,7 @@ BUILD_MESSAGE_INFO
 C1504
 missing_valid_image_uri
 .flac
+000
 Pop
 android.net.http.X509TrustManagerExte...
 dev.flutter.pigeon.google_maps_flutte...
@@ -4599,10 +4853,10 @@ androidx.savedstate.Restarter
 K50a40
 .mk
 DROP_SHADER_CACHE
+kotlin.collections.ListIterator
 sandybrown
 oemFeature.bounds
 arb
-kotlin.collections.ListIterator
 default_KID
 GROUP
 GPSLatitudeRef
@@ -4622,38 +4876,46 @@ shear
 mintcream
 com.yalantis.ucrop.CompressionQuality
 blockingTasksInBuffer
+net.touchcapture.qr.flutterqr/qrview_
 call
 beige
 OMX.google.aac.decoder
 .webp
-.webm
+hasFlash
+hasBackCamera
 kotlin.Char
+.webm
 ID3
-android:backStackId
 audioAttributes
+android:backStackId
 RecyclerView
 flutter/isolate
 m3u8
 _decisionAndIndex
 .%2e
 s905x018
+7002
+7001
 TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA
+7003
 .og
-result_
 DefaultDispatcher
+ALPHA
+result_
 PRIV
-rum
 kotlin.Double
+rum
 onActivityResult
 GPSMapDatum
 view
 Gangsta
 IDM
-SystemChrome.systemUIChange
 darkolivegreen
 ANMF
-isVolumeFixed
+SystemChrome.systemUIChange
 USAGE_MEDIA
+CTRL_DL
+isVolumeFixed
 suggest_intent_query
 A2016a40
 CustomTabsClient
@@ -4675,8 +4937,8 @@ DIAGNOSTIC_REF_PROFILE_DOES_NOT_EXIST
 NestedScrollView
 DartExecutor
 AFTJMST12
-parameters
 TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA
+parameters
 Bhangra
 dev.flutter.pigeon.google_maps_flutte...
 InbandEventStream
@@ -4684,12 +4946,13 @@ bool
 IFD
 android
 description
-java.lang.module.ModuleDescriptor
 nameSuffix
+java.lang.module.ModuleDescriptor
 rwt
 VISIBLE
 status_bar_height
 audio/vnd.dts
+negative
 textScaleFactor
 nicklaus_f
 street
@@ -4702,6 +4965,7 @@ VALUE_NOT_SET
 START_SAFE_BROWSING
 flutter.baseflow.com/permissions/methods
 DFXP
+CTRL_BS
 Dispatchers.Main
 media3.datasource
 boreal
@@ -4722,6 +4986,7 @@ IS_MULTILINE
 middleName
 dev.flutter.pigeon.google_maps_flutte...
 personFamilyName
+PURE_BARCODE
 TLS_DH_anon_WITH_AES_256_GCM_SHA384
 CLIP_RRECT
 darkviolet
@@ -4756,19 +5021,19 @@ ChunkSampleStream
 lightyellow
 violet
 newPassword
-.jpeg
 smsOTPCode
+.jpeg
+.png
 flutter_deeplinking_enabled
 android.net.Network
 .ts
-.png
 SystemChannel
 ConnectionTracker
 INVISIBLE
 support_context_feature_id
 HEAVY_IMPACT
-phone
 kotlin.Short
+phone
 bounds
 android.media.metadata.NUM_TRACKS
 style
@@ -4784,12 +5049,13 @@ lightseagreen
 SystemUiOverlay.bottom
 ViewConfigCompat
 networkResponse
+AZTEC_MODE
 android.permission.ACCESS_FINE_LOCATION
 isCleartextTrafficPermitted
-adjustVolume
 mContentInsets
-resuming_sender
+adjustVolume
 mToken
+resuming_sender
 setDirection
 ENUM_LIST
 dev.flutter.pigeon.webview_flutter_an...
@@ -4798,23 +5064,23 @@ java.util.Map$Entry
 TLS_AES_256_CCM_8_SHA256
 OMX.rk.video_decoder.avc
 display
-setCommunicationDevice
 Grunge
+setCommunicationDevice
 LensModel
 SpellCheck.initiateSpellCheck
 composingExtent
 %d:%d
 image/
 onBecomingNoisy
-setRingerMode
 dev.flutter.pigeon.google_maps_flutte...
+setRingerMode
 birthDateDay
 MetadataUtil
 EssentialProperty
 libflutter.so
 PORTRAIT_UP
-sendSegment
 sailfish
+sendSegment
 orchid
 com.google.android.gms.signin.interna...
 SFIXED32
@@ -4827,8 +5093,8 @@ kotlin.Any
 MediaPeriodHolder
 defaultValueArg
 ISOSpeed
-listString
 androidx.media3.decoder.ffmpeg.Ffmpeg...
+listString
 PlaceholderSurface
 AppCompatViewInflater
 selectionBase
@@ -4837,6 +5103,7 @@ baseContainer
 getWindowLayoutComponent
 plainCodePoint
 SSL_DH_anon_EXPORT_WITH_RC4_40_MD5
+CTRL_LL
 glAttachShader
 BEVEL
 _reusableCancellableContinuation
@@ -4849,20 +5116,21 @@ package
 fullyDrawnReporterOwner
 androidx.media3.effect.ScaleAndRotate...
 putInt
-updateEnabledCallbacks
 kind
+updateEnabledCallbacks
 rubyPosition
 iris60
 SMOOTH
 Q427
-CANCELLED
 dev.flutter.pigeon.webview_flutter_an...
+CANCELLED
 SCROLL_UP
+CTRL_ML
 Producer
 com.google.android.gms.dynamite.descr...
 PUSH_PROMISE
-CLOSED_EMPTY
 kotlin.collections.Iterator
+CLOSED_EMPTY
 res/
 job
 TextInputClient.requestExistingInputS...
@@ -4891,19 +5159,20 @@ uniqueIdentifier
 jpg
 ACTION_PREVIOUS_HTML_ELEMENT
 move
-getProperty
-Techno
 original
+Techno
+getProperty
 _HLS_part
 com.yalantis.ucrop.CropGridColumnCount
 suggest_text_2_url
-alarms
 filePath
+alarms
 com.google.android.gms.maps.model.int...
 bufferedPosition
 HEIGHT
 androidx.lifecycle.savedstate.vm.tag
 WindowInsetsCompat
+vibrator
 INT32_LIST
 ViewUtilsBase
 video/raw
@@ -4911,23 +5180,29 @@ video/raw
 concatenatingMove
 mIsChildViewEnabled
 maroon
-TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
 dev.flutter.pigeon.webview_flutter_an...
+TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+ISO8859_10
+ISO8859_11
 A_PCM/INT/BIG
+ISO8859_13
+ISO8859_14
 dev.flutter.pigeon.shared_preferences...
+ISO8859_15
+ISO8859_16
 dev.flutter.pigeon.google_maps_flutte...
 isSpeakerphoneOn
 scc
 TtmlParser
 baq
-RecommendedExposureIndex
 OMX.bcm.vdec.hevc.tunnel.secure
+RecommendedExposureIndex
 mp4a.40.
 SAFE_BROWSING_RESPONSE_SHOW_INTERSTITIAL
 dev.flutter.pigeon.video_player_andro...
 getSuppressed
-fallbackMinPlaybackSpeed
 no_available_camera
+fallbackMinPlaybackSpeed
 sizeAndRate.caps
 DartMessenger
 Q4310
@@ -4974,8 +5249,8 @@ android.permission.USE_SIP
 completion
 ToggleButton
 set
-COMPRESSION_ERROR
 ISO
+COMPRESSION_ERROR
 kUp
 dvav
 ACK
@@ -4983,16 +5258,18 @@ GIONEE_SWW1609
 Neoclassical
 DETACH
 computeFitSystemWindows
+HANZI
 getScaledScrollFactor
 iTunSMPB
 taido_row
 INACTIVE
 androidAudioSessionId
-REL
 urlArg
+REL
 Dance
 ACTION_NEXT_AT_MOVEMENT_GRANULARITY
 digits
+ITF
 OMX.SEC.vp8.dec
 ADD
 setTouchModal
@@ -5007,16 +5284,18 @@ S_TEXT/WEBVTT
 androidx.view.accessibility.Accessibi...
 android.media.metadata.MEDIA_URI
 okhttp/3.12.13
+resumeCamera
 Override
 TextInputChannel
 CIPAMRNBDecoder
 MOVIES
-preferences_
 Failed
+preferences_
 com.google.android.gms.maps.internal....
 OPACITY
 Duration
 androidx.activity.result.contract.act...
+SCAN_TYPE
 mp4a.
 AES
 android$support$v4$app$INotificationS...
@@ -5025,6 +5304,7 @@ androidx.datastore.preferences.protob...
 lightsalmon
 nodeId
 SupplementalProperty
+pauseCamera
 onScoAudioStateUpdated
 Xiaomi
 ExoPlayerImpl
@@ -5054,9 +5334,11 @@ ServiceDescription
 os.arch
 false
 common_google_play_services_network_e...
+startScan
 SubSecTimeDigitized
 Linear
 workerCtl
+SCAN_RESULT_ERROR_CORRECTION_LEVEL
 TextInputClient.updateEditingState
 dvh1
 failed_resolution
@@ -5083,8 +5365,8 @@ java.lang.Character
 WebvttDecoder
 android.intent.extra.USE_FRONT_CAMERA
 /JOC
-kDirectionalPad
 birthdayYear
+kDirectionalPad
 dvhe
 omx.
 isolate_snapshot_data
@@ -5117,8 +5399,8 @@ audio/raw
 extras
 cornsilk
 cancelBackGesture
-AFTA
 preventLinkNavigation
+AFTA
 AFTB
 cursorId
 suggest_intent_action
@@ -5131,16 +5413,17 @@ eventTime
 geolocator_mslSatellitesUsedInFix
 bundle
 androidThreadPriority
-updatePosition
 EverStar_S
+updatePosition
 4000
 TLS_ECDHE_RSA_WITH_RC4_128_SHA
 DYNAMIC_ADAPTIVE
 updateTime
+MISSING_CAMERA_PERMISSION
 android.support.customtabs.extra.TITL...
 android.widget.ScrollView
-getAvailableCommunicationDevices
 com.android.internal.view.menu.MenuBu...
+getAvailableCommunicationDevices
 AFTS
 :cc:
 AFTT
@@ -5154,6 +5437,7 @@ android.speech.action.RECOGNIZE_SPEECH
 sign
 audio/alac
 VALUE
+MAXICODE
 sourceURL
 _size
 high
@@ -5166,10 +5450,10 @@ API_UNAVAILABLE
 compress_quality
 com.google.android.gms.signin.interna...
 pokeInt
-ThumbnailOrientation
 DeviceOrientation.portraitDown
-TOO_LATE_TO_CANCEL
+ThumbnailOrientation
 NULL
+TOO_LATE_TO_CANCEL
 AMR
 TLS_DHE_DSS_WITH_AES_256_CBC_SHA
 .preferences_pb
@@ -5189,8 +5473,8 @@ SET_MEMOIZED_IS_INITIALIZED
 rawresource:///
 audio/ac3
 audio/ac4
-dev.flutter.pigeon.webview_flutter_an...
 com.yalantis.ucrop.CompressionFormatName
+dev.flutter.pigeon.webview_flutter_an...
 birthday
 TLS_ECDH_anon_WITH_NULL_SHA
 ROUND
@@ -5200,9 +5484,9 @@ bos
 peekByteArray
 dev.flutter.pigeon.google_maps_flutte...
 ViewUtils
-sql
 com.google.android.gms.location.inter...
 locationFromAddress
+sql
 photoUrl
 total
 receivers
@@ -5213,6 +5497,8 @@ kotlin.Comparable
 dev.flutter.pigeon.path_provider_andr...
 OMX.google.vorbis.decoder
 consumer
+macro
+android.hardware.camera
 nativeSpellCheckServiceDefined
 UserComment
 LensSpecification
@@ -5230,8 +5516,8 @@ MenuItemImpl
 DefaultCropSize
 F3213
 _LifecycleAdapter
-setLoopMode
 F3211
+setLoopMode
 google_location_accuracy_enabled
 F3215
 ModDate
@@ -5245,10 +5531,12 @@ vary
 setHostname
 IS_SELECTED
 frameRateMultiplier
+STRUCTURED_APPEND_PARITY
 errorWhileAcquiringPosition
 GIONEE_WBL7365
 ELUGA_Note
 .Companion
+BEEP_ENABLED
 SuggestionsAdapter
 dev.flutter.pigeon.video_player_andro...
 RSA
@@ -5267,17 +5555,19 @@ load:
 Salsa
 textContainer
 CONDITION_FALSE
-SOURCE_DRAG_AND_DROP
 dev.flutter.pigeon.webview_flutter_an...
+SOURCE_DRAG_AND_DROP
 Crossover
 SERVICE_WORKER_BASIC_USAGE
 Eclectic
 ExposureBiasValue
 TLS_RSA_WITH_AES_128_GCM_SHA256
+cameraFacing
 com.google.android.gms.maps.model.int...
 h2_prior_knowledge
 RTL
 android:dialogShowing
+SHOW_MISSING_CAMERA_PERMISSION_DIALOG
 ImageResizer
 audio
 ImageTextureRegistryEntry
@@ -5288,26 +5578,26 @@ WifiLockManager
 creditCardExpirationDate
 silent
 obscureText
-BitmapCropTask
-GPSAreaInformation
 openLocationSettings
+GPSAreaInformation
+BitmapCropTask
 whitesmoke
 texture
 C1605
 android.intent.category.DEFAULT
 windowMetricsCalculator
+kotlin.Float
 store
 C1604
 14.
-kotlin.Float
 dev.flutter.pigeon.webview_flutter_an...
 Blocksize
 checkPermissionStatus
 OPEN
 LoadTask
 ROTATE_0
-buf
 SSL_RSA_WITH_NULL_MD5
+buf
 Dubstep
 initTasksList
 kate
@@ -5320,10 +5610,11 @@ bur
 android.os.action.POWER_SAVE_MODE_CHA...
 XT1663
 OMX.bcm.vdec.avc.tunnel.secure
+PDF417_MODE
 permissionDefinitionsNotFound
 SINT32_LIST_PACKED
-primaryColor
 com.google.android.gms.maps.internal....
+primaryColor
 15.
 Metal
 dest
@@ -5343,8 +5634,8 @@ pdfData
 RtpVp9Reader
 TLS_AES_128_GCM_SHA256
 androidx.appcompat.app.AppCompatDeleg...
-query
 java.util.Collection
+query
 goog.exo.hls
 androidx.media2.session.MediaLibraryS...
 setSpeakerphoneOn
@@ -5353,15 +5644,15 @@ CLOSE_HANDLER_CLOSED
 plugins.hunghd.vn/image_cropper
 autoSpacing
 postalAddressExtendedPostalCode
-once
 ffff0000
+once
 fragment_
 dev.flutter.pigeon.webview_flutter_an...
 NOT_IN_STACK
 prioritizeTimeOverSizeThresholds
 TextInputAction.previous
-OffsetTimeOriginal
 WorkSourceUtil
+OffsetTimeOriginal
 Vocal
 JGZ
 com.yalantis.ucrop.CropGridStrokeWidth
@@ -5398,6 +5689,7 @@ topLeft
 mha1
 REMOVED_TASK
 Classical
+stopCamera
 ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY
 android.intent.extra.PROCESS_TEXT
 INT64_LIST_PACKED
@@ -5405,6 +5697,7 @@ media3.exoplayer.hls
 Index:
 avc3
 avc2
+SCAN_RESULT_IMAGE_PATH
 avc1
 actionLabel
 GContainer:Directory
@@ -5415,8 +5708,8 @@ children
 android.media.metadata.GENRE
 fileOutputStream
 viewToAnimate
-FitPolicy.WIDTH
 frequencyResponse
+FitPolicy.WIDTH
 OMX.SEC.MP3.Decoder
 lightcoral
 serviceLocation
@@ -5432,17 +5725,17 @@ com.google.android.gms.maps.internal....
 PlaybackRate
 android.support.text.emoji.emojiCompa...
 android.media.metadata.ALBUM_ARTIST
-bg_magenta
 dev.flutter.pigeon.shared_preferences...
+bg_magenta
 dev.flutter.pigeon.webview_flutter_an...
 getRingerMode
 SHOW_ON_SCREEN
 sensitivity
 ACTION_FOCUS
 notifications
-generateAudioSessionId
 gnss_satellites_used_in_fix
 getOpticalInsets
+generateAudioSessionId
 set_mock_mode_with_callback
 android.permission.READ_SMS
 android.support.action.semanticAction
@@ -5457,12 +5750,13 @@ goog.exo.exoplayer
 dev.flutter.pigeon.webview_flutter_an...
 feature
 oneTimeCode
+BASE256_ENCODE
 concatenating
 eglCreateWindowSurface
-setPreferredPeakBitRate
 animatorSet
-loaderVersion
+setPreferredPeakBitRate
 dev.flutter.pigeon.webview_flutter_an...
+loaderVersion
 Illbient
 channelCount.caps
 Abstract
@@ -5479,8 +5773,8 @@ dev.flutter.pigeon.google_maps_flutte...
 URI_MASKABLE
 suggestedPresentationDelay
 ON_CREATE
-isBluetoothScoOn
 HAS_ENABLED_STATE
+isBluetoothScoOn
 downTime
 ON_RESUME
 sharedElementNameMapping
@@ -5496,6 +5790,7 @@ InteroperabilityIFDPointer
 API_DISABLED
 TRANSFORM
 tag
+GB2312
 FIXED64_LIST_PACKED
 NewSubfileType
 JOC
@@ -5510,14 +5805,14 @@ RESULT_UNSUPPORTED_ART_VERSION
 Pragma
 webp
 distanceFilter
-controlState
 webm
+controlState
 TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA
 aquaman
 Active
 ActivityRecreator
-kotlin.collections.Iterable
 android.dimmed_layer_color
+kotlin.collections.Iterable
 files
 sesame
 androidx.media2.metadata.RADIO_PROGRA...
@@ -5527,11 +5822,11 @@ mChildNodeIds
 ISOSpeedLatitudeyyy
 IS_CHECKED
 dev.flutter.pigeon.webview_flutter_an...
-ExposureIndex
 mAccessibilityDelegate
+ExposureIndex
 PhotometricInterpretation
-S_HDMV/PGS
 ready
+S_HDMV/PGS
 alarm
 android.intent.action.SEND
 OMX.Exynos.AVC.Decoder
@@ -5544,60 +5839,63 @@ onWindowFocusChanged
 TextInputClient.performAction
 NX541J
 jar:file:
-ON_STOP
 addressState
+ON_STOP
 kotlin.CharSequence
 passive
 maxLiveOffsetErrorForUnitSpeed
 heroqlte
 findTrustAnchorByIssuerAndSignature
-file:
 personName
+file:
 fragment
 getState
 playready
+Used
 migrations
 Super_SlowMotion_BGM
 FLOAT_LIST_PACKED
 com.google.android.wearable.app
 FrameworkMediaDrm
 arguments
+ALPHA_SHIFT
 androidx.media3.decoder.av1.Libgav1Vi...
 BackgroundColor
 Marking id:cancel_action:2131230802 used because it matches string pool constant cancel
 Marking integer:cancel_button_image_alpha:2131296258 used because it matches string pool constant cancel
-Marking id:time:2131230959 used because it matches string pool constant time.android.com
-Marking id:left:2131230858 used because it matches string pool constant left
-Marking id:left:2131230858 used because it matches string pool constant left
+Marking id:time:2131230962 used because it matches string pool constant time.android.com
+Marking id:left:2131230861 used because it matches string pool constant left
+Marking id:left:2131230861 used because it matches string pool constant left
 Marking attr:checkBoxPreferenceStyle:2130903129 used because it matches string pool constant check
 Marking attr:checkMarkCompat:2130903130 used because it matches string pool constant check
 Marking attr:checkMarkTint:2130903131 used because it matches string pool constant check
 Marking attr:checkMarkTintMode:2130903132 used because it matches string pool constant check
 Marking attr:checkboxStyle:2130903133 used because it matches string pool constant check
 Marking attr:checkedTextViewStyle:2130903134 used because it matches string pool constant check
-Marking id:checkbox:2131230806 used because it matches string pool constant check
-Marking id:checked:2131230807 used because it matches string pool constant check
-Marking xml:provider_paths:2131820547 used because it matches string pool constant provider
+Marking id:checkbox:2131230807 used because it matches string pool constant check
+Marking id:checked:2131230808 used because it matches string pool constant check
+Marking xml:provider_paths:2131886083 used because it matches string pool constant provider
 Marking id:blocking:2131230793 used because it matches string pool constant block
 Marking attr:maxWidth:2130903286 used because it matches string pool constant maxWidth
 Marking attr:maxWidth:2130903286 used because it matches string pool constant maxWidth
-Marking id:top:2131230965 used because it matches string pool constant top
-Marking id:top:2131230965 used because it matches string pool constant top
-Marking id:topPanel:2131230966 used because it matches string pool constant top
-Marking id:topToBottom:2131230967 used because it matches string pool constant top
+Marking id:top:2131230968 used because it matches string pool constant top
+Marking id:top:2131230968 used because it matches string pool constant top
+Marking id:topPanel:2131230969 used because it matches string pool constant top
+Marking id:topToBottom:2131230970 used because it matches string pool constant top
 Marking attr:state_above_anchor:2130903374 used because it matches string pool constant state
-Marking id:state_aspect_ratio:2131230930 used because it matches string pool constant state
-Marking id:state_rotate:2131230931 used because it matches string pool constant state
-Marking id:state_scale:2131230932 used because it matches string pool constant state
+Marking id:state_aspect_ratio:2131230933 used because it matches string pool constant state
+Marking id:state_rotate:2131230934 used because it matches string pool constant state
+Marking id:state_scale:2131230935 used because it matches string pool constant state
 Marking attr:animationBackgroundColor:2130903091 used because it matches string pool constant anim
 Marking id:center:2131230803 used because it matches string pool constant center
 Marking id:center:2131230803 used because it matches string pool constant center
-Marking id:center_horizontal:2131230804 used because it matches string pool constant center
-Marking id:center_vertical:2131230805 used because it matches string pool constant center
-Marking id:start:2131230929 used because it matches string pool constant start
-Marking id:start:2131230929 used because it matches string pool constant start
+Marking id:centerCrop:2131230804 used because it matches string pool constant center
+Marking id:center_horizontal:2131230805 used because it matches string pool constant center
+Marking id:center_vertical:2131230806 used because it matches string pool constant center
+Marking id:start:2131230932 used because it matches string pool constant start
+Marking id:start:2131230932 used because it matches string pool constant start
 Marking attr:shortcutMatchRequired:2130903351 used because it matches string pool constant short
-Marking id:shortcut:2131230917 used because it matches string pool constant short
+Marking id:shortcut:2131230920 used because it matches string pool constant short
 Marking attr:primaryActivityName:2130903324 used because it matches string pool constant primary
 Marking color:primary_dark_material_dark:2131034197 used because it matches string pool constant primary
 Marking color:primary_dark_material_light:2131034198 used because it matches string pool constant primary
@@ -5607,21 +5905,21 @@ Marking color:primary_text_default_material_dark:2131034201 used because it matc
 Marking color:primary_text_default_material_light:2131034202 used because it matches string pool constant primary
 Marking color:primary_text_disabled_material_dark:2131034203 used because it matches string pool constant primary
 Marking color:primary_text_disabled_material_light:2131034204 used because it matches string pool constant primary
-Marking id:italic:2131230853 used because it matches string pool constant italic
-Marking id:italic:2131230853 used because it matches string pool constant italic
-Marking string:pause_button_content_description:2131624006 used because it matches string pool constant pause
-Marking id:right:2131230891 used because it matches string pool constant right
-Marking id:right:2131230891 used because it matches string pool constant right
-Marking id:right_icon:2131230892 used because it matches string pool constant right
-Marking id:right_side:2131230893 used because it matches string pool constant right
+Marking id:italic:2131230856 used because it matches string pool constant italic
+Marking id:italic:2131230856 used because it matches string pool constant italic
+Marking string:pause_button_content_description:2131689553 used because it matches string pool constant pause
+Marking id:right:2131230894 used because it matches string pool constant right
+Marking id:right:2131230894 used because it matches string pool constant right
+Marking id:right_icon:2131230895 used because it matches string pool constant right
+Marking id:right_side:2131230896 used because it matches string pool constant right
 Marking attr:divider:2130903177 used because it matches string pool constant div
 Marking attr:dividerHorizontal:2130903178 used because it matches string pool constant div
 Marking attr:dividerPadding:2130903179 used because it matches string pool constant div
 Marking attr:dividerVertical:2130903180 used because it matches string pool constant div
-Marking id:info:2131230852 used because it matches string pool constant info
-Marking id:info:2131230852 used because it matches string pool constant info
+Marking id:info:2131230855 used because it matches string pool constant info
+Marking id:info:2131230855 used because it matches string pool constant info
 Marking attr:title:2130903418 used because it matches string pool constant title
-Marking id:title:2131230960 used because it matches string pool constant title
+Marking id:title:2131230963 used because it matches string pool constant title
 Marking attr:title:2130903418 used because it matches string pool constant title
 Marking attr:titleMargin:2130903419 used because it matches string pool constant title
 Marking attr:titleMarginBottom:2130903420 used because it matches string pool constant title
@@ -5632,10 +5930,10 @@ Marking attr:titleMargins:2130903424 used because it matches string pool constan
 Marking attr:titleTextAppearance:2130903425 used because it matches string pool constant title
 Marking attr:titleTextColor:2130903426 used because it matches string pool constant title
 Marking attr:titleTextStyle:2130903427 used because it matches string pool constant title
-Marking id:title:2131230960 used because it matches string pool constant title
-Marking id:titleDividerNoCustom:2131230961 used because it matches string pool constant title
-Marking id:title_template:2131230962 used because it matches string pool constant title
-Marking id:text:2131230952 used because it matches string pool constant text
+Marking id:title:2131230963 used because it matches string pool constant title
+Marking id:titleDividerNoCustom:2131230964 used because it matches string pool constant title
+Marking id:title_template:2131230965 used because it matches string pool constant title
+Marking id:text:2131230955 used because it matches string pool constant text
 Marking attr:textAllCaps:2130903396 used because it matches string pool constant text
 Marking attr:textAppearanceLargePopupMenu:2130903397 used because it matches string pool constant text
 Marking attr:textAppearanceListItem:2130903398 used because it matches string pool constant text
@@ -5648,13 +5946,13 @@ Marking attr:textAppearanceSmallPopupMenu:2130903404 used because it matches str
 Marking attr:textColorAlertDialogListItem:2130903405 used because it matches string pool constant text
 Marking attr:textColorSearchUrl:2130903406 used because it matches string pool constant text
 Marking attr:textLocale:2130903407 used because it matches string pool constant text
-Marking id:text:2131230952 used because it matches string pool constant text
-Marking id:text2:2131230953 used because it matches string pool constant text
-Marking id:textSpacerNoButtons:2131230954 used because it matches string pool constant text
-Marking id:textSpacerNoTitle:2131230955 used because it matches string pool constant text
-Marking id:text_view_crop:2131230956 used because it matches string pool constant text
-Marking id:text_view_rotate:2131230957 used because it matches string pool constant text
-Marking id:text_view_scale:2131230958 used because it matches string pool constant text
+Marking id:text:2131230955 used because it matches string pool constant text
+Marking id:text2:2131230956 used because it matches string pool constant text
+Marking id:textSpacerNoButtons:2131230957 used because it matches string pool constant text
+Marking id:textSpacerNoTitle:2131230958 used because it matches string pool constant text
+Marking id:text_view_crop:2131230959 used because it matches string pool constant text
+Marking id:text_view_rotate:2131230960 used because it matches string pool constant text
+Marking id:text_view_scale:2131230961 used because it matches string pool constant text
 Marking attr:initialActivityCount:2130903242 used because it matches string pool constant init
 Marking attr:initialExpandedChildrenCount:2130903243 used because it matches string pool constant init
 Marking attr:maxButtonHeight:2130903284 used because it matches string pool constant max
@@ -5677,12 +5975,12 @@ Marking attr:height:2130903229 used because it matches string pool constant heig
 Marking attr:height:2130903229 used because it matches string pool constant height
 Marking attr:min:2130903289 used because it matches string pool constant min
 Marking attr:min:2130903289 used because it matches string pool constant min
-Marking id:middle:2131230871 used because it matches string pool constant middle
-Marking id:middle:2131230871 used because it matches string pool constant middle
+Marking id:middle:2131230874 used because it matches string pool constant middle
+Marking id:middle:2131230874 used because it matches string pool constant middle
 Marking attr:progressBarPadding:2130903325 used because it matches string pool constant progress
 Marking attr:progressBarStyle:2130903326 used because it matches string pool constant progress
-Marking id:progress_circular:2131230886 used because it matches string pool constant progress
-Marking id:progress_horizontal:2131230887 used because it matches string pool constant progress
+Marking id:progress_circular:2131230889 used because it matches string pool constant progress
+Marking id:progress_horizontal:2131230890 used because it matches string pool constant progress
 Marking mipmap:ic_launcher:2131558400 used because it matches string pool constant ic_launcher.png
 Marking attr:allowDividerAbove:2130903083 used because it matches string pool constant allow
 Marking attr:allowDividerAfterLastItem:2130903084 used because it matches string pool constant allow
@@ -5697,13 +5995,13 @@ Marking attr:layout_behavior:2130903259 used because it matches string pool cons
 Marking attr:layout_dodgeInsetEdges:2130903260 used because it matches string pool constant layout
 Marking attr:layout_insetEdge:2130903261 used because it matches string pool constant layout
 Marking attr:layout_keyline:2130903262 used because it matches string pool constant layout
-Marking id:layout_aspect_ratio:2131230855 used because it matches string pool constant layout
-Marking id:layout_rotate_wheel:2131230856 used because it matches string pool constant layout
-Marking id:layout_scale_wheel:2131230857 used because it matches string pool constant layout
+Marking id:layout_aspect_ratio:2131230858 used because it matches string pool constant layout
+Marking id:layout_rotate_wheel:2131230859 used because it matches string pool constant layout
+Marking id:layout_scale_wheel:2131230860 used because it matches string pool constant layout
 Marking id:ALT:2131230720 used because it matches string pool constant AL
-Marking id:end:2131230825 used because it matches string pool constant end
-Marking id:end:2131230825 used because it matches string pool constant end
-Marking id:end_padder:2131230826 used because it matches string pool constant end
+Marking id:end:2131230826 used because it matches string pool constant end
+Marking id:end:2131230826 used because it matches string pool constant end
+Marking id:end_padder:2131230827 used because it matches string pool constant end
 Marking attr:subtitle:2130903379 used because it matches string pool constant subtitle
 Marking attr:subtitle:2130903379 used because it matches string pool constant subtitle
 Marking attr:subtitleTextAppearance:2130903380 used because it matches string pool constant subtitle
@@ -5716,8 +6014,8 @@ Marking drawable:media_session_service_notification_ic_pause:2131165307 used bec
 Marking drawable:media_session_service_notification_ic_play:2131165308 used because it matches string pool constant media
 Marking drawable:media_session_service_notification_ic_skip_to_next:2131165309 used because it matches string pool constant media
 Marking drawable:media_session_service_notification_ic_skip_to_previous:2131165310 used because it matches string pool constant media
-Marking id:media_actions:2131230866 used because it matches string pool constant media
-Marking id:media_controller_compat_view_tag:2131230867 used because it matches string pool constant media
+Marking id:media_actions:2131230869 used because it matches string pool constant media
+Marking id:media_controller_compat_view_tag:2131230870 used because it matches string pool constant media
 Marking attr:emojiCompatEnabled:2130903199 used because it matches string pool constant emojiCompat
 Marking attr:defaultQueryHint:2130903164 used because it matches string pool constant default
 Marking attr:defaultValue:2130903165 used because it matches string pool constant default
@@ -5725,13 +6023,13 @@ Marking drawable:default_scroll_handle_bottom:2131165292 used because it matches
 Marking drawable:default_scroll_handle_left:2131165293 used because it matches string pool constant default
 Marking drawable:default_scroll_handle_right:2131165294 used because it matches string pool constant default
 Marking drawable:default_scroll_handle_top:2131165295 used because it matches string pool constant default
-Marking id:default_activity_button:2131230820 used because it matches string pool constant default
-Marking string:default_notification_channel_name:2131623991 used because it matches string pool constant default
+Marking id:default_activity_button:2131230821 used because it matches string pool constant default
+Marking string:default_notification_channel_name:2131689528 used because it matches string pool constant default
 Marking id:SHIFT:2131230724 used because it matches string pool constant SH
 Marking dimen:disabled_alpha_material_dark:2131099738 used because it matches string pool constant disabled
 Marking dimen:disabled_alpha_material_light:2131099739 used because it matches string pool constant disabled
 Marking id:SYM:2131230725 used because it matches string pool constant SY
-Marking xml:flutter_image_picker_file_paths:2131820544 used because it matches string pool constant flutter
+Marking xml:flutter_image_picker_file_paths:2131886080 used because it matches string pool constant flutter
 Marking attr:color:2130903141 used because it matches string pool constant color
 Marking attr:color:2130903141 used because it matches string pool constant color
 Marking attr:colorAccent:2130903142 used because it matches string pool constant color
@@ -5745,7 +6043,7 @@ Marking attr:colorPrimary:2130903149 used because it matches string pool constan
 Marking attr:colorPrimaryDark:2130903150 used because it matches string pool constant color
 Marking attr:colorScheme:2130903151 used because it matches string pool constant color
 Marking attr:colorSwitchThumbNormal:2130903152 used because it matches string pool constant color
-Marking id:window:2131230988 used because it matches string pool constant window
+Marking id:window:2131230991 used because it matches string pool constant window
 Marking attr:windowActionBar:2130903467 used because it matches string pool constant window
 Marking attr:windowActionBarOverlay:2130903468 used because it matches string pool constant window
 Marking attr:windowActionModeOverlay:2130903469 used because it matches string pool constant window
@@ -5756,8 +6054,8 @@ Marking attr:windowFixedWidthMinor:2130903473 used because it matches string poo
 Marking attr:windowMinWidthMajor:2130903474 used because it matches string pool constant window
 Marking attr:windowMinWidthMinor:2130903475 used because it matches string pool constant window
 Marking attr:windowNoTitle:2130903476 used because it matches string pool constant window
-Marking id:window:2131230988 used because it matches string pool constant window
-Marking string:play_button_content_description:2131624007 used because it matches string pool constant play
+Marking id:window:2131230991 used because it matches string pool constant window
+Marking string:play_button_content_description:2131689554 used because it matches string pool constant play
 Marking attr:enabled:2130903201 used because it matches string pool constant enabled
 Marking attr:enabled:2130903201 used because it matches string pool constant enabled
 Marking color:notification_action_color_filter:2131034193 used because it matches string pool constant notification
@@ -5790,9 +6088,9 @@ Marking drawable:notification_oversize_large_icon_bg:2131165319 used because it 
 Marking drawable:notification_template_icon_bg:2131165320 used because it matches string pool constant notification
 Marking drawable:notification_template_icon_low_bg:2131165321 used because it matches string pool constant notification
 Marking drawable:notification_tile_bg:2131165322 used because it matches string pool constant notification
-Marking id:notification_background:2131230876 used because it matches string pool constant notification
-Marking id:notification_main_column:2131230877 used because it matches string pool constant notification
-Marking id:notification_main_column_container:2131230878 used because it matches string pool constant notification
+Marking id:notification_background:2131230879 used because it matches string pool constant notification
+Marking id:notification_main_column:2131230880 used because it matches string pool constant notification
+Marking id:notification_main_column_container:2131230881 used because it matches string pool constant notification
 Marking layout:notification_action:2131427366 used because it matches string pool constant notification
 Marking layout:notification_action_tombstone:2131427367 used because it matches string pool constant notification
 Marking layout:notification_media_action:2131427368 used because it matches string pool constant notification
@@ -5871,29 +6169,30 @@ Marking drawable:default_scroll_handle_bottom:2131165292 used because it matches
 Marking drawable:default_scroll_handle_left:2131165293 used because it matches string pool constant de
 Marking drawable:default_scroll_handle_right:2131165294 used because it matches string pool constant de
 Marking drawable:default_scroll_handle_top:2131165295 used because it matches string pool constant de
-Marking id:decor_content_parent:2131230819 used because it matches string pool constant de
-Marking id:default_activity_button:2131230820 used because it matches string pool constant de
-Marking string:default_notification_channel_name:2131623991 used because it matches string pool constant de
-Marking id:image:2131230846 used because it matches string pool constant image
+Marking id:decor_content_parent:2131230820 used because it matches string pool constant de
+Marking id:default_activity_button:2131230821 used because it matches string pool constant de
+Marking string:default_notification_channel_name:2131689528 used because it matches string pool constant de
+Marking string:define_zxingandroidembedded:2131689529 used because it matches string pool constant de
+Marking id:image:2131230849 used because it matches string pool constant image
 Marking attr:imageAspectRatio:2130903238 used because it matches string pool constant image
 Marking attr:imageAspectRatioAdjust:2130903239 used because it matches string pool constant image
 Marking attr:imageButtonStyle:2130903240 used because it matches string pool constant image
-Marking id:image:2131230846 used because it matches string pool constant image
-Marking id:image_view_crop:2131230847 used because it matches string pool constant image
-Marking id:image_view_logo:2131230848 used because it matches string pool constant image
-Marking id:image_view_state_aspect_ratio:2131230849 used because it matches string pool constant image
-Marking id:image_view_state_rotate:2131230850 used because it matches string pool constant image
-Marking id:image_view_state_scale:2131230851 used because it matches string pool constant image
+Marking id:image:2131230849 used because it matches string pool constant image
+Marking id:image_view_crop:2131230850 used because it matches string pool constant image
+Marking id:image_view_logo:2131230851 used because it matches string pool constant image
+Marking id:image_view_state_aspect_ratio:2131230852 used because it matches string pool constant image
+Marking id:image_view_state_rotate:2131230853 used because it matches string pool constant image
+Marking id:image_view_state_scale:2131230854 used because it matches string pool constant image
 Marking layout:image_frame:2131427363 used because it matches string pool constant image
-Marking xml:image_share_filepaths:2131820545 used because it matches string pool constant image
+Marking xml:image_share_filepaths:2131886081 used because it matches string pool constant image
 Marking attr:elevation:2130903198 used because it matches string pool constant el
 Marking attr:emojiCompatEnabled:2130903199 used because it matches string pool constant em
 Marking attr:enableCopying:2130903200 used because it matches string pool constant en
 Marking attr:enabled:2130903201 used because it matches string pool constant en
 Marking attr:entries:2130903202 used because it matches string pool constant en
 Marking attr:entryValues:2130903203 used because it matches string pool constant en
-Marking id:end:2131230825 used because it matches string pool constant en
-Marking id:end_padder:2131230826 used because it matches string pool constant en
+Marking id:end:2131230826 used because it matches string pool constant en
+Marking id:end_padder:2131230827 used because it matches string pool constant en
 Marking attr:fastScrollEnabled:2130903205 used because it matches string pool constant fa
 Marking attr:fastScrollHorizontalThumbDrawable:2130903206 used because it matches string pool constant fa
 Marking attr:fastScrollHorizontalTrackDrawable:2130903207 used because it matches string pool constant fa
@@ -5903,9 +6202,9 @@ Marking dimen:fastscroll_default_thickness:2131099740 used because it matches st
 Marking dimen:fastscroll_margin:2131099741 used because it matches string pool constant fa
 Marking dimen:fastscroll_minimum_range:2131099742 used because it matches string pool constant fa
 Marking interpolator:fast_out_slow_in:2131361798 used because it matches string pool constant fa
-Marking string:fallback_menu_item_copy_link:2131624002 used because it matches string pool constant fa
-Marking string:fallback_menu_item_open_in_browser:2131624003 used because it matches string pool constant fa
-Marking string:fallback_menu_item_share_link:2131624004 used because it matches string pool constant fa
+Marking string:fallback_menu_item_copy_link:2131689540 used because it matches string pool constant fa
+Marking string:fallback_menu_item_open_in_browser:2131689541 used because it matches string pool constant fa
+Marking string:fallback_menu_item_share_link:2131689542 used because it matches string pool constant fa
 Marking anim:fragment_fast_out_extra_slow_in:2130771992 used because it matches string pool constant fr
 Marking animator:fragment_close_enter:2130837504 used because it matches string pool constant fr
 Marking animator:fragment_close_exit:2130837505 used because it matches string pool constant fr
@@ -5914,8 +6213,8 @@ Marking animator:fragment_fade_exit:2130837507 used because it matches string po
 Marking animator:fragment_open_enter:2130837508 used because it matches string pool constant fr
 Marking animator:fragment_open_exit:2130837509 used because it matches string pool constant fr
 Marking attr:fragment:2130903226 used because it matches string pool constant fr
-Marking id:fragment_container_view_tag:2131230833 used because it matches string pool constant fr
-Marking id:content:2131230812 used because it matches string pool constant content
+Marking id:fragment_container_view_tag:2131230836 used because it matches string pool constant fr
+Marking id:content:2131230813 used because it matches string pool constant content
 Marking attr:contentDescription:2130903154 used because it matches string pool constant content
 Marking attr:contentInsetEnd:2130903155 used because it matches string pool constant content
 Marking attr:contentInsetEndWithActions:2130903156 used because it matches string pool constant content
@@ -5923,22 +6222,22 @@ Marking attr:contentInsetLeft:2130903157 used because it matches string pool con
 Marking attr:contentInsetRight:2130903158 used because it matches string pool constant content
 Marking attr:contentInsetStart:2130903159 used because it matches string pool constant content
 Marking attr:contentInsetStartWithNavigation:2130903160 used because it matches string pool constant content
-Marking id:content:2131230812 used because it matches string pool constant content
-Marking id:contentPanel:2131230813 used because it matches string pool constant content
+Marking id:content:2131230813 used because it matches string pool constant content
+Marking id:contentPanel:2131230814 used because it matches string pool constant content
 Marking attr:height:2130903229 used because it matches string pool constant he
-Marking id:hybrid:2131230840 used because it matches string pool constant hy
+Marking id:hybrid:2131230843 used because it matches string pool constant hy
 Marking attr:indeterminateProgressStyle:2130903241 used because it matches string pool constant in
 Marking attr:initialActivityCount:2130903242 used because it matches string pool constant in
 Marking attr:initialExpandedChildrenCount:2130903243 used because it matches string pool constant in
-Marking id:info:2131230852 used because it matches string pool constant in
+Marking id:info:2131230855 used because it matches string pool constant in
 Marking attr:isLightTheme:2130903244 used because it matches string pool constant is
 Marking attr:isPreferenceVisible:2130903245 used because it matches string pool constant is
 Marking attr:itemPadding:2130903246 used because it matches string pool constant it
 Marking dimen:item_touch_helper_max_drag_scroll_per_frame:2131099750 used because it matches string pool constant it
 Marking dimen:item_touch_helper_swipe_escape_max_velocity:2131099751 used because it matches string pool constant it
 Marking dimen:item_touch_helper_swipe_escape_velocity:2131099752 used because it matches string pool constant it
-Marking id:italic:2131230853 used because it matches string pool constant it
-Marking id:item_touch_helper_previous_elevation:2131230854 used because it matches string pool constant it
+Marking id:italic:2131230856 used because it matches string pool constant it
+Marking id:item_touch_helper_previous_elevation:2131230857 used because it matches string pool constant it
 Marking attr:cameraBearing:2130903122 used because it matches string pool constant camera
 Marking attr:cameraMaxZoomPreference:2130903123 used because it matches string pool constant camera
 Marking attr:cameraMinZoomPreference:2130903124 used because it matches string pool constant camera
@@ -5946,11 +6245,11 @@ Marking attr:cameraTargetLat:2130903125 used because it matches string pool cons
 Marking attr:cameraTargetLng:2130903126 used because it matches string pool constant camera
 Marking attr:cameraTilt:2130903127 used because it matches string pool constant camera
 Marking attr:cameraZoom:2130903128 used because it matches string pool constant camera
-Marking id:off:2131230879 used because it matches string pool constant off
-Marking id:off:2131230879 used because it matches string pool constant off
-Marking id:ltr:2131230865 used because it matches string pool constant lt
+Marking id:off:2131230882 used because it matches string pool constant off
+Marking id:off:2131230882 used because it matches string pool constant off
+Marking id:ltr:2131230868 used because it matches string pool constant lt
 Marking attr:min:2130903289 used because it matches string pool constant mi
-Marking id:middle:2131230871 used because it matches string pool constant mi
+Marking id:middle:2131230874 used because it matches string pool constant mi
 Marking attr:entryValues:2130903203 used because it matches string pool constant entry
 Marking color:notification_action_color_filter:2131034193 used because it matches string pool constant no
 Marking color:notification_icon_bg_color:2131034194 used because it matches string pool constant no
@@ -5983,11 +6282,11 @@ Marking drawable:notification_template_icon_bg:2131165320 used because it matche
 Marking drawable:notification_template_icon_low_bg:2131165321 used because it matches string pool constant no
 Marking drawable:notification_tile_bg:2131165322 used because it matches string pool constant no
 Marking drawable:notify_panel_notification_icon_bg:2131165323 used because it matches string pool constant no
-Marking id:none:2131230874 used because it matches string pool constant no
-Marking id:normal:2131230875 used because it matches string pool constant no
-Marking id:notification_background:2131230876 used because it matches string pool constant no
-Marking id:notification_main_column:2131230877 used because it matches string pool constant no
-Marking id:notification_main_column_container:2131230878 used because it matches string pool constant no
+Marking id:none:2131230877 used because it matches string pool constant no
+Marking id:normal:2131230878 used because it matches string pool constant no
+Marking id:notification_background:2131230879 used because it matches string pool constant no
+Marking id:notification_main_column:2131230880 used because it matches string pool constant no
+Marking id:notification_main_column_container:2131230881 used because it matches string pool constant no
 Marking layout:notification_action:2131427366 used because it matches string pool constant no
 Marking layout:notification_action_tombstone:2131427367 used because it matches string pool constant no
 Marking layout:notification_media_action:2131427368 used because it matches string pool constant no
@@ -6003,11 +6302,11 @@ Marking layout:notification_template_media:2131427377 used because it matches st
 Marking layout:notification_template_media_custom:2131427378 used because it matches string pool constant no
 Marking layout:notification_template_part_chronometer:2131427379 used because it matches string pool constant no
 Marking layout:notification_template_part_time:2131427380 used because it matches string pool constant no
-Marking string:not_set:2131624005 used because it matches string pool constant no
-Marking id:on:2131230880 used because it matches string pool constant on
-Marking id:on:2131230880 used because it matches string pool constant on
-Marking id:rotate_scroll_wheel:2131230894 used because it matches string pool constant ro
-Marking id:rtl:2131230895 used because it matches string pool constant rt
+Marking string:not_set:2131689552 used because it matches string pool constant no
+Marking id:on:2131230883 used because it matches string pool constant on
+Marking id:on:2131230883 used because it matches string pool constant on
+Marking id:rotate_scroll_wheel:2131230897 used because it matches string pool constant ro
+Marking id:rtl:2131230898 used because it matches string pool constant rt
 Marking attr:activityAction:2130903075 used because it matches string pool constant activity
 Marking attr:activityChooserViewStyle:2130903076 used because it matches string pool constant activity
 Marking attr:activityName:2130903077 used because it matches string pool constant activity
@@ -6015,17 +6314,17 @@ Marking id:activity_chooser_view_content:2131230778 used because it matches stri
 Marking attr:seekBarIncrement:2130903345 used because it matches string pool constant seek
 Marking attr:seekBarPreferenceStyle:2130903346 used because it matches string pool constant seek
 Marking attr:seekBarStyle:2130903347 used because it matches string pool constant seek
-Marking id:seekbar:2131230914 used because it matches string pool constant seek
-Marking id:seekbar_value:2131230915 used because it matches string pool constant seek
+Marking id:seekbar:2131230917 used because it matches string pool constant seek
+Marking id:seekbar_value:2131230918 used because it matches string pool constant seek
 Marking attr:maxHeight:2130903285 used because it matches string pool constant maxHeight
 Marking attr:maxHeight:2130903285 used because it matches string pool constant maxHeight
-Marking string:skip_to_next_item_button_content_description:2131624010 used because it matches string pool constant sk
-Marking string:skip_to_previous_item_button_content_description:2131624011 used because it matches string pool constant sk
+Marking string:skip_to_next_item_button_content_description:2131689557 used because it matches string pool constant sk
+Marking string:skip_to_previous_item_button_content_description:2131689558 used because it matches string pool constant sk
 Marking attr:srcCompat:2130903372 used because it matches string pool constant sr
-Marking id:src_atop:2131230925 used because it matches string pool constant sr
-Marking id:src_in:2131230926 used because it matches string pool constant sr
-Marking id:src_over:2131230927 used because it matches string pool constant sr
-Marking id:window:2131230988 used because it matches string pool constant window.decorView
+Marking id:src_atop:2131230928 used because it matches string pool constant sr
+Marking id:src_in:2131230929 used because it matches string pool constant sr
+Marking id:src_over:2131230930 used because it matches string pool constant sr
+Marking id:window:2131230991 used because it matches string pool constant window.decorView
 Marking attr:textAllCaps:2130903396 used because it matches string pool constant te
 Marking attr:textAppearanceLargePopupMenu:2130903397 used because it matches string pool constant te
 Marking attr:textAppearanceListItem:2130903398 used because it matches string pool constant te
@@ -6039,20 +6338,20 @@ Marking attr:textColorAlertDialogListItem:2130903405 used because it matches str
 Marking attr:textColorSearchUrl:2130903406 used because it matches string pool constant te
 Marking attr:textLocale:2130903407 used because it matches string pool constant te
 Marking drawable:test_level_drawable:2131165325 used because it matches string pool constant te
-Marking id:terrain:2131230951 used because it matches string pool constant te
-Marking id:text:2131230952 used because it matches string pool constant te
-Marking id:text2:2131230953 used because it matches string pool constant te
-Marking id:textSpacerNoButtons:2131230954 used because it matches string pool constant te
-Marking id:textSpacerNoTitle:2131230955 used because it matches string pool constant te
-Marking id:text_view_crop:2131230956 used because it matches string pool constant te
-Marking id:text_view_rotate:2131230957 used because it matches string pool constant te
-Marking id:text_view_scale:2131230958 used because it matches string pool constant te
+Marking id:terrain:2131230954 used because it matches string pool constant te
+Marking id:text:2131230955 used because it matches string pool constant te
+Marking id:text2:2131230956 used because it matches string pool constant te
+Marking id:textSpacerNoButtons:2131230957 used because it matches string pool constant te
+Marking id:textSpacerNoTitle:2131230958 used because it matches string pool constant te
+Marking id:text_view_crop:2131230959 used because it matches string pool constant te
+Marking id:text_view_rotate:2131230960 used because it matches string pool constant te
+Marking id:text_view_scale:2131230961 used because it matches string pool constant te
 Marking attr:ttcIndex:2130903436 used because it matches string pool constant tt
-Marking id:up:2131230978 used because it matches string pool constant up
+Marking id:up:2131230981 used because it matches string pool constant up
 Marking attr:updatesContinuously:2130903461 used because it matches string pool constant up
-Marking id:up:2131230978 used because it matches string pool constant up
-Marking id:none:2131230874 used because it matches string pool constant none
-Marking id:none:2131230874 used because it matches string pool constant none
+Marking id:up:2131230981 used because it matches string pool constant up
+Marking id:none:2131230877 used because it matches string pool constant none
+Marking id:none:2131230877 used because it matches string pool constant none
 Marking attr:contentDescription:2130903154 used because it matches string pool constant cont
 Marking attr:contentInsetEnd:2130903155 used because it matches string pool constant cont
 Marking attr:contentInsetEndWithActions:2130903156 used because it matches string pool constant cont
@@ -6061,18 +6360,18 @@ Marking attr:contentInsetRight:2130903158 used because it matches string pool co
 Marking attr:contentInsetStart:2130903159 used because it matches string pool constant cont
 Marking attr:contentInsetStartWithNavigation:2130903160 used because it matches string pool constant cont
 Marking attr:controlBackground:2130903161 used because it matches string pool constant cont
-Marking id:content:2131230812 used because it matches string pool constant cont
-Marking id:contentPanel:2131230813 used because it matches string pool constant cont
-Marking id:controls_shadow:2131230814 used because it matches string pool constant cont
-Marking id:controls_wrapper:2131230815 used because it matches string pool constant cont
-Marking id:dark:2131230818 used because it matches string pool constant dark
-Marking id:dark:2131230818 used because it matches string pool constant dark
-Marking string:copy:2131623989 used because it matches string pool constant copy
-Marking string:copy:2131623989 used because it matches string pool constant copy
-Marking string:copy_toast_msg:2131623990 used because it matches string pool constant copy
+Marking id:content:2131230813 used because it matches string pool constant cont
+Marking id:contentPanel:2131230814 used because it matches string pool constant cont
+Marking id:controls_shadow:2131230815 used because it matches string pool constant cont
+Marking id:controls_wrapper:2131230816 used because it matches string pool constant cont
+Marking id:dark:2131230819 used because it matches string pool constant dark
+Marking id:dark:2131230819 used because it matches string pool constant dark
+Marking string:copy:2131689526 used because it matches string pool constant copy
+Marking string:copy:2131689526 used because it matches string pool constant copy
+Marking string:copy_toast_msg:2131689527 used because it matches string pool constant copy
 Marking attr:lineHeight:2130903263 used because it matches string pool constant line
-Marking id:line1:2131230860 used because it matches string pool constant line
-Marking id:line3:2131230861 used because it matches string pool constant line
+Marking id:line1:2131230863 used because it matches string pool constant line
+Marking id:line3:2131230864 used because it matches string pool constant line
 Marking attr:listChoiceBackgroundIndicator:2130903264 used because it matches string pool constant list
 Marking attr:listChoiceIndicatorMultipleAnimated:2130903265 used because it matches string pool constant list
 Marking attr:listChoiceIndicatorSingleAnimated:2130903266 used because it matches string pool constant list
@@ -6088,10 +6387,10 @@ Marking attr:listPreferredItemPaddingEnd:2130903275 used because it matches stri
 Marking attr:listPreferredItemPaddingLeft:2130903276 used because it matches string pool constant list
 Marking attr:listPreferredItemPaddingRight:2130903277 used because it matches string pool constant list
 Marking attr:listPreferredItemPaddingStart:2130903278 used because it matches string pool constant list
-Marking id:listMode:2131230862 used because it matches string pool constant list
-Marking id:list_item:2131230863 used because it matches string pool constant list
-Marking id:locale:2131230864 used because it matches string pool constant locale
-Marking id:locale:2131230864 used because it matches string pool constant locale
+Marking id:listMode:2131230865 used because it matches string pool constant list
+Marking id:list_item:2131230866 used because it matches string pool constant list
+Marking id:locale:2131230867 used because it matches string pool constant locale
+Marking id:locale:2131230867 used because it matches string pool constant locale
 Marking attr:persistent:2130903307 used because it matches string pool constant per
 Marking id:accessibility_action_clickable_span:2131230726 used because it matches string pool constant accessibility
 Marking id:accessibility_custom_action_0:2131230727 used because it matches string pool constant accessibility
@@ -6127,9 +6426,9 @@ Marking id:accessibility_custom_action_7:2131230756 used because it matches stri
 Marking id:accessibility_custom_action_8:2131230757 used because it matches string pool constant accessibility
 Marking id:accessibility_custom_action_9:2131230758 used because it matches string pool constant accessibility
 Marking attr:circleCrop:2130903135 used because it matches string pool constant circle
-Marking id:light:2131230859 used because it matches string pool constant light
-Marking id:light:2131230859 used because it matches string pool constant light
-Marking id:group_divider:2131230836 used because it matches string pool constant group
+Marking id:light:2131230862 used because it matches string pool constant light
+Marking id:light:2131230862 used because it matches string pool constant light
+Marking id:group_divider:2131230839 used because it matches string pool constant group
 Marking attr:actionBarDivider:2130903040 used because it matches string pool constant action
 Marking attr:actionBarItemBackground:2130903041 used because it matches string pool constant action
 Marking attr:actionBarPopupTheme:2130903042 used because it matches string pool constant action
@@ -6186,8 +6485,8 @@ Marking id:action_text:2131230776 used because it matches string pool constant a
 Marking id:actions:2131230777 used because it matches string pool constant action
 Marking attr:menu:2130903288 used because it matches string pool constant menu
 Marking attr:menu:2130903288 used because it matches string pool constant menu
-Marking id:menu_crop:2131230868 used because it matches string pool constant menu
-Marking id:menu_loader:2131230869 used because it matches string pool constant menu
+Marking id:menu_crop:2131230871 used because it matches string pool constant menu
+Marking id:menu_loader:2131230872 used because it matches string pool constant menu
 Marking attr:updatesContinuously:2130903461 used because it matches string pool constant update
 Marking attr:latLngBoundsNorthEastLatitude:2130903251 used because it matches string pool constant latLngBounds
 Marking attr:latLngBoundsNorthEastLongitude:2130903252 used because it matches string pool constant latLngBounds
@@ -6201,7 +6500,7 @@ Marking id:bottom:2131230794 used because it matches string pool constant bottom
 Marking id:bottomToTop:2131230795 used because it matches string pool constant bottom
 Marking color:error_color_material_dark:2131034174 used because it matches string pool constant error
 Marking color:error_color_material_light:2131034175 used because it matches string pool constant error
-Marking xml:network_security_config:2131820546 used because it matches string pool constant network
+Marking xml:network_security_config:2131886082 used because it matches string pool constant network
 Marking attr:indeterminateProgressStyle:2130903241 used because it matches string pool constant ind
 Marking attr:closeIcon:2130903137 used because it matches string pool constant close
 Marking attr:closeItemLayout:2130903138 used because it matches string pool constant close
@@ -6243,8 +6542,8 @@ Marking id:accessibility_custom_action_9:2131230758 used because it matches stri
 Marking id:add:2131230779 used because it matches string pool constant add
 Marking id:add:2131230779 used because it matches string pool constant add
 Marking attr:scopeUris:2130903339 used because it matches string pool constant scope
-Marking id:message:2131230870 used because it matches string pool constant message
-Marking id:message:2131230870 used because it matches string pool constant message
+Marking id:message:2131230873 used because it matches string pool constant message
+Marking id:message:2131230873 used because it matches string pool constant message
 Marking attr:fontStyle:2130903223 used because it matches string pool constant fontStyle
 Marking attr:fontStyle:2130903223 used because it matches string pool constant fontStyle
 Marking attr:animationBackgroundColor:2130903091 used because it matches string pool constant animation
@@ -6259,63 +6558,64 @@ Marking attr:alwaysExpand:2130903089 used because it matches string pool constan
 Marking id:always:2131230785 used because it matches string pool constant always
 Marking id:alwaysAllow:2131230786 used because it matches string pool constant always
 Marking id:alwaysDisallow:2131230787 used because it matches string pool constant always
-Marking id:hybrid:2131230840 used because it matches string pool constant hybrid
-Marking id:hybrid:2131230840 used because it matches string pool constant hybrid
+Marking id:hybrid:2131230843 used because it matches string pool constant hybrid
+Marking id:hybrid:2131230843 used because it matches string pool constant hybrid
 Marking color:androidx_core_ripple_material_light:2131034139 used because it matches string pool constant and
 Marking color:androidx_core_secondary_text_default_material_light:2131034140 used because it matches string pool constant and
 Marking id:androidx_window_activity_scope:2131230789 used because it matches string pool constant and
-Marking string:androidx_startup:2131623963 used because it matches string pool constant and
-Marking id:info:2131230852 used because it matches string pool constant info.displayFeatures
+Marking string:androidx_startup:2131689499 used because it matches string pool constant and
+Marking id:info:2131230855 used because it matches string pool constant info.displayFeatures
 Marking attr:backgroundColor:2130903101 used because it matches string pool constant backgroundColor
 Marking attr:backgroundColor:2130903101 used because it matches string pool constant backgroundColor
 Marking color:call_notification_answer_color:2131034157 used because it matches string pool constant call
 Marking color:call_notification_decline_color:2131034158 used because it matches string pool constant call
-Marking string:call_notification_answer_action:2131623964 used because it matches string pool constant call
-Marking string:call_notification_answer_video_action:2131623965 used because it matches string pool constant call
-Marking string:call_notification_decline_action:2131623966 used because it matches string pool constant call
-Marking string:call_notification_hang_up_action:2131623967 used because it matches string pool constant call
-Marking string:call_notification_incoming_text:2131623968 used because it matches string pool constant call
-Marking string:call_notification_ongoing_text:2131623969 used because it matches string pool constant call
-Marking string:call_notification_screening_text:2131623970 used because it matches string pool constant call
+Marking string:call_notification_answer_action:2131689501 used because it matches string pool constant call
+Marking string:call_notification_answer_video_action:2131689502 used because it matches string pool constant call
+Marking string:call_notification_decline_action:2131689503 used because it matches string pool constant call
+Marking string:call_notification_hang_up_action:2131689504 used because it matches string pool constant call
+Marking string:call_notification_incoming_text:2131689505 used because it matches string pool constant call
+Marking string:call_notification_ongoing_text:2131689506 used because it matches string pool constant call
+Marking string:call_notification_screening_text:2131689507 used because it matches string pool constant call
 Marking attr:viewInflaterClass:2130903464 used because it matches string pool constant view
-Marking id:view_overlay:2131230980 used because it matches string pool constant view
-Marking id:view_tree_lifecycle_owner:2131230981 used because it matches string pool constant view
-Marking id:view_tree_on_back_pressed_dispatcher_owner:2131230982 used because it matches string pool constant view
-Marking id:view_tree_saved_state_registry_owner:2131230983 used because it matches string pool constant view
-Marking id:view_tree_view_model_store_owner:2131230984 used because it matches string pool constant view
+Marking id:view_overlay:2131230983 used because it matches string pool constant view
+Marking id:view_tree_lifecycle_owner:2131230984 used because it matches string pool constant view
+Marking id:view_tree_on_back_pressed_dispatcher_owner:2131230985 used because it matches string pool constant view
+Marking id:view_tree_saved_state_registry_owner:2131230986 used because it matches string pool constant view
+Marking id:view_tree_view_model_store_owner:2131230987 used because it matches string pool constant view
 Marking color:androidx_core_ripple_material_light:2131034139 used because it matches string pool constant android
 Marking color:androidx_core_secondary_text_default_material_light:2131034140 used because it matches string pool constant android
 Marking id:androidx_window_activity_scope:2131230789 used because it matches string pool constant android
-Marking string:androidx_startup:2131623963 used because it matches string pool constant android
+Marking string:androidx_startup:2131689499 used because it matches string pool constant android
+Marking attr:negativeButtonText:2130903294 used because it matches string pool constant negative
 Marking attr:itemPadding:2130903246 used because it matches string pool constant item
 Marking dimen:item_touch_helper_max_drag_scroll_per_frame:2131099750 used because it matches string pool constant item
 Marking dimen:item_touch_helper_swipe_escape_max_velocity:2131099751 used because it matches string pool constant item
 Marking dimen:item_touch_helper_swipe_escape_velocity:2131099752 used because it matches string pool constant item
-Marking id:item_touch_helper_previous_elevation:2131230854 used because it matches string pool constant item
+Marking id:item_touch_helper_previous_elevation:2131230857 used because it matches string pool constant item
 Marking attr:displayOptions:2130903176 used because it matches string pool constant display
 Marking attr:icon:2130903233 used because it matches string pool constant icon
-Marking id:icon:2131230841 used because it matches string pool constant icon
+Marking id:icon:2131230844 used because it matches string pool constant icon
 Marking attr:icon:2130903233 used because it matches string pool constant icon
 Marking attr:iconSpaceReserved:2130903234 used because it matches string pool constant icon
 Marking attr:iconTint:2130903235 used because it matches string pool constant icon
 Marking attr:iconTintMode:2130903236 used because it matches string pool constant icon
 Marking attr:iconifiedByDefault:2130903237 used because it matches string pool constant icon
-Marking id:icon:2131230841 used because it matches string pool constant icon
-Marking id:icon_frame:2131230842 used because it matches string pool constant icon
-Marking id:icon_group:2131230843 used because it matches string pool constant icon
-Marking id:icon_only:2131230844 used because it matches string pool constant icon
+Marking id:icon:2131230844 used because it matches string pool constant icon
+Marking id:icon_frame:2131230845 used because it matches string pool constant icon
+Marking id:icon_group:2131230846 used because it matches string pool constant icon
+Marking id:icon_only:2131230847 used because it matches string pool constant icon
 Marking dimen:preferences_detail_width:2131099773 used because it matches string pool constant preferences_
 Marking dimen:preferences_header_width:2131099774 used because it matches string pool constant preferences_
-Marking id:preferences_detail:2131230883 used because it matches string pool constant preferences_
-Marking id:preferences_header:2131230884 used because it matches string pool constant preferences_
-Marking id:preferences_sliding_pane_layout:2131230885 used because it matches string pool constant preferences_
+Marking id:preferences_detail:2131230886 used because it matches string pool constant preferences_
+Marking id:preferences_header:2131230887 used because it matches string pool constant preferences_
+Marking id:preferences_sliding_pane_layout:2131230888 used because it matches string pool constant preferences_
 Marking integer:preferences_detail_pane_weight:2131296261 used because it matches string pool constant preferences_
 Marking integer:preferences_header_pane_weight:2131296262 used because it matches string pool constant preferences_
 Marking attr:overlapAnchor:2130903299 used because it matches string pool constant over
 Marking attr:selectable:2130903348 used because it matches string pool constant select
 Marking attr:selectableItemBackground:2130903349 used because it matches string pool constant select
 Marking attr:selectableItemBackgroundBorderless:2130903350 used because it matches string pool constant select
-Marking id:select_dialog_listview:2131230916 used because it matches string pool constant select
+Marking id:select_dialog_listview:2131230919 used because it matches string pool constant select
 Marking layout:select_dialog_item_material:2131427397 used because it matches string pool constant select
 Marking layout:select_dialog_multichoice_material:2131427398 used because it matches string pool constant select
 Marking layout:select_dialog_singlechoice_material:2131427399 used because it matches string pool constant select
@@ -6334,8 +6634,8 @@ Marking dimen:highlight_alpha_material_colored:2131099743 used because it matche
 Marking dimen:highlight_alpha_material_dark:2131099744 used because it matches string pool constant high
 Marking dimen:highlight_alpha_material_light:2131099745 used because it matches string pool constant high
 Marking attr:controlBackground:2130903161 used because it matches string pool constant control
-Marking id:controls_shadow:2131230814 used because it matches string pool constant control
-Marking id:controls_wrapper:2131230815 used because it matches string pool constant control
+Marking id:controls_shadow:2131230815 used because it matches string pool constant control
+Marking id:controls_wrapper:2131230816 used because it matches string pool constant control
 Marking attr:key:2130903247 used because it matches string pool constant key
 Marking attr:key:2130903247 used because it matches string pool constant key
 Marking attr:keylines:2130903248 used because it matches string pool constant key
@@ -6349,22 +6649,22 @@ Marking animator:fragment_fade_enter:2130837506 used because it matches string p
 Marking animator:fragment_fade_exit:2130837507 used because it matches string pool constant fragment_
 Marking animator:fragment_open_enter:2130837508 used because it matches string pool constant fragment_
 Marking animator:fragment_open_exit:2130837509 used because it matches string pool constant fragment_
-Marking id:fragment_container_view_tag:2131230833 used because it matches string pool constant fragment_
+Marking id:fragment_container_view_tag:2131230836 used because it matches string pool constant fragment_
 Marking attr:tag:2130903395 used because it matches string pool constant tag
 Marking attr:tag:2130903395 used because it matches string pool constant tag
-Marking id:tag_accessibility_actions:2131230938 used because it matches string pool constant tag
-Marking id:tag_accessibility_clickable_spans:2131230939 used because it matches string pool constant tag
-Marking id:tag_accessibility_heading:2131230940 used because it matches string pool constant tag
-Marking id:tag_accessibility_pane_title:2131230941 used because it matches string pool constant tag
-Marking id:tag_on_apply_window_listener:2131230942 used because it matches string pool constant tag
-Marking id:tag_on_receive_content_listener:2131230943 used because it matches string pool constant tag
-Marking id:tag_on_receive_content_mime_types:2131230944 used because it matches string pool constant tag
-Marking id:tag_screen_reader_focusable:2131230945 used because it matches string pool constant tag
-Marking id:tag_state_description:2131230946 used because it matches string pool constant tag
-Marking id:tag_transition_group:2131230947 used because it matches string pool constant tag
-Marking id:tag_unhandled_key_event_manager:2131230948 used because it matches string pool constant tag
-Marking id:tag_unhandled_key_listeners:2131230949 used because it matches string pool constant tag
-Marking id:tag_window_insets_animation_callback:2131230950 used because it matches string pool constant tag
+Marking id:tag_accessibility_actions:2131230941 used because it matches string pool constant tag
+Marking id:tag_accessibility_clickable_spans:2131230942 used because it matches string pool constant tag
+Marking id:tag_accessibility_heading:2131230943 used because it matches string pool constant tag
+Marking id:tag_accessibility_pane_title:2131230944 used because it matches string pool constant tag
+Marking id:tag_on_apply_window_listener:2131230945 used because it matches string pool constant tag
+Marking id:tag_on_receive_content_listener:2131230946 used because it matches string pool constant tag
+Marking id:tag_on_receive_content_mime_types:2131230947 used because it matches string pool constant tag
+Marking id:tag_screen_reader_focusable:2131230948 used because it matches string pool constant tag
+Marking id:tag_state_description:2131230949 used because it matches string pool constant tag
+Marking id:tag_transition_group:2131230950 used because it matches string pool constant tag
+Marking id:tag_unhandled_key_event_manager:2131230951 used because it matches string pool constant tag
+Marking id:tag_unhandled_key_listeners:2131230952 used because it matches string pool constant tag
+Marking id:tag_window_insets_animation_callback:2131230953 used because it matches string pool constant tag
 Marking attr:fragment:2130903226 used because it matches string pool constant fragment
 Marking anim:fragment_fast_out_extra_slow_in:2130771992 used because it matches string pool constant fragment
 Marking animator:fragment_close_enter:2130837504 used because it matches string pool constant fragment
@@ -6374,7 +6674,7 @@ Marking animator:fragment_fade_exit:2130837507 used because it matches string po
 Marking animator:fragment_open_enter:2130837508 used because it matches string pool constant fragment
 Marking animator:fragment_open_exit:2130837509 used because it matches string pool constant fragment
 Marking attr:fragment:2130903226 used because it matches string pool constant fragment
-Marking id:fragment_container_view_tag:2131230833 used because it matches string pool constant fragment
+Marking id:fragment_container_view_tag:2131230836 used because it matches string pool constant fragment
 @anim/abc_fade_in : reachable=false
 @anim/abc_fade_out : reachable=false
 @anim/abc_grow_fade_in_from_bottom : reachable=false
@@ -6878,6 +7178,16 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
 @attr/windowMinWidthMinor : reachable=true
 @attr/windowNoTitle : reachable=true
 @attr/zOrderOnTop : reachable=false
+@attr/zxing_framing_rect_height : reachable=false
+@attr/zxing_framing_rect_width : reachable=false
+@attr/zxing_possible_result_points : reachable=false
+@attr/zxing_preview_scaling_strategy : reachable=false
+@attr/zxing_result_view : reachable=false
+@attr/zxing_scanner_layout : reachable=false
+@attr/zxing_use_texture_view : reachable=false
+@attr/zxing_viewfinder_laser : reachable=false
+@attr/zxing_viewfinder_laser_visibility : reachable=false
+@attr/zxing_viewfinder_mask : reachable=false
 @bool/abc_action_bar_embed_tabs : reachable=true
 @bool/abc_config_actionMenuItemAllCaps : reachable=false
 @bool/config_materialPreferenceIconSpaceReserved : reachable=true
@@ -7087,6 +7397,16 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
 @color/ucrop_scale_text_view_selector : reachable=false
     @color/ucrop_color_active_aspect_ratio
     @color/ucrop_color_inactive_aspect_ratio
+@color/zxing_custom_possible_result_points : reachable=false
+@color/zxing_custom_result_view : reachable=false
+@color/zxing_custom_viewfinder_laser : reachable=false
+@color/zxing_custom_viewfinder_mask : reachable=false
+@color/zxing_possible_result_points : reachable=true
+@color/zxing_result_view : reachable=true
+@color/zxing_status_text : reachable=false
+@color/zxing_transparent : reachable=false
+@color/zxing_viewfinder_laser : reachable=true
+@color/zxing_viewfinder_mask : reachable=true
 @dimen/abc_action_bar_content_inset_material : reachable=false
 @dimen/abc_action_bar_content_inset_with_nav : reachable=false
 @dimen/abc_action_bar_default_height_material : reachable=false
@@ -7643,6 +7963,7 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
 @id/buttonPanel : reachable=true
 @id/cancel_action : reachable=true
 @id/center : reachable=true
+@id/centerCrop : reachable=true
 @id/center_horizontal : reachable=true
 @id/center_vertical : reachable=true
 @id/checkbox : reachable=true
@@ -7671,6 +7992,8 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
 @id/fill : reachable=false
 @id/fill_horizontal : reachable=false
 @id/fill_vertical : reachable=false
+@id/fitCenter : reachable=false
+@id/fitXY : reachable=false
 @id/forever : reachable=false
 @id/fragment_container_view_tag : reachable=true
 @id/ghost_view : reachable=false
@@ -7834,6 +8157,19 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
 @id/wrapper_reset_rotate : reachable=true
 @id/wrapper_rotate_by_angle : reachable=true
 @id/wrapper_states : reachable=false
+@id/zxing_back_button : reachable=false
+@id/zxing_barcode_scanner : reachable=true
+@id/zxing_barcode_surface : reachable=true
+@id/zxing_camera_closed : reachable=true
+@id/zxing_camera_error : reachable=true
+@id/zxing_decode : reachable=true
+@id/zxing_decode_failed : reachable=true
+@id/zxing_decode_succeeded : reachable=true
+@id/zxing_possible_result_points : reachable=true
+@id/zxing_preview_failed : reachable=true
+@id/zxing_prewiew_size_ready : reachable=true
+@id/zxing_status_view : reachable=true
+@id/zxing_viewfinder_view : reachable=true
 @integer/abc_config_activityDefaultDur : reachable=false
 @integer/abc_config_activityShortDur : reachable=false
 @integer/cancel_button_image_alpha : reachable=true
@@ -8160,6 +8496,11 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
     @style/ucrop_TextViewWidgetText
 @layout/ucrop_view : reachable=true
     @dimen/ucrop_padding_crop_frame
+@layout/zxing_barcode_scanner : reachable=true
+    @color/zxing_transparent
+    @color/zxing_status_text
+    @string/zxing_msg_default_status
+@layout/zxing_capture : reachable=true
 @menu/ucrop_menu_activity : reachable=true
     @string/ucrop_menu_crop
     @drawable/ucrop_ic_done
@@ -8171,6 +8512,7 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
 @mipmap/ic_launcher_round : reachable=false
     @color/ic_launcher_background
     @mipmap/ic_launcher_foreground
+@raw/zxing_beep : reachable=true
 @string/abc_action_bar_home_description : reachable=false
 @string/abc_action_bar_up_description : reachable=true
 @string/abc_action_menu_overflow_description : reachable=false
@@ -8199,6 +8541,7 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
 @string/abc_shareactionprovider_share_with_application : reachable=false
 @string/abc_toolbar_collapse_description : reachable=false
 @string/androidx_startup : reachable=true
+@string/app_version : reachable=false
 @string/call_notification_answer_action : reachable=true
 @string/call_notification_answer_video_action : reachable=true
 @string/call_notification_decline_action : reachable=true
@@ -8227,6 +8570,7 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
 @string/copy : reachable=true
 @string/copy_toast_msg : reachable=true
 @string/default_notification_channel_name : reachable=true
+@string/define_zxingandroidembedded : reachable=true
 @string/exo_download_completed : reachable=false
 @string/exo_download_description : reachable=false
 @string/exo_download_downloading : reachable=false
@@ -8240,6 +8584,15 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
 @string/fallback_menu_item_copy_link : reachable=true
 @string/fallback_menu_item_open_in_browser : reachable=true
 @string/fallback_menu_item_share_link : reachable=true
+@string/library_zxingandroidembedded_author : reachable=false
+@string/library_zxingandroidembedded_authorWebsite : reachable=false
+@string/library_zxingandroidembedded_isOpenSource : reachable=false
+@string/library_zxingandroidembedded_libraryDescription : reachable=false
+@string/library_zxingandroidembedded_libraryName : reachable=false
+@string/library_zxingandroidembedded_libraryVersion : reachable=false
+@string/library_zxingandroidembedded_libraryWebsite : reachable=false
+@string/library_zxingandroidembedded_licenseId : reachable=false
+@string/library_zxingandroidembedded_repositoryLink : reachable=false
 @string/not_set : reachable=true
 @string/pause_button_content_description : reachable=true
 @string/play_button_content_description : reachable=true
@@ -8259,6 +8612,10 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
 @string/ucrop_scale : reachable=false
 @string/v7_preference_off : reachable=false
 @string/v7_preference_on : reachable=false
+@string/zxing_app_name : reachable=true
+@string/zxing_button_ok : reachable=true
+@string/zxing_msg_camera_framework_bug : reachable=true
+@string/zxing_msg_default_status : reachable=false
 @style/AlertDialog_AppCompat : reachable=false
     @style/Base_AlertDialog_AppCompat
 @style/AlertDialog_AppCompat_Light : reachable=false
@@ -9870,6 +10227,7 @@ Marking id:fragment_container_view_tag:2131230833 used because it matches string
     @dimen/ucrop_size_wrapper_rotate_button
     @attr/selectableItemBackgroundBorderless
     @attr/background
+@style/zxing_CaptureTheme : reachable=true
 @xml/flutter_image_picker_file_paths : reachable=true
 @xml/image_share_filepaths : reachable=true
 @xml/network_security_config : reachable=true
@@ -10209,6 +10567,10 @@ The root reachable resources are:
  color:ucrop_color_widget:2131034237
  color:ucrop_color_widget_active:2131034238
  color:ucrop_color_widget_rotate_mid_line:2131034241
+ color:zxing_possible_result_points:2131034248
+ color:zxing_result_view:2131034249
+ color:zxing_viewfinder_laser:2131034252
+ color:zxing_viewfinder_mask:2131034253
  dimen:abc_cascading_menus_min_smallest_width:2131099670
  dimen:abc_config_prefDialogWidth:2131099671
  dimen:abc_dropdownitem_icon_width:2131099689
@@ -10420,148 +10782,161 @@ The root reachable resources are:
  id:buttonPanel:2131230801
  id:cancel_action:2131230802
  id:center:2131230803
- id:center_horizontal:2131230804
- id:center_vertical:2131230805
- id:checkbox:2131230806
- id:checked:2131230807
- id:content:2131230812
- id:contentPanel:2131230813
- id:controls_shadow:2131230814
- id:controls_wrapper:2131230815
- id:custom:2131230816
- id:customPanel:2131230817
- id:dark:2131230818
- id:decor_content_parent:2131230819
- id:default_activity_button:2131230820
- id:edit_query:2131230823
- id:end:2131230825
- id:end_padder:2131230826
- id:fragment_container_view_tag:2131230833
- id:group_divider:2131230836
- id:hybrid:2131230840
- id:icon:2131230841
- id:icon_frame:2131230842
- id:icon_group:2131230843
- id:icon_only:2131230844
- id:image:2131230846
- id:image_view_crop:2131230847
- id:image_view_logo:2131230848
- id:image_view_state_aspect_ratio:2131230849
- id:image_view_state_rotate:2131230850
- id:image_view_state_scale:2131230851
- id:info:2131230852
- id:italic:2131230853
- id:item_touch_helper_previous_elevation:2131230854
- id:layout_aspect_ratio:2131230855
- id:layout_rotate_wheel:2131230856
- id:layout_scale_wheel:2131230857
- id:left:2131230858
- id:light:2131230859
- id:line1:2131230860
- id:line3:2131230861
- id:listMode:2131230862
- id:list_item:2131230863
- id:locale:2131230864
- id:ltr:2131230865
- id:media_actions:2131230866
- id:media_controller_compat_view_tag:2131230867
- id:menu_crop:2131230868
- id:menu_loader:2131230869
- id:message:2131230870
- id:middle:2131230871
- id:none:2131230874
- id:normal:2131230875
- id:notification_background:2131230876
- id:notification_main_column:2131230877
- id:notification_main_column_container:2131230878
- id:off:2131230879
- id:on:2131230880
- id:parentPanel:2131230881
- id:preferences_detail:2131230883
- id:preferences_header:2131230884
- id:preferences_sliding_pane_layout:2131230885
- id:progress_circular:2131230886
- id:progress_horizontal:2131230887
- id:report_drawn:2131230890
- id:right:2131230891
- id:right_icon:2131230892
- id:right_side:2131230893
- id:rotate_scroll_wheel:2131230894
- id:rtl:2131230895
- id:save_overlay_view:2131230898
- id:scale_scroll_wheel:2131230899
- id:scrollIndicatorDown:2131230901
- id:scrollIndicatorUp:2131230902
- id:scrollView:2131230903
- id:search_button:2131230906
- id:search_close_btn:2131230907
- id:search_edit_frame:2131230908
- id:search_go_btn:2131230909
- id:search_mag_icon:2131230910
- id:search_plate:2131230911
- id:search_src_text:2131230912
- id:search_voice_btn:2131230913
- id:seekbar:2131230914
- id:seekbar_value:2131230915
- id:select_dialog_listview:2131230916
- id:shortcut:2131230917
- id:spacer:2131230921
- id:special_effects_controller_view_tag:2131230922
- id:split_action_bar:2131230924
- id:src_atop:2131230925
- id:src_in:2131230926
- id:src_over:2131230927
- id:start:2131230929
- id:state_aspect_ratio:2131230930
- id:state_rotate:2131230931
- id:state_scale:2131230932
- id:submenuarrow:2131230934
- id:submit_area:2131230935
- id:switchWidget:2131230936
- id:tag_accessibility_actions:2131230938
- id:tag_accessibility_clickable_spans:2131230939
- id:tag_accessibility_heading:2131230940
- id:tag_accessibility_pane_title:2131230941
- id:tag_on_apply_window_listener:2131230942
- id:tag_on_receive_content_listener:2131230943
- id:tag_on_receive_content_mime_types:2131230944
- id:tag_screen_reader_focusable:2131230945
- id:tag_state_description:2131230946
- id:tag_transition_group:2131230947
- id:tag_unhandled_key_event_manager:2131230948
- id:tag_unhandled_key_listeners:2131230949
- id:tag_window_insets_animation_callback:2131230950
- id:terrain:2131230951
- id:text:2131230952
- id:text2:2131230953
- id:textSpacerNoButtons:2131230954
- id:textSpacerNoTitle:2131230955
- id:text_view_crop:2131230956
- id:text_view_rotate:2131230957
- id:text_view_scale:2131230958
- id:time:2131230959
- id:title:2131230960
- id:titleDividerNoCustom:2131230961
- id:title_template:2131230962
- id:toolbar:2131230963
- id:toolbar_title:2131230964
- id:top:2131230965
- id:topPanel:2131230966
- id:topToBottom:2131230967
- id:transition_current_scene:2131230968
- id:ucrop:2131230973
- id:ucrop_frame:2131230974
- id:ucrop_photobox:2131230975
- id:up:2131230978
- id:view_overlay:2131230980
- id:view_tree_lifecycle_owner:2131230981
- id:view_tree_on_back_pressed_dispatcher_owner:2131230982
- id:view_tree_saved_state_registry_owner:2131230983
- id:view_tree_view_model_store_owner:2131230984
- id:visible_removing_fragment_view_tag:2131230985
- id:window:2131230988
- id:wrapper_reset_rotate:2131230992
- id:wrapper_rotate_by_angle:2131230993
+ id:centerCrop:2131230804
+ id:center_horizontal:2131230805
+ id:center_vertical:2131230806
+ id:checkbox:2131230807
+ id:checked:2131230808
+ id:content:2131230813
+ id:contentPanel:2131230814
+ id:controls_shadow:2131230815
+ id:controls_wrapper:2131230816
+ id:custom:2131230817
+ id:customPanel:2131230818
+ id:dark:2131230819
+ id:decor_content_parent:2131230820
+ id:default_activity_button:2131230821
+ id:edit_query:2131230824
+ id:end:2131230826
+ id:end_padder:2131230827
+ id:fragment_container_view_tag:2131230836
+ id:group_divider:2131230839
+ id:hybrid:2131230843
+ id:icon:2131230844
+ id:icon_frame:2131230845
+ id:icon_group:2131230846
+ id:icon_only:2131230847
+ id:image:2131230849
+ id:image_view_crop:2131230850
+ id:image_view_logo:2131230851
+ id:image_view_state_aspect_ratio:2131230852
+ id:image_view_state_rotate:2131230853
+ id:image_view_state_scale:2131230854
+ id:info:2131230855
+ id:italic:2131230856
+ id:item_touch_helper_previous_elevation:2131230857
+ id:layout_aspect_ratio:2131230858
+ id:layout_rotate_wheel:2131230859
+ id:layout_scale_wheel:2131230860
+ id:left:2131230861
+ id:light:2131230862
+ id:line1:2131230863
+ id:line3:2131230864
+ id:listMode:2131230865
+ id:list_item:2131230866
+ id:locale:2131230867
+ id:ltr:2131230868
+ id:media_actions:2131230869
+ id:media_controller_compat_view_tag:2131230870
+ id:menu_crop:2131230871
+ id:menu_loader:2131230872
+ id:message:2131230873
+ id:middle:2131230874
+ id:none:2131230877
+ id:normal:2131230878
+ id:notification_background:2131230879
+ id:notification_main_column:2131230880
+ id:notification_main_column_container:2131230881
+ id:off:2131230882
+ id:on:2131230883
+ id:parentPanel:2131230884
+ id:preferences_detail:2131230886
+ id:preferences_header:2131230887
+ id:preferences_sliding_pane_layout:2131230888
+ id:progress_circular:2131230889
+ id:progress_horizontal:2131230890
+ id:report_drawn:2131230893
+ id:right:2131230894
+ id:right_icon:2131230895
+ id:right_side:2131230896
+ id:rotate_scroll_wheel:2131230897
+ id:rtl:2131230898
+ id:save_overlay_view:2131230901
+ id:scale_scroll_wheel:2131230902
+ id:scrollIndicatorDown:2131230904
+ id:scrollIndicatorUp:2131230905
+ id:scrollView:2131230906
+ id:search_button:2131230909
+ id:search_close_btn:2131230910
+ id:search_edit_frame:2131230911
+ id:search_go_btn:2131230912
+ id:search_mag_icon:2131230913
+ id:search_plate:2131230914
+ id:search_src_text:2131230915
+ id:search_voice_btn:2131230916
+ id:seekbar:2131230917
+ id:seekbar_value:2131230918
+ id:select_dialog_listview:2131230919
+ id:shortcut:2131230920
+ id:spacer:2131230924
+ id:special_effects_controller_view_tag:2131230925
+ id:split_action_bar:2131230927
+ id:src_atop:2131230928
+ id:src_in:2131230929
+ id:src_over:2131230930
+ id:start:2131230932
+ id:state_aspect_ratio:2131230933
+ id:state_rotate:2131230934
+ id:state_scale:2131230935
+ id:submenuarrow:2131230937
+ id:submit_area:2131230938
+ id:switchWidget:2131230939
+ id:tag_accessibility_actions:2131230941
+ id:tag_accessibility_clickable_spans:2131230942
+ id:tag_accessibility_heading:2131230943
+ id:tag_accessibility_pane_title:2131230944
+ id:tag_on_apply_window_listener:2131230945
+ id:tag_on_receive_content_listener:2131230946
+ id:tag_on_receive_content_mime_types:2131230947
+ id:tag_screen_reader_focusable:2131230948
+ id:tag_state_description:2131230949
+ id:tag_transition_group:2131230950
+ id:tag_unhandled_key_event_manager:2131230951
+ id:tag_unhandled_key_listeners:2131230952
+ id:tag_window_insets_animation_callback:2131230953
+ id:terrain:2131230954
+ id:text:2131230955
+ id:text2:2131230956
+ id:textSpacerNoButtons:2131230957
+ id:textSpacerNoTitle:2131230958
+ id:text_view_crop:2131230959
+ id:text_view_rotate:2131230960
+ id:text_view_scale:2131230961
+ id:time:2131230962
+ id:title:2131230963
+ id:titleDividerNoCustom:2131230964
+ id:title_template:2131230965
+ id:toolbar:2131230966
+ id:toolbar_title:2131230967
+ id:top:2131230968
+ id:topPanel:2131230969
+ id:topToBottom:2131230970
+ id:transition_current_scene:2131230971
+ id:ucrop:2131230976
+ id:ucrop_frame:2131230977
+ id:ucrop_photobox:2131230978
+ id:up:2131230981
+ id:view_overlay:2131230983
+ id:view_tree_lifecycle_owner:2131230984
+ id:view_tree_on_back_pressed_dispatcher_owner:2131230985
+ id:view_tree_saved_state_registry_owner:2131230986
+ id:view_tree_view_model_store_owner:2131230987
+ id:visible_removing_fragment_view_tag:2131230988
+ id:window:2131230991
+ id:wrapper_reset_rotate:2131230995
+ id:wrapper_rotate_by_angle:2131230996
+ id:zxing_barcode_scanner:2131230999
+ id:zxing_barcode_surface:2131231000
+ id:zxing_camera_closed:2131231001
+ id:zxing_camera_error:2131231002
+ id:zxing_decode:2131231003
+ id:zxing_decode_failed:2131231004
+ id:zxing_decode_succeeded:2131231005
+ id:zxing_possible_result_points:2131231006
+ id:zxing_preview_failed:2131231007
+ id:zxing_prewiew_size_ready:2131231008
+ id:zxing_status_view:2131231009
+ id:zxing_viewfinder_view:2131231010
  integer:cancel_button_image_alpha:2131296258
  integer:config_tooltipAnimTime:2131296259
  integer:google_play_services_version:2131296260
@@ -10615,75 +10990,83 @@ The root reachable resources are:
  layout:ucrop_aspect_ratio:2131427402
  layout:ucrop_controls:2131427403
  layout:ucrop_view:2131427407
+ layout:zxing_barcode_scanner:2131427408
+ layout:zxing_capture:2131427409
  menu:ucrop_menu_activity:2131492864
  mipmap:ic_launcher:2131558400
- string:abc_action_bar_up_description:2131623937
- string:abc_capital_off:2131623942
- string:abc_capital_on:2131623943
- string:abc_menu_alt_shortcut_label:2131623944
- string:abc_menu_ctrl_shortcut_label:2131623945
- string:abc_menu_delete_shortcut_label:2131623946
- string:abc_menu_enter_shortcut_label:2131623947
- string:abc_menu_function_shortcut_label:2131623948
- string:abc_menu_meta_shortcut_label:2131623949
- string:abc_menu_shift_shortcut_label:2131623950
- string:abc_menu_space_shortcut_label:2131623951
- string:abc_menu_sym_shortcut_label:2131623952
- string:abc_prepend_shortcut_label:2131623953
- string:abc_searchview_description_search:2131623957
- string:androidx_startup:2131623963
- string:call_notification_answer_action:2131623964
- string:call_notification_answer_video_action:2131623965
- string:call_notification_decline_action:2131623966
- string:call_notification_hang_up_action:2131623967
- string:call_notification_incoming_text:2131623968
- string:call_notification_ongoing_text:2131623969
- string:call_notification_screening_text:2131623970
- string:common_google_play_services_enable_button:2131623971
- string:common_google_play_services_enable_text:2131623972
- string:common_google_play_services_enable_title:2131623973
- string:common_google_play_services_install_button:2131623974
- string:common_google_play_services_install_text:2131623975
- string:common_google_play_services_install_title:2131623976
- string:common_google_play_services_notification_channel_name:2131623977
- string:common_google_play_services_notification_ticker:2131623978
- string:common_google_play_services_unknown_issue:2131623979
- string:common_google_play_services_unsupported_text:2131623980
- string:common_google_play_services_update_button:2131623981
- string:common_google_play_services_update_text:2131623982
- string:common_google_play_services_update_title:2131623983
- string:common_google_play_services_updating_text:2131623984
- string:common_google_play_services_wear_update_text:2131623985
- string:common_open_on_phone:2131623986
- string:copy:2131623989
- string:copy_toast_msg:2131623990
- string:default_notification_channel_name:2131623991
- string:fallback_menu_item_copy_link:2131624002
- string:fallback_menu_item_open_in_browser:2131624003
- string:fallback_menu_item_share_link:2131624004
- string:not_set:2131624005
- string:pause_button_content_description:2131624006
- string:play_button_content_description:2131624007
- string:skip_to_next_item_button_content_description:2131624010
- string:skip_to_previous_item_button_content_description:2131624011
- string:ucrop_error_input_data_is_absent:2131624015
- string:ucrop_label_edit_photo:2131624016
- string:ucrop_label_original:2131624017
- string:ucrop_mutate_exception_hint:2131624019
- style:Animation_AppCompat_Tooltip:2131689476
- style:LaunchTheme:2131689634
- style:NormalTheme:2131689635
- style:Theme_AppCompat_CompactMenu:2131689756
- style:Theme_AppCompat_Empty:2131689768
- style:Theme_AppCompat_Light:2131689769
- style:Theme_AppCompat_Light_NoActionBar:2131689775
- style:amu_Bubble_TextAppearance_Dark:2131689862
- style:amu_Bubble_TextAppearance_Light:2131689863
- style:amu_ClusterIcon_TextAppearance:2131689864
- xml:flutter_image_picker_file_paths:2131820544
- xml:image_share_filepaths:2131820545
- xml:network_security_config:2131820546
- xml:provider_paths:2131820547
+ raw:zxing_beep:2131623936
+ string:abc_action_bar_up_description:2131689473
+ string:abc_capital_off:2131689478
+ string:abc_capital_on:2131689479
+ string:abc_menu_alt_shortcut_label:2131689480
+ string:abc_menu_ctrl_shortcut_label:2131689481
+ string:abc_menu_delete_shortcut_label:2131689482
+ string:abc_menu_enter_shortcut_label:2131689483
+ string:abc_menu_function_shortcut_label:2131689484
+ string:abc_menu_meta_shortcut_label:2131689485
+ string:abc_menu_shift_shortcut_label:2131689486
+ string:abc_menu_space_shortcut_label:2131689487
+ string:abc_menu_sym_shortcut_label:2131689488
+ string:abc_prepend_shortcut_label:2131689489
+ string:abc_searchview_description_search:2131689493
+ string:androidx_startup:2131689499
+ string:call_notification_answer_action:2131689501
+ string:call_notification_answer_video_action:2131689502
+ string:call_notification_decline_action:2131689503
+ string:call_notification_hang_up_action:2131689504
+ string:call_notification_incoming_text:2131689505
+ string:call_notification_ongoing_text:2131689506
+ string:call_notification_screening_text:2131689507
+ string:common_google_play_services_enable_button:2131689508
+ string:common_google_play_services_enable_text:2131689509
+ string:common_google_play_services_enable_title:2131689510
+ string:common_google_play_services_install_button:2131689511
+ string:common_google_play_services_install_text:2131689512
+ string:common_google_play_services_install_title:2131689513
+ string:common_google_play_services_notification_channel_name:2131689514
+ string:common_google_play_services_notification_ticker:2131689515
+ string:common_google_play_services_unknown_issue:2131689516
+ string:common_google_play_services_unsupported_text:2131689517
+ string:common_google_play_services_update_button:2131689518
+ string:common_google_play_services_update_text:2131689519
+ string:common_google_play_services_update_title:2131689520
+ string:common_google_play_services_updating_text:2131689521
+ string:common_google_play_services_wear_update_text:2131689522
+ string:common_open_on_phone:2131689523
+ string:copy:2131689526
+ string:copy_toast_msg:2131689527
+ string:default_notification_channel_name:2131689528
+ string:define_zxingandroidembedded:2131689529
+ string:fallback_menu_item_copy_link:2131689540
+ string:fallback_menu_item_open_in_browser:2131689541
+ string:fallback_menu_item_share_link:2131689542
+ string:not_set:2131689552
+ string:pause_button_content_description:2131689553
+ string:play_button_content_description:2131689554
+ string:skip_to_next_item_button_content_description:2131689557
+ string:skip_to_previous_item_button_content_description:2131689558
+ string:ucrop_error_input_data_is_absent:2131689562
+ string:ucrop_label_edit_photo:2131689563
+ string:ucrop_label_original:2131689564
+ string:ucrop_mutate_exception_hint:2131689566
+ string:zxing_app_name:2131689571
+ string:zxing_button_ok:2131689572
+ string:zxing_msg_camera_framework_bug:2131689573
+ style:Animation_AppCompat_Tooltip:2131755012
+ style:LaunchTheme:2131755170
+ style:NormalTheme:2131755171
+ style:Theme_AppCompat_CompactMenu:2131755292
+ style:Theme_AppCompat_Empty:2131755304
+ style:Theme_AppCompat_Light:2131755305
+ style:Theme_AppCompat_Light_NoActionBar:2131755311
+ style:amu_Bubble_TextAppearance_Dark:2131755398
+ style:amu_Bubble_TextAppearance_Light:2131755399
+ style:amu_ClusterIcon_TextAppearance:2131755400
+ style:zxing_CaptureTheme:2131755407
+ xml:flutter_image_picker_file_paths:2131886080
+ xml:image_share_filepaths:2131886081
+ xml:network_security_config:2131886082
+ xml:provider_paths:2131886083
 Unused resources are: 
  anim:abc_fade_in:2130771968
  anim:abc_fade_out:2130771969
@@ -10730,6 +11113,10 @@ Unused resources are:
  color:switch_thumb_disabled_material_dark:2131034211
  color:switch_thumb_material_dark:2131034213
  color:switch_thumb_normal_material_dark:2131034215
+ color:zxing_custom_possible_result_points:2131034244
+ color:zxing_custom_result_view:2131034245
+ color:zxing_custom_viewfinder_laser:2131034246
+ color:zxing_custom_viewfinder_mask:2131034247
  dimen:abc_action_bar_icon_vertical_padding_material:2131099654
  dimen:abc_action_bar_overflow_padding_end_material:2131099655
  dimen:abc_action_bar_overflow_padding_start_material:2131099656
@@ -10813,55 +11200,58 @@ Unused resources are:
  id:adjust_height:2131230781
  id:adjust_width:2131230782
  id:async:2131230790
- id:chronometer:2131230808
- id:clip_horizontal:2131230809
- id:clip_vertical:2131230810
- id:collapseActionView:2131230811
- id:dialog_button:2131230821
- id:disableHome:2131230822
- id:edit_text_id:2131230824
- id:expand_activities_button:2131230827
- id:expanded_menu:2131230828
- id:fill:2131230829
- id:fill_horizontal:2131230830
- id:fill_vertical:2131230831
- id:forever:2131230832
- id:ghost_view:2131230834
- id:ghost_view_holder:2131230835
- id:hide_ime_id:2131230837
- id:home:2131230838
- id:homeAsUp:2131230839
- id:ifRoom:2131230845
- id:multiply:2131230872
- id:never:2131230873
- id:parent_matrix:2131230882
- id:radio:2131230888
- id:recycler_view:2131230889
- id:satellite:2131230896
- id:save_non_transition_alpha:2131230897
- id:screen:2131230900
- id:search_badge:2131230904
- id:search_bar:2131230905
- id:showCustom:2131230918
- id:showHome:2131230919
- id:showTitle:2131230920
- id:spinner:2131230923
- id:standard:2131230928
- id:status_bar_latest_event_content:2131230933
- id:tabMode:2131230937
- id:transition_layout_save:2131230969
- id:transition_position:2131230970
- id:transition_scene_layoutid_cache:2131230971
- id:transition_transform:2131230972
- id:unchecked:2131230976
- id:uniform:2131230977
- id:useLogo:2131230979
- id:webview:2131230986
- id:wide:2131230987
- id:withText:2131230989
- id:wrap_content:2131230990
- id:wrapper_controls:2131230991
- id:wrapper_states:2131230994
+ id:chronometer:2131230809
+ id:clip_horizontal:2131230810
+ id:clip_vertical:2131230811
+ id:collapseActionView:2131230812
+ id:dialog_button:2131230822
+ id:disableHome:2131230823
+ id:edit_text_id:2131230825
+ id:expand_activities_button:2131230828
+ id:expanded_menu:2131230829
+ id:fill:2131230830
+ id:fill_horizontal:2131230831
+ id:fill_vertical:2131230832
+ id:fitCenter:2131230833
+ id:fitXY:2131230834
+ id:forever:2131230835
+ id:ghost_view:2131230837
+ id:ghost_view_holder:2131230838
+ id:hide_ime_id:2131230840
+ id:home:2131230841
+ id:homeAsUp:2131230842
+ id:ifRoom:2131230848
+ id:multiply:2131230875
+ id:never:2131230876
+ id:parent_matrix:2131230885
+ id:radio:2131230891
+ id:recycler_view:2131230892
+ id:satellite:2131230899
+ id:save_non_transition_alpha:2131230900
+ id:screen:2131230903
+ id:search_badge:2131230907
+ id:search_bar:2131230908
+ id:showCustom:2131230921
+ id:showHome:2131230922
+ id:showTitle:2131230923
+ id:spinner:2131230926
+ id:standard:2131230931
+ id:status_bar_latest_event_content:2131230936
+ id:tabMode:2131230940
+ id:transition_layout_save:2131230972
+ id:transition_position:2131230973
+ id:transition_scene_layoutid_cache:2131230974
+ id:transition_transform:2131230975
+ id:unchecked:2131230979
+ id:uniform:2131230980
+ id:useLogo:2131230982
+ id:webview:2131230989
+ id:wide:2131230990
+ id:withText:2131230992
+ id:wrap_content:2131230993
+ id:wrapper_controls:2131230994
+ id:wrapper_states:2131230997
+ id:zxing_back_button:2131230998
  integer:status_bar_notification_info_maxnum:2131296263
  layout:abc_action_bar_up_container:2131427329
  layout:abc_activity_chooser_view:2131427334
@@ -10889,223 +11279,233 @@ Unused resources are:
  layout:preference_widget_switch_compat:2131427396
  layout:ucrop_fragment_photobox:2131427404
  mipmap:ic_launcher_round:2131558402
- string:abc_action_bar_home_description:2131623936
- string:abc_action_menu_overflow_description:2131623938
- string:abc_activity_chooser_view_see_all:2131623940
- string:abc_activitychooserview_choose_application:2131623941
- string:abc_searchview_description_query:2131623956
- string:abc_shareactionprovider_share_with:2131623960
- string:abc_shareactionprovider_share_with_application:2131623961
- string:common_signin_button_text:2131623987
- string:common_signin_button_text_long:2131623988
- string:exo_download_completed:2131623992
- string:exo_download_description:2131623993
- string:exo_download_downloading:2131623994
- string:exo_download_failed:2131623995
- string:exo_download_notification_channel_name:2131623996
- string:exo_download_paused:2131623997
- string:exo_download_paused_for_network:2131623998
- string:exo_download_paused_for_wifi:2131623999
- string:exo_download_removing:2131624000
- string:expand_button_title:2131624001
- string:preference_copied:2131624008
- string:search_menu_title:2131624009
- string:status_bar_notification_info_overflow:2131624012
- string:summary_collapsed_preference_list:2131624013
- string:v7_preference_off:2131624022
- string:v7_preference_on:2131624023
- style:AlertDialog_AppCompat:2131689472
- style:Base_TextAppearance_AppCompat_Body2:2131689486
- style:Base_TextAppearance_AppCompat_Button:2131689487
- style:Base_TextAppearance_AppCompat_Caption:2131689488
- style:Base_TextAppearance_AppCompat_Display1:2131689489
- style:Base_TextAppearance_AppCompat_Display2:2131689490
- style:Base_TextAppearance_AppCompat_Display3:2131689491
- style:Base_TextAppearance_AppCompat_Display4:2131689492
- style:Base_TextAppearance_AppCompat_Headline:2131689493
- style:Base_TextAppearance_AppCompat_Inverse:2131689494
- style:Base_TextAppearance_AppCompat_Large:2131689495
- style:Base_TextAppearance_AppCompat_Large_Inverse:2131689496
- style:Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large:2131689497
- style:Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small:2131689498
- style:Base_TextAppearance_AppCompat_Medium:2131689499
- style:Base_TextAppearance_AppCompat_Medium_Inverse:2131689500
- style:Base_TextAppearance_AppCompat_Menu:2131689501
- style:Base_TextAppearance_AppCompat_SearchResult:2131689502
- style:Base_TextAppearance_AppCompat_Small:2131689505
- style:Base_TextAppearance_AppCompat_Small_Inverse:2131689506
- style:Base_TextAppearance_AppCompat_Subhead_Inverse:2131689508
- style:Base_TextAppearance_AppCompat_Title_Inverse:2131689510
- style:Base_TextAppearance_AppCompat_Tooltip:2131689511
- style:Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse:2131689514
- style:Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse:2131689516
- style:Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored:2131689520
- style:Base_TextAppearance_AppCompat_Widget_Button_Colored:2131689521
- style:Base_TextAppearance_AppCompat_Widget_Button_Inverse:2131689522
- style:Base_TextAppearance_AppCompat_Widget_DropDownItem:2131689523
- style:Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem:2131689528
- style:Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item:2131689529
- style:Base_Theme_AppCompat:2131689532
- style:Base_Theme_AppCompat_Dialog:2131689534
- style:Base_Theme_AppCompat_Dialog_Alert:2131689535
- style:Base_Theme_AppCompat_Dialog_FixedSize:2131689536
- style:Base_Theme_AppCompat_Dialog_MinWidth:2131689537
- style:Base_Theme_AppCompat_DialogWhenLarge:2131689538
- style:Base_Theme_AppCompat_Light_DarkActionBar:2131689540
- style:Base_Theme_AppCompat_Light_Dialog:2131689541
- style:Base_Theme_AppCompat_Light_Dialog_Alert:2131689542
- style:Base_Theme_AppCompat_Light_Dialog_FixedSize:2131689543
- style:Base_Theme_AppCompat_Light_Dialog_MinWidth:2131689544
- style:Base_Theme_AppCompat_Light_DialogWhenLarge:2131689545
- style:Base_ThemeOverlay_AppCompat_Dark:2131689548
- style:Base_ThemeOverlay_AppCompat_Dark_ActionBar:2131689549
- style:Base_ThemeOverlay_AppCompat_Light:2131689552
- style:Base_V21_Theme_AppCompat:2131689553
- style:Base_V21_Theme_AppCompat_Dialog:2131689554
- style:Base_V21_Theme_AppCompat_Light_Dialog:2131689556
- style:Base_V22_Theme_AppCompat:2131689558
- style:Base_V23_Theme_AppCompat:2131689560
- style:Base_V26_Theme_AppCompat:2131689562
- style:Base_V28_Theme_AppCompat:2131689565
- style:Base_V7_Theme_AppCompat:2131689567
- style:Base_V7_Theme_AppCompat_Dialog:2131689568
- style:Base_V7_Theme_AppCompat_Light_Dialog:2131689570
- style:Base_V7_Widget_AppCompat_AutoCompleteTextView:2131689572
- style:Base_V7_Widget_AppCompat_EditText:2131689573
- style:Base_Widget_AppCompat_ActionBar_Solid:2131689576
- style:Base_Widget_AppCompat_ActionBar_TabText:2131689578
- style:Base_Widget_AppCompat_ActionBar_TabView:2131689579
- style:Base_Widget_AppCompat_Button_Colored:2131689590
- style:Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse:2131689606
- style:Base_Widget_AppCompat_PopupMenu:2131689615
- style:Base_Widget_AppCompat_PopupMenu_Overflow:2131689616
- style:Base_Widget_AppCompat_PopupWindow:2131689617
- style:Base_Widget_AppCompat_ProgressBar:2131689618
- style:Base_Widget_AppCompat_ProgressBar_Horizontal:2131689619
- style:Base_Widget_AppCompat_SeekBar_Discrete:2131689626
- style:Base_Widget_AppCompat_Spinner_Underlined:2131689628
- style:BasePreferenceThemeOverlay:2131689633
- style:Platform_AppCompat:2131689636
- style:Platform_ThemeOverlay_AppCompat_Dark:2131689639
- style:Platform_ThemeOverlay_AppCompat_Light:2131689640
- style:Platform_V21_AppCompat:2131689641
- style:Platform_V25_AppCompat:2131689643
- style:Platform_Widget_AppCompat_Spinner:2131689645
- style:Preference:2131689646
- style:Preference_Category:2131689647
- style:Preference_Category_Material:2131689648
- style:Preference_CheckBoxPreference:2131689649
- style:Preference_CheckBoxPreference_Material:2131689650
- style:Preference_DialogPreference:2131689651
- style:Preference_DialogPreference_EditTextPreference:2131689652
- style:Preference_DialogPreference_EditTextPreference_Material:2131689653
- style:Preference_DialogPreference_Material:2131689654
- style:Preference_DropDown:2131689655
- style:Preference_DropDown_Material:2131689656
- style:Preference_Information:2131689657
- style:Preference_Information_Material:2131689658
- style:Preference_Material:2131689659
- style:Preference_PreferenceScreen:2131689660
- style:Preference_PreferenceScreen_Material:2131689661
- style:Preference_SeekBarPreference:2131689662
- style:Preference_SeekBarPreference_Material:2131689663
- style:Preference_SwitchPreference:2131689664
- style:Preference_SwitchPreference_Material:2131689665
- style:Preference_SwitchPreferenceCompat:2131689666
- style:Preference_SwitchPreferenceCompat_Material:2131689667
- style:PreferenceCategoryTitleTextStyle:2131689668
- style:PreferenceFragment:2131689669
- style:PreferenceFragment_Material:2131689670
- style:PreferenceFragmentList:2131689671
- style:PreferenceFragmentList_Material:2131689672
- style:PreferenceSummaryTextStyle:2131689673
- style:PreferenceThemeOverlay:2131689674
- style:PreferenceThemeOverlay_v14:2131689675
- style:PreferenceThemeOverlay_v14_Material:2131689676
- style:RtlOverlay_Widget_AppCompat_DialogTitle_Icon:2131689679
- style:RtlUnderlay_Widget_AppCompat_ActionButton:2131689692
- style:RtlUnderlay_Widget_AppCompat_ActionButton_Overflow:2131689693
- style:TextAppearance_AppCompat_Body2:2131689696
- style:TextAppearance_AppCompat_Button:2131689697
- style:TextAppearance_AppCompat_Caption:2131689698
- style:TextAppearance_AppCompat_Display1:2131689699
- style:TextAppearance_AppCompat_Display2:2131689700
- style:TextAppearance_AppCompat_Display3:2131689701
- style:TextAppearance_AppCompat_Display4:2131689702
- style:TextAppearance_AppCompat_Headline:2131689703
- style:TextAppearance_AppCompat_Inverse:2131689704
- style:TextAppearance_AppCompat_Large:2131689705
- style:TextAppearance_AppCompat_Large_Inverse:2131689706
- style:TextAppearance_AppCompat_Light_SearchResult_Subtitle:2131689707
- style:TextAppearance_AppCompat_Light_SearchResult_Title:2131689708
- style:TextAppearance_AppCompat_Medium:2131689711
- style:TextAppearance_AppCompat_Medium_Inverse:2131689712
- style:TextAppearance_AppCompat_Menu:2131689713
- style:TextAppearance_AppCompat_Small:2131689716
- style:TextAppearance_AppCompat_Small_Inverse:2131689717
- style:TextAppearance_AppCompat_Subhead_Inverse:2131689719
- style:TextAppearance_AppCompat_Title_Inverse:2131689721
- style:TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse:2131689725
- style:TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse:2131689727
- style:TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse:2131689729
- style:TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse:2131689731
- style:TextAppearance_AppCompat_Widget_Button_Borderless_Colored:2131689733
- style:TextAppearance_AppCompat_Widget_Button_Colored:2131689734
- style:TextAppearance_AppCompat_Widget_Button_Inverse:2131689735
- style:TextAppearance_AppCompat_Widget_DropDownItem:2131689736
- style:TextAppearance_AppCompat_Widget_TextView_SpinnerItem:2131689741
- style:TextAppearance_Compat_Notification_Line2:2131689745
- style:TextAppearance_Widget_AppCompat_ExpandedMenu_Item:2131689752
- style:Theme_AppCompat:2131689755
- style:Theme_AppCompat_DayNight:2131689757
- style:Theme_AppCompat_DayNight_DarkActionBar:2131689758
- style:Theme_AppCompat_DayNight_Dialog:2131689759
- style:Theme_AppCompat_DayNight_Dialog_Alert:2131689760
- style:Theme_AppCompat_DayNight_Dialog_MinWidth:2131689761
- style:Theme_AppCompat_DayNight_DialogWhenLarge:2131689762
- style:Theme_AppCompat_DayNight_NoActionBar:2131689763
- style:Theme_AppCompat_Dialog:2131689764
- style:Theme_AppCompat_Dialog_Alert:2131689765
- style:Theme_AppCompat_Dialog_MinWidth:2131689766
- style:Theme_AppCompat_DialogWhenLarge:2131689767
- style:Theme_AppCompat_Light_DarkActionBar:2131689770
- style:Theme_AppCompat_Light_Dialog:2131689771
- style:Theme_AppCompat_Light_Dialog_Alert:2131689772
- style:Theme_AppCompat_Light_Dialog_MinWidth:2131689773
- style:Theme_AppCompat_Light_DialogWhenLarge:2131689774
- style:Theme_AppCompat_NoActionBar:2131689776
- style:ThemeOverlay_AppCompat:2131689777
- style:ThemeOverlay_AppCompat_Dark:2131689779
- style:ThemeOverlay_AppCompat_Dark_ActionBar:2131689780
- style:ThemeOverlay_AppCompat_DayNight:2131689781
- style:ThemeOverlay_AppCompat_DayNight_ActionBar:2131689782
- style:ThemeOverlay_AppCompat_Light:2131689785
- style:Widget_AppCompat_ActionBar:2131689786
- style:Widget_AppCompat_ActionBar_Solid:2131689787
- style:Widget_AppCompat_ActionBar_TabBar:2131689788
- style:Widget_AppCompat_ActionBar_TabText:2131689789
- style:Widget_AppCompat_ActionBar_TabView:2131689790
- style:Widget_AppCompat_Button_Colored:2131689801
- style:Widget_AppCompat_Light_ActionBar:2131689812
- style:Widget_AppCompat_Light_ActionBar_Solid_Inverse:2131689814
- style:Widget_AppCompat_Light_ActionBar_TabBar_Inverse:2131689816
- style:Widget_AppCompat_Light_ActionBar_TabText_Inverse:2131689818
- style:Widget_AppCompat_Light_ActionBar_TabView_Inverse:2131689820
- style:Widget_AppCompat_Light_ActionButton_CloseMode:2131689822
- style:Widget_AppCompat_Light_ActionMode_Inverse:2131689824
- style:Widget_AppCompat_Light_ActivityChooserView:2131689825
- style:Widget_AppCompat_Light_AutoCompleteTextView:2131689826
- style:Widget_AppCompat_Light_DropDownItem_Spinner:2131689827
- style:Widget_AppCompat_Light_ListPopupWindow:2131689828
- style:Widget_AppCompat_Light_ListView_DropDown:2131689829
- style:Widget_AppCompat_PopupMenu:2131689839
- style:Widget_AppCompat_PopupMenu_Overflow:2131689840
- style:Widget_AppCompat_PopupWindow:2131689841
- style:Widget_AppCompat_ProgressBar:2131689842
- style:Widget_AppCompat_ProgressBar_Horizontal:2131689843
- style:Widget_AppCompat_SeekBar_Discrete:2131689850
- style:Widget_AppCompat_Spinner_Underlined:2131689854
- style:Widget_Support_CoordinatorLayout:2131689861
+ string:abc_action_bar_home_description:2131689472
+ string:abc_action_menu_overflow_description:2131689474
+ string:abc_activity_chooser_view_see_all:2131689476
+ string:abc_activitychooserview_choose_application:2131689477
+ string:abc_searchview_description_query:2131689492
+ string:abc_shareactionprovider_share_with:2131689496
+ string:abc_shareactionprovider_share_with_application:2131689497
+ string:app_version:2131689500
+ string:common_signin_button_text:2131689524
+ string:common_signin_button_text_long:2131689525
+ string:exo_download_completed:2131689530
+ string:exo_download_description:2131689531
+ string:exo_download_downloading:2131689532
+ string:exo_download_failed:2131689533
+ string:exo_download_notification_channel_name:2131689534
+ string:exo_download_paused:2131689535
+ string:exo_download_paused_for_network:2131689536
+ string:exo_download_paused_for_wifi:2131689537
+ string:exo_download_removing:2131689538
+ string:expand_button_title:2131689539
+ string:library_zxingandroidembedded_author:2131689543
+ string:library_zxingandroidembedded_authorWebsite:2131689544
+ string:library_zxingandroidembedded_isOpenSource:2131689545
+ string:library_zxingandroidembedded_libraryDescription:2131689546
+ string:library_zxingandroidembedded_libraryName:2131689547
+ string:library_zxingandroidembedded_libraryVersion:2131689548
+ string:library_zxingandroidembedded_libraryWebsite:2131689549
+ string:library_zxingandroidembedded_licenseId:2131689550
+ string:library_zxingandroidembedded_repositoryLink:2131689551
+ string:preference_copied:2131689555
+ string:search_menu_title:2131689556
+ string:status_bar_notification_info_overflow:2131689559
+ string:summary_collapsed_preference_list:2131689560
+ string:v7_preference_off:2131689569
+ string:v7_preference_on:2131689570
+ style:AlertDialog_AppCompat:2131755008
+ style:Base_TextAppearance_AppCompat_Body2:2131755022
+ style:Base_TextAppearance_AppCompat_Button:2131755023
+ style:Base_TextAppearance_AppCompat_Caption:2131755024
+ style:Base_TextAppearance_AppCompat_Display1:2131755025
+ style:Base_TextAppearance_AppCompat_Display2:2131755026
+ style:Base_TextAppearance_AppCompat_Display3:2131755027
+ style:Base_TextAppearance_AppCompat_Display4:2131755028
+ style:Base_TextAppearance_AppCompat_Headline:2131755029
+ style:Base_TextAppearance_AppCompat_Inverse:2131755030
+ style:Base_TextAppearance_AppCompat_Large:2131755031
+ style:Base_TextAppearance_AppCompat_Large_Inverse:2131755032
+ style:Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large:2131755033
+ style:Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small:2131755034
+ style:Base_TextAppearance_AppCompat_Medium:2131755035
+ style:Base_TextAppearance_AppCompat_Medium_Inverse:2131755036
+ style:Base_TextAppearance_AppCompat_Menu:2131755037
+ style:Base_TextAppearance_AppCompat_SearchResult:2131755038
+ style:Base_TextAppearance_AppCompat_Small:2131755041
+ style:Base_TextAppearance_AppCompat_Small_Inverse:2131755042
+ style:Base_TextAppearance_AppCompat_Subhead_Inverse:2131755044
+ style:Base_TextAppearance_AppCompat_Title_Inverse:2131755046
+ style:Base_TextAppearance_AppCompat_Tooltip:2131755047
+ style:Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse:2131755050
+ style:Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse:2131755052
+ style:Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored:2131755056
+ style:Base_TextAppearance_AppCompat_Widget_Button_Colored:2131755057
+ style:Base_TextAppearance_AppCompat_Widget_Button_Inverse:2131755058
+ style:Base_TextAppearance_AppCompat_Widget_DropDownItem:2131755059
+ style:Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem:2131755064
+ style:Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item:2131755065
+ style:Base_Theme_AppCompat:2131755068
+ style:Base_Theme_AppCompat_Dialog:2131755070
+ style:Base_Theme_AppCompat_Dialog_Alert:2131755071
+ style:Base_Theme_AppCompat_Dialog_FixedSize:2131755072
+ style:Base_Theme_AppCompat_Dialog_MinWidth:2131755073
+ style:Base_Theme_AppCompat_DialogWhenLarge:2131755074
+ style:Base_Theme_AppCompat_Light_DarkActionBar:2131755076
+ style:Base_Theme_AppCompat_Light_Dialog:2131755077
+ style:Base_Theme_AppCompat_Light_Dialog_Alert:2131755078
+ style:Base_Theme_AppCompat_Light_Dialog_FixedSize:2131755079
+ style:Base_Theme_AppCompat_Light_Dialog_MinWidth:2131755080
+ style:Base_Theme_AppCompat_Light_DialogWhenLarge:2131755081
+ style:Base_ThemeOverlay_AppCompat_Dark:2131755084
+ style:Base_ThemeOverlay_AppCompat_Dark_ActionBar:2131755085
+ style:Base_ThemeOverlay_AppCompat_Light:2131755088
+ style:Base_V21_Theme_AppCompat:2131755089
+ style:Base_V21_Theme_AppCompat_Dialog:2131755090
+ style:Base_V21_Theme_AppCompat_Light_Dialog:2131755092
+ style:Base_V22_Theme_AppCompat:2131755094
+ style:Base_V23_Theme_AppCompat:2131755096
+ style:Base_V26_Theme_AppCompat:2131755098
+ style:Base_V28_Theme_AppCompat:2131755101
+ style:Base_V7_Theme_AppCompat:2131755103
+ style:Base_V7_Theme_AppCompat_Dialog:2131755104
+ style:Base_V7_Theme_AppCompat_Light_Dialog:2131755106
+ style:Base_V7_Widget_AppCompat_AutoCompleteTextView:2131755108
+ style:Base_V7_Widget_AppCompat_EditText:2131755109
+ style:Base_Widget_AppCompat_ActionBar_Solid:2131755112
+ style:Base_Widget_AppCompat_ActionBar_TabText:2131755114
+ style:Base_Widget_AppCompat_ActionBar_TabView:2131755115
+ style:Base_Widget_AppCompat_Button_Colored:2131755126
+ style:Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse:2131755142
+ style:Base_Widget_AppCompat_PopupMenu:2131755151
+ style:Base_Widget_AppCompat_PopupMenu_Overflow:2131755152
+ style:Base_Widget_AppCompat_PopupWindow:2131755153
+ style:Base_Widget_AppCompat_ProgressBar:2131755154
+ style:Base_Widget_AppCompat_ProgressBar_Horizontal:2131755155
+ style:Base_Widget_AppCompat_SeekBar_Discrete:2131755162
+ style:Base_Widget_AppCompat_Spinner_Underlined:2131755164
+ style:BasePreferenceThemeOverlay:2131755169
+ style:Platform_AppCompat:2131755172
+ style:Platform_ThemeOverlay_AppCompat_Dark:2131755175
+ style:Platform_ThemeOverlay_AppCompat_Light:2131755176
+ style:Platform_V21_AppCompat:2131755177
+ style:Platform_V25_AppCompat:2131755179
+ style:Platform_Widget_AppCompat_Spinner:2131755181
+ style:Preference:2131755182
+ style:Preference_Category:2131755183
+ style:Preference_Category_Material:2131755184
+ style:Preference_CheckBoxPreference:2131755185
+ style:Preference_CheckBoxPreference_Material:2131755186
+ style:Preference_DialogPreference:2131755187
+ style:Preference_DialogPreference_EditTextPreference:2131755188
+ style:Preference_DialogPreference_EditTextPreference_Material:2131755189
+ style:Preference_DialogPreference_Material:2131755190
+ style:Preference_DropDown:2131755191
+ style:Preference_DropDown_Material:2131755192
+ style:Preference_Information:2131755193
+ style:Preference_Information_Material:2131755194
+ style:Preference_Material:2131755195
+ style:Preference_PreferenceScreen:2131755196
+ style:Preference_PreferenceScreen_Material:2131755197
+ style:Preference_SeekBarPreference:2131755198
+ style:Preference_SeekBarPreference_Material:2131755199
+ style:Preference_SwitchPreference:2131755200
+ style:Preference_SwitchPreference_Material:2131755201
+ style:Preference_SwitchPreferenceCompat:2131755202
+ style:Preference_SwitchPreferenceCompat_Material:2131755203
+ style:PreferenceCategoryTitleTextStyle:2131755204
+ style:PreferenceFragment:2131755205
+ style:PreferenceFragment_Material:2131755206
+ style:PreferenceFragmentList:2131755207
+ style:PreferenceFragmentList_Material:2131755208
+ style:PreferenceSummaryTextStyle:2131755209
+ style:PreferenceThemeOverlay:2131755210
+ style:PreferenceThemeOverlay_v14:2131755211
+ style:PreferenceThemeOverlay_v14_Material:2131755212
+ style:RtlOverlay_Widget_AppCompat_DialogTitle_Icon:2131755215
+ style:RtlUnderlay_Widget_AppCompat_ActionButton:2131755228
+ style:RtlUnderlay_Widget_AppCompat_ActionButton_Overflow:2131755229
+ style:TextAppearance_AppCompat_Body2:2131755232
+ style:TextAppearance_AppCompat_Button:2131755233
+ style:TextAppearance_AppCompat_Caption:2131755234
+ style:TextAppearance_AppCompat_Display1:2131755235
+ style:TextAppearance_AppCompat_Display2:2131755236
+ style:TextAppearance_AppCompat_Display3:2131755237
+ style:TextAppearance_AppCompat_Display4:2131755238
+ style:TextAppearance_AppCompat_Headline:2131755239
+ style:TextAppearance_AppCompat_Inverse:2131755240
+ style:TextAppearance_AppCompat_Large:2131755241
+ style:TextAppearance_AppCompat_Large_Inverse:2131755242
+ style:TextAppearance_AppCompat_Light_SearchResult_Subtitle:2131755243
+ style:TextAppearance_AppCompat_Light_SearchResult_Title:2131755244
+ style:TextAppearance_AppCompat_Medium:2131755247
+ style:TextAppearance_AppCompat_Medium_Inverse:2131755248
+ style:TextAppearance_AppCompat_Menu:2131755249
+ style:TextAppearance_AppCompat_Small:2131755252
+ style:TextAppearance_AppCompat_Small_Inverse:2131755253
+ style:TextAppearance_AppCompat_Subhead_Inverse:2131755255
+ style:TextAppearance_AppCompat_Title_Inverse:2131755257
+ style:TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse:2131755261
+ style:TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse:2131755263
+ style:TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse:2131755265
+ style:TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse:2131755267
+ style:TextAppearance_AppCompat_Widget_Button_Borderless_Colored:2131755269
+ style:TextAppearance_AppCompat_Widget_Button_Colored:2131755270
+ style:TextAppearance_AppCompat_Widget_Button_Inverse:2131755271
+ style:TextAppearance_AppCompat_Widget_DropDownItem:2131755272
+ style:TextAppearance_AppCompat_Widget_TextView_SpinnerItem:2131755277
+ style:TextAppearance_Compat_Notification_Line2:2131755281
+ style:TextAppearance_Widget_AppCompat_ExpandedMenu_Item:2131755288
+ style:Theme_AppCompat:2131755291
+ style:Theme_AppCompat_DayNight:2131755293
+ style:Theme_AppCompat_DayNight_DarkActionBar:2131755294
+ style:Theme_AppCompat_DayNight_Dialog:2131755295
+ style:Theme_AppCompat_DayNight_Dialog_Alert:2131755296
+ style:Theme_AppCompat_DayNight_Dialog_MinWidth:2131755297
+ style:Theme_AppCompat_DayNight_DialogWhenLarge:2131755298
+ style:Theme_AppCompat_DayNight_NoActionBar:2131755299
+ style:Theme_AppCompat_Dialog:2131755300
+ style:Theme_AppCompat_Dialog_Alert:2131755301
+ style:Theme_AppCompat_Dialog_MinWidth:2131755302
+ style:Theme_AppCompat_DialogWhenLarge:2131755303
+ style:Theme_AppCompat_Light_DarkActionBar:2131755306
+ style:Theme_AppCompat_Light_Dialog:2131755307
+ style:Theme_AppCompat_Light_Dialog_Alert:2131755308
+ style:Theme_AppCompat_Light_Dialog_MinWidth:2131755309
+ style:Theme_AppCompat_Light_DialogWhenLarge:2131755310
+ style:Theme_AppCompat_NoActionBar:2131755312
+ style:ThemeOverlay_AppCompat:2131755313
+ style:ThemeOverlay_AppCompat_Dark:2131755315
+ style:ThemeOverlay_AppCompat_Dark_ActionBar:2131755316
+ style:ThemeOverlay_AppCompat_DayNight:2131755317
+ style:ThemeOverlay_AppCompat_DayNight_ActionBar:2131755318
+ style:ThemeOverlay_AppCompat_Light:2131755321
+ style:Widget_AppCompat_ActionBar:2131755322
+ style:Widget_AppCompat_ActionBar_Solid:2131755323
+ style:Widget_AppCompat_ActionBar_TabBar:2131755324
+ style:Widget_AppCompat_ActionBar_TabText:2131755325
+ style:Widget_AppCompat_ActionBar_TabView:2131755326
+ style:Widget_AppCompat_Button_Colored:2131755337
+ style:Widget_AppCompat_Light_ActionBar:2131755348
+ style:Widget_AppCompat_Light_ActionBar_Solid_Inverse:2131755350
+ style:Widget_AppCompat_Light_ActionBar_TabBar_Inverse:2131755352
+ style:Widget_AppCompat_Light_ActionBar_TabText_Inverse:2131755354
+ style:Widget_AppCompat_Light_ActionBar_TabView_Inverse:2131755356
+ style:Widget_AppCompat_Light_ActionButton_CloseMode:2131755358
+ style:Widget_AppCompat_Light_ActionMode_Inverse:2131755360
+ style:Widget_AppCompat_Light_ActivityChooserView:2131755361
+ style:Widget_AppCompat_Light_AutoCompleteTextView:2131755362
+ style:Widget_AppCompat_Light_DropDownItem_Spinner:2131755363
+ style:Widget_AppCompat_Light_ListPopupWindow:2131755364
+ style:Widget_AppCompat_Light_ListView_DropDown:2131755365
+ style:Widget_AppCompat_PopupMenu:2131755375
+ style:Widget_AppCompat_PopupMenu_Overflow:2131755376
+ style:Widget_AppCompat_PopupWindow:2131755377
+ style:Widget_AppCompat_ProgressBar:2131755378
+ style:Widget_AppCompat_ProgressBar_Horizontal:2131755379
+ style:Widget_AppCompat_SeekBar_Discrete:2131755386
+ style:Widget_AppCompat_Spinner_Underlined:2131755390
+ style:Widget_Support_CoordinatorLayout:2131755397
 Skipped unused resource res/anim/abc_fade_in.xml: 549 bytes (replaced with small dummy file of size 9 bytes)
 Skipped unused resource res/anim/abc_fade_out.xml: 549 bytes (replaced with small dummy file of size 9 bytes)
 Skipped unused resource res/anim/abc_slide_in_bottom.xml: 555 bytes (replaced with small dummy file of size 9 bytes)

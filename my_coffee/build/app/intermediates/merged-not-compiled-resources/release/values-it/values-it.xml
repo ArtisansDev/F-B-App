@@ -82,4 +82,8 @@
     <string name="ucrop_menu_crop">Taglia</string>
     <string msgid="3140233346420563315" name="v7_preference_off">"OFF"</string>
     <string msgid="89551595707643515" name="v7_preference_on">"ON"</string>
+    <string name="zxing_app_name">Barcode Scanner</string>
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Spiacenti, la fotocamera Android ha riscontrato un problema. Potrebbe essere necessario riavviare il dispositivo.</string>
+    <string name="zxing_msg_default_status">Posiziona un codice a barre dentro il mirino rettangolare per la scansione.</string>
 </resources>

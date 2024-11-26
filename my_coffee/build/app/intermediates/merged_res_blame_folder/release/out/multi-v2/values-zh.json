@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.twt.app-mergeReleaseResources-53:/values-zh/values-zh.xml",
+            "outputFile": "com.app.twt.app-mergeReleaseResources-54:/values-zh/values-zh.xml",
             "map": [
                 {
                     "source": "/Users/parthapaul/.gradle/caches/transforms-3/7fd72835496fd6067f9dac52e81852c0/transformed/jetified-ucrop-2.2.9/res/values-zh/values-zh.xml",

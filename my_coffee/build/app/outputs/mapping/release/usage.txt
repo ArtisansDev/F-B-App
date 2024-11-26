@@ -30491,6 +30491,778 @@ com.google.maps.android.ui.SquareTextView:
 com.google.thirdparty.publicsuffix.PublicSuffixPatterns
 com.google.thirdparty.publicsuffix.PublicSuffixType
 com.google.thirdparty.publicsuffix.TrieParser
+com.google.zxing.BinaryBitmap:
+    public com.google.zxing.BinaryBitmap crop(int,int,int,int)
+    public boolean isCropSupported()
+    public com.google.zxing.BinaryBitmap rotateCounterClockwise45()
+com.google.zxing.ChecksumException:
+    private void <init>(java.lang.Throwable)
+    public static com.google.zxing.ChecksumException getChecksumInstance(java.lang.Throwable)
+com.google.zxing.Dimension
+com.google.zxing.EncodeHintType
+com.google.zxing.InvertedLuminanceSource:
+    public com.google.zxing.LuminanceSource crop(int,int,int,int)
+    public boolean isCropSupported()
+    public com.google.zxing.LuminanceSource rotateCounterClockwise45()
+com.google.zxing.LuminanceSource:
+    public com.google.zxing.LuminanceSource crop(int,int,int,int)
+    public boolean isCropSupported()
+    public com.google.zxing.LuminanceSource rotateCounterClockwise45()
+com.google.zxing.MultiFormatWriter$1
+com.google.zxing.MultiFormatWriter
+com.google.zxing.PlanarYUVLuminanceSource:
+    private static final int THUMBNAIL_SCALE_FACTOR
+    public com.google.zxing.LuminanceSource crop(int,int,int,int)
+    public int getThumbnailHeight()
+    public int getThumbnailWidth()
+    public boolean isCropSupported()
+    public int[] renderThumbnail()
+com.google.zxing.RGBLuminanceSource
+com.google.zxing.ReaderException:
+    public static void setStackTrace(boolean)
+com.google.zxing.Result:
+    public int getNumBits()
+    public long getTimestamp()
+com.google.zxing.Writer
+com.google.zxing.WriterException
+com.google.zxing.aztec.AztecDetectorResult:
+    public void <init>(com.google.zxing.common.BitMatrix,com.google.zxing.ResultPoint[],boolean,int,int)
+com.google.zxing.aztec.AztecWriter
+com.google.zxing.aztec.decoder.Decoder:
+    public static java.lang.String highLevelDecode(boolean[])
+com.google.zxing.aztec.detector.Detector:
+    public com.google.zxing.aztec.AztecDetectorResult detect()
+com.google.zxing.aztec.encoder.AztecCode
+com.google.zxing.aztec.encoder.BinaryShiftToken
+com.google.zxing.aztec.encoder.Encoder
+com.google.zxing.aztec.encoder.HighLevelEncoder$1
+com.google.zxing.aztec.encoder.HighLevelEncoder
+com.google.zxing.aztec.encoder.SimpleToken
+com.google.zxing.aztec.encoder.State
+com.google.zxing.aztec.encoder.Token
+com.google.zxing.client.android.AmbientLightManager:
+    private static final float BRIGHT_ENOUGH_LUX
+    private static final float TOO_DARK_LUX
+com.google.zxing.client.android.BeepManager:
+    private static final float BEEP_VOLUME
+    private static final long VIBRATE_DURATION
+    public boolean isBeepEnabled()
+    public boolean isVibrateEnabled()
+    public void setVibrateEnabled(boolean)
+com.google.zxing.client.android.BuildConfig
+com.google.zxing.client.android.DecodeFormatManager:
+    private void <init>()
+com.google.zxing.client.android.DecodeHintManager:
+    private void <init>()
+    static java.util.Map parseDecodeHints(android.net.Uri)
+    private static java.util.Map splitQuery(java.lang.String)
+com.google.zxing.client.android.InactivityTimer:
+    private static final long INACTIVITY_DELAY_MS
+com.google.zxing.client.android.Intents$Scan
+com.google.zxing.client.android.Intents
+com.google.zxing.client.android.R$anim
+com.google.zxing.client.android.R$animator
+com.google.zxing.client.android.R$attr
+com.google.zxing.client.android.R$color:
+    public static int androidx_core_ripple_material_light
+    public static int androidx_core_secondary_text_default_material_light
+    public static int notification_action_color_filter
+    public static int notification_icon_bg_color
+    public static int ripple_material_light
+    public static int secondary_text_default_material_light
+    public static int zxing_custom_possible_result_points
+    public static int zxing_custom_result_view
+    public static int zxing_custom_viewfinder_laser
+    public static int zxing_custom_viewfinder_mask
+    public static int zxing_status_text
+    public static int zxing_transparent
+    private void <init>()
+com.google.zxing.client.android.R$dimen
+com.google.zxing.client.android.R$drawable
+com.google.zxing.client.android.R$id:
+    public static int accessibility_action_clickable_span
+    public static int accessibility_custom_action_0
+    public static int accessibility_custom_action_1
+    public static int accessibility_custom_action_10
+    public static int accessibility_custom_action_11
+    public static int accessibility_custom_action_12
+    public static int accessibility_custom_action_13
+    public static int accessibility_custom_action_14
+    public static int accessibility_custom_action_15
+    public static int accessibility_custom_action_16
+    public static int accessibility_custom_action_17
+    public static int accessibility_custom_action_18
+    public static int accessibility_custom_action_19
+    public static int accessibility_custom_action_2
+    public static int accessibility_custom_action_20
+    public static int accessibility_custom_action_21
+    public static int accessibility_custom_action_22
+    public static int accessibility_custom_action_23
+    public static int accessibility_custom_action_24
+    public static int accessibility_custom_action_25
+    public static int accessibility_custom_action_26
+    public static int accessibility_custom_action_27
+    public static int accessibility_custom_action_28
+    public static int accessibility_custom_action_29
+    public static int accessibility_custom_action_3
+    public static int accessibility_custom_action_30
+    public static int accessibility_custom_action_31
+    public static int accessibility_custom_action_4
+    public static int accessibility_custom_action_5
+    public static int accessibility_custom_action_6
+    public static int accessibility_custom_action_7
+    public static int accessibility_custom_action_8
+    public static int accessibility_custom_action_9
+    public static int action_container
+    public static int action_divider
+    public static int action_image
+    public static int action_text
+    public static int actions
+    public static int async
+    public static int blocking
+    public static int centerCrop
+    public static int chronometer
+    public static int dialog_button
+    public static int fitCenter
+    public static int fitXY
+    public static int forever
+    public static int fragment_container_view_tag
+    public static int icon
+    public static int icon_group
+    public static int info
+    public static int italic
+    public static int line1
+    public static int line3
+    public static int normal
+    public static int notification_background
+    public static int notification_main_column
+    public static int notification_main_column_container
+    public static int right_icon
+    public static int right_side
+    public static int special_effects_controller_view_tag
+    public static int tag_accessibility_actions
+    public static int tag_accessibility_clickable_spans
+    public static int tag_accessibility_heading
+    public static int tag_accessibility_pane_title
+    public static int tag_on_apply_window_listener
+    public static int tag_on_receive_content_listener
+    public static int tag_on_receive_content_mime_types
+    public static int tag_screen_reader_focusable
+    public static int tag_state_description
+    public static int tag_transition_group
+    public static int tag_unhandled_key_event_manager
+    public static int tag_unhandled_key_listeners
+    public static int tag_window_insets_animation_callback
+    public static int text
+    public static int text2
+    public static int time
+    public static int title
+    public static int view_tree_lifecycle_owner
+    public static int view_tree_saved_state_registry_owner
+    public static int view_tree_view_model_store_owner
+    public static int visible_removing_fragment_view_tag
+    public static int zxing_back_button
+    private void <init>()
+com.google.zxing.client.android.R$integer
+com.google.zxing.client.android.R$layout:
+    public static int custom_dialog
+    public static int notification_action
+    public static int notification_action_tombstone
+    public static int notification_template_custom_big
+    public static int notification_template_icon_group
+    public static int notification_template_part_chronometer
+    public static int notification_template_part_time
+    private void <init>()
+com.google.zxing.client.android.R$raw:
+    private void <init>()
+com.google.zxing.client.android.R$string:
+    public static int app_version
+    public static int define_zxingandroidembedded
+    public static int library_zxingandroidembedded_author
+    public static int library_zxingandroidembedded_authorWebsite
+    public static int library_zxingandroidembedded_isOpenSource
+    public static int library_zxingandroidembedded_libraryDescription
+    public static int library_zxingandroidembedded_libraryName
+    public static int library_zxingandroidembedded_libraryVersion
+    public static int library_zxingandroidembedded_libraryWebsite
+    public static int library_zxingandroidembedded_licenseId
+    public static int library_zxingandroidembedded_repositoryLink
+    public static int status_bar_notification_info_overflow
+    public static int zxing_msg_default_status
+    private void <init>()
+com.google.zxing.client.android.R$style
+com.google.zxing.client.android.R$styleable:
+    public static int Capability_queryPatterns
+    public static int Capability_shortcutMatchRequired
+    public static int ColorStateListItem_alpha
+    public static int ColorStateListItem_android_alpha
+    public static int ColorStateListItem_android_color
+    public static int ColorStateListItem_android_lStar
+    public static int ColorStateListItem_lStar
+    public static int FontFamilyFont_android_font
+    public static int FontFamilyFont_android_fontStyle
+    public static int FontFamilyFont_android_fontVariationSettings
+    public static int FontFamilyFont_android_fontWeight
+    public static int FontFamilyFont_android_ttcIndex
+    public static int FontFamilyFont_font
+    public static int FontFamilyFont_fontStyle
+    public static int FontFamilyFont_fontVariationSettings
+    public static int FontFamilyFont_fontWeight
+    public static int FontFamilyFont_ttcIndex
+    public static int FontFamily_fontProviderAuthority
+    public static int FontFamily_fontProviderCerts
+    public static int FontFamily_fontProviderFetchStrategy
+    public static int FontFamily_fontProviderFetchTimeout
+    public static int FontFamily_fontProviderPackage
+    public static int FontFamily_fontProviderQuery
+    public static int FontFamily_fontProviderSystemFontFamily
+    public static int FragmentContainerView_android_name
+    public static int FragmentContainerView_android_tag
+    public static int Fragment_android_id
+    public static int Fragment_android_name
+    public static int Fragment_android_tag
+    public static int GradientColorItem_android_color
+    public static int GradientColorItem_android_offset
+    public static int GradientColor_android_centerColor
+    public static int GradientColor_android_centerX
+    public static int GradientColor_android_centerY
+    public static int GradientColor_android_endColor
+    public static int GradientColor_android_endX
+    public static int GradientColor_android_endY
+    public static int GradientColor_android_gradientRadius
+    public static int GradientColor_android_startColor
+    public static int GradientColor_android_startX
+    public static int GradientColor_android_startY
+    public static int GradientColor_android_tileMode
+    public static int GradientColor_android_type
+    private void <init>()
+com.google.zxing.client.android.R
+com.google.zxing.client.android.camera.open.OpenCameraInterface:
+    public static final int NO_REQUESTED_CAMERA
+    private void <init>()
+com.google.zxing.client.result.AbstractDoCoMoResultParser
+com.google.zxing.client.result.AddressBookAUResultParser
+com.google.zxing.client.result.AddressBookDoCoMoResultParser
+com.google.zxing.client.result.AddressBookParsedResult
+com.google.zxing.client.result.BizcardResultParser
+com.google.zxing.client.result.BookmarkDoCoMoResultParser
+com.google.zxing.client.result.CalendarParsedResult
+com.google.zxing.client.result.EmailAddressParsedResult
+com.google.zxing.client.result.EmailAddressResultParser
+com.google.zxing.client.result.EmailDoCoMoResultParser
+com.google.zxing.client.result.ExpandedProductParsedResult
+com.google.zxing.client.result.ExpandedProductResultParser
+com.google.zxing.client.result.GeoParsedResult
+com.google.zxing.client.result.GeoResultParser
+com.google.zxing.client.result.ISBNParsedResult
+com.google.zxing.client.result.ISBNResultParser
+com.google.zxing.client.result.ParsedResult
+com.google.zxing.client.result.ParsedResultType
+com.google.zxing.client.result.ProductParsedResult
+com.google.zxing.client.result.ProductResultParser
+com.google.zxing.client.result.ResultParser
+com.google.zxing.client.result.SMSMMSResultParser
+com.google.zxing.client.result.SMSParsedResult
+com.google.zxing.client.result.SMSTOMMSTOResultParser
+com.google.zxing.client.result.SMTPResultParser
+com.google.zxing.client.result.TelParsedResult
+com.google.zxing.client.result.TelResultParser
+com.google.zxing.client.result.TextParsedResult
+com.google.zxing.client.result.URIParsedResult
+com.google.zxing.client.result.URIResultParser
+com.google.zxing.client.result.URLTOResultParser
+com.google.zxing.client.result.VCardResultParser
+com.google.zxing.client.result.VEventResultParser
+com.google.zxing.client.result.VINParsedResult
+com.google.zxing.client.result.VINResultParser
+com.google.zxing.client.result.WifiParsedResult
+com.google.zxing.client.result.WifiResultParser
+com.google.zxing.common.BitArray:
+    private static final float LOAD_FACTOR
+    public void <init>()
+    public void appendBit(boolean)
+    public void appendBitArray(com.google.zxing.common.BitArray)
+    public void appendBits(int,int)
+    private void ensureCapacity(int)
+    public void flip(int)
+    public int getSizeInBytes()
+    public void setRange(int,int)
+    public void toBytes(int,byte[],int,int)
+    public void xor(com.google.zxing.common.BitArray)
+com.google.zxing.common.BitMatrix:
+    public void clear()
+    public int getRowSize()
+    public static com.google.zxing.common.BitMatrix parse(java.lang.String,java.lang.String,java.lang.String)
+    public static com.google.zxing.common.BitMatrix parse(boolean[][])
+    public java.lang.String toString(java.lang.String,java.lang.String,java.lang.String)
+    public void unset(int,int)
+    public void xor(com.google.zxing.common.BitMatrix)
+com.google.zxing.common.CharacterSetECI:
+    public static com.google.zxing.common.CharacterSetECI getCharacterSetECI(java.nio.charset.Charset)
+    public static com.google.zxing.common.CharacterSetECI getCharacterSetECIByName(java.lang.String)
+    public int getValue()
+com.google.zxing.common.DecoderResult:
+    public void <init>(byte[],java.lang.String,java.util.List,java.lang.String,int,int)
+com.google.zxing.common.ECIEncoderSet
+com.google.zxing.common.ECIInput
+com.google.zxing.common.GlobalHistogramBinarizer:
+    private static final int LUMINANCE_BITS
+    private static final int LUMINANCE_BUCKETS
+    private static final int LUMINANCE_SHIFT
+    public com.google.zxing.Binarizer createBinarizer(com.google.zxing.LuminanceSource)
+com.google.zxing.common.GridSampler:
+    public static void setGridSampler(com.google.zxing.common.GridSampler)
+com.google.zxing.common.HybridBinarizer:
+    private static final int BLOCK_SIZE
+    private static final int BLOCK_SIZE_MASK
+    private static final int BLOCK_SIZE_POWER
+    private static final int MINIMUM_DIMENSION
+    private static final int MIN_DYNAMIC_RANGE
+com.google.zxing.common.MinimalECIInput$1
+com.google.zxing.common.MinimalECIInput$InputEdge
+com.google.zxing.common.MinimalECIInput
+com.google.zxing.common.PerspectiveTransform:
+    public void transformPoints(float[],float[])
+com.google.zxing.common.StringUtils:
+    public static final java.lang.String GB2312
+    public static final java.lang.String SHIFT_JIS
+    private void <init>()
+    public static java.lang.String guessEncoding(byte[],java.util.Map)
+com.google.zxing.common.detector.MathUtils:
+    private void <init>()
+com.google.zxing.common.detector.MonochromeRectangleDetector
+com.google.zxing.common.detector.WhiteRectangleDetector:
+    private static final int CORR
+    private static final int INIT_SIZE
+com.google.zxing.common.reedsolomon.GenericGFPoly:
+    com.google.zxing.common.reedsolomon.GenericGFPoly[] divide(com.google.zxing.common.reedsolomon.GenericGFPoly)
+    int[] getCoefficients()
+com.google.zxing.common.reedsolomon.ReedSolomonDecoder:
+    public void decode(int[],int)
+com.google.zxing.common.reedsolomon.ReedSolomonEncoder
+com.google.zxing.datamatrix.DataMatrixWriter
+com.google.zxing.datamatrix.decoder.DecodedBitStreamParser:
+    private void <init>()
+com.google.zxing.datamatrix.decoder.Decoder:
+    public com.google.zxing.common.DecoderResult decode(boolean[][])
+com.google.zxing.datamatrix.encoder.ASCIIEncoder
+com.google.zxing.datamatrix.encoder.Base256Encoder
+com.google.zxing.datamatrix.encoder.C40Encoder
+com.google.zxing.datamatrix.encoder.DataMatrixSymbolInfo144
+com.google.zxing.datamatrix.encoder.DefaultPlacement
+com.google.zxing.datamatrix.encoder.EdifactEncoder
+com.google.zxing.datamatrix.encoder.Encoder
+com.google.zxing.datamatrix.encoder.EncoderContext
+com.google.zxing.datamatrix.encoder.ErrorCorrection
+com.google.zxing.datamatrix.encoder.HighLevelEncoder
+com.google.zxing.datamatrix.encoder.MinimalEncoder$1
+com.google.zxing.datamatrix.encoder.MinimalEncoder$Edge
+com.google.zxing.datamatrix.encoder.MinimalEncoder$Input
+com.google.zxing.datamatrix.encoder.MinimalEncoder$Mode
+com.google.zxing.datamatrix.encoder.MinimalEncoder$Result
+com.google.zxing.datamatrix.encoder.MinimalEncoder
+com.google.zxing.datamatrix.encoder.SymbolInfo
+com.google.zxing.datamatrix.encoder.SymbolShapeHint
+com.google.zxing.datamatrix.encoder.TextEncoder
+com.google.zxing.datamatrix.encoder.X12Encoder
+com.google.zxing.integration.android.IntentIntegrator
+com.google.zxing.integration.android.IntentResult
+com.google.zxing.maxicode.MaxiCodeReader:
+    private static final int MATRIX_HEIGHT
+    private static final int MATRIX_WIDTH
+com.google.zxing.maxicode.decoder.DecodedBitStreamParser:
+    private static final char ECI
+    private static final char FS
+    private static final char GS
+    private static final char LATCHA
+    private static final char LATCHB
+    private static final char LOCK
+    private static final char NS
+    private static final char PAD
+    private static final char RS
+    private static final char SHIFTA
+    private static final char SHIFTB
+    private static final char SHIFTC
+    private static final char SHIFTD
+    private static final char SHIFTE
+    private static final char THREESHIFTA
+    private static final char TWOSHIFTA
+    private void <init>()
+com.google.zxing.maxicode.decoder.Decoder:
+    private static final int ALL
+    private static final int EVEN
+    private static final int ODD
+    public com.google.zxing.common.DecoderResult decode(com.google.zxing.common.BitMatrix)
+com.google.zxing.multi.ByQuadrantReader
+com.google.zxing.multi.GenericMultipleBarcodeReader
+com.google.zxing.multi.MultipleBarcodeReader
+com.google.zxing.multi.qrcode.QRCodeMultiReader$1
+com.google.zxing.multi.qrcode.QRCodeMultiReader$SAComparator
+com.google.zxing.multi.qrcode.QRCodeMultiReader
+com.google.zxing.multi.qrcode.detector.MultiDetector
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder$1
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder$ModuleSizeComparator
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder
+com.google.zxing.oned.CodaBarReader:
+    private static final java.lang.String ALPHABET_STRING
+    private static final float MAX_ACCEPTABLE
+    private static final int MIN_CHARACTER_LENGTH
+    private static final float PADDING
+com.google.zxing.oned.CodaBarWriter
+com.google.zxing.oned.Code128Reader:
+    private static final int CODE_CODE_A
+    private static final int CODE_CODE_B
+    private static final int CODE_CODE_C
+    private static final int CODE_FNC_1
+    private static final int CODE_FNC_2
+    private static final int CODE_FNC_3
+    private static final int CODE_FNC_4_A
+    private static final int CODE_FNC_4_B
+    private static final int CODE_SHIFT
+    private static final int CODE_START_A
+    private static final int CODE_START_B
+    private static final int CODE_START_C
+    private static final int CODE_STOP
+    private static final float MAX_AVG_VARIANCE
+    private static final float MAX_INDIVIDUAL_VARIANCE
+com.google.zxing.oned.Code128Writer$1
+com.google.zxing.oned.Code128Writer$CType
+com.google.zxing.oned.Code128Writer$MinimalEncoder$Charset
+com.google.zxing.oned.Code128Writer$MinimalEncoder$Latch
+com.google.zxing.oned.Code128Writer$MinimalEncoder
+com.google.zxing.oned.Code128Writer
+com.google.zxing.oned.Code39Reader:
+    static final java.lang.String ALPHABET_STRING
+    static final int ASTERISK_ENCODING
+com.google.zxing.oned.Code39Writer
+com.google.zxing.oned.Code93Reader:
+    static final java.lang.String ALPHABET_STRING
+com.google.zxing.oned.Code93Writer
+com.google.zxing.oned.EAN13Writer
+com.google.zxing.oned.EAN8Writer
+com.google.zxing.oned.ITFReader:
+    private static final float MAX_AVG_VARIANCE
+    private static final float MAX_INDIVIDUAL_VARIANCE
+    private static final int N
+    private static final int W
+    private static final int w
+com.google.zxing.oned.ITFWriter
+com.google.zxing.oned.OneDimensionalCodeWriter
+com.google.zxing.oned.UPCAWriter
+com.google.zxing.oned.UPCEANReader:
+    private static final float MAX_AVG_VARIANCE
+    private static final float MAX_INDIVIDUAL_VARIANCE
+com.google.zxing.oned.UPCEANWriter
+com.google.zxing.oned.UPCEWriter
+com.google.zxing.oned.rss.AbstractRSSReader:
+    private static final float MAX_AVG_VARIANCE
+    private static final float MAX_FINDER_PATTERN_RATIO
+    private static final float MAX_INDIVIDUAL_VARIANCE
+    private static final float MIN_FINDER_PATTERN_RATIO
+    protected static int count(int[])
+com.google.zxing.oned.rss.RSSUtils:
+    private void <init>()
+com.google.zxing.oned.rss.expanded.BitArrayBuilder:
+    private void <init>()
+com.google.zxing.oned.rss.expanded.RSSExpandedReader:
+    private static final int FINDER_PAT_A
+    private static final int FINDER_PAT_B
+    private static final int FINDER_PAT_C
+    private static final int FINDER_PAT_D
+    private static final int FINDER_PAT_E
+    private static final int FINDER_PAT_F
+    private static final int MAX_PAIRS
+    java.util.List getRows()
+com.google.zxing.oned.rss.expanded.decoders.AI01392xDecoder:
+    private static final int HEADER_SIZE
+    private static final int LAST_DIGIT_SIZE
+com.google.zxing.oned.rss.expanded.decoders.AI01393xDecoder:
+    private static final int FIRST_THREE_DIGITS_SIZE
+    private static final int HEADER_SIZE
+    private static final int LAST_DIGIT_SIZE
+com.google.zxing.oned.rss.expanded.decoders.AI013x0x1xDecoder:
+    private static final int DATE_SIZE
+    private static final int HEADER_SIZE
+    private static final int WEIGHT_SIZE
+com.google.zxing.oned.rss.expanded.decoders.AI013x0xDecoder:
+    private static final int HEADER_SIZE
+    private static final int WEIGHT_SIZE
+com.google.zxing.oned.rss.expanded.decoders.AI01AndOtherAIs:
+    private static final int HEADER_SIZE
+com.google.zxing.oned.rss.expanded.decoders.AI01decoder:
+    static final int GTIN_SIZE
+com.google.zxing.oned.rss.expanded.decoders.AnyAIDecoder:
+    private static final int HEADER_SIZE
+com.google.zxing.oned.rss.expanded.decoders.CurrentParsingState:
+    boolean isNumeric()
+com.google.zxing.oned.rss.expanded.decoders.DecodedChar:
+    static final char FNC1
+com.google.zxing.oned.rss.expanded.decoders.DecodedNumeric:
+    static final int FNC1
+    int getValue()
+com.google.zxing.oned.rss.expanded.decoders.FieldParser:
+    private void <init>()
+com.google.zxing.pdf417.PDF417Common:
+    public static final int BARS_IN_MODULE
+    public static final int MAX_CODEWORDS_IN_BARCODE
+    public static final int MAX_ROWS_IN_BARCODE
+    public static final int MIN_ROWS_IN_BARCODE
+    public static final int MODULES_IN_CODEWORD
+    public static final int MODULES_IN_STOP_PATTERN
+    public static final int NUMBER_OF_CODEWORDS
+    private void <init>()
+    public static int getBitCountSum(int[])
+com.google.zxing.pdf417.PDF417Reader:
+    public com.google.zxing.Result[] decodeMultiple(com.google.zxing.BinaryBitmap)
+    public com.google.zxing.Result[] decodeMultiple(com.google.zxing.BinaryBitmap,java.util.Map)
+com.google.zxing.pdf417.PDF417ResultMetadata:
+    public java.lang.String getAddressee()
+    public int getChecksum()
+    public java.lang.String getFileName()
+    public long getFileSize()
+    public int[] getOptionalData()
+    public int getSegmentCount()
+    public int getSegmentIndex()
+    public java.lang.String getSender()
+    public long getTimestamp()
+com.google.zxing.pdf417.PDF417Writer
+com.google.zxing.pdf417.decoder.BarcodeValue:
+    java.lang.Integer getConfidence(int)
+com.google.zxing.pdf417.decoder.Codeword:
+    private static final int BARCODE_ROW_UNKNOWN
+com.google.zxing.pdf417.decoder.DecodedBitStreamParser:
+    private static final int AL
+    private static final int AS
+    private static final int BEGIN_MACRO_PDF417_CONTROL_BLOCK
+    private static final int BEGIN_MACRO_PDF417_OPTIONAL_FIELD
+    private static final int BYTE_COMPACTION_MODE_LATCH
+    private static final int BYTE_COMPACTION_MODE_LATCH_6
+    private static final int ECI_CHARSET
+    private static final int ECI_GENERAL_PURPOSE
+    private static final int ECI_USER_DEFINED
+    private static final int LL
+    private static final int MACRO_PDF417_OPTIONAL_FIELD_ADDRESSEE
+    private static final int MACRO_PDF417_OPTIONAL_FIELD_CHECKSUM
+    private static final int MACRO_PDF417_OPTIONAL_FIELD_FILE_NAME
+    private static final int MACRO_PDF417_OPTIONAL_FIELD_FILE_SIZE
+    private static final int MACRO_PDF417_OPTIONAL_FIELD_SEGMENT_COUNT
+    private static final int MACRO_PDF417_OPTIONAL_FIELD_SENDER
+    private static final int MACRO_PDF417_OPTIONAL_FIELD_TIME_STAMP
+    private static final int MACRO_PDF417_TERMINATOR
+    private static final int MAX_NUMERIC_CODEWORDS
+    private static final int ML
+    private static final int MODE_SHIFT_TO_BYTE_COMPACTION_MODE
+    private static final int NUMBER_OF_SEQUENCE_CODEWORDS
+    private static final int NUMERIC_COMPACTION_MODE_LATCH
+    private static final int PAL
+    private static final int PL
+    private static final int PS
+    private static final int TEXT_COMPACTION_MODE_LATCH
+    private void <init>()
+com.google.zxing.pdf417.decoder.DetectionResult:
+    private static final int ADJUST_ROW_NUMBER_SKIP
+com.google.zxing.pdf417.decoder.DetectionResultColumn:
+    private static final int MAX_NEARBY_DISTANCE
+com.google.zxing.pdf417.decoder.PDF417CodewordDecoder:
+    private void <init>()
+com.google.zxing.pdf417.decoder.PDF417ScanningDecoder:
+    private static final int CODEWORD_SKEW_SIZE
+    private static final int MAX_EC_CODEWORDS
+    private static final int MAX_ERRORS
+    private void <init>()
+    public static java.lang.String toString(com.google.zxing.pdf417.decoder.BarcodeValue[][])
+com.google.zxing.pdf417.decoder.ec.ModulusPoly:
+    int[] getCoefficients()
+com.google.zxing.pdf417.detector.Detector:
+    private static final int BARCODE_MIN_HEIGHT
+    private static final float MAX_AVG_VARIANCE
+    private static final float MAX_INDIVIDUAL_VARIANCE
+    private static final int MAX_PATTERN_DRIFT
+    private static final int MAX_PIXEL_DRIFT
+    private static final float MAX_STOP_PATTERN_HEIGHT_VARIANCE
+    private static final int ROW_STEP
+    private static final int SKIPPED_ROW_COUNT_MAX
+    private void <init>()
+com.google.zxing.pdf417.detector.PDF417DetectorResult:
+    public void <init>(com.google.zxing.common.BitMatrix,java.util.List)
+com.google.zxing.pdf417.encoder.BarcodeMatrix
+com.google.zxing.pdf417.encoder.BarcodeRow
+com.google.zxing.pdf417.encoder.Compaction
+com.google.zxing.pdf417.encoder.Dimensions
+com.google.zxing.pdf417.encoder.PDF417
+com.google.zxing.pdf417.encoder.PDF417ErrorCorrection
+com.google.zxing.pdf417.encoder.PDF417HighLevelEncoder$1
+com.google.zxing.pdf417.encoder.PDF417HighLevelEncoder$NoECIInput
+com.google.zxing.pdf417.encoder.PDF417HighLevelEncoder
+com.google.zxing.pdf417.encoder.PDF417HighLevelEncoderTestAdapter
+com.google.zxing.qrcode.QRCodeReader:
+    protected final com.google.zxing.qrcode.decoder.Decoder getDecoder()
+com.google.zxing.qrcode.QRCodeWriter
+com.google.zxing.qrcode.decoder.DecodedBitStreamParser:
+    private static final int GB2312_SUBSET
+    private void <init>()
+com.google.zxing.qrcode.decoder.Decoder:
+    public com.google.zxing.common.DecoderResult decode(com.google.zxing.common.BitMatrix)
+    public com.google.zxing.common.DecoderResult decode(boolean[][])
+    public com.google.zxing.common.DecoderResult decode(boolean[][],java.util.Map)
+com.google.zxing.qrcode.decoder.ErrorCorrectionLevel:
+    public int getBits()
+com.google.zxing.qrcode.decoder.FormatInformation:
+    private static final int FORMAT_INFO_MASK_QR
+com.google.zxing.qrcode.decoder.Mode:
+    public int getBits()
+com.google.zxing.qrcode.decoder.QRCodeDecoderMetaData:
+    public boolean isMirrored()
+com.google.zxing.qrcode.decoder.Version$ECBlocks:
+    public int getNumBlocks()
+    public int getTotalECCodewords()
+com.google.zxing.qrcode.detector.Detector:
+    public com.google.zxing.common.DetectorResult detect()
+    protected final com.google.zxing.common.BitMatrix getImage()
+    protected final com.google.zxing.ResultPointCallback getResultPointCallback()
+com.google.zxing.qrcode.detector.FinderPatternFinder:
+    private static final int CENTER_QUORUM
+    protected static final int MAX_MODULES
+    protected static final int MIN_SKIP
+    public void <init>(com.google.zxing.common.BitMatrix)
+    protected final void clearCounts(int[])
+    protected final com.google.zxing.common.BitMatrix getImage()
+    protected final java.util.List getPossibleCenters()
+    protected final boolean handlePossibleCenter(int[],int,int,boolean)
+    protected final void shiftCounts2(int[])
+com.google.zxing.qrcode.encoder.BlockPair
+com.google.zxing.qrcode.encoder.ByteMatrix
+com.google.zxing.qrcode.encoder.Encoder$1
+com.google.zxing.qrcode.encoder.Encoder
+com.google.zxing.qrcode.encoder.MaskUtil
+com.google.zxing.qrcode.encoder.MatrixUtil
+com.google.zxing.qrcode.encoder.MinimalEncoder$1
+com.google.zxing.qrcode.encoder.MinimalEncoder$Edge
+com.google.zxing.qrcode.encoder.MinimalEncoder$ResultList$ResultNode
+com.google.zxing.qrcode.encoder.MinimalEncoder$ResultList
+com.google.zxing.qrcode.encoder.MinimalEncoder$VersionSize
+com.google.zxing.qrcode.encoder.MinimalEncoder
+com.google.zxing.qrcode.encoder.QRCode
+com.journeyapps.barcodescanner.BarcodeEncoder
+com.journeyapps.barcodescanner.BarcodeResult:
+    private static final float PREVIEW_DOT_WIDTH
+    private static final float PREVIEW_LINE_WIDTH
+    private static void drawLine(android.graphics.Canvas,android.graphics.Paint,com.google.zxing.ResultPoint,com.google.zxing.ResultPoint,int)
+    public int getBitmapScaleFactor()
+    public android.graphics.Bitmap getBitmapWithResultPoints(int)
+    public com.google.zxing.Result getResult()
+    public com.google.zxing.ResultPoint[] getResultPoints()
+    public long getTimestamp()
+    public java.util.List getTransformedResultPoints()
+com.journeyapps.barcodescanner.BarcodeView:
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+com.journeyapps.barcodescanner.CameraPreview:
+    private static final int ROTATION_LISTENER_DELAY_MS
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+    public void changeCameraParameters(com.journeyapps.barcodescanner.camera.CameraParametersCallback)
+    public boolean isUseTextureView()
+com.journeyapps.barcodescanner.CaptureManager:
+    private static final java.lang.String SAVED_ORIENTATION_LOCK
+    public static int getCameraPermissionReqCode()
+    public static void setCameraPermissionReqCode(int)
+    public void setShowMissingCameraPermissionDialog(boolean)
+com.journeyapps.barcodescanner.CompoundBarcodeView
+com.journeyapps.barcodescanner.Decoder:
+    protected com.google.zxing.Reader getReader()
+com.journeyapps.barcodescanner.DecoderResultPointCallback:
+    public void <init>(com.journeyapps.barcodescanner.Decoder)
+    public com.journeyapps.barcodescanner.Decoder getDecoder()
+com.journeyapps.barcodescanner.DecoderThread:
+    public android.graphics.Rect getCropRect()
+    public com.journeyapps.barcodescanner.Decoder getDecoder()
+com.journeyapps.barcodescanner.DecoratedBarcodeView:
+    public void <init>(android.content.Context)
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+    public void changeCameraParameters(com.journeyapps.barcodescanner.camera.CameraParametersCallback)
+    public void decodeContinuous(com.journeyapps.barcodescanner.BarcodeCallback)
+    private void initialize()
+com.journeyapps.barcodescanner.DefaultDecoderFactory:
+    public void <init>(java.util.Collection)
+com.journeyapps.barcodescanner.ScanContract
+com.journeyapps.barcodescanner.ScanIntentResult
+com.journeyapps.barcodescanner.ScanOptions
+com.journeyapps.barcodescanner.Size:
+    public boolean fitsIn(com.journeyapps.barcodescanner.Size)
+    public com.journeyapps.barcodescanner.Size scale(int,int)
+com.journeyapps.barcodescanner.SourceData:
+    public android.graphics.Bitmap getBitmap()
+    public android.graphics.Bitmap getBitmap(int)
+    public android.graphics.Rect getCropRect()
+    public byte[] getData()
+    public int getDataHeight()
+    public int getDataWidth()
+    public int getImageFormat()
+    public int getScalingFactor()
+    public boolean isPreviewMirrored()
+    public void setScalingFactor(int)
+com.journeyapps.barcodescanner.Util:
+    public void <init>()
+com.journeyapps.barcodescanner.ViewfinderView:
+    protected static final long ANIMATION_DELAY
+    protected static final int CURRENT_POINT_OPACITY
+    protected static final int MAX_RESULT_POINTS
+    protected static final int POINT_SIZE
+    public void drawResultBitmap(android.graphics.Bitmap)
+    public void drawViewfinder()
+com.journeyapps.barcodescanner.camera.AutoFocusManager:
+    private static final long AUTO_FOCUS_INTERVAL_MS
+com.journeyapps.barcodescanner.camera.CameraConfigurationUtils:
+    private static final int AREA_PER_1000
+    private static final float MAX_EXPOSURE_COMPENSATION
+    private static final int MAX_FPS
+    private static final float MIN_EXPOSURE_COMPENSATION
+    private static final int MIN_FPS
+    private static final java.lang.String TAG
+    private void <init>()
+    public static java.lang.String collectStats(android.hardware.Camera$Parameters)
+    public static java.lang.String collectStats(java.lang.CharSequence)
+    private static java.lang.Integer indexOfClosestZoom(android.hardware.Camera$Parameters,double)
+    public static void setZoom(android.hardware.Camera$Parameters,double)
+com.journeyapps.barcodescanner.camera.CameraInstance:
+    public void <init>(com.journeyapps.barcodescanner.camera.CameraManager)
+    public void changeCameraParameters(com.journeyapps.barcodescanner.camera.CameraParametersCallback)
+    protected com.journeyapps.barcodescanner.camera.CameraManager getCameraManager()
+    public int getCameraRotation()
+    public com.journeyapps.barcodescanner.camera.CameraSettings getCameraSettings()
+    protected com.journeyapps.barcodescanner.camera.CameraThread getCameraThread()
+    protected com.journeyapps.barcodescanner.camera.CameraSurface getSurface()
+    public boolean isOpen()
+    private synthetic void lambda$changeCameraParameters$1(com.journeyapps.barcodescanner.camera.CameraParametersCallback)
+    public void setSurfaceHolder(android.view.SurfaceHolder)
+com.journeyapps.barcodescanner.camera.CameraManager:
+    public void changeCameraParameters(com.journeyapps.barcodescanner.camera.CameraParametersCallback)
+    public android.hardware.Camera getCamera()
+    public com.journeyapps.barcodescanner.camera.CameraSettings getCameraSettings()
+    public com.journeyapps.barcodescanner.camera.DisplayConfiguration getDisplayConfiguration()
+    public com.journeyapps.barcodescanner.Size getNaturalPreviewSize()
+    public boolean isOpen()
+    public void setPreviewDisplay(android.view.SurfaceHolder)
+com.journeyapps.barcodescanner.camera.CameraParametersCallback
+com.journeyapps.barcodescanner.camera.CameraSettings:
+    public boolean isContinuousFocusEnabled()
+    public void setAutoFocusEnabled(boolean)
+    public void setAutoTorchEnabled(boolean)
+    public void setBarcodeSceneModeEnabled(boolean)
+    public void setContinuousFocusEnabled(boolean)
+    public void setExposureEnabled(boolean)
+    public void setFocusMode(com.journeyapps.barcodescanner.camera.CameraSettings$FocusMode)
+    public void setMeteringEnabled(boolean)
+com.journeyapps.barcodescanner.camera.CameraSurface:
+    public android.view.SurfaceHolder getSurfaceHolder()
+    public android.graphics.SurfaceTexture getSurfaceTexture()
+com.journeyapps.barcodescanner.camera.CameraThread:
+    protected void enqueueDelayed(java.lang.Runnable,long)
+com.journeyapps.barcodescanner.camera.DisplayConfiguration:
+    public void <init>(int)
+    public com.journeyapps.barcodescanner.camera.PreviewScalingStrategy getPreviewScalingStrategy()
+    public com.journeyapps.barcodescanner.Size getViewfinderSize()
+com.journeyapps.barcodescanner.camera.LegacyPreviewScalingStrategy$1
+com.journeyapps.barcodescanner.camera.LegacyPreviewScalingStrategy
 com.ryanheise.audio_session.AndroidAudioManager:
     static java.util.ArrayList doubleArrayToList(double[])
 com.ryanheise.audio_session.R
@@ -33735,7 +34507,6 @@ kotlin.collections.ArraysKt___ArraysKt:
     public static final java.lang.Double firstOrNull(double[],kotlin.jvm.functions.Function1)
     public static final java.lang.Float firstOrNull(float[])
     public static final java.lang.Float firstOrNull(float[],kotlin.jvm.functions.Function1)
-    public static final java.lang.Integer firstOrNull(int[])
     public static final java.lang.Integer firstOrNull(int[],kotlin.jvm.functions.Function1)
     public static final java.lang.Long firstOrNull(long[])
     public static final java.lang.Long firstOrNull(long[],kotlin.jvm.functions.Function1)
@@ -35464,7 +36235,6 @@ kotlin.collections.MapsKt__MapsKt:
     public static final java.util.Map mapKeys(java.util.Map,kotlin.jvm.functions.Function1)
     public static final java.util.Map mapKeysTo(java.util.Map,java.util.Map,kotlin.jvm.functions.Function1)
     private static final java.util.Map mapOf()
-    public static final varargs java.util.Map mapOf(kotlin.Pair[])
     public static final java.util.Map mapValues(java.util.Map,kotlin.jvm.functions.Function1)
     public static final java.util.Map mapValuesTo(java.util.Map,java.util.Map,kotlin.jvm.functions.Function1)
     public static final java.util.Map minus(java.util.Map,java.lang.Iterable)
@@ -35490,14 +36260,12 @@ kotlin.collections.MapsKt__MapsKt:
     private static final void plusAssign(java.util.Map,kotlin.sequences.Sequence)
     private static final void plusAssign(java.util.Map,kotlin.Pair[])
     public static final void putAll(java.util.Map,kotlin.sequences.Sequence)
-    public static final void putAll(java.util.Map,kotlin.Pair[])
     private static final java.lang.Object remove(java.util.Map,java.lang.Object)
     private static final void set(java.util.Map,java.lang.Object,java.lang.Object)
     public static final java.util.Map toMap(java.util.Map,java.util.Map)
     public static final java.util.Map toMap(kotlin.sequences.Sequence)
     public static final java.util.Map toMap(kotlin.sequences.Sequence,java.util.Map)
     public static final java.util.Map toMap(kotlin.Pair[])
-    public static final java.util.Map toMap(kotlin.Pair[],java.util.Map)
     private static final kotlin.Pair toPair(java.util.Map$Entry)
 kotlin.collections.MapsKt___MapsJvmKt:
     public void <init>()
@@ -39548,6 +40316,24 @@ kotlinx.coroutines.sync.SemaphoreSegment:
     public final java.lang.Object getAndSet(int,java.lang.Object)
     public final void set(int,java.lang.Object)
 kotlinx.coroutines.time.TimeKt
+net.touchcapture.qr.flutterqr.CustomFramingRectBarcodeView:
+    private static final int BOTTOM_OFFSET_NOT_SET_VALUE
+    public void <init>(android.content.Context,android.util.AttributeSet)
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+net.touchcapture.qr.flutterqr.FlutterQrPlugin:
+    private static final java.lang.String VIEW_TYPE_ID
+net.touchcapture.qr.flutterqr.QRView:
+    private static final java.lang.String CHANNEL_METHOD_ON_PERMISSION_SET
+    private static final java.lang.String CHANNEL_METHOD_ON_RECOGNIZE_QR
+    private static final java.lang.String ERROR_CODE_NOT_SET
+    private static final java.lang.String ERROR_MESSAGE_FLASH_NOT_FOUND
+    private static final java.lang.String ERROR_MESSAGE_NOT_SET
+    private static final java.lang.String PARAMS_CAMERA_FACING
+net.touchcapture.qr.flutterqr.QrActivityLifecycleCallbacksKt:
+    public static synthetic net.touchcapture.qr.flutterqr.UnRegisterLifecycleCallback registerLifecycleCallbacks$default(android.app.Activity,kotlin.jvm.functions.Function0,kotlin.jvm.functions.Function0,int,java.lang.Object)
+net.touchcapture.qr.flutterqr.QrShared:
+    public static final int CAMERA_REQUEST_ID
+net.touchcapture.qr.flutterqr.R
 okhttp3.Cache$1
 okhttp3.Cache$2
 okhttp3.Cache$CacheRequestImpl$1
@@ -42383,6 +43169,21 @@ com.google.maps.android.clustering.view.DefaultClusterRenderer:
     private com.google.maps.android.clustering.ClusterManager$OnClusterInfoWindowLongClickListener mInfoWindowLongClickListener
     private com.google.maps.android.clustering.ClusterManager$OnClusterItemInfoWindowClickListener mItemInfoWindowClickListener
     private com.google.maps.android.clustering.ClusterManager$OnClusterItemInfoWindowLongClickListener mItemInfoWindowLongClickListener
+com.google.zxing.client.android.InactivityTimer:
+    private static final java.lang.String TAG
+com.journeyapps.barcodescanner.DecoratedBarcodeView$TorchListener:
+    public abstract void onTorchOff()
+    public abstract void onTorchOn()
+com.journeyapps.barcodescanner.DecoratedBarcodeView:
+    private com.journeyapps.barcodescanner.DecoratedBarcodeView$TorchListener torchListener
+com.journeyapps.barcodescanner.ViewfinderView:
+    protected static final java.lang.String TAG
+com.journeyapps.barcodescanner.camera.CameraThread:
+    private static final java.lang.String TAG
+com.journeyapps.barcodescanner.camera.DisplayConfiguration:
+    private static final java.lang.String TAG
+com.journeyapps.barcodescanner.camera.FitXYStrategy:
+    private static final java.lang.String TAG
 com.tekartik.sqflite.Utils:
     static java.util.Locale localeForLanguageTagPre21(java.lang.String)
 com.yalantis.ucrop.util.EglUtils:

@@ -788,6 +788,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "qr_code_scanner",
+      "rootUri": "../../qr_code_scanner-master",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
       "name": "responsive_sizer",
       "rootUri": "file:///Users/parthapaul/.pub-cache/hosted/pub.dev/responsive_sizer-3.3.1",
       "packageUri": "lib/",
@@ -1151,10 +1157,10 @@
       "name": "my_coffee",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.4"
+      "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-11-25T15:14:55.771598Z",
+  "generated": "2024-11-26T01:50:00.386956Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///Users/parthapaul/all_project/macbookpro/android_studio/flutter_sdk/flutter_3_24_3",

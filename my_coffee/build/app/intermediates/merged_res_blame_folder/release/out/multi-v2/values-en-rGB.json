@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.twt.app-mergeReleaseResources-53:/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "com.app.twt.app-mergeReleaseResources-54:/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "/Users/parthapaul/.gradle/caches/transforms-3/56fdbb196158428988d19e8a96d61a2a/transformed/jetified-play-services-base-18.3.0/res/values-en-rGB/values.xml",

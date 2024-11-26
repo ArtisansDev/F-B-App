@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.twt.app-mergeReleaseResources-53:/values-ms/values-ms.xml",
+            "outputFile": "com.app.twt.app-mergeReleaseResources-54:/values-ms/values-ms.xml",
             "map": [
                 {
                     "source": "/Users/parthapaul/.gradle/caches/transforms-3/51ddba473c6108dda33b9858ff66bed6/transformed/jetified-play-services-basement-18.3.0/res/values-ms/values.xml",

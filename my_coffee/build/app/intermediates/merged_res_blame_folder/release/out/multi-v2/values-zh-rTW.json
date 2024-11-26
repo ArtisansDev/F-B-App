@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.twt.app-mergeReleaseResources-53:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.app.twt.app-mergeReleaseResources-54:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "/Users/parthapaul/.gradle/caches/transforms-3/16cc23bb8bdb76da16b13ae258185a6c/transformed/browser-1.8.0/res/values-zh-rTW/values-zh-rTW.xml",
@@ -69,6 +69,23 @@
                         "startOffsets": "2671,2763,2862,2956,3050,3143,3236,7005",
                         "endColumns": "91,98,93,93,92,92,95,100",
                         "endOffsets": "2758,2857,2951,3045,3138,3231,3327,7101"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/res/values-zh-rTW/values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,104,151,244",
+                        "endColumns": "48,46,92,69",
+                        "endOffsets": "99,146,239,309"
+                    },
+                    "to": {
+                        "startLines": "89,90,91,92",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "7907,7956,8003,8096",
+                        "endColumns": "48,46,92,69",
+                        "endOffsets": "7951,7998,8091,8161"
                     }
                 },
                 {

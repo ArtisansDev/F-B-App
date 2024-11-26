@@ -20,7 +20,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
-// import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../controller/qr_code_scanner_controller.dart';
@@ -33,20 +33,20 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
     Get.lazyPut(() => QrCodeScannerController());
     return FocusDetector(onVisibilityGained: () {
       if (Platform.isAndroid) {
-        // controller.mQRViewController.value?.pauseCamera();
+        controller.mQRViewController.value?.pauseCamera();
       }
-      // controller.mQRViewController.value?.resumeCamera();
+      controller.mQRViewController.value?.resumeCamera();
     }, onVisibilityLost: () {
       Get.delete<QrCodeScannerController>();
     }, child: Obx(
-      () {
+          () {
         return Scaffold(
           appBar: AppBarsCommon.appBarBack(title: 'Table select'),
           backgroundColor: Colors.grey.shade200,
           body: Column(
             children: <Widget>[
-              Expanded(flex: 3, child: Container() //_buildQrView(context)
-        ),
+              Expanded(flex: 3, child:_buildQrView(context)
+              ),
               Expanded(
                 flex: 2,
                 child: Container(
@@ -59,18 +59,18 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                       SizedBox(
                         height: 10.sp,
                       ),
-                      // if (controller.result.value != null)
-                      //   Text(
-                      //     'Data: ${controller.result.value!.code}',
-                      //     style: getText500(
-                      //         colors: ColorConstants.buttonBar, size: 18.sp),
-                      //   )
-                      // else
-                      //   Text(
-                      //     'Scan a code',
-                      //     style: getText500(
-                      //         colors: ColorConstants.buttonBar, size: 18.sp),
-                      //   ),
+                      if (controller.result.value != null)
+                        Text(
+                          'Data: ${controller.result.value!.code}',
+                          style: getText500(
+                              colors: ColorConstants.buttonBar, size: 18.sp),
+                        )
+                      else
+                        Text(
+                          'Scan a code',
+                          style: getText500(
+                              colors: ColorConstants.buttonBar, size: 18.sp),
+                        ),
                       SizedBox(
                         height: 20.sp,
                       ),
@@ -169,9 +169,9 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                       SizedBox(
                         width: 45.w,
                         child: rectangleRoundedCornerButtonMedium(sOrderNow.tr,
-                            () {
-                          controller.selectTable();
-                        },
+                                () {
+                              controller.selectTable();
+                            },
                             bgColor: ColorConstants.cAppColorsBlue,
                             textColor: Colors.white,
                             height: 26.sp,
@@ -188,24 +188,24 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
     ));
   }
 
-  // Widget _buildQrView(BuildContext context) {
-  //   // For this example we check how width or tall the device is and change the scanArea and overlay accordingly.
-  //
-  //   // To ensure the Scanner view is properly sizes after rotation
-  //   // we need to listen for Flutter SizeChanged notification and update controller
-  //   return QRView(
-  //     key: controller.qrKey,
-  //     onQRViewCreated: (p0) {
-  //       controller.onQRViewCreated(p0);
-  //     },
-  //     overlay: QrScannerOverlayShape(
-  //         borderColor: Colors.red,
-  //         borderRadius: 10,
-  //         borderLength: 30,
-  //         borderWidth: 10,
-  //         cutOutSize: 65.w),
-  //     onPermissionSet: (ctrl, p) =>
-  //         controller.onPermissionSet(context, ctrl, p),
-  //   );
-  // }
+Widget _buildQrView(BuildContext context) {
+  // For this example we check how width or tall the device is and change the scanArea and overlay accordingly.
+
+  // To ensure the Scanner view is properly sizes after rotation
+  // we need to listen for Flutter SizeChanged notification and update controller
+  return QRView(
+    key: controller.qrKey,
+    onQRViewCreated: (p0) {
+      controller.onQRViewCreated(p0);
+    },
+    overlay: QrScannerOverlayShape(
+        borderColor: Colors.red,
+        borderRadius: 10,
+        borderLength: 30,
+        borderWidth: 10,
+        cutOutSize: 65.w),
+    onPermissionSet: (ctrl, p) =>
+        controller.onPermissionSet(context, ctrl, p),
+  );
+}
 }

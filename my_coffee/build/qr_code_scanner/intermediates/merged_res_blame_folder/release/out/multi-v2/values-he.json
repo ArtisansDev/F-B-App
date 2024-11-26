@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-29:/values-he/values-he.xml",
+            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-26:/values-he/values-he.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a8386afc8f0df1c1fdad6f3c4a0f4ae1/transformed/jetified-zxing-android-embedded-4.3.0/res/values-he/values-he.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/res/values-he/values-he.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-merged_res-31:/values-he/values-he.xml",
+            "outputFile": "net.touchcapture.qr.flutterqr.qr_code_scanner-merged_res-28:/values-he/values-he.xml",
             "map": [
                 {
-                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/a8386afc8f0df1c1fdad6f3c4a0f4ae1/transformed/jetified-zxing-android-embedded-4.3.0/res/values-he/values-he.xml",
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/res/values-he/values-he.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

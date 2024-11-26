@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.twt.app-mergeReleaseResources-53:/values-ro/values-ro.xml",
+            "outputFile": "com.app.twt.app-mergeReleaseResources-54:/values-ro/values-ro.xml",
             "map": [
                 {
                     "source": "/Users/parthapaul/.gradle/caches/transforms-3/bd027a677c7fbeb56df34ab1a97c87ee/transformed/appcompat-1.6.1/res/values-ro/values-ro.xml",
@@ -35,6 +35,23 @@
                         "startOffsets": "4599",
                         "endColumns": "143",
                         "endOffsets": "4738"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/transforms-3/6bb31f26da3b682eea50db32e81342f8/transformed/jetified-zxing-android-embedded-4.3.0/res/values-ro/values-ro.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,166,275",
+                        "endColumns": "58,51,108,116",
+                        "endOffsets": "109,161,270,387"
+                    },
+                    "to": {
+                        "startLines": "81,82,83,84",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "8425,8484,8536,8645",
+                        "endColumns": "58,51,108,116",
+                        "endOffsets": "8479,8531,8640,8757"
                     }
                 },
                 {

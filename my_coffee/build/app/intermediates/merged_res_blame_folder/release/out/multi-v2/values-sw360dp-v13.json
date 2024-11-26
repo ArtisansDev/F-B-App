@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.app.twt.app-mergeReleaseResources-53:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "com.app.twt.app-mergeReleaseResources-54:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
                     "source": "/Users/parthapaul/.gradle/caches/transforms-3/eed3e8803bc7371ca218e9ddbfbdd092/transformed/preference-1.2.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
