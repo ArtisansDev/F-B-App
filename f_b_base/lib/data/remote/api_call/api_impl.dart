@@ -8,7 +8,7 @@ import '../web_response.dart';
 import '../web_response_failed.dart';
 import 'api_provider.dart';
 
-class AllApiImpl  {
+class AllApiImpl {
   WebProvider mWebProvider = WebProvider();
   late WebResponseSuccess mWebResponseSuccess;
   late WebResponseFailed mWebResponseFailed;
@@ -20,6 +20,13 @@ class AllApiImpl  {
         var responseJson = jsonEncode(responseBody);
         if (AppConstants.isWebLogToPrint) {
           debugPrint("Webservices 200 decoded Response $responseJson",
+              wrapWidth: 3072);
+        }
+        return responseBody;
+      case 409:
+        var responseJson = jsonEncode(responseBody);
+        if (AppConstants.isWebLogToPrint) {
+          debugPrint("Webservices 409 decoded Response $responseJson",
               wrapWidth: 3072);
         }
         return responseBody;

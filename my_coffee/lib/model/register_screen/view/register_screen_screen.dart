@@ -109,6 +109,7 @@ class RegisterScreenScreen extends GetView<RegisterScreenController> {
                   prefixImage: ImageAssetsConstants.edit1,
                   placeHolder: sEnterYourName.tr,
                   hintText: sEnterYourName.tr,
+                  topPadding: 1.sp,
                   errorText: null,
                   prefixHeight: 27.5.sp,
                   onFilteringTextInputFormatter: [
@@ -144,6 +145,7 @@ class RegisterScreenScreen extends GetView<RegisterScreenController> {
                   placeHolder: sEmailIdHint.tr,
                   hintText: sEmailIdHint.tr,
                   errorText: null,
+                  topPadding: 1.sp,
                   prefixHeight: 27.5.sp,
                   onFilteringTextInputFormatter: [
                     FilteringTextInputFormatter.allow(

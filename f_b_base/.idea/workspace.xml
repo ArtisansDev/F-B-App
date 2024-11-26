@@ -5,58 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3eba47f2-9eb3-4609-a77d-c72cd50cac91" name="Changes" comment="base">
-      <change afterPath="$PROJECT_DIR$/android/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.gradle/8.3/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.gradle/8.3/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.gradle/8.3/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.gradle/8.3/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.gradle/8.3/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/f_b_base/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values-night/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/f_b_base_android.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/connectivity_plus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/image_picker_linux" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/package_info_plus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/shared_preferences_linux" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/wakelock_plus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/main.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/my_application.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linux/my_application.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/common/text_input_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/text_input_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constants/web_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/web_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/remote/api_call/api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/api_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/executionHistory/executionHistory.bin" afterDir="false" />
@@ -66,6 +20,12 @@
       <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Flutter/Generated.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/history_screen/controller/history_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/history_screen/controller/history_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/controller/register_screen_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/controller/register_screen_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/view/register_screen_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/register_screen/view/register_screen_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,18 +51,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/f_b_base/lib",
-    "settings.editor.selected.configurable": "dart.settings",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/f_b_base/lib&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib" />
@@ -130,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732519471525</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="base">
+      <created>1732589839852</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732589839852</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

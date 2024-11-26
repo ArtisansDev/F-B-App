@@ -9,7 +9,29 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758e53d0-793c-43b5-ac3f-251c1f7b09e8" name="Changes" comment=" qr code scanner&#10; 1. modfi code" />
+    <list default="true" id="758e53d0-793c-43b5-ac3f-251c1f7b09e8" name="Changes" comment=" qr code scanner&#10; 1. modfi code">
+      <change beforePath="$PROJECT_DIR$/../f_b_base/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/common/text_input_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/common/text_input_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/constants/web_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/constants/web_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/api_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/user_authentication/user_authentication_api_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/history_screen/controller/history_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/history_screen/controller/history_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/register_screen/controller/register_screen_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/register_screen/controller/register_screen_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/register_screen/view/register_screen_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/register_screen/view/register_screen_screen.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,20 +68,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/lib",
-    "settings.editor.selected.configurable": "dart.settings",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/lib&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;dart.settings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/common/scanner" />
@@ -76,7 +98,7 @@
       <recent name="$PROJECT_DIR$/assets/coffee_details" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.main_twt">
+  <component name="RunManager" selected="Flutter.main_apple_cinemas">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />

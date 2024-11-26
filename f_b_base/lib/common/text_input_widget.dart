@@ -228,8 +228,8 @@ class TextInputWidget extends StatelessWidget {
               contentPadding: EdgeInsets.only(
                   left: 15.sp,
                   right: 15.sp,
-                  top: topPadding ?? 13.sp,
-                  bottom: topPadding ?? 13.sp),
+                  top: topPadding ?? 3.sp,
+                  bottom: topPadding ?? 3.sp),
               floatingLabelBehavior: (showFloatingLabel ?? true)
                   ? FloatingLabelBehavior.auto
                   : FloatingLabelBehavior.never,

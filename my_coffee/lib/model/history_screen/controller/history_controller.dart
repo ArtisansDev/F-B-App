@@ -418,7 +418,7 @@ class HistoryScreenController extends GetxController {
             (mOrderHistoryResponse.paymentMethod ?? 0).toString(),
             paymentGatewaySettingIDF:
             mOrderHistoryResponse.paymentGatewaySettingID,
-            paymentStatus: 'P',
+            paymentStatus: 'F',
             responseCode: '400',
             responseData: value,
             paidAmount: mOrderHistoryResponse.totalAmount,

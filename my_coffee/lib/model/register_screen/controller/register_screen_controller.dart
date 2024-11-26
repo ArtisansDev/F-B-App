@@ -60,14 +60,6 @@ class RegisterScreenController extends GetxController {
               await SharedPrefs()
                   .setUserId(mRegisterResponse.data?.userId ?? '');
               await getUserDetails();
-              // if (Get.isRegistered<DashboardScreenController>()) {
-              //   DashboardScreenController mDashboardScreenController =
-              //       Get.find<DashboardScreenController>();
-              //   mDashboardScreenController.selectedIndex.value = 0;
-              // }
-              // Get.offAllNamed(
-              //   RouteConstants.rDashboardScreen,
-              // );
               Get.until((route) {
                 return route.settings.name ==
                     RouteConstants
@@ -80,6 +72,9 @@ class RegisterScreenController extends GetxController {
             AppAlertBase.showSnackBar(
                 Get.context!, mRegisterResponse.statusMessage ?? "");
           }
+        } else if(mWebResponseSuccess.statusCode == WebConstants.statusCode409) {
+          AppAlertBase.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? "");
         }
       } else {
         AppAlertBase.showSnackBar(
