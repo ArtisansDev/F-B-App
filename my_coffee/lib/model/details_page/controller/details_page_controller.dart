@@ -1,17 +1,16 @@
 // ignore_for_file: prefer_interpolation_to_compose_strings
 
 
-import 'package:my_coffee/alert/app_alert.dart';
-import 'package:my_coffee/alert/app_alert_base.dart';
-import 'package:my_coffee/constants/message_constants.dart';
-import 'package:my_coffee/constants/web_constants.dart';
-import 'package:my_coffee/data/mode/get_item_details/get_item_details_request.dart';
-import 'package:my_coffee/data/mode/get_item_details/get_item_details_response.dart';
-import 'package:my_coffee/data/remote/api_call/product_api/product_api.dart';
-import 'package:my_coffee/data/remote/web_response.dart';
-import 'package:my_coffee/locator.dart';
-import 'package:my_coffee/utils/network_utils.dart';
-import 'package:my_coffee/utils/num_utils.dart';
+import 'package:f_b_base/alert/app_alert_base.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/mode/get_item_details/get_item_details_request.dart';
+import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
+import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/network_utils.dart';
+import 'package:f_b_base/utils/num_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../common/tag_view/tag_modifier_date_view.dart';

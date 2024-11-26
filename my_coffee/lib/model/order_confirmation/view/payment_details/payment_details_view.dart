@@ -10,10 +10,10 @@
  * Ticket       : 
  */
 
-import 'package:my_coffee/constants/color_constants.dart';
-import 'package:my_coffee/constants/text_styles_constants.dart';
-import 'package:my_coffee/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
-import 'package:my_coffee/utils/num_utils.dart';
+import 'package:f_b_base/constants/color_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/utils/num_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';

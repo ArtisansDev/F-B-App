@@ -1,15 +1,15 @@
-import 'package:my_coffee/alert/app_alert.dart';
-import 'package:my_coffee/alert/app_alert_base.dart';
-import 'package:my_coffee/constants/message_constants.dart';
-import 'package:my_coffee/constants/web_constants.dart';
-import 'package:my_coffee/data/local/shared_prefs/shared_prefs.dart';
-import 'package:my_coffee/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
-import 'package:my_coffee/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
-import 'package:my_coffee/data/remote/api_call/product_api/product_api.dart';
-import 'package:my_coffee/data/remote/web_response.dart';
-import 'package:my_coffee/locator.dart';
-import 'package:my_coffee/utils/date_format.dart';
-import 'package:my_coffee/utils/network_utils.dart';
+
+import 'package:f_b_base/alert/app_alert_base.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/date_format.dart';
+import 'package:f_b_base/utils/network_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';

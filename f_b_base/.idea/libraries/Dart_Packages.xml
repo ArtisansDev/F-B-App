@@ -303,13 +303,6 @@
             </list>
           </value>
         </entry>
-        <entry key="flutter_statusbarcolor_ns">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_statusbarcolor_ns-0.5.0/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="flutter_svg">
           <value>
             <list>
@@ -926,13 +919,6 @@
             </list>
           </value>
         </entry>
-        <entry key="qr_code_scanner">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/qr_code_scanner-1.0.1/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="responsive_sizer">
           <value>
             <list>
@@ -1397,7 +1383,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_lints-4.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_pdfview-1.3.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.23/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_statusbarcolor_ns-0.5.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_svg-2.0.15/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html-0.15.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_widget_from_html_core-0.15.2/lib" />
@@ -1484,7 +1469,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/provider-6.1.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pull_to_refresh-2.0.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/qr_code_scanner-1.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/responsive_sizer-3.3.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/rxdart-0.28.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sanitize_html-2.1.0/lib" />

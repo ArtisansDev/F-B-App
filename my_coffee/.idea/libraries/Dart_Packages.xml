@@ -156,6 +156,13 @@
             </list>
           </value>
         </entry>
+        <entry key="f_b_base">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../f_b_base/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="fake_async">
           <value>
             <list>
@@ -1539,6 +1546,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/win32-5.8.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xml-6.5.0/lib" />
+      <root url="file://$PROJECT_DIR$/../f_b_base/lib" />
       <root url="file://$PROJECT_DIR$/../qr_code_scanner-master/lib" />
       <root url="file://$PROJECT_DIR$/../../../flutter_sdk/flutter_3_24_3/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$PROJECT_DIR$/../../../flutter_sdk/flutter_3_24_3/packages/flutter/lib" />

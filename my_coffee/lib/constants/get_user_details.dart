@@ -10,18 +10,18 @@
 
 import 'dart:convert';
 
-import 'package:my_coffee/alert/app_alert_base.dart';
-import 'package:my_coffee/constants/message_constants.dart';
-import 'package:my_coffee/constants/web_constants.dart';
-import 'package:my_coffee/data/local/shared_prefs/shared_prefs.dart';
-import 'package:my_coffee/data/mode/user_delete/user_delete_request.dart';
-import 'package:my_coffee/data/mode/user_delete/user_delete_response.dart';
-import 'package:my_coffee/data/mode/user_details/user_details_request.dart';
-import 'package:my_coffee/data/mode/user_details/user_details_response.dart';
-import 'package:my_coffee/data/remote/api_call/user_authentication/user_authentication_api.dart';
-import 'package:my_coffee/data/remote/web_response.dart';
-import 'package:my_coffee/locator.dart';
-import 'package:my_coffee/utils/network_utils.dart';
+import 'package:f_b_base/alert/app_alert_base.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/user_delete/user_delete_request.dart';
+import 'package:f_b_base/data/mode/user_delete/user_delete_response.dart';
+import 'package:f_b_base/data/mode/user_details/user_details_request.dart';
+import 'package:f_b_base/data/mode/user_details/user_details_response.dart';
+import 'package:f_b_base/data/remote/api_call/user_authentication/user_authentication_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/network_utils.dart';
 import 'package:get/get.dart';
 import 'package:my_coffee/constants/logout_expired.dart';
 

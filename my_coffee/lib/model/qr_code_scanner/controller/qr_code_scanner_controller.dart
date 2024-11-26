@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:my_coffee/alert/app_alert.dart';
-import 'package:my_coffee/alert/app_alert_base.dart';
-import 'package:my_coffee/data/local/shared_prefs/shared_prefs.dart';
-import 'package:my_coffee/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/alert/app_alert_base.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';

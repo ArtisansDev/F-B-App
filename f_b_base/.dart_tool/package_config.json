@@ -260,12 +260,6 @@
       "languageVersion": "3.5"
     },
     {
-      "name": "flutter_statusbarcolor_ns",
-      "rootUri": "file:///Users/parthapaul/.pub-cache/hosted/pub.dev/flutter_statusbarcolor_ns-0.5.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "flutter_svg",
       "rootUri": "file:///Users/parthapaul/.pub-cache/hosted/pub.dev/flutter_svg-2.0.15",
       "packageUri": "lib/",
@@ -794,12 +788,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "qr_code_scanner",
-      "rootUri": "file:///Users/parthapaul/.pub-cache/hosted/pub.dev/qr_code_scanner-1.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
       "name": "responsive_sizer",
       "rootUri": "file:///Users/parthapaul/.pub-cache/hosted/pub.dev/responsive_sizer-3.3.1",
       "packageUri": "lib/",
@@ -1166,7 +1154,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-11-25T12:01:39.183903Z",
+  "generated": "2024-11-26T02:47:31.875460Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///Users/parthapaul/all_project/macbookpro/android_studio/flutter_sdk/flutter_3_24_3",

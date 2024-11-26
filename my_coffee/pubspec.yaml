@@ -32,8 +32,8 @@ dependencies:
     sdk: flutter
   qr_code_scanner:
     path: ../qr_code_scanner-master
-#  f_b_base:
-#    path: ../f_b_base
+  f_b_base:
+    path: ../f_b_base
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -57,11 +57,9 @@ dependencies:
   ################## Google Fonts ("Exo")#####################
   google_fonts: ^5.1.0
   ################## Image store in  cached ("Exo")#####################
-  cached_network_image: ^3.3.1
   flutter_svg: ^2.0.10+1
   smooth_page_indicator: ^1.0.0+2
   ###image pic and crop
-  permission_handler: ^10.4.3
   path_provider: ^2.1.4
   flutter_pdfview: ^1.2.7
   ###all device checking
@@ -74,11 +72,11 @@ dependencies:
   flutter_widget_from_html: ^0.15.2
 
   ####map
-  geolocator: ^12.0.0
-  geocoding: ^3.0.0
-  google_maps_flutter: ^2.9.0
-  googleapis: ^13.2.0
-  googleapis_auth: ^1.6.0
+#  geolocator: ^12.0.0
+#  geocoding: ^3.0.0
+#  google_maps_flutter: ^2.9.0
+#  googleapis: ^13.2.0
+#  googleapis_auth: ^1.6.0
 #  qr_code_scanner: ^1.0.1
 #  mlkit_scanner: ^0.5.3
   ################## Image Picker #####################

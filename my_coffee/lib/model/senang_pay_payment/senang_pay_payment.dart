@@ -8,8 +8,8 @@
  * Ticket       : 
  */
 
-import 'package:my_coffee/common/appbars_common.dart';
-import 'package:my_coffee/lang/translation_service_key.dart';
+import 'package:f_b_base/common/appbars_common.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';

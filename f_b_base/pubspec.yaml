@@ -64,7 +64,6 @@ dependencies:
   ###all device checking
   device_preview: ^1.2.0
   country_picker: ^2.0.26
-  flutter_statusbarcolor_ns: ^0.5.0
   scrollable_positioned_list: ^0.3.8
   pinput: ^5.0.0
   pull_to_refresh: ^2.0.0
@@ -77,8 +76,6 @@ dependencies:
   google_maps_flutter: ^2.9.0
   googleapis: ^13.2.0
   googleapis_auth: ^1.6.0
-  qr_code_scanner: ^1.0.0
-
   ################## Image Picker #####################
   # to upload the profile picture
   image_picker: ^1.1.2

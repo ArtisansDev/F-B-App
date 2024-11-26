@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_interpolation_to_compose_strings
 
 
-import 'package:my_coffee/data/local/shared_prefs/shared_prefs.dart';
-import 'package:my_coffee/data/mode/add_cart/add_cart.dart';
-import 'package:my_coffee/data/mode/get_item_details/get_item_details_response.dart';
-import 'package:my_coffee/utils/num_utils.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
+import 'package:f_b_base/utils/num_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
