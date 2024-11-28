@@ -47,11 +47,13 @@ class OtpScreen extends GetView<OtpScreenController> {
                   children: [
                     Align(
                       alignment: Alignment.bottomRight,
-                      child: Image.asset(
+                      child: Opacity(
+                        opacity: 0.5, // Set opacity here
+                        child: Image.asset(
                         ImageAssetsConstants.buttonLogo,
                         width: 40.w,
                         fit: BoxFit.contain,
-                      ),
+                      ),)
                     ),
                     mLoginView(),
                   ],

@@ -3,7 +3,6 @@
 import 'dart:convert';
 import 'dart:io';
 
-
 import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/constants/message_constants.dart';
 import 'package:f_b_base/constants/web_constants.dart';
@@ -31,7 +30,6 @@ class IntroductionScreenController extends GetxController {
   final localApi = locator.get<GeneralApi>();
 
   void goToNextPage() {
-
     generalSettingApiCall();
   }
 
@@ -65,13 +63,16 @@ class IntroductionScreenController extends GetxController {
               }
               // if (bNextPage) {
               if ((mGetGeneralSettingData.restaurantIDF ?? '').isNotEmpty) {
+                await SharedPrefs().setAddCartData('');
+                await SharedPrefs().setBranchesData('');
                 await SharedPrefs()
                     .setGeneralSetting(jsonEncode(mGetGeneralSettingData));
                 Get.offNamed(
                   RouteConstants.rDashboardScreen,
                 );
               } else {
-                AppAlertBase.showSnackBar(Get.context!, 'restaurant id not found');
+                AppAlertBase.showSnackBar(
+                    Get.context!, 'restaurant id not found');
               }
             } else {
               AppAlertBase.showSnackBar(

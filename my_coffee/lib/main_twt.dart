@@ -12,7 +12,7 @@ import 'model/app_theme/my_app_theme.dart';
 const hiveDbPath = 'TWT';
 
 void main() async {
-  AppConstants.iAccessKey = 3;
+  AppConstants.iAccessKey = 1;
   WidgetsFlutterBinding.ensureInitialized();
   HttpOverrides.global = WebHttpOverrides();
   await dotenv.load(fileName: ".env");

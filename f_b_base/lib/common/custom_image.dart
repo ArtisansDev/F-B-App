@@ -48,14 +48,14 @@ cacheBestItemImage(String imageUrl, String placeHolderImagePath, double size) {
       return Image.asset(
         placeHolderImagePath,
         width: size,
-        fit: BoxFit.fitHeight,
+        fit: BoxFit.fitWidth,
       );
     },
     errorWidget: (context, url, error) {
       return Image.asset(
         placeHolderImagePath,
         width: size,
-        fit: BoxFit.fitHeight,
+        fit: BoxFit.fitWidth,
       );
     },
     imageBuilder: (context, imageProvider) => ClipRRect(

@@ -89,15 +89,6 @@ class ItemMenuListScreen extends StatelessWidget {
                                       Stack(
                                         alignment: Alignment.center,
                                         children: [
-                                          // Container(
-                                          //   height: 15.8.h,
-                                          //   alignment: Alignment.topCenter,
-                                          //   child: Image.asset(
-                                          //     ImageAssetsConstants.backLogo,
-                                          //     fit: BoxFit.fitHeight,
-                                          //     height: 14.h,
-                                          //   ),
-                                          // ),
                                           Visibility(
                                               visible: (mGetCategoryItemListData
                                                           .itemImages ??
@@ -113,31 +104,8 @@ class ItemMenuListScreen extends StatelessWidget {
                                                   ImageAssetsConstants.backLogo,
                                                   15.8.h))
 
-                                          // Container(
-                                          //     height: 15.8.h,
-                                          //     alignment: Alignment.bottomCenter,
-                                          //     child: Image.asset(
-                                          //       ImageAssetsConstants.coffee,
-                                          //       fit: BoxFit.fitHeight,
-                                          //       height: 15.3.h,
-                                          //     )),
                                         ],
                                       ),
-                                      // Container(
-                                      //   height: 4.h,
-                                      //   margin: EdgeInsets.only(
-                                      //       left: 15.sp, right: 15.sp),
-                                      //   alignment: Alignment.center,
-                                      //   child: Text(
-                                      //     'CHAM IT UP',
-                                      //     textAlign: TextAlign.center,
-                                      //     maxLines: 2,
-                                      //     style: getTextRegular(
-                                      //         size: 14.sp,
-                                      //         colors:
-                                      //             ColorConstants.cAppColorsBlue),
-                                      //   ),
-                                      // ),
                                       Container(
                                         height: 4.32.h,
                                         margin: EdgeInsets.only(

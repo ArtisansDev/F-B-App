@@ -58,7 +58,8 @@ class DashboardNavigationScreen extends StatelessWidget {
           children: [
             Expanded(
                 child: bottomBarRowView(controller.selectedIndex.value, 0,
-                    ImageAssetsConstants.iconMenu1, sHome.tr)),
+                    ImageAssetsConstants.iconMenu1, sHome.tr,
+                    imageAsset: ImageAssetsConstants.buttonLogo)),
             Expanded(
                 child: bottomBarRowView(controller.selectedIndex.value, 1,
                     ImageAssetsConstants.iconMenu2, sMenu.tr)),
@@ -75,7 +76,8 @@ class DashboardNavigationScreen extends StatelessWidget {
         ));
   }
 
-  bottomBarRowView(int selectValue, int position, String image, String title) {
+  bottomBarRowView(int selectValue, int position, String image, String title,
+      {String? imageAsset}) {
     return GestureDetector(
         onTap: () {
           controller.onItemTapped(position);
@@ -84,10 +86,23 @@ class DashboardNavigationScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            svgImageSet(image, 23.sp, 23.sp,
-                colour: selectValue == position
-                    ? ColorConstants.cAppColorsBlue
-                    : Colors.white),
+            imageAsset == null
+                ? svgImageSet(image, 23.sp, 23.sp,
+                    colour: selectValue == position
+                        ? ColorConstants.cAppColorsBlue
+                        : Colors.white)
+                : ColorFiltered(
+                    colorFilter: ColorFilter.mode(
+                      selectValue == position
+                          ? ColorConstants.cAppColorsBlue
+                          : Colors.white, // The color you want to apply
+                      BlendMode.srcATop, // Blend mode to apply the color
+                    ),
+                    child: Image.asset(
+                      imageAsset,
+                      width: 23.sp,
+                      fit: BoxFit.fitWidth,
+                    )),
             SizedBox(
               height: 9.sp,
             ),

@@ -59,8 +59,8 @@ class ProfileScreen extends GetView<ProfileScreenController> {
           ///profile
           viewProfile(),
 
-          ///Get Started
-          getStartedView(),
+          // ///Get Started
+          // getStartedView(),
 
           ///placeAnOrder
           placeAnOrder(),

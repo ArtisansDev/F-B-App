@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9399d5a2-2951-4b0b-b649-83c315689650" name="Changes" comment="qr code" />
+    <list default="true" id="9399d5a2-2951-4b0b-b649-83c315689650" name="Changes" comment="qr code">
+      <change beforePath="$PROJECT_DIR$/../my_coffee/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/introduction_screen/controller/introduction_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/introduction_screen/controller/introduction_controller.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

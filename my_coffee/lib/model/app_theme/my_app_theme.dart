@@ -36,7 +36,7 @@ class MyAppTheme extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           debugShowMaterialGrid: false,
-          title: 'TWT',
+          title: 'YUM',
           theme: myLightTheme(context),
           darkTheme: myDarkTheme(context),
           defaultTransition: Transition.leftToRightWithFade,
