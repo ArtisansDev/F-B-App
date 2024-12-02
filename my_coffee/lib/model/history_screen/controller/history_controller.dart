@@ -6,6 +6,7 @@ import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
 import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_request.dart';
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
 import 'package:f_b_base/data/mode/get_order_history/get_order_history_request.dart';
@@ -309,20 +310,32 @@ class HistoryScreenController extends GetxController {
 
   selectPayment(
     OrderHistoryResponseItemData mOrderHistoryResponse,
-  ) {
+  ) async {
     if ((mOrderHistoryResponse.paymentMethod ?? 0).toString() == '1') {
-      payNow(mOrderHistoryResponse);
+      GetGeneralSettingData mGetGeneralSettingData =
+          await SharedPrefs().getGeneralSetting();
+      GeneralSettingPaymentResponses? mPaymentResponses;
+      for (var mGeneralSettingPaymentResponses
+          in mGetGeneralSettingData.paymentResponses ?? []) {
+        if (mGeneralSettingPaymentResponses.paymentGatewayNo == '1') {
+          mPaymentResponses = mGeneralSettingPaymentResponses;
+          break;
+        }
+      }
+      payNow(mOrderHistoryResponse,
+          mPaymentResponses ?? GeneralSettingPaymentResponses());
     } else {
       getUpdatePaymentStatusApi(mOrderHistoryResponse, '');
     }
   }
 
-  void payNow(OrderHistoryResponseItemData mOrderHistoryResponse) async {
+  void payNow(OrderHistoryResponseItemData mOrderHistoryResponse,
+      GeneralSettingPaymentResponses mPaymentResponses) async {
     UserDetailsResponseData mUserDetailsResponseData =
         await SharedPrefs().getUserDetails();
     final SenangPayService senangPayService = SenangPayService(
-      merchantId: '761173165749545', // Replace with live Merchant ID
-      secretKey: '43106-268',
+      merchantId: mPaymentResponses.merchantID??'761173165749545', // Replace with live Merchant ID
+      secretKey:  mPaymentResponses.secretKey??'43106-268',
     );
     var value = await senangPayService.startPayment(
       name:
@@ -340,9 +353,9 @@ class HistoryScreenController extends GetxController {
       bFlagLoad.value = false;
       if (value.toString().toUpperCase().contains('declined'.toUpperCase()) ||
           value.toString().toUpperCase() == 'null'.toUpperCase()) {
-        if(value.toString().toUpperCase().contains('declined'.toUpperCase())){
+        if (value.toString().toUpperCase().contains('declined'.toUpperCase())) {
           await getUpdatePaymentDeclinedApi(mOrderHistoryResponse, value);
-        }else {
+        } else {
           AppAlertBase.showCustomDialogOk(Get.context!, sPaymentDeclined.tr,
               sPaymentDeclinedMessage.tr, () {},
               rightText: 'Ok');
@@ -409,27 +422,27 @@ class HistoryScreenController extends GetxController {
         .then((isInternetAvailable) async {
       if (isInternetAvailable) {
         UpdatePaymentStatusRequest mUpdatePaymentStatusRequest =
-        UpdatePaymentStatusRequest(
-            restaurantIDF: mOrderHistoryResponse.restaurantIDF,
-            userID: mOrderHistoryResponse.userIDF,
-            orderID: mOrderHistoryResponse.orderIDP,
-            paymentGatewayIDF: mOrderHistoryResponse.paymentGatewayID,
-            paymentGatewayNo:
-            (mOrderHistoryResponse.paymentMethod ?? 0).toString(),
-            paymentGatewaySettingIDF:
-            mOrderHistoryResponse.paymentGatewaySettingID,
-            paymentStatus: 'F',
-            responseCode: '400',
-            responseData: value,
-            paidAmount: mOrderHistoryResponse.totalAmount,
-            responseMessage: 'Transaction Declined',
-            transactionID: (value.isEmpty || value.split('-').isEmpty)
-                ? ''
-                : value.split('-')[1]);
+            UpdatePaymentStatusRequest(
+                restaurantIDF: mOrderHistoryResponse.restaurantIDF,
+                userID: mOrderHistoryResponse.userIDF,
+                orderID: mOrderHistoryResponse.orderIDP,
+                paymentGatewayIDF: mOrderHistoryResponse.paymentGatewayID,
+                paymentGatewayNo:
+                    (mOrderHistoryResponse.paymentMethod ?? 0).toString(),
+                paymentGatewaySettingIDF:
+                    mOrderHistoryResponse.paymentGatewaySettingID,
+                paymentStatus: 'F',
+                responseCode: '400',
+                responseData: value,
+                paidAmount: mOrderHistoryResponse.totalAmount,
+                responseMessage: 'Transaction Declined',
+                transactionID: (value.isEmpty || value.split('-').isEmpty)
+                    ? ''
+                    : value.split('-')[1]);
         debugPrint(
             "mUpdatePaymentStatusRequest ${jsonEncode(mUpdatePaymentStatusRequest)}");
         WebResponseSuccess mWebResponseSuccess =
-        await localApi.postUpdatePaymentStatus(mUpdatePaymentStatusRequest);
+            await localApi.postUpdatePaymentStatus(mUpdatePaymentStatusRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           AppAlertBase.showCustomDialogOk(Get.context!, sPaymentDeclined.tr,
               sPaymentDeclinedMessage.tr, () {},

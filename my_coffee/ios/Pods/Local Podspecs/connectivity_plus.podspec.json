@@ -15,18 +15,29 @@
     "http": "https://github.com/fluttercommunity/plus_plugins/tree/main/packages/connectivity_plus"
   },
   "documentation_url": "https://pub.dev/packages/connectivity_plus",
-  "source_files": "Classes/**/*",
-  "public_header_files": "Classes/**/*.h",
-  "dependencies": {
-    "Flutter": [
+  "source_files": "connectivity_plus/Sources/connectivity_plus/**/*.swift",
+  "ios": {
+    "dependencies": {
+      "Flutter": [
 
-    ],
-    "ReachabilitySwift": [
+      ]
+    },
+    "resource_bundles": {
+      "connectivity_plus_privacy": [
+        "connectivity_plus/Sources/connectivity_plus/PrivacyInfo.xcprivacy"
+      ]
+    }
+  },
+  "osx": {
+    "dependencies": {
+      "FlutterMacOS": [
 
-    ]
+      ]
+    }
   },
   "platforms": {
-    "ios": "12.0"
+    "ios": "12.0",
+    "osx": "10.14"
   },
   "swift_versions": "5.0",
   "pod_target_xcconfig": {

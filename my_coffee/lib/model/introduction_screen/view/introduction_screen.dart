@@ -39,15 +39,15 @@ class IntroductionScreen extends GetView<IntroductionScreenController> {
             child: Stack(
               children: [
                 Align(
-                  alignment: Alignment.bottomRight,
-                  child: Opacity(
-                    opacity: 0.5, // Set opacity here
-                    child: Image.asset(
-                    ImageAssetsConstants.buttonLogo,
-                    width: 40.w,
-                    fit: BoxFit.contain,
-                  ),)
-                ),
+                    alignment: Alignment.bottomRight,
+                    child: Opacity(
+                      opacity: 0.5, // Set opacity here
+                      child: Image.asset(
+                        ImageAssetsConstants.buttonLogo,
+                        width: 40.w,
+                        fit: BoxFit.contain,
+                      ),
+                    )),
                 Container(
                   height: double.infinity,
                   width: double.infinity,
@@ -57,11 +57,16 @@ class IntroductionScreen extends GetView<IntroductionScreenController> {
                       Expanded(
                           child: PageView.builder(
                         controller: controller.introductionPageController,
-                        itemCount: 2, // Number of pages
+                        itemCount: 1, // Number of pages
                         itemBuilder: (context, index) {
-                          return setImage(index == 0
-                              ? ImageAssetsConstants.introductionImage3
-                              : ImageAssetsConstants.introductionImage4);
+                          return Container(
+                            padding: EdgeInsets.all(35.sp),
+                            child: setImage(
+                                // index == 0
+                                // ? ImageAssetsConstants.introductionImage3
+                                // : ImageAssetsConstants.introductionImage4
+                                ImageAssetsConstants.appLogo),
+                          );
                         },
                         onPageChanged: (value) {
                           controller.onChangePage(value);
@@ -85,7 +90,7 @@ class IntroductionScreen extends GetView<IntroductionScreenController> {
             alignment: Alignment.center,
             child: SmoothPageIndicator(
               controller: controller.introductionPageController,
-              count: 2,
+              count: 1,
               effect: WormEffect(
                 dotHeight: 13.sp,
                 dotWidth: 13.sp,
@@ -100,7 +105,7 @@ class IntroductionScreen extends GetView<IntroductionScreenController> {
           Container(
             margin: EdgeInsets.only(left: 20.sp, right: 20.sp, bottom: 20.sp),
             child: rectangleRoundedCornerButtonMedium(sButtonText.tr, () {
-             controller.goToNextPage();
+              controller.goToNextPage();
             },
                 bgColor: ColorConstants.cAppColorsBlue,
                 textColor: Colors.white,

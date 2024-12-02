@@ -54,6 +54,7 @@ class SenangPayService {
       },
     ).toString();
 
+    print("paymentUrl : $paymentUrl");
     ///next screen
     var value = await Get.toNamed(RouteConstants.rSenangPayPaymentScreen,
         arguments: paymentUrl);

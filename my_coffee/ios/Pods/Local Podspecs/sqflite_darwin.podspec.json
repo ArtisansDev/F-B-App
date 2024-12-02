@@ -2,8 +2,8 @@
   "name": "sqflite_darwin",
   "version": "0.0.4",
   "summary": "An iOS and macOS implementation for the sqflite plugin.",
-  "description": "An iOS and macOS implementation of the Flutter sqflite plugin to\nAccess SQLite database.",
-  "homepage": "https://github.com/tekartik/sqflite/tree/master/sqflite_darwin",
+  "description": "Access SQLite database.",
+  "homepage": "https://github.com/tekartik/sqflite/sqflite_darwin",
   "license": {
     "type": "BSD",
     "file": "../LICENSE"

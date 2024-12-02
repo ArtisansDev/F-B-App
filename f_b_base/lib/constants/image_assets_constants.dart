@@ -6,6 +6,9 @@ class ImageAssetsConstants {
   // static String buttonLogo = "assets/buttom_logo.png";
   static String buttonLogo = "assets/buttom_image.png";
   static String appLogoT = appLogo;//"assets/app_logo_t.png";
+  static String backLogo = buttonLogo;//"assets/back_logo.png";
+
+  ///
   static String appLogoSvg = "assets/app_logo_svg.png";
   static String notification = "assets/notification.png";
   static String shoppingCart = "assets/shopping_cart.png";
@@ -13,7 +16,6 @@ class ImageAssetsConstants {
   static String delivery = "assets/delivery.png";
   static String merch = "assets/merch.png";
   static String coffee = "assets/coffee.png";
-  static String backLogo = buttonLogo;//"assets/back_logo.png";
   static String dinein = "assets/dinein.png";
   static String take = "assets/take.png";
   static String profile = "assets/profile.png";
