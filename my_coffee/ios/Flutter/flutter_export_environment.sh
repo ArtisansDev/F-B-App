@@ -3,7 +3,7 @@
 export "FLUTTER_ROOT=/Users/parthapaul/all_project/macbookpro/android_studio/flutter_sdk/flutter_3_24_3"
 export "FLUTTER_APPLICATION_PATH=/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
-export "FLUTTER_TARGET=/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/lib/main_apple_cinemas.dart"
+export "FLUTTER_TARGET=/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"

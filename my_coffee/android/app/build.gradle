@@ -8,13 +8,13 @@ plugins {
 android {
     namespace = "com.app.twt"
     compileSdk = 34
-    ndkVersion = flutter.ndkVersion
+  //  ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
+    // For Kotlin projects
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8
     }
@@ -28,6 +28,7 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        multiDexEnabled true
     }
 
     buildTypes {

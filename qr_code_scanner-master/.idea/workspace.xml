@@ -5,21 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9399d5a2-2951-4b0b-b649-83c315689650" name="Changes" comment="qr code">
+      <change beforePath="$PROJECT_DIR$/../f_b_base/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/introduction_screen/controller/introduction_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/introduction_screen/controller/introduction_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Flutter/Generated.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/my_coffee.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/my_coffee.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;parthapaul&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ArtisansDev/F-B-App.git&quot;,
+    &quot;accountId&quot;: &quot;c4e8af4c-46b9-40c0-940c-392ca5f83908&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2pMmKqhXkkcXaDXWlKmsBULPH6I" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -31,8 +67,12 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;yum__main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/qr_code_scanner-master&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;

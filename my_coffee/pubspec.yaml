@@ -86,6 +86,7 @@ dependencies:
   flutter_image_compress: ^2.3.0
   flutter_dotenv: ^5.2.1
   webview_flutter: ^4.8.0
+#  fiuu_mobile_xdk_flutter: ^3.34.15
 
 dev_dependencies:
   flutter_test:
