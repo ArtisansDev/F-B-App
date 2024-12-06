@@ -1,0 +1,82 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ryanheise.just_audio-mergeReleaseResources-28:/values-as/values-as.xml",
+            "map": [
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/8.9/transforms/a7075f533c12fe589e2b7c21fa438628/transformed/jetified-media2-session-1.2.1/res/values-as/values-as.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,167,265,364,502",
+                        "endColumns": "111,97,98,137,144",
+                        "endOffsets": "162,260,359,497,642"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "805,917,1015,1114,1252",
+                        "endColumns": "111,97,98,137,144",
+                        "endOffsets": "912,1010,1109,1247,1392"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/8.9/transforms/d0e78a5accac2a1fa2d07af42c708a59/transformed/core-1.13.1/res/values-as/values-as.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,156,259,367,472,576,676,805",
+                        "endColumns": "100,102,107,104,103,99,128,100",
+                        "endOffsets": "151,254,362,467,571,671,800,901"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,14",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,156,259,367,472,576,676,1397",
+                        "endColumns": "100,102,107,104,103,99,128,100",
+                        "endOffsets": "151,254,362,467,571,671,800,1493"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.ryanheise.just_audio-release-30:/values-as/values-as.xml",
+            "map": [
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/8.9/transforms/a7075f533c12fe589e2b7c21fa438628/transformed/jetified-media2-session-1.2.1/res/values-as/values-as.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,167,265,364,502",
+                        "endColumns": "111,97,98,137,144",
+                        "endOffsets": "162,260,359,497,642"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "805,917,1015,1114,1252",
+                        "endColumns": "111,97,98,137,144",
+                        "endOffsets": "912,1010,1109,1247,1392"
+                    }
+                },
+                {
+                    "source": "/Users/parthapaul/.gradle/caches/8.9/transforms/d0e78a5accac2a1fa2d07af42c708a59/transformed/core-1.13.1/res/values-as/values-as.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,156,259,367,472,576,676,805",
+                        "endColumns": "100,102,107,104,103,99,128,100",
+                        "endOffsets": "151,254,362,467,571,671,800,901"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,14",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,156,259,367,472,576,676,1397",
+                        "endColumns": "100,102,107,104,103,99,128,100",
+                        "endOffsets": "151,254,362,467,571,671,800,1493"
+                    }
+                }
+            ]
+        }
+    ]
+}

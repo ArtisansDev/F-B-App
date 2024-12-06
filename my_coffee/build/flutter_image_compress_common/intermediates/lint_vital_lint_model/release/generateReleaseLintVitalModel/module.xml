@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/parthapaul/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.5/android"
+    name=":flutter_image_compress_common"
+    type="LIBRARY"
+    maven="com.fluttercandies.flutter_image_compress:flutter_image_compress_common:1.0-SNAPSHOT"
+    agpVersion="8.7.3"
+    buildFolder="/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/build/flutter_image_compress_common"
+    bootClassPath="/Users/parthapaul/Library/Android/sdk/platforms/android-31/android.jar:/Users/parthapaul/Library/Android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="11"
+    compileTarget="android-31"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

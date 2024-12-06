@@ -1,0 +1,6 @@
+framework module fiuu_mobile_xdk_flutter {
+  umbrella header "fiuu_mobile_xdk_flutter-umbrella.h"
+
+  export *
+  module * { export * }
+}
