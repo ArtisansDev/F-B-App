@@ -11,16 +11,15 @@
  */
 
 import 'dart:convert';
-import 'dart:math';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../data/local/shared_prefs/shared_prefs.dart';
 import '../data/mode/add_cart/add_cart.dart';
 import '../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import '../data/mode/get_general_setting/get_general_setting_response.dart';
 import '../data/mode/get_item_details/get_item_details_response.dart';
 import '../data/mode/order_place/order_place_request.dart';
-import '../data/mode/payment_type/payment_type_response.dart';
 import '../data/mode/user_details/user_details_response.dart';
 import 'num_utils.dart';
 
@@ -214,7 +213,7 @@ createOrderPlaceRequest(
         ? mAddCartModel.sTableNo
         :  '',
 
-    ///payment
+    ///payment_service
     paymentGatewayID: mPaymentTypeResponseData?.paymentGatewayIDP??'',
     paymentGatewaySettingID: mPaymentTypeResponseData?.paymentGatewaySettingIDP??'',
 

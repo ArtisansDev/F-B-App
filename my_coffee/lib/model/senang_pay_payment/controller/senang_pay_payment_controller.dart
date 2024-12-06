@@ -1,5 +1,6 @@
 // ignore_for_file: depend_on_referenced_packages
 
+import 'package:f_b_base/payment_service/senang_pay_payment/senang_pay_service.dart';
 import 'package:get/get.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/material.dart';
@@ -8,12 +9,7 @@ import 'package:flutter/foundation.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
-import '../mode/senang_pay_payment/senang_pay_service.dart';
-
-
 class SenangPayPaymentController extends GetxController {
-  // Rx<SenangPayPaymentModel> mSenangPayPaymentModel =
-  //     SenangPayPaymentModel().obs;
   RxString paymentUrl = ''.obs;
   Rxn<WebViewController> mWebViewController = Rxn<WebViewController>();
 
@@ -36,7 +32,7 @@ class SenangPayPaymentController extends GetxController {
 
     final WebViewController mController =
         WebViewController.fromPlatformCreationParams(params);
-    // Payment_was_successful&hash=c149318fd96704782738011d3f76c29dbc3e6b427b36cdccee7e278dac689704
+
     /// enddocregion platform_features
     mController
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
@@ -63,9 +59,13 @@ Page resource error:
           onNavigationRequest: (NavigationRequest request) {
             // Check if the payment is completed
             if (request.url.contains("Payment_was_successful")) {
-              Get.back(result: 'successful - ${getTransactionId(request.url)} - ${request.url}');
+              Get.back(
+                  result:
+                      'successful - ${getTransactionId(request.url)} - ${request.url}');
             } else if (request.url.contains("The_payment_was_declined.")) {
-              Get.back(result: 'declined - ${getTransactionId(request.url)} - ${request.url}');
+              Get.back(
+                  result:
+                      'declined - ${getTransactionId(request.url)} - ${request.url}');
             }
             return NavigationDecision.navigate;
           },

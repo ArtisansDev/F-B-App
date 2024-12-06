@@ -77,7 +77,6 @@ dependencies:
 #  google_maps_flutter: ^2.9.0
 #  googleapis: ^13.2.0
 #  googleapis_auth: ^1.6.0
-#  qr_code_scanner: ^1.0.1
 #  mlkit_scanner: ^0.5.3
   ################## Image Picker #####################
   # to upload the profile picture
@@ -86,7 +85,7 @@ dependencies:
   flutter_image_compress: ^2.3.0
   flutter_dotenv: ^5.2.1
   webview_flutter: ^4.8.0
-#  fiuu_mobile_xdk_flutter: ^3.34.15
+
 
 dev_dependencies:
   flutter_test:

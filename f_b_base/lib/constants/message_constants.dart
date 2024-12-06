@@ -152,7 +152,7 @@ static const String myCOID = "Please enter the MyCoid";
   // My basic info - confirmation
   static const String pleaseConfirmToGoToLoginPage = "Registration details will not be saved";
 
-  // Apply levy payment message
+  // Apply levy payment_service message
   static const String levyPaymentCancelContinue = "Are you sure you want to proceed with this Payment of ";
   static const String levyPaymentOk = "Please key in salary details based on the current month selected";
 

@@ -26,6 +26,11 @@ public final class GeneratedPluginRegistrant {
       Log.e(TAG, "Error registering plugin connectivity_plus, dev.fluttercommunity.plus.connectivity.ConnectivityPlugin", e);
     }
     try {
+      flutterEngine.getPlugins().add(new com.rms.rms_mobile_xdk_flutter.RmsMobileXdkFlutterPlugin());
+    } catch (Exception e) {
+      Log.e(TAG, "Error registering plugin fiuu_mobile_xdk_flutter, com.rms.rms_mobile_xdk_flutter.RmsMobileXdkFlutterPlugin", e);
+    }
+    try {
       flutterEngine.getPlugins().add(new com.fluttercandies.flutter_image_compress.ImageCompressPlugin());
     } catch (Exception e) {
       Log.e(TAG, "Error registering plugin flutter_image_compress_common, com.fluttercandies.flutter_image_compress.ImageCompressPlugin", e);

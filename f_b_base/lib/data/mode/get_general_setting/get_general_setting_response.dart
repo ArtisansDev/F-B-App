@@ -1,7 +1,7 @@
 /// error : false
 /// statusCode : 200
 /// statusMessage : "Data Retrieved Successfully"
-/// data : [{"IsPOSEnable":true,"IsAndroidEnable":true,"IsIOSEnable":false,"AndroidAppVersion":"21","IOSAppVersion":"15","CompulsoryUpdateIn":1,"TermsAndCondition":"<h2>Terms and Conditions</h2><p>Welcome to <strong>Apple Cinema</strong>. We are delighted to have you as our guest. By using our services, including reservations, ticket purchases, and dining, you agree to the following terms and conditions. Please read them carefully.</p><h3>1. Reservations</h3><p>All reservations for cinema screenings and dining experiences must be made in advance through our official website or mobile application. We recommend booking early to secure your preferred time. You may cancel or modify your reservation up to 24 hours prior to your scheduled time. Cancellations made within 24 hours will incur a fee.</p><h3>2. Payment Policy</h3><p>We accept a variety of payment methods, including credit/debit cards, mobile wallets, and Apple Pay. All payments must be settled in full at the time of booking or before entering the premises. A receipt will be provided for all transactions.</p><h3>3. Code of Conduct</h3><p>To maintain a pleasant and safe environment, we kindly ask all guests to treat our staff and fellow patrons with respect. Any behavior deemed disruptive, abusive, or harmful will result in immediate removal from the premises without refund. Our team is available to assist with any issues to ensure a positive experience.</p><h3>4. Food and Beverage</h3><p>In compliance with our health and safety guidelines, guests are required to consume only food and beverages purchased at <strong>Apple Cinema</strong>. We offer an extensive menu, including vegetarian, vegan, and gluten-free options to suit all dietary preferences. Kindly refrain from bringing outside food and drinks into the cinema.</p><h3>5. Privacy and Data Protection</h3><p>Your privacy is important to us. We collect and process personal information, such as your name, contact details, and payment information, solely for the purpose of fulfilling reservations and providing a personalized experience. Your data is stored securely and will not be shared with third parties without your consent. For more details, please refer to our Privacy Policy.</p><h3>6. Liability</h3><p><strong>Apple Cinema</strong> is not responsible for any personal injury, loss, or damage to property that occurs on the premises. Guests are responsible for their personal belongings. In the event of an incident, please notify our staff immediately, and we will address it promptly.</p>","AboutUs":"<h2>About Apple Cinema</h2><p><strong>Apple Cinema</strong> is a unique fusion of cinema and dining, offering a one-of-a-kind experience where movie lovers can enjoy delicious meals in a luxurious theater setting. Founded in 2024, we strive to provide the highest quality of entertainment, food, and service.</p><h3>Our Mission</h3><p>At Apple Cinema, our mission is to create a memorable and immersive experience for all our guests. Whether you're here for a blockbuster movie, a romantic dinner, or a family-friendly outing, we aim to provide a comfortable and enjoyable environment with exceptional food and entertainment.</p><h3>Our Vision</h3><p>We envision a future where movie theaters are not just about watching films but offer a complete experience for all the senses. Apple Cinema aims to be the go-to destination for movie buffs and foodies alike, where guests can indulge in gourmet meals while enjoying their favorite movies on the big screen.</p><h3>What We Offer</h3><ul><li>Luxury theater seating with recliners and blankets for comfort.</li><li>Gourmet food and beverages, from handcrafted burgers to signature cocktails.</li><li>A wide selection of movie genres and special screenings, including 3D and IMAX films.</li><li>Private event hosting and group bookings for corporate outings, parties, and celebrations.</li></ul><h3>Our Core Values</h3><ul><li><strong>Quality:</strong> We never compromise on the quality of our food, beverages, or entertainment.</li><li><strong>Customer Satisfaction:</strong> Your experience is our top priority. We strive to exceed your expectations every time.</li><li><strong>Innovation:</strong> We're always looking for new ways to enhance your experience, from the latest technology to innovative culinary creations.</li><li><strong>Sustainability:</strong> We are committed to reducing our environmental footprint through eco-friendly practices and sustainable sourcing of ingredients.</li></ul>","RestaurantIDF":"0d74bfa1-af7d-4182-835b-b815c2972591","PaymentResponses":[{"RestaurantIDF":"0d74bfa1-af7d-4182-835b-b815c2972591","PaymentGatewayIDP":"4edd3f4b-0115-4706-8244-452612462b83","PaymentGatewaySettingIDP":"a31ea642-eae3-4361-b097-c4bf2d998c01","PaymentGatewayName":"Senang Pay","Description":"Senang Pay","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678132549611074.png","PaymentGatewayNo":"1","MerchantID":"761173165749545","SecretKey":"43106-268","APIKey":"","URL":"","Configurations":""},{"RestaurantIDF":"0d74bfa1-af7d-4182-835b-b815c2972591","PaymentGatewayIDP":"6e9934ce-fe33-4c2d-9628-fae5475f3a25","PaymentGatewaySettingIDP":"3224d722-48f4-4c99-915b-81b19740b7c3","PaymentGatewayName":"Cash","Description":"Cash payment option","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678102710393181.png","PaymentGatewayNo":"0","MerchantID":"","SecretKey":"","APIKey":"","URL":"","Configurations":""}]}]
+/// data : [{"IsPOSEnable":true,"IsAndroidEnable":true,"IsIOSEnable":true,"AndroidAppVersion":"1.0.0","IOSAppVersion":"1.0.0","CompulsoryUpdateIn":1,"TermsAndCondition":"Sample Terms and Conditions text","AboutUs":"Sample About Us text","RestaurantIDF":"9cc7d063-9391-4262-9244-ba8a679d1081","PaymentResponses":[{"RestaurantIDF":"9cc7d063-9391-4262-9244-ba8a679d1081","PaymentGatewayIDP":"6e9934ce-fe33-4c2d-9628-fae5475f3a25","PaymentGatewaySettingIDP":"611ba19b-3fb9-4787-907f-51b0a129f4fc","PaymentGatewayName":"Cash","Description":"Cash payment option","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678102710393181.png","PaymentGatewayNo":"0","MerchantID":"","SecretKey":"","APIKey":"","URL":"","Configurations":"","SandboxConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"},"ProductionConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}},{"RestaurantIDF":"9cc7d063-9391-4262-9244-ba8a679d1081","PaymentGatewayIDP":"4edd3f4b-0115-4706-8244-452612462b83","PaymentGatewaySettingIDP":"8441289b-de99-4103-8014-71b2e1c9a7b4","PaymentGatewayName":"Senang Pay","Description":"Senang Pay","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678132549611074.png","PaymentGatewayNo":"1","MerchantID":"761173165749545","SecretKey":"43106-268","APIKey":"","URL":"","Configurations":"","SandboxConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"},"ProductionConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}},{"RestaurantIDF":"9cc7d063-9391-4262-9244-ba8a679d1081","PaymentGatewayIDP":"b7171499-669d-474f-b19f-2f4b3e60718a","PaymentGatewaySettingIDP":"6b9becae-59cd-4b40-a035-f5c16c162094","PaymentGatewayName":"Fiuu","Description":"Fiuu (formerly Razer Merchant Services)","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638690076431347022.jpg","PaymentGatewayNo":"2","MerchantID":"SB_ttgreen","SecretKey":"ff160fc47518b2a225551759a6b22379","APIKey":"","URL":"","Configurations":"","SandboxConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"},"ProductionConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}}]}]
 
 class GetGeneralSettingResponse {
   GetGeneralSettingResponse({
@@ -41,14 +41,14 @@ class GetGeneralSettingResponse {
 
 /// IsPOSEnable : true
 /// IsAndroidEnable : true
-/// IsIOSEnable : false
-/// AndroidAppVersion : "21"
-/// IOSAppVersion : "15"
+/// IsIOSEnable : true
+/// AndroidAppVersion : "1.0.0"
+/// IOSAppVersion : "1.0.0"
 /// CompulsoryUpdateIn : 1
-/// TermsAndCondition : "<h2>Terms and Conditions</h2><p>Welcome to <strong>Apple Cinema</strong>. We are delighted to have you as our guest. By using our services, including reservations, ticket purchases, and dining, you agree to the following terms and conditions. Please read them carefully.</p><h3>1. Reservations</h3><p>All reservations for cinema screenings and dining experiences must be made in advance through our official website or mobile application. We recommend booking early to secure your preferred time. You may cancel or modify your reservation up to 24 hours prior to your scheduled time. Cancellations made within 24 hours will incur a fee.</p><h3>2. Payment Policy</h3><p>We accept a variety of payment methods, including credit/debit cards, mobile wallets, and Apple Pay. All payments must be settled in full at the time of booking or before entering the premises. A receipt will be provided for all transactions.</p><h3>3. Code of Conduct</h3><p>To maintain a pleasant and safe environment, we kindly ask all guests to treat our staff and fellow patrons with respect. Any behavior deemed disruptive, abusive, or harmful will result in immediate removal from the premises without refund. Our team is available to assist with any issues to ensure a positive experience.</p><h3>4. Food and Beverage</h3><p>In compliance with our health and safety guidelines, guests are required to consume only food and beverages purchased at <strong>Apple Cinema</strong>. We offer an extensive menu, including vegetarian, vegan, and gluten-free options to suit all dietary preferences. Kindly refrain from bringing outside food and drinks into the cinema.</p><h3>5. Privacy and Data Protection</h3><p>Your privacy is important to us. We collect and process personal information, such as your name, contact details, and payment information, solely for the purpose of fulfilling reservations and providing a personalized experience. Your data is stored securely and will not be shared with third parties without your consent. For more details, please refer to our Privacy Policy.</p><h3>6. Liability</h3><p><strong>Apple Cinema</strong> is not responsible for any personal injury, loss, or damage to property that occurs on the premises. Guests are responsible for their personal belongings. In the event of an incident, please notify our staff immediately, and we will address it promptly.</p>"
-/// AboutUs : "<h2>About Apple Cinema</h2><p><strong>Apple Cinema</strong> is a unique fusion of cinema and dining, offering a one-of-a-kind experience where movie lovers can enjoy delicious meals in a luxurious theater setting. Founded in 2024, we strive to provide the highest quality of entertainment, food, and service.</p><h3>Our Mission</h3><p>At Apple Cinema, our mission is to create a memorable and immersive experience for all our guests. Whether you're here for a blockbuster movie, a romantic dinner, or a family-friendly outing, we aim to provide a comfortable and enjoyable environment with exceptional food and entertainment.</p><h3>Our Vision</h3><p>We envision a future where movie theaters are not just about watching films but offer a complete experience for all the senses. Apple Cinema aims to be the go-to destination for movie buffs and foodies alike, where guests can indulge in gourmet meals while enjoying their favorite movies on the big screen.</p><h3>What We Offer</h3><ul><li>Luxury theater seating with recliners and blankets for comfort.</li><li>Gourmet food and beverages, from handcrafted burgers to signature cocktails.</li><li>A wide selection of movie genres and special screenings, including 3D and IMAX films.</li><li>Private event hosting and group bookings for corporate outings, parties, and celebrations.</li></ul><h3>Our Core Values</h3><ul><li><strong>Quality:</strong> We never compromise on the quality of our food, beverages, or entertainment.</li><li><strong>Customer Satisfaction:</strong> Your experience is our top priority. We strive to exceed your expectations every time.</li><li><strong>Innovation:</strong> We're always looking for new ways to enhance your experience, from the latest technology to innovative culinary creations.</li><li><strong>Sustainability:</strong> We are committed to reducing our environmental footprint through eco-friendly practices and sustainable sourcing of ingredients.</li></ul>"
-/// RestaurantIDF : "0d74bfa1-af7d-4182-835b-b815c2972591"
-/// PaymentResponses : [{"RestaurantIDF":"0d74bfa1-af7d-4182-835b-b815c2972591","PaymentGatewayIDP":"4edd3f4b-0115-4706-8244-452612462b83","PaymentGatewaySettingIDP":"a31ea642-eae3-4361-b097-c4bf2d998c01","PaymentGatewayName":"Senang Pay","Description":"Senang Pay","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678132549611074.png","PaymentGatewayNo":"1","MerchantID":"761173165749545","SecretKey":"43106-268","APIKey":"","URL":"","Configurations":""},{"RestaurantIDF":"0d74bfa1-af7d-4182-835b-b815c2972591","PaymentGatewayIDP":"6e9934ce-fe33-4c2d-9628-fae5475f3a25","PaymentGatewaySettingIDP":"3224d722-48f4-4c99-915b-81b19740b7c3","PaymentGatewayName":"Cash","Description":"Cash payment option","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678102710393181.png","PaymentGatewayNo":"0","MerchantID":"","SecretKey":"","APIKey":"","URL":"","Configurations":""}]
+/// TermsAndCondition : "Sample Terms and Conditions text"
+/// AboutUs : "Sample About Us text"
+/// RestaurantIDF : "9cc7d063-9391-4262-9244-ba8a679d1081"
+/// PaymentResponses : [{"RestaurantIDF":"9cc7d063-9391-4262-9244-ba8a679d1081","PaymentGatewayIDP":"6e9934ce-fe33-4c2d-9628-fae5475f3a25","PaymentGatewaySettingIDP":"611ba19b-3fb9-4787-907f-51b0a129f4fc","PaymentGatewayName":"Cash","Description":"Cash payment option","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678102710393181.png","PaymentGatewayNo":"0","MerchantID":"","SecretKey":"","APIKey":"","URL":"","Configurations":"","SandboxConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"},"ProductionConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}},{"RestaurantIDF":"9cc7d063-9391-4262-9244-ba8a679d1081","PaymentGatewayIDP":"4edd3f4b-0115-4706-8244-452612462b83","PaymentGatewaySettingIDP":"8441289b-de99-4103-8014-71b2e1c9a7b4","PaymentGatewayName":"Senang Pay","Description":"Senang Pay","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678132549611074.png","PaymentGatewayNo":"1","MerchantID":"761173165749545","SecretKey":"43106-268","APIKey":"","URL":"","Configurations":"","SandboxConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"},"ProductionConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}},{"RestaurantIDF":"9cc7d063-9391-4262-9244-ba8a679d1081","PaymentGatewayIDP":"b7171499-669d-474f-b19f-2f4b3e60718a","PaymentGatewaySettingIDP":"6b9becae-59cd-4b40-a035-f5c16c162094","PaymentGatewayName":"Fiuu","Description":"Fiuu (formerly Razer Merchant Services)","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638690076431347022.jpg","PaymentGatewayNo":"2","MerchantID":"SB_ttgreen","SecretKey":"ff160fc47518b2a225551759a6b22379","APIKey":"","URL":"","Configurations":"","SandboxConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"},"ProductionConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}}]
 
 class GetGeneralSettingData {
   GetGeneralSettingData({
@@ -76,7 +76,7 @@ class GetGeneralSettingData {
     if (json['PaymentResponses'] != null) {
       paymentResponses = [];
       json['PaymentResponses'].forEach((v) {
-        paymentResponses?.add(GeneralSettingPaymentResponses.fromJson(v));
+        paymentResponses?.add(PaymentTypeResponseData.fromJson(v));
       });
     }
   }
@@ -89,7 +89,7 @@ class GetGeneralSettingData {
   String? termsAndCondition;
   String? aboutUs;
   String? restaurantIDF;
-  List<GeneralSettingPaymentResponses>? paymentResponses;
+  List<PaymentTypeResponseData>? paymentResponses;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -110,21 +110,23 @@ class GetGeneralSettingData {
 
 }
 
-/// RestaurantIDF : "0d74bfa1-af7d-4182-835b-b815c2972591"
-/// PaymentGatewayIDP : "4edd3f4b-0115-4706-8244-452612462b83"
-/// PaymentGatewaySettingIDP : "a31ea642-eae3-4361-b097-c4bf2d998c01"
-/// PaymentGatewayName : "Senang Pay"
-/// Description : "Senang Pay"
-/// PaymentGatewayLogo : "http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678132549611074.png"
-/// PaymentGatewayNo : "1"
-/// MerchantID : "761173165749545"
-/// SecretKey : "43106-268"
+/// RestaurantIDF : "9cc7d063-9391-4262-9244-ba8a679d1081"
+/// PaymentGatewayIDP : "6e9934ce-fe33-4c2d-9628-fae5475f3a25"
+/// PaymentGatewaySettingIDP : "611ba19b-3fb9-4787-907f-51b0a129f4fc"
+/// PaymentGatewayName : "Cash"
+/// Description : "Cash payment option"
+/// PaymentGatewayLogo : "http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678102710393181.png"
+/// PaymentGatewayNo : "0"
+/// MerchantID : ""
+/// SecretKey : ""
 /// APIKey : ""
 /// URL : ""
 /// Configurations : ""
+/// SandboxConfigurations : {"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}
+/// ProductionConfigurations : {"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}
 
-class GeneralSettingPaymentResponses {
-  GeneralSettingPaymentResponses({
+class PaymentTypeResponseData {
+  PaymentTypeResponseData({
     this.restaurantIDF,
     this.paymentGatewayIDP,
     this.paymentGatewaySettingIDP,
@@ -136,9 +138,11 @@ class GeneralSettingPaymentResponses {
     this.secretKey,
     this.aPIKey,
     this.url,
-    this.configurations,});
+    this.configurations,
+    this.sandboxConfigurations,
+    this.productionConfigurations,});
 
-  GeneralSettingPaymentResponses.fromJson(dynamic json) {
+  PaymentTypeResponseData.fromJson(dynamic json) {
     restaurantIDF = json['RestaurantIDF'];
     paymentGatewayIDP = json['PaymentGatewayIDP'];
     paymentGatewaySettingIDP = json['PaymentGatewaySettingIDP'];
@@ -151,6 +155,8 @@ class GeneralSettingPaymentResponses {
     aPIKey = json['APIKey'];
     url = json['URL'];
     configurations = json['Configurations'];
+    sandboxConfigurations = json['SandboxConfigurations'] != null ? SandboxConfigurations.fromJson(json['SandboxConfigurations']) : null;
+    productionConfigurations = json['ProductionConfigurations'] != null ? ProductionConfigurations.fromJson(json['ProductionConfigurations']) : null;
   }
   String? restaurantIDF;
   String? paymentGatewayIDP;
@@ -164,6 +170,8 @@ class GeneralSettingPaymentResponses {
   String? aPIKey;
   String? url;
   String? configurations;
+  SandboxConfigurations? sandboxConfigurations;
+  ProductionConfigurations? productionConfigurations;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -179,6 +187,110 @@ class GeneralSettingPaymentResponses {
     map['APIKey'] = aPIKey;
     map['URL'] = url;
     map['Configurations'] = configurations;
+    if (sandboxConfigurations != null) {
+      map['SandboxConfigurations'] = sandboxConfigurations?.toJson();
+    }
+    if (productionConfigurations != null) {
+      map['ProductionConfigurations'] = productionConfigurations?.toJson();
+    }
+    return map;
+  }
+
+}
+
+/// MerchantID : "761173165749545"
+/// SecretKey : "43106-268"
+/// mp_username : "RMSxdk_SB"
+/// mp_password : "RmS_Sb!p@s$wd"
+/// mp_merchant_ID : "SB_ttgreen"
+/// mp_app_name : "SB_ttgreen"
+/// mp_verification_key : "ff160fc47518b2a225551759a6b22379"
+
+class ProductionConfigurations {
+  ProductionConfigurations({
+    this.merchantID,
+    this.secretKey,
+    this.mpUsername,
+    this.mpPassword,
+    this.mpMerchantID,
+    this.mpAppName,
+    this.mpVerificationKey,});
+
+  ProductionConfigurations.fromJson(dynamic json) {
+    merchantID = json['MerchantID'];
+    secretKey = json['SecretKey'];
+    mpUsername = json['mp_username'];
+    mpPassword = json['mp_password'];
+    mpMerchantID = json['mp_merchant_ID'];
+    mpAppName = json['mp_app_name'];
+    mpVerificationKey = json['mp_verification_key'];
+  }
+  String? merchantID;
+  String? secretKey;
+  String? mpUsername;
+  String? mpPassword;
+  String? mpMerchantID;
+  String? mpAppName;
+  String? mpVerificationKey;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['MerchantID'] = merchantID;
+    map['SecretKey'] = secretKey;
+    map['mp_username'] = mpUsername;
+    map['mp_password'] = mpPassword;
+    map['mp_merchant_ID'] = mpMerchantID;
+    map['mp_app_name'] = mpAppName;
+    map['mp_verification_key'] = mpVerificationKey;
+    return map;
+  }
+
+}
+
+/// MerchantID : "761173165749545"
+/// SecretKey : "43106-268"
+/// mp_username : "RMSxdk_SB"
+/// mp_password : "RmS_Sb!p@s$wd"
+/// mp_merchant_ID : "SB_ttgreen"
+/// mp_app_name : "SB_ttgreen"
+/// mp_verification_key : "ff160fc47518b2a225551759a6b22379"
+
+class SandboxConfigurations {
+  SandboxConfigurations({
+    this.merchantID,
+    this.secretKey,
+    this.mpUsername,
+    this.mpPassword,
+    this.mpMerchantID,
+    this.mpAppName,
+    this.mpVerificationKey,});
+
+  SandboxConfigurations.fromJson(dynamic json) {
+    merchantID = json['MerchantID'];
+    secretKey = json['SecretKey'];
+    mpUsername = json['mp_username'];
+    mpPassword = json['mp_password'];
+    mpMerchantID = json['mp_merchant_ID'];
+    mpAppName = json['mp_app_name'];
+    mpVerificationKey = json['mp_verification_key'];
+  }
+  String? merchantID;
+  String? secretKey;
+  String? mpUsername;
+  String? mpPassword;
+  String? mpMerchantID;
+  String? mpAppName;
+  String? mpVerificationKey;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['MerchantID'] = merchantID;
+    map['SecretKey'] = secretKey;
+    map['mp_username'] = mpUsername;
+    map['mp_password'] = mpPassword;
+    map['mp_merchant_ID'] = mpMerchantID;
+    map['mp_app_name'] = mpAppName;
+    map['mp_verification_key'] = mpVerificationKey;
     return map;
   }
 

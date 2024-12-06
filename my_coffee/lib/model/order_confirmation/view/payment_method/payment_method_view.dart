@@ -14,6 +14,7 @@ import 'package:f_b_base/common/custom_image.dart';
 import 'package:f_b_base/constants/color_constants.dart';
 import 'package:f_b_base/constants/image_assets_constants.dart';
 import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
 import 'package:f_b_base/data/mode/payment_type/payment_type_response.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -141,7 +142,7 @@ class PaymentMethodView extends StatelessWidget {
                                   ],
                                 ),
                                 Visibility(
-                                  visible: index == 0,
+                                  visible: index != controller.paymentTypeList.value.length-1,
                                   child: Container(
                                     width: double.infinity,
                                     height: 3.sp,

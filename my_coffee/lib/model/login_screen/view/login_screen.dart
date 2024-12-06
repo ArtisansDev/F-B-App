@@ -157,24 +157,24 @@ class LoginScreen extends GetView<LoginScreenController> {
               SizedBox(
                 height: 16.5.sp,
               ),
-              Container(
-                margin: EdgeInsets.only(
-                  left: 28.sp,
-                  right: 28.sp,
-                ),
-                child: rectangleRoundedCornerButtonBold('Whats App', () {
-                  controller.isLogin('wp');
-                },
-                    bgColor: ColorConstants.yourKeySkillsColor1,
-                    textColor: Colors.white,
-                    height: 28.sp,
-                    mIconData: ImageAssetsConstants.loginWp,
-                    mIconSize: 20.sp,
-                    size: 17.sp),
-              ),
-              SizedBox(
-                height: 15.sp,
-              ),
+              // Container(
+              //   margin: EdgeInsets.only(
+              //     left: 28.sp,
+              //     right: 28.sp,
+              //   ),
+              //   child: rectangleRoundedCornerButtonBold('Whats App', () {
+              //     controller.isLogin('wp');
+              //   },
+              //       bgColor: ColorConstants.yourKeySkillsColor1,
+              //       textColor: Colors.white,
+              //       height: 28.sp,
+              //       mIconData: ImageAssetsConstants.loginWp,
+              //       mIconSize: 20.sp,
+              //       size: 17.sp),
+              // ),
+              // SizedBox(
+              //   height: 15.sp,
+              // ),
               Container(
                 margin: EdgeInsets.only(
                   left: 28.sp,

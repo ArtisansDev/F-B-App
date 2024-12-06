@@ -76,7 +76,9 @@ class HistoryRow extends StatelessWidget {
                               style: getText500(
                                   size: 14.2.sp,
                                   colors: ColorConstants.appVersion)),
-                          SizedBox(height: 8.sp,),
+                          SizedBox(
+                            height: 8.sp,
+                          ),
                           Text(
                               (mOrderHistoryResponse.orderType ?? 1) == 1
                                   ? 'Dine In'
@@ -160,30 +162,33 @@ class HistoryRow extends StatelessWidget {
             ///reorder
             Row(
               children: [
-                mOrderHistoryResponse.paymentStatus == 'P'?
-                Container(
-                  width: 45.w,
-                  margin: EdgeInsets.only(top: 10.sp),
-                  child: rectangleRoundedCornerButtonMedium('Pay Now', () {
-                    controller.selectPayment(mOrderHistoryResponse);
-                    // controller.payNow(mOrderHistoryResponse);
-                  },
-                      bgColor: ColorConstants.cAppColorsBlue,
-                      textColor: Colors.white,
-                      height: 26.sp,
-                      size: 15.5.sp),
-                ):
-                Container(
-                  width: 45.w,
-                  margin: EdgeInsets.only(top: 10.sp),
-                  child: rectangleRoundedCornerButtonMedium(sReorder.tr, () {
-                    controller.gotOrderHistoryDetails(index);
-                  },
-                      bgColor: ColorConstants.cAppColorsBlue,
-                      textColor: Colors.white,
-                      height: 26.sp,
-                      size: 15.5.sp),
-                ),
+                mOrderHistoryResponse.paymentStatus == 'P' ||
+                        mOrderHistoryResponse.paymentStatus == 'F'
+                    ? Container(
+                        width: 45.w,
+                        margin: EdgeInsets.only(top: 10.sp),
+                        child: rectangleRoundedCornerButtonMedium('Pay Now',
+                            () {
+                          controller.selectPayment(mOrderHistoryResponse);
+                          // controller.payNow(mOrderHistoryResponse);
+                        },
+                            bgColor: ColorConstants.cAppColorsBlue,
+                            textColor: Colors.white,
+                            height: 26.sp,
+                            size: 15.5.sp),
+                      )
+                    : Container(
+                        width: 45.w,
+                        margin: EdgeInsets.only(top: 10.sp),
+                        child: rectangleRoundedCornerButtonMedium(sReorder.tr,
+                            () {
+                          controller.gotOrderHistoryDetails(index);
+                        },
+                            bgColor: ColorConstants.cAppColorsBlue,
+                            textColor: Colors.white,
+                            height: 26.sp,
+                            size: 15.5.sp),
+                      ),
                 Expanded(
                     child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -192,7 +197,7 @@ class HistoryRow extends StatelessWidget {
                     Align(
                         alignment: Alignment.centerRight,
                         child: Text(
-                            '${mOrderHistoryResponse.currencySymbol} ${(mOrderHistoryResponse.totalAmount??0.0).toStringAsFixed(2)}',
+                            '${mOrderHistoryResponse.currencySymbol} ${(mOrderHistoryResponse.totalAmount ?? 0.0).toStringAsFixed(2)}',
                             style: getText600(
                                 size: 17.sp,
                                 colors: ColorConstants.cAppColorsBlue)))

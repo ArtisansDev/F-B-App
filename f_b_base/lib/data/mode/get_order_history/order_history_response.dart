@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import '../get_general_setting/get_general_setting_response.dart';
 import '../order_place/order_place_request.dart';
 
 /// error : false
@@ -116,7 +119,6 @@ class OrderHistoryResponseData {
 class OrderHistoryResponseItemData {
   OrderHistoryResponseItemData({
     this.orderIDP,
-    this.paymentMethod,
     this.paymentStatus,
     this.branchName,
     this.address,
@@ -126,6 +128,13 @@ class OrderHistoryResponseItemData {
     this.country,
     this.currencySymbol,
     this.currencyCode,
+    this.paymentGatewayName,
+    this.paymentGatewayNo,
+    this.paymentGatewaySettingIDF,
+    this.paymentGatewayIDF,
+    this.sandboxConfigurations,
+    this.productionConfigurations,
+    this.tableNo,
     this.trackingOrderID,
     this.userIDF,
     this.orderType,
@@ -146,12 +155,10 @@ class OrderHistoryResponseItemData {
     this.totalAmount,
     this.additionalNotes,
     this.paymentGatewayID,
-    this.paymentGatewaySettingID,
-    this.tableNo,
-  });
+    this.paymentGatewaySettingID,});
+
   OrderHistoryResponseItemData.fromJson(dynamic json) {
     orderIDP = json['OrderIDP'];
-    paymentMethod = json['PaymentGatewayNo'];
     paymentStatus = json['PaymentStatus'];
     branchName = json['BranchName'];
     address = json['Address'];
@@ -161,6 +168,13 @@ class OrderHistoryResponseItemData {
     country = json['Country'];
     currencySymbol = json['CurrencySymbol'];
     currencyCode = json['CurrencyCode'];
+    paymentGatewayName = json['PaymentGatewayName'];
+    paymentGatewayNo = json['PaymentGatewayNo'];
+    paymentGatewaySettingIDF = json['PaymentGatewaySettingIDF'];
+    paymentGatewayIDF = json['PaymentGatewayIDF'];
+    sandboxConfigurations = json['SandboxConfigurations'] != null ? SandboxConfigurations.fromJson(json['SandboxConfigurations']) : null;
+    productionConfigurations = json['ProductionConfigurations'] != null ? ProductionConfigurations.fromJson(json['ProductionConfigurations']) : null;
+    tableNo = json['TableNo'];
     trackingOrderID = json['TrackingOrderID'];
     userIDF = json['UserIDF'];
     orderType = json['OrderType'];
@@ -190,12 +204,10 @@ class OrderHistoryResponseItemData {
     taxAmountTotal = json['TaxAmountTotal'];
     totalAmount = json['TotalAmount'];
     additionalNotes = json['AdditionalNotes'];
-    paymentGatewayID = json['PaymentGatewayIDF'];
-    paymentGatewaySettingID = json['PaymentGatewaySettingIDF'];
-    tableNo = json['TableNo']??'';
+    paymentGatewayID = json['PaymentGatewayID'];
+    paymentGatewaySettingID = json['PaymentGatewaySettingID'];
   }
   String? orderIDP;
-  int? paymentMethod;
   String? paymentStatus;
   String? branchName;
   String? address;
@@ -205,6 +217,13 @@ class OrderHistoryResponseItemData {
   String? country;
   String? currencySymbol;
   String? currencyCode;
+  String? paymentGatewayName;
+  int? paymentGatewayNo;
+  String? paymentGatewaySettingIDF;
+  String? paymentGatewayIDF;
+  SandboxConfigurations? sandboxConfigurations;
+  ProductionConfigurations? productionConfigurations;
+  String? tableNo;
   String? trackingOrderID;
   String? userIDF;
   int? orderType;
@@ -226,12 +245,10 @@ class OrderHistoryResponseItemData {
   String? additionalNotes;
   String? paymentGatewayID;
   String? paymentGatewaySettingID;
-  String? tableNo;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['OrderIDP'] = orderIDP;
-    map['PaymentGatewayNo'] = paymentMethod;
     map['PaymentStatus'] = paymentStatus;
     map['BranchName'] = branchName;
     map['Address'] = address;
@@ -241,6 +258,17 @@ class OrderHistoryResponseItemData {
     map['Country'] = country;
     map['CurrencySymbol'] = currencySymbol;
     map['CurrencyCode'] = currencyCode;
+    map['PaymentGatewayName'] = paymentGatewayName;
+    map['PaymentGatewayNo'] = paymentGatewayNo;
+    map['PaymentGatewaySettingIDF'] = paymentGatewaySettingIDF;
+    map['PaymentGatewayIDF'] = paymentGatewayIDF;
+    if (sandboxConfigurations != null) {
+      map['SandboxConfigurations'] = sandboxConfigurations?.toJson();
+    }
+    if (productionConfigurations != null) {
+      map['ProductionConfigurations'] = productionConfigurations?.toJson();
+    }
+    map['TableNo'] = tableNo;
     map['TrackingOrderID'] = trackingOrderID;
     map['UserIDF'] = userIDF;
     map['OrderType'] = orderType;
@@ -264,9 +292,8 @@ class OrderHistoryResponseItemData {
     map['TaxAmountTotal'] = taxAmountTotal;
     map['TotalAmount'] = totalAmount;
     map['AdditionalNotes'] = additionalNotes;
-    map['PaymentGatewayIDF'] = paymentGatewayID;
-    map['PaymentGatewaySettingIDF'] = paymentGatewaySettingID;
-    map['TableNo'] = tableNo;
+    map['PaymentGatewayID'] = paymentGatewayID;
+    map['PaymentGatewaySettingID'] = paymentGatewaySettingID;
     return map;
   }
 

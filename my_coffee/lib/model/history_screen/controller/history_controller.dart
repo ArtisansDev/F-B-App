@@ -22,16 +22,19 @@ import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
 import 'package:f_b_base/data/remote/web_response.dart';
 import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/payment_service/razer_payment/model/razer_responce.dart';
+import 'package:f_b_base/payment_service/razer_payment/razer_payment_service.dart';
+import 'package:f_b_base/payment_service/senang_pay_payment/senang_pay_service.dart';
 import 'package:f_b_base/utils/date_format.dart';
 import 'package:f_b_base/utils/network_utils.dart';
 import 'package:f_b_base/utils/num_utils.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../../../routes/route_constants.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
-import '../../senang_pay_payment/mode/senang_pay_payment/senang_pay_service.dart';
 
 class HistoryScreenController extends GetxController {
   DashboardScreenController mDashboardScreenController =
@@ -311,10 +314,10 @@ class HistoryScreenController extends GetxController {
   selectPayment(
     OrderHistoryResponseItemData mOrderHistoryResponse,
   ) async {
-    if ((mOrderHistoryResponse.paymentMethod ?? 0).toString() == '1') {
+    if ((mOrderHistoryResponse.paymentGatewayNo ?? 0).toString() == '1') {
       GetGeneralSettingData mGetGeneralSettingData =
           await SharedPrefs().getGeneralSetting();
-      GeneralSettingPaymentResponses? mPaymentResponses;
+      PaymentTypeResponseData? mPaymentResponses;
       for (var mGeneralSettingPaymentResponses
           in mGetGeneralSettingData.paymentResponses ?? []) {
         if (mGeneralSettingPaymentResponses.paymentGatewayNo == '1') {
@@ -322,56 +325,32 @@ class HistoryScreenController extends GetxController {
           break;
         }
       }
-      payNow(mOrderHistoryResponse,
-          mPaymentResponses ?? GeneralSettingPaymentResponses());
+      senangPayNow(mOrderHistoryResponse,
+          mPaymentResponses ?? PaymentTypeResponseData());
+    } else if ((mOrderHistoryResponse.paymentGatewayNo ?? 0).toString() ==
+        '2') {
+      GetGeneralSettingData mGetGeneralSettingData =
+          await SharedPrefs().getGeneralSetting();
+      PaymentTypeResponseData? mPaymentResponses;
+      for (var mGeneralSettingPaymentResponses
+          in mGetGeneralSettingData.paymentResponses ?? []) {
+        if (mGeneralSettingPaymentResponses.paymentGatewayNo == '2') {
+          mPaymentResponses = mGeneralSettingPaymentResponses;
+          break;
+        }
+      }
+
+      razerPayNow(mOrderHistoryResponse,
+          mPaymentResponses ?? PaymentTypeResponseData());
     } else {
       getUpdatePaymentStatusApi(mOrderHistoryResponse, '');
     }
   }
 
-  void payNow(OrderHistoryResponseItemData mOrderHistoryResponse,
-      GeneralSettingPaymentResponses mPaymentResponses) async {
-    UserDetailsResponseData mUserDetailsResponseData =
-        await SharedPrefs().getUserDetails();
-    final SenangPayService senangPayService = SenangPayService(
-      merchantId: mPaymentResponses.merchantID??'761173165749545', // Replace with live Merchant ID
-      secretKey:  mPaymentResponses.secretKey??'43106-268',
-    );
-    var value = await senangPayService.startPayment(
-      name:
-          '${mUserDetailsResponseData.firstName ?? ''} ${mUserDetailsResponseData.lastName ?? ''}'
-              .trim(),
-      email: mUserDetailsResponseData.email ?? '',
-      phone: mUserDetailsResponseData.phoneNumber ?? '',
-      amount: mOrderHistoryResponse.totalAmount ?? 0.0,
-      // Payment amount
-      orderId: mOrderHistoryResponse.orderIDP ?? '',
-      // Unique order ID
-      description: '-',
-    );
-    if (value.isNotEmpty) {
-      bFlagLoad.value = false;
-      if (value.toString().toUpperCase().contains('declined'.toUpperCase()) ||
-          value.toString().toUpperCase() == 'null'.toUpperCase()) {
-        if (value.toString().toUpperCase().contains('declined'.toUpperCase())) {
-          await getUpdatePaymentDeclinedApi(mOrderHistoryResponse, value);
-        } else {
-          AppAlertBase.showCustomDialogOk(Get.context!, sPaymentDeclined.tr,
-              sPaymentDeclinedMessage.tr, () {},
-              rightText: 'Ok');
-        }
-      } else if (value
-          .toString()
-          .toUpperCase()
-          .contains('successful'.toUpperCase())) {
-        await getUpdatePaymentStatusApi(mOrderHistoryResponse, value);
-      }
-    }
-  }
-
   ///getSubmitPayment
   getUpdatePaymentStatusApi(
-      OrderHistoryResponseItemData mOrderHistoryResponse, String value) async {
+      OrderHistoryResponseItemData mOrderHistoryResponse, String value,
+      {String? sTransactionID}) async {
     await NetworkUtils()
         .checkInternetConnection()
         .then((isInternetAvailable) async {
@@ -381,19 +360,20 @@ class HistoryScreenController extends GetxController {
                 restaurantIDF: mOrderHistoryResponse.restaurantIDF,
                 userID: mOrderHistoryResponse.userIDF,
                 orderID: mOrderHistoryResponse.orderIDP,
-                paymentGatewayIDF: mOrderHistoryResponse.paymentGatewayID,
+                paymentGatewayIDF: mOrderHistoryResponse.paymentGatewayIDF,
                 paymentGatewayNo:
-                    (mOrderHistoryResponse.paymentMethod ?? 0).toString(),
+                    (mOrderHistoryResponse.paymentGatewayNo ?? 0).toString(),
                 paymentGatewaySettingIDF:
-                    mOrderHistoryResponse.paymentGatewaySettingID,
+                    mOrderHistoryResponse.paymentGatewaySettingIDF,
                 paymentStatus: 'S',
                 responseCode: '200',
                 responseData: value,
                 paidAmount: mOrderHistoryResponse.totalAmount,
                 responseMessage: 'Transaction Successful',
-                transactionID: (value.isEmpty || value.split('-').isEmpty)
-                    ? ''
-                    : value.split('-')[1]);
+                transactionID: sTransactionID ??
+                    ((value.isEmpty || value.split('-').isEmpty)
+                        ? ''
+                        : value.split('-')[1]));
         debugPrint(
             "mUpdatePaymentStatusRequest ${jsonEncode(mUpdatePaymentStatusRequest)}");
         WebResponseSuccess mWebResponseSuccess =
@@ -416,7 +396,9 @@ class HistoryScreenController extends GetxController {
   }
 
   getUpdatePaymentDeclinedApi(
-      OrderHistoryResponseItemData mOrderHistoryResponse, String value) async {
+      OrderHistoryResponseItemData mOrderHistoryResponse, String value,
+      {String? sTransactionID}) async {
+
     await NetworkUtils()
         .checkInternetConnection()
         .then((isInternetAvailable) async {
@@ -426,27 +408,30 @@ class HistoryScreenController extends GetxController {
                 restaurantIDF: mOrderHistoryResponse.restaurantIDF,
                 userID: mOrderHistoryResponse.userIDF,
                 orderID: mOrderHistoryResponse.orderIDP,
-                paymentGatewayIDF: mOrderHistoryResponse.paymentGatewayID,
+                paymentGatewayIDF: mOrderHistoryResponse.paymentGatewayIDF,
                 paymentGatewayNo:
-                    (mOrderHistoryResponse.paymentMethod ?? 0).toString(),
+                    (mOrderHistoryResponse.paymentGatewayNo ?? 0).toString(),
                 paymentGatewaySettingIDF:
-                    mOrderHistoryResponse.paymentGatewaySettingID,
+                    mOrderHistoryResponse.paymentGatewaySettingIDF,
                 paymentStatus: 'F',
                 responseCode: '400',
                 responseData: value,
                 paidAmount: mOrderHistoryResponse.totalAmount,
                 responseMessage: 'Transaction Declined',
-                transactionID: (value.isEmpty || value.split('-').isEmpty)
-                    ? ''
-                    : value.split('-')[1]);
+                transactionID: sTransactionID ??
+                    ((value.isEmpty || value.split('-').isEmpty)
+                        ? ''
+                        : value.split('-')[1]));
         debugPrint(
             "mUpdatePaymentStatusRequest ${jsonEncode(mUpdatePaymentStatusRequest)}");
         WebResponseSuccess mWebResponseSuccess =
             await localApi.postUpdatePaymentStatus(mUpdatePaymentStatusRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
-          AppAlertBase.showCustomDialogOk(Get.context!, sPaymentDeclined.tr,
-              sPaymentDeclinedMessage.tr, () {},
-              rightText: 'Ok');
+          AppAlertBase.showCustomDialogOk(
+              Get.context!, sPaymentDeclined.tr, sPaymentDeclinedMessage.tr,
+              () {
+            onRefresh();
+          }, rightText: 'Ok');
         } else {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
@@ -456,5 +441,86 @@ class HistoryScreenController extends GetxController {
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
+  }
+
+
+
+  ///payment type
+  ///senang-Pay
+  void senangPayNow(OrderHistoryResponseItemData mOrderHistoryResponse,
+      PaymentTypeResponseData mPaymentResponses) async {
+    UserDetailsResponseData mUserDetailsResponseData =
+        await SharedPrefs().getUserDetails();
+    final SenangPayService senangPayService = SenangPayService(
+      merchantId: mPaymentResponses.productionConfigurations?.merchantID ??
+          '761173165749545',
+      // Replace with live Merchant ID
+      secretKey:
+          mPaymentResponses.productionConfigurations?.secretKey ?? '43106-268',
+    );
+    var value = await senangPayService.startPayment(
+        name:
+            '${mUserDetailsResponseData.firstName ?? ''} ${mUserDetailsResponseData.lastName ?? ''}'
+                .trim(),
+        email: mUserDetailsResponseData.email ?? '',
+        phone: mUserDetailsResponseData.phoneNumber ?? '',
+        amount: mOrderHistoryResponse.totalAmount ?? 0.0,
+        // Payment amount
+        orderId: mOrderHistoryResponse.orderIDP ?? '',
+        // Unique order ID
+        description: '-',
+        mRouteConstants: RouteConstants.rSenangPayPaymentScreen);
+    if (value.isNotEmpty) {
+      bFlagLoad.value = false;
+      if (value.toString().toUpperCase().contains('declined'.toUpperCase()) ||
+          value.toString().toUpperCase() == 'null'.toUpperCase()) {
+        if (value.toString().toUpperCase().contains('declined'.toUpperCase())) {
+          await getUpdatePaymentDeclinedApi(mOrderHistoryResponse, value);
+        } else {
+          AppAlertBase.showCustomDialogOk(Get.context!, sPaymentDeclined.tr,
+              sPaymentDeclinedMessage.tr, () {},
+              rightText: 'Ok');
+        }
+      } else if (value
+          .toString()
+          .toUpperCase()
+          .contains('successful'.toUpperCase())) {
+        await getUpdatePaymentStatusApi(mOrderHistoryResponse, value);
+      }
+    }
+  }
+
+  ///razer-Pay
+  void razerPayNow(OrderHistoryResponseItemData mOrderHistoryResponse,
+      PaymentTypeResponseData mPaymentResponses) async {
+    UserDetailsResponseData mUserDetailsResponseData =
+        await SharedPrefs().getUserDetails();
+    RazerPayService paymentService = RazerPayService();
+    RazerPayService.value = '';
+    try {
+      await paymentService.razerPaymentMs(
+          (mOrderHistoryResponse.totalAmount ?? 0.0).toString(),
+          mOrderHistoryResponse.orderIDP ?? '',
+          '${mUserDetailsResponseData.firstName ?? ''} ${mUserDetailsResponseData.lastName ?? ''}'
+              .trim(),
+          mUserDetailsResponseData.email ?? '',
+          mUserDetailsResponseData.phoneNumber ?? '',
+          Get.context!,
+          sandboxMode: true);
+
+      var value = RazerPayService.value;
+      // AppAlertBase.showSnackBar(Get.context!, value);
+      RazerResponse mRazerResponse = RazerResponse.fromJson(jsonDecode(value));
+      if (mRazerResponse.channel!.trim().isEmpty) {
+        await getUpdatePaymentDeclinedApi(mOrderHistoryResponse, value,
+            sTransactionID: mRazerResponse.txnID.toString());
+      } else {
+        await getUpdatePaymentStatusApi(mOrderHistoryResponse, value,
+            sTransactionID: mRazerResponse.txnID.toString());
+      }
+      // AppAlertBase.showSnackBar(Get.context!, value);
+    } catch (e) {
+      AppAlertBase.showSnackBar(Get.context!, e.toString());
+    }
   }
 }

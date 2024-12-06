@@ -7,6 +7,7 @@ import 'package:f_b_base/constants/web_constants.dart';
 import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
 import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
 import 'package:f_b_base/data/mode/order_place/order_place_request.dart';
 import 'package:f_b_base/data/mode/order_place/order_place_share.dart';

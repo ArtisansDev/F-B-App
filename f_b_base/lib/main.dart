@@ -1,3 +1,6 @@
+import 'package:f_b_base/alert/app_alert_base.dart';
+import 'package:f_b_base/payment_service/razer_payment/razer_payment_service.dart';
+import 'package:fiuu_mobile_xdk_flutter/fiuu_mobile_xdk_flutter.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -57,15 +60,23 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
+  void _incrementCounter() async {
+    // RazerPayService paymentService = RazerPayService();
+    // RazerPayService.value = '';
+    // try {
+    //   await paymentService.razerPaymentMs(
+    //       '5.00',
+    //       '12343',
+    //       'partha',
+    //       'partha.paul007@gmail.com',
+    //       '+60 176172385',
+    //       sandboxMode: true,
+    //       context);
+    //   print("####### ${RazerPayService.value}");
+    //   AppAlertBase.showSnackBar(context, '###${RazerPayService.value}');
+    // } catch (e) {
+    //   AppAlertBase.showSnackBar(context, '###eee${e.toString()}');
+    // }
   }
 
   @override
