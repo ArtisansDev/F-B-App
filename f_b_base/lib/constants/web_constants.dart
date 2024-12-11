@@ -35,7 +35,7 @@ class WebConstants {
 
   /// Base URL
   static String baseUrlLive = "http://staging.artisanssolutions.com/api/";
-  static String baseUrlDev = "http://staging.artisanssolutions.com/api/";
+  static String baseUrlDev = "http://13.53.89.14:8012/api/";
   static String baseURL =
       AppConstants.isLiveURLToUse ? baseUrlLive : baseUrlDev;
 

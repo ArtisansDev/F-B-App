@@ -16,6 +16,7 @@ import 'package:f_b_base/constants/image_assets_constants.dart';
 import 'package:f_b_base/constants/text_styles_constants.dart';
 import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
 import 'package:f_b_base/data/mode/payment_type/payment_type_response.dart';
+import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -182,7 +183,7 @@ class PaymentMethodView extends StatelessWidget {
                   margin:
                       EdgeInsets.only(left: 21.sp, right: 19.sp, top: 13.sp),
                   child: Text(
-                    'Enjoy Faster checkout by paying with TWT Balance!',
+                    'Enjoy Faster checkout by paying with ${sAppName.tr} Balance!',
                     style: getTextRegular(
                         size: 14.5.sp,
                         colors: ColorConstants.buttonBar,

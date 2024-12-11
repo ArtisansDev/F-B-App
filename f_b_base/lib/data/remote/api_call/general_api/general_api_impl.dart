@@ -22,17 +22,12 @@ class GeneralApiImpl extends AllApiImpl with GeneralApi {
 
   ///Get GeneralSetting
   @override
-  Future<WebResponseSuccess> getGeneralSetting() async {
+  Future<WebResponseSuccess> postGeneralSetting() async {
     AppAlertBase.showProgressDialog(Get.context!);
-    final cases =  await WebHttpProvider()
-        .getWithRequest(WebConstants.actionGetGeneralSetting, GetGeneralSettingRequest());
-    debugPrint(
-        "plainJsonRequest statusCode ==  ${jsonEncode(cases.statusCode)}");
-    debugPrint("plainJsonRequest ==  ${jsonEncode(cases.body)}");
+    final cases = await mWebProvider.postWithRequest(
+        WebConstants.actionGetGeneralSetting, GetGeneralSettingRequest());
     AppAlertBase.hideLoadingDialog(Get.context!);
     if (cases.statusCode != WebConstants.statusCode200) {
-      // mWebResponseFailed =
-      //     WebResponseFailed.fromJson(processResponseToJson(cases));
       mWebResponseSuccess = WebResponseSuccess(
         statusCode: cases.statusCode,
         // data: mWebResponseFailed,
@@ -41,7 +36,8 @@ class GeneralApiImpl extends AllApiImpl with GeneralApi {
       );
     } else {
       GetGeneralSettingResponse mGetGeneralSettingResponse =
-      GetGeneralSettingResponse.fromJson(jsonDecode(cases.body.toString()));
+      // GetGeneralSettingResponse.fromJson(jsonDecode(cases.body.toString()));
+      GetGeneralSettingResponse.fromJson(processResponseToJson(cases));
       mWebResponseSuccess = WebResponseSuccess(
         statusCode: cases.statusCode,
         data: mGetGeneralSettingResponse,
@@ -61,9 +57,6 @@ class GeneralApiImpl extends AllApiImpl with GeneralApi {
     WebConstants.auth = (await SharedPrefs().getUserToken()).isNotEmpty;
     final cases = await mWebProvider.postWithRequest(
         WebConstants.actionGetBestSellerItem, exhibitorsListRequest);
-    debugPrint(
-        "plainJsonRequest statusCode ==  ${jsonEncode(cases.statusCode)}");
-    debugPrint("plainJsonRequest ==  ${jsonEncode(cases.body)}");
     AppAlertBase.hideLoadingDialog(Get.context!);
     if (cases.statusCode != WebConstants.statusCode200) {
       mWebResponseFailed =

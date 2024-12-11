@@ -8,7 +8,7 @@ import '../../local/shared_prefs/shared_prefs.dart';
 
 class WebProvider extends GetConnect {
   Map<String, String> headers = {
-    "Content-Type": "application/json",
+    // "Content-Type": "application/json",
     "Accept": "application/json"
   };
 
@@ -46,12 +46,20 @@ class WebProvider extends GetConnect {
     debugPrint("plainJsonRequest ==  ${jsonEncode(params)}");
 
     allowAutoSignedCert = true;
-    var mResponse = await post(
-        WebConstants.baseUrlCommon + action, jsonEncode(params),
-        headers: headers);
-    debugPrint("mResponse statusCode ==  ${mResponse.statusCode}");
-    debugPrint("mResponse ==  ${jsonEncode(mResponse.body)}");
-    return mResponse;
+    try {
+      var mResponse = await post(
+          WebConstants.baseUrlCommon + action, jsonEncode(params),
+          headers: headers);
+      debugPrint("mResponse statusCode ==  ${mResponse.statusCode}");
+      debugPrint("mResponse ==  ${jsonEncode(mResponse.body)}");
+      return mResponse;
+    } catch (e) {
+      return Response(
+        statusCode: 500,
+        statusText: 'Error: $e',
+      );
+    }
+
   }
 
   @override

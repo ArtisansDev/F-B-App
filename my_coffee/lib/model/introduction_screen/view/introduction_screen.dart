@@ -28,9 +28,34 @@ class IntroductionScreen extends GetView<IntroductionScreenController> {
   ///full_View
   _fullView() {
     return FocusDetector(
-        onVisibilityGained: () {},
+        onVisibilityGained: () {
+          /// Get the full current URL
+          String url = Uri.base.toString();
+
+          /// http://localhost:54052/#/introduction_screen?table_no=10&BranchIDF=d8254b69-b6e0-4f10-9d61-888a5d2f779e
+          if (url.contains('localhost')) {
+            if (url.contains('table_no')) {
+              if (url.split(':').length > 2) {
+                url = url.split(':').first + '://' + url.split(':').last;
+              }
+              url = url.replaceAll('#', 'abcd');
+              final uri = Uri.parse(url);
+              // print('###### $uri');
+              final table_no = uri.queryParameters['table_no'];
+              final branch_IDF = uri.queryParameters['BranchIDF'];
+              // print('###### $table_no');
+              // print('###### $branch_IDF');
+
+              controller.selectTableNo.value = table_no;
+              controller.selectBranchIDF.value = branch_IDF;
+              // print('###### ${controller.selectBranchIDF.value}');
+            }
+          }
+        },
         onVisibilityLost: () {
-          Get.delete<IntroductionScreenController>();
+          if (Get.isRegistered<IntroductionScreenController>()) {
+            Get.delete<IntroductionScreenController>();
+          }
         },
         child: GestureDetector(
             onTap: () {

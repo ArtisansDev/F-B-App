@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:my_coffee/alert/app_alert.dart';
 import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
@@ -32,11 +33,11 @@ class DashboardScreenController extends GetxController {
 
   void onItemTapped(int value) async {
     if (selectedIndex.value != value) {
-      if (value > 1 && await checkLoginStatus()) {
+      if (value > 1 && await checkLoginStatus() ) {
         openLoginView();
         return;
       }
-      if (value == 1) {
+      if (value == 1 && !kIsWeb) {
         var value = await showDialogPicDine();
         if (value == null) {
           return;

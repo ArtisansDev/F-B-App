@@ -38,58 +38,58 @@ class SplashScreenController extends GetxController {
     });
   }
 
-  ///generalSettingApiCall
-  void generalSettingApiCall() {
-    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
-      if (isInternetAvailable) {
-        WebResponseSuccess mWebResponseSuccess =
-        await localApi.getGeneralSetting();
-        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
-          GetGeneralSettingResponse mGetGeneralSettingResponse =
-              mWebResponseSuccess.data;
-          if (mGetGeneralSettingResponse.statusCode ==
-              WebConstants.statusCode200) {
-            if ((mGetGeneralSettingResponse.data ?? []).isNotEmpty) {
-              GetGeneralSettingData mGetGeneralSettingData =
-                  (mGetGeneralSettingResponse.data ?? []).first;
-              bool bNextPage = false;
-              String value = '';
-              if (Platform.isAndroid) {
-                if (mGetGeneralSettingData.isAndroidEnable ?? false) {
-                  bNextPage = true;
-                } else {
-                  value = 'This variation is not supported in android';
-                }
-              } else if (Platform.isIOS) {
-                if (mGetGeneralSettingData.isIOSEnable ?? false) {
-                  bNextPage = true;
-                } else {
-                  value = 'This variation is not supported in ios';
-                }
-              }
-              // if (bNextPage) {
-              await SharedPrefs()
-                  .setGeneralSetting(jsonEncode(mGetGeneralSettingData));
-              Get.offNamed(
-                RouteConstants.rDashboardScreen,
-              );
-              // }else {
-              //   AppAlertBase.showSnackBar(
-              //       Get.context!,  value);
-              // }
-            } else {
-              AppAlertBase.showSnackBar(
-                  Get.context!, mGetGeneralSettingResponse.statusMessage ?? "");
-            }
-          } else {
-            AppAlertBase.showSnackBar(
-                Get.context!, mGetGeneralSettingResponse.statusMessage ?? "");
-          }
-        }
-      } else {
-        AppAlertBase.showSnackBar(
-            Get.context!, MessageConstants.noInternetConnection);
-      }
-    });
-  }
+  // ///generalSettingApiCall
+  // void generalSettingApiCall() {
+  //   NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+  //     if (isInternetAvailable) {
+  //       WebResponseSuccess mWebResponseSuccess =
+  //       await localApi.getGeneralSetting();
+  //       if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+  //         GetGeneralSettingResponse mGetGeneralSettingResponse =
+  //             mWebResponseSuccess.data;
+  //         if (mGetGeneralSettingResponse.statusCode ==
+  //             WebConstants.statusCode200) {
+  //           if ((mGetGeneralSettingResponse.data ?? []).isNotEmpty) {
+  //             GetGeneralSettingData mGetGeneralSettingData =
+  //                 (mGetGeneralSettingResponse.data ?? []).first;
+  //             bool bNextPage = false;
+  //             String value = '';
+  //             if (Platform.isAndroid) {
+  //               if (mGetGeneralSettingData.isAndroidEnable ?? false) {
+  //                 bNextPage = true;
+  //               } else {
+  //                 value = 'This variation is not supported in android';
+  //               }
+  //             } else if (Platform.isIOS) {
+  //               if (mGetGeneralSettingData.isIOSEnable ?? false) {
+  //                 bNextPage = true;
+  //               } else {
+  //                 value = 'This variation is not supported in ios';
+  //               }
+  //             }
+  //             // if (bNextPage) {
+  //             await SharedPrefs()
+  //                 .setGeneralSetting(jsonEncode(mGetGeneralSettingData));
+  //             Get.offNamed(
+  //               RouteConstants.rDashboardScreen,
+  //             );
+  //             // }else {
+  //             //   AppAlertBase.showSnackBar(
+  //             //       Get.context!,  value);
+  //             // }
+  //           } else {
+  //             AppAlertBase.showSnackBar(
+  //                 Get.context!, mGetGeneralSettingResponse.statusMessage ?? "");
+  //           }
+  //         } else {
+  //           AppAlertBase.showSnackBar(
+  //               Get.context!, mGetGeneralSettingResponse.statusMessage ?? "");
+  //         }
+  //       }
+  //     } else {
+  //       AppAlertBase.showSnackBar(
+  //           Get.context!, MessageConstants.noInternetConnection);
+  //     }
+  //   });
+  // }
 }

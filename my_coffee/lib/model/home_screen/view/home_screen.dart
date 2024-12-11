@@ -4,6 +4,7 @@ import 'package:f_b_base/common/custom_image.dart';
 import 'package:f_b_base/constants/color_constants.dart';
 import 'package:f_b_base/constants/image_assets_constants.dart';
 import 'package:f_b_base/utils/app_utils.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
@@ -37,7 +38,6 @@ class HomeScreen extends GetView<HomeScreenController> {
           if (Get.isRegistered<HomeScreenController>()) {
             controller.bFocusGained.value = false;
           }
-          //Get.delete<HomeScreenController>();
         },
         child: GestureDetector(
           onTap: () {
@@ -73,18 +73,19 @@ class HomeScreen extends GetView<HomeScreenController> {
 
               ///Banner list
               Visibility(
-                visible: controller.mBannerMaster.value.isNotEmpty,
+                  visible: controller.mBannerMaster.value.isNotEmpty,
                   child: Stack(
                     children: [
                       SizedBox(
                           height: 100.w * 0.5,
                           child: PageView.builder(
-                            controller: controller.introductionPageController.value,
+                            controller:
+                                controller.introductionPageController.value,
                             itemCount: controller.mBannerMaster.value.length,
                             itemBuilder: (context, index) {
                               return cacheImageHomeBanner(
                                 controller.mBannerMaster.value[index]
-                                    .bannerImagePath ??
+                                        .bannerImagePath ??
                                     '',
                                 ImageAssetsConstants.backLogo,
                                 100.w * 0.5,
@@ -102,7 +103,7 @@ class HomeScreen extends GetView<HomeScreenController> {
                             alignment: Alignment.bottomCenter,
                             child: SmoothPageIndicator(
                               controller:
-                              controller.introductionPageController.value,
+                                  controller.introductionPageController.value,
                               count: controller.mBannerMaster.value.length,
                               effect: WormEffect(
                                 dotHeight: 13.sp,
@@ -116,7 +117,7 @@ class HomeScreen extends GetView<HomeScreenController> {
                   )),
 
               ///DinePickup
-              DinePickupScreen(),
+              Visibility(visible: !kIsWeb, child: DinePickupScreen()),
 
               // ///Advertisement coffee
               // Container(

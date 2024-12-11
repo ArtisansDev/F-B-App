@@ -14,15 +14,15 @@ const hiveDbPath = 'TWT';
 
 void main() async {
   AppConstants.iAccessKey = 1;
-  WidgetsFlutterBinding.ensureInitialized();
-  HttpOverrides.global = WebHttpOverrides();
+  await WidgetsFlutterBinding.ensureInitialized();
+  HttpOverrides.global = await WebHttpOverrides();
   await dotenv.load(fileName: ".env");
 
   setupLocator();
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: ColorConstants.primaryBackgroundColor,
-    statusBarIconBrightness: Brightness.light,
-  ));
+  // SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+  //   statusBarColor: ColorConstants.primaryBackgroundColor,
+  //   statusBarIconBrightness: Brightness.light,
+  // ));
   runApp(
     // DevicePreview(
     //   enabled: !kReleaseMode,

@@ -215,7 +215,7 @@
         <entry key="fiuu_mobile_xdk_flutter">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../fiuu_mobile_xdk/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fiuu_mobile_xdk_flutter-3.34.15/lib" />
             </list>
           </value>
         </entry>
@@ -1394,6 +1394,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/file_selector_macos-0.9.4+2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/file_selector_platform_interface-2.6.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fiuu_mobile_xdk_flutter-3.34.15/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fixnum-1.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_cache_manager-3.4.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_dotenv-5.2.1/lib" />
@@ -1554,7 +1555,6 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xml-6.5.0/lib" />
       <root url="file://$PROJECT_DIR$/../f_b_base/lib" />
-      <root url="file://$PROJECT_DIR$/../fiuu_mobile_xdk/lib" />
       <root url="file://$PROJECT_DIR$/../qr_code_scanner-master/lib" />
       <root url="file://$PROJECT_DIR$/../../../flutter_sdk/flutter_3_24_3/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$PROJECT_DIR$/../../../flutter_sdk/flutter_3_24_3/packages/flutter/lib" />

@@ -66,7 +66,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_ios-6.3.2" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_macos-3.2.2" />
-      <root url="file://$PROJECT_DIR$/../fiuu_mobile_xdk" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fiuu_mobile_xdk_flutter-3.34.15" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:my_coffee/alert/app_alert.dart';
 import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/constants/message_constants.dart';
@@ -62,6 +63,7 @@ class HomeScreenController extends GetxController {
     if (_timer != null) {
       _timer!.cancel();
     }
+    super.dispose();
   }
 
   stopTimer() {
@@ -87,34 +89,34 @@ class HomeScreenController extends GetxController {
   RxList<GetBestSellerItemData> dataGetBestSellerItemData =
       <GetBestSellerItemData>[].obs;
 
-  void getBestSellerItemApi() {
-    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
-      if (isInternetAvailable) {
-        GetBestSellerItemRequest mGetBestSellerItemRequest =
-            GetBestSellerItemRequest(
-                branchIDF: "00000000-0000-0000-0000-000000000000",
-                restaurantIDF:
-                    (await SharedPrefs().getGeneralSetting()).restaurantIDF ??
-                        '');
-        WebResponseSuccess mWebResponseSuccess =
-            await localApi.postGetBestSellerItem(mGetBestSellerItemRequest);
-        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
-          GetBestSellerItemResponse mGetBestSellerItemResponse =
-              mWebResponseSuccess.data;
-          dataGetBestSellerItemData.value.clear();
-          dataGetBestSellerItemData.value
-              .addAll(mGetBestSellerItemResponse.data ?? []);
-          dataGetBestSellerItemData.refresh();
-        } else {
-          AppAlertBase.showSnackBar(
-              Get.context!, mWebResponseSuccess.statusMessage ?? '');
-        }
-      } else {
-        AppAlertBase.showSnackBar(
-            Get.context!, MessageConstants.noInternetConnection);
-      }
-    });
-  }
+  // void getBestSellerItemApi() {
+  //   NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+  //     if (isInternetAvailable) {
+  //       GetBestSellerItemRequest mGetBestSellerItemRequest =
+  //           GetBestSellerItemRequest(
+  //               branchIDF: "00000000-0000-0000-0000-000000000000",
+  //               restaurantIDF:
+  //                   (await SharedPrefs().getGeneralSetting()).restaurantIDF ??
+  //                       '');
+  //       WebResponseSuccess mWebResponseSuccess =
+  //           await localApi.postGetBestSellerItem(mGetBestSellerItemRequest);
+  //       if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+  //         GetBestSellerItemResponse mGetBestSellerItemResponse =
+  //             mWebResponseSuccess.data;
+  //         dataGetBestSellerItemData.value.clear();
+  //         dataGetBestSellerItemData.value
+  //             .addAll(mGetBestSellerItemResponse.data ?? []);
+  //         dataGetBestSellerItemData.refresh();
+  //       } else {
+  //         AppAlertBase.showSnackBar(
+  //             Get.context!, mWebResponseSuccess.statusMessage ?? '');
+  //       }
+  //     } else {
+  //       AppAlertBase.showSnackBar(
+  //           Get.context!, MessageConstants.noInternetConnection);
+  //     }
+  //   });
+  // }
 
   RxList<BannerMaster> mBannerMaster = <BannerMaster>[].obs;
   Rxn<GetDashboardResponse> mGetDashboardResponse = Rxn<GetDashboardResponse>();
@@ -156,28 +158,31 @@ class HomeScreenController extends GetxController {
 
   ///changeLocation
   changeLocation() async {
-    AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-    if ((mAddCartModel.mItems ?? []).isNotEmpty) {
-      AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
-          'This action will clear the items in your current basket. Do you want to proceed?',
-          () async {
-        await SharedPrefs().setAddCartData('');
+    if (!kIsWeb) {
+      AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+      if ((mAddCartModel.mItems ?? []).isNotEmpty) {
+        AppAlertBase.showCustomDialogYesNoLogout(
+            Get.context!, 'Proceed to Change?',
+            'This action will clear the items in your current basket. Do you want to proceed?',
+                () async {
+              await SharedPrefs().setAddCartData('');
+              final selectLocation =
+              await AppAlert.showCustomDialogLocationPicker(Get.context!);
+              Get.delete<LocationListScreenController>();
+              if (selectLocation.isNotEmpty) {
+                await SharedPrefs().setAddCartData('');
+                detDashboardDetailsApi();
+                getOrderDetails();
+              }
+            }, rightText: 'Ok');
+      } else {
         final selectLocation =
-            await AppAlert.showCustomDialogLocationPicker(Get.context!);
+        await AppAlert.showCustomDialogLocationPicker(Get.context!);
         Get.delete<LocationListScreenController>();
         if (selectLocation.isNotEmpty) {
-          await SharedPrefs().setAddCartData('');
           detDashboardDetailsApi();
           getOrderDetails();
         }
-      }, rightText: 'Ok');
-    } else {
-      final selectLocation =
-          await AppAlert.showCustomDialogLocationPicker(Get.context!);
-      Get.delete<LocationListScreenController>();
-      if (selectLocation.isNotEmpty) {
-        detDashboardDetailsApi();
-        getOrderDetails();
       }
     }
   }

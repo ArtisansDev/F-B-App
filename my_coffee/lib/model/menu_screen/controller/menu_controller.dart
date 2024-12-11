@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:my_coffee/alert/app_alert.dart';
 import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/constants/message_constants.dart';
@@ -93,15 +94,18 @@ class MenuScreenController extends GetxController {
       Get.find<DashboardScreenController>();
 
   changeLocation() async {
-    AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-    if ((mAddCartModel.mItems ?? []).isNotEmpty) {
-      AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
-          'This action will clear the items in your current basket. Do you want to proceed?',
-          () async {
+    if (!kIsWeb) {
+      AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+      if ((mAddCartModel.mItems ?? []).isNotEmpty) {
+        AppAlertBase.showCustomDialogYesNoLogout(
+            Get.context!, 'Proceed to Change?',
+            'This action will clear the items in your current basket. Do you want to proceed?',
+                () async {
+              callLocation();
+            }, rightText: 'Ok');
+      } else {
         callLocation();
-      }, rightText: 'Ok');
-    } else {
-      callLocation();
+      }
     }
   }
 
