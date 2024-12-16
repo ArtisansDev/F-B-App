@@ -8,6 +8,7 @@ import '../../../mode/get_all_branches_by_restaurant_id/get_all_branches_by_rest
 import '../../../mode/get_category/get_category_response.dart';
 import '../../../mode/get_category_item/get_category_item_response.dart';
 import '../../../mode/get_item_details/get_item_details_response.dart';
+import '../../../mode/get_seat_detail/get_seat_detail_response.dart';
 import '../../web_response.dart';
 import '../../web_response_failed.dart';
 import 'product_api.dart';
@@ -66,6 +67,43 @@ class ProductApiImpl extends AllApiImpl with ProductApi {
       mWebResponseSuccess = WebResponseSuccess(
         statusCode: cases.statusCode,
         data: mGetCategoryResponse,
+        statusMessage: "",
+        error: false,
+      );
+    } else if (cases.statusCode == WebConstants.statusCode404) {
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        statusMessage: 'No Data Found',
+        error: true,
+      );
+    } else {
+      GetCategoryResponse mGetCategoryResponse =
+      GetCategoryResponse.fromJson(processResponseToJson(cases));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        data: mGetCategoryResponse,
+        statusMessage: "",
+        error: false,
+      );
+    }
+    return mWebResponseSuccess;
+  }
+
+///post GetSeatDetail
+  @override
+  Future<WebResponseSuccess> postGetSeatDetail(
+      dynamic exhibitorsListRequest) async {
+    AppAlertBase.showProgressDialog(Get.context!);
+    WebConstants.auth = (await SharedPrefs().getUserToken()).isNotEmpty;
+    final cases = await mWebProvider.postWithRequest(
+        WebConstants.actionGetSeatDetail, exhibitorsListRequest);
+    AppAlertBase.hideLoadingDialog(Get.context!);
+    if (cases.statusCode == WebConstants.statusCode200) {
+      GetSeatDetailResponse mGetSeatDetailResponse =
+      GetSeatDetailResponse.fromJson(processResponseToJson(cases));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        data: mGetSeatDetailResponse,
         statusMessage: "",
         error: false,
       );

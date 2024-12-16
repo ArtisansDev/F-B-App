@@ -46,17 +46,15 @@ class PaymentDetailsView extends StatelessWidget {
                 ],
               ),
             ),
-
-        Container(
-        margin: EdgeInsets.only(left: 19.sp, right: 19.sp, top: 17.sp),
-        padding: EdgeInsets.only(
-        left: 18.sp, right: 18.sp, top: 18.sp, bottom: 18.sp),
-        decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(13.sp),
-        ),
-        child:
-              Column(
+            Container(
+              margin: EdgeInsets.only(left: 19.sp, right: 19.sp, top: 17.sp),
+              padding: EdgeInsets.only(
+                  left: 18.sp, right: 18.sp, top: 18.sp, bottom: 18.sp),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(13.sp),
+              ),
+              child: Column(
                 children: [
                   ListView.builder(
                       padding: EdgeInsets.zero,
@@ -83,7 +81,7 @@ class PaymentDetailsView extends StatelessWidget {
                                       heights: 1.3),
                                 ),
                                 Text(
-                                  '${controller.mDashboardScreenController.selectedCurrency.value} ${calculatePercentageOf(controller.subTotalAmount.value, mTaxData.taxPercentage ?? 0)}',
+                                  '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(calculatePercentageOf(controller.subTotalAmount.value, mTaxData.taxPercentage ?? 0)).toStringAsFixed(2)}',
                                   style: getTextRegular(
                                       size: 14.5.sp,
                                       colors: ColorConstants.buttonBar,

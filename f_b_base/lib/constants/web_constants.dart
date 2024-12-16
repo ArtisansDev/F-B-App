@@ -1,5 +1,7 @@
 
 
+import 'package:flutter/foundation.dart';
+
 import 'app_constants.dart';
 
 class WebConstants {
@@ -35,7 +37,7 @@ class WebConstants {
 
   /// Base URL
   static String baseUrlLive = "http://staging.artisanssolutions.com/api/";
-  static String baseUrlDev = "http://13.53.89.14:8012/api/";
+  static String baseUrlDev ="http://13.53.89.14:8012/api/";
   static String baseURL =
       AppConstants.isLiveURLToUse ? baseUrlLive : baseUrlDev;
 
@@ -60,6 +62,7 @@ class WebConstants {
   static String actionGetBestSellerItem =  "Menu/GetBestSellerItem";  //post
   static String actionGetAllBranchesByRestaurantID =  "Branch/getAllBranchesByResturantIDF";  //post
   static String actionGetCategory =  "Menu/GetCategory";  //post
+  static String actionGetSeatDetail =  "getSeatDetail";  //post
   static String actionGetCategoryItem =  "Menu/GetCategoryItem";  //post
   static String actionGetItemDetails =  "Menu/GetItemDetails";  //post
   static String actionOrderPlace =  "Order/ProcessOrder";  //post

@@ -1,5 +1,6 @@
 // ignore_for_file: depend_on_referenced_packages, deprecated_member_use
 
+import 'package:f_b_base/constants/app_constants.dart';
 import 'package:f_b_base/lang/translation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -36,7 +37,7 @@ class MyAppTheme extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           debugShowMaterialGrid: false,
-          title: 'YUM',
+          title: AppConstants.iAccessKey == 1 ? 'YUM' : 'TWT',
           theme: myLightTheme(context),
           darkTheme: myDarkTheme(context),
           defaultTransition: Transition.leftToRightWithFade,

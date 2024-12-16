@@ -61,7 +61,7 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                       ),
                       if (controller.result.value != null)
                         Text(
-                          'Data: ${controller.result.value!.code}',
+                          'Scan a code',
                           style: getText500(
                               colors: ColorConstants.buttonBar, size: 18.sp),
                         )
@@ -126,18 +126,6 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                         ),
                         child: Row(
                           children: [
-                            // GestureDetector(
-                            //     onTap: () {
-                            //       // controller.changeLocation();
-                            //     },
-                            //     child: SizedBox(
-                            //       child: setImage(ImageAssetsConstants.homeLocation),
-                            //       height: 20.sp,
-                            //       width: 20.sp,
-                            //     )),
-                            // SizedBox(
-                            //   width: 15.sp,
-                            // ),
                             Expanded(
                               child: GestureDetector(
                                   onTap: () {

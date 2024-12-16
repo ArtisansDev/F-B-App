@@ -11,6 +11,8 @@ import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
+import 'package:f_b_base/data/mode/get_seat_detail/get_saat_details_request.dart';
+import 'package:f_b_base/data/mode/get_seat_detail/get_seat_detail_response.dart';
 import 'package:f_b_base/data/remote/api_call/general_api/general_api.dart';
 import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
 import 'package:f_b_base/data/remote/web_response.dart';
@@ -35,8 +37,10 @@ class IntroductionScreenController extends GetxController {
   Rx<LatLng> centerLatLng = const LatLng(0, 0).obs;
   final localApi = locator.get<GeneralApi>();
 
-  Rxn<String> selectTableNo = Rxn<String>();
-  Rxn<String> selectBranchIDF = Rxn<String>();
+  Rxn<String> seatID = Rxn<String>();
+
+  // Rxn<String> selectTableNo = Rxn<String>();
+  // Rxn<String> selectBranchIDF = Rxn<String>();
 
   void goToNextPage() {
     generalSettingApiCall();
@@ -88,13 +92,19 @@ class IntroductionScreenController extends GetxController {
           await SharedPrefs()
               .setGeneralSetting(jsonEncode(mGetGeneralSettingData));
           if (kIsWeb) {
-            await SharedPrefs().setAddCartData(jsonEncode(AddCartModel(
-                sTableNo: selectTableNo.value ?? '', sType: 'Dine')));
-            await getGetAllBranchesApi(selectBranchIDF.value??'');
+            if((seatID.value ?? '').isNotEmpty){
+              await getGetSeatDetailApi(seatID.value ?? '');
+              Get.offNamed(
+                RouteConstants.rDashboardScreen,
+              );
+            }else {
+              AppAlertBase.showSnackBar(Get.context!, 'Please Scanner your qrcode');
+            }
+          }else {
+            Get.offNamed(
+              RouteConstants.rDashboardScreen,
+            );
           }
-          Get.offNamed(
-            RouteConstants.rDashboardScreen,
-          );
         } else {
           AppAlertBase.showSnackBar(Get.context!, 'restaurant id not found');
         }
@@ -108,12 +118,43 @@ class IntroductionScreenController extends GetxController {
     }
   }
 
+  ///api getGetSeatDetailApi
+  getGetSeatDetailApi(String seatID) async {
+    await NetworkUtils()
+        .checkInternetConnection()
+        .then((isInternetAvailable) async {
+      if (isInternetAvailable) {
+        GetSaatDetailsRequest mGetSaatDetailsRequest =
+            GetSaatDetailsRequest(seatID: seatID);
+        WebResponseSuccess mWebResponseSuccess = await locator
+            .get<ProductApi>()
+            .postGetSeatDetail(mGetSaatDetailsRequest);
+
+        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+          GetSeatDetailResponse mGetSeatDetailResponse =
+              mWebResponseSuccess.data;
+          await SharedPrefs().setAddCartData(jsonEncode(AddCartModel(
+              sTableNo: mGetSeatDetailResponse.data?.seatNumber??'', sType: 'Dine')));
+          await getGetAllBranchesApi(mGetSeatDetailResponse.data?.branchIDF??'');
+        } else {
+          AppAlertBase.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+        }
+      } else {
+        AppAlertBase.showSnackBar(
+            Get.context!, MessageConstants.noInternetConnection);
+      }
+    });
+  }
+
   ///mGetAllBranchesListData
   RxList<GetAllBranchesListData> mGetAllBranchesListData =
       <GetAllBranchesListData>[].obs;
 
-   getGetAllBranchesApi(String selectBranchIDF) async{
-    await NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+  getGetAllBranchesApi(String selectBranchIDF) async {
+    await NetworkUtils()
+        .checkInternetConnection()
+        .then((isInternetAvailable) async {
       if (isInternetAvailable) {
         GetAllBranchesByRestaurantIdRequest
             mGetAllBranchesByRestaurantIdRequest =
@@ -136,13 +177,16 @@ class IntroductionScreenController extends GetxController {
           mGetAllBranchesListData.value.clear();
           mGetAllBranchesListData.value
               .addAll(mGetAllBranchesByRestaurantIdResponse.data?.data ?? []);
-          int trendIndex = mGetAllBranchesListData.value.indexWhere((element) {
-            return element.branchIDP.toString() == selectBranchIDF;
-          }, );
+          int trendIndex = mGetAllBranchesListData.value.indexWhere(
+            (element) {
+              return element.branchIDP.toString() == selectBranchIDF;
+            },
+          );
 
-          if(trendIndex!=-1){
+          if (trendIndex != -1) {
             debugPrint("#######trendIndex ${trendIndex}");
-            await SharedPrefs().setBranchesData(jsonEncode(mGetAllBranchesListData.value[trendIndex]));
+            await SharedPrefs().setBranchesData(
+                jsonEncode(mGetAllBranchesListData.value[trendIndex]));
           }
         } else {
           AppAlertBase.showSnackBar(

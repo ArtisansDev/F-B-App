@@ -1,12 +1,17 @@
+import 'package:f_b_base/constants/app_constants.dart';
 
 class ImageAssetsConstants {
   // COMMON
-  static String appLogo = "assets/yum_app_logo.png";
-  // static String appLogo = "assets/app_logo.png";
-  // static String buttonLogo = "assets/buttom_logo.png";
-  static String buttonLogo = "assets/buttom_image.png";
-  static String appLogoT = appLogo;//"assets/app_logo_t.png";
-  static String backLogo = buttonLogo;//"assets/back_logo.png";
+  static String appLogo = AppConstants.iAccessKey == 1
+      ? "assets/yum_app_logo.png"
+      : "assets/app_logo.png";
+  static String buttonLogo = AppConstants.iAccessKey == 1
+      ? "assets/buttom_image.png"
+      : "assets/buttom_logo.png";
+  static String appLogoT =
+      AppConstants.iAccessKey == 1 ? appLogo : "assets/app_logo_t.png";
+  static String backLogo =
+      AppConstants.iAccessKey == 1 ? buttonLogo : "assets/back_logo.png";
 
   ///
   static String appLogoSvg = "assets/app_logo_svg.png";
@@ -20,6 +25,7 @@ class ImageAssetsConstants {
   static String take = "assets/take.png";
   static String profile = "assets/profile.png";
   static String off = "assets/off.png";
+
   ///introduction
   static String introductionImage3 = "assets/introduction/introduction_3.jpg";
   static String introductionImage4 = "assets/introduction/introduction_4.jpg";
@@ -64,14 +70,13 @@ class ImageAssetsConstants {
   static String shopName = "assets/coffee_details/shope_name.png";
   static String timeDuotoneLine = "assets/coffee_details/time_duotone_line.png";
 
-
   ///introduction
 
   static String homeBastSale = "assets/home/bast_sale.png";
   static String homeHomeGift = "assets/home/home_gift.png";
   static String homeLocation = "assets/home/location.png";
   static String homeSearch = "assets/home/search.png";
-  static String homeLocationPin= "assets/home/location_pin.png";
+  static String homeLocationPin = "assets/home/location_pin.png";
 
   ///login
   static String loginSms = "assets/login/sms.png";
@@ -89,10 +94,7 @@ class ImageAssetsConstants {
   static String iconMenu5 = "assets/svg/icon_menu5.svg";
   static String addCart = "assets/svg/add_cart.svg";
 
-///payment_service images
+  ///payment_service images
   static String paypal = "assets/payment/paypal.png";
   static String internet = "assets/payment/internet.png";
-
-
-
 }

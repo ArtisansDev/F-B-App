@@ -9,6 +9,7 @@
  */
 
 import 'package:f_b_base/common/custom_image.dart';
+import 'package:f_b_base/constants/app_constants.dart';
 import 'package:f_b_base/constants/color_constants.dart';
 import 'package:f_b_base/constants/image_assets_constants.dart';
 import 'package:f_b_base/constants/text_styles_constants.dart';
@@ -59,7 +60,7 @@ class DashboardNavigationScreen extends StatelessWidget {
             Expanded(
                 child: bottomBarRowView(controller.selectedIndex.value, 0,
                     ImageAssetsConstants.iconMenu1, sHome.tr,
-                    imageAsset: ImageAssetsConstants.buttonLogo)),
+                    imageAsset: AppConstants.iAccessKey ==1?ImageAssetsConstants.buttonLogo:null)),
             Expanded(
                 child: bottomBarRowView(controller.selectedIndex.value, 1,
                     ImageAssetsConstants.iconMenu2, sMenu.tr)),

@@ -1,1 +1,0 @@
-com.rms.rms_mobile_xdk_flutter

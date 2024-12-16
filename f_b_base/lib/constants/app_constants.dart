@@ -6,7 +6,7 @@ class AppConstants {
   static const String platformIOS = "IOS";
 
   ///live url
-  static const bool isLiveURLToUse = false;
+  static const bool isLiveURLToUse = true;
 
   ///Web Log
   static const bool isWebLogToPrint = false;

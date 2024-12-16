@@ -20,12 +20,14 @@ import 'general_api.dart';
 
 class GeneralApiImpl extends AllApiImpl with GeneralApi {
 
-  ///Get GeneralSetting
+  ///Post GeneralSetting
   @override
   Future<WebResponseSuccess> postGeneralSetting() async {
     AppAlertBase.showProgressDialog(Get.context!);
     final cases = await mWebProvider.postWithRequest(
         WebConstants.actionGetGeneralSetting, GetGeneralSettingRequest());
+    // final cases =  await WebHttpProvider()
+    //     .getWithRequest(WebConstants.actionGetGeneralSetting, GetGeneralSettingRequest());
     AppAlertBase.hideLoadingDialog(Get.context!);
     if (cases.statusCode != WebConstants.statusCode200) {
       mWebResponseSuccess = WebResponseSuccess(
