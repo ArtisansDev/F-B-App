@@ -11,6 +11,7 @@
  */
 
 import 'package:f_b_base/common/custom_image.dart';
+import 'package:f_b_base/constants/app_constants.dart';
 import 'package:f_b_base/constants/color_constants.dart';
 import 'package:f_b_base/constants/image_assets_constants.dart';
 import 'package:f_b_base/constants/text_styles_constants.dart';
@@ -143,7 +144,9 @@ class PaymentMethodView extends StatelessWidget {
                                   ],
                                 ),
                                 Visibility(
-                                  visible: index != controller.paymentTypeList.value.length-1,
+                                  visible: index !=
+                                      controller.paymentTypeList.value.length -
+                                          1,
                                   child: Container(
                                     width: double.infinity,
                                     height: 3.sp,
@@ -183,7 +186,7 @@ class PaymentMethodView extends StatelessWidget {
                   margin:
                       EdgeInsets.only(left: 21.sp, right: 19.sp, top: 13.sp),
                   child: Text(
-                    'Enjoy Faster checkout by paying with ${sAppName.tr} Balance!',
+                    'Enjoy Faster checkout by paying with ${AppConstants.iAccessKey == 1 ? sAppNameYUM.tr : sAppNameTWT.tr} Balance!',
                     style: getTextRegular(
                         size: 14.5.sp,
                         colors: ColorConstants.buttonBar,

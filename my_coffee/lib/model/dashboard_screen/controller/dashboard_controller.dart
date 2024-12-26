@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:f_b_base/constants/app_constants.dart';
 import 'package:flutter/foundation.dart';
 import 'package:my_coffee/alert/app_alert.dart';
 import 'package:f_b_base/alert/app_alert_base.dart';
@@ -10,7 +11,6 @@ import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_coffee/model/profile_screen/view/profile_screen.dart';
-
 
 import '../../../routes/route_constants.dart';
 import '../../history_screen/view/history_screen.dart';
@@ -33,7 +33,7 @@ class DashboardScreenController extends GetxController {
 
   void onItemTapped(int value) async {
     if (selectedIndex.value != value) {
-      if (value > 1 && await checkLoginStatus() ) {
+      if (value > 1 && await checkLoginStatus()) {
         openLoginView();
         return;
       }
@@ -47,7 +47,17 @@ class DashboardScreenController extends GetxController {
           return;
         }
       }
-
+      bool isGuestUser = await SharedPrefs().getGuestUser();
+      // if (value == 3 && isGuestUser) {
+      //   AppAlertBase.showSnackBar(Get.context!,
+      //       'Your are the gust user so you can\'t able to see the profile');
+      //   return;
+      // }
+      // if (value == 2 && isGuestUser) {
+      //   AppAlertBase.showSnackBar(Get.context!,
+      //       'Your are the gust user so you can\'t able to see the history');
+      //   return;
+      // }
       if (value != 3) {
         if (Get.isRegistered<ProfileScreenController>()) {
           Get.find<ProfileScreenController>().dispose();
@@ -156,7 +166,7 @@ class DashboardScreenController extends GetxController {
           if (selectLocation.isNotEmpty) {
             selectedIndex.value = 1;
           }
-        }else {
+        } else {
           selectedIndex.value = 1;
         }
       } else if (sDialogPicDine.value == 'Take') {
@@ -201,7 +211,9 @@ class DashboardScreenController extends GetxController {
             .setAddCartData(jsonEncode(AddCartModel(sType: title)));
         return true;
       } else {
-        AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
+        AppAlertBase.showCustomDialogYesNoLogout(
+            Get.context!,
+            'Proceed to Change?',
             'This action will clear the items in your current basket. Do you want to proceed?',
             () async {
           await SharedPrefs()
@@ -225,12 +237,14 @@ class DashboardScreenController extends GetxController {
   }
 
   ///Title top bar
-  RxString sTitle = sAppName.tr.obs;
+  RxString sTitle =
+      (AppConstants.iAccessKey == 1 ? sAppNameYUM.tr : sAppNameTWT.tr).obs;
 
   void selectTitle(int value) {
     switch (value) {
       case 0:
-        sTitle.value = sAppName.tr;
+        sTitle.value =
+            (AppConstants.iAccessKey == 1 ? sAppNameYUM.tr : sAppNameTWT.tr);
         return;
       case 1:
         sTitle.value = sMenu.tr;

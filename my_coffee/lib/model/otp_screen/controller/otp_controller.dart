@@ -93,6 +93,7 @@ class OtpScreenController extends GetxController {
                   .setUserToken(mVerifyOtpResponse.data?.accessToken ?? '');
               await SharedPrefs()
                   .setUserId(mVerifyOtpResponse.data?.userId ?? '');
+              await SharedPrefs().guestUser(false);
               Future.delayed(const Duration(milliseconds: 500), () {});
               await getUserDetails();
               Get.until((route) {
@@ -111,7 +112,7 @@ class OtpScreenController extends GetxController {
             AppAlertBase.showSnackBar(
                 Get.context!, mVerifyOtpResponse.statusMessage ?? "");
           }
-        }else {
+        } else {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? "");
         }
@@ -127,6 +128,8 @@ class OtpScreenController extends GetxController {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
         LoginRequest mLoginRequest = LoginRequest(
+            restaurantIDF:
+                (await SharedPrefs().getGeneralSetting()).restaurantIDF ?? '',
             phoneNumber:
                 mLoginScreenController.mobileNumberController.value.text,
             countryCode: '+${mLoginScreenController.phoneCode}');

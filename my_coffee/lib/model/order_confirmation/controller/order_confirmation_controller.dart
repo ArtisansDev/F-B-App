@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-
 import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/constants/message_constants.dart';
 import 'package:f_b_base/constants/web_constants.dart';
@@ -209,7 +208,8 @@ class OrderConfirmationScreenController extends GetxController {
                   : null);
 
       ///OrderPlaceRequest
-      debugPrint("\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
+      debugPrint(
+          "\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest.orderPlaceGuestInfoRequest)}\n");
 
       getOrderPlaceApi(mOrderPlaceRequest);
     }
@@ -245,13 +245,15 @@ class OrderConfirmationScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           ProcessOrderResponse mProcessOrderResponse = mWebResponseSuccess.data;
           AppAlertBase.showSnackBar(Get.context!, 'Order place successfully');
-          await SharedPrefs().setAddCartData('');
+          AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+          mAddCartModel.mItems = null;
+          mAddCartModel.sOrderDateTime = '';
+          await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
           OrderPlaceShare mOrderPlaceShare = OrderPlaceShare(
-            data: mProcessOrderResponse.data??'',
+              data: mProcessOrderResponse.data ?? '',
               paymentGatewayNo: paymentTypeList.value.length > paymentType.value
-                ? paymentTypeList.value[paymentType.value].paymentGatewayNo
-                : '0'
-          );
+                  ? paymentTypeList.value[paymentType.value].paymentGatewayNo
+                  : '0');
           await SharedPrefs().setProcessOrderId(jsonEncode(mOrderPlaceShare));
           mDashboardScreenController.selectedIndex.value = 2;
           mDashboardScreenController.selectTitle(2);

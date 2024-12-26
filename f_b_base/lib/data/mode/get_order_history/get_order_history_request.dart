@@ -2,20 +2,25 @@
 
 class GetOrderHistoryRequest {
   GetOrderHistoryRequest({
-      this.userIDF, this.rowsPerPage, this.pageNumber,});
+      this.userIDF,this.orderID, this.rowsPerPage, this.pageNumber,});
 
   GetOrderHistoryRequest.fromJson(dynamic json) {
     rowsPerPage = json['RowsPerPage'];
     pageNumber = json['PageNumber'];
     userIDF = json['UserIDF'];
+    orderID = json['OrderID'];
   }
   String? userIDF;
+  String? orderID;
   int? pageNumber;
   int? rowsPerPage;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['UserIDF'] = userIDF;
+    if(orderID!=null) {
+      map['OrderID'] = orderID;
+    }
     map['RowsPerPage'] = rowsPerPage??0;
     map['PageNumber'] = pageNumber??1;
     return map;

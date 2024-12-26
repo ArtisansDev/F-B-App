@@ -1,6 +1,6 @@
 {
-    "name": "my_coffee",
-    "short_name": "my_coffee",
+    "name": "twt",
+    "short_name": "twt",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

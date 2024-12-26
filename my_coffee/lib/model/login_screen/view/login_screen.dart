@@ -8,6 +8,7 @@ import 'package:f_b_base/constants/pattern_constants.dart';
 import 'package:f_b_base/constants/text_styles_constants.dart';
 import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:f_b_base/utils/app_utils.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:focus_detector/focus_detector.dart';
@@ -52,15 +53,15 @@ class LoginScreen extends GetView<LoginScreenController> {
                 child: Stack(
                   children: [
                     Align(
-                      alignment: Alignment.bottomRight,
-                      child:Opacity(
-                        opacity: 0.5, // Set opacity here
-                        child:  Image.asset(
-                        ImageAssetsConstants.buttonLogo,
-                        width: 40.w,
-                        fit: BoxFit.contain,
-                      ),)
-                    ),
+                        alignment: Alignment.bottomRight,
+                        child: Opacity(
+                          opacity: 0.5, // Set opacity here
+                          child: Image.asset(
+                            ImageAssetsConstants.buttonLogo,
+                            width: 40.w,
+                            fit: BoxFit.contain,
+                          ),
+                        )),
                     mLoginView(),
                   ],
                 ))));
@@ -157,24 +158,29 @@ class LoginScreen extends GetView<LoginScreenController> {
               SizedBox(
                 height: 16.5.sp,
               ),
-              // Container(
-              //   margin: EdgeInsets.only(
-              //     left: 28.sp,
-              //     right: 28.sp,
-              //   ),
-              //   child: rectangleRoundedCornerButtonBold('Whats App', () {
-              //     controller.isLogin('wp');
-              //   },
-              //       bgColor: ColorConstants.yourKeySkillsColor1,
-              //       textColor: Colors.white,
-              //       height: 28.sp,
-              //       mIconData: ImageAssetsConstants.loginWp,
-              //       mIconSize: 20.sp,
-              //       size: 17.sp),
-              // ),
-              // SizedBox(
-              //   height: 15.sp,
-              // ),
+              Visibility(
+                  visible: kIsWeb,
+                  child: Container(
+                    margin: EdgeInsets.only(
+                      left: 28.sp,
+                      right: 28.sp,
+                    ),
+                    child: rectangleRoundedCornerButtonBold('Guest', () {
+                      controller.isGuest();
+                    },
+                        bgColor: ColorConstants.yourKeySkillsColor4,
+                        textColor: Colors.white,
+                        height: 28.sp,
+
+                        ///mIconData: ImageAssetsConstants.loginWp,
+                        mIconSize: 20.sp,
+                        size: 17.sp),
+                  )),
+              Visibility(
+                  visible: kIsWeb,
+                  child: SizedBox(
+                    height: 15.sp,
+                  )),
               Container(
                 margin: EdgeInsets.only(
                   left: 28.sp,

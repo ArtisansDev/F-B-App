@@ -3,6 +3,8 @@ class MessageConstants {
 
   // Common
   static const String noInternetConnection = "Please check your internet connection";
+  static const String qrCodeNotMach = "This qr code not match for this restaurant";
+  static const String brancheNotMach = "This branche not exit for this restaurant";
   static const String webserviceUnProcessed =
       "Unable to process your request right now";
   static const String noDataFound = "No Result Found!";

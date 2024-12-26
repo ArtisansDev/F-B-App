@@ -56,6 +56,48 @@ class UserAuthenticationApiImpl extends AllApiImpl with UserAuthenticationApi {
     return mWebResponseSuccess;
   }
 
+
+  ///post Guest Login
+  @override
+  Future<WebResponseSuccess> postGuestLogin() async {
+    AppAlertBase.showProgressDialog(Get.context!);
+    WebConstants.auth = false;
+    final cases = await mWebProvider.postWithoutRequest(WebConstants.actionGuestLogin);
+    debugPrint(
+        "plainJsonRequest statusCode ==  ${jsonEncode(cases.statusCode)}");
+    debugPrint("plainJsonRequest ==  ${jsonEncode(cases.body)}");
+    AppAlertBase.hideLoadingDialog(Get.context!);
+    if (cases.statusCode == WebConstants.statusCode409) {
+      mWebResponseFailed =
+          WebResponseFailed.fromJson(processResponseToJson(cases));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        // data: mWebResponseFailed,
+        statusMessage: mWebResponseFailed.statusMessage,
+        error: true,
+      );
+    } else if (cases.statusCode != WebConstants.statusCode200) {
+      mWebResponseFailed =
+          WebResponseFailed.fromJson(processResponseToJson(cases));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        // data: mWebResponseFailed,
+        statusMessage: mWebResponseFailed.statusMessage,
+        error: true,
+      );
+    } else {
+      VerifyOtpResponse mVerifyOtpResponse =
+      VerifyOtpResponse.fromJson(processResponseToJson(cases));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        data: mVerifyOtpResponse,
+        statusMessage: "",
+        error: false,
+      );
+    }
+    return mWebResponseSuccess;
+  }
+
   ///post VerifyOTP
   @override
   Future<WebResponseSuccess> postVerifyOTP(

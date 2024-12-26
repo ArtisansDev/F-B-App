@@ -1,3 +1,5 @@
+import 'order_place_guest_info_request.dart';
+
 /// TrackingOrderID : "123456789012"
 /// OrderNo : "1"
 /// UserIDF : "c4c82cc9-0f4e-4fa8-b440-d72a823a309f"
@@ -20,29 +22,31 @@
 
 class OrderPlaceRequest {
   OrderPlaceRequest({
-      this.trackingOrderID, 
-      this.orderNo, 
-      this.userIDF, 
-      this.orderType, 
-      this.orderSource, 
-      this.restaurentIDP, 
-      this.branchIDF, 
-      this.orderDate, 
-      this.orderMenu, 
-      this.orderTax, 
-      this.quantityTotal, 
-      this.itemTotal, 
-      this.modifierTotal, 
-      this.discountTotal, 
-      this.itemTaxTotal, 
-      this.subTotal, 
-      this.taxAmountTotal, 
-      this.totalAmount,
-      this.grandTotal,
-      this.additionalNotes,
-      this.paymentGatewayID,
-      this.paymentGatewaySettingID,
-      this.tableNo,
+    this.trackingOrderID,
+    this.orderNo,
+    this.userIDF,
+    this.orderType,
+    this.orderSource,
+    this.restaurentIDP,
+    this.branchIDF,
+    this.orderDate,
+    this.orderMenu,
+    this.orderTax,
+    this.quantityTotal,
+    this.itemTotal,
+    this.modifierTotal,
+    this.discountTotal,
+    this.itemTaxTotal,
+    this.subTotal,
+    this.taxAmountTotal,
+    this.totalAmount,
+    this.grandTotal,
+    this.additionalNotes,
+    this.paymentGatewayID,
+    this.paymentGatewaySettingID,
+    this.tableNo,
+    this.seatIDF,
+    this.orderPlaceGuestInfoRequest,
   });
 
   OrderPlaceRequest.fromJson(dynamic json) {
@@ -79,7 +83,12 @@ class OrderPlaceRequest {
     paymentGatewayID = json['PaymentGatewayID'];
     paymentGatewaySettingID = json['PaymentGatewaySettingID'];
     tableNo = json['TableNo'];
+    seatIDF = json['SeatIDF'];
+    orderPlaceGuestInfoRequest = json['GuestInfo'] != null
+        ? OrderPlaceGuestInfoRequest.fromJson(json['GuestInfo'])
+        : null;
   }
+
   String? trackingOrderID;
   String? orderNo;
   String? userIDF;
@@ -103,6 +112,8 @@ class OrderPlaceRequest {
   String? paymentGatewayID;
   String? paymentGatewaySettingID;
   String? tableNo;
+  String? seatIDF;
+  OrderPlaceGuestInfoRequest? orderPlaceGuestInfoRequest;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -127,16 +138,18 @@ class OrderPlaceRequest {
     map['PaymentGatewayID'] = paymentGatewayID;
     map['PaymentGatewaySettingID'] = paymentGatewaySettingID;
     map['TableNo'] = tableNo;
+    map['SeatIDF'] = seatIDF;
     if (orderTax != null) {
       map['OrderTax'] = orderTax?.map((v) => v.toJson()).toList();
     }
     if (orderMenu != null) {
       map['OrderMenu'] = orderMenu?.map((v) => v.toJson()).toList();
     }
-
+    if (orderPlaceGuestInfoRequest != null) {
+      map['GuestInfo'] = orderPlaceGuestInfoRequest?.toJson();
+    }
     return map;
   }
-
 }
 
 /// TaxIDP : "e3e3b054-1c62-4e7d-b46a-2d841e7b6c67"
@@ -146,10 +159,11 @@ class OrderPlaceRequest {
 
 class OrderTax {
   OrderTax({
-      this.taxIDP, 
-      this.taxName, 
-      this.taxPercentage, 
-      this.taxAmount,});
+    this.taxIDP,
+    this.taxName,
+    this.taxPercentage,
+    this.taxAmount,
+  });
 
   OrderTax.fromJson(dynamic json) {
     taxIDP = json['TaxIDF'];
@@ -157,6 +171,7 @@ class OrderTax {
     taxPercentage = json['TaxPercentage'];
     taxAmount = json['TaxAmount'];
   }
+
   String? taxIDP;
   String? taxName;
   double? taxPercentage;
@@ -170,7 +185,6 @@ class OrderTax {
     map['TaxAmount'] = taxAmount;
     return map;
   }
-
 }
 
 /// MenuItemIDF : "21b56882-54a3-45bc-8fd6-597e345d08c0"
@@ -189,25 +203,25 @@ class OrderTax {
 
 class OrderMenu {
   OrderMenu({
-      this.menuItemIDF, 
-      this.variantIDF, 
-      this.quantity, 
-      this.discountPercentage, 
-      this.discountedItemTotalAmount,
-      this.itemName,
-      this.itemTaxPercent, 
-      this.allModifierPrices, 
-      this.allModifierIDFs, 
-      this.variantPrice, 
-      this.itemVariantName,
-      this.itemDiscountPrice,
-      this.discountedItemAmount,
-      this.itemDiscountPriceTotal,
-      this.itemTaxPrice,
-      this.itemModifierTotal, 
-      this.itemTotalTaxPrice,
-      this.itemTotal,
-      this.totalItemAmount,
+    this.menuItemIDF,
+    this.variantIDF,
+    this.quantity,
+    this.discountPercentage,
+    this.discountedItemTotalAmount,
+    this.itemName,
+    this.itemTaxPercent,
+    this.allModifierPrices,
+    this.allModifierIDFs,
+    this.variantPrice,
+    this.itemVariantName,
+    this.itemDiscountPrice,
+    this.discountedItemAmount,
+    this.itemDiscountPriceTotal,
+    this.itemTaxPrice,
+    this.itemModifierTotal,
+    this.itemTotalTaxPrice,
+    this.itemTotal,
+    this.totalItemAmount,
   });
 
   OrderMenu.fromJson(dynamic json) {
@@ -231,6 +245,7 @@ class OrderMenu {
     itemTotal = json['ItemTotal'];
     totalItemAmount = json['TotalItemAmount'];
   }
+
   String? menuItemIDF;
   String? variantIDF;
   int? quantity;
@@ -274,5 +289,4 @@ class OrderMenu {
     map['TotalItemAmount'] = totalItemAmount;
     return map;
   }
-
 }

@@ -13,7 +13,9 @@
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 
+import '../constants/app_constants.dart';
 import '../data/local/shared_prefs/shared_prefs.dart';
 import '../data/mode/add_cart/add_cart.dart';
 import '../data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
@@ -183,46 +185,49 @@ createOrderPlaceRequest(
 
   ///OrderPlaceRequest
   OrderPlaceRequest mOrderPlaceRequest = OrderPlaceRequest(
-    trackingOrderID: trackingOrderID,
-    orderSource: "1",
-    orderType: mAddCartModel.sType == 'Dine' ? '1' : '2',
-    orderNo: '',
-    branchIDF: selectGetAllBranchesListData.branchIDP,
-    userIDF: mUserDetailsResponseData.userID,
-    restaurentIDP: restaurantIDF,
-    additionalNotes: remarksController ?? '',
-    orderDate: orderDate,
+      trackingOrderID: trackingOrderID,
+      orderSource: kIsWeb ?"3":"1",
+      orderType: mAddCartModel.sType == 'Dine' ? '1' : '2',
+      orderNo: '',
+      branchIDF: selectGetAllBranchesListData.branchIDP,
+      userIDF: mUserDetailsResponseData.userID,
+      restaurentIDP: restaurantIDF,
+      additionalNotes: remarksController ?? '',
+      orderDate: orderDate,
 
-    ///quantityTotal
-    quantityTotal: quantityTotal,
+      ///quantityTotal
+      quantityTotal: quantityTotal,
 
-    ///subTotal
-    itemTotal: totalAmount,
-    modifierTotal: modifierTotal,
-    itemTaxTotal: itemTaxTotal,
-    discountTotal: discountTotal,
-    subTotal: subTotal,
+      ///subTotal
+      itemTotal: totalAmount,
+      modifierTotal: modifierTotal,
+      itemTaxTotal: itemTaxTotal,
+      discountTotal: discountTotal,
+      subTotal: subTotal,
 
-    ///grandTotal
-    taxAmountTotal: getDoubleValue(taxTotal),
-    totalAmount: getDoubleValue(subTotal + taxTotal),
-    grandTotal: getDoubleValue(subTotal + taxTotal),
+      ///grandTotal
+      taxAmountTotal: getDoubleValue(taxTotal),
+      totalAmount: getDoubleValue(subTotal + taxTotal),
+      grandTotal: getDoubleValue(subTotal + taxTotal),
 
-    ///table no
-    tableNo: mAddCartModel.sType == 'Dine'
-        ? mAddCartModel.sTableNo
-        :  '',
+      ///table no
+      tableNo: mAddCartModel.sType == 'Dine' ? mAddCartModel.sTableNo : '',
+      seatIDF: mAddCartModel.sType == 'Dine' ? AppConstants.seatIDF : '',
 
-    ///payment_service
-    paymentGatewayID: mPaymentTypeResponseData?.paymentGatewayIDP??'',
-    paymentGatewaySettingID: mPaymentTypeResponseData?.paymentGatewaySettingIDP??'',
+      ///payment_service
+      paymentGatewayID: mPaymentTypeResponseData?.paymentGatewayIDP ?? '',
+      paymentGatewaySettingID:
+          mPaymentTypeResponseData?.paymentGatewaySettingIDP ?? '',
 
-    ///orderTax
-    orderTax: orderTaxList,
+      ///orderTax
+      orderTax: orderTaxList,
 
-    ///orderMenu
-    orderMenu: orderMenu,
-  );
+      ///orderMenu
+      orderMenu: orderMenu,
+
+      ///orderPlaceGuestInfoRequest
+      orderPlaceGuestInfoRequest:
+          kIsWeb ? await SharedPrefs().getOrderPlaceGuest() : null);
 
   return mOrderPlaceRequest;
 }

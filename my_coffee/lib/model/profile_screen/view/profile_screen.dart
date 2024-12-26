@@ -63,7 +63,8 @@ class ProfileScreen extends GetView<ProfileScreenController> {
           // getStartedView(),
 
           ///placeAnOrder
-          placeAnOrder(),
+          Visibility(
+              visible: !(controller.isGuestUser.value), child: placeAnOrder()),
 
           // ///Especially For You
           // especiallyForYou(),
@@ -153,27 +154,30 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                   RouteConstants.rUpdateProfileScreen,
                 );
               },
-              child: Container(
-                height: 8.w,
-                width: 8.w,
-                decoration: BoxDecoration(
-                  color: Colors.black87,
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: ColorConstants.buttonBar.withOpacity(0.05),
-                      spreadRadius: 1,
-                      blurRadius: 3,
-                      offset: const Offset(0, -2), // changes position of shadow
+              child: Visibility(
+                  visible: !(controller.isGuestUser.value),
+                  child: Container(
+                    height: 8.w,
+                    width: 8.w,
+                    decoration: BoxDecoration(
+                      color: Colors.black87,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: ColorConstants.buttonBar.withOpacity(0.05),
+                          spreadRadius: 1,
+                          blurRadius: 3,
+                          offset:
+                              const Offset(0, -2), // changes position of shadow
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                child: Icon(
-                  Icons.edit,
-                  color: ColorConstants.cAppColorsBlue,
-                  size: 18.sp,
-                ),
-              ),
+                    child: Icon(
+                      Icons.edit,
+                      color: ColorConstants.cAppColorsBlue,
+                      size: 18.sp,
+                    ),
+                  )),
             ),
           ],
         ));
@@ -517,8 +521,12 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                   height: 4.sp,
                   color: Colors.grey.shade300,
                 ),
-                imageAndText(ImageAssetsConstants.profile11, 'Delete Account',
-                    mIconData: Icons.no_accounts),
+                Visibility(
+                  visible: !(controller.isGuestUser.value),
+                  child: imageAndText(
+                      ImageAssetsConstants.profile11, 'Delete Account',
+                      mIconData: Icons.no_accounts),
+                )
               ],
             )),
       ],

@@ -60,6 +60,7 @@ class RegisterScreenController extends GetxController {
                   .setUserToken(mRegisterResponse.data?.accessToken ?? '');
               await SharedPrefs()
                   .setUserId(mRegisterResponse.data?.userId ?? '');
+              await SharedPrefs().guestUser(false);
               await getUserDetails();
               Get.until((route) {
                 return route.settings.name ==

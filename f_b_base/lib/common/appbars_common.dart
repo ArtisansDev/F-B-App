@@ -163,12 +163,13 @@ class AppBarsCommon {
             SizedBox(
               width: 13.sp,
             ),
-            Text(
+            Expanded(child: Text(
               title,
               style: getText500(colors: ColorConstants.buttonBar, size: 16.sp),
-            ),
+              maxLines: 1,
+            )),
             Container(
-              width: 50.sp,
+              width: 15.sp,
             )
           ],
         ),
@@ -176,14 +177,12 @@ class AppBarsCommon {
     );
   }
 
-
-  static PreferredSizeWidget appBarBackPayment({
-    double dTitleSpacing = 0.0,
+  static PreferredSizeWidget appBarBackPayment({double dTitleSpacing = 0.0,
     Color backgroundColor = ColorConstants.cAppColors,
     Color iconColor = Colors.black,
     String title = "",
     Function? onClick,
-  }) {
+    bool? isBackCall}) {
     return PreferredSize(
       preferredSize: Size.fromHeight(40.sp),
       child: Container(
@@ -205,7 +204,13 @@ class AppBarsCommon {
             ),
             GestureDetector(
               onTap: () {
-                Get.back(result: 'null');
+                if (isBackCall ?? false) {
+                  if (onClick != null) {
+                    onClick();
+                  }
+                } else {
+                  Get.back(result: 'null');
+                }
               },
               child: const Icon(Icons.arrow_back_ios_new),
             ),
@@ -233,8 +238,6 @@ class AppBarsCommon {
       ),
     );
   }
-
-
 
   static PreferredSizeWidget appBarLocation({
     double dTitleSpacing = 0.0,
@@ -284,7 +287,7 @@ class AppBarsCommon {
               child: Text(
                 title,
                 style:
-                    getText500(colors: ColorConstants.buttonBar, size: 16.sp),
+                getText500(colors: ColorConstants.buttonBar, size: 16.sp),
               ),
             ),
             Image.asset(
@@ -326,7 +329,7 @@ class AppBarsCommon {
           ),
           ColorFiltered(
               colorFilter:
-                  const ColorFilter.mode(Colors.white, BlendMode.modulate),
+              const ColorFilter.mode(Colors.white, BlendMode.modulate),
               child: Image.asset(
                 ImageAssetsConstants.appLogoT,
                 fit: BoxFit.fitWidth,

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:f_b_base/constants/app_constants.dart';
 import 'package:f_b_base/constants/message_constants.dart';
 import 'package:f_b_base/constants/web_constants.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
@@ -60,6 +61,7 @@ class QrCodeScannerController extends GetxController {
         url = url.replaceAll('#', 'abcd');
         final uri = Uri.parse(url);
         seatID.value = uri.queryParameters['SeatID'].toString();
+        AppConstants.seatIDF = seatID.value;
         getGetSeatDetailApi(seatID.value);
       }
     });

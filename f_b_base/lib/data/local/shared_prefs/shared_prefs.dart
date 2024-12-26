@@ -6,6 +6,7 @@ import '../../mode/add_cart/add_cart.dart';
 import '../../mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import '../../mode/get_general_setting/get_general_setting_response.dart';
 import '../../mode/login/login_response.dart';
+import '../../mode/order_place/order_place_guest_info_request.dart';
 import '../../mode/order_place/order_place_share.dart';
 import '../../mode/user_details/user_details_response.dart';
 import 'pref_constants.dart';
@@ -39,7 +40,7 @@ class SharedPrefs {
     if (value.isNotEmpty) {
       return value;
     }
-    return  "";
+    return "";
   }
 
   /// AppUserId
@@ -53,72 +54,108 @@ class SharedPrefs {
     if (value.isNotEmpty) {
       return value;
     }
-    return  "";
+    return "";
+  }
+
+  /// GuestUserId
+  Future<void> guestUser(bool? sGuestUser) async {
+    /// debugPrint("setToken $bearerToken");
+    sharedPreferences!.setBool(PrefConstants.sGuestUser, sGuestUser ?? false);
+  }
+
+  Future<bool> getGuestUser() async {
+    bool value = sharedPreferences!.getBool(PrefConstants.sGuestUser) ?? false;
+    return value;
   }
 
   /// userDetails
   Future<void> setUserDetails(String? setUserDetails) async {
-    sharedPreferences!.setString(PrefConstants.sUserDetails, setUserDetails ?? "");
+    sharedPreferences!
+        .setString(PrefConstants.sUserDetails, setUserDetails ?? "");
   }
 
   Future<UserDetailsResponseData> getUserDetails() async {
-    String value = sharedPreferences!.getString(PrefConstants.sUserDetails) ?? "";
+    String value =
+        sharedPreferences!.getString(PrefConstants.sUserDetails) ?? "";
     if (value.isNotEmpty) {
       return UserDetailsResponseData.fromJson(json.decode(value));
     }
-    return  UserDetailsResponseData();
+    return UserDetailsResponseData();
   }
-
 
   /// GeneralSetting
   Future<void> setGeneralSetting(String? setGeneralSetting) async {
-    sharedPreferences!.setString(PrefConstants.sGeneralSetting, setGeneralSetting ?? "");
+    sharedPreferences!
+        .setString(PrefConstants.sGeneralSetting, setGeneralSetting ?? "");
   }
 
   Future<GetGeneralSettingData> getGeneralSetting() async {
-    String value = sharedPreferences!.getString(PrefConstants.sGeneralSetting) ?? "";
+    String value =
+        sharedPreferences!.getString(PrefConstants.sGeneralSetting) ?? "";
     if (value.isNotEmpty) {
       return GetGeneralSettingData.fromJson(json.decode(value));
     }
-    return  GetGeneralSettingData();
+    return GetGeneralSettingData();
   }
 
   /// GetBranchesData
   Future<void> setBranchesData(String? setBranchesData) async {
-    sharedPreferences!.setString(PrefConstants.sBranchesData, setBranchesData ?? "");
+    sharedPreferences!
+        .setString(PrefConstants.sBranchesData, setBranchesData ?? "");
   }
 
   Future<GetAllBranchesListData> getBranchesData() async {
-    String value = sharedPreferences!.getString(PrefConstants.sBranchesData) ?? "";
+    String value =
+        sharedPreferences!.getString(PrefConstants.sBranchesData) ?? "";
     if (value.isNotEmpty) {
       return GetAllBranchesListData.fromJson(json.decode(value));
     }
-    return  GetAllBranchesListData();
+    return GetAllBranchesListData();
   }
 
   /// AddCartModel
   Future<void> setAddCartData(String? setAddCartData) async {
-    sharedPreferences!.setString(PrefConstants.sAddCartData, setAddCartData ?? "");
+    sharedPreferences!
+        .setString(PrefConstants.sAddCartData, setAddCartData ?? "");
   }
 
   Future<AddCartModel> getAddCartData() async {
-    String value = sharedPreferences!.getString(PrefConstants.sAddCartData) ?? "";
+    String value =
+        sharedPreferences!.getString(PrefConstants.sAddCartData) ?? "";
     if (value.isNotEmpty) {
       return AddCartModel.fromJson(json.decode(value));
     }
-    return  AddCartModel();
+    return AddCartModel();
   }
 
   /// ProcessOrderId
   Future<void> setProcessOrderId(String? sProcessOrderId) async {
-    sharedPreferences!.setString(PrefConstants.sProcessOrderId, sProcessOrderId ?? "");
+    sharedPreferences!
+        .setString(PrefConstants.sProcessOrderId, sProcessOrderId ?? "");
   }
 
   Future<OrderPlaceShare> getProcessOrderId() async {
-    String value = sharedPreferences!.getString(PrefConstants.sProcessOrderId) ?? "";
+    String value =
+        sharedPreferences!.getString(PrefConstants.sProcessOrderId) ?? "";
     if (value.isNotEmpty) {
       return OrderPlaceShare.fromJson(json.decode(value));
     }
-    return  OrderPlaceShare();
+    return OrderPlaceShare();
+  }
+
+
+  /// OrderPlaceGuestInfoRequest
+  Future<void> setOrderPlaceGuest(String? setOrderPlaceGuest) async {
+    sharedPreferences!
+        .setString(PrefConstants.sOrderPlaceGuest, setOrderPlaceGuest ?? "");
+  }
+
+  Future<OrderPlaceGuestInfoRequest> getOrderPlaceGuest() async {
+    String value =
+        sharedPreferences!.getString(PrefConstants.sOrderPlaceGuest) ?? "";
+    if (value.isNotEmpty) {
+      return OrderPlaceGuestInfoRequest.fromJson(json.decode(value));
+    }
+    return OrderPlaceGuestInfoRequest();
   }
 }

@@ -36,11 +36,7 @@ class IntroductionScreenController extends GetxController {
   void onChangePage(int value) {}
   Rx<LatLng> centerLatLng = const LatLng(0, 0).obs;
   final localApi = locator.get<GeneralApi>();
-
   Rxn<String> seatID = Rxn<String>();
-
-  // Rxn<String> selectTableNo = Rxn<String>();
-  // Rxn<String> selectBranchIDF = Rxn<String>();
 
   void goToNextPage() {
     generalSettingApiCall();
@@ -91,16 +87,16 @@ class IntroductionScreenController extends GetxController {
           await SharedPrefs().setBranchesData('');
           await SharedPrefs()
               .setGeneralSetting(jsonEncode(mGetGeneralSettingData));
+
           if (kIsWeb) {
-            if((seatID.value ?? '').isNotEmpty){
-              await getGetSeatDetailApi(seatID.value ?? '');
-              Get.offNamed(
-                RouteConstants.rDashboardScreen,
-              );
-            }else {
-              AppAlertBase.showSnackBar(Get.context!, 'Please Scanner your qrcode');
+            if ((seatID.value ?? '').isNotEmpty) {
+              await getGetSeatDetailApi(seatID.value ?? '',
+                  (mGetGeneralSettingData.restaurantIDF ?? ''));
+            } else {
+              AppAlertBase.showSnackBar(
+                  Get.context!, 'Please Scanner your qrcode');
             }
-          }else {
+          } else {
             Get.offNamed(
               RouteConstants.rDashboardScreen,
             );
@@ -119,7 +115,7 @@ class IntroductionScreenController extends GetxController {
   }
 
   ///api getGetSeatDetailApi
-  getGetSeatDetailApi(String seatID) async {
+  getGetSeatDetailApi(String seatID, String restaurantIDF) async {
     await NetworkUtils()
         .checkInternetConnection()
         .then((isInternetAvailable) async {
@@ -133,9 +129,17 @@ class IntroductionScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetSeatDetailResponse mGetSeatDetailResponse =
               mWebResponseSuccess.data;
-          await SharedPrefs().setAddCartData(jsonEncode(AddCartModel(
-              sTableNo: mGetSeatDetailResponse.data?.seatNumber??'', sType: 'Dine')));
-          await getGetAllBranchesApi(mGetSeatDetailResponse.data?.branchIDF??'');
+          if (restaurantIDF.toString() ==
+              (mGetSeatDetailResponse.data?.restaurantIDF ?? '').toString()) {
+            await SharedPrefs().setAddCartData(jsonEncode(AddCartModel(
+                sTableNo: mGetSeatDetailResponse.data?.seatNumber ?? '',
+                sType: 'Dine')));
+            await getGetAllBranchesApi(
+                mGetSeatDetailResponse.data?.branchIDF ?? '');
+          } else {
+            AppAlertBase.showSnackBar(
+                Get.context!, MessageConstants.qrCodeNotMach);
+          }
         } else {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
@@ -184,9 +188,14 @@ class IntroductionScreenController extends GetxController {
           );
 
           if (trendIndex != -1) {
-            debugPrint("#######trendIndex ${trendIndex}");
             await SharedPrefs().setBranchesData(
                 jsonEncode(mGetAllBranchesListData.value[trendIndex]));
+            Get.offNamed(
+              RouteConstants.rDashboardScreen,
+            );
+          } else {
+            AppAlertBase.showSnackBar(
+                Get.context!, MessageConstants.brancheNotMach);
           }
         } else {
           AppAlertBase.showSnackBar(

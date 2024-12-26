@@ -5,6 +5,7 @@ import '../../web_response.dart';
 
 mixin UserAuthenticationApi {
   Future<WebResponseSuccess> postLogin(dynamic exhibitorsListRequest);
+  Future<WebResponseSuccess> postGuestLogin();
   Future<WebResponseSuccess> postVerifyOTP(dynamic exhibitorsListRequest);
   Future<WebResponseSuccess> postRegister(dynamic exhibitorsListRequest);
   Future<WebResponseSuccess> postGetUserData(dynamic exhibitorsListRequest);

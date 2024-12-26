@@ -2,6 +2,7 @@
 
 import 'package:f_b_base/constants/app_constants.dart';
 import 'package:f_b_base/lang/translation_service.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -19,7 +20,9 @@ import '../otp_screen/view/otp_screen.dart';
 import '../profile_screen/update_profile/view/update_profile_screen.dart';
 import '../qr_code_scanner/view/qr_code_scanner_view.dart';
 import '../register_screen/view/register_screen_screen.dart';
+import '../senang_pay_payment/razer_pay_result/razer_pay_result.dart';
 import '../senang_pay_payment/senang_pay_payment.dart';
+import '../senang_pay_payment/senang_pay_result/senang_pay_result.dart';
 import '../splash_screen/view/splash_screen.dart';
 import '../terms_of_use/view/terms_of_use_screen.dart';
 import '../view_order_history/view/order_history_screen.dart';
@@ -37,7 +40,11 @@ class MyAppTheme extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           debugShowMaterialGrid: false,
-          title: AppConstants.iAccessKey == 1 ? 'YUM' : 'TWT',
+          title: AppConstants.iAccessKey == 1
+              ? 'YUM'
+              : AppConstants.iAccessKey == 2
+                  ? 'Apple Cinemas'
+                  : 'TWT',
           theme: myLightTheme(context),
           darkTheme: myDarkTheme(context),
           defaultTransition: Transition.leftToRightWithFade,
@@ -85,11 +92,17 @@ class MyAppTheme extends StatelessWidget {
             GetPage(
                 name: RouteConstants.rSenangPayPaymentScreen,
                 page: () => SenangPayPayment()),
+            GetPage(
+                name: RouteConstants.rSenangPayResult,
+                page: () => SenangPayResult()),
+            GetPage(
+                name: RouteConstants.rRazerPayResult,
+                page: () => RazerPayResult()),
           ],
           builder: (context, child) {
             return protectFromSettingsFontSize(context, child!);
           },
-          home: const SplashScreen(),
+          home: kIsWeb ? IntroductionScreen() : const SplashScreen(),
           locale: TranslationService.locale,
           fallbackLocale: TranslationService.fallbackLocale,
           translations: TranslationService(),

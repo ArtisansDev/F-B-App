@@ -24,12 +24,15 @@ class ProfileScreenController extends GetxController {
   Rxn<String> imageUrl = Rxn<String>();
 
   RxBool viewVisible = false.obs;
+  RxBool isGuestUser = false.obs;
 
   ProfileScreenController() {
     getPackageInfo();
   }
 
   getPackageInfo() async {
+    isGuestUser.value = await SharedPrefs().getGuestUser();
+    isGuestUser.refresh();
     version.value = dotenv.env['APP_VERSION'] ?? '';
     await getUserDetails();
     viewVisible.value = true;

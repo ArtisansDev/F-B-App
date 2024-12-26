@@ -50,6 +50,7 @@ class WebConstants {
   /// Master - all Url
   ///16-Oct-24
   static String actionLogin =  "Account/SendOTP";  //post
+  static String actionGuestLogin =  "Account/GuestLogin";  //post
   static String actionVerifyOtp =  "Account/VerifyOTP";//post
   static String actionRegister =  "Account/Register";//post
   static String actionProfile =  "Registration/GetUserData";  //post

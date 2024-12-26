@@ -8,16 +8,52 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
+import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
+// import 'package:webviewx_plus/webviewx_plus.dart';
 
 class SenangPayPaymentController extends GetxController {
   RxString paymentUrl = ''.obs;
   Rxn<WebViewController> mWebViewController = Rxn<WebViewController>();
+  Rxn<PlatformWebViewController> mPlatformWebViewController =
+      Rxn<PlatformWebViewController>();
+  // Rxn<WebViewXController> mWebViewXController = Rxn<WebViewXController>();
 
   SenangPayPaymentController(String sUrl) {
     paymentUrl.value = sUrl;
-    webController();
+    if (kIsWeb) {
+
+      //https://app.senangpay.my/payment/761173165749545?name=partha&email=partha.paul007%40gmail.com&phone=176172385&amount=553.38&order_id=bfda391e-b903-4e69-9053-1d8bf34380e2&detail=-&hash=4933bcf708f7f5dc32ec28407f97ff4adb04f4ab2d5b3da611bda8f43c9e0070
+      print("######SenangPay-url ${paymentUrl.value}");
+      paymentUrl.refresh();
+    } else {
+      webController();
+    }
   }
 
+  ///for web application
+  void forWebViewController() {
+    print("######SenangPay-url ${paymentUrl.value}");
+    // mWebViewXController.value.loadContent(
+    //   'https://flutter.dev',
+    //   SourceType.url,
+    // );
+    // webviewController.goBack();
+    //
+    // webviewController.goForward();
+
+
+    // mPlatformWebViewController.value = PlatformWebViewController(
+    //   const PlatformWebViewControllerCreationParams(),
+    // )
+    //   ..loadRequest(
+    //     LoadRequestParams(
+    //       uri: Uri.parse(paymentUrl.value),
+    //     ),
+    //   );
+    // mPlatformWebViewController.refresh();
+  }
+
+  ///for mobile application
   webController() {
     ///docregion platform_features
     late final PlatformWebViewControllerCreationParams params;
@@ -34,8 +70,10 @@ class SenangPayPaymentController extends GetxController {
         WebViewController.fromPlatformCreationParams(params);
 
     /// enddocregion platform_features
+    if (!kIsWeb) {
+      mController.setJavaScriptMode(JavaScriptMode.unrestricted);
+    }
     mController
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(
         NavigationDelegate(
           onProgress: (int progress) {

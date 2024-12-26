@@ -1,5 +1,6 @@
 import 'package:f_b_base/common/button_constants.dart';
 import 'package:f_b_base/common/custom_image.dart';
+import 'package:f_b_base/constants/app_constants.dart';
 import 'package:f_b_base/constants/color_constants.dart';
 import 'package:f_b_base/constants/image_assets_constants.dart';
 import 'package:f_b_base/lang/translation_service_key.dart';
@@ -29,10 +30,12 @@ class IntroductionScreen extends GetView<IntroductionScreenController> {
   _fullView() {
     return FocusDetector(
         onVisibilityGained: () {
+          AppConstants.seatIDF = '';
           /// Get the full current URL
           String url = Uri.base.toString();
           controller.seatID.value ="";
-          /// http://localhost:54052/#/introduction_screen?table_no=10&BranchIDF=d8254b69-b6e0-4f10-9d61-888a5d2f779e
+
+          /// http://localhost:54052/#/introduction_screen?SeatID=5e31541a-9ec0-44f9-b43c-6ac0dc8748e9
           if (url.contains('localhost')) {
               if (url.split(':').length > 2) {
                 url = url.split(':').first + '://' + url.split(':').last;
@@ -43,6 +46,7 @@ class IntroductionScreen extends GetView<IntroductionScreenController> {
             url = url.replaceAll('#', 'abcd');
             final uri = Uri.parse(url);
             controller.seatID.value = uri.queryParameters['SeatID'].toString();
+            AppConstants.seatIDF =  controller.seatID.value??'';
           }
 
         },
@@ -79,7 +83,7 @@ class IntroductionScreen extends GetView<IntroductionScreenController> {
                         itemCount: 1, // Number of pages
                         itemBuilder: (context, index) {
                           return Container(
-                            padding: EdgeInsets.all(35.sp),
+                            padding: EdgeInsets.all(AppConstants.iAccessKey ==1? 35.sp:45.sp),
                             child: setImage(
                                 ImageAssetsConstants.appLogo),
                           );

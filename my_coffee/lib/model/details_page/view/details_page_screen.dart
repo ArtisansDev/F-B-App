@@ -25,9 +25,13 @@ class DetailsPageScreen extends GetView<DetailsPageScreenController> {
   @override
   Widget build(BuildContext context) {
     Get.lazyPut(() => DetailsPageScreenController(itemId));
-    return Scaffold(
-        appBar: AppBarsCommon.appBarBack(title: 'Classic Americano'),
-        body: SafeArea(bottom: false, child: _fullView()));
+    return Obx(() {
+      return Scaffold(
+          appBar: AppBarsCommon.appBarBack(
+            title: controller.mGetItemDetailsData.value.itemName ?? '',
+          ),
+          body: SafeArea(bottom: false, child: _fullView()));
+    });
   }
 
   ///full_View
@@ -49,35 +53,31 @@ class DetailsPageScreen extends GetView<DetailsPageScreenController> {
                 height: double.infinity,
                 width: double.infinity,
                 alignment: Alignment.center,
-                child: Obx(() {
-                  if ((controller.mGetItemDetailsData.value.itemName ?? '')
-                      .isEmpty) {
-                    return const Center(
-                      child: CircularProgressIndicator(),
-                    );
-                  } else {
-                    return Stack(
-                      children: [
-                        Align(
-                          alignment: Alignment.bottomRight,
-                          child:Opacity(
-                            opacity: 0.5, // Set opacity here
-                            child:  Image.asset(
-                            ImageAssetsConstants.buttonLogo,
-                            width: 40.w,
-                            fit: BoxFit.contain,
-                          ),)
-                        ),
-                        mDetailsView(),
-                        Align(
-                            alignment: Alignment.bottomCenter,
-                            child: _bottomBar()
-                            // }),
-                            )
-                      ],
-                    );
-                  }
-                }))));
+                child: ((controller.mGetItemDetailsData.value.itemName ?? '')
+                        .isEmpty)
+                    ? const Center(
+                        child: CircularProgressIndicator(),
+                      )
+                    : Stack(
+                        children: [
+                          Align(
+                              alignment: Alignment.bottomRight,
+                              child: Opacity(
+                                opacity: 0.5, // Set opacity here
+                                child: Image.asset(
+                                  ImageAssetsConstants.buttonLogo,
+                                  width: 40.w,
+                                  fit: BoxFit.contain,
+                                ),
+                              )),
+                          mDetailsView(),
+                          Align(
+                              alignment: Alignment.bottomCenter,
+                              child: _bottomBar()
+                              // }),
+                              )
+                        ],
+                      ))));
   }
 
   mDetailsView() {
@@ -745,8 +745,7 @@ class DetailsPageScreen extends GetView<DetailsPageScreenController> {
                       height: 10.sp,
                     ),
                     Text(
-                      '${controller.mDashboardScreenController
-                          .selectedCurrency.value} ${controller.totalAmount.value.toStringAsFixed(2)}',
+                      '${controller.mDashboardScreenController.selectedCurrency.value} ${controller.totalAmount.value.toStringAsFixed(2)}',
                       style: getText600(
                           colors: ColorConstants.cAppColorsBlue, size: 17.sp),
                     ),

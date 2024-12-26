@@ -8,7 +8,7 @@ import '../../local/shared_prefs/shared_prefs.dart';
 
 class WebHttpProvider {
   Map<String, String> headers = {
-    "Content-Type": "application/json",
+    // "Content-Type": "application/json",
     "Accept": "application/json"
   };
 

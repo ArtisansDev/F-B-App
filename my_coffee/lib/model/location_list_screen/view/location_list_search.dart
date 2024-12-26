@@ -10,6 +10,7 @@
 
 import 'package:f_b_base/common/custom_image.dart';
 import 'package:f_b_base/common/text_input_widget.dart';
+import 'package:f_b_base/constants/app_constants.dart';
 import 'package:f_b_base/constants/image_assets_constants.dart';
 import 'package:f_b_base/constants/pattern_constants.dart';
 import 'package:f_b_base/lang/translation_service_key.dart';
@@ -61,21 +62,25 @@ class LocationListSearch extends StatelessWidget {
             ),
             Expanded(
                 child: TextInputWidget(
-                  controller: controller.searchController.value,
-                  showFloatingLabel: false,
-                  placeHolder: sSearchforTWTOutlets.tr,
-                  onSubmitted: (value) {
-                    controller.onRefresh();
-                  },
-                  hintText: sSearchforTWTOutlets.tr,
-                  errorText: null,
-                  prefixHeight: 27.5.sp,
-                  onFilteringTextInputFormatter: [
-                    FilteringTextInputFormatter.allow(
-                      RegExp(AppUtilConstants.patternStringAndSpace),
-                    ),
-                  ],
-                ))
+              controller: controller.searchController.value,
+              showFloatingLabel: false,
+              placeHolder: AppConstants.iAccessKey == 1
+                  ? sSearchforYUMOutlets.tr
+                  : sSearchforTWTOutlets.tr,
+              onSubmitted: (value) {
+                controller.onRefresh();
+              },
+              hintText: AppConstants.iAccessKey == 1
+                  ? sSearchforYUMOutlets.tr
+                  : sSearchforTWTOutlets.tr,
+              errorText: null,
+              prefixHeight: 27.5.sp,
+              onFilteringTextInputFormatter: [
+                FilteringTextInputFormatter.allow(
+                  RegExp(AppUtilConstants.patternStringAndSpace),
+                ),
+              ],
+            ))
           ],
         ));
   }

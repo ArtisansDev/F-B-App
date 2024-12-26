@@ -18,7 +18,7 @@ class HistoryScreen extends GetView<HistoryScreenController> {
         onVisibilityGained: () {
           if (controller.bFlagLoad.value) {
             controller.onRefresh();
-          }else{
+          } else {
             controller.bFlagLoad.value = true;
           }
         },
@@ -59,21 +59,30 @@ class HistoryScreen extends GetView<HistoryScreenController> {
 
   /// History list
   historyListView() {
-    return controller.mOrderHistoryResponseItemData.isEmpty
-        ? Container(
-            height: 80.h,
-            alignment: Alignment.center,
-            child: const Text('You don\'t have any history'),
-          )
-        : ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            padding: EdgeInsets.zero,
-            itemCount: controller.mOrderHistoryResponseItemData.length,
-            itemBuilder: (BuildContext context, int index) {
-              return HistoryRow(
-                index: index,
-              );
-            });
+    return
+      // controller.isGuestUser.value
+      //   ? Container(
+      //       height: 80.h,
+      //       margin: EdgeInsets.all(20.sp),
+      //       alignment: Alignment.center,
+      //       child: const Text('Your are the gust user so you can\'t able to see the history'),
+      //     )
+      //   :
+    controller.mOrderHistoryResponseItemData.isEmpty
+            ? Container(
+                height: 80.h,
+                alignment: Alignment.center,
+                child: const Text('You don\'t have any history'),
+              )
+            : ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                padding: EdgeInsets.zero,
+                itemCount: controller.mOrderHistoryResponseItemData.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return HistoryRow(
+                    index: index,
+                  );
+                });
   }
 }
