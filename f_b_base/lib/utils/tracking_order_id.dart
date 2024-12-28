@@ -182,11 +182,12 @@ createOrderPlaceRequest(
     debugPrint("\ntax calculation:   ${jsonEncode(mOrderTax)}\n");
     orderTaxList.add(mOrderTax);
   }
+  String sSeatIDF = await SharedPrefs().getSeatIDF();
 
   ///OrderPlaceRequest
   OrderPlaceRequest mOrderPlaceRequest = OrderPlaceRequest(
       trackingOrderID: trackingOrderID,
-      orderSource: kIsWeb ?"3":"1",
+      orderSource: kIsWeb ? "3" : "1",
       orderType: mAddCartModel.sType == 'Dine' ? '1' : '2',
       orderNo: '',
       branchIDF: selectGetAllBranchesListData.branchIDP,
@@ -212,7 +213,7 @@ createOrderPlaceRequest(
 
       ///table no
       tableNo: mAddCartModel.sType == 'Dine' ? mAddCartModel.sTableNo : '',
-      seatIDF: mAddCartModel.sType == 'Dine' ? AppConstants.seatIDF : '',
+      seatIDF: mAddCartModel.sType == 'Dine' ? sSeatIDF : '',
 
       ///payment_service
       paymentGatewayID: mPaymentTypeResponseData?.paymentGatewayIDP ?? '',

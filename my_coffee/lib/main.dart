@@ -9,10 +9,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'model/app_theme/my_app_theme.dart';
+
 const hiveDbPath = 'TWT';
 
 void main() async {
-  AppConstants.iAccessKey = 2;
+  // enforceHttps();
+  AppConstants.iAccessKey = 1;
   await WidgetsFlutterBinding.ensureInitialized();
   HttpOverrides.global = await WebHttpOverrides();
   await dotenv.load(fileName: ".env");

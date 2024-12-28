@@ -5,7 +5,7 @@ class AppConstants {
   static RxInt iAccessKeyValue = 0.obs;
 
   // Mobile OS Platform
-  static  String seatIDF = "";
+  // static  String seatIDF = "";
   static const String platformAndroid = "ANDROID";
   static const String platformIOS = "IOS";
 

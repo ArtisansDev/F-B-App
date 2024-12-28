@@ -76,6 +76,10 @@ class HistoryScreenController extends GetxController {
         OrderPlaceShare getProcessOrderId =
             await SharedPrefs().getProcessOrderId();
         bool isGuestUser = await SharedPrefs().getGuestUser();
+
+        if ((getProcessOrderId.data ?? '').isEmpty && isGuestUser) {
+          return;
+        }
         GetOrderHistoryRequest mGetOrderHistoryRequest = GetOrderHistoryRequest(
             userIDF: mUserDetailsResponseData.userID,
             pageNumber: pageNumber,
@@ -116,6 +120,8 @@ class HistoryScreenController extends GetxController {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
+
+        ///
       } else {
         showValue.value = MessageConstants.noInternetConnection;
         AppAlertBase.showSnackBar(
@@ -386,7 +392,8 @@ class HistoryScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           AppAlertBase.showCustomDialogOk(
               Get.context!, sPaymentSuccessful.tr, sPaymentSuccessfulMessage.tr,
-              () {
+              () async {
+            await SharedPrefs().setProcessOrderId('');
             onRefresh();
           }, rightText: 'Ok');
         } else {

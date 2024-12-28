@@ -20,6 +20,7 @@ import 'package:f_b_base/utils/date_format.dart';
 import 'package:f_b_base/utils/network_utils.dart';
 import 'package:f_b_base/utils/num_utils.dart';
 import 'package:f_b_base/utils/tracking_order_id.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -72,6 +73,13 @@ class OrderConfirmationScreenController extends GetxController {
           PaymentTypeResponse mPaymentTypeResponse = mWebResponseSuccess.data;
           paymentTypeList.value.clear();
           paymentTypeList.addAll(mPaymentTypeResponse.data ?? []);
+          if (kIsWeb) {
+            paymentTypeList.removeWhere(
+              (element) {
+                return element.paymentGatewayNo.toString() == '0';
+              },
+            );
+          }
           paymentTypeList.refresh();
         } else {
           AppAlertBase.showSnackBar(
@@ -209,9 +217,9 @@ class OrderConfirmationScreenController extends GetxController {
 
       ///OrderPlaceRequest
       debugPrint(
-          "\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest.orderPlaceGuestInfoRequest)}\n");
+          "\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
 
-      getOrderPlaceApi(mOrderPlaceRequest);
+     // getOrderPlaceApi(mOrderPlaceRequest);
     }
   }
 

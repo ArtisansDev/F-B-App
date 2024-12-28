@@ -10,127 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3eba47f2-9eb3-4609-a77d-c72cd50cac91" name="Changes" comment="base">
-      <change afterPath="$PROJECT_DIR$/lib/payment_service/razer_payment/razer_pay_web_service.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/senang_pay_result/controller/senang_pay_result_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/senang_pay_result/senang_pay_result.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my_coffee/relese_notes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.3/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/common/appbars_common.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common/appbars_common.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/constants/app_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/app_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/constants/message_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/message_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/mode/get_order_history/get_order_history_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/get_order_history/get_order_history_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/mode/login/login_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/mode/login/login_request.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/remote/api_call/api_dio_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/remote/api_call/api_dio_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/lang/translation_service_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lang/translation_service_key.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/payment_service/senang_pay_payment/senang_pay_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/payment_service/senang_pay_payment/senang_pay_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/connectivity_plus" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/connectivity_plus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/file_selector_linux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/package_info_plus" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/package_info_plus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/connectivity_plus" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/connectivity_plus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/package_info_plus" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/package_info_plus" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constants/web_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/web_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/local/shared_prefs/pref_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/local/shared_prefs/pref_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/local/shared_prefs/shared_prefs.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/local/shared_prefs/shared_prefs.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/tracking_order_id.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/tracking_order_id.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/.idea/caches/deviceStreaming.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/8.9/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/assets/yum_logo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/audio_session" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/audio_session" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/connectivity_plus" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/connectivity_plus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/image_cropper" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/image_cropper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/package_info_plus" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/package_info_plus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/shared_preferences_foundation" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/shared_preferences_foundation" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/video_player_avfoundation" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/.symlinks/plugins/video_player_avfoundation" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Flutter/Generated.xcconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Podfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/Local Podspecs/connectivity_plus.podspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/Local Podspecs/connectivity_plus.podspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImage.m" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImage.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView.h" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView.m" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDDiskCache.m" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDDiskCache.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDImageCacheConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDImageCacheConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDImageCacheConfig.m" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDImageCacheConfig.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDImageTransformer.h" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDImageTransformer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDImageTransformer.m" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/SDImageTransformer.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/UIImage+Transform.h" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/UIImage+Transform.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/UIImage+Transform.m" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Core/UIImage+Transform.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Private/SDImageFramePool.m" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/SDWebImage/SDWebImage/Private/SDImageFramePool.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/Target Support Files/SDWebImage/ResourceBundle-SDWebImage-SDWebImage-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/Target Support Files/SDWebImage/ResourceBundle-SDWebImage-SDWebImage-Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/Target Support Files/SDWebImage/SDWebImage-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/Target Support Files/SDWebImage/SDWebImage-Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/fiuu-mobile-xdk-cocoapods/MOLPayXDK.framework/Versions/A/Headers/MOLPayLib.h" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/fiuu-mobile-xdk-cocoapods/MOLPayXDK.framework/Versions/A/Headers/MOLPayLib.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/ios/Pods/fiuu-mobile-xdk-cocoapods/MOLPayXDK.framework/Versions/A/MOLPayXDK" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/ios/Pods/fiuu-mobile-xdk-cocoapods/MOLPayXDK.framework/Versions/A/MOLPayXDK" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/app_theme/my_app_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/app_theme/my_app_theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/dashboard_screen/controller/dashboard_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/dashboard_screen/controller/dashboard_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/details_page/view/details_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/details_page/view/details_page_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/history_screen/controller/history_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/history_screen/controller/history_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/introduction_screen/controller/introduction_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/introduction_screen/controller/introduction_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/introduction_screen/view/introduction_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/introduction_screen/view/introduction_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/location_list_screen/view/location_list_search.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/location_list_screen/view/location_list_search.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/login_screen/controller/login_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/login_screen/controller/login_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/order_confirmation/controller/order_confirmation_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/order_confirmation/controller/order_confirmation_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/order_confirmation/view/payment_method/payment_method_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/order_confirmation/view/payment_method/payment_method_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/otp_screen/controller/otp_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/otp_screen/controller/otp_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/controller/senang_pay_payment_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/controller/senang_pay_payment_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/senang_pay_payment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/senang_pay_payment.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/routes/route_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/routes/route_constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/linux/flutter/ephemeral/.plugin_symlinks/connectivity_plus" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/linux/flutter/ephemeral/.plugin_symlinks/connectivity_plus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/linux/flutter/ephemeral/.plugin_symlinks/package_info_plus" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/linux/flutter/ephemeral/.plugin_symlinks/package_info_plus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/qr_code_scanner/controller/qr_code_scanner_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/qr_code_scanner/controller/qr_code_scanner_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/razer_pay_result/controller/razer_pay_result_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/razer_pay_result/controller/razer_pay_result_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/razer_pay_result/razer_pay_result.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/razer_pay_result/razer_pay_result.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/senang_pay_result/controller/senang_pay_result_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/lib/model/senang_pay_payment/senang_pay_result/controller/senang_pay_result_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/web/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/web/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/web/icons/Icon-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/web/icons/Icon-192.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/web/icons/Icon-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/web/icons/Icon-512.png" afterDir="false" />
@@ -138,8 +40,6 @@
       <change beforePath="$PROJECT_DIR$/../my_coffee/web/icons/Icon-maskable-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/web/icons/Icon-maskable-512.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/web/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my_coffee/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/web/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/windows/flutter/ephemeral/.plugin_symlinks/connectivity_plus" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/windows/flutter/ephemeral/.plugin_symlinks/connectivity_plus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_coffee/windows/flutter/ephemeral/.plugin_symlinks/package_info_plus" beforeDir="false" afterPath="$PROJECT_DIR$/../my_coffee/windows/flutter/ephemeral/.plugin_symlinks/package_info_plus" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +54,13 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />

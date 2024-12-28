@@ -162,24 +162,6 @@ class PaymentMethodView extends StatelessWidget {
                       },
                     )
 
-                    // Row(
-                    //   children: [
-                    //     SizedBox(
-                    //       height: 5.h,
-                    //       width: 5.h,
-                    //       child: setImage(ImageAssetsConstants.addVoucher),
-                    //     ),
-                    //     SizedBox(
-                    //       width: 13.sp,
-                    //     ),
-                    //     Expanded(
-                    //         child: Text(
-                    //           'Select Payment Method',
-                    //           style:
-                    //           getText500(size: 16.sp, colors: ColorConstants.buttonBar),
-                    //         )),
-                    //   ],
-                    // ),
                     ),
                 Container(
                   alignment: Alignment.centerLeft,

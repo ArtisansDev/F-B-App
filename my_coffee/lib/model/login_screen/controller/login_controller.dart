@@ -81,6 +81,7 @@ class LoginScreenController extends GetxController {
             await SharedPrefs().guestUser(true);
             await getWebView();
             Future.delayed(const Duration(milliseconds: 500), () {});
+            await getUserDetails();
             Get.until((route) {
               return route.settings.name ==
                       RouteConstants.rOrderConfirmationScreen ||

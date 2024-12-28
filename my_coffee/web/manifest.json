@@ -1,6 +1,6 @@
 {
-    "name": "twt",
-    "short_name": "twt",
+    "name": "yum",
+    "short_name": "yum",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

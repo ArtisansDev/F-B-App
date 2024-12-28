@@ -3,6 +3,7 @@ import 'package:f_b_base/common/custom_image.dart';
 import 'package:f_b_base/constants/app_constants.dart';
 import 'package:f_b_base/constants/color_constants.dart';
 import 'package:f_b_base/constants/image_assets_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
 import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:f_b_base/utils/app_utils.dart';
 import 'package:flutter/material.dart';
@@ -29,8 +30,8 @@ class IntroductionScreen extends GetView<IntroductionScreenController> {
   ///full_View
   _fullView() {
     return FocusDetector(
-        onVisibilityGained: () {
-          AppConstants.seatIDF = '';
+        onVisibilityGained: () async{
+          await SharedPrefs().setSeatIDF('');
           /// Get the full current URL
           String url = Uri.base.toString();
           controller.seatID.value ="";
@@ -46,7 +47,7 @@ class IntroductionScreen extends GetView<IntroductionScreenController> {
             url = url.replaceAll('#', 'abcd');
             final uri = Uri.parse(url);
             controller.seatID.value = uri.queryParameters['SeatID'].toString();
-            AppConstants.seatIDF =  controller.seatID.value??'';
+            await SharedPrefs().setSeatIDF(controller.seatID.value??'');
           }
 
         },

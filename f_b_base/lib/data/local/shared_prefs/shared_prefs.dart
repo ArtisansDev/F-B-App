@@ -57,6 +57,20 @@ class SharedPrefs {
     return "";
   }
 
+  /// SeatIDF
+  Future<void> setSeatIDF(String? sSeatIDF) async {
+    /// debugPrint("setToken $bearerToken");
+    sharedPreferences!.setString(PrefConstants.sSeatIDF, sSeatIDF ?? "");
+  }
+
+  Future<String> getSeatIDF() async {
+    String value = sharedPreferences!.getString(PrefConstants.sSeatIDF) ?? "";
+    if (value.isNotEmpty) {
+      return value;
+    }
+    return "";
+  }
+
   /// GuestUserId
   Future<void> guestUser(bool? sGuestUser) async {
     /// debugPrint("setToken $bearerToken");

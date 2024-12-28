@@ -29,6 +29,7 @@ class SenangPayResultController extends GetxController {
 
   void getUrlValue(String url) {
      sUrl.value = url;
+     print("###### ${sUrl.value}");
     if (url.contains('localhost')) {
       if (url.split(':').length > 2) {
         url = url.split(':').first + '://' + url.split(':').last;

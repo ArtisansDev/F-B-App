@@ -1,6 +1,7 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/constants/message_constants.dart';
@@ -27,22 +28,20 @@ class RazerPayResultController extends GetxController {
   RxString sUrl = ''.obs;
   final localApi = locator.get<OrderHistoryApi>();
 
-  void getUrlValue(String url) {
-     sUrl.value = url;
+  void getUrlValue(String url) async{
+    sUrl.value = url;
     if (url.contains('localhost')) {
-      if (url.split(':').length > 2) {
-        url = url.split(':').first + '://' + url.split(':').last;
-      }
+      url = url.replaceAll("localhost:", "partha");
     }
-    debugPrint('transactionId : ${url}');
-    if (url.contains('order_id')) {
+
+   // debugPrint('transactionId : ${url}');
+    if (url.contains('orderid')) {
       url = url.replaceAll('#', 'abcd');
       final uri = Uri.parse(url);
-      orderId.value = uri.queryParameters['order_id'].toString();
-      transactionId.value = uri.queryParameters['transaction_id'].toString();
-      msg.value = uri.queryParameters['msg'].toString();
+      orderId.value = uri.queryParameters['orderid'].toString();
+      transactionId.value = uri.queryParameters['tranID'].toString();
+      msg.value = uri.queryParameters['skey'].toString();
       getOrderHistoryApi();
-
       ///
     }
   }

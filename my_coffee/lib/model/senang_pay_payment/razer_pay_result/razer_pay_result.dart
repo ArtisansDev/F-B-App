@@ -33,16 +33,17 @@ class RazerPayResult extends GetView<RazerPayResultController> {
               Get.offAllNamed(RouteConstants.rDashboardScreen);
             }),
         body: FocusDetector(
-            onVisibilityGained: () {
-            },
+            onVisibilityGained: () {},
             onVisibilityLost: () {},
             child: Obx(
               () {
                 if (kIsWeb) {
                   return Visibility(
-                    visible: controller.sUrl.value.isNotEmpty,
+                    visible: controller.orderId.value.isNotEmpty,
                     child: Center(
-                      child: Text('sUrl :${controller.sUrl.value}'),
+                      child: Text('orderId :${controller.orderId.value}'
+                          // '\n\ntransactionId :${controller.transactionId.value}\n\nUrl :${controller.sUrl.value.split('?').last}'
+                          ),
                     ),
                   );
                 } else {

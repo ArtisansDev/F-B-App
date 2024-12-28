@@ -43,7 +43,7 @@ class QrCodeScannerController extends GetxController {
     mQRViewController.value = controller;
     mQRViewController.value?.resumeCamera();
 
-    mQRViewController.value?.scannedDataStream.listen((scanData) {
+    mQRViewController.value?.scannedDataStream.listen((scanData) async{
       result.value = scanData;
       mQRViewController.value?.pauseCamera();
 
@@ -61,7 +61,7 @@ class QrCodeScannerController extends GetxController {
         url = url.replaceAll('#', 'abcd');
         final uri = Uri.parse(url);
         seatID.value = uri.queryParameters['SeatID'].toString();
-        AppConstants.seatIDF = seatID.value;
+        await SharedPrefs().setSeatIDF(seatID.value);
         getGetSeatDetailApi(seatID.value);
       }
     });
