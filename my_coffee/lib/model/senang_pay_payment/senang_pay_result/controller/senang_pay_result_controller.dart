@@ -28,8 +28,8 @@ class SenangPayResultController extends GetxController {
   final localApi = locator.get<OrderHistoryApi>();
 
   void getUrlValue(String url) {
-     sUrl.value = url;
-     print("###### ${sUrl.value}");
+    sUrl.value = url;
+    print("###### ${sUrl.value}");
     if (url.contains('localhost')) {
       if (url.split(':').length > 2) {
         url = url.split(':').first + '://' + url.split(':').last;
@@ -66,6 +66,7 @@ class SenangPayResultController extends GetxController {
           OrderHistoryResponse mOrderHistoryResponse = mWebResponseSuccess.data;
           if ((mOrderHistoryResponse.data?.data ?? []).isEmpty) {
             orderId.value = 'No history found';
+            orderId.refresh();
           } else {
             if (msg.value.contains("Payment_was_successful")) {
               await getUpdatePaymentStatusApi(
@@ -116,7 +117,8 @@ class SenangPayResultController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           AppAlertBase.showCustomDialogOk(
               Get.context!, sPaymentSuccessful.tr, sPaymentSuccessfulMessage.tr,
-              () {
+              () async {
+            await SharedPrefs().setProcessOrderId('');
             Get.offAllNamed(RouteConstants.rDashboardScreen);
           }, rightText: 'Ok');
         } else {

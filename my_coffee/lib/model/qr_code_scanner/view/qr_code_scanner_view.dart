@@ -99,8 +99,8 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                           errorText: null,
                           onFilteringTextInputFormatter: [
                             FilteringTextInputFormatter.allow(
-                                RegExp(AppUtilConstants.patternOnlyNumber)),
-                            LengthLimitingTextInputFormatter(2)
+                                RegExp(AppUtilConstants.patternStringNumberSpaceSlach)),
+                            LengthLimitingTextInputFormatter(12)
                           ],
                         ),
                       ),

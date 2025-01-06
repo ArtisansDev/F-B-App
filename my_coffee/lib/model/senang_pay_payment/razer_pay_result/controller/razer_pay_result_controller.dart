@@ -24,23 +24,26 @@ import '../../../../routes/route_constants.dart';
 class RazerPayResultController extends GetxController {
   RxString orderId = ''.obs;
   RxString transactionId = ''.obs;
-  RxString msg = ''.obs;
+  RxString status = ''.obs;
+
+  // RxString msg = ''.obs;
   RxString sUrl = ''.obs;
   final localApi = locator.get<OrderHistoryApi>();
 
-  void getUrlValue(String url) async{
+  void getUrlValue(String url) async {
     sUrl.value = url;
     if (url.contains('localhost')) {
       url = url.replaceAll("localhost:", "partha");
     }
 
-   // debugPrint('transactionId : ${url}');
+    ///https://staging.artisanssolutions.com/Yum/#/razer_pay_result?skey=a4bace92c36c8ca7e06e96fe7bd75c19&tranID=30924785&domain=SB_ttgreen&status=00&amount=5.00&currency=MYR&paydate=2024-12-30+14:00:30&orderid=8bef4fe6-8a4f-4063-b68c-b4755099c9a2&appcode=123456&error_code&error_desc&channel=Credit&extraP={%22ccbrand%22:%22Visa%22,%22cclast4%22:%221111%22,%22cctype%22:%22Credit%22}
+    // debugPrint('transactionId : ${url}');
     if (url.contains('orderid')) {
       url = url.replaceAll('#', 'abcd');
       final uri = Uri.parse(url);
       orderId.value = uri.queryParameters['orderid'].toString();
       transactionId.value = uri.queryParameters['tranID'].toString();
-      msg.value = uri.queryParameters['skey'].toString();
+      status.value = uri.queryParameters['status'].toString();
       getOrderHistoryApi();
       ///
     }
@@ -48,40 +51,50 @@ class RazerPayResultController extends GetxController {
 
   ///getOrderHistoryApi
   void getOrderHistoryApi() {
-    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
-      if (isInternetAvailable) {
-        UserDetailsResponseData mUserDetailsResponseData =
-            await SharedPrefs().getUserDetails();
-        GetOrderHistoryRequest mGetOrderHistoryRequest = GetOrderHistoryRequest(
-            userIDF: mUserDetailsResponseData.userID,
-            orderID: orderId.value,
-            pageNumber: 1,
-            rowsPerPage: 10);
-        WebResponseSuccess mWebResponseSuccess =
-            await localApi.postGetOrderHistory(mGetOrderHistoryRequest);
+    try {
+      NetworkUtils()
+          .checkInternetConnection()
+          .then((isInternetAvailable) async {
+        if (isInternetAvailable) {
+          UserDetailsResponseData mUserDetailsResponseData =
+              await SharedPrefs().getUserDetails();
+          GetOrderHistoryRequest mGetOrderHistoryRequest =
+              GetOrderHistoryRequest(
+                  userIDF: mUserDetailsResponseData.userID,
+                  orderID: orderId.value,
+                  pageNumber: 1,
+                  rowsPerPage: 10);
+          WebResponseSuccess mWebResponseSuccess =
+              await localApi.postGetOrderHistory(mGetOrderHistoryRequest);
 
-        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
-          OrderHistoryResponse mOrderHistoryResponse = mWebResponseSuccess.data;
-          if ((mOrderHistoryResponse.data?.data ?? []).isEmpty) {
-            orderId.value = 'No history found';
-          } else {
-            if (msg.value.contains("Payment_was_successful")) {
-              await getUpdatePaymentStatusApi(
-                  (mOrderHistoryResponse.data?.data ?? []).first);
-            } else if (msg.value.contains("The_payment_was_declined")) {
-              await getUpdatePaymentDeclinedApi(
-                  (mOrderHistoryResponse.data?.data ?? []).first);
+          if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+            OrderHistoryResponse mOrderHistoryResponse =
+                mWebResponseSuccess.data;
+            if ((mOrderHistoryResponse.data?.data ?? []).isEmpty) {
+              orderId.value = 'No history found';
+              orderId.refresh();
+            } else {
+              if (transactionId.isNotEmpty || status.value.toString() == "00") {
+                await getUpdatePaymentStatusApi(
+                    (mOrderHistoryResponse.data?.data ?? []).first);
+              } else {
+                await getUpdatePaymentDeclinedApi(
+                    (mOrderHistoryResponse.data?.data ?? []).first);
+              }
             }
+          } else {
+            AppAlertBase.showSnackBar(
+                Get.context!, mWebResponseSuccess.statusMessage ?? '');
           }
         } else {
           AppAlertBase.showSnackBar(
-              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+              Get.context!, MessageConstants.noInternetConnection);
         }
-      } else {
-        AppAlertBase.showSnackBar(
-            Get.context!, MessageConstants.noInternetConnection);
-      }
-    });
+      });
+    } catch (e) {
+      orderId.value = '${e.toString()}';
+      orderId.refresh();
+    }
   }
 
   ///getSubmitPayment
@@ -114,7 +127,8 @@ class RazerPayResultController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           AppAlertBase.showCustomDialogOk(
               Get.context!, sPaymentSuccessful.tr, sPaymentSuccessfulMessage.tr,
-              () {
+              () async {
+            await SharedPrefs().setProcessOrderId('');
             Get.offAllNamed(RouteConstants.rDashboardScreen);
           }, rightText: 'Ok');
         } else {

@@ -8,6 +8,7 @@
  * Ticket       : 
  */
 
+import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/common/create_card_view.dart';
 import 'package:f_b_base/common/custom_image.dart';
 import 'package:f_b_base/constants/color_constants.dart';
@@ -37,10 +38,26 @@ class LocationListRow extends StatelessWidget {
         controller.mGetAllBranchesListData.value[index];
     return GestureDetector(
       onTap: () {
-        if (Get.isRegistered<DashboardScreenController>()) {
-          DashboardScreenController mDashboardScreenController =
-              Get.find<DashboardScreenController>();
-          mDashboardScreenController.setLocation(mGetAllBranchesListData);
+        if( ((time24to12Format(
+            mGetAllBranchesListData.fromTime ?? '0:0')
+            .contains('0:00')) &&
+            (time24to12Format(
+                mGetAllBranchesListData.toTime ?? '0:0')
+                .contains('0:00')))){
+          AppAlertBase.showSnackBar(
+              Get.context!, 'For now this branch is close, You will try after some time');
+        }else if( timeCheck(
+            mGetAllBranchesListData.fromTime ??
+                '0:0',
+            mGetAllBranchesListData.toTime ?? '0:0')) {
+          if (Get.isRegistered<DashboardScreenController>()) {
+            DashboardScreenController mDashboardScreenController =
+            Get.find<DashboardScreenController>();
+            mDashboardScreenController.setLocation(mGetAllBranchesListData);
+          }
+        }else {
+          AppAlertBase.showSnackBar(
+              Get.context!, 'For now this branch is close, You will try after some time');
         }
       },
       child: getCardView(

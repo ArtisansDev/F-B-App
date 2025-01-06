@@ -219,7 +219,7 @@ class OrderConfirmationScreenController extends GetxController {
       debugPrint(
           "\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
 
-     // getOrderPlaceApi(mOrderPlaceRequest);
+     getOrderPlaceApi(mOrderPlaceRequest);
     }
   }
 

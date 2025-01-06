@@ -162,8 +162,11 @@ class HistoryRow extends StatelessWidget {
             ///reorder
             Row(
               children: [
-                mOrderHistoryResponse.paymentStatus == 'P' ||
-                        mOrderHistoryResponse.paymentStatus == 'F'
+                (mOrderHistoryResponse.paymentStatus == 'P' ||
+                            mOrderHistoryResponse.paymentStatus == 'F') &&
+                        ((mOrderHistoryResponse.paymentGatewayNo ?? 0)
+                                .toString() !=
+                            '0')
                     ? Container(
                         width: 45.w,
                         margin: EdgeInsets.only(top: 10.sp),
