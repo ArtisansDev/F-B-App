@@ -15,6 +15,7 @@ import 'package:f_b_base/constants/color_constants.dart';
 import 'package:f_b_base/constants/image_assets_constants.dart';
 import 'package:f_b_base/constants/text_styles_constants.dart';
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
+import 'package:f_b_base/utils/num_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -116,7 +117,7 @@ class OrderListHistoryView extends StatelessWidget {
                                     height: 8.sp,
                                   ),
                                   Text(
-                                    '${controller.mDashboardScreenController.selectedCurrency.value} ${(mGetItemDetailsData.perItemTotal ?? 0) + (mGetItemDetailsData.perItemTax ?? 0)}',
+                                    '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue((mGetItemDetailsData.perItemTotal ?? 0) + (mGetItemDetailsData.perItemTax ?? 0)).toStringAsFixed(2)}',
                                     style: getText600(
                                       size: 15.5.sp,
                                       colors: ColorConstants.cAppColorsBlue,

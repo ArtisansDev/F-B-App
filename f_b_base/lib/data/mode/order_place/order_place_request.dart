@@ -24,6 +24,7 @@ class OrderPlaceRequest {
   OrderPlaceRequest({
     this.trackingOrderID,
     this.orderNo,
+    this.sPackagingName,
     this.userIDF,
     this.orderType,
     this.orderSource,
@@ -52,6 +53,7 @@ class OrderPlaceRequest {
   OrderPlaceRequest.fromJson(dynamic json) {
     trackingOrderID = json['TrackingOrderID'];
     orderNo = json['OrderNo'];
+    sPackagingName = json['PackagingName'];
     userIDF = json['UserIDF'];
     orderType = json['OrderType'];
     orderSource = json['OrderSource'];
@@ -91,6 +93,7 @@ class OrderPlaceRequest {
 
   String? trackingOrderID;
   String? orderNo;
+  String? sPackagingName;
   String? userIDF;
   String? orderType;
   String? orderSource;
@@ -118,6 +121,7 @@ class OrderPlaceRequest {
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['TrackingOrderID'] = trackingOrderID;
+    map['PackagingName'] = sPackagingName;
     map['OrderNo'] = orderNo;
     map['UserIDF'] = userIDF;
     map['OrderType'] = orderType;

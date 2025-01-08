@@ -25,26 +25,28 @@ import '../data/mode/order_place/order_place_request.dart';
 import '../data/mode/user_details/user_details_response.dart';
 import 'num_utils.dart';
 
-String getTrackingOrderID(
-    String userIDF, String restaurentIDP, String branchIDF) {
+String getTrackingOrderID(String userIDF, String restaurentIDP,
+    String branchIDF) {
   final combinedString =
-      '$userIDF$restaurentIDP$branchIDF${DateTime.now().millisecondsSinceEpoch}';
+      '$userIDF$restaurentIDP$branchIDF${DateTime
+      .now()
+      .millisecondsSinceEpoch}';
   final bytes = utf8.encode(combinedString);
   final digest = sha1.convert(bytes);
   return digest.toString();
 }
 
-createOrderPlaceRequest(
-    {String? remarksController,
-    String? orderDate,
-    AddCartModel? mAddCartModel,
-    PaymentTypeResponseData? mPaymentTypeResponseData}) async {
+createOrderPlaceRequest({String? remarksController,
+  String? orderDate,
+  AddCartModel? mAddCartModel,
+  PackagingData? mPackagingData,
+  PaymentTypeResponseData? mPaymentTypeResponseData}) async {
   ///get store details
   GetAllBranchesListData selectGetAllBranchesListData =
       mAddCartModel!.mGetAllBranchesListData ?? GetAllBranchesListData();
 
   UserDetailsResponseData mUserDetailsResponseData =
-      await SharedPrefs().getUserDetails();
+  await SharedPrefs().getUserDetails();
   String restaurantIDF =
       (await SharedPrefs().getGeneralSetting()).restaurantIDF ?? '';
 
@@ -73,7 +75,7 @@ createOrderPlaceRequest(
     if ((mGetItemDetailsData.selectVariantData?.first.discountPercentage ?? 0) >
         0) {
       subDiscountTotal =
-          (mGetItemDetailsData.selectVariantData?.first.discountedPrice ?? 0);
+      (mGetItemDetailsData.selectVariantData?.first.discountedPrice ?? 0);
       subDiscountTotal = (subTotalAmount - subDiscountTotal);
       discountTotal =
           discountTotal + (subDiscountTotal * (mGetItemDetailsData.count ?? 0));
@@ -87,7 +89,7 @@ createOrderPlaceRequest(
     String allModifierIDF = '';
     String allModifierPrices = '';
     for (ModifierData mModifierData
-        in mGetItemDetailsData.selectModifierData ?? []) {
+    in mGetItemDetailsData.selectModifierData ?? []) {
       subModifierTotal = subModifierTotal + (mModifierData.price ?? 0);
       allModifierIDF = '$allModifierIDF${mModifierData.modifierIDP ?? ''},';
       allModifierPrices = '$allModifierPrices${mModifierData.price ?? ''},';
@@ -117,31 +119,31 @@ createOrderPlaceRequest(
     OrderMenu mOrderMenu = OrderMenu(
         menuItemIDF: mGetItemDetailsData.menuItemIDP,
         variantIDF:
-            mGetItemDetailsData.selectVariantData?.first.variantIDP ?? '',
+        mGetItemDetailsData.selectVariantData?.first.variantIDP ?? '',
         itemName: mGetItemDetailsData.itemName,
         quantity: (mGetItemDetailsData.count ?? 0),
 
         ///variant
         variantPrice: mGetItemDetailsData.selectVariantData?.first.price,
         itemVariantName: mGetItemDetailsData
-                .selectVariantData?.first.quantitySpecification ??
+            .selectVariantData?.first.quantitySpecification ??
             '',
         itemTotal: (mGetItemDetailsData.selectVariantData?.first.price ?? 0) *
             (mGetItemDetailsData.count ?? 0),
         itemDiscountPrice:
-            mGetItemDetailsData.selectVariantData?.first.discountedPrice,
+        mGetItemDetailsData.selectVariantData?.first.discountedPrice,
         discountedItemAmount:
-            (mGetItemDetailsData.selectVariantData?.first.price ?? 0) -
-                (mGetItemDetailsData.selectVariantData?.first.discountedPrice ??
-                    0),
-        itemDiscountPriceTotal:
+        (mGetItemDetailsData.selectVariantData?.first.price ?? 0) -
             (mGetItemDetailsData.selectVariantData?.first.discountedPrice ??
-                    0) *
-                (mGetItemDetailsData.count ?? 0),
+                0),
+        itemDiscountPriceTotal:
+        (mGetItemDetailsData.selectVariantData?.first.discountedPrice ??
+            0) *
+            (mGetItemDetailsData.count ?? 0),
         discountPercentage:
-            mGetItemDetailsData.selectVariantData?.first.discountPercentage,
+        mGetItemDetailsData.selectVariantData?.first.discountPercentage,
         discountedItemTotalAmount:
-            subDiscountTotal * (mGetItemDetailsData.count ?? 0),
+        subDiscountTotal * (mGetItemDetailsData.count ?? 0),
 
         ///Modifier
         allModifierPrices: allModifierPrices,
@@ -155,7 +157,7 @@ createOrderPlaceRequest(
 
         ///Total
         totalItemAmount: ((subTotalAmount + subTotalTax) *
-                (mGetItemDetailsData.count ?? 0)) +
+            (mGetItemDetailsData.count ?? 0)) +
             subModifierTotal);
     debugPrint("\nmOrderMenu:   ${jsonEncode(mOrderMenu)}\n");
 
@@ -170,7 +172,7 @@ createOrderPlaceRequest(
   List<OrderTax> orderTaxList = [];
   for (TaxData mTaxData in selectGetAllBranchesListData.taxData ?? []) {
     double subTaxTotal =
-        calculatePercentageOf(subTotal, mTaxData.taxPercentage ?? 0.0);
+    calculatePercentageOf(subTotal, mTaxData.taxPercentage ?? 0.0);
     taxTotal = taxTotal + subTaxTotal;
     OrderTax mOrderTax = OrderTax(
         taxIDP: mTaxData.taxIDP ?? '',
@@ -184,12 +186,15 @@ createOrderPlaceRequest(
   }
   String sSeatIDF = await SharedPrefs().getSeatIDF();
 
+  String sPackagingName = mPackagingData?.packagingName ?? '';
+
   ///OrderPlaceRequest
   OrderPlaceRequest mOrderPlaceRequest = OrderPlaceRequest(
       trackingOrderID: trackingOrderID,
       orderSource: kIsWeb ? "3" : "1",
       orderType: mAddCartModel.sType == 'Dine' ? '1' : '2',
       orderNo: '',
+      sPackagingName: mAddCartModel.sType == 'Dine' ? "" : sPackagingName,
       branchIDF: selectGetAllBranchesListData.branchIDP,
       userIDF: mUserDetailsResponseData.userID,
       restaurentIDP: restaurantIDF,
@@ -218,7 +223,7 @@ createOrderPlaceRequest(
       ///payment_service
       paymentGatewayID: mPaymentTypeResponseData?.paymentGatewayIDP ?? '',
       paymentGatewaySettingID:
-          mPaymentTypeResponseData?.paymentGatewaySettingIDP ?? '',
+      mPaymentTypeResponseData?.paymentGatewaySettingIDP ?? '',
 
       ///orderTax
       orderTax: orderTaxList,
@@ -228,7 +233,7 @@ createOrderPlaceRequest(
 
       ///orderPlaceGuestInfoRequest
       orderPlaceGuestInfoRequest:
-          kIsWeb ? await SharedPrefs().getOrderPlaceGuest() : null);
+      kIsWeb ? await SharedPrefs().getOrderPlaceGuest() : null);
 
   return mOrderPlaceRequest;
 }

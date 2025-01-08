@@ -25,7 +25,16 @@ class OrderHistoryApiImpl extends AllApiImpl with OrderHistoryApi {
     final cases = await mWebProvider.postWithRequest(
         WebConstants.actionOrderPlace, exhibitorsListRequest);
     AppAlertBase.hideLoadingDialog(Get.context!);
-    if (cases.statusCode != WebConstants.statusCode200) {
+    if (cases.statusCode == WebConstants.statusCode401) {
+      mWebResponseFailed =
+          WebResponseFailed.fromJson(processResponseToJson(cases));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        // data: mWebResponseFailed,
+        statusMessage: mWebResponseFailed.statusMessage,
+        error: true,
+      );
+    } else if (cases.statusCode != WebConstants.statusCode200) {
       mWebResponseFailed =
           WebResponseFailed.fromJson(processResponseToJson(cases));
       mWebResponseSuccess = WebResponseSuccess(

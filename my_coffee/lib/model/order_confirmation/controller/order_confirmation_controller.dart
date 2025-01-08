@@ -24,6 +24,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../constants/logout_expired.dart';
 import '../../../routes/route_constants.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 
@@ -47,6 +48,14 @@ class OrderConfirmationScreenController extends GetxController {
     selectedDateTime.value = DateTime.now().toUtc();
     getOrderDetails();
     getPaymentTypeApi();
+  }
+
+  ///PackagingData
+  Rxn<PackagingData> mSelectPackagingData = Rxn<PackagingData>();
+
+  packagingDataSelect(PackagingData mPackagingData) {
+    mSelectPackagingData.value = mPackagingData;
+    mSelectPackagingData.refresh();
   }
 
   ///paymentType
@@ -134,9 +143,6 @@ class OrderConfirmationScreenController extends GetxController {
   ///OrderDetails
   void getOrderDetails() async {
     mAddCartModel.value = await SharedPrefs().getAddCartData();
-    selectGetAllBranchesListData.value =
-        mAddCartModel.value.mGetAllBranchesListData ?? GetAllBranchesListData();
-
     totalAmount.value = mAddCartModel.value.totalAmount ?? 0.0;
     mItems.clear();
     mItems.addAll((mAddCartModel.value.mItems ?? []).toList());
@@ -210,6 +216,7 @@ class OrderConfirmationScreenController extends GetxController {
           remarksController: remarksController.value.text,
           orderDate: getUTCValue(selectedDateTime.value!),
           mAddCartModel: mAddCartModel.value,
+          mPackagingData: mSelectPackagingData.value,
           mPaymentTypeResponseData:
               paymentTypeList.value.length > paymentType.value
                   ? paymentTypeList.value[paymentType.value]
@@ -219,7 +226,7 @@ class OrderConfirmationScreenController extends GetxController {
       debugPrint(
           "\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
 
-     getOrderPlaceApi(mOrderPlaceRequest);
+      getOrderPlaceApi(mOrderPlaceRequest);
     }
   }
 
@@ -270,7 +277,12 @@ class OrderConfirmationScreenController extends GetxController {
                 RouteConstants
                     .rDashboardScreen; // Goes back until reaching '/dashboard'
           });
-        } else {
+        } else if (mWebResponseSuccess.statusCode ==
+            WebConstants.statusCode401) {
+          AppAlertBase.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+          logout();
+        }else {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }

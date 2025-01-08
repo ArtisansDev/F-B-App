@@ -22,7 +22,7 @@ class WebResponseFailed {
   WebResponseFailed.fromJson(dynamic json) {
     _error = json['error'];
     _statusCode = json['statusCode'];
-    _statusMessage = json['statusMessage'];
+    _statusMessage = json['statusMessage'] ?? json['Message'] ?? "Error value";
     // _data = json['data'] != null
     //     ? WebResponseFailedData.fromJson(json['data'])
     //     : null;
@@ -32,6 +32,7 @@ class WebResponseFailed {
   bool? _error;
   int? _statusCode;
   String? _statusMessage;
+
   // WebResponseFailedData? _data;
   int? _responseTime;
 

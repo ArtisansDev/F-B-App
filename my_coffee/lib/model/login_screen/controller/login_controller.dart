@@ -11,6 +11,7 @@ import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:f_b_base/locator.dart';
 import 'package:f_b_base/utils/get_web_info.dart';
 import 'package:f_b_base/utils/network_utils.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -79,7 +80,9 @@ class LoginScreenController extends GetxController {
             await SharedPrefs()
                 .setUserId(mVerifyOtpResponse.data?.userId ?? '');
             await SharedPrefs().guestUser(true);
-            await getWebView();
+            if(kIsWeb) {
+              await getWebView();
+            }
             Future.delayed(const Duration(milliseconds: 500), () {});
             await getUserDetails();
             Get.until((route) {

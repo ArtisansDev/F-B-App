@@ -28,7 +28,7 @@ class UserAuthenticationApiImpl extends AllApiImpl with UserAuthenticationApi {
   Future<WebResponseSuccess> postLogin(dynamic exhibitorsListRequest) async {
     AppAlertBase.showProgressDialog(Get.context!);
     WebConstants.auth = false;
-    final cases = await mWebProvider.postWithRequest(
+    final cases = await mWebProvider.postWithRequestOtp(
         WebConstants.actionLogin, exhibitorsListRequest);
     debugPrint(
         "plainJsonRequest statusCode ==  ${jsonEncode(cases.statusCode)}");

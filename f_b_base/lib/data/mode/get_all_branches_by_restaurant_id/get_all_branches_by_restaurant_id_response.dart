@@ -95,6 +95,16 @@ class GetAllBranchesData {
 /// BusinessIdentificationNo : ""
 /// TaxData : [{"TaxPercentage":3.20,"TaxName":"cgst","TaxIDP":"0973de40-1a16-4a58-aefb-001284843998"},{"TaxPercentage":2.00,"TaxName":"Test Country","TaxIDP":"6bedd161-d4c0-45b0-a841-5c010fc6f014"},{"TaxPercentage":3.00,"TaxName":"SalesTax","TaxIDP":"7379f8bf-ba70-47ed-b97d-8717c1d31268"},{"TaxPercentage":5.20,"TaxName":"test","TaxIDP":"b971c1df-4fc3-4103-a5cb-88496c466a1b"},{"TaxPercentage":2.50,"TaxName":"sgst","TaxIDP":"8bab2e59-242f-4e40-aeb6-fa56aabeb310"}]
 /// Currency : [{"Currency":"Indian Rupee","CurrencyCode":"INR","CurrencySymbol":"₹","CountryName":"India"}]
+/// "PackagingData": [
+///                     {
+///                        "PackagingIDP": "60049270-48e4-4afa-82be-2d0677b95597",
+///                        "PackagingName": "Strew"
+///                    },
+///                     {
+///                        "PackagingIDP": "e343471f-503a-4d2a-9d6a-49ae2de49248",
+///                        "PackagingName": "Glass"
+///                     }
+///               ],
 /// CreationDate : "0001-01-01T00:00:00"
 /// FromTime : "08:00:00"
 /// ToTime : "23:00:00"
@@ -113,6 +123,7 @@ class GetAllBranchesListData {
     this.businessIdentificationNo,
     this.taxData,
     this.currency,
+    this.packagingData,
     this.creationDate,
     this.fromTime,
     this.toTime,
@@ -143,6 +154,12 @@ class GetAllBranchesListData {
         currency?.add(Currency.fromJson(v));
       });
     }
+    if (json['PackagingData'] != null) {
+      packagingData = [];
+      json['PackagingData'].forEach((v) {
+        packagingData?.add(PackagingData.fromJson(v));
+      });
+    }
     creationDate = json['CreationDate'];
     fromTime = json['FromTime'];
     toTime = json['ToTime'];
@@ -162,6 +179,7 @@ class GetAllBranchesListData {
   String? businessIdentificationNo;
   List<TaxData>? taxData;
   List<Currency>? currency;
+  List<PackagingData>? packagingData;
   String? creationDate;
   String? fromTime;
   String? toTime;
@@ -185,6 +203,9 @@ class GetAllBranchesListData {
     }
     if (currency != null) {
       map['Currency'] = currency?.map((v) => v.toJson()).toList();
+    }
+    if (packagingData != null) {
+      map['PackagingData'] = packagingData?.map((v) => v.toJson()).toList();
     }
     map['CreationDate'] = creationDate;
     map['FromTime'] = fromTime;
@@ -225,6 +246,36 @@ class Currency {
     map['CurrencyCode'] = currencyCode;
     map['CurrencySymbol'] = currencySymbol;
     map['CountryName'] = countryName;
+    return map;
+  }
+}
+
+/// PackagingIDP : "Indian Rupee"
+/// PackagingName : "INR"
+/// PackagingImage : "₹"
+
+class PackagingData {
+  PackagingData({
+    this.packagingIDP,
+    this.packagingName,
+    this.packagingImage,
+  });
+
+  PackagingData.fromJson(dynamic json) {
+    packagingIDP = json['PackagingIDP'];
+    packagingName = json['PackagingName'];
+    packagingImage = json['PackagingImage'];
+  }
+
+  String? packagingIDP;
+  String? packagingName;
+  String? packagingImage;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['PackagingIDP'] = packagingIDP;
+    map['PackagingName'] = packagingName;
+    map['PackagingImage'] = packagingImage;
     return map;
   }
 }

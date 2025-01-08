@@ -35,6 +35,35 @@ class WebProvider extends GetConnect {
   }
 
   @override
+  Future<Response> postWithRequestOtp(String action, params) async {
+    if (WebConstants.auth) {
+      String tokenValue = await SharedPrefs().getUserToken();
+      headers.addAll({'Authorization': "Bearer $tokenValue"});
+    }
+
+    debugPrint("url ==  ${WebConstants.baseUrlOtp + action}");
+    debugPrint("headers ==  ${jsonEncode(headers)}");
+    debugPrint("plainJsonRequest ==  ${jsonEncode(params)}");
+
+    allowAutoSignedCert = true;
+    try {
+      var mResponse = await post(
+          WebConstants.baseUrlOtp + action, jsonEncode(params),
+          headers: headers);
+      debugPrint("mResponse statusCode ==  ${mResponse.statusCode}");
+      debugPrint("mResponse ==  ${jsonEncode(mResponse.body)}");
+      return mResponse;
+    } catch (e) {
+      return Response(
+        statusCode: 500,
+        statusText: 'Error: $e',
+      );
+    }
+
+  }
+
+
+  @override
   Future<Response> postWithRequest(String action, params) async {
     if (WebConstants.auth) {
       String tokenValue = await SharedPrefs().getUserToken();

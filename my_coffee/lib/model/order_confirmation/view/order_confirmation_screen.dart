@@ -7,6 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:focus_detector/focus_detector.dart';
 import 'package:get/get.dart';
+import 'package:my_coffee/model/order_confirmation/view/packaging/packaging_view.dart';
 import 'package:my_coffee/model/order_confirmation/view/payment_details/payment_details_view.dart';
 import 'package:my_coffee/model/order_confirmation/view/payment_method/payment_method_view.dart';
 import 'package:my_coffee/model/order_confirmation/view/pick_up_at_view/pick_up_at_view.dart';
@@ -79,7 +80,7 @@ class OrderConfirmationScreen
           SpecialRemarksView(),
 
           ///Packaging
-          // PackagingView(),
+          PackagingView(),
 
           ///Payment Method
           PaymentMethodView(),
