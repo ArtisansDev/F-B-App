@@ -240,6 +240,10 @@ class DashboardScreenController extends GetxController {
           AppAlertBase.showSnackBar(Get.context!,
               'You can\'t able to select Dine in for this branch');
           return null;
+        }else {
+          AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+          mAddCartModel.sType = 'Dine';
+          await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
         }
       } else if (value.toString() == "Take" &&
           selectGetAllBranchesListData.value.branchIDP != null) {
@@ -247,6 +251,10 @@ class DashboardScreenController extends GetxController {
           AppAlertBase.showSnackBar(Get.context!,
               'You can\'t able to select Take away in for this branch');
           return null;
+        }else {
+          AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+          mAddCartModel.sType = 'Take';
+          await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
         }
       }
     }

@@ -261,7 +261,7 @@ class DetailsPageScreenController extends GetxController {
                   .selectGetAllBranchesListData.value.takeaway ??
               false)) {
             AppAlertBase.showSnackBar(Get.context!,
-                'You can\'t able to select Dine in for this branch');
+                'You can\'t able to select Take away in for this branch');
             return null;
           } else {
             AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();

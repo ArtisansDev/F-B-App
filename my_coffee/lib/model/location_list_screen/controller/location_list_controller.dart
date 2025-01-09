@@ -55,6 +55,7 @@ class LocationListScreenController extends GetxController {
                 rowsPerPage: 10,
                 pageNumber: pageNumber,
                 searchValue: searchController.value.text,
+                branchIDP: '',
                 todayDate: toDayDate(),
                 restaurantIDF:
                     (await SharedPrefs().getGeneralSetting()).restaurantIDF ??

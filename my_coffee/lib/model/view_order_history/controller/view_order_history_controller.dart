@@ -1,16 +1,17 @@
 import 'dart:convert';
 
-
 import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/constants/message_constants.dart';
 import 'package:f_b_base/constants/web_constants.dart';
 import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
 import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
 import 'package:f_b_base/data/mode/order_place/order_place_request.dart';
 import 'package:f_b_base/data/mode/order_place/process_order_response.dart';
 import 'package:f_b_base/data/remote/api_call/order/order_api.dart';
+import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
 import 'package:f_b_base/data/remote/web_response.dart';
 import 'package:f_b_base/locator.dart';
 import 'package:f_b_base/utils/date_format.dart';
@@ -153,49 +154,6 @@ class ViewOrderHistoryController extends GetxController {
     mItems.refresh();
   }
 
-  ///editOrder
-  // void editOrder(int index) async {
-  //   await Get.toNamed(RouteConstants.rDetailsEditPageScreen, arguments: index);
-  //   getOrderDetails();
-  // }
-
-  ///orderNow
-  orderNow() async {
-    if (await checkLoginStatus()) {
-      Get.toNamed(RouteConstants.rLoginScreen);
-    } else {
-      OrderPlaceRequest mOrderPlaceRequest = await createOrderPlaceRequest(
-          remarksController: remarksController.value.text,
-          orderDate: getUTCValue(selectedDateTime.value!),
-          mAddCartModel: mAddCartModel.value);
-
-      ///OrderPlaceRequest
-      debugPrint("\nmOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
-
-      getOrderPlaceApi(mOrderPlaceRequest);
-    }
-  }
-
-  ///sReorder
-  reorder() async {
-    AddCartModel mSharedPrefsAddCartModel =
-        await SharedPrefs().getAddCartData();
-    if ((mSharedPrefsAddCartModel.mItems ?? []).isNotEmpty) {
-      AppAlertBase.showCustomDialogYesNoLogout(Get.context!, 'Proceed to Change?',
-          'This action will clear the items in your current basket. Do you want to proceed?',
-          () async {
-        mDashboardScreenController.selectGetAllBranchesListData.value =
-            mAddCartModel.value.mGetAllBranchesListData ??
-                GetAllBranchesListData();
-        await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel.value));
-        Get.offAndToNamed(RouteConstants.rOrderConfirmationScreen);
-      }, rightText: 'Ok');
-    } else {
-      await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel.value));
-      Get.offAndToNamed(RouteConstants.rOrderConfirmationScreen);
-    }
-  }
-
   ///taxCalculation
   void taxCalculation() {
     subTotalAmount.value = totalAmount.value;
@@ -213,29 +171,59 @@ class ViewOrderHistoryController extends GetxController {
         mAddCartModel.value.mOrderHistoryResponseItemData?.totalAmount ?? 0.0;
   }
 
-  ///checkLogin
-  checkLoginStatus() async {
-    String sLoginStatus = await SharedPrefs().getUserToken();
-    return sLoginStatus.isEmpty;
-  }
-
-  ///getOrderPlaceApi
-  void getOrderPlaceApi(OrderPlaceRequest mOrderPlaceRequest) {
+  ///getGetAllBranchesApi
+  void getGetAllBranchesApi() {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+      GetAllBranchesListData mGetAllBranchesListData =
+          mAddCartModel.value.mGetAllBranchesListData ??
+              GetAllBranchesListData();
+      if ((mGetAllBranchesListData.branchIDP ?? '').isEmpty) {
+        AppAlertBase.showSnackBar(Get.context!, 'Branch not found');
+        return;
+      }
       if (isInternetAvailable) {
+        GetAllBranchesByRestaurantIdRequest
+            mGetAllBranchesByRestaurantIdRequest =
+            GetAllBranchesByRestaurantIdRequest(
+                rowsPerPage: 1,
+                pageNumber: 1,
+                searchValue: '',
+                branchIDP: mGetAllBranchesListData.branchIDP,
+                todayDate: toDayDate(),
+                restaurantIDF:
+                    (await SharedPrefs().getGeneralSetting()).restaurantIDF ??
+                        '');
+        final localApi = locator.get<ProductApi>();
         WebResponseSuccess mWebResponseSuccess =
-            await localApi.postOrderPlace(mOrderPlaceRequest);
+            await localApi.postGetAllBranchesByRestaurantID(
+                mGetAllBranchesByRestaurantIdRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
-          ProcessOrderResponse mProcessOrderResponse = mWebResponseSuccess.data;
-          AppAlertBase.showSnackBar(Get.context!, 'Order place successfully');
-          await SharedPrefs().setAddCartData('');
-          mDashboardScreenController.selectedIndex.value = 2;
-          mDashboardScreenController.selectTitle(2);
-          Get.until((route) {
-            return route.settings.name ==
-                RouteConstants
-                    .rDashboardScreen; // Goes back until reaching '/dashboard'
-          });
+          GetAllBranchesByRestaurantIdResponse
+              mGetAllBranchesByRestaurantIdResponse = mWebResponseSuccess.data;
+          if ((mGetAllBranchesByRestaurantIdResponse.data?.data ?? [])
+              .isEmpty) {
+            AppAlertBase.showSnackBar(Get.context!, 'Branch not found');
+            return;
+          }else{
+            GetAllBranchesListData mGetAllBranchesListData =  (mGetAllBranchesByRestaurantIdResponse.data?.data ?? []).first;
+            if( ((time24to12Format(
+                mGetAllBranchesListData.fromTime ?? '0:0')
+                .contains('0:00')) &&
+                (time24to12Format(
+                    mGetAllBranchesListData.toTime ?? '0:0')
+                    .contains('0:00')))){
+              AppAlertBase.showSnackBar(
+                  Get.context!, 'For now this branch is close, You will try after some time');
+            }else if( timeCheck(
+                mGetAllBranchesListData.fromTime ??
+                    '0:0',
+                mGetAllBranchesListData.toTime ?? '0:0')) {
+              reorder();
+            }else {
+              AppAlertBase.showSnackBar(
+                  Get.context!, 'For now this branch is close, You will try after some time');
+            }
+          }
         } else {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
@@ -245,5 +233,27 @@ class ViewOrderHistoryController extends GetxController {
             Get.context!, MessageConstants.noInternetConnection);
       }
     });
+  }
+
+  ///sReorder
+  reorder() async {
+    AddCartModel mSharedPrefsAddCartModel =
+    await SharedPrefs().getAddCartData();
+    if ((mSharedPrefsAddCartModel.mItems ?? []).isNotEmpty) {
+      AppAlertBase.showCustomDialogYesNoLogout(
+          Get.context!,
+          'Proceed to Change?',
+          'This action will clear the items in your current basket. Do you want to proceed?',
+              () async {
+            mDashboardScreenController.selectGetAllBranchesListData.value =
+                mAddCartModel.value.mGetAllBranchesListData ??
+                    GetAllBranchesListData();
+            await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel.value));
+            Get.offAndToNamed(RouteConstants.rOrderConfirmationScreen);
+          }, rightText: 'Ok');
+    } else {
+      await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel.value));
+      Get.offAndToNamed(RouteConstants.rOrderConfirmationScreen);
+    }
   }
 }

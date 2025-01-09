@@ -76,7 +76,8 @@ class BottomBarOrderNowHistoryView extends StatelessWidget {
                   width: 45.w,
                   margin: EdgeInsets.only(left: 20.sp),
                   child: rectangleRoundedCornerButtonMedium(sReorder.tr, () {
-                    controller.reorder();
+                    // controller.reorder();
+                    controller.getGetAllBranchesApi();
                   },
                       bgColor: ColorConstants.cAppColorsBlue,
                       textColor: Colors.white,

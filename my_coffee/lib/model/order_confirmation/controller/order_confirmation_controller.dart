@@ -45,7 +45,7 @@ class OrderConfirmationScreenController extends GetxController {
   final localApi = locator.get<OrderHistoryApi>();
 
   OrderConfirmationScreenController() {
-    selectedDateTime.value = DateTime.now().toUtc();
+    selectedDateTime.value = DateTime.now();
     getOrderDetails();
     getPaymentTypeApi();
   }
@@ -176,7 +176,7 @@ class OrderConfirmationScreenController extends GetxController {
 
   ///deleteOrder
   void deleteOrder(int index) async {
-    mItems.value.removeAt(index);
+    mItems.removeAt(index);
     totalAmount.value = 0.0;
     for (GetItemDetailsData mGetItemDetailsData in mItems) {
       totalAmount.value = totalAmount.value + (mGetItemDetailsData.total ?? 0);
@@ -184,6 +184,9 @@ class OrderConfirmationScreenController extends GetxController {
     mAddCartModel.value.mItems?.clear();
     mAddCartModel.value.mItems?.addAll(mItems);
     mAddCartModel.value.totalAmount = totalAmount.value;
+    if(totalAmount.value == 0.0){
+      mAddCartModel.value.sOrderDateTime = "";
+    }
     taxCalculation();
     await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
     if (totalAmount.value == 0.0) {
