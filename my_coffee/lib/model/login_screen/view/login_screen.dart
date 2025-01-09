@@ -165,7 +165,7 @@ class LoginScreen extends GetView<LoginScreenController> {
                       left: 28.sp,
                       right: 28.sp,
                     ),
-                    child: rectangleRoundedCornerButtonBold('Guest', () {
+                    child: rectangleRoundedCornerButtonBold('Continue As Guest', () {
                       controller.isGuest();
                     },
                         bgColor: ColorConstants.yourKeySkillsColor4,

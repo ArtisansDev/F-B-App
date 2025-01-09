@@ -233,6 +233,23 @@ class DashboardScreenController extends GetxController {
 
   showDialogPicDine() async {
     var value = await AppAlertBase.showCustomDialogPicDine(Get.context!);
+    if (value != null) {
+      if (value.toString() == "Dine" &&
+          selectGetAllBranchesListData.value.branchIDP != null) {
+        if (!(selectGetAllBranchesListData.value.dineIn ?? false)) {
+          AppAlertBase.showSnackBar(Get.context!,
+              'You can\'t able to select Dine in for this branch');
+          return null;
+        }
+      } else if (value.toString() == "Take" &&
+          selectGetAllBranchesListData.value.branchIDP != null) {
+        if (!(selectGetAllBranchesListData.value.takeaway ?? false)) {
+          AppAlertBase.showSnackBar(Get.context!,
+              'You can\'t able to select Take away in for this branch');
+          return null;
+        }
+      }
+    }
     return value;
   }
 

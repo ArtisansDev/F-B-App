@@ -34,7 +34,7 @@ import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'dart:html' as html;
+// import 'dart:html' as html;
 import '../../../routes/route_constants.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 
@@ -494,8 +494,8 @@ class HistoryScreenController extends GetxController {
           print('Could not launch ${Uri.parse(value)}');
         }
       }
-      html.window.open('about:blank', '_self'); // Open a blank page
-      html.window.close(); // Close the current tab
+      // html.window.open('about:blank', '_self'); // Open a blank page
+      // html.window.close(); // Close the current tab
     } else if (value.isNotEmpty) {
       bFlagLoad.value = false;
       if (value.toString().toUpperCase().contains('declined'.toUpperCase()) ||
@@ -584,8 +584,8 @@ class HistoryScreenController extends GetxController {
           print('Could not launch ${Uri.parse(value)}');
         }
       }
-      html.window.open('about:blank', '_self'); // Open a blank page
-      html.window.close(); // Close the current tab
+      // html.window.open('about:blank', '_self'); // Open a blank page
+      // html.window.close(); // Close the current tab
     } else if (value.isNotEmpty) {
       bFlagLoad.value = false;
       if (value.toString().toUpperCase().contains('declined'.toUpperCase()) ||

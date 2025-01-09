@@ -50,7 +50,7 @@ class IntroductionScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetGeneralSettingResponse mGetGeneralSettingResponse =
               mWebResponseSuccess.data;
-          setValue(mGetGeneralSettingResponse);
+         setValue(mGetGeneralSettingResponse);
         }
       } else {
         AppAlertBase.showSnackBar(
@@ -67,42 +67,49 @@ class IntroductionScreenController extends GetxController {
         bool bNextPage = false;
         String value = '';
         if (kIsWeb) {
-          bNextPage = true;
+          if (mGetGeneralSettingData.isAndroidEnable ?? false) {
+            bNextPage = true;
+          } else {
+            value = 'This variation is not supported for web';
+          }
         } else if (Platform.isAndroid) {
           if (mGetGeneralSettingData.isAndroidEnable ?? false) {
             bNextPage = true;
           } else {
-            value = 'This variation is not supported in android';
+            value = 'This variation is not supported for android';
           }
         } else if (Platform.isIOS) {
           if (mGetGeneralSettingData.isIOSEnable ?? false) {
             bNextPage = true;
           } else {
-            value = 'This variation is not supported in ios';
+            bNextPage = true;
+            value = 'This variation is not supported for ios';
           }
         }
-        // if (bNextPage) {
-        if ((mGetGeneralSettingData.restaurantIDF ?? '').isNotEmpty) {
-          await SharedPrefs().setAddCartData('');
-          await SharedPrefs().setBranchesData('');
-          await SharedPrefs()
-              .setGeneralSetting(jsonEncode(mGetGeneralSettingData));
-
-          if (kIsWeb) {
-            if ((seatID.value ?? '').isNotEmpty) {
-              await getGetSeatDetailApi(seatID.value ?? '',
-                  (mGetGeneralSettingData.restaurantIDF ?? ''));
+        if (bNextPage) {
+          if ((mGetGeneralSettingData.restaurantIDF ?? '').isNotEmpty) {
+            await SharedPrefs().setAddCartData('');
+            await SharedPrefs().setBranchesData('');
+            await SharedPrefs()
+                .setGeneralSetting(jsonEncode(mGetGeneralSettingData));
+            if (kIsWeb) {
+              if ((seatID.value ?? '').isNotEmpty) {
+                await getGetSeatDetailApi(seatID.value ?? '',
+                    (mGetGeneralSettingData.restaurantIDF ?? ''));
+              } else {
+                AppAlertBase.showSnackBar(
+                    Get.context!, 'Please Scanner your qrcode');
+              }
             } else {
-              AppAlertBase.showSnackBar(
-                  Get.context!, 'Please Scanner your qrcode');
+              Get.offNamed(
+                RouteConstants.rDashboardScreen,
+              );
             }
           } else {
-            Get.offNamed(
-              RouteConstants.rDashboardScreen,
-            );
+            AppAlertBase.showSnackBar(Get.context!, 'restaurant id not found');
           }
-        } else {
-          AppAlertBase.showSnackBar(Get.context!, 'restaurant id not found');
+        }else {
+          AppAlertBase.showSnackBar(Get.context!, value);
         }
       } else {
         AppAlertBase.showSnackBar(

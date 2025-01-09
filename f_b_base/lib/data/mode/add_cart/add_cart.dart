@@ -18,7 +18,7 @@ class AddCartModel {
   double? totalAmount;
   String? sTableNo = '';
   String? sOrderDateTime = '';
-  String? sType = 'Take';
+  String? sType = ''; //'Take';
   List<GetItemDetailsData>? mItems;
 
   AddCartModel({
@@ -35,7 +35,7 @@ class AddCartModel {
     totalAmount = json['totalAmount'];
     sTableNo = json['table_no'] ?? '';
     sOrderDateTime = json['sOrderDateTime'] ?? '';
-    sType = json['type'] ?? 'Take';
+    sType = json['type'] ??'';//
     totalAmount = json['totalAmount'];
     mGetAllBranchesListData = json['branches'] != null
         ? GetAllBranchesListData.fromJson(json['branches'])

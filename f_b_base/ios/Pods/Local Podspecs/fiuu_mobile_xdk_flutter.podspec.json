@@ -1,0 +1,34 @@
+{
+  "name": "fiuu_mobile_xdk_flutter",
+  "version": "0.0.1",
+  "summary": "Fiuu Mobile Payment for Flutter",
+  "description": "Fiuu Mobile Payment for Flutter",
+  "homepage": "https://github.com/FiuuPayment/Mobile-XDK-Fiuu_Flutter",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Your Company": "Fiuu"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "Classes/**/*",
+  "public_header_files": "Classes/**/*.h",
+  "dependencies": {
+    "Flutter": [
+
+    ],
+    "fiuu-mobile-xdk-cocoapods": [
+      "~> 3.34.2"
+    ]
+  },
+  "static_framework": true,
+  "platforms": {
+    "ios": "13.0"
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "i386 arm64"
+  }
+}

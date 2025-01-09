@@ -24,9 +24,7 @@ import '../../dashboard_screen/controller/dashboard_controller.dart';
 import '../../location_list_screen/controller/location_list_controller.dart';
 
 class HomeScreenController extends GetxController {
-
-  void onChangePage(int value) {
-  }
+  void onChangePage(int value) {}
 
   DashboardScreenController mDashboardScreenController =
       Get.find<DashboardScreenController>();
@@ -80,6 +78,30 @@ class HomeScreenController extends GetxController {
   late DashboardScreenController controller;
 
   showDialogPicDine(String title) {
+    if (title == "Dine" &&
+        mDashboardScreenController
+                .selectGetAllBranchesListData.value.branchIDP !=
+            null) {
+      if (!(mDashboardScreenController
+              .selectGetAllBranchesListData.value.dineIn ??
+          false)) {
+        AppAlertBase.showSnackBar(
+            Get.context!, 'You can\'t able to select Dine in for this branch');
+        return;
+      }
+    } else if (title == "Take" &&
+        mDashboardScreenController
+                .selectGetAllBranchesListData.value.branchIDP !=
+            null) {
+      if (!(mDashboardScreenController
+              .selectGetAllBranchesListData.value.takeaway ??
+          false)) {
+        AppAlertBase.showSnackBar(
+            Get.context!, 'You can\'t able to select Take away in for this branch');
+        return;
+      }
+    }
+
     if (Get.isRegistered<DashboardScreenController>()) {
       controller = Get.find<DashboardScreenController>();
       controller.openDialog(title);
@@ -133,13 +155,15 @@ class HomeScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           mGetDashboardResponse.value = mWebResponseSuccess.data;
           dataGetBestSellerItemData.value.clear();
-          dataGetBestSellerItemData.value.addAll(
-              mGetDashboardResponse.value?.mGetDashboardData?.bestSellingItems ?? []);
+          dataGetBestSellerItemData.value.addAll(mGetDashboardResponse
+                  .value?.mGetDashboardData?.bestSellingItems ??
+              []);
           dataGetBestSellerItemData.refresh();
 
           mBannerMaster.value.clear();
           mBannerMaster.value.addAll(
-              mGetDashboardResponse.value?.mGetDashboardData?.bannerMaster ?? []);
+              mGetDashboardResponse.value?.mGetDashboardData?.bannerMaster ??
+                  []);
           mBannerMaster.refresh();
           stopTimer();
           if (mBannerMaster.value.length > 1) {
@@ -162,22 +186,23 @@ class HomeScreenController extends GetxController {
       AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
       if ((mAddCartModel.mItems ?? []).isNotEmpty) {
         AppAlertBase.showCustomDialogYesNoLogout(
-            Get.context!, 'Proceed to Change?',
+            Get.context!,
+            'Proceed to Change?',
             'This action will clear the items in your current basket. Do you want to proceed?',
-                () async {
-              await SharedPrefs().setAddCartData('');
-              final selectLocation =
+            () async {
+          await SharedPrefs().setAddCartData('');
+          final selectLocation =
               await AppAlert.showCustomDialogLocationPicker(Get.context!);
-              Get.delete<LocationListScreenController>();
-              if (selectLocation.isNotEmpty) {
-                await SharedPrefs().setAddCartData('');
-                detDashboardDetailsApi();
-                getOrderDetails();
-              }
-            }, rightText: 'Ok');
+          Get.delete<LocationListScreenController>();
+          if (selectLocation.isNotEmpty) {
+            await SharedPrefs().setAddCartData('');
+            detDashboardDetailsApi();
+            getOrderDetails();
+          }
+        }, rightText: 'Ok');
       } else {
         final selectLocation =
-        await AppAlert.showCustomDialogLocationPicker(Get.context!);
+            await AppAlert.showCustomDialogLocationPicker(Get.context!);
         Get.delete<LocationListScreenController>();
         if (selectLocation.isNotEmpty) {
           detDashboardDetailsApi();

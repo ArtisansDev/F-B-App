@@ -263,6 +263,10 @@ class OrderConfirmationScreenController extends GetxController {
           AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
           mAddCartModel.mItems = null;
           mAddCartModel.sOrderDateTime = '';
+          mAddCartModel.totalAmount=0.0;
+          mAddCartModel.sTableNo = "";
+          mAddCartModel.sType = "";
+
           await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
           OrderPlaceShare mOrderPlaceShare = OrderPlaceShare(
               data: mProcessOrderResponse.data ?? '',

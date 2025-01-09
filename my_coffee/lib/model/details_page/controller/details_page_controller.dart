@@ -1,9 +1,13 @@
 // ignore_for_file: prefer_interpolation_to_compose_strings
 
+import 'dart:convert';
 
 import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/text_styles_constants.dart';
 import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_request.dart';
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
 import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
@@ -13,6 +17,7 @@ import 'package:f_b_base/utils/network_utils.dart';
 import 'package:f_b_base/utils/num_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../common/tag_view/tag_modifier_date_view.dart';
 import '../../../common/tag_view/tag_variant_date_view.dart';
 import '../../../routes/route_constants.dart';
@@ -49,16 +54,24 @@ class DetailsPageScreenController extends GetxController {
         ((amount.value + amountModifier.value + taxAmount) * count.value);
   }
 
+  ///buyNow
   void buyNow() async {
-    await saveCart(
-        mGetItemDetailsData.value,
-        count.value,
-        mTagModifierDateView,
-        mTagVariantDateView,
-        totalAmount.value,
-        amount.value,
-        amountModifier.value);
-    Get.offNamed(RouteConstants.rOrderConfirmationScreen);
+    ///type check
+    await typeCheck((value) async {
+      debugPrint('Select typeCheck : $value');
+      if (value == true) {
+        ///saveCart
+        await saveCart(
+            mGetItemDetailsData.value,
+            count.value,
+            mTagModifierDateView,
+            mTagVariantDateView,
+            totalAmount.value,
+            amount.value,
+            amountModifier.value);
+        Get.offNamed(RouteConstants.rOrderConfirmationScreen);
+      }
+    });
   }
 
   DetailsPageScreenController(this.itemId) {
@@ -131,7 +144,8 @@ class DetailsPageScreenController extends GetxController {
               sVariant.value = mVariantData.first.quantitySpecification ?? '';
 
               ///tax
-              taxP.value =  mGetItemDetailsData.value.itemTax ?? 0;
+              taxP.value = mGetItemDetailsData.value.itemTax ?? 0;
+
               ///calculate total
               priceIncDec();
             }
@@ -158,18 +172,105 @@ class DetailsPageScreenController extends GetxController {
 
   ///addCart
   addCart() async {
-    await saveCart(
-        mGetItemDetailsData.value,
-        count.value,
-        mTagModifierDateView,
-        mTagVariantDateView,
-        totalAmount.value,
-        amount.value,
-        amountModifier.value);
-    Get.until((route) {
-      return route.settings.name ==
-          RouteConstants
-              .rDashboardScreen; // Goes back until reaching '/dashboard'
+    ///type check
+    await typeCheck((value) async {
+      debugPrint('Select typeCheck : $value');
+      if (value == true) {
+        ///saveCart
+        await saveCart(
+            mGetItemDetailsData.value,
+            count.value,
+            mTagModifierDateView,
+            mTagVariantDateView,
+            totalAmount.value,
+            amount.value,
+            amountModifier.value);
+
+        Get.until((route) {
+          return route.settings.name ==
+              RouteConstants
+                  .rDashboardScreen; // Goes back until reaching '/dashboard'
+        });
+      }
+    });
+  }
+
+  ///select type
+  typeCheck(Function onBack) async {
+    AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+    if ((mAddCartModel.sType ?? "").isEmpty) {
+      await showSelectTypeBottomSheet(onBack);
+    }else {
+      onBack(true);
+    }
+  }
+
+  List<String> filteredItems = ['Dine in', 'Take Away'];
+
+  showSelectTypeBottomSheet(Function onBack) async {
+    await showModalBottomSheet(
+      context: Get.context!,
+      isScrollControlled: true,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return Container(
+              padding: EdgeInsets.all(18.sp),
+              height: 15.h,
+              child: ListView.builder(
+                itemCount: filteredItems.length,
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context, filteredItems[index]);
+                    },
+                    child: Container(
+                      color: Colors.transparent,
+                      margin: EdgeInsets.only(bottom: 17.5.sp),
+                      child: Text(
+                        filteredItems[index],
+                        style: getText500(size: 17.5.sp, colors: Colors.black),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            );
+          },
+        );
+      },
+    ).then((selectedItem) async {
+      if (selectedItem != null) {
+        if (selectedItem.toString().toLowerCase().contains('dine')) {
+          if (!(mDashboardScreenController
+                  .selectGetAllBranchesListData.value.dineIn ??
+              false)) {
+            AppAlertBase.showSnackBar(Get.context!,
+                'You can\'t able to select Dine in for this branch');
+            return null;
+          } else {
+            AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+            mAddCartModel.sType = 'Dine';
+            await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+          }
+        } else if (selectedItem.toString().toLowerCase().contains('take')) {
+          if (!(mDashboardScreenController
+                  .selectGetAllBranchesListData.value.takeaway ??
+              false)) {
+            AppAlertBase.showSnackBar(Get.context!,
+                'You can\'t able to select Dine in for this branch');
+            return null;
+          } else {
+            AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+            mAddCartModel.sType = 'Take';
+            await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+          }
+        }
+        onBack(true);
+      }
     });
   }
 }
