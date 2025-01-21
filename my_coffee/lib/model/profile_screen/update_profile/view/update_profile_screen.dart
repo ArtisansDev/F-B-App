@@ -10,6 +10,7 @@ import 'package:f_b_base/constants/pattern_constants.dart';
 import 'package:f_b_base/constants/text_styles_constants.dart';
 import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:f_b_base/utils/app_utils.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:focus_detector/focus_detector.dart';
@@ -44,15 +45,15 @@ class UpdateProfileScreen extends GetView<UpdateProfileScreenController> {
                 child: Stack(
                   children: [
                     Align(
-                      alignment: Alignment.bottomRight,
-                      child: Opacity(
-                        opacity: 0.5, // Set opacity here
-                        child: Image.asset(
-                        ImageAssetsConstants.buttonLogo,
-                        width: 40.w,
-                        fit: BoxFit.contain,
-                      ),)
-                    ),
+                        alignment: Alignment.bottomRight,
+                        child: Opacity(
+                          opacity: 0.5, // Set opacity here
+                          child: Image.asset(
+                            ImageAssetsConstants.buttonLogo,
+                            width: 40.w,
+                            fit: BoxFit.contain,
+                          ),
+                        )),
                     Obx(
                       () {
                         return fullView();
@@ -131,20 +132,23 @@ class UpdateProfileScreen extends GetView<UpdateProfileScreenController> {
               width: 30.sp,
             ),
             Expanded(
-                child: GestureDetector(
-              onTap: () {
-                controller.mImagePickerUtils.settingImagePicker();
-              },
-              child: Container(
-                height: 19.w,
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Change Profile Pic',
-                  style: getTextBold(
-                      size: 18.sp, colors: ColorConstants.cAppColorsBlue),
-                ),
-              ),
-            )),
+                child: Visibility(
+                    visible: !kIsWeb,
+                    child: GestureDetector(
+                      onTap: () {
+                        controller.mImagePickerUtils.settingImagePicker();
+                      },
+                      child: Container(
+                        height: 19.w,
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Change Profile Pic',
+                          style: getTextBold(
+                              size: 18.sp,
+                              colors: ColorConstants.cAppColorsBlue),
+                        ),
+                      ),
+                    ))),
           ],
         ));
   }

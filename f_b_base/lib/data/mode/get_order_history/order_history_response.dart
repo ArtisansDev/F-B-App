@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import '../../../utils/num_utils.dart';
 import '../get_general_setting/get_general_setting_response.dart';
 import '../order_place/order_place_request.dart';
 
@@ -19,8 +20,11 @@ class OrderHistoryResponse {
     error = json['error'];
     statusCode = json['statusCode'];
     statusMessage = json['statusMessage'];
-    data = json['data'] != null ? OrderHistoryResponseData.fromJson(json['data']) : null;
+    data = json['data'] != null
+        ? OrderHistoryResponseData.fromJson(json['data'])
+        : null;
   }
+
   bool? error;
   int? statusCode;
   String? statusMessage;
@@ -65,6 +69,7 @@ class OrderHistoryResponseData {
       });
     }
   }
+
   int? totalRecords;
   int? firstRecord;
   int? lastRecord;
@@ -115,6 +120,7 @@ class OrderHistoryResponseData {
 /// TaxAmountTotal : 92.04
 /// TotalAmount : 705.64
 /// AdditionalNotes : ""
+/// PackagingName : null : ""
 
 class OrderHistoryResponseItemData {
   OrderHistoryResponseItemData({
@@ -155,6 +161,8 @@ class OrderHistoryResponseItemData {
     this.totalAmount,
     this.additionalNotes,
     this.paymentGatewayID,
+    this.adjustedAmount,
+    this.packagingName,
     this.paymentGatewaySettingID,});
 
   OrderHistoryResponseItemData.fromJson(dynamic json) {
@@ -172,8 +180,12 @@ class OrderHistoryResponseItemData {
     paymentGatewayNo = json['PaymentGatewayNo'];
     paymentGatewaySettingIDF = json['PaymentGatewaySettingIDF'];
     paymentGatewayIDF = json['PaymentGatewayIDF'];
-    sandboxConfigurations = json['SandboxConfigurations'] != null ? SandboxConfigurations.fromJson(json['SandboxConfigurations']) : null;
-    productionConfigurations = json['ProductionConfigurations'] != null ? ProductionConfigurations.fromJson(json['ProductionConfigurations']) : null;
+    sandboxConfigurations =
+    json['SandboxConfigurations'] != null ? SandboxConfigurations.fromJson(
+        json['SandboxConfigurations']) : null;
+    productionConfigurations =
+    json['ProductionConfigurations'] != null ? ProductionConfigurations
+        .fromJson(json['ProductionConfigurations']) : null;
     tableNo = json['TableNo'];
     trackingOrderID = json['TrackingOrderID'];
     userIDF = json['UserIDF'];
@@ -206,7 +218,10 @@ class OrderHistoryResponseItemData {
     additionalNotes = json['AdditionalNotes'];
     paymentGatewayID = json['PaymentGatewayID'];
     paymentGatewaySettingID = json['PaymentGatewaySettingID'];
+    packagingName = json['PackagingName']??'';
+    adjustedAmount = getDoubleValue(json['AdjustedAmount']);
   }
+
   String? orderIDP;
   String? paymentStatus;
   String? branchName;
@@ -239,12 +254,14 @@ class OrderHistoryResponseItemData {
   double? modifierTotal;
   double? discountTotal;
   double? itemTaxTotal;
+  double? adjustedAmount;
   double? subTotal;
   double? taxAmountTotal;
   double? totalAmount;
   String? additionalNotes;
   String? paymentGatewayID;
   String? paymentGatewaySettingID;
+  String? packagingName;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -294,6 +311,8 @@ class OrderHistoryResponseItemData {
     map['AdditionalNotes'] = additionalNotes;
     map['PaymentGatewayID'] = paymentGatewayID;
     map['PaymentGatewaySettingID'] = paymentGatewaySettingID;
+    map['PackagingName'] = packagingName;
+    map['AdjustedAmount'] = adjustedAmount;
     return map;
   }
 
@@ -317,6 +336,7 @@ class OrderTax {
     taxPercentage = json['TaxPercentage'];
     taxAmount = json['TaxAmount'];
   }
+
   String? taxIDF;
   String? taxName;
   double? taxPercentage;

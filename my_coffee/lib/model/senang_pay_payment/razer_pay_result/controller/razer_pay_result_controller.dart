@@ -17,6 +17,7 @@ import 'package:f_b_base/lang/translation_service_key.dart';
 import 'package:f_b_base/locator.dart';
 import 'package:f_b_base/utils/network_utils.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
 import '../../../../routes/route_constants.dart';
@@ -45,6 +46,7 @@ class RazerPayResultController extends GetxController {
       transactionId.value = uri.queryParameters['tranID'].toString();
       status.value = uri.queryParameters['status'].toString();
       getOrderHistoryApi();
+
       ///
     }
   }
@@ -144,6 +146,7 @@ class RazerPayResultController extends GetxController {
 
   getUpdatePaymentDeclinedApi(
       OrderHistoryResponseItemData mOrderHistoryResponse) async {
+    bool isGuestUser = await SharedPrefs().getGuestUser();
     await NetworkUtils()
         .checkInternetConnection()
         .then((isInternetAvailable) async {
@@ -158,7 +161,7 @@ class RazerPayResultController extends GetxController {
                     (mOrderHistoryResponse.paymentGatewayNo ?? 0).toString(),
                 paymentGatewaySettingIDF:
                     mOrderHistoryResponse.paymentGatewaySettingIDF,
-                paymentStatus: 'F',
+                paymentStatus: (isGuestUser) ? 'C' : 'F',
                 responseCode: '400',
                 responseData: sUrl.value.split('?').last,
                 paidAmount: mOrderHistoryResponse.totalAmount,
@@ -170,8 +173,11 @@ class RazerPayResultController extends GetxController {
             await localApi.postUpdatePaymentStatus(mUpdatePaymentStatusRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           AppAlertBase.showCustomDialogOk(
-              Get.context!, sPaymentDeclined.tr, sPaymentDeclinedMessage.tr,
-              () {
+              Get.context!,
+              sPaymentDeclined.tr,
+              (isGuestUser)
+                  ? sPaymentCancelMessage.tr
+                  : sPaymentDeclinedMessage.tr, () {
             Get.offAllNamed(RouteConstants.rDashboardScreen);
           }, rightText: 'Ok');
         } else {

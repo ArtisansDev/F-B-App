@@ -146,8 +146,31 @@ class GetItemDetailsData {
   List<ModifierData>? selectModifierData;
   List<VariantData>? selectVariantData;
 
+  getModifierString(){
+    String value = '';
+    for(ModifierData mModifierList in selectModifierData??[]){
+      value =  value + (mModifierList.modifierIDP??'').toString();
+    }
+    return value;
+  }
+
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
+
+    ///select
+    map['total'] = total;
+    map['perItemTotal'] = perItemTotal;
+    map['perItemTax'] = perItemTax;
+    map['amountModifier'] = amountModifier;
+    map['amount'] = amount;
+    map['count'] = count;
+    if (selectModifierData != null) {
+      map['selectModifierData'] = selectModifierData?.map((v) => v.toJson()).toList();
+    }
+    if (selectVariantData != null) {
+      map['selectVariantData'] = selectVariantData?.map((v) => v.toJson()).toList();
+    }
+
     map['MenuItemIDP'] = menuItemIDP;
     map['ItemName'] = itemName;
     map['Description'] = description;
@@ -168,19 +191,7 @@ class GetItemDetailsData {
     }
     map['CreatedBy'] = createdBy;
 
-    ///select
-    map['total'] = total;
-    map['perItemTotal'] = perItemTotal;
-    map['perItemTax'] = perItemTax;
-    map['amountModifier'] = amountModifier;
-    map['amount'] = amount;
-    map['count'] = count;
-    if (selectModifierData != null) {
-      map['selectModifierData'] = selectModifierData?.map((v) => v.toJson()).toList();
-    }
-    if (selectVariantData != null) {
-      map['selectVariantData'] = selectVariantData?.map((v) => v.toJson()).toList();
-    }
+
     return map;
   }
 

@@ -15,6 +15,7 @@ import 'package:f_b_base/data/remote/web_response.dart';
 import 'package:f_b_base/locator.dart';
 import 'package:f_b_base/utils/network_utils.dart';
 import 'package:f_b_base/utils/num_utils.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -75,6 +76,11 @@ class DetailsPageScreenController extends GetxController {
   }
 
   DetailsPageScreenController(this.itemId) {
+
+    if(itemId.isEmpty){
+      return;
+    }
+
     mTagVariantDateView = TagVariantDateView((VariantData mVariantData) {
       if ((mVariantData.discountPercentage ?? 0) == 0) {
         amount.value = mVariantData.price ?? 0.0;
@@ -86,6 +92,7 @@ class DetailsPageScreenController extends GetxController {
     });
     mTagModifierDateView =
         TagModifierDateView((List<ModifierData> mModifierDataList) {
+          print("object ${mModifierDataList.length}");
       selectModifierData.value.clear();
       selectModifierData.value.addAll(mModifierDataList.toList());
       amountModifier.value = 0.0;
@@ -99,8 +106,8 @@ class DetailsPageScreenController extends GetxController {
         }
         value = value.substring(1).trim();
         sModifier.value = value;
-        priceIncDec();
       }
+        priceIncDec();
     });
     getItemDetailsApi();
   }
@@ -109,6 +116,8 @@ class DetailsPageScreenController extends GetxController {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
         GetItemDetailsRequest mGetItemDetailsRequest = GetItemDetailsRequest(
+          branchIDF: mDashboardScreenController
+              .selectGetAllBranchesListData.value.branchIDP,
           id: itemId,
         );
         WebResponseSuccess mWebResponseSuccess =
@@ -199,8 +208,14 @@ class DetailsPageScreenController extends GetxController {
   typeCheck(Function onBack) async {
     AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
     if ((mAddCartModel.sType ?? "").isEmpty) {
-      await showSelectTypeBottomSheet(onBack);
-    }else {
+      if (kIsWeb) {
+        AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+        mAddCartModel.sType = 'Dine';
+        await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+      } else {
+        await showSelectTypeBottomSheet(onBack);
+      }
+    } else {
       onBack(true);
     }
   }

@@ -141,6 +141,7 @@ class IntroductionScreenController extends GetxController {
             await SharedPrefs().setAddCartData(jsonEncode(AddCartModel(
                 sTableNo: mGetSeatDetailResponse.data?.seatNumber ?? '',
                 sType: 'Dine')));
+            await SharedPrefs().setProcessOrderId('');
             await getGetAllBranchesApi(
                 mGetSeatDetailResponse.data?.branchIDF ?? '');
           } else {

@@ -66,7 +66,7 @@ class BottomBarOrderNowHistoryView extends StatelessWidget {
                       height: 10.sp,
                     ),
                     Text(
-                      '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
+                      '${controller.mDashboardScreenController.selectedCurrency.value} ${(controller.mAddCartModel.value.rounoffAmount ?? 0) > 0 ? getDoubleValue((controller.mAddCartModel.value.rounoffAmount ?? 0)).toStringAsFixed(2) : getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
                       style: getText600(
                           colors: ColorConstants.cAppColorsBlue, size: 17.sp),
                     ),

@@ -19,7 +19,11 @@ class DetailsPageScreen extends GetView<DetailsPageScreenController> {
   late String itemId = '';
 
   DetailsPageScreen({super.key}) {
-    itemId = Get.arguments;
+    if(Get.arguments!=null) {
+      itemId = Get.arguments;
+    }else {
+
+    }
   }
 
   @override

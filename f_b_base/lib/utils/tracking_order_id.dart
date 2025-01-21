@@ -188,6 +188,11 @@ createOrderPlaceRequest({String? remarksController,
 
   String sPackagingName = mPackagingData?.packagingName ?? '';
 
+  ///total
+  double grandTotal = getDoubleValue(subTotal + taxTotal);
+  double adjustedAmount = getDoubleValue(
+      roundToNearestPossible(grandTotal));
+
   ///OrderPlaceRequest
   OrderPlaceRequest mOrderPlaceRequest = OrderPlaceRequest(
       trackingOrderID: trackingOrderID,
@@ -213,8 +218,13 @@ createOrderPlaceRequest({String? remarksController,
 
       ///grandTotal
       taxAmountTotal: getDoubleValue(taxTotal),
-      totalAmount: getDoubleValue(subTotal + taxTotal),
-      grandTotal: getDoubleValue(subTotal + taxTotal),
+      totalAmount: grandTotal,
+      grandTotal: grandTotal,
+      adjustedAmount: mPaymentTypeResponseData?.paymentGatewayNo.toString() !=
+          '0' ? null : grandTotal == adjustedAmount
+          ? null
+          : adjustedAmount
+      ,
 
       ///table no
       tableNo: mAddCartModel.sType == 'Dine' ? mAddCartModel.sTableNo : '',

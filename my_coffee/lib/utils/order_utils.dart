@@ -35,33 +35,65 @@ saveCart(
 
   ///get mAddCartModel
   AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+  bool bFlag = true;
+  int index = -1;
+  if ((mAddCartModel.mItems ?? []).isNotEmpty) {
+    for (GetItemDetailsData mMenuCartItem in (mAddCartModel.mItems ?? [])) {
+      index++;
+      mGetItemDetailsData.selectModifierData = [];
+      mGetItemDetailsData.selectModifierData?.addAll(mTagModifierDateView.selectTag);
+      mGetItemDetailsData.selectVariantData = [];
+      mGetItemDetailsData.selectVariantData
+          ?.add(mTagVariantDateView.selectVariantData.value);
 
-  ///add item
-  GetItemDetailsData mItemsData = mGetItemDetailsData;
-  mItemsData.count = count;
-  mItemsData.selectModifierData = [];
-  mItemsData.selectModifierData?.addAll(mTagModifierDateView.selectTag);
-  mItemsData.selectVariantData = [];
-  mItemsData.selectVariantData
-      ?.add(mTagVariantDateView.selectVariantData.value);
-  mItemsData.total = totalAmount;
-  mItemsData.amountModifier = amountModifier;
-  mItemsData.amount = amount;
-  mItemsData.perItemTax =
-      calculatePercentageOf(amount, mItemsData.itemTax ?? 0);
-  mItemsData.perItemTotal = (amount + amountModifier);
-
-  ///add cart
-  mAddCartModel.totalAmount = (mAddCartModel.totalAmount ?? 0) + totalAmount;
-  mAddCartModel.mGetAllBranchesListData ??=
-      mDashboardScreenController.selectGetAllBranchesListData.value;
-  if ((mAddCartModel.mItems ?? []).isEmpty) {
-    mAddCartModel.mItems = [];
+      if (mMenuCartItem.selectVariantData?.first.quantitySpecification
+              .toString() ==
+          mTagVariantDateView.selectVariantData.value.quantitySpecification
+              .toString()) {
+        if (mMenuCartItem.getModifierString() ==
+            mGetItemDetailsData.getModifierString()) {
+          bFlag = false;
+          break;
+        }
+      }
+    }
   }
-  mAddCartModel.mItems?.add(mItemsData);
 
-  ///saveCartData
-  await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+  if (bFlag) {
+    ///add item
+    GetItemDetailsData mItemsData = mGetItemDetailsData;
+    mItemsData.count = count;
+    mItemsData.selectModifierData = [];
+    mItemsData.selectModifierData?.addAll(mTagModifierDateView.selectTag);
+    mItemsData.selectVariantData = [];
+    mItemsData.selectVariantData
+        ?.add(mTagVariantDateView.selectVariantData.value);
+    mItemsData.total = totalAmount;
+    mItemsData.amountModifier = amountModifier;
+    mItemsData.amount = amount;
+    mItemsData.perItemTax =
+        calculatePercentageOf(amount, mItemsData.itemTax ?? 0);
+    mItemsData.perItemTotal = (amount + amountModifier);
+
+    ///add cart
+    mAddCartModel.totalAmount = (mAddCartModel.totalAmount ?? 0) + totalAmount;
+    mAddCartModel.mGetAllBranchesListData ??=
+        mDashboardScreenController.selectGetAllBranchesListData.value;
+    if ((mAddCartModel.mItems ?? []).isEmpty) {
+      mAddCartModel.mItems = [];
+    }
+    mAddCartModel.mItems?.add(mItemsData);
+
+    await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+  } else {
+    GetItemDetailsData mSelectItemsData = (mAddCartModel.mItems ?? [])[index];
+    mSelectItemsData.count = (mSelectItemsData.count ?? 0) + count;
+    mSelectItemsData.total = (mSelectItemsData.total ?? 0) + totalAmount;
+    mAddCartModel.totalAmount = (mAddCartModel.totalAmount ?? 0) + totalAmount;
+
+    (mAddCartModel.mItems ?? [])[index] = mSelectItemsData;
+    await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+  }
 }
 
 ///edit cart view

@@ -36,6 +36,7 @@ const String sSenangPayPayment  = "Payment";
 const String sSenangPayPaymentResult  = "Payment Result";
 const String sPaymentDeclined  = "Payment declined";
 const String sPaymentDeclinedMessage  = "Your payment service is not successful. Please try again.";
+const String sPaymentCancelMessage  = "As a guest user, your last order was canceled due to a payment failure. Please reorder again.";
 const String sPaymentSuccessful  = "Payment successful";
 const String sPaymentSuccessfulMessage  = "Your order is received";
 const String sOrderHistory = "Order History";

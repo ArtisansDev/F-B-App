@@ -136,7 +136,7 @@ class PaymentMethodView extends StatelessWidget {
                                       width: 13.sp,
                                     ),
                                     Icon(
-                                      controller.paymentType.value == index
+                                      (controller.paymentType.value??-1) == index
                                           ? Icons.radio_button_checked
                                           : Icons.radio_button_off,
                                       color: ColorConstants.cAppColorsBlue,
@@ -145,7 +145,7 @@ class PaymentMethodView extends StatelessWidget {
                                 ),
                                 Visibility(
                                   visible: index !=
-                                      controller.paymentTypeList.value.length -
+                                      controller.paymentTypeList.length -
                                           1,
                                   child: Container(
                                     width: double.infinity,

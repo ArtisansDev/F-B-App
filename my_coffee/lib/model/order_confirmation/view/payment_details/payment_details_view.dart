@@ -68,55 +68,58 @@ class PaymentDetailsView extends StatelessWidget {
                         TaxData mTaxData = (controller
                                 .selectGetAllBranchesListData.value.taxData ??
                             [])[index];
-                        return Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  '${mTaxData.taxName} (${mTaxData.taxPercentage}%)',
-                                  style: getTextRegular(
-                                      size: 14.5.sp,
-                                      colors: ColorConstants.buttonBar,
-                                      heights: 1.3),
-                                ),
-                                Text(
-                                  '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(calculatePercentageOf(controller.subTotalAmount.value, mTaxData.taxPercentage ?? 0)).toStringAsFixed(2)}',
-                                  style: getTextRegular(
-                                      size: 14.5.sp,
-                                      colors: ColorConstants.buttonBar,
-                                      heights: 1.3),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10.sp,
-                            ),
-                          ],
-                        );
+                        return (mTaxData.taxPercentage ?? 0) > 0
+                            ? Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        '${mTaxData.taxName} (${mTaxData.taxPercentage}%)',
+                                        style: getTextRegular(
+                                            size: 14.5.sp,
+                                            colors: ColorConstants.buttonBar,
+                                            heights: 1.3),
+                                      ),
+                                      Text(
+                                        '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(calculatePercentageOf(controller.subTotalAmount.value, mTaxData.taxPercentage ?? 0)).toStringAsFixed(2)}',
+                                        style: getTextRegular(
+                                            size: 14.5.sp,
+                                            colors: ColorConstants.buttonBar,
+                                            heights: 1.3),
+                                      )
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10.sp,
+                                  ),
+                                ],
+                              )
+                            : SizedBox();
                       }),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Voucher',
-                        style: getTextRegular(
-                            size: 14.5.sp,
-                            colors: ColorConstants.buttonBar,
-                            heights: 1.3),
-                      ),
-                      Text(
-                        'RM 0.00',
-                        style: getTextRegular(
-                            size: 14.5.sp,
-                            colors: ColorConstants.buttonBar,
-                            heights: 1.3),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10.sp,
-                  ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   children: [
+                  //     Text(
+                  //       'Voucher',
+                  //       style: getTextRegular(
+                  //           size: 14.5.sp,
+                  //           colors: ColorConstants.buttonBar,
+                  //           heights: 1.3),
+                  //     ),
+                  //     Text(
+                  //       'RM 0.00',
+                  //       style: getTextRegular(
+                  //           size: 14.5.sp,
+                  //           colors: ColorConstants.buttonBar,
+                  //           heights: 1.3),
+                  //     )
+                  //   ],
+                  // ),
+                  // SizedBox(
+                  //   height: 10.sp,
+                  // ),
                   Visibility(
                       visible: (controller
                                   .selectGetAllBranchesListData.value.taxData ??
@@ -170,41 +173,73 @@ class PaymentDetailsView extends StatelessWidget {
                   SizedBox(
                     height: 10.sp,
                   ),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //   children: [
-                  //     Text(
-                  //       'Delivery fee',
-                  //       style: getTextRegular(
-                  //           size: 14.5.sp,
-                  //           colors: ColorConstants.buttonBar,
-                  //           heights: 1.3),
-                  //     ),
-                  //     Text(
-                  //       'RM 0.00',
-                  //       style: getTextRegular(
-                  //           size: 14.5.sp,
-                  //           colors: ColorConstants.buttonBar,
-                  //           heights: 1.3),
-                  //     )
-                  //   ],
-                  // ),
-                  // SizedBox(
-                  //   height: 10.sp,
-                  // ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Rounding Adj',
+                        'Total',
+                        style: getText600(
+                            size: 14.5.sp,
+                            colors: ColorConstants.buttonBar,
+                            heights: 1.3),
+                      ),
+                      Text(
+                        '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
+                        style: getText600(
+                            size: 14.5.sp,
+                            colors: ColorConstants.buttonBar,
+                            heights: 1.3),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10.sp,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Rounding',
                         style: getTextRegular(
                             size: 14.5.sp,
                             colors: ColorConstants.buttonBar,
                             heights: 1.3),
                       ),
                       Text(
-                        'RM 0.00',
+                        (controller.selectPaymentType.value?.paymentGatewayNo ??
+                                        -1)
+                                    .toString() ==
+                                '0'
+                            ? '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(getDoubleValue(roundToNearestPossible(controller.totalAmount.value)) - getDoubleValue(controller.totalAmount.value)).toStringAsFixed(2)}'
+                            : '${controller.mDashboardScreenController.selectedCurrency.value} 0.00',
                         style: getTextRegular(
+                            size: 14.5.sp,
+                            colors: ColorConstants.buttonBar,
+                            heights: 1.3),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10.sp,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Payable Amount',
+                        style: getText600(
+                            size: 14.5.sp,
+                            colors: ColorConstants.buttonBar,
+                            heights: 1.3),
+                      ),
+                      Text(
+                        (controller.selectPaymentType.value?.paymentGatewayNo ??
+                                        -1)
+                                    .toString() ==
+                                '0'
+                            ? '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(roundToNearestPossible(controller.totalAmount.value)).toStringAsFixed(2)}'
+                            : '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
+                        style: getText600(
                             size: 14.5.sp,
                             colors: ColorConstants.buttonBar,
                             heights: 1.3),

@@ -38,6 +38,7 @@ Future<bool> getUserDetails() async {
       if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
         UserDetailsResponse mUserDetailsResponse = mWebResponseSuccess.data;
         if (mUserDetailsResponse.statusCode == WebConstants.statusCode200) {
+          await SharedPrefs().setProcessOrderId('');
           await SharedPrefs()
               .setUserDetails(jsonEncode(mUserDetailsResponse.data ?? ''));
           return true;

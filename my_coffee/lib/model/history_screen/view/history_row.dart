@@ -99,6 +99,8 @@ class HistoryRow extends StatelessWidget {
               color: ColorConstants.appVersion,
             ),
 
+
+
             ///Item
             Column(
               children: (mOrderHistoryResponse.orderMenu ?? []).map((item) {
@@ -159,6 +161,29 @@ class HistoryRow extends StatelessWidget {
               color: ColorConstants.appVersion,
             ),
 
+            ///Packaging name
+            Visibility(
+                visible:(mOrderHistoryResponse.packagingName??'').isNotEmpty,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text('Packaging Type : '),
+                        Expanded(child: Text((mOrderHistoryResponse.packagingName ?? ''),
+                            style: getText500(
+                                size: 15.5.sp, colors: ColorConstants.buttonBar)))
+
+                      ],
+                    ),
+                    Container(
+                      height: 2.5.sp,
+                      width: double.infinity,
+                      margin: EdgeInsets.only(top: 12.sp, bottom: 12.sp),
+                      color: ColorConstants.appVersion,
+                    )
+                  ],
+                )),
+
             ///reorder
             Row(
               children: [
@@ -200,7 +225,9 @@ class HistoryRow extends StatelessWidget {
                     Align(
                         alignment: Alignment.centerRight,
                         child: Text(
-                            '${mOrderHistoryResponse.currencySymbol} ${(mOrderHistoryResponse.totalAmount ?? 0.0).toStringAsFixed(2)}',
+                            (mOrderHistoryResponse.adjustedAmount ?? 0.0) > 0
+                                ? '${mOrderHistoryResponse.currencySymbol} ${(mOrderHistoryResponse.adjustedAmount ?? 0.0).toStringAsFixed(2)}'
+                                : '${mOrderHistoryResponse.currencySymbol} ${(mOrderHistoryResponse.totalAmount ?? 0.0).toStringAsFixed(2)}',
                             style: getText600(
                                 size: 17.sp,
                                 colors: ColorConstants.cAppColorsBlue)))

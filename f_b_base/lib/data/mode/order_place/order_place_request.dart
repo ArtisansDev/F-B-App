@@ -19,6 +19,7 @@ import 'order_place_guest_info_request.dart';
 /// TaxAmountTotal : 97.50
 /// GrandTotal : 802.50
 /// AdditionalNotes : "Please add extra cheese to the pizza."
+/// AdjustedAmount : 109.50
 
 class OrderPlaceRequest {
   OrderPlaceRequest({
@@ -41,6 +42,7 @@ class OrderPlaceRequest {
     this.subTotal,
     this.taxAmountTotal,
     this.totalAmount,
+    this.adjustedAmount,
     this.grandTotal,
     this.additionalNotes,
     this.paymentGatewayID,
@@ -80,6 +82,7 @@ class OrderPlaceRequest {
     subTotal = json['SubTotal'];
     taxAmountTotal = json['TaxAmountTotal'];
     totalAmount = json['TotalAmount'];
+    adjustedAmount = json['AdjustedAmount'];
     grandTotal = json['GrandTotal'];
     additionalNotes = json['AdditionalNotes'];
     paymentGatewayID = json['PaymentGatewayID'];
@@ -110,6 +113,7 @@ class OrderPlaceRequest {
   double? subTotal;
   double? taxAmountTotal;
   double? totalAmount;
+  double? adjustedAmount;
   double? grandTotal;
   String? additionalNotes;
   String? paymentGatewayID;
@@ -137,6 +141,7 @@ class OrderPlaceRequest {
     map['SubTotal'] = subTotal;
     map['TaxAmountTotal'] = taxAmountTotal;
     map['TotalAmount'] = totalAmount;
+    map['AdjustedAmount'] = adjustedAmount;
     map['GrandTotal'] = grandTotal;
     map['AdditionalNotes'] = additionalNotes;
     map['PaymentGatewayID'] = paymentGatewayID;

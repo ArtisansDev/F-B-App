@@ -9,29 +9,45 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758e53d0-793c-43b5-ac3f-251c1f7b09e8" name="Changes" comment="add packing">
+    <list default="true" id="758e53d0-793c-43b5-ac3f-251c1f7b09e8" name="Changes" comment="Dine in and Take Away checking">
       <change beforePath="$PROJECT_DIR$/../f_b_base/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/mode/add_cart/add_cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/mode/add_cart/add_cart.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/utils/get_web_info.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/utils/get_web_info.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/mode/get_item_details/get_item_details_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/mode/get_item_details/get_item_details_response.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/mode/get_order_history/get_order_history_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/mode/get_order_history/get_order_history_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/mode/get_order_history/order_history_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/mode/get_order_history/order_history_response.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/mode/order_place/order_place_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/mode/order_place/order_place_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/lang/translation_service_key.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/lang/translation_service_key.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/utils/num_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/utils/num_utils.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/utils/tracking_order_id.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/utils/tracking_order_id.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/dashboard_screen/controller/dashboard_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/dashboard_screen/controller/dashboard_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constants/get_user_details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/get_user_details.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/model/details_page/controller/details_page_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/details_page/controller/details_page_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/details_page/view/details_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/details_page/view/details_page_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/model/history_screen/controller/history_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/history_screen/controller/history_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/home_screen/controller/home_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/home_screen/controller/home_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/history_screen/view/history_row.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/history_screen/view/history_row.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/history_screen/view/history_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/history_screen/view/history_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/model/introduction_screen/controller/introduction_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/introduction_screen/controller/introduction_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/login_screen/view/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/login_screen/view/login_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/model/order_confirmation/controller/order_confirmation_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/order_confirmation/controller/order_confirmation_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons/Icon-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons/Icon-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons/Icon-maskable-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-maskable-192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons/Icon-maskable-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-maskable-512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/order_confirmation/view/bottom_bar_order_now/bottom_bar_order_now_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/order_confirmation/view/bottom_bar_order_now/bottom_bar_order_now_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/order_confirmation/view/payment_details/payment_details_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/order_confirmation/view/payment_details/payment_details_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/order_confirmation/view/payment_method/payment_method_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/order_confirmation/view/payment_method/payment_method_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/profile_screen/update_profile/view/update_profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/profile_screen/update_profile/view/update_profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/senang_pay_payment/razer_pay_result/controller/razer_pay_result_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/senang_pay_payment/razer_pay_result/controller/razer_pay_result_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/senang_pay_payment/senang_pay_result/controller/senang_pay_result_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/senang_pay_payment/senang_pay_result/controller/senang_pay_result_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/view_order_history/view/bottom_bar_order_now/bottom_bar_order_now_history_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/view_order_history/view/bottom_bar_order_now/bottom_bar_order_now_history_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils/order_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/order_utils.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,16 +118,16 @@
     &quot;git-widget-placeholder&quot;: &quot;yum__main&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/web&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/android/app/src/main" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/icons" />
-      <recent name="$PROJECT_DIR$/android/app/src/main" />
       <recent name="$PROJECT_DIR$/lib/model/senang_pay_payment" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -432,22 +448,6 @@
       <option name="project" value="LOCAL" />
       <updated>1733120471311</updated>
     </task>
-    <task id="LOCAL-00042" summary="code push">
-      <option name="closed" value="true" />
-      <created>1733326433253</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1733326433253</updated>
-    </task>
-    <task id="LOCAL-00043" summary="code push">
-      <option name="closed" value="true" />
-      <created>1733477849949</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1733477849949</updated>
-    </task>
     <task id="LOCAL-00044" summary="code push">
       <option name="closed" value="true" />
       <created>1733478020961</created>
@@ -504,7 +504,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736337150033</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Dine in and Take Away checking">
+      <option name="closed" value="true" />
+      <created>1736395106560</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1736395106560</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Dine in and Take Away checking">
+      <option name="closed" value="true" />
+      <created>1736405696667</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1736405696667</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -529,7 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete OrderNow from order details" />
     <MESSAGE value="edit order done" />
     <MESSAGE value="order done" />
     <MESSAGE value="order confirmation  done" />
@@ -554,7 +569,8 @@
     <MESSAGE value="code push web" />
     <MESSAGE value="web Apple_Cinemas&#10;1. gust login" />
     <MESSAGE value="add packing" />
-    <option name="LAST_COMMIT_MESSAGE" value="add packing" />
+    <MESSAGE value="Dine in and Take Away checking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dine in and Take Away checking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

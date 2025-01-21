@@ -2,16 +2,21 @@
 
 class GetItemDetailsRequest {
   GetItemDetailsRequest({
-      this.id,});
+      this.id,
+      this.branchIDF,
+  });
 
   GetItemDetailsRequest.fromJson(dynamic json) {
     id = json['id'];
+    branchIDF = json['BranchIDF'];
   }
   String? id;
+  String? branchIDF;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['id'] = id;
+    map['BranchIDF'] = branchIDF;
     return map;
   }
 

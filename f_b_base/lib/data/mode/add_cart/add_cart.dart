@@ -8,6 +8,7 @@
  * Ticket       : 
  */
 
+import '../../../utils/num_utils.dart';
 import '../get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import '../get_item_details/get_item_details_response.dart';
 import '../get_order_history/order_history_response.dart';
@@ -16,6 +17,7 @@ class AddCartModel {
   GetAllBranchesListData? mGetAllBranchesListData;
   OrderHistoryResponseItemData? mOrderHistoryResponseItemData;
   double? totalAmount;
+  double? rounoffAmount;
   String? sTableNo = '';
   String? sOrderDateTime = '';
   String? sType = ''; //'Take';
@@ -25,6 +27,7 @@ class AddCartModel {
     this.mOrderHistoryResponseItemData,
     this.mGetAllBranchesListData,
     this.totalAmount,
+    this.rounoffAmount,
     this.sTableNo,
     this.sOrderDateTime,
     this.sType,
@@ -35,16 +38,17 @@ class AddCartModel {
     totalAmount = json['totalAmount'];
     sTableNo = json['table_no'] ?? '';
     sOrderDateTime = json['sOrderDateTime'] ?? '';
-    sType = json['type'] ??'';//
+    sType = json['type'] ?? ''; //
     totalAmount = json['totalAmount'];
+    rounoffAmount = getDoubleValue(json['rounoffAmount'] ?? 0.0);
     mGetAllBranchesListData = json['branches'] != null
         ? GetAllBranchesListData.fromJson(json['branches'])
         : null;
     mOrderHistoryResponseItemData =
-        json['order_history_response_item_data'] != null
-            ? OrderHistoryResponseItemData.fromJson(
-                json['order_history_response_item_data'])
-            : null;
+    json['order_history_response_item_data'] != null
+        ? OrderHistoryResponseItemData.fromJson(
+        json['order_history_response_item_data'])
+        : null;
     if (json['item'] != null) {
       mItems = [];
       json['item'].forEach((v) {
@@ -57,6 +61,7 @@ class AddCartModel {
     final map = <String, dynamic>{};
     map['order_history_response_item_data'] = mOrderHistoryResponseItemData;
     map['totalAmount'] = totalAmount;
+    map['rounoffAmount'] = rounoffAmount;
     map['sOrderDateTime'] = sOrderDateTime;
     map['branches'] = mGetAllBranchesListData;
     map['item'] = mItems;

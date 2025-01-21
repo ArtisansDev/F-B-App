@@ -82,6 +82,8 @@ class HistoryScreenController extends GetxController {
         }
         GetOrderHistoryRequest mGetOrderHistoryRequest = GetOrderHistoryRequest(
             userIDF: mUserDetailsResponseData.userID,
+            restaurantID:
+                (await SharedPrefs().getGeneralSetting()).restaurantIDF ?? '',
             pageNumber: pageNumber,
             orderID:
                 (kIsWeb && isGuestUser) ? getProcessOrderId.data ?? '' : '',
@@ -100,10 +102,12 @@ class HistoryScreenController extends GetxController {
           if (mOrderHistoryResponseItemData.isEmpty) {
             showValue.value = 'No history found';
           } else {
-            if (kIsWeb && isGuestUser) {
-            } else {
-              await SharedPrefs().setProcessOrderId('');
-            }
+            // if (kIsWeb && isGuestUser) {
+            //
+            // } else {
+            //   await SharedPrefs().setProcessOrderId('');
+            // }
+            await SharedPrefs().setProcessOrderId('');
             OrderHistoryResponseItemData mOrderHistoryItemData =
                 mOrderHistoryResponseItemData.value.first;
             if (mOrderHistoryItemData.orderIDP.toString().toUpperCase() ==
@@ -149,6 +153,8 @@ class HistoryScreenController extends GetxController {
         ((mOrderHistoryResponse.orderType ?? 1) == 1) ? 'Dine' : 'Take';
     mAddCartModel.value.sOrderDateTime = mOrderHistoryResponse.orderDate ?? '';
     mAddCartModel.value.mOrderHistoryResponseItemData = mOrderHistoryResponse;
+    mAddCartModel.value.rounoffAmount =
+        mOrderHistoryResponse.adjustedAmount ?? 0.0;
     AppAlertBase.hideLoadingDialog(Get.context!);
     if ((mAddCartModel.value.mItems ?? []).length ==
         (mOrderHistoryResponse.orderMenu ?? []).length) {
@@ -201,6 +207,8 @@ class HistoryScreenController extends GetxController {
         .then((isInternetAvailable) async {
       if (isInternetAvailable) {
         GetItemDetailsRequest mGetItemDetailsRequest = GetItemDetailsRequest(
+          branchIDF: mDashboardScreenController
+              .selectGetAllBranchesListData.value.branchIDP,
           id: mOrderMenu.menuItemIDF,
         );
         WebResponseSuccess mWebResponseSuccess = await productApi

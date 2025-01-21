@@ -59,7 +59,9 @@ class OrderConfirmationScreenController extends GetxController {
   }
 
   ///paymentType
-  RxInt paymentType = 0.obs;
+  Rxn<int> paymentType = Rxn<int>();
+  Rxn<PaymentTypeResponseData> selectPaymentType =
+      Rxn<PaymentTypeResponseData>();
   RxList<PaymentTypeResponseData> paymentTypeList =
       <PaymentTypeResponseData>[].obs;
 
@@ -67,6 +69,10 @@ class OrderConfirmationScreenController extends GetxController {
     paymentType.value = index;
     paymentType.refresh();
     paymentTypeList.refresh();
+
+    ///
+    selectPaymentType.value = paymentTypeList[index];
+    selectPaymentType.refresh();
   }
 
   ///getPaymentTypeApi
@@ -80,14 +86,19 @@ class OrderConfirmationScreenController extends GetxController {
             await localApi.postPaymentType(mPaymentTypeRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           PaymentTypeResponse mPaymentTypeResponse = mWebResponseSuccess.data;
-          paymentTypeList.value.clear();
+          paymentTypeList.clear();
           paymentTypeList.addAll(mPaymentTypeResponse.data ?? []);
+
           if (kIsWeb) {
             paymentTypeList.removeWhere(
               (element) {
                 return element.paymentGatewayNo.toString() == '0';
               },
             );
+          } else {
+            paymentType.value = 0;
+            selectPaymentType.value = paymentTypeList.first;
+            selectPaymentType.refresh();
           }
           paymentTypeList.refresh();
         } else {
@@ -160,7 +171,7 @@ class OrderConfirmationScreenController extends GetxController {
     mGetItemDetailsData.total = ((mGetItemDetailsData.perItemTotal ?? 0) +
             (mGetItemDetailsData.perItemTax ?? 0)) *
         (mGetItemDetailsData.count ?? 0);
-    mItems.value[index] = mGetItemDetailsData;
+    mItems[index] = mGetItemDetailsData;
     totalAmount.value = 0.0;
     for (GetItemDetailsData mGetItemDetailsData in mItems) {
       totalAmount.value = totalAmount.value + (mGetItemDetailsData.total ?? 0);
@@ -184,7 +195,7 @@ class OrderConfirmationScreenController extends GetxController {
     mAddCartModel.value.mItems?.clear();
     mAddCartModel.value.mItems?.addAll(mItems);
     mAddCartModel.value.totalAmount = totalAmount.value;
-    if(totalAmount.value == 0.0){
+    if (totalAmount.value == 0.0) {
       mAddCartModel.value.sOrderDateTime = "";
     }
     taxCalculation();
@@ -215,21 +226,26 @@ class OrderConfirmationScreenController extends GetxController {
     if (await checkLoginStatus()) {
       Get.toNamed(RouteConstants.rLoginScreen);
     } else {
-      OrderPlaceRequest mOrderPlaceRequest = await createOrderPlaceRequest(
-          remarksController: remarksController.value.text,
-          orderDate: getUTCValue(selectedDateTime.value!),
-          mAddCartModel: mAddCartModel.value,
-          mPackagingData: mSelectPackagingData.value,
-          mPaymentTypeResponseData:
-              paymentTypeList.value.length > paymentType.value
-                  ? paymentTypeList.value[paymentType.value]
-                  : null);
+      if (paymentType.value == null) {
+        AppAlertBase.showSnackBar(
+            Get.context!, 'Please select the payment type');
+      } else {
+        OrderPlaceRequest mOrderPlaceRequest = await createOrderPlaceRequest(
+            remarksController: remarksController.value.text,
+            orderDate: getUTCValue(selectedDateTime.value!),
+            mAddCartModel: mAddCartModel.value,
+            mPackagingData: mSelectPackagingData.value,
+            mPaymentTypeResponseData:
+                paymentTypeList.length > (paymentType.value ?? 0)
+                    ? paymentTypeList[paymentType.value ?? 0]
+                    : null);
 
-      ///OrderPlaceRequest
-      debugPrint(
-          "\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
+        ///OrderPlaceRequest
+        debugPrint(
+            "\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
 
-      getOrderPlaceApi(mOrderPlaceRequest);
+        getOrderPlaceApi(mOrderPlaceRequest);
+      }
     }
   }
 
@@ -266,15 +282,15 @@ class OrderConfirmationScreenController extends GetxController {
           AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
           mAddCartModel.mItems = null;
           mAddCartModel.sOrderDateTime = '';
-          mAddCartModel.totalAmount=0.0;
+          mAddCartModel.totalAmount = 0.0;
           mAddCartModel.sTableNo = "";
           mAddCartModel.sType = "";
 
           await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
           OrderPlaceShare mOrderPlaceShare = OrderPlaceShare(
               data: mProcessOrderResponse.data ?? '',
-              paymentGatewayNo: paymentTypeList.value.length > paymentType.value
-                  ? paymentTypeList.value[paymentType.value].paymentGatewayNo
+              paymentGatewayNo: paymentTypeList.length > (paymentType.value ?? 0)
+                  ? paymentTypeList[(paymentType.value ?? 0)].paymentGatewayNo
                   : '0');
           await SharedPrefs().setProcessOrderId(jsonEncode(mOrderPlaceShare));
           mDashboardScreenController.selectedIndex.value = 2;
@@ -289,7 +305,7 @@ class OrderConfirmationScreenController extends GetxController {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
           logout();
-        }else {
+        } else {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
         }
