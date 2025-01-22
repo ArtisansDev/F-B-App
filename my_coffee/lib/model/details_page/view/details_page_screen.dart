@@ -45,9 +45,9 @@ class DetailsPageScreen extends GetView<DetailsPageScreenController> {
           }
         },
         onVisibilityLost: () {
-          if (controller.flagCloseController) {
-            Get.delete<DetailsPageScreenController>();
-          }
+          // if (controller.flagCloseController) {
+          //   Get.delete<DetailsPageScreenController>();
+          // }
         },
         child: GestureDetector(
             onTap: () {

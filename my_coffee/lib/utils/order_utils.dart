@@ -41,15 +41,25 @@ saveCart(
     for (GetItemDetailsData mMenuCartItem in (mAddCartModel.mItems ?? [])) {
       index++;
       mGetItemDetailsData.selectModifierData = [];
-      mGetItemDetailsData.selectModifierData?.addAll(mTagModifierDateView.selectTag);
+      mGetItemDetailsData.selectModifierData
+          ?.addAll(mTagModifierDateView.selectTag);
       mGetItemDetailsData.selectVariantData = [];
       mGetItemDetailsData.selectVariantData
           ?.add(mTagVariantDateView.selectVariantData.value);
+      String sSelectVariantData =
+          (mMenuCartItem.selectVariantData?.first.quantitySpecification ?? '')
+              .toString();
+      sSelectVariantData = sSelectVariantData +
+          (mMenuCartItem.selectVariantData?.first.variantIDP ?? '').toString();
 
-      if (mMenuCartItem.selectVariantData?.first.quantitySpecification
-              .toString() ==
-          mTagVariantDateView.selectVariantData.value.quantitySpecification
-              .toString()) {
+      String sTagVariant =
+          (mTagVariantDateView.selectVariantData.value.quantitySpecification ??
+                  '')
+              .toString();
+      sTagVariant = sTagVariant +
+          (mTagVariantDateView.selectVariantData.value.variantIDP ?? '')
+              .toString();
+      if (sSelectVariantData == sTagVariant) {
         if (mMenuCartItem.getModifierString() ==
             mGetItemDetailsData.getModifierString()) {
           bFlag = false;

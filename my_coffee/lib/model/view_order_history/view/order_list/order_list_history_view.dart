@@ -116,8 +116,19 @@ class OrderListHistoryView extends StatelessWidget {
                                   SizedBox(
                                     height: 8.sp,
                                   ),
+
                                   Text(
                                     '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue((mGetItemDetailsData.perItemTotal ?? 0) + (mGetItemDetailsData.perItemTax ?? 0)).toStringAsFixed(2)}',
+                                    style: getText600(
+                                      size: 15.5.sp,
+                                      colors: ColorConstants.buttonBar,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 8.sp,
+                                  ),
+                                  Text(
+                                    '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(getDoubleValue((mGetItemDetailsData.perItemTotal ?? 0) + (mGetItemDetailsData.perItemTax ?? 0)) * (mGetItemDetailsData.count ?? 1)).toStringAsFixed(2)}',
                                     style: getText600(
                                       size: 15.5.sp,
                                       colors: ColorConstants.cAppColorsBlue,

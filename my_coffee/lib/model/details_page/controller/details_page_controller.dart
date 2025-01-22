@@ -195,11 +195,15 @@ class DetailsPageScreenController extends GetxController {
             amount.value,
             amountModifier.value);
 
-        Get.until((route) {
-          return route.settings.name ==
-              RouteConstants
-                  .rDashboardScreen; // Goes back until reaching '/dashboard'
+        await Future.delayed(const Duration(milliseconds: 500), () {
+          Get.back();
         });
+
+        // Get.until((route) {
+        //   return route.settings.name ==
+        //       RouteConstants
+        //           .rDashboardScreen; // Goes back until reaching '/dashboard'
+        // });
       }
     });
   }
@@ -211,12 +215,13 @@ class DetailsPageScreenController extends GetxController {
       AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
       mAddCartModel.sType = 'Dine';
       await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+      onBack(true);
     } else if ((mAddCartModel.sType ?? "").isEmpty) {
-        await showSelectTypeBottomSheet(onBack);
+      await showSelectTypeBottomSheet(onBack);
     } else if (mAddCartModel.sType == 'Dine') {
       if ((mAddCartModel.sTableNo ?? '').isEmpty) {
         await showSelectTypeBottomSheet(onBack);
-      }else {
+      } else {
         onBack(true);
       }
     } else {

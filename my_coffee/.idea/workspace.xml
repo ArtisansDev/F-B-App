@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758e53d0-793c-43b5-ac3f-251c1f7b09e8" name="Changes" comment="Dine in and Take Away checking">
-      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/utils/get_web_info.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/utils/get_web_info.dart" afterDir="false" />
+    <list default="true" id="758e53d0-793c-43b5-ac3f-251c1f7b09e8" name="Changes" comment="issue fex">
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/executionHistory/executionHistory.lock" afterDir="false" />
@@ -20,15 +18,12 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/dashboard_screen/controller/dashboard_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/dashboard_screen/controller/dashboard_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/model/details_page/controller/details_page_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/details_page/controller/details_page_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/details_page/view/details_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/details_page/view/details_page_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/history_screen/controller/history_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/history_screen/controller/history_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/home_screen/controller/home_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/home_screen/controller/home_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/order_confirmation/controller/order_confirmation_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/order_confirmation/controller/order_confirmation_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/model/order_confirmation/view/order_list/order_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/order_confirmation/view/order_list/order_list_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/qr_code_scanner/controller/qr_code_scanner_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/qr_code_scanner/controller/qr_code_scanner_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/view_order_history/view/order_list/order_list_history_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/view_order_history/view/order_list/order_list_history_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/view_order_history/view/payment_details/payment_details_history_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/view_order_history/view/payment_details/payment_details_history_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,31 +80,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;ScreenshotViewer.SavePath&quot;: &quot;/Users/parthapaul/Desktop&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;yum__main&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/android/app/src/main&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Flutter.main.dart.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "ScreenshotViewer.SavePath": "/Users/parthapaul/Desktop",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "yum__main",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/web",
+    "settings.editor.selected.configurable": "preferences.general",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/android/app/src/main" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/icons" />
+      <recent name="$PROJECT_DIR$/android/app/src/main" />
       <recent name="$PROJECT_DIR$/lib/model/senang_pay_payment" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -416,14 +411,6 @@
       <option name="project" value="LOCAL" />
       <updated>1733120471311</updated>
     </task>
-    <task id="LOCAL-00045" summary="code push web">
-      <option name="closed" value="true" />
-      <created>1733913612489</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1733913612489</updated>
-    </task>
     <task id="LOCAL-00046" summary="code push web">
       <option name="closed" value="true" />
       <created>1734335599547</created>
@@ -488,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737454569206</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="issue fex">
+      <option name="closed" value="true" />
+      <created>1737532374349</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1737532374350</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -513,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="edit order done" />
     <MESSAGE value="order done" />
     <MESSAGE value="order confirmation  done" />
     <MESSAGE value="Currency  done" />
@@ -538,7 +532,8 @@
     <MESSAGE value="web Apple_Cinemas&#10;1. gust login" />
     <MESSAGE value="add packing" />
     <MESSAGE value="Dine in and Take Away checking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dine in and Take Away checking" />
+    <MESSAGE value="issue fex" />
+    <option name="LAST_COMMIT_MESSAGE" value="issue fex" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

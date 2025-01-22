@@ -44,17 +44,15 @@ class PaymentDetailsHistoryView extends StatelessWidget {
                 ],
               ),
             ),
-
-        Container(
-        margin: EdgeInsets.only(left: 19.sp, right: 19.sp, top: 17.sp),
-        padding: EdgeInsets.only(
-        left: 18.sp, right: 18.sp, top: 18.sp, bottom: 18.sp),
-        decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(13.sp),
-        ),
-        child:
-              Column(
+            Container(
+              margin: EdgeInsets.only(left: 19.sp, right: 19.sp, top: 17.sp),
+              padding: EdgeInsets.only(
+                  left: 18.sp, right: 18.sp, top: 18.sp, bottom: 18.sp),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(13.sp),
+              ),
+              child: Column(
                 children: [
                   // ListView.builder(
                   //     padding: EdgeInsets.zero,
@@ -95,25 +93,7 @@ class PaymentDetailsHistoryView extends StatelessWidget {
                   //         ],
                   //       );
                   //     }),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Voucher',
-                        style: getTextRegular(
-                            size: 14.5.sp,
-                            colors: ColorConstants.buttonBar,
-                            heights: 1.3),
-                      ),
-                      Text(
-                        'RM 0.00',
-                        style: getTextRegular(
-                            size: 14.5.sp,
-                            colors: ColorConstants.buttonBar,
-                            heights: 1.3),
-                      )
-                    ],
-                  ),
+
                   SizedBox(
                     height: 10.sp,
                   ),
@@ -192,25 +172,96 @@ class PaymentDetailsHistoryView extends StatelessWidget {
                   // SizedBox(
                   //   height: 10.sp,
                   // ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   children: [
+                  //     Text(
+                  //       'Rounding Adj',
+                  //       style: getTextRegular(
+                  //           size: 14.5.sp,
+                  //           colors: ColorConstants.buttonBar,
+                  //           heights: 1.3),
+                  //     ),
+                  //     Text(
+                  //       'RM 0.00',
+                  //       style: getTextRegular(
+                  //           size: 14.5.sp,
+                  //           colors: ColorConstants.buttonBar,
+                  //           heights: 1.3),
+                  //     )
+                  //   ],
+                  // )
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Rounding Adj',
-                        style: getTextRegular(
+                        'Total',
+                        style: getText600(
                             size: 14.5.sp,
                             colors: ColorConstants.buttonBar,
                             heights: 1.3),
                       ),
                       Text(
-                        'RM 0.00',
-                        style: getTextRegular(
+                        '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
+                        style: getText600(
                             size: 14.5.sp,
                             colors: ColorConstants.buttonBar,
                             heights: 1.3),
                       )
                     ],
-                  )
+                  ),
+                  Visibility(
+                      visible:
+                          (controller.mAddCartModel.value.rounoffAmount ?? 0) >
+                              0,
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10.sp,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Rounding',
+                                style: getTextRegular(
+                                    size: 14.5.sp,
+                                    colors: ColorConstants.buttonBar,
+                                    heights: 1.3),
+                              ),
+                              Text(
+                                '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(getDoubleValue((controller.mAddCartModel.value.rounoffAmount ?? 0)) - getDoubleValue(controller.totalAmount.value)).toStringAsFixed(2)}',
+                                style: getTextRegular(
+                                    size: 14.5.sp,
+                                    colors: ColorConstants.buttonBar,
+                                    heights: 1.3),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10.sp,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Payable Amount',
+                                style: getText600(
+                                    size: 14.5.sp,
+                                    colors: ColorConstants.buttonBar,
+                                    heights: 1.3),
+                              ),
+                              Text(
+                                '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue((controller.mAddCartModel.value.rounoffAmount ?? 0)).toStringAsFixed(2)}',
+                                style: getText600(
+                                    size: 14.5.sp,
+                                    colors: ColorConstants.buttonBar,
+                                    heights: 1.3),
+                              )
+                            ],
+                          )
+                        ],
+                      ))
                 ],
               ),
             ),

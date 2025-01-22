@@ -22,6 +22,7 @@ import 'package:get/get.dart';
 import '../../../alert/app_alert.dart';
 import '../../../routes/route_constants.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
+import '../../details_page/controller/details_page_controller.dart';
 import '../../location_list_screen/controller/location_list_controller.dart';
 
 class HomeScreenController extends GetxController {
@@ -71,9 +72,12 @@ class HomeScreenController extends GetxController {
     }
   }
 
-  void selectItem(int index) {
+  void selectItem(int index) async{
     String sItemId = dataGetBestSellerItemData[index].menuItemIDP ?? '';
-    Get.toNamed(RouteConstants.rDetailsPageScreen, arguments: sItemId);
+   await Get.toNamed(RouteConstants.rDetailsPageScreen, arguments: sItemId);
+    if (Get.isRegistered<DetailsPageScreenController>()) {
+      Get.delete<DetailsPageScreenController>();
+    }
   }
 
   late DashboardScreenController controller;

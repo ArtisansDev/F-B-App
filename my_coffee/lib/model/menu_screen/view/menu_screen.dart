@@ -25,9 +25,7 @@ class MenuScreen extends GetView<MenuScreenController> {
     return FocusDetector(
         onVisibilityGained: () {
           controller.getOrderDetails();
-          if (Get.isRegistered<DetailsPageScreenController>()) {
-            Get.delete<DetailsPageScreenController>();
-          }
+
           if (Get.isRegistered<OrderConfirmationScreenController>()) {
             Get.delete<OrderConfirmationScreenController>();
           }

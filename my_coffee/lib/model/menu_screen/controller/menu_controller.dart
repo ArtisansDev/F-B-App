@@ -20,6 +20,7 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import '../../../alert/app_alert.dart';
 import '../../../routes/route_constants.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
+import '../../details_page/controller/details_page_controller.dart';
 import '../../location_list_screen/controller/location_list_controller.dart';
 
 class MenuScreenController extends GetxController {
@@ -78,7 +79,7 @@ class MenuScreenController extends GetxController {
     //   }
   }
 
-  void selectItem(int index) {
+  void selectItem(int index) async {
     // selectSideMenu.value = index;
     // if (index < itemCount.value - 6) {
     //   itemScrollControllerMenu.value.scrollTo(
@@ -87,7 +88,10 @@ class MenuScreenController extends GetxController {
     //       curve: Curves.easeInOutCubic);
     // }
     String sItemId = mGetCategoryItemListData[index].menuItemIDP ?? '';
-    Get.toNamed(RouteConstants.rDetailsPageScreen, arguments: sItemId);
+    await Get.toNamed(RouteConstants.rDetailsPageScreen, arguments: sItemId);
+    if (Get.isRegistered<DetailsPageScreenController>()) {
+      Get.delete<DetailsPageScreenController>();
+    }
   }
 
   DashboardScreenController mDashboardScreenController =
@@ -98,11 +102,12 @@ class MenuScreenController extends GetxController {
       AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
       if ((mAddCartModel.mItems ?? []).isNotEmpty) {
         AppAlertBase.showCustomDialogYesNoLogout(
-            Get.context!, 'Proceed to Change?',
+            Get.context!,
+            'Proceed to Change?',
             'This action will clear the items in your current basket. Do you want to proceed?',
-                () async {
-              callLocation();
-            }, rightText: 'Ok');
+            () async {
+          callLocation();
+        }, rightText: 'Ok');
       } else {
         callLocation();
       }
