@@ -54,7 +54,12 @@ class OrderConfirmationScreenController extends GetxController {
   Rxn<PackagingData> mSelectPackagingData = Rxn<PackagingData>();
 
   packagingDataSelect(PackagingData mPackagingData) {
-    mSelectPackagingData.value = mPackagingData;
+    if ((mSelectPackagingData.value?.packagingIDP ?? '').toString() ==
+        mPackagingData.packagingIDP.toString()){
+      mSelectPackagingData.value = null;
+    }else {
+      mSelectPackagingData.value = mPackagingData;
+    }
     mSelectPackagingData.refresh();
   }
 
@@ -289,7 +294,8 @@ class OrderConfirmationScreenController extends GetxController {
           await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
           OrderPlaceShare mOrderPlaceShare = OrderPlaceShare(
               data: mProcessOrderResponse.data ?? '',
-              paymentGatewayNo: paymentTypeList.length > (paymentType.value ?? 0)
+              paymentGatewayNo: paymentTypeList.length >
+                      (paymentType.value ?? 0)
                   ? paymentTypeList[(paymentType.value ?? 0)].paymentGatewayNo
                   : '0');
           await SharedPrefs().setProcessOrderId(jsonEncode(mOrderPlaceShare));

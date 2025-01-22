@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:f_b_base/constants/app_constants.dart';
 import 'package:f_b_base/constants/message_constants.dart';
 import 'package:f_b_base/constants/web_constants.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
@@ -67,12 +66,16 @@ class QrCodeScannerController extends GetxController {
     });
   }
 
+  Rxn<bool> bQRViewController = Rxn<bool>();
   void onPermissionSet(BuildContext context, QRViewController ctrl, bool p) {
-    log('${DateTime.now().toIso8601String()}_onPermissionSet $p');
-    if (!p) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('no Permission')),
-      );
+    if(bQRViewController.value == null){
+      bQRViewController.value = p;
+      log('${DateTime.now().toIso8601String()}_onPermissionSet $p');
+      if (!p) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('no Permission')),
+        );
+      }
     }
   }
 

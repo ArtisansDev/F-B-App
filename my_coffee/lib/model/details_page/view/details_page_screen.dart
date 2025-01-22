@@ -19,11 +19,9 @@ class DetailsPageScreen extends GetView<DetailsPageScreenController> {
   late String itemId = '';
 
   DetailsPageScreen({super.key}) {
-    if(Get.arguments!=null) {
+    if (Get.arguments != null) {
       itemId = Get.arguments;
-    }else {
-
-    }
+    } else {}
   }
 
   @override
@@ -47,7 +45,9 @@ class DetailsPageScreen extends GetView<DetailsPageScreenController> {
           }
         },
         onVisibilityLost: () {
-          Get.delete<DetailsPageScreenController>();
+          if (controller.flagCloseController) {
+            Get.delete<DetailsPageScreenController>();
+          }
         },
         child: GestureDetector(
             onTap: () {

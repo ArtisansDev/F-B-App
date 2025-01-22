@@ -89,11 +89,12 @@ class HomeScreenController extends GetxController {
         AppAlertBase.showSnackBar(
             Get.context!, 'You can\'t able to select Dine in for this branch');
         return;
-      }else {
-        AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-        mAddCartModel.sType = 'Dine';
-        await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
       }
+      // else {
+      //   AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+      //   mAddCartModel.sType = 'Dine';
+      //   await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+      // }
     } else if (title == "Take" &&
         mDashboardScreenController
                 .selectGetAllBranchesListData.value.branchIDP !=
@@ -104,11 +105,12 @@ class HomeScreenController extends GetxController {
         AppAlertBase.showSnackBar(
             Get.context!, 'You can\'t able to select Take away in for this branch');
         return;
-      }else {
-        AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-        mAddCartModel.sType = 'Take';
-        await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
       }
+      // else {
+      //   AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+      //   mAddCartModel.sType = 'Take';
+      //   await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+      // }
     }
 
     if (Get.isRegistered<DashboardScreenController>()) {

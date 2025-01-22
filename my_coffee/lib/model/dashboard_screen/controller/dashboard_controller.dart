@@ -47,7 +47,7 @@ class DashboardScreenController extends GetxController {
           return;
         }
       }
-      bool isGuestUser = await SharedPrefs().getGuestUser();
+      // bool isGuestUser = await SharedPrefs().getGuestUser();
       // if (value == 3 && isGuestUser) {
       //   AppAlertBase.showSnackBar(Get.context!,
       //       'Your are the gust user so you can\'t able to see the profile');
@@ -159,11 +159,12 @@ class DashboardScreenController extends GetxController {
       AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
       if (sDialogPicDine.value == 'Dine') {
         if ((mAddCartModel.sTableNo ?? '').isEmpty) {
-          selectLocation = await Get.toNamed(
+          var qrCodeScannerView = await Get.toNamed(
             RouteConstants.rQrCodeScannerView,
           );
           Get.delete<QrCodeScannerController>();
-          if (selectLocation.isNotEmpty) {
+          if (qrCodeScannerView != null) {
+            selectLocation = qrCodeScannerView.toString();
             selectedIndex.value = 1;
           }
         } else {
@@ -240,22 +241,24 @@ class DashboardScreenController extends GetxController {
           AppAlertBase.showSnackBar(Get.context!,
               'You can\'t able to select Dine in for this branch');
           return null;
-        }else {
-          AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-          mAddCartModel.sType = 'Dine';
-          await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
         }
+        // else {
+        //   AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+        //   mAddCartModel.sType = 'Dine';
+        //   await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+        // }
       } else if (value.toString() == "Take" &&
           selectGetAllBranchesListData.value.branchIDP != null) {
         if (!(selectGetAllBranchesListData.value.takeaway ?? false)) {
           AppAlertBase.showSnackBar(Get.context!,
               'You can\'t able to select Take away in for this branch');
           return null;
-        }else {
-          AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-          mAddCartModel.sType = 'Take';
-          await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
         }
+        // else {
+        //   AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+        //   mAddCartModel.sType = 'Take';
+        //   await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+        // }
       }
     }
     return value;

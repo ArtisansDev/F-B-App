@@ -24,6 +24,7 @@ import '../../../common/tag_view/tag_variant_date_view.dart';
 import '../../../routes/route_constants.dart';
 import '../../../utils/order_utils.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
+import '../../qr_code_scanner/controller/qr_code_scanner_controller.dart';
 
 class DetailsPageScreenController extends GetxController {
   DashboardScreenController mDashboardScreenController =
@@ -76,8 +77,7 @@ class DetailsPageScreenController extends GetxController {
   }
 
   DetailsPageScreenController(this.itemId) {
-
-    if(itemId.isEmpty){
+    if (itemId.isEmpty) {
       return;
     }
 
@@ -92,7 +92,7 @@ class DetailsPageScreenController extends GetxController {
     });
     mTagModifierDateView =
         TagModifierDateView((List<ModifierData> mModifierDataList) {
-          print("object ${mModifierDataList.length}");
+      print("object ${mModifierDataList.length}");
       selectModifierData.value.clear();
       selectModifierData.value.addAll(mModifierDataList.toList());
       amountModifier.value = 0.0;
@@ -107,7 +107,7 @@ class DetailsPageScreenController extends GetxController {
         value = value.substring(1).trim();
         sModifier.value = value;
       }
-        priceIncDec();
+      priceIncDec();
     });
     getItemDetailsApi();
   }
@@ -207,13 +207,17 @@ class DetailsPageScreenController extends GetxController {
   ///select type
   typeCheck(Function onBack) async {
     AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-    if ((mAddCartModel.sType ?? "").isEmpty) {
-      if (kIsWeb) {
-        AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-        mAddCartModel.sType = 'Dine';
-        await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
-      } else {
+    if (kIsWeb) {
+      AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+      mAddCartModel.sType = 'Dine';
+      await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+    } else if ((mAddCartModel.sType ?? "").isEmpty) {
         await showSelectTypeBottomSheet(onBack);
+    } else if (mAddCartModel.sType == 'Dine') {
+      if ((mAddCartModel.sTableNo ?? '').isEmpty) {
+        await showSelectTypeBottomSheet(onBack);
+      }else {
+        onBack(true);
       }
     } else {
       onBack(true);
@@ -221,6 +225,7 @@ class DetailsPageScreenController extends GetxController {
   }
 
   List<String> filteredItems = ['Dine in', 'Take Away'];
+  bool flagCloseController = true;
 
   showSelectTypeBottomSheet(Function onBack) async {
     await showModalBottomSheet(
@@ -267,9 +272,10 @@ class DetailsPageScreenController extends GetxController {
                 'You can\'t able to select Dine in for this branch');
             return null;
           } else {
-            AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-            mAddCartModel.sType = 'Dine';
-            await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+            flagCloseController = false;
+            await mDashboardScreenController.showDialogPicDineLocation('Dine');
+            flagCloseController = true;
+            return null;
           }
         } else if (selectedItem.toString().toLowerCase().contains('take')) {
           if (!(mDashboardScreenController
