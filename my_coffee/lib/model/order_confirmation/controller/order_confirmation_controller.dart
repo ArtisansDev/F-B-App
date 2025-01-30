@@ -6,6 +6,7 @@ import 'package:f_b_base/constants/web_constants.dart';
 import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
 import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/data/mode/get_all_table_status/set_table_status_request.dart';
 import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
 import 'package:f_b_base/data/mode/order_place/order_place_request.dart';
@@ -55,9 +56,9 @@ class OrderConfirmationScreenController extends GetxController {
 
   packagingDataSelect(PackagingData mPackagingData) {
     if ((mSelectPackagingData.value?.packagingIDP ?? '').toString() ==
-        mPackagingData.packagingIDP.toString()){
+        mPackagingData.packagingIDP.toString()) {
       mSelectPackagingData.value = null;
-    }else {
+    } else {
       mSelectPackagingData.value = mPackagingData;
     }
     mSelectPackagingData.refresh();
@@ -248,8 +249,10 @@ class OrderConfirmationScreenController extends GetxController {
         ///OrderPlaceRequest
         debugPrint(
             "\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
-
-        getOrderPlaceApi(mOrderPlaceRequest);
+        if (mOrderPlaceRequest.orderType == '1') {
+          await getSetTableStatusApi(mOrderPlaceRequest);
+        }
+        await getOrderPlaceApi(mOrderPlaceRequest);
       }
     }
   }
@@ -275,8 +278,36 @@ class OrderConfirmationScreenController extends GetxController {
     return sLoginStatus.isEmpty;
   }
 
+  ///Table Status
+  getSetTableStatusApi(OrderPlaceRequest mOrderPlaceRequest) async {
+    await NetworkUtils()
+        .checkInternetConnection()
+        .then((isInternetAvailable) async {
+      if (isInternetAvailable) {
+        SetTableStatusRequest mSetTableStatusRequest = SetTableStatusRequest(
+          userIDF: mOrderPlaceRequest.userIDF,
+          seatIDP: await SharedPrefs().getSeatIDF(),
+          trackingOrderID: mOrderPlaceRequest.trackingOrderID,
+          tableStatus: 'O',
+        );
+        WebResponseSuccess mWebResponseSuccess = await locator
+            .get<OrderHistoryApi>()
+            .postSetTableStatus(mSetTableStatusRequest);
+
+        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+        } else {
+          AppAlertBase.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+        }
+      } else {
+        AppAlertBase.showSnackBar(
+            Get.context!, MessageConstants.noInternetConnection);
+      }
+    });
+  }
+
   ///getOrderPlaceApi
-  void getOrderPlaceApi(OrderPlaceRequest mOrderPlaceRequest) {
+  getOrderPlaceApi(OrderPlaceRequest mOrderPlaceRequest) {
     NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
         WebResponseSuccess mWebResponseSuccess =

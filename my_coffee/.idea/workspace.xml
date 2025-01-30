@@ -10,6 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="758e53d0-793c-43b5-ac3f-251c1f7b09e8" name="Changes" comment="issue fex">
+      <change afterPath="$PROJECT_DIR$/../f_b_base/lib/data/mode/get_all_table_status/get_all_table_status_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../f_b_base/lib/data/mode/get_all_table_status/get_all_table_status_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../f_b_base/lib/data/mode/get_all_table_status/set_table_status_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../f_b_base/lib/data/remote/success_response.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/model/qr_code_scanner/controller/table_drop_down.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/constants/web_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/constants/web_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/mode/order_place/order_place_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/mode/order_place/order_place_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/order/order_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/order/order_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/order/order_api_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/data/remote/api_call/order/order_api_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../f_b_base/lib/utils/get_web_info.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../f_b_base/lib/utils/get_web_info.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/executionHistory/executionHistory.bin" afterDir="false" />
@@ -18,11 +29,33 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.9/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/details_page/controller/details_page_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/details_page/controller/details_page_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/order_confirmation/view/order_list/order_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/order_confirmation/view/order_list/order_list_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/view_order_history/view/order_list/order_list_history_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/view_order_history/view/order_list/order_list_history_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/view_order_history/view/payment_details/payment_details_history_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/view_order_history/view/payment_details/payment_details_history_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/dashboard_screen/controller/dashboard_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/dashboard_screen/controller/dashboard_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/history_screen/controller/history_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/history_screen/controller/history_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/order_confirmation/controller/order_confirmation_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/order_confirmation/controller/order_confirmation_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/qr_code_scanner/controller/qr_code_scanner_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/qr_code_scanner/controller/qr_code_scanner_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/qr_code_scanner/view/qr_code_scanner_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/qr_code_scanner/view/qr_code_scanner_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons/Icon-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons/Icon-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons/Icon-maskable-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-maskable-192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons/Icon-maskable-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-maskable-512.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/manifest.json" afterDir="false" />
     </list>
@@ -80,40 +113,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Flutter.main.dart.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "ScreenshotViewer.SavePath": "/Users/parthapaul/Desktop",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "yum__main",
-    "io.flutter.reload.alreadyRun": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/web",
-    "settings.editor.selected.configurable": "preferences.general",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;ScreenshotViewer.SavePath&quot;: &quot;/Users/parthapaul/Desktop&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;yum__main&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/parthapaul/all_project/macbookpro/android_studio/dev_project/F-B-App/my_coffee/lib/model/qr_code_scanner&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/model/qr_code_scanner" />
+      <recent name="$PROJECT_DIR$/android/app/src/main" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/icons" />
-      <recent name="$PROJECT_DIR$/android/app/src/main" />
       <recent name="$PROJECT_DIR$/lib/model/senang_pay_payment" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/model/qr_code_scanner/controller" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/lib/data/mode" />
       <recent name="$PROJECT_DIR$/lib/model/qr_code_scanner/view" />
-      <recent name="$PROJECT_DIR$/lib/model/qr_code_scanner" />
     </key>
   </component>
   <component name="RunManager">
@@ -411,14 +444,6 @@
       <option name="project" value="LOCAL" />
       <updated>1733120471311</updated>
     </task>
-    <task id="LOCAL-00046" summary="code push web">
-      <option name="closed" value="true" />
-      <created>1734335599547</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1734335599547</updated>
-    </task>
     <task id="LOCAL-00047" summary="web Apple_Cinemas&#10;1. gust login">
       <option name="closed" value="true" />
       <created>1735211131326</created>
@@ -483,7 +508,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737532374350</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="issue fex">
+      <option name="closed" value="true" />
+      <created>1737545952402</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1737545952402</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

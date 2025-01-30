@@ -5,4 +5,6 @@ mixin OrderHistoryApi {
   Future<WebResponseSuccess> postGetOrderHistory(dynamic exhibitorsListRequest);
   Future<WebResponseSuccess> postPaymentType(dynamic exhibitorsListRequest);
   Future<WebResponseSuccess> postUpdatePaymentStatus(dynamic exhibitorsListRequest);
+  Future<WebResponseSuccess> postGetAllTableStatus(dynamic exhibitorsListRequest);
+  Future<WebResponseSuccess> postSetTableStatus(dynamic exhibitorsListRequest);
 }

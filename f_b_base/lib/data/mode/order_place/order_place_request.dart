@@ -141,7 +141,11 @@ class OrderPlaceRequest {
     map['SubTotal'] = subTotal;
     map['TaxAmountTotal'] = taxAmountTotal;
     map['TotalAmount'] = totalAmount;
-    map['AdjustedAmount'] = adjustedAmount;
+    if ((adjustedAmount ?? 0) > 0) {
+      map['AdjustedAmount'] = adjustedAmount;
+    } else {
+      map['AdjustedAmount'] = null;
+    }
     map['GrandTotal'] = grandTotal;
     map['AdditionalNotes'] = additionalNotes;
     map['PaymentGatewayID'] = paymentGatewayID;

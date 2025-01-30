@@ -78,6 +78,8 @@ class WebConstants {
 
   ///4-Nov-24
   static String actionSaveImage =  "Registration/User_SaveImage";  //post
+  static String actionByTableStatus =  "Seat/getAllTablesByTableStatus";  //post
+  static String actionUpdateTableStatus =  "Seat/UpdateTableStatus";  //post
 
 
 }

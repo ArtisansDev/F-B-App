@@ -162,7 +162,7 @@ class DashboardScreenController extends GetxController {
           var qrCodeScannerView = await Get.toNamed(
             RouteConstants.rQrCodeScannerView,
           );
-          Get.delete<QrCodeScannerController>();
+          await Get.delete<QrCodeScannerController>();
           if (qrCodeScannerView != null) {
             selectLocation = qrCodeScannerView.toString();
             selectedIndex.value = 1;

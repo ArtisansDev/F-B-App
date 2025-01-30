@@ -32,21 +32,23 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
   Widget build(BuildContext context) {
     Get.lazyPut(() => QrCodeScannerController());
     return FocusDetector(onVisibilityGained: () {
-      if (Platform.isAndroid) {
-        controller.mQRViewController.value?.pauseCamera();
-      }
-      controller.mQRViewController.value?.resumeCamera();
+      controller.getGetAllTableStatusApi();
+      try {
+        if (Platform.isAndroid) {
+          controller.mQRViewController.value?.pauseCamera();
+        }
+        controller.mQRViewController.value?.resumeCamera();
+      } catch (e) {}
     }, onVisibilityLost: () {
-      Get.delete<QrCodeScannerController>();
+      // Get.delete<QrCodeScannerController>();
     }, child: Obx(
-          () {
+      () {
         return Scaffold(
           appBar: AppBarsCommon.appBarBack(title: 'Table select'),
           backgroundColor: Colors.grey.shade200,
           body: Column(
             children: <Widget>[
-              Expanded(flex: 3, child:_buildQrView(context)
-              ),
+              Expanded(flex: 3, child: _buildQrView(context)),
               Expanded(
                 flex: 2,
                 child: Container(
@@ -74,39 +76,50 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                       SizedBox(
                         height: 20.sp,
                       ),
-                      Container(
-                        height: 28.5.sp,
-                        margin: EdgeInsets.only(left: 15.sp, right: 15.sp),
-                        padding: EdgeInsets.only(left: 18.sp, right: 15.sp),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(35.sp),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.22),
-                              spreadRadius: 3,
-                              blurRadius: 5,
-                              offset: const Offset(0, 0), // changes position of shadow
+                      Visibility(
+                          visible: controller.mGetAllTableStatusData.isNotEmpty,
+                          child: Container(
+                            height: 28.5.sp,
+                            margin: EdgeInsets.only(left: 15.sp, right: 15.sp),
+                            padding: EdgeInsets.only(left: 18.sp, right: 15.sp),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(35.sp),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.22),
+                                  spreadRadius: 3,
+                                  blurRadius: 5,
+                                  offset: const Offset(
+                                      0, 0), // changes position of shadow
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        child: TextInputWidget(
-                          topPadding: 0.sp,
-                          controller: controller.tableNumberController.value,
-                          showFloatingLabel: false,
-                          placeHolder: 'Enter the table number',
-                          hintText: 'Enter the table number',
-                          errorText: null,
-                          onFilteringTextInputFormatter: [
-                            FilteringTextInputFormatter.allow(
-                                RegExp(AppUtilConstants.patternStringNumberSpaceSlach)),
-                            LengthLimitingTextInputFormatter(12)
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 18.sp,
-                      ),
+                            child: TextInputWidget(
+                              isReadOnly: true,
+                              topPadding: 0.sp,
+                              controller:
+                                  controller.tableNumberController.value,
+                              showFloatingLabel: false,
+                              placeHolder: 'Search table number',
+                              hintText: 'Search table number',
+                              errorText: null,
+                              onClick: (value){
+                                controller.showTableList();
+                              },
+                              onFilteringTextInputFormatter: [
+                                FilteringTextInputFormatter.allow(RegExp(
+                                    AppUtilConstants
+                                        .patternStringNumberSpaceSlach)),
+                                LengthLimitingTextInputFormatter(12)
+                              ],
+                            ),
+                          )),
+                      Visibility(
+                          visible: controller.mGetAllTableStatusData.isNotEmpty,
+                          child: SizedBox(
+                            height: 18.sp,
+                          )),
                       Container(
                         margin: EdgeInsets.only(left: 15.sp, right: 15.sp),
                         padding: EdgeInsets.only(left: 18.sp, right: 6.sp),
@@ -120,7 +133,8 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                               color: Colors.grey.withOpacity(0.22),
                               spreadRadius: 3,
                               blurRadius: 5,
-                              offset: const Offset(0, 0), // changes position of shadow
+                              offset: const Offset(
+                                  0, 0), // changes position of shadow
                             ),
                           ],
                         ),
@@ -130,21 +144,21 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                               child: GestureDetector(
                                   onTap: () {
                                     controller.changeLocation();
-
                                   },
                                   child: Container(
                                     color: Colors.transparent,
                                     child: Text(
                                       controller
-                                          .mDashboardScreenController
-                                          .selectGetAllBranchesListData
-                                          .value
-                                          .branchName ??
+                                              .mDashboardScreenController
+                                              .selectGetAllBranchesListData
+                                              .value
+                                              .branchName ??
                                           'Please select the branch',
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: getText500(
-                                          colors: ColorConstants.buttonBar, size: 15.5.sp),
+                                          colors: ColorConstants.buttonBar,
+                                          size: 15.5.sp),
                                     ),
                                   )),
                             ),
@@ -157,9 +171,9 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                       SizedBox(
                         width: 45.w,
                         child: rectangleRoundedCornerButtonMedium(sOrderNow.tr,
-                                () {
-                              controller.selectTable();
-                            },
+                            () {
+                          controller.selectTable();
+                        },
                             bgColor: ColorConstants.cAppColorsBlue,
                             textColor: Colors.white,
                             height: 26.sp,
@@ -176,24 +190,24 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
     ));
   }
 
-Widget _buildQrView(BuildContext context) {
-  // For this example we check how width or tall the device is and change the scanArea and overlay accordingly.
+  Widget _buildQrView(BuildContext context) {
+    // For this example we check how width or tall the device is and change the scanArea and overlay accordingly.
 
-  // To ensure the Scanner view is properly sizes after rotation
-  // we need to listen for Flutter SizeChanged notification and update controller
-  return QRView(
-    key: controller.qrKey,
-    onQRViewCreated: (p0) {
-      controller.onQRViewCreated(p0);
-    },
-    overlay: QrScannerOverlayShape(
-        borderColor: Colors.red,
-        borderRadius: 10,
-        borderLength: 30,
-        borderWidth: 10,
-        cutOutSize: 65.w),
-    onPermissionSet: (ctrl, p) =>
-        controller.onPermissionSet(context, ctrl, p),
-  );
-}
+    // To ensure the Scanner view is properly sizes after rotation
+    // we need to listen for Flutter SizeChanged notification and update controller
+    return QRView(
+      key: controller.qrKey,
+      onQRViewCreated: (p0) {
+        controller.onQRViewCreated(p0);
+      },
+      overlay: QrScannerOverlayShape(
+          borderColor: Colors.red,
+          borderRadius: 10,
+          borderLength: 30,
+          borderWidth: 10,
+          cutOutSize: 65.w),
+      onPermissionSet: (ctrl, p) =>
+          controller.onPermissionSet(context, ctrl, p),
+    );
+  }
 }
