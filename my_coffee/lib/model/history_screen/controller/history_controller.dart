@@ -11,6 +11,7 @@ import 'package:f_b_base/data/mode/get_item_details/get_item_details_request.dar
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
 import 'package:f_b_base/data/mode/get_order_history/get_order_history_request.dart';
 import 'package:f_b_base/data/mode/get_order_history/order_history_response.dart';
+import 'package:f_b_base/data/mode/order_history_gust/order_history_id_model.dart';
 import 'package:f_b_base/data/mode/order_place/order_place_request.dart';
 import 'package:f_b_base/data/mode/order_place/order_place_share.dart';
 import 'package:f_b_base/data/mode/payment_type/payment_type_request.dart';
@@ -51,6 +52,7 @@ class HistoryScreenController extends GetxController {
   RefreshController refreshController =
       RefreshController(initialRefresh: false);
   RxBool enablePullUp = false.obs;
+  RxBool enablePullDown = true.obs;
   int pageNumber = 1;
   RxBool isGuestUser = false.obs;
 
@@ -76,8 +78,13 @@ class HistoryScreenController extends GetxController {
         OrderPlaceShare getProcessOrderId =
             await SharedPrefs().getProcessOrderId();
         bool isGuestUser = await SharedPrefs().getGuestUser();
-
-        if ((getProcessOrderId.data ?? '').isEmpty && isGuestUser) {
+        OrderHistoryIdModel mOrderHistoryIdModel =
+            await SharedPrefs().getOrderHistoryId();
+        if (((getProcessOrderId.data ?? '').isEmpty &&
+                (mOrderHistoryIdModel.orderHistoryId ?? []).isEmpty) &&
+            isGuestUser) {
+          showValue.value = 'No history found';
+          enablePullDown.value = false;
           return;
         }
         GetOrderHistoryRequest mGetOrderHistoryRequest = GetOrderHistoryRequest(
@@ -85,9 +92,12 @@ class HistoryScreenController extends GetxController {
             restaurantID:
                 (await SharedPrefs().getGeneralSetting()).restaurantIDF ?? '',
             pageNumber: pageNumber,
-            orderID:
-                (kIsWeb && isGuestUser) ? getProcessOrderId.data ?? '' : '',
-            rowsPerPage: 10);
+            orderID: (kIsWeb && isGuestUser)
+                ? (getProcessOrderId.data ?? '').isNotEmpty
+                    ? (getProcessOrderId.data ?? '')
+                    : mOrderHistoryIdModel.orderHistoryId?.last ?? ''
+                : '',
+            rowsPerPage: (kIsWeb && isGuestUser) ? 1 : 10);
         WebResponseSuccess mWebResponseSuccess =
             await localApi.postGetOrderHistory(mGetOrderHistoryRequest);
         if (refreshController.isRefresh) {
@@ -101,10 +111,11 @@ class HistoryScreenController extends GetxController {
               .addAll((mOrderHistoryResponse.data?.data ?? []).toList());
           if (mOrderHistoryResponseItemData.isEmpty) {
             showValue.value = 'No history found';
+            enablePullDown.value = false;
           } else {
-            // if (kIsWeb && isGuestUser) {
-            //
-            // } else {
+            enablePullDown.value = true;
+
+            // else {
             //   await SharedPrefs().setProcessOrderId('');
             // }
             await SharedPrefs().setProcessOrderId('');
@@ -116,8 +127,12 @@ class HistoryScreenController extends GetxController {
             }
           }
           showValue.value = '';
+          if (kIsWeb && isGuestUser) {
+            enablePullUp.value = false;
+          }else {
           enablePullUp.value = mOrderHistoryResponseItemData.value.length <
               (mOrderHistoryResponse.data?.totalRecords ?? 0);
+          }
           mOrderHistoryResponseItemData.refresh();
         } else {
           showValue.value = 'Internal server error';

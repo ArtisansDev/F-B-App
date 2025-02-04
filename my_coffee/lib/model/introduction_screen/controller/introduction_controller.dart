@@ -50,7 +50,7 @@ class IntroductionScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetGeneralSettingResponse mGetGeneralSettingResponse =
               mWebResponseSuccess.data;
-         setValue(mGetGeneralSettingResponse);
+          setValue(mGetGeneralSettingResponse);
         }
       } else {
         AppAlertBase.showSnackBar(
@@ -88,6 +88,7 @@ class IntroductionScreenController extends GetxController {
         }
         if (bNextPage) {
           if ((mGetGeneralSettingData.restaurantIDF ?? '').isNotEmpty) {
+            await SharedPrefs().setOrderHistoryId('');
             await SharedPrefs().setAddCartData('');
             await SharedPrefs().setBranchesData('');
             await SharedPrefs()
@@ -108,7 +109,7 @@ class IntroductionScreenController extends GetxController {
           } else {
             AppAlertBase.showSnackBar(Get.context!, 'restaurant id not found');
           }
-        }else {
+        } else {
           AppAlertBase.showSnackBar(Get.context!, value);
         }
       } else {

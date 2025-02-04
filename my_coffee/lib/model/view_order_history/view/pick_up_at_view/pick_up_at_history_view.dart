@@ -163,6 +163,39 @@ class PickUpAtHistoryView extends StatelessWidget {
                 margin: EdgeInsets.only(left: 20.sp, right: 20.sp, top: 17.sp),
                 child: Column(
                   children: [
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 15.sp,
+                        ),
+                        Text(
+                          'Order Id : ',
+                          style: getText500(
+                              size: 17.sp,
+                              colors: ColorConstants.buttonBar,
+                              heights: 1.2),
+                        ),
+                        Text(
+                          controller
+                              .mAddCartModel
+                              .value
+                              .mOrderHistoryResponseItemData
+                              ?.trackingOrderID ??'',
+                          style: getText600(
+                              size: 17.sp,
+                              colors: ColorConstants.cAppColorsBlue,
+                              heights: 1.2),
+                        ),
+                        // Text(
+                        //   '(Edit)',
+                        //   style: getTextRegular(
+                        //       size: 17.sp,
+                        //       colors: ColorConstants.cAppColorsBlue,
+                        //       heights: 1.2),
+                        // )
+                      ],
+                    ),
+                    SizedBox(height: 10.sp,),
                     Visibility(
                         visible: (controller.mAddCartModel.value
                                     .mOrderHistoryResponseItemData?.tableNo ??

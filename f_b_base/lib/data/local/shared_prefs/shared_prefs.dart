@@ -6,6 +6,7 @@ import '../../mode/add_cart/add_cart.dart';
 import '../../mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
 import '../../mode/get_general_setting/get_general_setting_response.dart';
 import '../../mode/login/login_response.dart';
+import '../../mode/order_history_gust/order_history_id_model.dart';
 import '../../mode/order_place/order_place_guest_info_request.dart';
 import '../../mode/order_place/order_place_share.dart';
 import '../../mode/user_details/user_details_response.dart';
@@ -95,6 +96,21 @@ class SharedPrefs {
       return UserDetailsResponseData.fromJson(json.decode(value));
     }
     return UserDetailsResponseData();
+  }
+
+  /// OrderHistoryIds
+  Future<void> setOrderHistoryId(String? setOrderHistoryIdModel) async {
+    sharedPreferences!
+        .setString(PrefConstants.sOrderHistoryId, setOrderHistoryIdModel ?? "");
+  }
+
+  Future<OrderHistoryIdModel> getOrderHistoryId() async {
+    String value =
+        sharedPreferences!.getString(PrefConstants.sOrderHistoryId) ?? "";
+    if (value.isNotEmpty) {
+      return OrderHistoryIdModel.fromJson(json.decode(value));
+    }
+    return OrderHistoryIdModel();
   }
 
   /// GeneralSetting

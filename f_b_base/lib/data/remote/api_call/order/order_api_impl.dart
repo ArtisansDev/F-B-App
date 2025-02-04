@@ -200,7 +200,7 @@ class OrderHistoryApiImpl extends AllApiImpl with OrderHistoryApi {
       SuccessResponse mSuccessResponse =
       SuccessResponse.fromJson(processResponseToJson(cases));
       mWebResponseSuccess = WebResponseSuccess(
-        statusCode: cases.statusCode,
+        statusCode: mSuccessResponse.statusCode,
         // data: mGetAllTableStatusResponse,
         statusMessage: mSuccessResponse.statusMessage,
         error: false,

@@ -75,14 +75,35 @@ class BottomBarOrderNowHistoryView extends StatelessWidget {
                 Container(
                   width: 45.w,
                   margin: EdgeInsets.only(left: 20.sp),
-                  child: rectangleRoundedCornerButtonMedium(sReorder.tr, () {
-                    // controller.reorder();
-                    controller.getGetAllBranchesApi();
-                  },
-                      bgColor: ColorConstants.cAppColorsBlue,
-                      textColor: Colors.white,
-                      height: 28.sp,
-                      size: 17.sp),
+                  child: (controller
+                                      .mAddCartModel
+                                      .value
+                                      .mOrderHistoryResponseItemData
+                                      ?.paymentStatus ==
+                                  'P' ||
+                              controller
+                                      .mAddCartModel
+                                      .value
+                                      .mOrderHistoryResponseItemData
+                                      ?.paymentStatus ==
+                                  'F') &&
+                          ((controller
+                                          .mAddCartModel
+                                          .value
+                                          .mOrderHistoryResponseItemData
+                                          ?.paymentGatewayNo ??
+                                      0)
+                                  .toString() !=
+                              '0')
+                      ? SizedBox()
+                      : rectangleRoundedCornerButtonMedium(sReorder.tr, () {
+                          // controller.reorder();
+                          controller.getGetAllBranchesApi();
+                        },
+                          bgColor: ColorConstants.cAppColorsBlue,
+                          textColor: Colors.white,
+                          height: 28.sp,
+                          size: 17.sp),
                 )
               ],
             ),

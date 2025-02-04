@@ -99,7 +99,66 @@ class HistoryRow extends StatelessWidget {
               color: ColorConstants.appVersion,
             ),
 
+            ///Order Id
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                    flex: 7,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Order ID',
+                            maxLines: 1,
+                            style: getText600(
+                                size: 15.5.sp,
+                                colors: ColorConstants.black)),
+                        SizedBox(height: 5.sp,),
+                        Text(mOrderHistoryResponse.trackingOrderID ?? '',
+                            maxLines: 1,
+                            style: getText500(
+                                size: 15.5.sp,
+                                colors: ColorConstants.cAppColorsBlue)),
 
+                      ],
+                    )),
+                SizedBox(
+                  width: 15.sp,
+                ),
+                Expanded(
+                    flex: 5,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text('Payment status',
+                            maxLines: 1,
+                            style: getText600(
+                                size: 15.5.sp,
+                                colors: ColorConstants.black)),
+                        SizedBox(height: 5.sp,),
+                        Text(
+                            (mOrderHistoryResponse.paymentStatus ?? '')=='P'?'Pending':
+                            (mOrderHistoryResponse.paymentStatus ?? '')=='S'?'Success':
+                            (mOrderHistoryResponse.paymentStatus ?? '')=='C'?'Cancel':'Waiting'
+                            ,
+                            maxLines: 1,
+                            style: getText500(
+                                size: 15.5.sp,
+                                colors: ColorConstants.cAppColorsBlue)),
+
+                      ],
+                    ))
+              ],
+            ),
+            Container(
+              height: 2.5.sp,
+              width: double.infinity,
+              margin: EdgeInsets.only(top: 12.sp, bottom: 12.sp),
+              color: ColorConstants.appVersion,
+            ),
 
             ///Item
             Column(
@@ -163,16 +222,18 @@ class HistoryRow extends StatelessWidget {
 
             ///Packaging name
             Visibility(
-                visible:(mOrderHistoryResponse.packagingName??'').isNotEmpty,
+                visible: (mOrderHistoryResponse.packagingName ?? '').isNotEmpty,
                 child: Column(
                   children: [
                     Row(
                       children: [
                         Text('Packaging Type : '),
-                        Expanded(child: Text((mOrderHistoryResponse.packagingName ?? ''),
-                            style: getText500(
-                                size: 15.5.sp, colors: ColorConstants.buttonBar)))
-
+                        Expanded(
+                            child: Text(
+                                (mOrderHistoryResponse.packagingName ?? ''),
+                                style: getText500(
+                                    size: 15.5.sp,
+                                    colors: ColorConstants.buttonBar)))
                       ],
                     ),
                     Container(

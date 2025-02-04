@@ -9,6 +9,7 @@ import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_bra
 import 'package:f_b_base/data/mode/get_all_table_status/set_table_status_request.dart';
 import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
+import 'package:f_b_base/data/mode/order_history_gust/order_history_id_model.dart';
 import 'package:f_b_base/data/mode/order_place/order_place_request.dart';
 import 'package:f_b_base/data/mode/order_place/order_place_share.dart';
 import 'package:f_b_base/data/mode/order_place/process_order_response.dart';
@@ -249,10 +250,37 @@ class OrderConfirmationScreenController extends GetxController {
         ///OrderPlaceRequest
         debugPrint(
             "\n mOrderPlaceRequest:   ${jsonEncode(mOrderPlaceRequest)}\n");
-        if (mOrderPlaceRequest.orderType == '1') {
-          await getSetTableStatusApi(mOrderPlaceRequest);
+        bool value = true;
+        if (kIsWeb) {
+          if ((mOrderPlaceRequest.seatIDF ?? "").isEmpty ||
+              (mOrderPlaceRequest.tableNo ?? "").isEmpty) {
+            AppAlertBase.showSnackBar(Get.context!, 'Please scan the qrcode');
+            return;
+          }
         }
-        await getOrderPlaceApi(mOrderPlaceRequest);
+        if (mOrderPlaceRequest.orderType == '1') {
+          value = await getSetTableStatusApi(mOrderPlaceRequest);
+          OrderHistoryIdModel mOrderHistoryIdModel =
+              await SharedPrefs().getOrderHistoryId();
+          if (value && kIsWeb) {
+            if (await SharedPrefs().getGuestUser()) {
+              if ((mOrderHistoryIdModel.orderHistoryId ?? []).isEmpty) {
+                mOrderHistoryIdModel = OrderHistoryIdModel(
+                    orderHistoryId: [mOrderPlaceRequest.trackingOrderID ?? '']);
+              } else {
+                mOrderHistoryIdModel.orderHistoryId
+                    ?.add(mOrderPlaceRequest.trackingOrderID ?? '');
+              }
+              await SharedPrefs()
+                  .setOrderHistoryId(jsonEncode(mOrderHistoryIdModel));
+            }
+          }
+        }
+        if (value) {
+          await getOrderPlaceApi(mOrderPlaceRequest);
+        } else if (!value && mOrderPlaceRequest.orderType == '1') {
+          AppAlertBase.showSnackBar(Get.context!, 'This table already book');
+        }
       }
     }
   }
@@ -280,7 +308,7 @@ class OrderConfirmationScreenController extends GetxController {
 
   ///Table Status
   getSetTableStatusApi(OrderPlaceRequest mOrderPlaceRequest) async {
-    await NetworkUtils()
+    return await NetworkUtils()
         .checkInternetConnection()
         .then((isInternetAvailable) async {
       if (isInternetAvailable) {
@@ -295,13 +323,16 @@ class OrderConfirmationScreenController extends GetxController {
             .postSetTableStatus(mSetTableStatusRequest);
 
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+          return true;
         } else {
-          AppAlertBase.showSnackBar(
-              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+          // AppAlertBase.showSnackBar(
+          //     Get.context!, mWebResponseSuccess.statusMessage ?? '');
+          return false;
         }
       } else {
         AppAlertBase.showSnackBar(
             Get.context!, MessageConstants.noInternetConnection);
+        return false;
       }
     });
   }
@@ -319,8 +350,13 @@ class OrderConfirmationScreenController extends GetxController {
           mAddCartModel.mItems = null;
           mAddCartModel.sOrderDateTime = '';
           mAddCartModel.totalAmount = 0.0;
-          mAddCartModel.sTableNo = "";
-          mAddCartModel.sType = "";
+          bool isGuestUser = await SharedPrefs().getGuestUser();
+          if (kIsWeb && isGuestUser) {
+
+          }else{
+            mAddCartModel.sTableNo = "";
+            mAddCartModel.sType = "";
+          }
 
           await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
           OrderPlaceShare mOrderPlaceShare = OrderPlaceShare(

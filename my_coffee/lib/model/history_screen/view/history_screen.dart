@@ -30,7 +30,7 @@ class HistoryScreen extends GetView<HistoryScreenController> {
                 width: double.infinity,
                 alignment: Alignment.center,
                 child: SmartRefresher(
-                    enablePullDown: true,
+                    enablePullDown: controller.enablePullDown.value,
                     enablePullUp: controller.enablePullUp.value,
                     header: const WaterDropHeader(),
                     footer: getCustomFooter(),
@@ -38,15 +38,17 @@ class HistoryScreen extends GetView<HistoryScreenController> {
                     onRefresh: controller.onRefresh,
                     onLoading: controller.onLoadMore,
                     child: SingleChildScrollView(
-                      child: controller.isGuestUser.value
-                          ? Container(
-                              height: 80.h,
-                              margin: EdgeInsets.all(20.sp),
-                              alignment: Alignment.center,
-                              child: const Text(
-                                  'You are the guest user so you can\'t able to see the history, please log in or register a new user'),
-                            )
-                          : controller.showValue.isNotEmpty
+                      child:
+                      // controller.isGuestUser.value
+                      //     ? Container(
+                      //         height: 80.h,
+                      //         margin: EdgeInsets.all(20.sp),
+                      //         alignment: Alignment.center,
+                      //         child: const Text(
+                      //             'You are the guest user so you can\'t able to see the history, please log in or register a new user'),
+                      //       )
+                      //     :
+                      controller.showValue.isNotEmpty
                               ? Container(
                                   height: 75.h,
                                   alignment: Alignment.center,
