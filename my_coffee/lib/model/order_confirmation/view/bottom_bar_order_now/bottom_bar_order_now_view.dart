@@ -67,12 +67,13 @@ class BottomBarOrderNowView extends StatelessWidget {
                       height: 10.sp,
                     ),
                     Text(
-                      (controller.selectPaymentType.value?.paymentGatewayNo ??
-                                      -1)
-                                  .toString() ==
-                              '0'
-                          ? '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(roundToNearestPossible(controller.totalAmount.value)).toStringAsFixed(2)}'
-                          : '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
+                      // (controller.selectPaymentType.value?.paymentGatewayNo ??
+                      //                 -1)
+                      //             .toString() ==
+                      //         '0'
+                      //     ?
+                      '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(roundToNearestPossible(controller.totalAmount.value)).toStringAsFixed(2)}',
+                      // : '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
                       style: getText600(
                           colors: ColorConstants.cAppColorsBlue, size: 17.sp),
                     ),

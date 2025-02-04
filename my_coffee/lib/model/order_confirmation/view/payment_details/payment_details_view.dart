@@ -56,6 +56,28 @@ class PaymentDetailsView extends StatelessWidget {
               ),
               child: Column(
                 children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Subtotal',
+                        style: getText600(
+                            size: 14.5.sp,
+                            colors: ColorConstants.buttonBar,
+                            heights: 1.3),
+                      ),
+                      Text(
+                        '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.subTotalAmount.value).toStringAsFixed(2)}',
+                        style: getText600(
+                            size: 14.5.sp,
+                            colors: ColorConstants.buttonBar,
+                            heights: 1.3),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10.sp,
+                  ),
                   ListView.builder(
                       padding: EdgeInsets.zero,
                       shrinkWrap: true,
@@ -151,28 +173,7 @@ class PaymentDetailsView extends StatelessWidget {
                           ),
                         ],
                       )),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Subtotal',
-                        style: getText600(
-                            size: 14.5.sp,
-                            colors: ColorConstants.buttonBar,
-                            heights: 1.3),
-                      ),
-                      Text(
-                        '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.subTotalAmount.value).toStringAsFixed(2)}',
-                        style: getText600(
-                            size: 14.5.sp,
-                            colors: ColorConstants.buttonBar,
-                            heights: 1.3),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10.sp,
-                  ),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -206,12 +207,13 @@ class PaymentDetailsView extends StatelessWidget {
                             heights: 1.3),
                       ),
                       Text(
-                        (controller.selectPaymentType.value?.paymentGatewayNo ??
-                                        -1)
-                                    .toString() ==
-                                '0'
-                            ? '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(getDoubleValue(roundToNearestPossible(controller.totalAmount.value)) - getDoubleValue(controller.totalAmount.value)).toStringAsFixed(2)}'
-                            : '${controller.mDashboardScreenController.selectedCurrency.value} 0.00',
+                        // (controller.selectPaymentType.value?.paymentGatewayNo ??
+                        //                 -1)
+                        //             .toString() ==
+                        //         '0'
+                        //     ?
+                        '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(getDoubleValue(roundToNearestPossible(controller.totalAmount.value)) - getDoubleValue(controller.totalAmount.value)).toStringAsFixed(2)}',
+                        // : '${controller.mDashboardScreenController.selectedCurrency.value} 0.00',
                         style: getTextRegular(
                             size: 14.5.sp,
                             colors: ColorConstants.buttonBar,
@@ -233,12 +235,13 @@ class PaymentDetailsView extends StatelessWidget {
                             heights: 1.3),
                       ),
                       Text(
-                        (controller.selectPaymentType.value?.paymentGatewayNo ??
-                                        -1)
-                                    .toString() ==
-                                '0'
-                            ? '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(roundToNearestPossible(controller.totalAmount.value)).toStringAsFixed(2)}'
-                            : '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
+                        // (controller.selectPaymentType.value?.paymentGatewayNo ??
+                        //                 -1)
+                        //             .toString() ==
+                        //         '0'
+                        //     ?
+                        '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(roundToNearestPossible(controller.totalAmount.value)).toStringAsFixed(2)}',
+                        // : '${controller.mDashboardScreenController.selectedCurrency.value} ${getDoubleValue(controller.totalAmount.value).toStringAsFixed(2)}',
                         style: getText600(
                             size: 14.5.sp,
                             colors: ColorConstants.buttonBar,

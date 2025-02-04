@@ -11,6 +11,7 @@
  */
 
 import 'dart:convert';
+import 'dart:math';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -27,13 +28,17 @@ import 'num_utils.dart';
 
 String getTrackingOrderID(String userIDF, String restaurentIDP,
     String branchIDF) {
-  final combinedString =
-      '$userIDF$restaurentIDP$branchIDF${DateTime
-      .now()
-      .millisecondsSinceEpoch}';
-  final bytes = utf8.encode(combinedString);
-  final digest = sha1.convert(bytes);
-  return digest.toString();
+  // final combinedString =
+  //     '$userIDF$restaurentIDP$branchIDF${DateTime
+  //     .now()
+  //     .millisecondsSinceEpoch}';
+  // final bytes = utf8.encode(combinedString);
+  // final digest = sha1.convert(bytes);
+  // return digest.toString();
+
+  final random = Random();
+  final randomNumber = (random.nextDouble() * 1e10).toInt();
+  return '$randomNumber';
 }
 
 createOrderPlaceRequest({String? remarksController,
@@ -220,8 +225,10 @@ createOrderPlaceRequest({String? remarksController,
       taxAmountTotal: getDoubleValue(taxTotal),
       totalAmount: grandTotal,
       grandTotal: grandTotal,
-      adjustedAmount: mPaymentTypeResponseData?.paymentGatewayNo.toString() !=
-          '0' ? null : grandTotal == adjustedAmount
+      adjustedAmount:
+      // mPaymentTypeResponseData?.paymentGatewayNo.toString() !=
+      //     '0' ? null :
+      grandTotal == adjustedAmount
           ? null
           : adjustedAmount
       ,

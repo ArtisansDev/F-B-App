@@ -485,7 +485,9 @@ class HistoryScreenController extends GetxController {
                 .trim(),
         email: mUserDetailsResponseData.email ?? '',
         phone: mUserDetailsResponseData.phoneNumber ?? '',
-        amount: mOrderHistoryResponse.totalAmount ?? 0.0,
+        amount: (mOrderHistoryResponse.adjustedAmount ?? 0.0) > 0
+            ? (mOrderHistoryResponse.adjustedAmount ?? 0.0)
+            : mOrderHistoryResponse.totalAmount ?? 0.0,
         // Payment amount
         orderId: mOrderHistoryResponse.orderIDP ?? '',
         // Unique order ID
@@ -533,7 +535,11 @@ class HistoryScreenController extends GetxController {
     RazerPayService.value = '';
     try {
       await paymentService.razerPaymentMs(
-          (mOrderHistoryResponse.totalAmount ?? 0.0).toString(),
+          ((mOrderHistoryResponse.adjustedAmount ?? 0.0) > 0
+                  ? (mOrderHistoryResponse.adjustedAmount ?? 0.0)
+                  : (mOrderHistoryResponse.totalAmount ?? 0.0))
+              .toString(),
+          // (mOrderHistoryResponse.totalAmount ?? 0.0).toString(),
           mOrderHistoryResponse.orderIDP ?? '',
           '${mUserDetailsResponseData.firstName ?? ''} ${mUserDetailsResponseData.lastName ?? ''}'
               .trim(),
