@@ -354,8 +354,8 @@ class OrderConfirmationScreenController extends GetxController {
           if (kIsWeb && isGuestUser) {
 
           }else{
-            mAddCartModel.sTableNo = "";
-            mAddCartModel.sType = "";
+            // mAddCartModel.sTableNo = "";
+            // mAddCartModel.sType = "";
           }
 
           await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
