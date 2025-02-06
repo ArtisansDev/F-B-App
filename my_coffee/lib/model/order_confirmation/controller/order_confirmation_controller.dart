@@ -258,11 +258,17 @@ class OrderConfirmationScreenController extends GetxController {
             return;
           }
         }
-        if (mOrderPlaceRequest.orderType == '1') {
+
+        if (mOrderPlaceRequest.orderType == '1' &&
+            mOrderPlaceRequest.paymentGatewayID == 0) {
           value = await getSetTableStatusApi(mOrderPlaceRequest);
-          OrderHistoryIdModel mOrderHistoryIdModel =
-              await SharedPrefs().getOrderHistoryId();
-          if (value && kIsWeb) {
+        }
+
+        if (kIsWeb) {
+          value = await getSetTableStatusApi(mOrderPlaceRequest);
+          if(value){
+            OrderHistoryIdModel mOrderHistoryIdModel =
+            await SharedPrefs().getOrderHistoryId();
             if (await SharedPrefs().getGuestUser()) {
               if ((mOrderHistoryIdModel.orderHistoryId ?? []).isEmpty) {
                 mOrderHistoryIdModel = OrderHistoryIdModel(
@@ -276,6 +282,7 @@ class OrderConfirmationScreenController extends GetxController {
             }
           }
         }
+
         if (value) {
           await getOrderPlaceApi(mOrderPlaceRequest);
         } else if (!value && mOrderPlaceRequest.orderType == '1') {
@@ -352,8 +359,7 @@ class OrderConfirmationScreenController extends GetxController {
           mAddCartModel.totalAmount = 0.0;
           bool isGuestUser = await SharedPrefs().getGuestUser();
           if (kIsWeb && isGuestUser) {
-
-          }else{
+          } else {
             // mAddCartModel.sTableNo = "";
             // mAddCartModel.sType = "";
           }
