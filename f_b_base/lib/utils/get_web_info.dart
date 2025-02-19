@@ -14,50 +14,50 @@ import '../lang/translation_service_key.dart';
 ///get_web_info
 ///26/12/24
 getWebView() async {
-  if (kIsWeb) {
-    // final userAgent = html.window.navigator.userAgent;
-    // final browserName = getBrowserName(userAgent.toLowerCase());
-    // final platform = html.window.navigator.platform;
-    // final appName = html.window.navigator.appName;
-    // var appVersion = getChromeVersion(userAgent.toLowerCase());
-    // appVersion =
-    //     appVersion.isEmpty ? html.window.navigator.appVersion : appVersion;
-    // final language = html.window.navigator.language;
-    // String sTitle = AppConstants.iAccessKey == 2
-    //     ? sAppNameAppleCinemas.tr
-    //     : (AppConstants.iAccessKey == 1 ? sAppNameYUM.tr : sAppNameTWT.tr);
-    //
-    // OrderPlaceGuestInfoRequest mOrderPlaceGuestInfoRequest =
-    //     OrderPlaceGuestInfoRequest(
-    //   userAgent: userAgent,
-    //   browserName: browserName,
-    //   appName: appName,
-    //   appVersion: appVersion,
-    //   platform: platform,
-    //   language: language,
-    //   appCodeName: "",
-    //   deviceMemory: 0,
-    //   hardwareConcurrency: 0,
-    //   languages: [],
-    //   maxTouchPoints: 0,
-    //   product: sTitle,
-    //   productSub: "",
-    //   vendor: "",
-    //   vendorSub: "",
-    // );
-    // await SharedPrefs().setOrderPlaceGuest(jsonEncode(mOrderPlaceGuestInfoRequest));
-    // print('userAgent: $userAgent\n');
-    //
-    // print('Browser Name: $browserName\n');
-    //
-    // print('Platform: $platform\n');
-    //
-    // print('App Name: $appName\n');
-    //
-    // print('App Version: $appVersion\n');
-    //
-    // print('Language: $language\n');
-  }
+  // if (kIsWeb) {
+  //   final userAgent = html.window.navigator.userAgent;
+  //   final browserName = getBrowserName(userAgent.toLowerCase());
+  //   final platform = html.window.navigator.platform;
+  //   final appName = html.window.navigator.appName;
+  //   var appVersion = getChromeVersion(userAgent.toLowerCase());
+  //   appVersion =
+  //       appVersion.isEmpty ? html.window.navigator.appVersion : appVersion;
+  //   final language = html.window.navigator.language;
+  //   String sTitle = AppConstants.iAccessKey == 2
+  //       ? sAppNameAppleCinemas.tr
+  //       : (AppConstants.iAccessKey == 1 ? sAppNameYUM.tr : sAppNameTWT.tr);
+  //
+  //   OrderPlaceGuestInfoRequest mOrderPlaceGuestInfoRequest =
+  //       OrderPlaceGuestInfoRequest(
+  //     userAgent: userAgent,
+  //     browserName: browserName,
+  //     appName: appName,
+  //     appVersion: appVersion,
+  //     platform: platform,
+  //     language: language,
+  //     appCodeName: "",
+  //     deviceMemory: 0,
+  //     hardwareConcurrency: 0,
+  //     languages: [],
+  //     maxTouchPoints: 0,
+  //     product: sTitle,
+  //     productSub: "",
+  //     vendor: "",
+  //     vendorSub: "",
+  //   );
+  //   await SharedPrefs().setOrderPlaceGuest(jsonEncode(mOrderPlaceGuestInfoRequest));
+  //   print('userAgent: $userAgent\n');
+  //
+  //   print('Browser Name: $browserName\n');
+  //
+  //   print('Platform: $platform\n');
+  //
+  //   print('App Name: $appName\n');
+  //
+  //   print('App Version: $appVersion\n');
+  //
+  //   print('Language: $language\n');
+  // }
 }
 
 String getBrowserName(String userAgent) {

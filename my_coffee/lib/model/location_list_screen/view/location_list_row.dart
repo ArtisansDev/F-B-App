@@ -137,12 +137,7 @@ class LocationListRow extends StatelessWidget {
                     SizedBox(
                       height: 10.sp,
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        openLaunchUrlWp(
-                            mGetAllBranchesListData.mobileNumber ?? '');
-                      },
-                      child: Row(
+                    Row(
                         children: [
                           SizedBox(
                             height: 21.sp,
@@ -161,16 +156,11 @@ class LocationListRow extends StatelessWidget {
                           )
                         ],
                       ),
-                    ),
                     SizedBox(
                       height: 10.sp,
                     ),
-                    GestureDetector(
-                        onTap: () {
-                          openGoogleMapsAddress(
-                              mGetAllBranchesListData.address ?? '');
-                        },
-                        child: Row(
+
+                      Row(
                           children: [
                             SizedBox(
                               height: 21.sp,
@@ -188,7 +178,7 @@ class LocationListRow extends StatelessWidget {
                                       colors: ColorConstants.buttonBar)),
                             )
                           ],
-                        )),
+                        ),
                   ],
                 ),
               )

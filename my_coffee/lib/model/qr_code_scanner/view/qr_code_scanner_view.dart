@@ -77,7 +77,10 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                         height: 20.sp,
                       ),
                       Visibility(
-                          visible: controller.mGetAllTableStatusData.isNotEmpty,
+                          visible:
+                              controller.mGetAllTableStatusData.isNotEmpty ||
+                                  controller.tableNumberController.value.text
+                                      .isNotEmpty,
                           child: Container(
                             height: 28.5.sp,
                             margin: EdgeInsets.only(left: 15.sp, right: 15.sp),
@@ -104,7 +107,7 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                               placeHolder: 'Search table number',
                               hintText: 'Search table number',
                               errorText: null,
-                              onClick: (value){
+                              onClick: (value) {
                                 controller.showTableList();
                               },
                               onFilteringTextInputFormatter: [
@@ -116,7 +119,10 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                             ),
                           )),
                       Visibility(
-                          visible: controller.mGetAllTableStatusData.isNotEmpty,
+                          visible:
+                              controller.mGetAllTableStatusData.isNotEmpty ||
+                                  controller.tableNumberController.value.text
+                                      .isNotEmpty,
                           child: SizedBox(
                             height: 18.sp,
                           )),
@@ -142,8 +148,9 @@ class QrCodeScannerView extends GetView<QrCodeScannerController> {
                           children: [
                             Expanded(
                               child: GestureDetector(
-                                  onTap: () {
-                                    controller.changeLocation();
+                                  onTap: () async {
+                                    // await controller.changeLocation();
+                                    // await controller.getGetAllTableStatusApi();
                                   },
                                   child: Container(
                                     color: Colors.transparent,

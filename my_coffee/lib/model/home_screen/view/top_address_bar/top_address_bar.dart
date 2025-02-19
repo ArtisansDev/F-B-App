@@ -80,6 +80,9 @@ class TopHomeAddressBar extends StatelessWidget {
                       ),
                     )),
               ),
+              SizedBox(
+                width: 10.sp,
+              ),
             ],
           ),
         )

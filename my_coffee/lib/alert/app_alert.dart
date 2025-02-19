@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/material.dart';
+import '../model/branch_location_list_screen/view/branch_location_list_screen.dart';
 import '../model/location_list_screen/view/location_list_screen.dart';
 import '../model/qr_code_scanner/view/qr_code_scanner_view.dart';
 
@@ -23,20 +24,36 @@ class AppAlert {
     );
   }
 
-  static Future<String> showQrcodeScan(
+  static Future<String> showCustomDialogBranchLocation(
       BuildContext context, {
         bool? barrierDismissible,
       }) async {
     return await showDialog(
       context: context,
       builder: (BuildContext context) {
-        return const QrCodeScannerView();
+        return const BranchLocationListScreen();
       },
       barrierDismissible: barrierDismissible ?? false,
       useSafeArea:
       false, // Optional: Ensures the dialog doesn't overlap the status bar
     );
+
   }
+
+  // static Future<String> showQrcodeScan(
+  //     BuildContext context, {
+  //       bool? barrierDismissible,
+  //     }) async {
+  //   return await showDialog(
+  //     context: context,
+  //     builder: (BuildContext context) {
+  //       return const QrCodeScannerView();
+  //     },
+  //     barrierDismissible: barrierDismissible ?? false,
+  //     useSafeArea:
+  //     false, // Optional: Ensures the dialog doesn't overlap the status bar
+  //   );
+  // }
 
 
 }

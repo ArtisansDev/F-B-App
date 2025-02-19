@@ -108,7 +108,9 @@ class SenangPayResultController extends GetxController {
                 paymentStatus: 'S',
                 responseCode: '200',
                 responseData: sUrl.value.split('?').last,
-                paidAmount: mOrderHistoryResponse.totalAmount,
+                paidAmount: (mOrderHistoryResponse.adjustedAmount ?? 0.0) > 0
+                    ? (mOrderHistoryResponse.adjustedAmount ?? 0.0)
+                    : mOrderHistoryResponse.totalAmount ?? 0.0,
                 responseMessage: 'Transaction Successful',
                 transactionID: transactionId.value);
         debugPrint(
@@ -153,7 +155,9 @@ class SenangPayResultController extends GetxController {
                 paymentStatus: (isGuestUser) ? 'C' : 'F',
                 responseCode: '400',
                 responseData: sUrl.value.split('?').last,
-                paidAmount: mOrderHistoryResponse.totalAmount,
+                paidAmount: (mOrderHistoryResponse.adjustedAmount ?? 0.0) > 0
+                    ? (mOrderHistoryResponse.adjustedAmount ?? 0.0)
+                    : mOrderHistoryResponse.totalAmount ?? 0.0,
                 responseMessage: 'Transaction Declined',
                 transactionID: transactionId.value);
         debugPrint(

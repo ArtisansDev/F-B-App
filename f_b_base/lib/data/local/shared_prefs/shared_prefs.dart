@@ -143,6 +143,21 @@ class SharedPrefs {
     return GetAllBranchesListData();
   }
 
+  /// GetGeneralSettingData
+  Future<void> setGetGeneralSettingData(String? sGetGeneralSettingData) async {
+    sharedPreferences!
+        .setString(PrefConstants.sGetGeneralSettingData, sGetGeneralSettingData ?? "");
+  }
+
+  Future<GetGeneralSettingData> getGetGeneralSettingData() async {
+    String value =
+        sharedPreferences!.getString(PrefConstants.sGetGeneralSettingData) ?? "";
+    if (value.isNotEmpty) {
+      return GetGeneralSettingData.fromJson(json.decode(value));
+    }
+    return GetGeneralSettingData();
+  }
+
   /// AddCartModel
   Future<void> setAddCartData(String? setAddCartData) async {
     sharedPreferences!

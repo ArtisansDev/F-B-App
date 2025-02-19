@@ -11,6 +11,7 @@ import 'package:f_b_base/common/custom_image.dart';
 import 'package:f_b_base/constants/color_constants.dart';
 import 'package:f_b_base/constants/image_assets_constants.dart';
 import 'package:f_b_base/constants/text_styles_constants.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -80,55 +81,62 @@ class TopAddressBar extends StatelessWidget {
                       ),
                     )),
               ),
-              GestureDetector(
-                onTap: () {
-                  // controller.val.value = !controller.val.value;
-                },
-                child: Container(
-                    width: 19.w,
-                    padding: EdgeInsets.all(5.sp),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: ColorConstants.buttonBar.withOpacity(0.80)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Visibility(
-                            visible: controller.mDashboardScreenController
-                                    .sDialogPicDine.value ==
-                                'Dine',
-                            child: Container(
-                              width: 18.w,
-                              height: 25.sp,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(30),
-                                  color: ColorConstants.cAppColorsBlue),
-                              child: Center(
-                                  child: Text('DINE - IN',
-                                      style: getText500(
-                                          size: 14.5.sp,
-                                          colors: Colors.white))),
-                            )),
-                        Visibility(
-                            visible: controller.mDashboardScreenController
-                                    .sDialogPicDine.value ==
-                                'Take',
-                            child: Container(
-                              width: 18.w,
-                              height: 25.sp,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(30),
-                                  color: ColorConstants.cAppColorsBlue),
-                              child: Center(
-                                  child: Text(
-                                'PICKUP',
-                                style: getText500(
-                                    size: 14.5.sp, colors: Colors.white),
-                              )),
-                            )),
-                      ],
-                    )),
-              ),
+              Visibility(
+                visible: kIsWeb,
+                child: SizedBox(
+                width: 10.sp,
+              ),),
+              Visibility(
+                  visible: !kIsWeb,
+                  child: GestureDetector(
+                    onTap: () {
+                      // controller.val.value = !controller.val.value;
+                    },
+                    child: Container(
+                        width: 19.w,
+                        padding: EdgeInsets.all(5.sp),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: ColorConstants.buttonBar.withOpacity(0.80)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Visibility(
+                                visible: controller.mDashboardScreenController
+                                        .sDialogPicDine.value ==
+                                    'Dine',
+                                child: Container(
+                                  width: 18.w,
+                                  height: 25.sp,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      color: ColorConstants.cAppColorsBlue),
+                                  child: Center(
+                                      child: Text('DINE - IN',
+                                          style: getText500(
+                                              size: 14.5.sp,
+                                              colors: Colors.white))),
+                                )),
+                            Visibility(
+                                visible: controller.mDashboardScreenController
+                                        .sDialogPicDine.value ==
+                                    'Take',
+                                child: Container(
+                                  width: 18.w,
+                                  height: 25.sp,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      color: ColorConstants.cAppColorsBlue),
+                                  child: Center(
+                                      child: Text(
+                                    'PICKUP',
+                                    style: getText500(
+                                        size: 14.5.sp, colors: Colors.white),
+                                  )),
+                                )),
+                          ],
+                        )),
+                  ))
             ],
           ),
         )

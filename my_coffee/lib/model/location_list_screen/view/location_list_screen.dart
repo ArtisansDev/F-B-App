@@ -18,7 +18,7 @@ class LocationListScreen extends GetView<LocationListScreenController> {
   Widget build(BuildContext context) {
     Get.lazyPut(() => LocationListScreenController());
     return Scaffold(
-        appBar: AppBarsCommon.appBarLocation(title: 'Outlet in your territory'),
+        appBar: AppBarsCommon.appBarLocation(title: 'Select branch'),
         backgroundColor: Colors.grey.shade200,
         body: SafeArea(
           child: _fullView(),

@@ -49,8 +49,11 @@ class GetGeneralSettingResponse {
 /// AboutUs : "Sample About Us text"
 /// RestaurantIDF : "9cc7d063-9391-4262-9244-ba8a679d1081"
 /// PaymentResponses : [{"RestaurantIDF":"9cc7d063-9391-4262-9244-ba8a679d1081","PaymentGatewayIDP":"6e9934ce-fe33-4c2d-9628-fae5475f3a25","PaymentGatewaySettingIDP":"611ba19b-3fb9-4787-907f-51b0a129f4fc","PaymentGatewayName":"Cash","Description":"Cash payment option","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678102710393181.png","PaymentGatewayNo":"0","MerchantID":"","SecretKey":"","APIKey":"","URL":"","Configurations":"","SandboxConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"},"ProductionConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}},{"RestaurantIDF":"9cc7d063-9391-4262-9244-ba8a679d1081","PaymentGatewayIDP":"4edd3f4b-0115-4706-8244-452612462b83","PaymentGatewaySettingIDP":"8441289b-de99-4103-8014-71b2e1c9a7b4","PaymentGatewayName":"Senang Pay","Description":"Senang Pay","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638678132549611074.png","PaymentGatewayNo":"1","MerchantID":"761173165749545","SecretKey":"43106-268","APIKey":"","URL":"","Configurations":"","SandboxConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"},"ProductionConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}},{"RestaurantIDF":"9cc7d063-9391-4262-9244-ba8a679d1081","PaymentGatewayIDP":"b7171499-669d-474f-b19f-2f4b3e60718a","PaymentGatewaySettingIDP":"6b9becae-59cd-4b40-a035-f5c16c162094","PaymentGatewayName":"Fiuu","Description":"Fiuu (formerly Razer Merchant Services)","PaymentGatewayLogo":"http://13.53.89.14:801/admin/Content/Images/Payment/PGM_638690076431347022.jpg","PaymentGatewayNo":"2","MerchantID":"SB_ttgreen","SecretKey":"ff160fc47518b2a225551759a6b22379","APIKey":"","URL":"","Configurations":"","SandboxConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"},"ProductionConfigurations":{"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}}]
+///OrderIDPrefixCode : "APP"
+///TagLine : "Thank you. Please come again"
 
 class GetGeneralSettingData {
+
   GetGeneralSettingData({
     this.isPOSEnable,
     this.isAndroidEnable,
@@ -60,6 +63,8 @@ class GetGeneralSettingData {
     this.compulsoryUpdateIn,
     this.termsAndCondition,
     this.aboutUs,
+    this.orderIDPrefixCode,
+    this.tagLine,
     this.restaurantIDF,
     this.paymentResponses,});
 
@@ -72,6 +77,8 @@ class GetGeneralSettingData {
     compulsoryUpdateIn = json['CompulsoryUpdateIn'];
     termsAndCondition = json['TermsAndCondition'];
     aboutUs = json['AboutUs'];
+    orderIDPrefixCode = json['OrderIDPrefixCode'];
+    tagLine = json['TagLine'];
     restaurantIDF = json['RestaurantIDF'];
     if (json['PaymentResponses'] != null) {
       paymentResponses = [];
@@ -88,6 +95,8 @@ class GetGeneralSettingData {
   int? compulsoryUpdateIn;
   String? termsAndCondition;
   String? aboutUs;
+  String? orderIDPrefixCode;
+  String? tagLine;
   String? restaurantIDF;
   List<PaymentTypeResponseData>? paymentResponses;
 
@@ -102,6 +111,8 @@ class GetGeneralSettingData {
     map['TermsAndCondition'] = termsAndCondition;
     map['AboutUs'] = aboutUs;
     map['RestaurantIDF'] = restaurantIDF;
+    map['OrderIDPrefixCode'] = orderIDPrefixCode;
+    map['TagLine'] = tagLine;
     if (paymentResponses != null) {
       map['PaymentResponses'] = paymentResponses?.map((v) => v.toJson()).toList();
     }
@@ -293,5 +304,4 @@ class SandboxConfigurations {
     map['mp_verification_key'] = mpVerificationKey;
     return map;
   }
-
 }

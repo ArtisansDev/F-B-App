@@ -65,7 +65,7 @@ class PaymentMethodView extends StatelessWidget {
                       padding: EdgeInsets.zero,
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: controller.paymentTypeList.value.length,
+                      itemCount: controller.paymentTypeList.length,
                       itemBuilder: (context, index) {
                         PaymentTypeResponseData mPaymentTypeResponseData =
                             controller.paymentTypeList[index];

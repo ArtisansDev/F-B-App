@@ -45,6 +45,7 @@ class OrderPlaceRequest {
     this.adjustedAmount,
     this.grandTotal,
     this.additionalNotes,
+    this.paymentGatewayNo,
     this.paymentGatewayID,
     this.paymentGatewaySettingID,
     this.tableNo,
@@ -85,6 +86,7 @@ class OrderPlaceRequest {
     adjustedAmount = json['AdjustedAmount'];
     grandTotal = json['GrandTotal'];
     additionalNotes = json['AdditionalNotes'];
+    paymentGatewayNo = json['PaymentGatewayNo'];
     paymentGatewayID = json['PaymentGatewayID'];
     paymentGatewaySettingID = json['PaymentGatewaySettingID'];
     tableNo = json['TableNo'];
@@ -116,6 +118,7 @@ class OrderPlaceRequest {
   double? adjustedAmount;
   double? grandTotal;
   String? additionalNotes;
+  String? paymentGatewayNo;
   String? paymentGatewayID;
   String? paymentGatewaySettingID;
   String? tableNo;
@@ -148,6 +151,8 @@ class OrderPlaceRequest {
     }
     map['GrandTotal'] = grandTotal;
     map['AdditionalNotes'] = additionalNotes;
+
+    map['PaymentGatewayNo'] = paymentGatewayNo;
     map['PaymentGatewayID'] = paymentGatewayID;
     map['PaymentGatewaySettingID'] = paymentGatewaySettingID;
     map['TableNo'] = tableNo;

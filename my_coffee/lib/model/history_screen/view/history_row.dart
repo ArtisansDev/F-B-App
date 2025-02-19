@@ -116,7 +116,9 @@ class HistoryRow extends StatelessWidget {
                                 size: 15.5.sp,
                                 colors: ColorConstants.black)),
                         SizedBox(height: 5.sp,),
-                        Text(mOrderHistoryResponse.trackingOrderID ?? '',
+                        Text('${
+                          controller.mGetGeneralSettingData.value?.orderIDPrefixCode ?? ''
+                        }${mOrderHistoryResponse.trackingOrderID ?? ''}' ,
                             maxLines: 1,
                             style: getText500(
                                 size: 15.5.sp,

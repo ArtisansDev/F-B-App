@@ -238,6 +238,7 @@ createOrderPlaceRequest({String? remarksController,
       seatIDF: mAddCartModel.sType == 'Dine' ? sSeatIDF : '',
 
       ///payment_service
+      paymentGatewayNo:mPaymentTypeResponseData?.paymentGatewayNo ?? '',
       paymentGatewayID: mPaymentTypeResponseData?.paymentGatewayIDP ?? '',
       paymentGatewaySettingID:
       mPaymentTypeResponseData?.paymentGatewaySettingIDP ?? '',

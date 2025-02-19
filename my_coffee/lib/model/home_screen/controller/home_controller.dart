@@ -1,6 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
+import 'package:f_b_base/utils/date_format.dart';
 import 'package:flutter/foundation.dart';
 import 'package:my_coffee/alert/app_alert.dart';
 import 'package:f_b_base/alert/app_alert_base.dart';
@@ -72,9 +76,9 @@ class HomeScreenController extends GetxController {
     }
   }
 
-  void selectItem(int index) async{
+  void selectItem(int index) async {
     String sItemId = dataGetBestSellerItemData[index].menuItemIDP ?? '';
-   await Get.toNamed(RouteConstants.rDetailsPageScreen, arguments: sItemId);
+    await Get.toNamed(RouteConstants.rDetailsPageScreen, arguments: sItemId);
     if (Get.isRegistered<DetailsPageScreenController>()) {
       Get.delete<DetailsPageScreenController>();
     }
@@ -82,7 +86,7 @@ class HomeScreenController extends GetxController {
 
   late DashboardScreenController controller;
 
-  showDialogPicDine(String title) async{
+  showDialogPicDine(String title) async {
     if (title == "Dine" &&
         mDashboardScreenController
                 .selectGetAllBranchesListData.value.branchIDP !=
@@ -106,8 +110,8 @@ class HomeScreenController extends GetxController {
       if (!(mDashboardScreenController
               .selectGetAllBranchesListData.value.takeaway ??
           false)) {
-        AppAlertBase.showSnackBar(
-            Get.context!, 'You can\'t able to select Take away in for this branch');
+        AppAlertBase.showSnackBar(Get.context!,
+            'You can\'t able to select Take away in for this branch');
         return;
       }
       // else {
@@ -199,7 +203,8 @@ class HomeScreenController extends GetxController {
   changeLocation() async {
     if (!kIsWeb) {
       AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-      if ((mAddCartModel.mItems ?? []).isNotEmpty) {
+      if ((mAddCartModel.mItems ?? []).isNotEmpty ||
+          (mAddCartModel.sTableNo ?? '').isNotEmpty) {
         AppAlertBase.showCustomDialogYesNoLogout(
             Get.context!,
             'Proceed to Change?',
@@ -234,8 +239,51 @@ class HomeScreenController extends GetxController {
     mAddCartModel.refresh();
   }
 
+  ///mGetAllBranchesListData
+  RxList<GetAllBranchesListData> mGetAllBranchesListData =
+      <GetAllBranchesListData>[].obs;
+
+  void getGetAllBranchesApi() {
+    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+      if (isInternetAvailable) {
+        GetAllBranchesByRestaurantIdRequest
+            mGetAllBranchesByRestaurantIdRequest =
+            GetAllBranchesByRestaurantIdRequest(
+                rowsPerPage: 4,
+                pageNumber: 1,
+                searchValue: '',
+                branchIDP: '',
+                todayDate: toDayDate(),
+                restaurantIDF:
+                    (await SharedPrefs().getGeneralSetting()).restaurantIDF ??
+                        '');
+        final localApi = locator.get<ProductApi>();
+        WebResponseSuccess mWebResponseSuccess =
+            await localApi.postGetAllBranchesByRestaurantID(
+                mGetAllBranchesByRestaurantIdRequest);
+        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+          GetAllBranchesByRestaurantIdResponse
+              mGetAllBranchesByRestaurantIdResponse = mWebResponseSuccess.data;
+          mGetAllBranchesListData.clear();
+          mGetAllBranchesListData
+              .addAll(mGetAllBranchesByRestaurantIdResponse.data?.data ?? []);
+          mGetAllBranchesListData.refresh();
+        } else {
+          AppAlertBase.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+        }
+      } else {
+        AppAlertBase.showSnackBar(
+            Get.context!, MessageConstants.noInternetConnection);
+      }
+    });
+  }
+
   ///onRefresh
-  void onRefresh() {
+  void onRefresh() async {
     detDashboardDetailsApi();
+    if (!kIsWeb) {
+      getGetAllBranchesApi();
+    }
   }
 }

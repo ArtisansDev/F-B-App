@@ -55,8 +55,12 @@ class HistoryScreenController extends GetxController {
   RxBool enablePullDown = true.obs;
   int pageNumber = 1;
   RxBool isGuestUser = false.obs;
+  Rxn<GetGeneralSettingData> mGetGeneralSettingData =
+      Rxn<GetGeneralSettingData>();
 
   void onRefresh() async {
+    mGetGeneralSettingData.value =
+        await SharedPrefs().getGetGeneralSettingData();
     showValue.value = 'Loading...';
     isGuestUser.value = await SharedPrefs().getGuestUser();
     mOrderHistoryResponseItemData.value.clear();
@@ -129,9 +133,9 @@ class HistoryScreenController extends GetxController {
           showValue.value = '';
           if (kIsWeb && isGuestUser) {
             enablePullUp.value = false;
-          }else {
-          enablePullUp.value = mOrderHistoryResponseItemData.value.length <
-              (mOrderHistoryResponse.data?.totalRecords ?? 0);
+          } else {
+            enablePullUp.value = mOrderHistoryResponseItemData.value.length <
+                (mOrderHistoryResponse.data?.totalRecords ?? 0);
           }
           mOrderHistoryResponseItemData.refresh();
         } else {
@@ -406,7 +410,9 @@ class HistoryScreenController extends GetxController {
                         : 'S',
                 responseCode: '200',
                 responseData: value,
-                paidAmount: mOrderHistoryResponse.totalAmount,
+                paidAmount: (mOrderHistoryResponse.adjustedAmount ?? 0.0) > 0
+                    ? (mOrderHistoryResponse.adjustedAmount ?? 0.0)
+                    : mOrderHistoryResponse.totalAmount ?? 0.0,
                 responseMessage: 'Transaction Successful',
                 transactionID: sTransactionID ??
                     ((value.isEmpty || value.split('-').isEmpty)
@@ -417,12 +423,19 @@ class HistoryScreenController extends GetxController {
         WebResponseSuccess mWebResponseSuccess =
             await localApi.postUpdatePaymentStatus(mUpdatePaymentStatusRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
-          AppAlertBase.showCustomDialogOk(
-              Get.context!, sPaymentSuccessful.tr, sPaymentSuccessfulMessage.tr,
-              () async {
-            await SharedPrefs().setProcessOrderId('');
-            onRefresh();
-          }, rightText: 'Ok');
+          if ((mOrderHistoryResponse.paymentGatewayNo ?? 0).toString() == '0') {
+            AppAlertBase.showCustomDialogOk(Get.context!, sPaymentPanding.tr,
+                sPaymentPayAtCounterMessage.tr, () async {
+              await SharedPrefs().setProcessOrderId('');
+              //onRefresh();
+            }, rightText: 'Ok');
+          } else {
+            AppAlertBase.showCustomDialogOk(Get.context!, sPaymentSuccessful.tr,
+                sPaymentSuccessfulMessage.tr, () async {
+              await SharedPrefs().setProcessOrderId('');
+              onRefresh();
+            }, rightText: 'Ok');
+          }
         } else {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
@@ -454,7 +467,9 @@ class HistoryScreenController extends GetxController {
                 paymentStatus: 'F',
                 responseCode: '400',
                 responseData: value,
-                paidAmount: mOrderHistoryResponse.totalAmount,
+                paidAmount: (mOrderHistoryResponse.adjustedAmount ?? 0.0) > 0
+                    ? (mOrderHistoryResponse.adjustedAmount ?? 0.0)
+                    : mOrderHistoryResponse.totalAmount ?? 0.0,
                 responseMessage: 'Transaction Declined',
                 transactionID: sTransactionID ??
                     ((value.isEmpty || value.split('-').isEmpty)
@@ -597,7 +612,9 @@ class HistoryScreenController extends GetxController {
                 .trim(),
         email: mUserDetailsResponseData.email ?? '',
         phone: mUserDetailsResponseData.phoneNumber ?? '',
-        amount: mOrderHistoryResponse.totalAmount ?? 0.0,
+        amount: (mOrderHistoryResponse.adjustedAmount ?? 0.0) > 0
+            ? (mOrderHistoryResponse.adjustedAmount ?? 0.0)
+            : mOrderHistoryResponse.totalAmount ?? 0.0,
         orderId: mOrderHistoryResponse.orderIDP ?? '',
         description: '-',
         mRouteConstants: RouteConstants.rSenangPayPaymentScreen);

@@ -50,6 +50,12 @@ class IntroductionScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetGeneralSettingResponse mGetGeneralSettingResponse =
               mWebResponseSuccess.data;
+
+          await SharedPrefs().setGetGeneralSettingData(jsonEncode(
+              mGetGeneralSettingResponse.data?.first ??
+                  GetGeneralSettingData()));
+
+          // await SharedPrefs().getGetGeneralSettingData();
           setValue(mGetGeneralSettingResponse);
         }
       } else {

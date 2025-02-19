@@ -12,6 +12,7 @@ const hiveDbPath = 'TWT';
 
 void main() async {
   // enforceHttps();
+  ///Thomson_Corner(YUM) = 1 ,Apple_Cinemas = 2,TWT = 3
   AppConstants.iAccessKey =   2;
   await WidgetsFlutterBinding.ensureInitialized();
   HttpOverrides.global = await WebHttpOverrides();

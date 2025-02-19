@@ -176,11 +176,7 @@ class PickUpAtHistoryView extends StatelessWidget {
                               heights: 1.2),
                         ),
                         Text(
-                          controller
-                              .mAddCartModel
-                              .value
-                              .mOrderHistoryResponseItemData
-                              ?.trackingOrderID ??'',
+                          '${controller.mGetGeneralSettingData.value?.orderIDPrefixCode ?? ''}${controller.mAddCartModel.value.mOrderHistoryResponseItemData?.trackingOrderID ?? ''}',
                           style: getText600(
                               size: 17.sp,
                               colors: ColorConstants.cAppColorsBlue,
@@ -195,7 +191,9 @@ class PickUpAtHistoryView extends StatelessWidget {
                         // )
                       ],
                     ),
-                    SizedBox(height: 10.sp,),
+                    SizedBox(
+                      height: 10.sp,
+                    ),
                     Visibility(
                         visible: (controller.mAddCartModel.value
                                     .mOrderHistoryResponseItemData?.tableNo ??

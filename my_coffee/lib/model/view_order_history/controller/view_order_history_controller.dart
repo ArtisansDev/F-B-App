@@ -7,6 +7,7 @@ import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
 import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
 import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
 import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
 import 'package:f_b_base/data/mode/order_place/order_place_request.dart';
 import 'package:f_b_base/data/mode/order_place/process_order_response.dart';
@@ -91,8 +92,13 @@ class ViewOrderHistoryController extends GetxController {
     }
   }
 
+  Rxn<GetGeneralSettingData> mGetGeneralSettingData =
+      Rxn<GetGeneralSettingData>();
+
   ///OrderDetails
   void getOrderDetails(AddCartModel mAddCartModelValue) async {
+    mGetGeneralSettingData.value =
+        await SharedPrefs().getGetGeneralSettingData();
     mAddCartModel.value = mAddCartModelValue;
     selectGetAllBranchesListData.value =
         mAddCartModel.value.mGetAllBranchesListData ?? GetAllBranchesListData();
@@ -204,24 +210,21 @@ class ViewOrderHistoryController extends GetxController {
               .isEmpty) {
             AppAlertBase.showSnackBar(Get.context!, 'Branch not found');
             return;
-          }else{
-            GetAllBranchesListData mGetAllBranchesListData =  (mGetAllBranchesByRestaurantIdResponse.data?.data ?? []).first;
-            if( ((time24to12Format(
-                mGetAllBranchesListData.fromTime ?? '0:0')
-                .contains('0:00')) &&
-                (time24to12Format(
-                    mGetAllBranchesListData.toTime ?? '0:0')
-                    .contains('0:00')))){
-              AppAlertBase.showSnackBar(
-                  Get.context!, 'For now this branch is close, You will try after some time');
-            }else if( timeCheck(
-                mGetAllBranchesListData.fromTime ??
-                    '0:0',
+          } else {
+            GetAllBranchesListData mGetAllBranchesListData =
+                (mGetAllBranchesByRestaurantIdResponse.data?.data ?? []).first;
+            if (((time24to12Format(mGetAllBranchesListData.fromTime ?? '0:0')
+                    .contains('0:00')) &&
+                (time24to12Format(mGetAllBranchesListData.toTime ?? '0:0')
+                    .contains('0:00')))) {
+              AppAlertBase.showSnackBar(Get.context!,
+                  'For now this branch is close, You will try after some time');
+            } else if (timeCheck(mGetAllBranchesListData.fromTime ?? '0:0',
                 mGetAllBranchesListData.toTime ?? '0:0')) {
               reorder();
-            }else {
-              AppAlertBase.showSnackBar(
-                  Get.context!, 'For now this branch is close, You will try after some time');
+            } else {
+              AppAlertBase.showSnackBar(Get.context!,
+                  'For now this branch is close, You will try after some time');
             }
           }
         } else {
@@ -238,19 +241,19 @@ class ViewOrderHistoryController extends GetxController {
   ///sReorder
   reorder() async {
     AddCartModel mSharedPrefsAddCartModel =
-    await SharedPrefs().getAddCartData();
+        await SharedPrefs().getAddCartData();
     if ((mSharedPrefsAddCartModel.mItems ?? []).isNotEmpty) {
       AppAlertBase.showCustomDialogYesNoLogout(
           Get.context!,
           'Proceed to Change?',
           'This action will clear the items in your current basket. Do you want to proceed?',
-              () async {
-            mDashboardScreenController.selectGetAllBranchesListData.value =
-                mAddCartModel.value.mGetAllBranchesListData ??
-                    GetAllBranchesListData();
-            await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel.value));
-            Get.offAndToNamed(RouteConstants.rOrderConfirmationScreen);
-          }, rightText: 'Ok');
+          () async {
+        mDashboardScreenController.selectGetAllBranchesListData.value =
+            mAddCartModel.value.mGetAllBranchesListData ??
+                GetAllBranchesListData();
+        await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel.value));
+        Get.offAndToNamed(RouteConstants.rOrderConfirmationScreen);
+      }, rightText: 'Ok');
     } else {
       await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel.value));
       Get.offAndToNamed(RouteConstants.rOrderConfirmationScreen);

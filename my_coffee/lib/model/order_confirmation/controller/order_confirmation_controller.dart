@@ -48,8 +48,16 @@ class OrderConfirmationScreenController extends GetxController {
 
   OrderConfirmationScreenController() {
     selectedDateTime.value = DateTime.now();
-    getOrderDetails();
-    getPaymentTypeApi();
+    getOrderPrefixCode();
+
+  }
+
+  Rxn<GetGeneralSettingData> mGetGeneralSettingData= Rxn<GetGeneralSettingData>();
+  void getOrderPrefixCode() async{
+    mGetGeneralSettingData.value =
+    await SharedPrefs().getGetGeneralSettingData();
+    await getOrderDetails();
+    await getPaymentTypeApi();
   }
 
   ///PackagingData
@@ -83,8 +91,8 @@ class OrderConfirmationScreenController extends GetxController {
   }
 
   ///getPaymentTypeApi
-  void getPaymentTypeApi() {
-    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+   getPaymentTypeApi() async{
+   await NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
       if (isInternetAvailable) {
         PaymentTypeRequest mPaymentTypeRequest = PaymentTypeRequest(
             restaurantIDF:
@@ -102,10 +110,6 @@ class OrderConfirmationScreenController extends GetxController {
                 return element.paymentGatewayNo.toString() == '0';
               },
             );
-          } else {
-            paymentType.value = 0;
-            selectPaymentType.value = paymentTypeList.first;
-            selectPaymentType.refresh();
           }
           paymentTypeList.refresh();
         } else {
@@ -159,7 +163,7 @@ class OrderConfirmationScreenController extends GetxController {
   }
 
   ///OrderDetails
-  void getOrderDetails() async {
+  getOrderDetails() async {
     mAddCartModel.value = await SharedPrefs().getAddCartData();
     totalAmount.value = mAddCartModel.value.totalAmount ?? 0.0;
     mItems.clear();
@@ -260,12 +264,11 @@ class OrderConfirmationScreenController extends GetxController {
         }
 
         if (mOrderPlaceRequest.orderType == '1' &&
-            mOrderPlaceRequest.paymentGatewayID == 0) {
+            paymentTypeList[paymentType.value ?? 0].paymentGatewayNo.toString() == "0".toString()) {
           value = await getSetTableStatusApi(mOrderPlaceRequest);
         }
 
         if (kIsWeb) {
-          value = await getSetTableStatusApi(mOrderPlaceRequest);
           if(value){
             OrderHistoryIdModel mOrderHistoryIdModel =
             await SharedPrefs().getOrderHistoryId();
@@ -394,4 +397,6 @@ class OrderConfirmationScreenController extends GetxController {
       }
     });
   }
+
+
 }

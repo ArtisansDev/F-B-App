@@ -34,6 +34,23 @@ Future<void> openLaunchUrlWp(String number) async {
     await openLaunchUrl(Uri.parse(androidUrl));
   }
 }
+Future<void> makePhoneCall(String phoneNumber) async {
+  // final Uri dialerUri = Uri(scheme: "tel", path: phoneNumber);
+  //
+  // if (await canLaunchUrl(dialerUri)) {
+  //   await launchUrl(dialerUri);
+  // } else {
+  //   print("Could not launch $dialerUri");
+  //   throw "Could not launch dialer for $phoneNumber";
+  // }
+
+  Uri phoneno = Uri.parse('tel:$phoneNumber');
+  if(await canLaunchUrl(phoneno)){
+    await launchUrl(phoneno);
+  }else {
+    throw "Could not launch dialer for $phoneNumber";
+  }
+}
 
 Future<void> openLaunchUrl(Uri url) async {
   if (!await launchUrl(url)) {

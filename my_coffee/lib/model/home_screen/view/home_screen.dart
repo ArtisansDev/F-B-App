@@ -14,6 +14,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../order_now/order_now.dart';
 import '../controller/home_controller.dart';
 import 'best_sellers/best_selles_screen.dart';
+import 'branch_list/branch_list_screen.dart';
 import 'dine_pickup_view/dine_pickup_screen.dart';
 
 class HomeScreen extends GetView<HomeScreenController> {
@@ -33,6 +34,9 @@ class HomeScreen extends GetView<HomeScreenController> {
           controller.bFocusGained.value = true;
           controller.detDashboardDetailsApi();
           controller.getOrderDetails();
+          if(!kIsWeb){
+            controller.getGetAllBranchesApi();
+          }
         },
         onVisibilityLost: () {
           if (Get.isRegistered<HomeScreenController>()) {
@@ -138,6 +142,10 @@ class HomeScreen extends GetView<HomeScreenController> {
 
               ///hot sale
               BestSellersScreen(),
+
+              ///branch
+              kIsWeb?SizedBox():
+              BranchListScreen(),
 
               // ///ButtonAdvertisement
               // ButtonAdvertisementScreen(),

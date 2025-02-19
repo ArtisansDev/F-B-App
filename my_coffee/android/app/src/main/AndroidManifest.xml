@@ -14,8 +14,8 @@
     <!--//"YUM" "TWT" "Apple Cinemas"-->
     <application
         android:name="${applicationName}"
-        android:icon="@drawable/launch_background"
-        android:label="Apple Cinemas">
+        android:icon="@mipmap/ic_launcher"
+        android:label="YUM">
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -58,6 +58,10 @@
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT" />
             <data android:mimeType="text/plain" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+            <data android:scheme="tel" />
         </intent>
     </queries>
 </manifest>
