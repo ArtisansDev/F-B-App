@@ -26,7 +26,7 @@ class TopHomeAddressBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Obx(() => Column(
       children: [
         Container(
           margin: EdgeInsets.all(18.sp),
@@ -68,10 +68,10 @@ class TopHomeAddressBar extends StatelessWidget {
                       color: Colors.transparent,
                       child: Text(
                         controller
-                                .mDashboardScreenController
-                                .selectGetAllBranchesListData
-                                .value
-                                .branchName ??
+                            .mDashboardScreenController
+                            .selectGetAllBranchesListData
+                            .value
+                            .branchName ??
                             'Please select the branch',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -87,6 +87,6 @@ class TopHomeAddressBar extends StatelessWidget {
           ),
         )
       ],
-    );
+    ),);
   }
 }

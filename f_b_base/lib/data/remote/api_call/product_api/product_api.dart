@@ -12,4 +12,7 @@ mixin ProductApi {
       dynamic exhibitorsListRequest);
   Future<WebResponseSuccess> postGetItemDetails(
       dynamic exhibitorsListRequest,{bool isLoading = true});
+
+  Future<WebResponseSuccess> postGetMenuItems(
+      dynamic exhibitorsListRequest,{bool isLoading = true});
 }

@@ -36,8 +36,10 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // import 'dart:html' as html;
+import '../../../constants/logout_expired.dart';
 import '../../../routes/route_constants.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
+import '../../home_screen/controller/home_controller.dart';
 
 class HistoryScreenController extends GetxController {
   DashboardScreenController mDashboardScreenController =
@@ -63,7 +65,7 @@ class HistoryScreenController extends GetxController {
         await SharedPrefs().getGetGeneralSettingData();
     showValue.value = 'Loading...';
     isGuestUser.value = await SharedPrefs().getGuestUser();
-    mOrderHistoryResponseItemData.value.clear();
+    mOrderHistoryResponseItemData.clear();
     pageNumber = 1;
     getOrderHistoryApi();
   }
@@ -75,111 +77,133 @@ class HistoryScreenController extends GetxController {
 
   ///getOrderHistoryApi
   void getOrderHistoryApi() {
-    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
-      if (isInternetAvailable) {
-        UserDetailsResponseData mUserDetailsResponseData =
-            await SharedPrefs().getUserDetails();
-        OrderPlaceShare getProcessOrderId =
-            await SharedPrefs().getProcessOrderId();
-        bool isGuestUser = await SharedPrefs().getGuestUser();
-        OrderHistoryIdModel mOrderHistoryIdModel =
-            await SharedPrefs().getOrderHistoryId();
-        if (((getProcessOrderId.data ?? '').isEmpty &&
-                (mOrderHistoryIdModel.orderHistoryId ?? []).isEmpty) &&
-            isGuestUser) {
-          showValue.value = 'No history found';
-          enablePullDown.value = false;
-          return;
-        }
-        GetOrderHistoryRequest mGetOrderHistoryRequest = GetOrderHistoryRequest(
-            userIDF: mUserDetailsResponseData.userID,
-            restaurantID:
-                (await SharedPrefs().getGeneralSetting()).restaurantIDF ?? '',
-            pageNumber: pageNumber,
-            orderID: (kIsWeb && isGuestUser)
-                ? (getProcessOrderId.data ?? '').isNotEmpty
-                    ? (getProcessOrderId.data ?? '')
-                    : mOrderHistoryIdModel.orderHistoryId?.last ?? ''
-                : '',
-            rowsPerPage: (kIsWeb && isGuestUser) ? 1 : 10);
-        WebResponseSuccess mWebResponseSuccess =
-            await localApi.postGetOrderHistory(mGetOrderHistoryRequest);
-        if (refreshController.isRefresh) {
-          refreshController.refreshCompleted();
-        } else if (refreshController.isLoading) {
-          refreshController.loadComplete();
-        }
-        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
-          OrderHistoryResponse mOrderHistoryResponse = mWebResponseSuccess.data;
-          mOrderHistoryResponseItemData.value
-              .addAll((mOrderHistoryResponse.data?.data ?? []).toList());
-          if (mOrderHistoryResponseItemData.isEmpty) {
+    try {
+      NetworkUtils()
+          .checkInternetConnection()
+          .then((isInternetAvailable) async {
+        if (isInternetAvailable) {
+          UserDetailsResponseData mUserDetailsResponseData =
+              await SharedPrefs().getUserDetails();
+          OrderPlaceShare getProcessOrderId =
+              await SharedPrefs().getProcessOrderId();
+          bool isGuestUser = await SharedPrefs().getGuestUser();
+          OrderHistoryIdModel mOrderHistoryIdModel =
+              await SharedPrefs().getOrderHistoryId();
+          if (((getProcessOrderId.data ?? '').isEmpty &&
+                  (mOrderHistoryIdModel.orderHistoryId ?? []).isEmpty) &&
+              isGuestUser) {
             showValue.value = 'No history found';
             enablePullDown.value = false;
-          } else {
-            enablePullDown.value = true;
+            return;
+          }
+          // String tokenValue = await SharedPrefs().getUserToken();
+          // await SharedPrefs().setUserToken(tokenValue + "pp");
+          GetOrderHistoryRequest mGetOrderHistoryRequest =
+              GetOrderHistoryRequest(
+                  userIDF: mUserDetailsResponseData.userID,
+                  restaurantID:
+                      (await SharedPrefs().getGeneralSetting()).restaurantIDF ??
+                          '',
+                  pageNumber: pageNumber,
+                  orderID: (kIsWeb && isGuestUser)
+                      ? (getProcessOrderId.data ?? '').isNotEmpty
+                          ? (getProcessOrderId.data ?? '')
+                          : mOrderHistoryIdModel.orderHistoryId?.last ?? ''
+                      : '',
+                  rowsPerPage: (kIsWeb && isGuestUser) ? 1 : 10);
+          WebResponseSuccess mWebResponseSuccess =
+              await localApi.postGetOrderHistory(mGetOrderHistoryRequest);
+          if (refreshController.isRefresh) {
+            refreshController.refreshCompleted();
+          } else if (refreshController.isLoading) {
+            refreshController.loadComplete();
+          }
+          if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+            OrderHistoryResponse mOrderHistoryResponse =
+                mWebResponseSuccess.data;
+            mOrderHistoryResponseItemData
+                .addAll((mOrderHistoryResponse.data?.data ?? []).toList());
+            if (mOrderHistoryResponseItemData.isEmpty) {
+              showValue.value = 'No history found';
+              enablePullDown.value = false;
+            } else {
+              enablePullDown.value = true;
 
-            // else {
-            //   await SharedPrefs().setProcessOrderId('');
-            // }
-            await SharedPrefs().setProcessOrderId('');
-            OrderHistoryResponseItemData mOrderHistoryItemData =
-                mOrderHistoryResponseItemData.value.first;
-            if (mOrderHistoryItemData.orderIDP.toString().toUpperCase() ==
-                getProcessOrderId.data.toString().toUpperCase()) {
-              selectPayment(mOrderHistoryItemData);
+              // else {
+              //   await SharedPrefs().setProcessOrderId('');
+              // }
+              await SharedPrefs().setProcessOrderId('');
+              OrderHistoryResponseItemData mOrderHistoryItemData =
+                  mOrderHistoryResponseItemData.isNotEmpty
+                      ? mOrderHistoryResponseItemData.first
+                      : OrderHistoryResponseItemData();
+              if (mOrderHistoryItemData.orderIDP.toString().toUpperCase() ==
+                  getProcessOrderId.data.toString().toUpperCase()) {
+                selectPayment(mOrderHistoryItemData);
+              }
             }
-          }
-          showValue.value = '';
-          if (kIsWeb && isGuestUser) {
-            enablePullUp.value = false;
+            showValue.value = '';
+            if (kIsWeb && isGuestUser) {
+              enablePullUp.value = false;
+            } else {
+              enablePullUp.value = mOrderHistoryResponseItemData.length <
+                  (mOrderHistoryResponse.data?.totalRecords ?? 0);
+            }
+            mOrderHistoryResponseItemData.refresh();
+          } else if (mWebResponseSuccess.statusCode ==
+              WebConstants.statusCode401) {
+            AppAlertBase.showSnackBar(
+                Get.context!, mWebResponseSuccess.statusMessage ?? '');
+            await logout();
+            await Future.delayed(Duration(seconds: 1), () {
+              Get.toNamed(RouteConstants.rLoginScreen);
+            });
           } else {
-            enablePullUp.value = mOrderHistoryResponseItemData.value.length <
-                (mOrderHistoryResponse.data?.totalRecords ?? 0);
+            showValue.value = 'Internal server error';
+            AppAlertBase.showSnackBar(
+                Get.context!, mWebResponseSuccess.statusMessage ?? '');
           }
-          mOrderHistoryResponseItemData.refresh();
-        } else {
-          showValue.value = 'Internal server error';
-          AppAlertBase.showSnackBar(
-              Get.context!, mWebResponseSuccess.statusMessage ?? '');
-        }
 
-        ///
-      } else {
-        showValue.value = MessageConstants.noInternetConnection;
-        AppAlertBase.showSnackBar(
-            Get.context!, MessageConstants.noInternetConnection);
-      }
-    });
+          ///
+        } else {
+          showValue.value = MessageConstants.noInternetConnection;
+          AppAlertBase.showSnackBar(
+              Get.context!, MessageConstants.noInternetConnection);
+        }
+      });
+    } catch (e) {}
   }
 
   Rx<AddCartModel> mAddCartModel = AddCartModel().obs;
 
   void gotOrderHistoryDetails(int index) async {
-    ///get data
-    OrderHistoryResponseItemData mOrderHistoryResponse =
-        mOrderHistoryResponseItemData.value[index];
-    AppAlertBase.showProgressDialog(Get.context!);
-    mAddCartModel.value = AddCartModel();
-    await getGetAllBranchesApi(mOrderHistoryResponse.branchName ?? '',
-        mOrderHistoryResponse.branchIDF ?? '');
-    if (mAddCartModel.value.mGetAllBranchesListData?.branchIDP != 'null') {
-      for (OrderMenu mOrderMenu in mOrderHistoryResponse.orderMenu ?? []) {
-        await getItemDetailsApi(mOrderMenu);
+    try {
+      ///get data
+      OrderHistoryResponseItemData mOrderHistoryResponse =
+          mOrderHistoryResponseItemData[index];
+      AppAlertBase.showProgressDialog(Get.context!);
+      mAddCartModel.value = AddCartModel();
+      await getGetAllBranchesApi(mOrderHistoryResponse.branchName ?? '',
+          mOrderHistoryResponse.branchIDF ?? '');
+      if (mAddCartModel.value.mGetAllBranchesListData?.branchIDP != 'null') {
+        for (OrderMenu mOrderMenu in mOrderHistoryResponse.orderMenu ?? []) {
+          await getItemDetailsApi(mOrderMenu);
+        }
       }
-    }
-    mAddCartModel.value.sType =
-        ((mOrderHistoryResponse.orderType ?? 1) == 1) ? 'Dine' : 'Take';
-    mAddCartModel.value.sOrderDateTime = mOrderHistoryResponse.orderDate ?? '';
-    mAddCartModel.value.mOrderHistoryResponseItemData = mOrderHistoryResponse;
-    mAddCartModel.value.rounoffAmount =
-        mOrderHistoryResponse.adjustedAmount ?? 0.0;
-    AppAlertBase.hideLoadingDialog(Get.context!);
-    if ((mAddCartModel.value.mItems ?? []).length ==
-        (mOrderHistoryResponse.orderMenu ?? []).length) {
-      Get.toNamed(RouteConstants.rOrderHistoryScreen,
-          arguments: mAddCartModel.value);
-    }
+      mAddCartModel.value.sType =
+          ((mOrderHistoryResponse.orderType ?? 1) == 1) ? 'Dine' : 'Take';
+      mAddCartModel.value.sOrderDateTime =
+          mOrderHistoryResponse.orderDate ?? '';
+      mAddCartModel.value.mOrderHistoryResponseItemData = mOrderHistoryResponse;
+      mAddCartModel.value.rounoffAmount =
+          mOrderHistoryResponse.adjustedAmount ?? 0.0;
+      AppAlertBase.hideLoadingDialog(Get.context!);
+      if ((mAddCartModel.value.mItems ?? []).length ==
+          (mOrderHistoryResponse.orderMenu ?? []).length) {
+        Get.toNamed(RouteConstants.rOrderHistoryScreen,
+            arguments: mAddCartModel.value);
+      }
+    } catch (e) {}
   }
 
   getGetAllBranchesApi(String search, String branchIDP) async {
@@ -327,7 +351,7 @@ class HistoryScreenController extends GetxController {
             await localApi.postPaymentType(mPaymentTypeRequest);
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           PaymentTypeResponse mPaymentTypeResponse = mWebResponseSuccess.data;
-          paymentTypeList.value.clear();
+          paymentTypeList.clear();
           paymentTypeList.addAll(mPaymentTypeResponse.data ?? []);
           paymentTypeList.refresh();
         } else {
@@ -399,15 +423,15 @@ class HistoryScreenController extends GetxController {
                 userID: mOrderHistoryResponse.userIDF,
                 orderID: mOrderHistoryResponse.orderIDP,
                 paymentGatewayIDF: mOrderHistoryResponse.paymentGatewayIDF,
-                paymentGatewayNo:
-                    (mOrderHistoryResponse.paymentGatewayNo ?? 0).toString(),
+                paymentGatewayNo: (mOrderHistoryResponse.paymentGatewayNo ?? 0)
+                    .toString(),
                 paymentGatewaySettingIDF:
                     mOrderHistoryResponse.paymentGatewaySettingIDF,
-                paymentStatus:
-                    ((mOrderHistoryResponse.paymentGatewayNo ?? 0).toString() ==
-                            '0')
-                        ? 'P'
-                        : 'S',
+                paymentStatus: ((mOrderHistoryResponse.paymentGatewayNo ?? 0)
+                            .toString() ==
+                        '0')
+                    ? 'P'
+                    : 'S',
                 responseCode: '200',
                 responseData: value,
                 paidAmount: (mOrderHistoryResponse.adjustedAmount ?? 0.0) > 0
@@ -569,7 +593,6 @@ class HistoryScreenController extends GetxController {
                   ? (mOrderHistoryResponse.adjustedAmount ?? 0.0)
                   : (mOrderHistoryResponse.totalAmount ?? 0.0))
               .toString(),
-          // (mOrderHistoryResponse.totalAmount ?? 0.0).toString(),
           mOrderHistoryResponse.orderIDP ?? '',
           '${mUserDetailsResponseData.firstName ?? ''} ${mUserDetailsResponseData.lastName ?? ''}'
               .trim(),
@@ -580,12 +603,26 @@ class HistoryScreenController extends GetxController {
 
       var value = RazerPayService.value;
       RazerResponse mRazerResponse = RazerResponse.fromJson(jsonDecode(value));
-      if (mRazerResponse.channel!.trim().isEmpty) {
-        await getUpdatePaymentDeclinedApi(mOrderHistoryResponse, value,
-            sTransactionID: mRazerResponse.txnID.toString());
+      if ((mRazerResponse.channel ?? '').trim().isEmpty) {
+        if ((mRazerResponse.txnID ?? '').toString().isNotEmpty) {
+          await getUpdatePaymentDeclinedApi(mOrderHistoryResponse, value,
+              sTransactionID: mRazerResponse.txnID.toString());
+        } else if ((mRazerResponse.error ?? '').toString().isNotEmpty){
+            AppAlertBase.showCustomDialogOk(Get.context!, 'Alert!',
+                (mRazerResponse.error ?? '').toString(), () {});
+        }else if(value.isNotEmpty){
+          AppAlertBase.showCustomDialogOk(Get.context!, 'Alert!',
+              value.toString(), () {});
+        }
       } else {
-        await getUpdatePaymentStatusApi(mOrderHistoryResponse, value,
-            sTransactionID: mRazerResponse.txnID.toString());
+        if((mRazerResponse.statusCode??'')=='11'){
+          await getUpdatePaymentDeclinedApi(mOrderHistoryResponse, value,
+              sTransactionID: mRazerResponse.txnID.toString());
+        }else{
+          await getUpdatePaymentStatusApi(mOrderHistoryResponse, value,
+              sTransactionID: mRazerResponse.txnID.toString());
+        }
+
       }
       // AppAlertBase.showSnackBar(Get.context!, value);
     } catch (e) {

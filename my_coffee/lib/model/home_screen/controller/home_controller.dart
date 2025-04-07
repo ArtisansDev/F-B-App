@@ -25,6 +25,7 @@ import 'package:get/get.dart';
 
 import '../../../alert/app_alert.dart';
 import '../../../routes/route_constants.dart';
+import '../../branch_location_list_screen/controller/branch_location_list_controller.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 import '../../details_page/controller/details_page_controller.dart';
 import '../../location_list_screen/controller/location_list_controller.dart';
@@ -87,6 +88,16 @@ class HomeScreenController extends GetxController {
   late DashboardScreenController controller;
 
   showDialogPicDine(String title) async {
+    await openSelect(title);
+    if (Get.isRegistered<DashboardScreenController>()) {
+      controller = Get.find<DashboardScreenController>();
+      await controller.openDialog(title);
+    }
+    await Future.delayed(Duration(seconds: 2));
+    await openSelect(title);
+  }
+
+  openSelect(String title) async {
     if (title == "Dine" &&
         mDashboardScreenController
                 .selectGetAllBranchesListData.value.branchIDP !=
@@ -114,16 +125,6 @@ class HomeScreenController extends GetxController {
             'You can\'t able to select Take away in for this branch');
         return;
       }
-      // else {
-      //   AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-      //   mAddCartModel.sType = 'Take';
-      //   await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
-      // }
-    }
-
-    if (Get.isRegistered<DashboardScreenController>()) {
-      controller = Get.find<DashboardScreenController>();
-      controller.openDialog(title);
     }
   }
 
@@ -162,8 +163,10 @@ class HomeScreenController extends GetxController {
   RxList<BannerMaster> mBannerMaster = <BannerMaster>[].obs;
   Rxn<GetDashboardResponse> mGetDashboardResponse = Rxn<GetDashboardResponse>();
 
-  void detDashboardDetailsApi() {
-    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+  detDashboardDetailsApi() async {
+    await NetworkUtils()
+        .checkInternetConnection()
+        .then((isInternetAvailable) async {
       if (isInternetAvailable) {
         GetDashboardRequest mGetDashboardRequest = GetDashboardRequest(
             totalRecord: '10',
@@ -232,6 +235,41 @@ class HomeScreenController extends GetxController {
     }
   }
 
+  ///changeLocation
+  changeBranchLocation() async {
+    if (!kIsWeb) {
+      AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+      if ((mAddCartModel.mItems ?? []).isNotEmpty ||
+          (mAddCartModel.sTableNo ?? '').isNotEmpty) {
+        AppAlertBase.showCustomDialogYesNoLogout(
+            Get.context!,
+            'Proceed to Change?',
+            'This action will clear the items in your current basket. Do you want to proceed?',
+            () async {
+          await SharedPrefs().setAddCartData('');
+          final selectLocation =
+              await AppAlert.showCustomDialogLocationPicker(Get.context!);
+          Get.delete<LocationListScreenController>();
+          if (selectLocation.isNotEmpty) {
+            await SharedPrefs().setAddCartData('');
+            detDashboardDetailsApi();
+            getOrderDetails();
+            scrollUp();
+          }
+        }, rightText: 'Ok');
+      } else {
+        final selectLocation =
+            await AppAlert.showCustomDialogBranchLocation(Get.context!);
+        await Get.delete<BranchLocationListController>();
+        if (selectLocation.isNotEmpty) {
+          detDashboardDetailsApi();
+          getOrderDetails();
+          scrollUp();
+        }
+      }
+    }
+  }
+
   Rx<AddCartModel> mAddCartModel = AddCartModel().obs;
 
   void getOrderDetails() async {
@@ -285,5 +323,13 @@ class HomeScreenController extends GetxController {
     if (!kIsWeb) {
       getGetAllBranchesApi();
     }
+  }
+
+  Rx<ScrollController> scrollController = ScrollController().obs;
+
+  void scrollUp() {
+    scrollController.value.animateTo(0.0,
+        duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
+    scrollController.refresh();
   }
 }

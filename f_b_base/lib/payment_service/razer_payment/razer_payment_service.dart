@@ -44,13 +44,18 @@ class RazerPayService {
       'mp_sandbox_mode': sandboxMode,
     };
     // AppAlertBase.showSnackBar(mBuildContext, '###${paymentDetails.toString()}');
-    String? result = await MobileXDK.start(paymentDetails);
-    value = "$result";
-    debugPrint(value);
-    // AppAlertBase.showSnackBar(mBuildContext, '###${value}');
-    if (result != null) {
-      Map resultMap = json.decode(result);
-      debugPrint("Razer Payment json map : $resultMap ");
+    try {
+
+      String? result = await MobileXDK.start(paymentDetails);
+      if (result != null) {
+        Map resultMap = json.decode(result);
+        debugPrint("Razer Payment json map : $resultMap ");
+      }
+      value = "$result";
+      debugPrint("$value");
+    }catch(e){
+      debugPrint("Razer Payment catch : ${e.toString()} ");
+      value = e.toString();
     }
   }
 }

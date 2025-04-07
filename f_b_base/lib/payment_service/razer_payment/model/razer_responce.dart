@@ -20,6 +20,7 @@ class RazerResponse {
       this.orderId, 
       this.channel, 
       this.chksum, 
+      this.error,
       this.mpSecuredVerified,});
 
   RazerResponse.fromJson(dynamic json) {
@@ -32,6 +33,7 @@ class RazerResponse {
     orderId = json['order_id'];
     channel = json['channel'];
     chksum = json['chksum'];
+    error = json['Error']??json['error_message'];
     mpSecuredVerified = json['mp_secured_verified'];
   }
   String? amount;
@@ -43,6 +45,7 @@ class RazerResponse {
   String? orderId;
   String? channel;
   String? chksum;
+  String? error;
   bool? mpSecuredVerified;
 
   Map<String, dynamic> toJson() {
@@ -56,6 +59,7 @@ class RazerResponse {
     map['order_id'] = orderId;
     map['channel'] = channel;
     map['chksum'] = chksum;
+    map['Error'] = error;
     map['mp_secured_verified'] = mpSecuredVerified;
     return map;
   }

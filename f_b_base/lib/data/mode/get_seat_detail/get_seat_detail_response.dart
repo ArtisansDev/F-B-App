@@ -73,6 +73,7 @@ class GetSeatDetailResponseData {
     String? qRCode,
     String? locationType,
     String? locationIDF,
+    String? tableStatus,
     int? seatingCapacity,
     String? seattype,}) {
     _seatIDP = seatIDP;
@@ -86,6 +87,7 @@ class GetSeatDetailResponseData {
     _locationIDF = locationIDF;
     _seatingCapacity = seatingCapacity;
     _seattype = seattype;
+    _tableStatus = tableStatus;
   }
 
   GetSeatDetailResponseData.fromJson(dynamic json) {
@@ -100,6 +102,7 @@ class GetSeatDetailResponseData {
     _locationIDF = json['LocationIDF'];
     _seatingCapacity = json['SeatingCapacity'];
     _seattype = json['Seattype'];
+    _tableStatus = json['TableStatus'];
   }
 
   String? _seatIDP;
@@ -113,6 +116,7 @@ class GetSeatDetailResponseData {
   String? _locationIDF;
   int? _seatingCapacity;
   String? _seattype;
+  String? _tableStatus;
 
   String? get seatIDP => _seatIDP;
 
@@ -136,6 +140,8 @@ class GetSeatDetailResponseData {
 
   String? get seattype => _seattype;
 
+  String? get tableStatus => _tableStatus;
+
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['SeatIDP'] = _seatIDP;
@@ -149,6 +155,7 @@ class GetSeatDetailResponseData {
     map['LocationIDF'] = _locationIDF;
     map['SeatingCapacity'] = _seatingCapacity;
     map['Seattype'] = _seattype;
+    map['TableStatus'] = _tableStatus;
     return map;
   }
 

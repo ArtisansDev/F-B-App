@@ -8,6 +8,7 @@
  * Ticket       : 
  */
 
+import 'package:f_b_base/alert/app_alert_base.dart';
 import 'package:f_b_base/common/create_card_view.dart';
 import 'package:f_b_base/common/custom_image.dart';
 import 'package:f_b_base/constants/color_constants.dart';
@@ -19,6 +20,7 @@ import 'package:f_b_base/utils/open_url.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import '../../dashboard_screen/controller/dashboard_controller.dart';
 import '../controller/branch_location_list_controller.dart';
 
 class BranchLocationListRow extends StatelessWidget {
@@ -35,7 +37,27 @@ class BranchLocationListRow extends StatelessWidget {
         controller.mGetAllBranchesListData[index];
     return GestureDetector(
       onTap: () {
-
+        if( ((time24to12Format(
+            mGetAllBranchesListData.fromTime ?? '0:0')
+            .contains('0:00')) &&
+            (time24to12Format(
+                mGetAllBranchesListData.toTime ?? '0:0')
+                .contains('0:00')))){
+          AppAlertBase.showSnackBar(
+              Get.context!, 'For now this branch is close, You will try after some time');
+        }else if( timeCheck(
+            mGetAllBranchesListData.fromTime ??
+                '0:0',
+            mGetAllBranchesListData.toTime ?? '0:0')) {
+          if (Get.isRegistered<DashboardScreenController>()) {
+            DashboardScreenController mDashboardScreenController =
+            Get.find<DashboardScreenController>();
+            mDashboardScreenController.setLocation(mGetAllBranchesListData);
+          }
+        }else {
+          AppAlertBase.showSnackBar(
+              Get.context!, 'For now this branch is close, You will try after some time');
+        }
       },
       child: getCardView(
           paddingLeftRight: 0,
@@ -116,8 +138,8 @@ class BranchLocationListRow extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        makePhoneCall(
-                            mGetAllBranchesListData.mobileNumber ?? '');
+                        // makePhoneCall(
+                        //     mGetAllBranchesListData.mobileNumber ?? '');
                       },
                       child: Row(
                         children: [

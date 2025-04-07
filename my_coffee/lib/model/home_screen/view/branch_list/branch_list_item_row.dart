@@ -15,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../alert/app_alert.dart';
+import '../../../dashboard_screen/controller/dashboard_controller.dart';
 import '../../../location_list_screen/controller/location_list_controller.dart';
 import '../../controller/home_controller.dart';
 
@@ -31,7 +32,30 @@ class BranchListItemRow extends StatelessWidget {
     GetAllBranchesListData mGetAllBranchesListData =
         controller.mGetAllBranchesListData[index];
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        if( ((time24to12Format(
+            mGetAllBranchesListData.fromTime ?? '0:0')
+            .contains('0:00')) &&
+            (time24to12Format(
+                mGetAllBranchesListData.toTime ?? '0:0')
+                .contains('0:00')))){
+          AppAlertBase.showSnackBar(
+              Get.context!, 'For now this branch is close, You will try after some time');
+        }else if( timeCheck(
+            mGetAllBranchesListData.fromTime ??
+                '0:0',
+            mGetAllBranchesListData.toTime ?? '0:0')) {
+          if (Get.isRegistered<DashboardScreenController>()) {
+            DashboardScreenController mDashboardScreenController =
+            Get.find<DashboardScreenController>();
+            mDashboardScreenController.setLocation(mGetAllBranchesListData);
+            controller.scrollUp();
+          }
+        }else {
+          AppAlertBase.showSnackBar(
+              Get.context!, 'For now this branch is close, You will try after some time');
+        }
+      },
       child: SizedBox(
         width: 75.w,
         child: getCardView(
@@ -117,8 +141,8 @@ class BranchListItemRow extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          makePhoneCall(
-                              mGetAllBranchesListData.mobileNumber ?? '');
+                          // makePhoneCall(
+                          //     mGetAllBranchesListData.mobileNumber ?? '');
                         },
                         child: Row(
                           children: [

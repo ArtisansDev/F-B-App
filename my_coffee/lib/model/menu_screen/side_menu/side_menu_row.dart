@@ -56,11 +56,13 @@ class SideMenuRow extends StatelessWidget {
                     ),
                     Text(
                       mGetCategoryListData.categoryName ?? '',
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
                       style: getText600(
                           colors: index == controller.selectSideMenu.value
                               ? ColorConstants.cAppColorsBlue
                               : ColorConstants.cAppColors.shade50
-                                  .withOpacity(0.6),
+                                  .withOpacity(0.7),
                           size: 13.sp),
                     )
                   ],

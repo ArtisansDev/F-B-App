@@ -48,9 +48,8 @@ class BranchListScreen extends StatelessWidget {
                       )),
                       GestureDetector(
                         onTap: () async {
-                          await AppAlert.showCustomDialogBranchLocation(
-                              Get.context!);
-                          await Get.delete<BranchLocationListController>();
+                          controller.changeBranchLocation();
+
                         },
                         child: Text(
                           'View All',

@@ -16,7 +16,7 @@ logout() async {
   await clearToken();
   if (Get.isRegistered<DashboardScreenController>()) {
     DashboardScreenController mDashboardScreenController =
-        Get.find<DashboardScreenController>();
+      await Get.find<DashboardScreenController>();
     mDashboardScreenController.selectedIndex.value = 0;
     mDashboardScreenController.selectTitle(0);
   }

@@ -136,7 +136,13 @@ class GetGeneralSettingData {
 /// SandboxConfigurations : {"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}
 /// ProductionConfigurations : {"MerchantID":"761173165749545","SecretKey":"43106-268","mp_username":"RMSxdk_SB","mp_password":"RmS_Sb!p@s$wd","mp_merchant_ID":"SB_ttgreen","mp_app_name":"SB_ttgreen","mp_verification_key":"ff160fc47518b2a225551759a6b22379"}
 
+
+bool? appDineInEnable;
+bool? webDineInEnable;
+bool? appTakeAwayEnable;
+bool? webTakeAwayEnable;
 class PaymentTypeResponseData {
+
   PaymentTypeResponseData({
     this.restaurantIDF,
     this.paymentGatewayIDP,
@@ -150,6 +156,10 @@ class PaymentTypeResponseData {
     this.aPIKey,
     this.url,
     this.configurations,
+    this.appDineInEnable,
+    this.webDineInEnable,
+    this.appTakeAwayEnable,
+    this.webTakeAwayEnable,
     this.sandboxConfigurations,
     this.productionConfigurations,});
 
@@ -165,10 +175,15 @@ class PaymentTypeResponseData {
     secretKey = json['SecretKey'];
     aPIKey = json['APIKey'];
     url = json['URL'];
+    appDineInEnable = json['AppDineInEnable'];
+    webDineInEnable = json['WebDineInEnable'];
+    appTakeAwayEnable = json['AppTakeAwayEnable'];
+    webTakeAwayEnable = json['WebTakeAwayEnable'];
     configurations = json['Configurations'];
     sandboxConfigurations = json['SandboxConfigurations'] != null ? SandboxConfigurations.fromJson(json['SandboxConfigurations']) : null;
     productionConfigurations = json['ProductionConfigurations'] != null ? ProductionConfigurations.fromJson(json['ProductionConfigurations']) : null;
   }
+
   String? restaurantIDF;
   String? paymentGatewayIDP;
   String? paymentGatewaySettingIDP;
@@ -180,6 +195,10 @@ class PaymentTypeResponseData {
   String? secretKey;
   String? aPIKey;
   String? url;
+  bool? appDineInEnable;
+  bool? webDineInEnable;
+  bool? appTakeAwayEnable;
+  bool? webTakeAwayEnable;
   String? configurations;
   SandboxConfigurations? sandboxConfigurations;
   ProductionConfigurations? productionConfigurations;
@@ -197,6 +216,10 @@ class PaymentTypeResponseData {
     map['SecretKey'] = secretKey;
     map['APIKey'] = aPIKey;
     map['URL'] = url;
+    map['AppDineInEnable'] = appDineInEnable;
+    map['WebDineInEnable'] = webDineInEnable;
+    map['AppTakeAwayEnable'] = appTakeAwayEnable;
+    map['WebTakeAwayEnable'] = webTakeAwayEnable;
     map['Configurations'] = configurations;
     if (sandboxConfigurations != null) {
       map['SandboxConfigurations'] = sandboxConfigurations?.toJson();

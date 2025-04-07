@@ -106,12 +106,13 @@ class DashboardScreenController extends GetxController {
 
   openDialog(String title) async {
     String selectLocation = await showDialogPicDineLocation(title);
-    if (selectLocation.isEmpty) {
-      return;
-    } else {
-      selectedIndex.value = 1;
-      selectTitle(1);
-    }
+    // if (selectLocation.isEmpty) {
+    //   return;
+    // } else {
+    //   return;
+    //   selectedIndex.value = 1;
+    //   selectTitle(1);
+    // }
   }
 
   ///setLocation
@@ -134,8 +135,11 @@ class DashboardScreenController extends GetxController {
     selectedCurrency.value = (mGetAllBranchesListData.currency ?? []).isEmpty
         ? ''
         : (mGetAllBranchesListData.currency ?? []).first.currencySymbol ?? '';
+    selectGetAllBranchesListData.refresh();
+    selectedCurrency.refresh();
     await SharedPrefs().setBranchesData(jsonEncode(mGetAllBranchesListData));
     Get.back(result: 'selected');
+
   }
 
   Rxn<String> selectTableNo = Rxn<String>();
@@ -152,50 +156,53 @@ class DashboardScreenController extends GetxController {
       if (Get.isRegistered<HomeScreenController>()) {
         HomeScreenController mHomeScreenController =
             Get.find<HomeScreenController>();
-        mHomeScreenController.detDashboardDetailsApi();
+       await mHomeScreenController.detDashboardDetailsApi();
       }
-    } else if (await isCheckType(title)) {
-      sDialogPicDine.value = title;
-      AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-      if (sDialogPicDine.value == 'Dine') {
-        if ((mAddCartModel.sTableNo ?? '').isEmpty) {
-          var qrCodeScannerView = await Get.toNamed(
-            RouteConstants.rQrCodeScannerView,
-          );
-          await Get.delete<QrCodeScannerController>();
-          if (qrCodeScannerView != null) {
-            selectLocation = qrCodeScannerView.toString();
+    }
+    if ((selectGetAllBranchesListData.value.branchName ?? '').isNotEmpty) {
+      if (await isCheckType(title)) {
+        sDialogPicDine.value = title;
+        AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+        if (sDialogPicDine.value == 'Dine') {
+          if ((mAddCartModel.sTableNo ?? '').isEmpty) {
+            var qrCodeScannerView = await Get.toNamed(
+              RouteConstants.rQrCodeScannerView,
+            );
+            await Get.delete<QrCodeScannerController>();
+            if (qrCodeScannerView != null) {
+              selectLocation = qrCodeScannerView.toString();
+              selectedIndex.value = 1;
+            }
+          } else {
             selectedIndex.value = 1;
           }
-        } else {
-          selectedIndex.value = 1;
-        }
-      } else if (sDialogPicDine.value == 'Take') {
-        mAddCartModel.sTableNo = '';
-        await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
-        if ((selectGetAllBranchesListData.value.branchName ?? '').isEmpty) {
-          AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
-          if ((mAddCartModel.mItems ?? []).isNotEmpty) {
-            AppAlertBase.showCustomDialogYesNoLogout(
-                Get.context!,
-                'Proceed to Change?',
-                'This action will clear the items in your current basket. Do you want to proceed?',
-                () async {
-              await SharedPrefs().setAddCartData('');
+        } else if (sDialogPicDine.value == 'Take') {
+          mAddCartModel.sTableNo = '';
+          await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+          if ((selectGetAllBranchesListData.value.branchName ?? '').isEmpty) {
+            AddCartModel mAddCartModel = await SharedPrefs().getAddCartData();
+            if ((mAddCartModel.mItems ?? []).isNotEmpty) {
+              AppAlertBase.showCustomDialogYesNoLogout(
+                  Get.context!,
+                  'Proceed to Change?',
+                  'This action will clear the items in your current basket. Do you want to proceed?',
+                      () async {
+                    await SharedPrefs().setAddCartData('');
+                    selectLocation =
+                    await AppAlert.showCustomDialogLocationPicker(Get.context!);
+                    Get.delete<LocationListScreenController>();
+                    if (selectLocation.isNotEmpty) {
+                      await SharedPrefs().setAddCartData('');
+                    }
+                  }, rightText: 'Ok');
+            } else {
               selectLocation =
-                  await AppAlert.showCustomDialogLocationPicker(Get.context!);
+              await AppAlert.showCustomDialogLocationPicker(Get.context!);
               Get.delete<LocationListScreenController>();
-              if (selectLocation.isNotEmpty) {
-                await SharedPrefs().setAddCartData('');
-              }
-            }, rightText: 'Ok');
+            }
           } else {
-            selectLocation =
-                await AppAlert.showCustomDialogLocationPicker(Get.context!);
-            Get.delete<LocationListScreenController>();
+            selectedIndex.value = 1;
           }
-        } else {
-          selectedIndex.value = 1;
         }
       }
     }

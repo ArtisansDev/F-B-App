@@ -49,13 +49,14 @@ class OrderConfirmationScreenController extends GetxController {
   OrderConfirmationScreenController() {
     selectedDateTime.value = DateTime.now();
     getOrderPrefixCode();
-
   }
 
-  Rxn<GetGeneralSettingData> mGetGeneralSettingData= Rxn<GetGeneralSettingData>();
-  void getOrderPrefixCode() async{
+  Rxn<GetGeneralSettingData> mGetGeneralSettingData =
+      Rxn<GetGeneralSettingData>();
+
+  void getOrderPrefixCode() async {
     mGetGeneralSettingData.value =
-    await SharedPrefs().getGetGeneralSettingData();
+        await SharedPrefs().getGetGeneralSettingData();
     await getOrderDetails();
     await getPaymentTypeApi();
   }
@@ -91,8 +92,10 @@ class OrderConfirmationScreenController extends GetxController {
   }
 
   ///getPaymentTypeApi
-   getPaymentTypeApi() async{
-   await NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+  getPaymentTypeApi() async {
+    await NetworkUtils()
+        .checkInternetConnection()
+        .then((isInternetAvailable) async {
       if (isInternetAvailable) {
         PaymentTypeRequest mPaymentTypeRequest = PaymentTypeRequest(
             restaurantIDF:
@@ -107,7 +110,15 @@ class OrderConfirmationScreenController extends GetxController {
           if (kIsWeb) {
             paymentTypeList.removeWhere(
               (element) {
-                return element.paymentGatewayNo.toString() == '0';
+                return !((element.webDineInEnable ?? true));
+              },
+            );
+          } else {
+            paymentTypeList.removeWhere(
+              (element) {
+                return mAddCartModel.value.sType == 'Dine'
+                    ? !((element.appDineInEnable ?? true))
+                    : !((element.appTakeAwayEnable ?? true));
               },
             );
           }
@@ -264,14 +275,22 @@ class OrderConfirmationScreenController extends GetxController {
         }
 
         if (mOrderPlaceRequest.orderType == '1' &&
-            paymentTypeList[paymentType.value ?? 0].paymentGatewayNo.toString() == "0".toString()) {
-          value = await getSetTableStatusApi(mOrderPlaceRequest);
+            paymentTypeList[paymentType.value ?? 0]
+                    .paymentGatewayNo
+                    .toString() ==
+                "0".toString()) {
+          var returnValue = await getSetTableStatusApi(mOrderPlaceRequest);
+          if (returnValue == null) {
+            return;
+          } else {
+            value = returnValue;
+          }
         }
 
         if (kIsWeb) {
-          if(value){
+          if (value) {
             OrderHistoryIdModel mOrderHistoryIdModel =
-            await SharedPrefs().getOrderHistoryId();
+                await SharedPrefs().getOrderHistoryId();
             if (await SharedPrefs().getGuestUser()) {
               if ((mOrderHistoryIdModel.orderHistoryId ?? []).isEmpty) {
                 mOrderHistoryIdModel = OrderHistoryIdModel(
@@ -334,6 +353,12 @@ class OrderConfirmationScreenController extends GetxController {
 
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           return true;
+        } else if (mWebResponseSuccess.statusCode ==
+            WebConstants.statusCode401) {
+          AppAlertBase.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+          logout();
+          return null;
         } else {
           // AppAlertBase.showSnackBar(
           //     Get.context!, mWebResponseSuccess.statusMessage ?? '');
@@ -397,6 +422,4 @@ class OrderConfirmationScreenController extends GetxController {
       }
     });
   }
-
-
 }

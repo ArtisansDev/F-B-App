@@ -1,0 +1,262 @@
+import 'dart:convert';
+
+import 'package:f_b_base/alert/app_alert_base.dart';
+import 'package:f_b_base/constants/message_constants.dart';
+import 'package:f_b_base/constants/web_constants.dart';
+import 'package:f_b_base/data/local/shared_prefs/shared_prefs.dart';
+import 'package:f_b_base/data/mode/add_cart/add_cart.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_request.dart';
+import 'package:f_b_base/data/mode/get_all_branches_by_restaurant_id/get_all_branches_by_restaurant_id_response.dart';
+import 'package:f_b_base/data/mode/get_general_setting/get_general_setting_response.dart';
+import 'package:f_b_base/data/mode/get_item_details/get_item_details_response.dart';
+import 'package:f_b_base/data/mode/order_place/order_place_request.dart';
+import 'package:f_b_base/data/mode/order_place/process_order_response.dart';
+import 'package:f_b_base/data/remote/api_call/order/order_api.dart';
+import 'package:f_b_base/data/remote/api_call/product_api/product_api.dart';
+import 'package:f_b_base/data/remote/web_response.dart';
+import 'package:f_b_base/locator.dart';
+import 'package:f_b_base/utils/date_format.dart';
+import 'package:f_b_base/utils/network_utils.dart';
+import 'package:f_b_base/utils/tracking_order_id.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../../../routes/route_constants.dart';
+import '../../dashboard_screen/controller/dashboard_controller.dart';
+
+class ViewOrderHistoryController extends GetxController {
+  RxDouble totalAmount = 0.00.obs;
+  RxDouble subTotalAmount = 0.00.obs;
+  RxDouble totalTaxAmount = 0.00.obs;
+  RxInt totalCountItem = 0.obs;
+  DashboardScreenController mDashboardScreenController =
+      Get.find<DashboardScreenController>();
+  Rx<AddCartModel> mAddCartModel = AddCartModel().obs;
+  RxList<GetItemDetailsData> mItems = <GetItemDetailsData>[].obs;
+  Rx<TextEditingController> remarksController = TextEditingController().obs;
+  final localApi = locator.get<OrderHistoryApi>();
+
+  ///setLocation
+  Rx<GetAllBranchesListData> selectGetAllBranchesListData =
+      GetAllBranchesListData().obs;
+
+  ViewOrderHistoryController(AddCartModel mAddCartModel) {
+    // selectedDateTime.value = DateTime.now().toUtc();
+    getOrderDetails(mAddCartModel);
+  }
+
+  RxInt paymentType = 0.obs;
+  RxList<String> paymentTypeList = ['PayPal', 'Net Banking'].obs;
+
+  paymentTypeSelect(int index) {
+    paymentType.value = index;
+    paymentType.refresh();
+    paymentTypeList.refresh();
+  }
+
+  Rxn<DateTime> selectedDateTime = Rxn<DateTime>();
+
+  ///select Date Time
+  Future<void> selectDateAndTime() async {
+    // Step 1: Select Date
+    final DateTime? selectedDate = await showDatePicker(
+      context: Get.context!,
+      initialEntryMode: DatePickerEntryMode.calendarOnly,
+      initialDate: DateTime.now().toUtc(),
+      firstDate: DateTime.now().toUtc(),
+      lastDate: DateTime.now().toUtc().add(
+            const Duration(days: 2),
+          ),
+    );
+
+    if (selectedDate != null) {
+      // Step 2: Select Time
+      final TimeOfDay? selectedTime = await showTimePicker(
+        context: Get.context!,
+        initialEntryMode: TimePickerEntryMode.dialOnly,
+        initialTime: TimeOfDay.now(),
+      );
+
+      if (selectedTime != null) {
+        // Combine Date and Time into a single DateTime object
+        final DateTime combinedDateTime = DateTime(
+          selectedDate.year,
+          selectedDate.month,
+          selectedDate.day,
+          selectedTime.hour,
+          selectedTime.minute,
+        );
+
+        // Set the selectedDateTime
+        selectedDateTime.value = combinedDateTime;
+      }
+    }
+  }
+
+  Rxn<GetGeneralSettingData> mGetGeneralSettingData =
+      Rxn<GetGeneralSettingData>();
+
+  ///OrderDetails
+  void getOrderDetails(AddCartModel mAddCartModelValue) async {
+    mGetGeneralSettingData.value =
+        await SharedPrefs().getGetGeneralSettingData();
+    mAddCartModel.value = mAddCartModelValue;
+    selectGetAllBranchesListData.value =
+        mAddCartModel.value.mGetAllBranchesListData ?? GetAllBranchesListData();
+    totalAmount.value = mAddCartModel.value.totalAmount ?? 0.0;
+    mItems.clear();
+    mItems.addAll((mAddCartModel.value.mItems ?? []).toList());
+    itemModify();
+    taxCalculation();
+    selectedDateTime.value =
+        getUTCToLocalValue(mAddCartModelValue.sOrderDateTime ?? '');
+    mAddCartModel.refresh();
+  }
+
+  ///IncDec
+  void priceIncDec(
+      GetItemDetailsData mGetItemDetailsData, int index, int count) async {
+    mGetItemDetailsData.count = count;
+    mGetItemDetailsData.total = ((mGetItemDetailsData.perItemTotal ?? 0) +
+            (mGetItemDetailsData.perItemTax ?? 0)) *
+        (mGetItemDetailsData.count ?? 0);
+    mItems.value[index] = mGetItemDetailsData;
+    totalAmount.value = 0.0;
+    for (GetItemDetailsData mGetItemDetailsData in mItems) {
+      totalAmount.value = totalAmount.value + (mGetItemDetailsData.total ?? 0);
+    }
+
+    mAddCartModel.value.mItems?.clear();
+    mAddCartModel.value.mItems?.addAll(mItems);
+    mAddCartModel.value.totalAmount = totalAmount.value;
+    taxCalculation();
+    await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+    itemModify();
+  }
+
+  ///deleteOrder
+  void deleteOrder(int index) async {
+    mItems.value.removeAt(index);
+    totalAmount.value = 0.0;
+    for (GetItemDetailsData mGetItemDetailsData in mItems) {
+      totalAmount.value = totalAmount.value + (mGetItemDetailsData.total ?? 0);
+    }
+    mAddCartModel.value.mItems?.clear();
+    mAddCartModel.value.mItems?.addAll(mItems);
+    mAddCartModel.value.totalAmount = totalAmount.value;
+    taxCalculation();
+    await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel));
+    if (totalAmount.value == 0.0) {
+      Get.back();
+    }
+    itemModify();
+  }
+
+  itemModify() {
+    totalCountItem.value = 0;
+    for (GetItemDetailsData mGetItemDetailsData in mItems) {
+      totalCountItem.value =
+          totalCountItem.value + (mGetItemDetailsData.count ?? 0);
+    }
+    mItems.refresh();
+  }
+
+  ///taxCalculation
+  void taxCalculation() {
+    subTotalAmount.value = totalAmount.value;
+    totalTaxAmount.value =
+        mAddCartModel.value.mOrderHistoryResponseItemData?.taxAmountTotal ??
+            0.0;
+    // for (TaxData mTaxData in selectGetAllBranchesListData.value.taxData ?? []) {
+    //   if ((mTaxData.taxPercentage ?? 0) > 0) {
+    //     totalTaxAmount.value = totalTaxAmount.value +
+    //         calculatePercentageOf(
+    //             totalAmount.value, mTaxData.taxPercentage ?? 0);
+    //   }
+    // }
+    totalAmount.value =
+        mAddCartModel.value.mOrderHistoryResponseItemData?.totalAmount ?? 0.0;
+  }
+
+  ///getGetAllBranchesApi
+  void getGetAllBranchesApi() {
+    NetworkUtils().checkInternetConnection().then((isInternetAvailable) async {
+      GetAllBranchesListData mGetAllBranchesListData =
+          mAddCartModel.value.mGetAllBranchesListData ??
+              GetAllBranchesListData();
+      if ((mGetAllBranchesListData.branchIDP ?? '').isEmpty) {
+        AppAlertBase.showSnackBar(Get.context!, 'Branch not found');
+        return;
+      }
+      if (isInternetAvailable) {
+        GetAllBranchesByRestaurantIdRequest
+            mGetAllBranchesByRestaurantIdRequest =
+            GetAllBranchesByRestaurantIdRequest(
+                rowsPerPage: 1,
+                pageNumber: 1,
+                searchValue: '',
+                branchIDP: mGetAllBranchesListData.branchIDP,
+                todayDate: toDayDate(),
+                restaurantIDF:
+                    (await SharedPrefs().getGeneralSetting()).restaurantIDF ??
+                        '');
+        final localApi = locator.get<ProductApi>();
+        WebResponseSuccess mWebResponseSuccess =
+            await localApi.postGetAllBranchesByRestaurantID(
+                mGetAllBranchesByRestaurantIdRequest);
+        if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
+          GetAllBranchesByRestaurantIdResponse
+              mGetAllBranchesByRestaurantIdResponse = mWebResponseSuccess.data;
+          if ((mGetAllBranchesByRestaurantIdResponse.data?.data ?? [])
+              .isEmpty) {
+            AppAlertBase.showSnackBar(Get.context!, 'Branch not found');
+            return;
+          } else {
+            GetAllBranchesListData mGetAllBranchesListData =
+                (mGetAllBranchesByRestaurantIdResponse.data?.data ?? []).first;
+            if (((time24to12Format(mGetAllBranchesListData.fromTime ?? '0:0')
+                    .contains('0:00')) &&
+                (time24to12Format(mGetAllBranchesListData.toTime ?? '0:0')
+                    .contains('0:00')))) {
+              AppAlertBase.showSnackBar(Get.context!,
+                  'For now this branch is close, You will try after some time');
+            } else if (timeCheck(mGetAllBranchesListData.fromTime ?? '0:0',
+                mGetAllBranchesListData.toTime ?? '0:0')) {
+              reorder();
+            } else {
+              AppAlertBase.showSnackBar(Get.context!,
+                  'For now this branch is close, You will try after some time');
+            }
+          }
+        } else {
+          AppAlertBase.showSnackBar(
+              Get.context!, mWebResponseSuccess.statusMessage ?? '');
+        }
+      } else {
+        AppAlertBase.showSnackBar(
+            Get.context!, MessageConstants.noInternetConnection);
+      }
+    });
+  }
+
+  ///sReorder
+  reorder() async {
+    AddCartModel mSharedPrefsAddCartModel =
+        await SharedPrefs().getAddCartData();
+    if ((mSharedPrefsAddCartModel.mItems ?? []).isNotEmpty) {
+      AppAlertBase.showCustomDialogYesNoLogout(
+          Get.context!,
+          'Proceed to Change?',
+          'This action will clear the items in your current basket. Do you want to proceed?',
+          () async {
+        mDashboardScreenController.selectGetAllBranchesListData.value =
+            mAddCartModel.value.mGetAllBranchesListData ??
+                GetAllBranchesListData();
+        await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel.value));
+        Get.offAndToNamed(RouteConstants.rOrderConfirmationScreen);
+      }, rightText: 'Ok');
+    } else {
+      await SharedPrefs().setAddCartData(jsonEncode(mAddCartModel.value));
+      Get.offAndToNamed(RouteConstants.rOrderConfirmationScreen);
+    }
+  }
+}

@@ -69,6 +69,7 @@ class ProfileScreenController extends GetxController {
         Get.toNamed(
           RouteConstants.rAboutUsScreen,
         );
+
         break;
       case 'Logout':
         AppAlertBase.showCustomDialogYesNoLogout(

@@ -22,6 +22,7 @@ import '../../../routes/route_constants.dart';
 import '../../dashboard_screen/controller/dashboard_controller.dart';
 import '../../details_page/controller/details_page_controller.dart';
 import '../../location_list_screen/controller/location_list_controller.dart';
+import '../../search_menu_screen/controller/search_menu_screen_controller.dart';
 
 class MenuScreenController extends GetxController {
   RxInt selectSideMenu = 0.obs;
@@ -57,9 +58,13 @@ class MenuScreenController extends GetxController {
 
   // RxInt itemCount = 20.obs;
   RxBool val = false.obs;
+  Rx<GetCategoryListData> mSelectGetCategoryListData =
+      GetCategoryListData().obs;
 
   void selectMenu(int index) {
     if (selectSideMenu.value != index) {
+      mSelectGetCategoryListData.value = mGetCategoryListData[index];
+      mSelectGetCategoryListData.refresh();
       mGetCategoryItemMessage.value = 'Loading...';
       mGetCategoryItemListData.value.clear();
       mGetCategoryItemListData.refresh();
@@ -88,6 +93,13 @@ class MenuScreenController extends GetxController {
     //       curve: Curves.easeInOutCubic);
     // }
     String sItemId = mGetCategoryItemListData[index].menuItemIDP ?? '';
+    await Get.toNamed(RouteConstants.rDetailsPageScreen, arguments: sItemId);
+    if (Get.isRegistered<DetailsPageScreenController>()) {
+      Get.delete<DetailsPageScreenController>();
+    }
+  }
+
+  void selectItemId(String sItemId) async {
     await Get.toNamed(RouteConstants.rDetailsPageScreen, arguments: sItemId);
     if (Get.isRegistered<DetailsPageScreenController>()) {
       Get.delete<DetailsPageScreenController>();
@@ -151,11 +163,10 @@ class MenuScreenController extends GetxController {
 
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetCategoryResponse mGetCategoryResponse = mWebResponseSuccess.data;
-          mGetCategoryListData.value.clear();
-          mGetCategoryListData.value
-              .addAll(mGetCategoryResponse.data?.data ?? []);
+          mGetCategoryListData.clear();
+          mGetCategoryListData.addAll(mGetCategoryResponse.data?.data ?? []);
           mGetCategoryListData.refresh();
-          if (mGetCategoryItemListData.value.isEmpty) {
+          if (mGetCategoryItemListData.isEmpty) {
             getCategoryItemApi();
           }
         } else {
@@ -194,14 +205,20 @@ class MenuScreenController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetCategoryItemResponse mGetCategoryItemResponse =
               mWebResponseSuccess.data;
-          mGetCategoryItemListData.value
+          mGetCategoryItemListData
               .addAll(mGetCategoryItemResponse.data?.data ?? []);
-          enablePullUp.value = mGetCategoryItemListData.value.length <
+          enablePullUp.value = mGetCategoryItemListData.length <
               (mGetCategoryItemResponse.data?.totalRecords ?? 0);
-          mGetCategoryItemMessage.value = mGetCategoryListData.value.isEmpty
+          mGetCategoryItemMessage.value = mGetCategoryListData.isEmpty
               ? 'No Item found for this category'
               : "";
           mGetCategoryListData.refresh();
+        } else if (mWebResponseSuccess.statusCode ==
+            WebConstants.statusCode404) {
+          mGetCategoryItemMessage.value = 'No Item found for this category';
+        } else if (mWebResponseSuccess.statusCode ==
+            WebConstants.statusCode500) {
+          mGetCategoryItemMessage.value = 'No Item found for this category';
         } else {
           AppAlertBase.showSnackBar(
               Get.context!, mWebResponseSuccess.statusMessage ?? '');
@@ -235,5 +252,19 @@ class MenuScreenController extends GetxController {
   void getOrderDetails() async {
     mAddCartModel.value = await SharedPrefs().getAddCartData();
     mAddCartModel.refresh();
+  }
+
+  void searchItem() async {
+    var sItemId = await Get.toNamed(
+      RouteConstants.rSearchMenuScreen,
+    );
+
+    if (Get.isRegistered<SearchMenuScreenController>()) {
+      Get.delete<SearchMenuScreenController>();
+    }
+
+    if (sItemId != null && sItemId.toString().trim().isNotEmpty) {
+      selectItemId(sItemId);
+    }
   }
 }

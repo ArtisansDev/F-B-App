@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:f_b_base/common/create_card_view.dart';
 import 'package:f_b_base/common/custom_image.dart';
 import 'package:f_b_base/common/smart_footer.dart';
@@ -22,8 +24,9 @@ class ItemMenuListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    GetCategoryListData mGetCategoryListData =
-        controller.mGetCategoryListData.value[controller.selectSideMenu.value];
+    controller.mSelectGetCategoryListData.value =
+        controller.mGetCategoryListData[controller.selectSideMenu.value];
+    controller.mSelectGetCategoryListData.refresh();
     return Obx(
       () {
         return Column(
@@ -42,7 +45,7 @@ class ItemMenuListScreen extends StatelessWidget {
                 ),
                 SizedBox(width: 11.sp),
                 Text(
-                  mGetCategoryListData.categoryName ?? '',
+                  controller.mSelectGetCategoryListData.value.categoryName ?? '',
                   style: getTextBold(
                       size: 16.5.sp, colors: ColorConstants.cAppColorsBlue),
                 )
@@ -75,9 +78,13 @@ class ItemMenuListScreen extends StatelessWidget {
                             controller.mGetCategoryItemListData[index];
                         return GestureDetector(
                             onTap: () {
-                              controller.selectItem(index);
+                              if (!(mGetCategoryItemListData.isStockOut ??
+                                  false)) {
+                                controller.selectItem(index);
+                              }
                             },
-                            child: getCardView(
+                            child: Stack(children: [
+                              getCardView(
                                 margin: 10.sp,
                                 paddingTopBottom: 0.sp,
                                 Container(
@@ -103,7 +110,6 @@ class ItemMenuListScreen extends StatelessWidget {
                                                       '',
                                                   ImageAssetsConstants.backLogo,
                                                   15.8.h))
-
                                         ],
                                       ),
                                       Container(
@@ -132,8 +138,7 @@ class ItemMenuListScreen extends StatelessWidget {
                                             left: 8.sp, right: 8.sp),
                                         alignment: Alignment.center,
                                         child: Text(
-                                          '${controller.mDashboardScreenController
-                                              .selectedCurrency.value} ${mGetCategoryItemListData.price ?? ''}',
+                                          '${controller.mDashboardScreenController.selectedCurrency.value} ${mGetCategoryItemListData.price ?? ''}',
                                           textAlign: TextAlign.center,
                                           maxLines: 2,
                                           style: getText500(
@@ -143,7 +148,30 @@ class ItemMenuListScreen extends StatelessWidget {
                                       ),
                                     ],
                                   )),
-                                )));
+                                ),
+                              ),
+                              Visibility(
+                                  visible:
+                                      ((mGetCategoryItemListData.isStockOut ??
+                                          false)),
+                                  child: Container(
+                                      margin: EdgeInsets.all(10.sp),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white.withOpacity(0.65),
+                                        borderRadius:
+                                            BorderRadius.circular(14.sp),
+                                      ),
+                                      height: 32.5.h,
+                                      child: Center(
+                                          child: Text(
+                                              "Stock Out",
+                                              textAlign: TextAlign.center,
+                                              style: getText500(
+                                                  colors: Colors.red,
+                                                  size: 22.sp
+                                              )
+                                          ),)))
+                            ]));
                       },
                     ),
             ))
@@ -151,17 +179,5 @@ class ItemMenuListScreen extends StatelessWidget {
         );
       },
     );
-
-    // return ScrollablePositionedList.builder(
-    //       itemScrollController: controller.itemScrollController.value,
-    //       scrollOffsetController: controller.scrollOffsetController.value,
-    //       itemPositionsListener: controller.itemPositionsListener.value,
-    //       scrollOffsetListener: controller.scrollOffsetListener.value,
-    //       itemCount: 1,
-    //       //controller.itemCount.value,
-    //       itemBuilder: (BuildContext context, int index) {
-    //         return ItemMenuRow(index: index);
-    //       },
-    //     );
   }
 }

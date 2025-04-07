@@ -34,7 +34,7 @@ class HomeScreen extends GetView<HomeScreenController> {
           controller.bFocusGained.value = true;
           controller.detDashboardDetailsApi();
           controller.getOrderDetails();
-          if(!kIsWeb){
+          if (!kIsWeb) {
             controller.getGetAllBranchesApi();
           }
         },
@@ -69,152 +69,156 @@ class HomeScreen extends GetView<HomeScreenController> {
       return Stack(
         children: [
           SingleChildScrollView(
+              controller: controller.scrollController.value,
               child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              /// TopAddressBar
-              TopHomeAddressBar(),
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  /// TopAddressBar
+                  TopHomeAddressBar(),
 
-              ///Banner list
-              Visibility(
-                  visible: controller.mBannerMaster.value.isNotEmpty,
-                  child: Stack(
-                    children: [
-                      SizedBox(
-                          height: 100.w * 0.5,
-                          child: PageView.builder(
-                            controller:
-                                controller.introductionPageController.value,
-                            itemCount: controller.mBannerMaster.value.length,
-                            itemBuilder: (context, index) {
-                              return cacheImageHomeBanner(
-                                controller.mBannerMaster.value[index]
-                                        .bannerImagePath ??
-                                    '',
-                                ImageAssetsConstants.backLogo,
-                                100.w * 0.5,
-                              );
-                            },
-                            onPageChanged: (value) {
-                              controller.onChangePage(value);
-                            },
-                          )),
-                      Visibility(
-                          visible: controller.mBannerMaster.value.isNotEmpty,
-                          child: Container(
-                            height: 100.w * 0.5,
-                            padding: EdgeInsets.only(bottom: 15.sp),
-                            alignment: Alignment.bottomCenter,
-                            child: SmoothPageIndicator(
-                              controller:
-                                  controller.introductionPageController.value,
-                              count: controller.mBannerMaster.value.length,
-                              effect: WormEffect(
-                                dotHeight: 13.sp,
-                                dotWidth: 13.sp,
-                                activeDotColor: ColorConstants.cAppColorsBlue,
-                                dotColor: ColorConstants.appProgress,
-                              ),
-                            ),
-                          )),
-                    ],
-                  )),
+                  ///Banner list
+                  Visibility(
+                      visible: controller.mBannerMaster.value.isNotEmpty,
+                      child: Stack(
+                        children: [
+                          SizedBox(
+                              height: 100.w * 0.5,
+                              child: PageView.builder(
+                                controller:
+                                    controller.introductionPageController.value,
+                                itemCount:
+                                    controller.mBannerMaster.value.length,
+                                itemBuilder: (context, index) {
+                                  return cacheImageHomeBanner(
+                                    controller.mBannerMaster.value[index]
+                                            .bannerImagePath ??
+                                        '',
+                                    ImageAssetsConstants.backLogo,
+                                    100.w * 0.5,
+                                  );
+                                },
+                                onPageChanged: (value) {
+                                  controller.onChangePage(value);
+                                },
+                              )),
+                          Visibility(
+                              visible:
+                                  controller.mBannerMaster.value.isNotEmpty,
+                              child: Container(
+                                height: 100.w * 0.5,
+                                padding: EdgeInsets.only(bottom: 15.sp),
+                                alignment: Alignment.bottomCenter,
+                                child: SmoothPageIndicator(
+                                  controller: controller
+                                      .introductionPageController.value,
+                                  count: controller.mBannerMaster.value.length,
+                                  effect: WormEffect(
+                                    dotHeight: 13.sp,
+                                    dotWidth: 13.sp,
+                                    activeDotColor:
+                                        ColorConstants.cAppColorsBlue,
+                                    dotColor: ColorConstants.appProgress,
+                                  ),
+                                ),
+                              )),
+                        ],
+                      )),
 
-              ///DinePickup
-              Visibility(visible: !kIsWeb, child: DinePickupScreen()),
+                  ///DinePickup
+                  Visibility(visible: !kIsWeb, child: DinePickupScreen()),
 
-              // ///Advertisement coffee
-              // Container(
-              //   margin: EdgeInsets.only(left: 18.sp, right: 18.sp, top: 17.sp),
-              //   decoration: BoxDecoration(
-              //       color: ColorConstants.primaryBackgroundColor,
-              //       borderRadius: BorderRadius.circular(11.sp),
-              //       boxShadow: const [
-              //         BoxShadow(
-              //             color: Color(0x33000000),
-              //             offset: Offset(0, 2),
-              //             blurRadius: 4),
-              //       ]),
-              //   child: ClipRRect(
-              //       borderRadius: BorderRadius.circular(11.sp),
-              //       child: setImageBanner(ImageAssetsConstants.bannerImage1)),
-              // ),
+                  // ///Advertisement coffee
+                  // Container(
+                  //   margin: EdgeInsets.only(left: 18.sp, right: 18.sp, top: 17.sp),
+                  //   decoration: BoxDecoration(
+                  //       color: ColorConstants.primaryBackgroundColor,
+                  //       borderRadius: BorderRadius.circular(11.sp),
+                  //       boxShadow: const [
+                  //         BoxShadow(
+                  //             color: Color(0x33000000),
+                  //             offset: Offset(0, 2),
+                  //             blurRadius: 4),
+                  //       ]),
+                  //   child: ClipRRect(
+                  //       borderRadius: BorderRadius.circular(11.sp),
+                  //       child: setImageBanner(ImageAssetsConstants.bannerImage1)),
+                  // ),
 
-              ///hot sale
-              BestSellersScreen(),
+                  ///hot sale
+                  BestSellersScreen(),
 
-              ///branch
-              kIsWeb?SizedBox():
-              BranchListScreen(),
+                  ///branch
+                  kIsWeb ? SizedBox() : BranchListScreen(),
 
-              // ///ButtonAdvertisement
-              // ButtonAdvertisementScreen(),
+                  // ///ButtonAdvertisement
+                  // ButtonAdvertisementScreen(),
 
-              // show view
-              // Container(
-              //   margin: EdgeInsets.only(
-              //       right: 28.sp, left: 28.sp, top: 20.sp, bottom: 18.sp),
-              //   child: Column(
-              //     children: [
-              //       Row(
-              //         children: [
-              //           Text(
-              //             'TWT ',
-              //             style: getText600(
-              //                 colors: ColorConstants.buttonBar, size: 20.sp),
-              //           ),
-              //           Text('Balance',
-              //               style: getTextPraise500(
-              //                   colors: ColorConstants.cAppColorsBlue,
-              //                   size: 20.sp)),
-              //           Expanded(child: Container()),
-              //           SizedBox(
-              //             width: 20.w,
-              //             child: rectangleCornerButton('50 RM', () {},
-              //                 bgColor: ColorConstants.cAppColorsBlue,
-              //                 textColor: Colors.white,
-              //                 height: 25.sp,
-              //                 size: 16.5.sp),
-              //           ),
-              //         ],
-              //       ),
-              //       SizedBox(
-              //         height: 18.sp,
-              //       ),
-              //       Row(
-              //         children: [
-              //           Text(
-              //             'TWT ',
-              //             style: getText600(
-              //                 colors: ColorConstants.buttonBar, size: 20.sp),
-              //           ),
-              //           Text('Rewards',
-              //               style: getTextPraise500(
-              //                   colors: ColorConstants.cAppColorsBlue,
-              //                   size: 20.sp)),
-              //           Expanded(child: Container()),
-              //           SizedBox(
-              //             width: 25.w,
-              //             child: rectangleCornerButton('500 Pts', () {},
-              //                 bgColor: ColorConstants.cAppColorsBlue,
-              //                 textColor: Colors.white,
-              //                 height: 25.sp,
-              //                 size: 16.5.sp),
-              //           ),
-              //         ],
-              //       )
-              //     ],
-              //   ),
-              // ),
-              // const ShoppingScreen(),
+                  // show view
+                  // Container(
+                  //   margin: EdgeInsets.only(
+                  //       right: 28.sp, left: 28.sp, top: 20.sp, bottom: 18.sp),
+                  //   child: Column(
+                  //     children: [
+                  //       Row(
+                  //         children: [
+                  //           Text(
+                  //             'TWT ',
+                  //             style: getText600(
+                  //                 colors: ColorConstants.buttonBar, size: 20.sp),
+                  //           ),
+                  //           Text('Balance',
+                  //               style: getTextPraise500(
+                  //                   colors: ColorConstants.cAppColorsBlue,
+                  //                   size: 20.sp)),
+                  //           Expanded(child: Container()),
+                  //           SizedBox(
+                  //             width: 20.w,
+                  //             child: rectangleCornerButton('50 RM', () {},
+                  //                 bgColor: ColorConstants.cAppColorsBlue,
+                  //                 textColor: Colors.white,
+                  //                 height: 25.sp,
+                  //                 size: 16.5.sp),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //       SizedBox(
+                  //         height: 18.sp,
+                  //       ),
+                  //       Row(
+                  //         children: [
+                  //           Text(
+                  //             'TWT ',
+                  //             style: getText600(
+                  //                 colors: ColorConstants.buttonBar, size: 20.sp),
+                  //           ),
+                  //           Text('Rewards',
+                  //               style: getTextPraise500(
+                  //                   colors: ColorConstants.cAppColorsBlue,
+                  //                   size: 20.sp)),
+                  //           Expanded(child: Container()),
+                  //           SizedBox(
+                  //             width: 25.w,
+                  //             child: rectangleCornerButton('500 Pts', () {},
+                  //                 bgColor: ColorConstants.cAppColorsBlue,
+                  //                 textColor: Colors.white,
+                  //                 height: 25.sp,
+                  //                 size: 16.5.sp),
+                  //           ),
+                  //         ],
+                  //       )
+                  //     ],
+                  //   ),
+                  // ),
+                  // const ShoppingScreen(),
 
-              SizedBox(
-                height: (controller.mAddCartModel.value.mItems ?? []).isNotEmpty
-                    ? 18.h
-                    : 9.h,
-              )
-            ],
-          )),
+                  SizedBox(
+                    height:
+                        (controller.mAddCartModel.value.mItems ?? []).isNotEmpty
+                            ? 18.h
+                            : 9.h,
+                  )
+                ],
+              )),
           Container(
               height: double.infinity,
               alignment: Alignment.bottomCenter,

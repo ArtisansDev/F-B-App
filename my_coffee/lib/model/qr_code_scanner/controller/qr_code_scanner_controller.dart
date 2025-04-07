@@ -151,20 +151,27 @@ class QrCodeScannerController extends GetxController {
         if (mWebResponseSuccess.statusCode == WebConstants.statusCode200) {
           GetSeatDetailResponse mGetSeatDetailResponse =
               mWebResponseSuccess.data;
-
-          if ((mGetSeatDetailResponse.data?.branchIDF ?? '').toString() !=
-              mDashboardScreenController
-                  .selectGetAllBranchesListData.value.branchIDP
-                  .toString()) {
-
+          if ((mGetSeatDetailResponse.data?.tableStatus ?? 'A')
+                  .toString()
+                  .toUpperCase() ==
+              'A') {
+            if ((mGetSeatDetailResponse.data?.branchIDF ?? '').toString() !=
+                mDashboardScreenController
+                    .selectGetAllBranchesListData.value.branchIDP
+                    .toString()) {
+              await AppAlertBase.showCustomDialogOk(
+                  Get.context!, sAlert.tr, sAlertMessageQr.tr, () {
+                Get.back();
+              }, rightText: 'Ok');
+              return;
+            }
+          } else {
             await AppAlertBase.showCustomDialogOk(
-                Get.context!, sAlert.tr, sAlertMessageQr.tr, () {
-                  Get.back();
-            },
-                rightText: 'Ok');
+                Get.context!, sAlert.tr, 'This table already book', () {
+              Get.back();
+            }, rightText: 'Ok');
             return;
           }
-
           tableNumberController.value.text =
               mGetSeatDetailResponse.data?.seatNumber ?? '';
           if (value) {

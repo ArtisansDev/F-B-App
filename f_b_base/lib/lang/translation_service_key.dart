@@ -51,6 +51,10 @@ const String sEnterYourName = "Enter your Name";
 const String sEnterMobileNumber = "Enter mobile number";
 const String sSearchforTWTOutlets = "Search for $sAppNameTWT Outlets";
 const String sSearchforYUMOutlets = "Search for $sAppNameYUM Outlets";
+
+const String sSearchforTWTItems = "Search for $sAppNameTWT Items";
+const String sSearchforYUMItems = "Search for $sAppNameYUM Items";
+
 const String sMobileNumber = "Mobile number";
 const String sName = "Name";
 const String sEnterAge = "Enter Age";

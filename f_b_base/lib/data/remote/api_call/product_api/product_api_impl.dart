@@ -9,6 +9,7 @@ import '../../../mode/get_category/get_category_response.dart';
 import '../../../mode/get_category_item/get_category_item_response.dart';
 import '../../../mode/get_item_details/get_item_details_response.dart';
 import '../../../mode/get_seat_detail/get_seat_detail_response.dart';
+import '../../../mode/menu_items/menu_items_response.dart';
 import '../../web_response.dart';
 import '../../web_response_failed.dart';
 import 'product_api.dart';
@@ -185,6 +186,41 @@ class ProductApiImpl extends AllApiImpl with ProductApi {
       mWebResponseSuccess = WebResponseSuccess(
         statusCode: cases.statusCode,
         data: mGetItemDetailsResponse,
+        statusMessage: "",
+        error: false,
+      );
+    }
+    return mWebResponseSuccess;
+  }
+
+  ///post GetMenuItems
+  @override
+  Future<WebResponseSuccess> postGetMenuItems(
+      dynamic exhibitorsListRequest,{bool isLoading = true}) async {
+    if(isLoading){
+      AppAlertBase.showProgressDialog(Get.context!);
+    }
+    WebConstants.auth = (await SharedPrefs().getUserToken()).isNotEmpty;
+    final cases = await mWebProvider.postWithRequest(
+        WebConstants.actionGetMenuItems, exhibitorsListRequest);
+    if(isLoading) {
+      AppAlertBase.hideLoadingDialog(Get.context!);
+    }
+    if (cases.statusCode != WebConstants.statusCode200) {
+      mWebResponseFailed =
+          WebResponseFailed.fromJson(processResponseToJson(cases));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        // data: mWebResponseFailed,
+        statusMessage: mWebResponseFailed.statusMessage,
+        error: true,
+      );
+    } else {
+      MenuItemsResponse mMenuItemsResponse =
+      MenuItemsResponse.fromJson(processResponseToJson(cases));
+      mWebResponseSuccess = WebResponseSuccess(
+        statusCode: cases.statusCode,
+        data: mMenuItemsResponse,
         statusMessage: "",
         error: false,
       );

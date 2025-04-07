@@ -20,6 +20,7 @@ import '../otp_screen/view/otp_screen.dart';
 import '../profile_screen/update_profile/view/update_profile_screen.dart';
 import '../qr_code_scanner/view/qr_code_scanner_view.dart';
 import '../register_screen/view/register_screen_screen.dart';
+import '../search_menu_screen/view/search_menu_screen.dart';
 import '../senang_pay_payment/razer_pay_result/razer_pay_result.dart';
 import '../senang_pay_payment/senang_pay_payment.dart';
 import '../senang_pay_payment/senang_pay_result/senang_pay_result.dart';
@@ -98,6 +99,9 @@ class MyAppTheme extends StatelessWidget {
             GetPage(
                 name: RouteConstants.rRazerPayResult,
                 page: () => RazerPayResult()),
+            GetPage(
+                name: RouteConstants.rSearchMenuScreen,
+                page: () => SearchMenuScreen()),
           ],
           builder: (context, child) {
             return protectFromSettingsFontSize(context, child!);

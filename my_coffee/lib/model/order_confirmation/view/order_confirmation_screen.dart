@@ -80,7 +80,10 @@ class OrderConfirmationScreen
           SpecialRemarksView(),
 
           ///Packaging
-          PackagingView(),
+          Visibility(
+              visible: !(controller.mAddCartModel.value.sType == 'Dine'),
+              child:  PackagingView()),
+
 
           ///Payment Method
           PaymentMethodView(),

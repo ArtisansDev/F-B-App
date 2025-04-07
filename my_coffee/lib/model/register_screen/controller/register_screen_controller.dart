@@ -27,6 +27,9 @@ class RegisterScreenController extends GetxController {
   isRegister() {
     if (nameController.value.text.trim().isEmpty) {
       AppAlertBase.showSnackBar(Get.context!, 'Please enter your name');
+    } else if (nameController.value.text.trim().length < 2) {
+      AppAlertBase.showSnackBar(
+          Get.context!, 'The name must be more than 1 character');
     } else if (emailController.value.text.trim().isEmpty) {
       AppAlertBase.showSnackBar(Get.context!, sUsernameHint.tr);
     } else if (AppUtils.isValidEmail(emailController.value.text.trim())) {

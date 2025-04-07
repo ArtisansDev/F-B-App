@@ -81,6 +81,12 @@ class WebProvider extends GetConnect {
           headers: headers);
       debugPrint("mResponse statusCode ==  ${mResponse.statusCode}");
       debugPrint("mResponse ==  ${jsonEncode(mResponse.body)}");
+      if(mResponse == null){
+        return Response(
+          statusCode: 401,
+          statusText: 'Error',
+        );
+      }
       return mResponse;
     } catch (e) {
       return Response(

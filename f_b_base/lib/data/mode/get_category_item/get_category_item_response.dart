@@ -95,6 +95,7 @@ class GetCategoryItemData {
 /// ApproxCookingMinute : 0
 /// IsProductOfDay : false
 /// isActive : true
+/// IsStockOut : true
 /// Price : "200.00"
 /// VariantData : [{"VariantIDP":"0a48cabd-d752-48ec-afbd-f5c470320dee","QuantitySpecification":"Regular (12 Inches)","Price":200.00,"DiscountPercentage":0.00,"DiscountedPrice":200.00}]
 /// ItemImages : [{"ItemImagePath":"http://13.53.89.14:801/admin/Content/Images/Menu/MENU_638513763351673625.jpg","ImageIDP":"94091585-DD63-4770-89EC-8AD728DC4D40"},{"ItemImagePath":"http://13.53.89.14:801/admin/Content/Images/Menu/MENU_638513763351673625.jpg","ImageIDP":"C81F3D92-F590-4023-878C-B93430C2062C"}]
@@ -116,7 +117,8 @@ class GetCategoryItemListData {
       this.approxCookingMinute, 
       this.isProductOfDay, 
       this.isActive, 
-      this.price, 
+      this.isStockOut,
+      this.price,
       this.variantData, 
       this.itemImages,});
 
@@ -136,6 +138,7 @@ class GetCategoryItemListData {
     approxCookingMinute = json['ApproxCookingMinute'];
     isProductOfDay = json['IsProductOfDay'];
     isActive = json['isActive'];
+    isStockOut = json['IsStockOut'];
     price = json['Price'];
     if (json['VariantData'] != null) {
       variantData = [];
@@ -165,6 +168,7 @@ class GetCategoryItemListData {
   int? approxCookingMinute;
   bool? isProductOfDay;
   bool? isActive;
+  bool? isStockOut;
   String? price;
   List<VariantData>? variantData;
   List<ItemImages>? itemImages;
@@ -186,6 +190,7 @@ class GetCategoryItemListData {
     map['ApproxCookingMinute'] = approxCookingMinute;
     map['IsProductOfDay'] = isProductOfDay;
     map['isActive'] = isActive;
+    map['IsStockOut'] = isStockOut;
     map['Price'] = price;
     if (variantData != null) {
       map['VariantData'] = variantData?.map((v) => v.toJson()).toList();

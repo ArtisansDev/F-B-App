@@ -13,6 +13,7 @@ class WebConstants {
   static int statusCode404 = 404;
   static int statusCode409 = 409;
   static int statusCode422 = 422;
+  static int statusCode500 = 500;
 
   static String statusMessageOK = "OK";
   static String statusMessageBadRequest = "Bad Request";
@@ -68,8 +69,10 @@ class WebConstants {
   static String actionGetSeatDetail =  "getSeatDetail";  //post
   static String actionGetCategoryItem =  "Menu/GetCategoryItem";  //post
   static String actionGetItemDetails =  "Menu/GetItemDetails";  //post
+  static String actionGetMenuItems =  "Menu/GetMenuItems";  //post
   static String actionOrderPlace =  "Order/ProcessOrder";  //post
   static String actionGetOrderHistory =  "Order/GetOrderHistory";  //post
+  static String actionPostUpdatePaymentType =  "POSOrder/UpdatePaymentType";  //post
   static String actionPostPaymentType =  "Payment/getPaymentMethod";  //post
   static String actionPostUpdatePaymentStatus =  "Payment/updatePaymentStatus";  //post
 

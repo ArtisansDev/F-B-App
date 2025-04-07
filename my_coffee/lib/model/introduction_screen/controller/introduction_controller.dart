@@ -145,12 +145,19 @@ class IntroductionScreenController extends GetxController {
               mWebResponseSuccess.data;
           if (restaurantIDF.toString() ==
               (mGetSeatDetailResponse.data?.restaurantIDF ?? '').toString()) {
-            await SharedPrefs().setAddCartData(jsonEncode(AddCartModel(
-                sTableNo: mGetSeatDetailResponse.data?.seatNumber ?? '',
-                sType: 'Dine')));
-            await SharedPrefs().setProcessOrderId('');
-            await getGetAllBranchesApi(
-                mGetSeatDetailResponse.data?.branchIDF ?? '');
+            if ((mGetSeatDetailResponse.data?.tableStatus ?? 'A')
+                    .toUpperCase() ==
+                'A') {
+              await SharedPrefs().setAddCartData(jsonEncode(AddCartModel(
+                  sTableNo: mGetSeatDetailResponse.data?.seatNumber ?? '',
+                  sType: 'Dine')));
+              await SharedPrefs().setProcessOrderId('');
+              await getGetAllBranchesApi(
+                  mGetSeatDetailResponse.data?.branchIDF ?? '');
+            } else {
+              AppAlertBase.showSnackBar(
+                  Get.context!, 'This table already book');
+            }
           } else {
             AppAlertBase.showSnackBar(
                 Get.context!, MessageConstants.qrCodeNotMach);
